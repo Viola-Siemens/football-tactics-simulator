@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.TrackEditor类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html">TrackEditor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_track_editor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.TrackEditor类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Use this class to customize track types in the <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html" title="Information currently being edited in the Timeline Editor Window. ">TimelineEditor</a>.  
+ <a href="class_unity_editor_1_1_timeline_1_1_track_editor.html#details">更多...</a></p>
+<div class="dynheader">
+类 UnityEditor.Timeline.TrackEditor 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_track_editor_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_track_editor_inherit__map" id="_unity_editor_8_timeline_8_track_editor_inherit__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html" title="UnityEditor.Timeline.Activation\lTrackEditor" alt="" coords="5,95,204,136"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_marker_track_editor.html" title="UnityEditor.Timeline.Marker\lTrackEditor" alt="" coords="228,95,411,136"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3d36fb306a9a0ee9b15dff285d330036"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html">TrackDrawOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a3d36fb306a9a0ee9b15dff285d330036">GetTrackOptions</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> binding)</td></tr>
+<tr class="memdesc:a3d36fb306a9a0ee9b15dff285d330036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to override the default options for drawing a track.  <a href="#a3d36fb306a9a0ee9b15dff285d330036">更多...</a><br /></td></tr>
+<tr class="separator:a3d36fb306a9a0ee9b15dff285d330036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1e22bf8942adb19f776b525c933433"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#aea1e22bf8942adb19f776b525c933433">GetErrorText</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> boundObject, <a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a> detectErrors)</td></tr>
+<tr class="memdesc:aea1e22bf8942adb19f776b525c933433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the error text for the specified track.  <a href="#aea1e22bf8942adb19f776b525c933433">更多...</a><br /></td></tr>
+<tr class="separator:aea1e22bf8942adb19f776b525c933433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172572f84be2d2b7c756da8a91b8b8ba"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a172572f84be2d2b7c756da8a91b8b8ba">GetTrackColor</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</td></tr>
+<tr class="memdesc:a172572f84be2d2b7c756da8a91b8b8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the color information of a track.  <a href="#a172572f84be2d2b7c756da8a91b8b8ba">更多...</a><br /></td></tr>
+<tr class="separator:a172572f84be2d2b7c756da8a91b8b8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb8c0c3c958c9c3a890028bdcb6fcf8"><td class="memItemLeft" align="right" valign="top">System.Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a1eb8c0c3c958c9c3a890028bdcb6fcf8">GetBindingType</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</td></tr>
+<tr class="memdesc:a1eb8c0c3c958c9c3a890028bdcb6fcf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the binding type for a track.  <a href="#a1eb8c0c3c958c9c3a890028bdcb6fcf8">更多...</a><br /></td></tr>
+<tr class="separator:a1eb8c0c3c958c9c3a890028bdcb6fcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d49935006780094f55cf8adf37c6826"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a6d49935006780094f55cf8adf37c6826">OnCreate</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> copiedFrom)</td></tr>
+<tr class="memdesc:a6d49935006780094f55cf8adf37c6826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for when a track is created.  <a href="#a6d49935006780094f55cf8adf37c6826">更多...</a><br /></td></tr>
+<tr class="separator:a6d49935006780094f55cf8adf37c6826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e5612bfc7e6174e162ec65a551fa5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a76e5612bfc7e6174e162ec65a551fa5f">OnTrackChanged</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</td></tr>
+<tr class="memdesc:a76e5612bfc7e6174e162ec65a551fa5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for when a track is changed.  <a href="#a76e5612bfc7e6174e162ec65a551fa5f">更多...</a><br /></td></tr>
+<tr class="separator:a76e5612bfc7e6174e162ec65a551fa5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:abcc0b1e337aa04673dffccfa5b83dd87"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#abcc0b1e337aa04673dffccfa5b83dd87">DefaultTrackHeight</a> = 30.0f</td></tr>
+<tr class="memdesc:abcc0b1e337aa04673dffccfa5b83dd87"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default height of a track.  <a href="#abcc0b1e337aa04673dffccfa5b83dd87">更多...</a><br /></td></tr>
+<tr class="separator:abcc0b1e337aa04673dffccfa5b83dd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3c09c79112fc72e507946e8a0e8fe5"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a8e3c09c79112fc72e507946e8a0e8fe5">MinimumTrackHeight</a> = 10.0f</td></tr>
+<tr class="memdesc:a8e3c09c79112fc72e507946e8a0e8fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum unscaled height of a track.  <a href="#a8e3c09c79112fc72e507946e8a0e8fe5">更多...</a><br /></td></tr>
+<tr class="separator:a8e3c09c79112fc72e507946e8a0e8fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae07ef3cfd2fece33c904983ef556b32c"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#ae07ef3cfd2fece33c904983ef556b32c">MaximumTrackHeight</a> = 256.0f</td></tr>
+<tr class="memdesc:ae07ef3cfd2fece33c904983ef556b32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum height of a track.  <a href="#ae07ef3cfd2fece33c904983ef556b32c">更多...</a><br /></td></tr>
+<tr class="separator:ae07ef3cfd2fece33c904983ef556b32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:aa9a30b5a6eb7e43712bc0f1c1cb9c156"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#aa9a30b5a6eb7e43712bc0f1c1cb9c156">HasFlag</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a> errors, <a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a> flag)</td></tr>
+<tr class="separator:aa9a30b5a6eb7e43712bc0f1c1cb9c156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a015c05c4e69ba53fc9328151d46eed9e"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a015c05c4e69ba53fc9328151d46eed9e">m_BindingCache</a> = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type&gt;()</td></tr>
+<tr class="separator:a015c05c4e69ba53fc9328151d46eed9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a375c206c5cae7eea8c09c737b79fe706"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a375c206c5cae7eea8c09c737b79fe706">k_BoundGameObjectDisabled</a> = LocalizationDatabase.GetLocalizedString(&quot;The bound <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> is disabled.&quot;)</td></tr>
+<tr class="separator:a375c206c5cae7eea8c09c737b79fe706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548bc6bd49f4d53d3acf1970f0eb9784"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a548bc6bd49f4d53d3acf1970f0eb9784">k_NoValidComponent</a> = LocalizationDatabase.GetLocalizedString(&quot;Could not find appropriate component on this gameObject&quot;)</td></tr>
+<tr class="separator:a548bc6bd49f4d53d3acf1970f0eb9784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee82c679d40d7a889bc140273640e4e"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#aeee82c679d40d7a889bc140273640e4e">k_RequiredComponentIsDisabled</a> = LocalizationDatabase.GetLocalizedString(&quot;The component is disabled&quot;)</td></tr>
+<tr class="separator:aeee82c679d40d7a889bc140273640e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a386649d633049de3518ab2532dfdd"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a23a386649d633049de3518ab2532dfdd">k_InvalidBinding</a> = LocalizationDatabase.GetLocalizedString(&quot;The bound object is not the correct type.&quot;)</td></tr>
+<tr class="separator:a23a386649d633049de3518ab2532dfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f4b698808755c35c4cfe40126b082d"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#aa2f4b698808755c35c4cfe40126b082d">k_PrefabBound</a> = LocalizationDatabase.GetLocalizedString(&quot;The bound object is a <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6afc149351d98dcbf17361c6a449e6355e">Prefab</a>&quot;)</td></tr>
+<tr class="separator:aa2f4b698808755c35c4cfe40126b082d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Use this class to customize track types in the <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html" title="Information currently being edited in the Timeline Editor Window. ">TimelineEditor</a>. </p>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00123">123</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a1eb8c0c3c958c9c3a890028bdcb6fcf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">System.Type UnityEditor.Timeline.TrackEditor.GetBindingType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the binding type for a track. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">track</td><td>The track to retrieve the binding type from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Returns the binding type for the specified track. Returns null if the track does not have binding.</dd></dl>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00248">248</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aea1e22bf8942adb19f776b525c933433"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.Timeline.TrackEditor.GetErrorText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>boundObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a>&#160;</td>
+          <td class="paramname"><em>detectErrors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the error text for the specified track. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">track</td><td>The track to retrieve options for.</td></tr>
+    <tr><td class="paramname">boundObject</td><td>The binding for the track.</td></tr>
+    <tr><td class="paramname">detectErrors</td><td>The errors to check for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>An error to be displayed on the track, or string.Empty if there is no error.</dd></dl>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00172">172</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a172572f84be2d2b7c756da8a91b8b8ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color UnityEditor.Timeline.TrackEditor.GetTrackColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the color information of a track. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">track</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Returns the color for the specified track.</dd></dl>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00238">238</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_cgraph" id="class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a29a0328cf46ba198f5be5f80fc8e8e9c" title="UnityEditor.Timeline.Track\lResourceCache.GetTrackColor" alt="" coords="228,5,429,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a732bfd255994e36e43c4b7fe1567738e" title="UnityEditor.Timeline.Director\lStyles.ReloadStylesIfNeeded" alt="" coords="477,5,668,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d36fb306a9a0ee9b15dff285d330036"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html">TrackDrawOptions</a> UnityEditor.Timeline.TrackEditor.GetTrackOptions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>binding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implement this method to override the default options for drawing a track. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">track</td><td>The track from which track options are retrieved.</td></tr>
+    <tr><td class="paramname">binding</td><td>The binding for the track.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The options for drawing the track.</dd></dl>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00154">154</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036_icgraph" id="class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a5b6aabdf8033ae01af176b30c13a31db" title="UnityEditor.Timeline.Timeline\lTrackGUI.TimelineTrackGUI" alt="" coords="228,5,419,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ad9d4693d49b63d06eb27041d4a8861ec" title="UnityEditor.Timeline.Timeline\lTrackGUI.UpdateDrawData" alt="" coords="228,71,419,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9a30b5a6eb7e43712bc0f1c1cb9c156"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TrackEditor.HasFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a>&#160;</td>
+          <td class="paramname"><em>errors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00279">279</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d49935006780094f55cf8adf37c6826"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEditor.Timeline.TrackEditor.OnCreate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>copiedFrom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback for when a track is created. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">track</td><td>The track that is created.</td></tr>
+    <tr><td class="paramname">copiedFrom</td><td>The source that the track is copied from. This can be set to null if the track is not a copy.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aac85a9ef4fb7d3531a3c3509c648b3e9">UnityEditor.Timeline.ActivationTrackEditor</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00267">267</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826_icgraph" id="class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a38380f338eea38b6497d3ab761acfdb1" title="UnityEditor.Timeline.Timeline\lHelpers.CreateTrack" alt="" coords="228,188,419,229"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_sequencer_context_menu.html#a4fce5e9dfe32b8b2b8fb8ec52341484a" title="UnityEditor.Timeline.Sequencer\lContextMenu.AddLayeredTrackCommands" alt="" coords="469,5,739,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_add_override_track_action.html#abcbd2d91c70983c88d1d6f1de4dc2025" title="UnityEditor.Timeline.Add\lOverrideTrackAction.Execute" alt="" coords="509,71,699,112"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_dragging.html#a687c347694a64d20d8211ae692d0f18e" title="UnityEditor.TimelineDragging.\lHandleHierarchyPaneDragAndDrop" alt="" coords="792,144,1016,185"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_dragging.html#ab3be3d0b134c386d4fea562b2fab240c" title="UnityEditor.TimelineDragging.\lHandleTrackAndItemCreation" alt="" coords="507,188,701,229"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_dragging.html#ab77ca13bf7a8e96a13d3c6c5c188fc47" title="Handles drag and drop of a mono script. " alt="" coords="475,253,733,295"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_dragging.html#a5b8832c7ce70e10bbf74df506b4c216b" title="UnityEditor.TimelineDragging.\lHandleClipPanePlayableAssetDragAndDrop" alt="" coords="467,319,741,360"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a0878c6646d52cc8c0bf5a6b6c45ab8cd" title="UnityEditor.Timeline.Timeline\lWindow.DrawNoSequenceGUI" alt="" coords="505,384,703,425"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="1093,159,1287,200"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea" title="UnityEditor.TimelineDragging.\lHandleClipPaneObjectDragAndDrop" alt="" coords="789,224,1019,265"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="1067,224,1313,265"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a76e5612bfc7e6174e162ec65a551fa5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEditor.Timeline.TrackEditor.OnTrackChanged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback for when a track is changed. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">track</td><td>The track that is changed.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00275">275</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="abcc0b1e337aa04673dffccfa5b83dd87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TrackEditor.DefaultTrackHeight = 30.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default height of a track. </p>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00136">136</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a375c206c5cae7eea8c09c737b79fe706"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_BoundGameObjectDisabled = LocalizationDatabase.GetLocalizedString(&quot;The bound <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> is disabled.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00125">125</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a23a386649d633049de3518ab2532dfdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_InvalidBinding = LocalizationDatabase.GetLocalizedString(&quot;The bound object is not the correct type.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00128">128</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a548bc6bd49f4d53d3acf1970f0eb9784"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_NoValidComponent = LocalizationDatabase.GetLocalizedString(&quot;Could not find appropriate component on this gameObject&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2f4b698808755c35c4cfe40126b082d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_PrefabBound = LocalizationDatabase.GetLocalizedString(&quot;The bound object is a <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6afc149351d98dcbf17361c6a449e6355e">Prefab</a>&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00129">129</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeee82c679d40d7a889bc140273640e4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_RequiredComponentIsDisabled = LocalizationDatabase.GetLocalizedString(&quot;The component is disabled&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00127">127</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a015c05c4e69ba53fc9328151d46eed9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type&gt; UnityEditor.Timeline.TrackEditor.m_BindingCache = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00131">131</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae07ef3cfd2fece33c904983ef556b32c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TrackEditor.MaximumTrackHeight = 256.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The maximum height of a track. </p>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00146">146</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e3c09c79112fc72e507946e8a0e8fe5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TrackEditor.MinimumTrackHeight = 10.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The minimum unscaled height of a track. </p>
+
+<p>在文件 <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a> 第 <a class="el" href="_track_editor_8cs_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/CustomEditors/<a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:52 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Animation/AnimationPreviewUpdateCallback.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_04b4dee3f8cea0dae91c71cb6617ca83.html">Animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AnimationPreviewUpdateCallback.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_preview_update_callback_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Animations;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Experimental.Animations;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html">AnimationPreviewUpdateCallback</a> : ITimelineEvaluateCallback</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#aba650d9603ab158521baf9635aff74dd">   10</a></span>&#160;        AnimationPlayableOutput <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#aba650d9603ab158521baf9635aff74dd">m_Output</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a94b512c6e700b649978b8f77b91f59a5">   11</a></span>&#160;        PlayableGraph <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a94b512c6e700b649978b8f77b91f59a5">m_Graph</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a35713e83a81fd1a4567be8927288d893">   12</a></span>&#160;        List&lt;IAnimationWindowPreview&gt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a35713e83a81fd1a4567be8927288d893">m_PreviewComponents</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a1f08ec40f4d7577fd6a6a475ee21c0ba">   14</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a1f08ec40f4d7577fd6a6a475ee21c0ba">AnimationPreviewUpdateCallback</a>(AnimationPlayableOutput output)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            m_Output = output;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            Playable playable = m_Output.GetSourcePlayable();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">if</span> (playable.IsValid())</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                m_Graph = playable.GetGraph();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a00b02c8206b2a484bfaa9583adcadd2f">   25</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a00b02c8206b2a484bfaa9583adcadd2f">Evaluate</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (!m_Graph.IsValid())</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (m_PreviewComponents == null)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                FetchPreviewComponents();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">foreach</span> (var component <span class="keywordflow">in</span> m_PreviewComponents)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">if</span> (component != null)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    component.UpdatePreviewGraph(m_Graph);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a2231c477b29f951321a487ee0409f5c8">   42</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a2231c477b29f951321a487ee0409f5c8">FetchPreviewComponents</a>()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            m_PreviewComponents = <span class="keyword">new</span> List&lt;IAnimationWindowPreview&gt;();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            var animator = m_Output.GetTarget();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (animator == null)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            var gameObject = animator.gameObject;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            m_PreviewComponents.AddRange(gameObject.GetComponents&lt;IAnimationWindowPreview&gt;());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback_html_a2231c477b29f951321a487ee0409f5c8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a2231c477b29f951321a487ee0409f5c8">UnityEngine.Timeline.AnimationPreviewUpdateCallback.FetchPreviewComponents</a></div><div class="ttdeci">void FetchPreviewComponents()</div><div class="ttdef"><b>Definition:</b> <a href="_animation_preview_update_callback_8cs_source.html#l00042">AnimationPreviewUpdateCallback.cs:42</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback_html_a1f08ec40f4d7577fd6a6a475ee21c0ba"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a1f08ec40f4d7577fd6a6a475ee21c0ba">UnityEngine.Timeline.AnimationPreviewUpdateCallback.AnimationPreviewUpdateCallback</a></div><div class="ttdeci">AnimationPreviewUpdateCallback(AnimationPlayableOutput output)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_preview_update_callback_8cs_source.html#l00014">AnimationPreviewUpdateCallback.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback_html_a00b02c8206b2a484bfaa9583adcadd2f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a00b02c8206b2a484bfaa9583adcadd2f">UnityEngine.Timeline.AnimationPreviewUpdateCallback.Evaluate</a></div><div class="ttdeci">void Evaluate()</div><div class="ttdef"><b>Definition:</b> <a href="_animation_preview_update_callback_8cs_source.html#l00025">AnimationPreviewUpdateCallback.cs:25</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback_html_a94b512c6e700b649978b8f77b91f59a5"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a94b512c6e700b649978b8f77b91f59a5">UnityEngine.Timeline.AnimationPreviewUpdateCallback.m_Graph</a></div><div class="ttdeci">PlayableGraph m_Graph</div><div class="ttdef"><b>Definition:</b> <a href="_animation_preview_update_callback_8cs_source.html#l00011">AnimationPreviewUpdateCallback.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback_html_a35713e83a81fd1a4567be8927288d893"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#a35713e83a81fd1a4567be8927288d893">UnityEngine.Timeline.AnimationPreviewUpdateCallback.m_PreviewComponents</a></div><div class="ttdeci">List&lt; IAnimationWindowPreview &gt; m_PreviewComponents</div><div class="ttdef"><b>Definition:</b> <a href="_animation_preview_update_callback_8cs_source.html#l00012">AnimationPreviewUpdateCallback.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html">UnityEngine.Timeline.AnimationPreviewUpdateCallback</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_preview_update_callback_8cs_source.html#l00008">AnimationPreviewUpdateCallback.cs:8</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback_html_aba650d9603ab158521baf9635aff74dd"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_preview_update_callback.html#aba650d9603ab158521baf9635aff74dd">UnityEngine.Timeline.AnimationPreviewUpdateCallback.m_Output</a></div><div class="ttdeci">AnimationPlayableOutput m_Output</div><div class="ttdef"><b>Definition:</b> <a href="_animation_preview_update_callback_8cs_source.html#l00010">AnimationPreviewUpdateCallback.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.CurveDataSource类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html">CurveDataSource</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_curve_data_source-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.CurveDataSource类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.CurveDataSource 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curve_data_source__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_curve_data_source_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_curve_data_source_inherit__map" id="_unity_editor_8_timeline_8_curve_data_source_inherit__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_animation_curve_data_source.html" title="UnityEditor.Timeline.Clip\lAnimationCurveDataSource" alt="" coords="233,5,413,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source.html" title="UnityEditor.Timeline.Clip\lParametersCurveDataSource" alt="" coords="228,71,417,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_infinite_clip_curve_data_source.html" title="UnityEditor.Timeline.Infinite\lClipCurveDataSource" alt="" coords="233,136,412,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_track_parameters_curve_data_source.html" title="UnityEditor.Timeline.Track\lParametersCurveDataSource" alt="" coords="228,201,417,243"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.CurveDataSource 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curve_data_source__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_curve_data_source_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_curve_data_source_coll__map" id="_unity_editor_8_timeline_8_curve_data_source_coll__map">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html" title="UnityEditor.Timeline.IRowGUI" alt="" coords="5,5,197,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afc880fd5b6c09ced417765f86efcd5a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#afc880fd5b6c09ced417765f86efcd5a6">UpdateCurves</a> (List&lt; CurveWrapper &gt; updatedCurves)</td></tr>
+<tr class="separator:afc880fd5b6c09ced417765f86efcd5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54be735ecc4c91152d117904df3a1eb4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a54be735ecc4c91152d117904df3a1eb4">RebuildCurves</a> ()</td></tr>
+<tr class="separator:a54be735ecc4c91152d117904df3a1eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d574493c3b662abc4ceea4e241b57a8"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a2d574493c3b662abc4ceea4e241b57a8">GetBackgroundRect</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a2d574493c3b662abc4ceea4e241b57a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54aec942aac0075062e90d01e2f7789c"><td class="memItemLeft" align="right" valign="top">List&lt; CurveWrapper &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a54aec942aac0075062e90d01e2f7789c">GenerateWrappers</a> (List&lt; EditorCurveBinding &gt; bindings)</td></tr>
+<tr class="separator:a54aec942aac0075062e90d01e2f7789c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a8ca689611d5b0005e991525ac34dd19d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html">CurveDataSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a8ca689611d5b0005e991525ac34dd19d">Create</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#ac01c8d84faab419b6ef4a462ac8ee005">trackGUI</a>)</td></tr>
+<tr class="separator:a8ca689611d5b0005e991525ac34dd19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238985e77846502b455c73bd5a09790e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html">CurveDataSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a238985e77846502b455c73bd5a09790e">Create</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> clipGUI)</td></tr>
+<tr class="separator:a238985e77846502b455c73bd5a09790e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a4bd66ee3f7e349f2095ed9acd487c3a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a4bd66ee3f7e349f2095ed9acd487c3a7">CurveDataSource</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#ac01c8d84faab419b6ef4a462ac8ee005">trackGUI</a>)</td></tr>
+<tr class="separator:a4bd66ee3f7e349f2095ed9acd487c3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e34b2517db04e174264f8c535ed7f0c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a7e34b2517db04e174264f8c535ed7f0c">ConfigureCurveWrapper</a> (CurveWrapper wrapper)</td></tr>
+<tr class="separator:a7e34b2517db04e174264f8c535ed7f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741648dcc3138f0a79ed8e7d7a94cd59"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a741648dcc3138f0a79ed8e7d7a94cd59">CreateHashCode</a> ()</td></tr>
+<tr class="separator:a741648dcc3138f0a79ed8e7d7a94cd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a4c12dfef4ef4a16013190e7c1809ec18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a4c12dfef4ef4a16013190e7c1809ec18">id</a><code> [get]</code></td></tr>
+<tr class="separator:a4c12dfef4ef4a16013190e7c1809ec18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01c8d84faab419b6ef4a462ac8ee005"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#ac01c8d84faab419b6ef4a462ac8ee005">trackGUI</a><code> [get]</code></td></tr>
+<tr class="separator:ac01c8d84faab419b6ef4a462ac8ee005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacae356cfd709ff8df1d97d51a010b27"><td class="memItemLeft" align="right" valign="top">abstract AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#aacae356cfd709ff8df1d97d51a010b27">animationClip</a><code> [get]</code></td></tr>
+<tr class="separator:aacae356cfd709ff8df1d97d51a010b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27ae23df367c22e40fded5c6aab84d3"><td class="memItemLeft" align="right" valign="top">abstract float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#aa27ae23df367c22e40fded5c6aab84d3">start</a><code> [get]</code></td></tr>
+<tr class="separator:aa27ae23df367c22e40fded5c6aab84d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3eba2c286ce8134eb3d024060e22288"><td class="memItemLeft" align="right" valign="top">abstract float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#ab3eba2c286ce8134eb3d024060e22288">timeScale</a><code> [get]</code></td></tr>
+<tr class="separator:ab3eba2c286ce8134eb3d024060e22288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230293d7eb91bcb91630853abe410153"><td class="memItemLeft" align="right" valign="top">abstract string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a230293d7eb91bcb91630853abe410153">groupingName</a><code> [get]</code></td></tr>
+<tr class="separator:a230293d7eb91bcb91630853abe410153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a40ea47eedfd9d523dddc6c1bec3e383b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a40ea47eedfd9d523dddc6c1bec3e383b">m_ID</a> = null</td></tr>
+<tr class="separator:a40ea47eedfd9d523dddc6c1bec3e383b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8223b06d4161f1fceb8c795af50b79b"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#aa8223b06d4161f1fceb8c795af50b79b">m_TrackGUI</a></td></tr>
+<tr class="separator:aa8223b06d4161f1fceb8c795af50b79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00007">7</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a4bd66ee3f7e349f2095ed9acd487c3a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEditor.Timeline.CurveDataSource.CurveDataSource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a>&#160;</td>
+          <td class="paramname"><em>trackGUI</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a7e34b2517db04e174264f8c535ed7f0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEditor.Timeline.CurveDataSource.ConfigureCurveWrapper </td>
+          <td>(</td>
+          <td class="paramtype">CurveWrapper&#160;</td>
+          <td class="paramname"><em>wrapper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_parameters_curve_data_source.html#ae8421555db48d1edba18500609e404ea">UnityEditor.Timeline.TrackParametersCurveDataSource</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source.html#aef5db35aa872a9f1864e2cd2220098ac">UnityEditor.Timeline.ClipParametersCurveDataSource</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00090">90</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ca689611d5b0005e991525ac34dd19d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html">CurveDataSource</a> UnityEditor.Timeline.CurveDataSource.Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a>&#160;</td>
+          <td class="paramname"><em>trackGUI</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00009">9</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curve_data_source_a8ca689611d5b0005e991525ac34dd19d_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curve_data_source_a8ca689611d5b0005e991525ac34dd19d_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curve_data_source_a8ca689611d5b0005e991525ac34dd19d_icgraph" id="class_unity_editor_1_1_timeline_1_1_curve_data_source_a8ca689611d5b0005e991525ac34dd19d_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a9de332464230a724c23f64f4ff275aa8" title="UnityEditor.Timeline.Timeline\lClipGUI.CreateInlineCurveEditor" alt="" coords="233,5,437,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a864fa431f81802a6b60845b5e97ef0d4" title="UnityEditor.Timeline.Timeline\lTrackGUI.UpdateInfiniteClipEditor" alt="" coords="228,71,443,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a238985e77846502b455c73bd5a09790e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html">CurveDataSource</a> UnityEditor.Timeline.CurveDataSource.Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a>&#160;</td>
+          <td class="paramname"><em>clipGUI</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a741648dcc3138f0a79ed8e7d7a94cd59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int UnityEditor.Timeline.CurveDataSource.CreateHashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source.html#a423373720e7c4586ea9db481871372c9">UnityEditor.Timeline.ClipParametersCurveDataSource</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_animation_curve_data_source.html#a54da9c0e21a6b74d456ccc3b23d346d1">UnityEditor.Timeline.ClipAnimationCurveDataSource</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00097">97</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54aec942aac0075062e90d01e2f7789c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;CurveWrapper&gt; UnityEditor.Timeline.CurveDataSource.GenerateWrappers </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; EditorCurveBinding &gt;&#160;</td>
+          <td class="paramname"><em>bindings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00063">63</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curve_data_source_a54aec942aac0075062e90d01e2f7789c_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curve_data_source_a54aec942aac0075062e90d01e2f7789c_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curve_data_source_a54aec942aac0075062e90d01e2f7789c_icgraph" id="class_unity_editor_1_1_timeline_1_1_curve_data_source_a54aec942aac0075062e90d01e2f7789c_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_binding_selector.html#a15babcd7b3cad2cc430b23301e7416aa" title="UnityEditor.BindingSelector.\lRefreshCurves" alt="" coords="256,5,441,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_binding_selector.html#aa7dd0e3d1c991c5712ec303454c7885e" title="UnityEditor.BindingSelector.\lRefreshSelection" alt="" coords="489,5,675,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d574493c3b662abc4ceea4e241b57a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.CurveDataSource.GetBackgroundRect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00052">52</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curve_data_source_a2d574493c3b662abc4ceea4e241b57a8_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curve_data_source_a2d574493c3b662abc4ceea4e241b57a8_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curve_data_source_a2d574493c3b662abc4ceea4e241b57a8_icgraph" id="class_unity_editor_1_1_timeline_1_1_curve_data_source_a2d574493c3b662abc4ceea4e241b57a8_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#aa06184323593bcb2525c22bbd0d63c12" title="UnityEditor.Timeline.Inline\lCurveEditor.DrawCurveEditor" alt="" coords="264,5,451,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a54be735ecc4c91152d117904df3a1eb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEditor.Timeline.CurveDataSource.RebuildCurves </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_parameters_curve_data_source.html#a97a229c9d7dfdcd69747f6ec337cbe5e">UnityEditor.Timeline.TrackParametersCurveDataSource</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source.html#a71b6726ce83053f762cc4330364ef01d">UnityEditor.Timeline.ClipParametersCurveDataSource</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc880fd5b6c09ced417765f86efcd5a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEditor.Timeline.CurveDataSource.UpdateCurves </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; CurveWrapper &gt;&#160;</td>
+          <td class="paramname"><em>updatedCurves</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_parameters_curve_data_source.html#aab8dfa57669d6e7b41e004f1c161ea43">UnityEditor.Timeline.TrackParametersCurveDataSource</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source.html#abbf4b47b670589d0fe7842f6b3d95f75">UnityEditor.Timeline.ClipParametersCurveDataSource</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a40ea47eedfd9d523dddc6c1bec3e383b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.CurveDataSource.m_ID = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8223b06d4161f1fceb8c795af50b79b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a> UnityEditor.Timeline.CurveDataSource.m_TrackGUI</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="aacae356cfd709ff8df1d97d51a010b27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract AnimationClip UnityEditor.Timeline.CurveDataSource.animationClip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a230293d7eb91bcb91630853abe410153"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract string UnityEditor.Timeline.CurveDataSource.groupingName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c12dfef4ef4a16013190e7c1809ec18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.CurveDataSource.id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa27ae23df367c22e40fded5c6aab84d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract float UnityEditor.Timeline.CurveDataSource.start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3eba2c286ce8134eb3d024060e22288"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract float UnityEditor.Timeline.CurveDataSource.timeScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac01c8d84faab419b6ef4a462ac8ee005"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a> UnityEditor.Timeline.CurveDataSource.trackGUI</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a> 第 <a class="el" href="_curve_data_source_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Animation/<a class="el" href="_curve_data_source_8cs_source.html">CurveDataSource.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:47 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

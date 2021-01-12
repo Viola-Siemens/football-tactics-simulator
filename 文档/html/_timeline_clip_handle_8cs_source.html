@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/TimelineClipHandle.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_8d0d6b838e6896df5d8de1eafe8aaa93.html">treeview</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineClipHandle.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_clip_handle_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">    5</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a> : <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html">ILayerable</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#aa06468dbacbf548370358618914477a0">    7</a></span>&#160;        Rect <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#aa06468dbacbf548370358618914477a0">m_Rect</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a79b900f1966743153d17b018346e5604">    8</a></span>&#160;        readonly <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a79b900f1966743153d17b018346e5604">m_ClipGUI</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a32a85f8b6bf853840c79831c6212554b">    9</a></span>&#160;        readonly <a class="code" href="namespace_unity_editor_1_1_timeline.html#a9a326556a8b43ab6cfd54914e27dd415">TrimEdge</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a32a85f8b6bf853840c79831c6212554b">m_TrimDirection</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#aa031dec050e1abff284442e001842f63">   10</a></span>&#160;        readonly <a class="code" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html">LayerZOrder</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#aa031dec050e1abff284442e001842f63">m_ZOrder</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">public</span> Rect boundingRect</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#ae677671ec30ae9f2bdf4df9c1d665804">   13</a></span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_ClipGUI.parent.ToWindowSpace(m_Rect); }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a9a326556a8b43ab6cfd54914e27dd415">TrimEdge</a> trimDirection</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a954fb85d931fd0ea35168fbc1f2ea13e">   18</a></span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_TrimDirection; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> clipGUI</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#af965d04e2ce20898c75db7e1bf9addda">   23</a></span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_ClipGUI; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html">LayerZOrder</a> zOrder</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a7444f7a6ca75771a8ee5ffe5379feb50">   28</a></span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_ZOrder; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#ace62ae78e0e959b334f29d63129aedeb">   32</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#ace62ae78e0e959b334f29d63129aedeb">TimelineClipHandle</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> theClipGUI, <a class="code" href="namespace_unity_editor_1_1_timeline.html#a9a326556a8b43ab6cfd54914e27dd415">TrimEdge</a> trimDirection)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            m_TrimDirection = trimDirection;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            m_ClipGUI = theClipGUI;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            m_ZOrder = theClipGUI.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a7204db210720e02051a0c8bea1c0c8be">zOrder</a>.<a class="code" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html#a7990d1c3f3890e74970f4e199f575a4b">ChangeLayer</a>(<a class="code" href="namespace_unity_editor_1_1_timeline.html#aff3baa216cfa1883d5bb9143dbdf953a">Layer</a>.ClipHandles);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#abaa5eedef1a65c08214c9d5dcff270fc">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#abaa5eedef1a65c08214c9d5dcff270fc">Draw</a>(Rect clientRect, <span class="keywordtype">float</span> width, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            var handleRect = clientRect;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            handleRect.width = width;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (m_TrimDirection == <a class="code" href="namespace_unity_editor_1_1_timeline.html#a9a326556a8b43ab6cfd54914e27dd415">TrimEdge</a>.End)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                handleRect.x = clientRect.xMax - width;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            m_Rect = handleRect;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">state</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">editSequence</a>.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ad56c92e4109749915ad28b0a9742ddb9">isReadOnly</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                EditorGUIUtility.AddCursorRect(handleRect, MouseCursor.SplitResizeLeftRight);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad59ddb64e61e454d87680beaf26e99dc">spacePartitioner</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a85d8effbff6e987e54683254d4e17680">AddBounds</a>(<span class="keyword">this</span>, boundingRect);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_layer_z_order_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html">UnityEditor.Timeline.LayerZOrder</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_layer_8cs_source.html#l00018">ItemsLayer.cs:18</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a9a326556a8b43ab6cfd54914e27dd415"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a9a326556a8b43ab6cfd54914e27dd415">UnityEditor.Timeline.TrimEdge</a></div><div class="ttdeci">TrimEdge</div><div class="ttdef"><b>Definition:</b> <a href="_i_trim_item_mode_8cs_source.html#l00005">ITrimItemMode.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">UnityEditor.Timeline.TimelineClipHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_handle_8cs_source.html#l00005">TimelineClipHandle.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle_html_abaa5eedef1a65c08214c9d5dcff270fc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#abaa5eedef1a65c08214c9d5dcff270fc">UnityEditor.Timeline.TimelineClipHandle.Draw</a></div><div class="ttdeci">void Draw(Rect clientRect, float width, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_handle_8cs_source.html#l00039">TimelineClipHandle.cs:39</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a350f3db7ab1c08de30a609f4c66c8775"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">UnityEditor.Timeline.TimelineWindow.state</a></div><div class="ttdeci">WindowState state</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00057">TimelineWindow.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle_html_a32a85f8b6bf853840c79831c6212554b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a32a85f8b6bf853840c79831c6212554b">UnityEditor.Timeline.TimelineClipHandle.m_TrimDirection</a></div><div class="ttdeci">readonly TrimEdge m_TrimDirection</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_handle_8cs_source.html#l00009">TimelineClipHandle.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac00fac3b6de42db10813e9ae7401808b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">UnityEditor.Timeline.TimelineWindow.instance</a></div><div class="ttdeci">static TimelineWindow instance</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00045">TimelineWindow.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle_html_a79b900f1966743153d17b018346e5604"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#a79b900f1966743153d17b018346e5604">UnityEditor.Timeline.TimelineClipHandle.m_ClipGUI</a></div><div class="ttdeci">readonly TimelineClipGUI m_ClipGUI</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_handle_8cs_source.html#l00008">TimelineClipHandle.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ad59ddb64e61e454d87680beaf26e99dc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad59ddb64e61e454d87680beaf26e99dc">UnityEditor.Timeline.WindowState.spacePartitioner</a></div><div class="ttdeci">SpacePartitioner spacePartitioner</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00120">WindowState.cs:120</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_space_partitioner_html_a85d8effbff6e987e54683254d4e17680"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a85d8effbff6e987e54683254d4e17680">UnityEditor.Timeline.SpacePartitioner.AddBounds</a></div><div class="ttdeci">void AddBounds(IBounds bounds)</div><div class="ttdef"><b>Definition:</b> <a href="_space_partitioner_8cs_source.html#l00054">SpacePartitioner.cs:54</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_aff3baa216cfa1883d5bb9143dbdf953a"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#aff3baa216cfa1883d5bb9143dbdf953a">UnityEditor.Timeline.Layer</a></div><div class="ttdeci">Layer</div><div class="ttdef"><b>Definition:</b> <a href="_items_layer_8cs_source.html#l00009">ItemsLayer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a006919b74b71f9f6511d64b138264d4c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">UnityEditor.Timeline.WindowState.editSequence</a></div><div class="ttdeci">ISequenceState editSequence</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00090">WindowState.cs:90</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_layer_z_order_html_a7990d1c3f3890e74970f4e199f575a4b"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html#a7990d1c3f3890e74970f4e199f575a4b">UnityEditor.Timeline.LayerZOrder.ChangeLayer</a></div><div class="ttdeci">LayerZOrder ChangeLayer(Layer layer)</div><div class="ttdef"><b>Definition:</b> <a href="_items_layer_8cs_source.html#l00041">ItemsLayer.cs:41</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle_html_aa031dec050e1abff284442e001842f63"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#aa031dec050e1abff284442e001842f63">UnityEditor.Timeline.TimelineClipHandle.m_ZOrder</a></div><div class="ttdeci">readonly LayerZOrder m_ZOrder</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_handle_8cs_source.html#l00010">TimelineClipHandle.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_html_a7204db210720e02051a0c8bea1c0c8be"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a7204db210720e02051a0c8bea1c0c8be">UnityEditor.Timeline.TimelineItemGUI.zOrder</a></div><div class="ttdeci">LayerZOrder zOrder</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_item_g_u_i_8cs_source.html#l00061">TimelineItemGUI.cs:61</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_layerable_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html">UnityEditor.Timeline.ILayerable</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_layer_8cs_source.html#l00047">ItemsLayer.cs:47</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle_html_aa06468dbacbf548370358618914477a0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#aa06468dbacbf548370358618914477a0">UnityEditor.Timeline.TimelineClipHandle.m_Rect</a></div><div class="ttdeci">Rect m_Rect</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_handle_8cs_source.html#l00007">TimelineClipHandle.cs:7</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_ad56c92e4109749915ad28b0a9742ddb9"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ad56c92e4109749915ad28b0a9742ddb9">UnityEditor.Timeline.ISequenceState.isReadOnly</a></div><div class="ttdeci">bool isReadOnly</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00015">ISequenceState.cs:15</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">UnityEditor.Timeline.TimelineClipGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_g_u_i_8cs_source.html#l00010">TimelineClipGUI.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle_html_ace62ae78e0e959b334f29d63129aedeb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#ace62ae78e0e959b334f29d63129aedeb">UnityEditor.Timeline.TimelineClipHandle.TimelineClipHandle</a></div><div class="ttdeci">TimelineClipHandle(TimelineClipGUI theClipGUI, TrimEdge trimDirection)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_handle_8cs_source.html#l00032">TimelineClipHandle.cs:32</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

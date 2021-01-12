@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.ClipItem类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_clip_item-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.ClipItem类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.ClipItem 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_clip_item_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_clip_item_inherit__map" id="_unity_editor_8_timeline_8_clip_item_inherit__map">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html" title="IBlendable" alt="" coords="5,155,88,181"/><area shape="rect" id="node3" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html" title="ITimelineItem" alt="" coords="51,80,149,107"/><area shape="rect" id="node5" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html" title="ITrimmable" alt="" coords="112,155,197,181"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.ClipItem 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_clip_item_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_clip_item_coll__map" id="_unity_editor_8_timeline_8_clip_item_coll__map">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html" title="IBlendable" alt="" coords="608,5,691,32"/><area shape="rect" id="node3" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html" title="ITimelineItem" alt="" coords="285,48,384,75"/><area shape="rect" id="node5" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html" title="ITrimmable" alt="" coords="607,56,692,83"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html" title="Represents a clip on the timeline. " alt="" coords="540,184,759,211"/><area shape="rect" id="node10" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="907,314,1087,355"/><area shape="rect" id="node7" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="284,111,385,137"/><area shape="rect" id="node13" href="struct_unity_engine_1_1_timeline_1_1_marker_list.html" title="UnityEngine.Timeline.MarkerList" alt="" coords="545,253,754,280"/><area shape="rect" id="node12" href="interface_unity_engine_1_1_timeline_1_1_i_property_preview.html" title="Implement this interface in a PlayableAsset to specify which properties will be modified when Timelin..." alt="" coords="590,355,709,381"/><area shape="rect" id="node14" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html" title="UnityEngine.Timeline.DiscreteTime" alt="" coords="537,495,761,521"/><area shape="rect" id="node16" href="struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html" title="UnityEngine.Timeline.Track\lAsset.TransientBuildData" alt="" coords="559,546,739,587"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa42a155cda7dfc7b0c6e3b9932b9cb83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#aa42a155cda7dfc7b0c6e3b9932b9cb83">ClipItem</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#ae39ea6838d3823722bf4935d63fe380e">clip</a>)</td></tr>
+<tr class="separator:aa42a155cda7dfc7b0c6e3b9932b9cb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ddd6ecbb754d30afcc6cf3cb519e49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a30ddd6ecbb754d30afcc6cf3cb519e49">IsCompatibleWithTrack</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</td></tr>
+<tr class="separator:a30ddd6ecbb754d30afcc6cf3cb519e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a5f963a65061cbb0bde4ccb44bcb7ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a9a5f963a65061cbb0bde4ccb44bcb7ef">PushUndo</a> (string operation)</td></tr>
+<tr class="separator:a9a5f963a65061cbb0bde4ccb44bcb7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b1e8a3922f9682cf78dad3a3848028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#ae0b1e8a3922f9682cf78dad3a3848028">SetStart</a> (double time)</td></tr>
+<tr class="separator:ae0b1e8a3922f9682cf78dad3a3848028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d08ef326450aff1bdec3f5a4ec6f86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#aa8d08ef326450aff1bdec3f5a4ec6f86">SetEnd</a> (double time, bool affectTimeScale)</td></tr>
+<tr class="separator:aa8d08ef326450aff1bdec3f5a4ec6f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd2aec40e5fd2d55ba6d52894d7db57f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#abd2aec40e5fd2d55ba6d52894d7db57f">Delete</a> ()</td></tr>
+<tr class="separator:abd2aec40e5fd2d55ba6d52894d7db57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a366dd8bc13274f384efac1292761467f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a366dd8bc13274f384efac1292761467f">TrimStart</a> (double time)</td></tr>
+<tr class="separator:a366dd8bc13274f384efac1292761467f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ed1d3f4f544b6d0083fae6e62029a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a17ed1d3f4f544b6d0083fae6e62029a9">TrimEnd</a> (double time)</td></tr>
+<tr class="separator:a17ed1d3f4f544b6d0083fae6e62029a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f6f35f20a8c3bcfebf39a3a8539d51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a48f6f35f20a8c3bcfebf39a3a8539d51">CloneTo</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, double time)</td></tr>
+<tr class="separator:a48f6f35f20a8c3bcfebf39a3a8539d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152e63e488508559f2aa6c0c58f01898"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a152e63e488508559f2aa6c0c58f01898">ToString</a> ()</td></tr>
+<tr class="separator:a152e63e488508559f2aa6c0c58f01898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091bd6a75df2240c8fbc3ade24626f9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a091bd6a75df2240c8fbc3ade24626f9c">Equals</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a> otherClip)</td></tr>
+<tr class="separator:a091bd6a75df2240c8fbc3ade24626f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26eb5f02f59f0d7d47fe93517c02092"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#ab26eb5f02f59f0d7d47fe93517c02092">GetHashCode</a> ()</td></tr>
+<tr class="separator:ab26eb5f02f59f0d7d47fe93517c02092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6378ef3b221673d602b7d03b89d7ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a5b6378ef3b221673d602b7d03b89d7ee">Equals</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> other)</td></tr>
+<tr class="separator:a5b6378ef3b221673d602b7d03b89d7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4443fb87e16e5d03fda76449ed50cc3d"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a4443fb87e16e5d03fda76449ed50cc3d">Equals</a> (object obj)</td></tr>
+<tr class="separator:a4443fb87e16e5d03fda76449ed50cc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:ae39ea6838d3823722bf4935d63fe380e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#ae39ea6838d3823722bf4935d63fe380e">clip</a><code> [get]</code></td></tr>
+<tr class="separator:ae39ea6838d3823722bf4935d63fe380e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8387b22126602e997cab85b684493e3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a8387b22126602e997cab85b684493e3d">parentTrack</a><code> [get, set]</code></td></tr>
+<tr class="separator:a8387b22126602e997cab85b684493e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f97c6e72048b5149e1f92282984b10d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a0f97c6e72048b5149e1f92282984b10d">start</a><code> [get, set]</code></td></tr>
+<tr class="separator:a0f97c6e72048b5149e1f92282984b10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216d2a3db463161a4ba7b7b83f34fdee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a216d2a3db463161a4ba7b7b83f34fdee">end</a><code> [get]</code></td></tr>
+<tr class="separator:a216d2a3db463161a4ba7b7b83f34fdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3236d82f8bd9b017d76cddd1b6aa5f9e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a3236d82f8bd9b017d76cddd1b6aa5f9e">duration</a><code> [get]</code></td></tr>
+<tr class="separator:a3236d82f8bd9b017d76cddd1b6aa5f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f89619f85584dbf5e5d9bc1cd683fea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">TimelineItemGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a9f89619f85584dbf5e5d9bc1cd683fea">gui</a><code> [get]</code></td></tr>
+<tr class="separator:a9f89619f85584dbf5e5d9bc1cd683fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8756c4615b4deabd832389244ac706bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a8756c4615b4deabd832389244ac706bc">supportsBlending</a><code> [get]</code></td></tr>
+<tr class="separator:a8756c4615b4deabd832389244ac706bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407eace268e8d9f2c3e082bee55a81b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a407eace268e8d9f2c3e082bee55a81b1">hasLeftBlend</a><code> [get]</code></td></tr>
+<tr class="separator:a407eace268e8d9f2c3e082bee55a81b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a791a99023163f98ba9f23e296611a4c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a791a99023163f98ba9f23e296611a4c8">hasRightBlend</a><code> [get]</code></td></tr>
+<tr class="separator:a791a99023163f98ba9f23e296611a4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7dc25311cace9abd689441e85b2fce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#a7e7dc25311cace9abd689441e85b2fce">leftBlendDuration</a><code> [get]</code></td></tr>
+<tr class="separator:a7e7dc25311cace9abd689441e85b2fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80113fb99d31c43de42281d0d29ad9e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#aa80113fb99d31c43de42281d0d29ad9e">rightBlendDuration</a><code> [get]</code></td></tr>
+<tr class="separator:aa80113fb99d31c43de42281d0d29ad9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_editor_1_1_timeline_1_1_i_blendable')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html">UnityEditor.Timeline.IBlendable</a></td></tr>
+<tr class="memitem:a8508396539eba0a047f06fcaabdf92a0 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#a8508396539eba0a047f06fcaabdf92a0">supportsBlending</a><code> [get]</code></td></tr>
+<tr class="separator:a8508396539eba0a047f06fcaabdf92a0 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3b028ca781fe76e0ee6dde5253f5b3 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#a7b3b028ca781fe76e0ee6dde5253f5b3">hasLeftBlend</a><code> [get]</code></td></tr>
+<tr class="separator:a7b3b028ca781fe76e0ee6dde5253f5b3 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2df6df94974f11f8560c845fe49cb40 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#aa2df6df94974f11f8560c845fe49cb40">hasRightBlend</a><code> [get]</code></td></tr>
+<tr class="separator:aa2df6df94974f11f8560c845fe49cb40 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14cc4c6dfcb544cc7504baccac547ae6 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#a14cc4c6dfcb544cc7504baccac547ae6">leftBlendDuration</a><code> [get]</code></td></tr>
+<tr class="separator:a14cc4c6dfcb544cc7504baccac547ae6 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03df3d2e92f66577cbad316d7f85a45 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#af03df3d2e92f66577cbad316d7f85a45">rightBlendDuration</a><code> [get]</code></td></tr>
+<tr class="separator:af03df3d2e92f66577cbad316d7f85a45 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_blendable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">UnityEditor.Timeline.ITimelineItem</a></td></tr>
+<tr class="memitem:a4694088d0315d924289d8cb6f0cba19c inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a4694088d0315d924289d8cb6f0cba19c">start</a><code> [get, set]</code></td></tr>
+<tr class="separator:a4694088d0315d924289d8cb6f0cba19c inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2360a302ec3e02a47f638654ed1c81fb inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2360a302ec3e02a47f638654ed1c81fb">end</a><code> [get]</code></td></tr>
+<tr class="separator:a2360a302ec3e02a47f638654ed1c81fb inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedb7985b559b1a7f7e32c8c912ced93d inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#aedb7985b559b1a7f7e32c8c912ced93d">duration</a><code> [get]</code></td></tr>
+<tr class="separator:aedb7985b559b1a7f7e32c8c912ced93d inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2511e28018fb64596b5b6ff038309c3b inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2511e28018fb64596b5b6ff038309c3b">parentTrack</a><code> [get, set]</code></td></tr>
+<tr class="separator:a2511e28018fb64596b5b6ff038309c3b inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92081b07a6a9ecc7e9b958f4e74227d8 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">TimelineItemGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a92081b07a6a9ecc7e9b958f4e74227d8">gui</a><code> [get]</code></td></tr>
+<tr class="separator:a92081b07a6a9ecc7e9b958f4e74227d8 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_timeline_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ae052b0e64c906ce7771af03acff9455d"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#ae052b0e64c906ce7771af03acff9455d">m_Clip</a></td></tr>
+<tr class="separator:ae052b0e64c906ce7771af03acff9455d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00006">6</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aa42a155cda7dfc7b0c6e3b9932b9cb83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEditor.Timeline.ClipItem.ClipItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>clip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a48f6f35f20a8c3bcfebf39a3a8539d51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> UnityEditor.Timeline.ClipItem.CloneTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#adaea39c753471ddee08bef2d3fb7599a">UnityEditor.Timeline.ITimelineItem</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00108">108</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item_a48f6f35f20a8c3bcfebf39a3a8539d51_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_clip_item_a48f6f35f20a8c3bcfebf39a3a8539d51_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_clip_item_a48f6f35f20a8c3bcfebf39a3a8539d51_cgraph" id="class_unity_editor_1_1_timeline_1_1_clip_item_a48f6f35f20a8c3bcfebf39a3a8539d51_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a1fa5029776007597867809545f70440b" title="UnityEditor.Timeline.Timeline\lHelpers.Clone" alt="" coords="217,5,408,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_track_extensions.html#afec36c3c62b442e17aef2d034c2895c4" title="UnityEditor.Timeline.Track\lExtensions.ComputeBlendsFromOverlaps" alt="" coords="456,5,719,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abd2aec40e5fd2d55ba6d52894d7db57f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.ClipItem.Delete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a6c6203fce91f1245252ac182f96ea783">UnityEditor.Timeline.ITimelineItem</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00092">92</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item_abd2aec40e5fd2d55ba6d52894d7db57f_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_clip_item_abd2aec40e5fd2d55ba6d52894d7db57f_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_clip_item_abd2aec40e5fd2d55ba6d52894d7db57f_cgraph" id="class_unity_editor_1_1_timeline_1_1_clip_item_abd2aec40e5fd2d55ba6d52894d7db57f_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#ab7727ef317c12dfc108f2f9c159399e0" title="UnityEditor.Timeline.Editor\lClipFactory.RemoveEditorClip" alt="" coords="217,5,412,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html#a8f8a8921635e6c2019a16004b0952941" title="UnityEditor.Timeline.Clip\lModifier.Delete" alt="" coords="233,71,397,112"/><area shape="rect" id="node4" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aa5356a1260ee2e86a9df796a15496c95" title="Delete a clip from this timeline. " alt="" coords="460,71,656,112"/><area shape="rect" id="node5" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="704,37,900,79"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41" title="UnityEngine.Timeline.Timeline\lUndo.PushDestroyUndo" alt="" coords="704,103,900,144"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a091bd6a75df2240c8fbc3ade24626f9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.ClipItem.Equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>&#160;</td>
+          <td class="paramname"><em>otherClip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00118">118</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b6378ef3b221673d602b7d03b89d7ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.ClipItem.Equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00130">130</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4443fb87e16e5d03fda76449ed50cc3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool UnityEditor.Timeline.ClipItem.Equals </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00135">135</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab26eb5f02f59f0d7d47fe93517c02092"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int UnityEditor.Timeline.ClipItem.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00125">125</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a30ddd6ecbb754d30afcc6cf3cb519e49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.ClipItem.IsCompatibleWithTrack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#aba9cae6da8b53da7c75cd72f76d37111">UnityEditor.Timeline.ITimelineItem</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a5f963a65061cbb0bde4ccb44bcb7ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.ClipItem.PushUndo </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>operation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a0d2590757d30c0c6e40e6714b4ca8dcc">UnityEditor.Timeline.ITimelineItem</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00047">47</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item_a9a5f963a65061cbb0bde4ccb44bcb7ef_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_clip_item_a9a5f963a65061cbb0bde4ccb44bcb7ef_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_clip_item_a9a5f963a65061cbb0bde4ccb44bcb7ef_cgraph" id="class_unity_editor_1_1_timeline_1_1_clip_item_a9a5f963a65061cbb0bde4ccb44bcb7ef_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="217,5,413,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8d08ef326450aff1bdec3f5a4ec6f86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.ClipItem.SetEnd </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>affectTimeScale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html#a12959d34bd51a975c947b947e2d48a9f">UnityEditor.Timeline.ITrimmable</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00087">87</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item_aa8d08ef326450aff1bdec3f5a4ec6f86_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_clip_item_aa8d08ef326450aff1bdec3f5a4ec6f86_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_clip_item_aa8d08ef326450aff1bdec3f5a4ec6f86_cgraph" id="class_unity_editor_1_1_timeline_1_1_clip_item_aa8d08ef326450aff1bdec3f5a4ec6f86_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html#a9b1bcbf5b7bea731e415d238322704f7" title="UnityEditor.Timeline.Clip\lModifier.SetEnd" alt="" coords="217,5,381,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0b1e8a3922f9682cf78dad3a3848028"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.ClipItem.SetStart </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html#a4075eaa48f206dfcf8183b00029c583d">UnityEditor.Timeline.ITrimmable</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00082">82</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item_ae0b1e8a3922f9682cf78dad3a3848028_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_clip_item_ae0b1e8a3922f9682cf78dad3a3848028_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_clip_item_ae0b1e8a3922f9682cf78dad3a3848028_cgraph" id="class_unity_editor_1_1_timeline_1_1_clip_item_ae0b1e8a3922f9682cf78dad3a3848028_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html#ab28dd7be4c5b6808b5abc0108dc3b01d" title="UnityEditor.Timeline.Clip\lModifier.SetStart" alt="" coords="217,5,381,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85" title="UnityEditor.Timeline.Animation\lClipCurveCache.GetCurveInfo" alt="" coords="429,5,629,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a152e63e488508559f2aa6c0c58f01898"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string UnityEditor.Timeline.ClipItem.ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00113">113</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17ed1d3f4f544b6d0083fae6e62029a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.ClipItem.TrimEnd </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html#af76e77e48c8e39886c414220d9ebff40">UnityEditor.Timeline.ITrimmable</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00103">103</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item_a17ed1d3f4f544b6d0083fae6e62029a9_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_clip_item_a17ed1d3f4f544b6d0083fae6e62029a9_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_clip_item_a17ed1d3f4f544b6d0083fae6e62029a9_cgraph" id="class_unity_editor_1_1_timeline_1_1_clip_item_a17ed1d3f4f544b6d0083fae6e62029a9_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html#a7f5e8999d2aecd2d2cdbacc3111d1c5e" title="UnityEditor.Timeline.Clip\lModifier.TrimEnd" alt="" coords="217,5,381,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a366dd8bc13274f384efac1292761467f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.ClipItem.TrimStart </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html#a06e63618871cc0229e450070177cf37e">UnityEditor.Timeline.ITrimmable</a>.</p>
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00098">98</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_clip_item_a366dd8bc13274f384efac1292761467f_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_clip_item_a366dd8bc13274f384efac1292761467f_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_clip_item_a366dd8bc13274f384efac1292761467f_cgraph" id="class_unity_editor_1_1_timeline_1_1_clip_item_a366dd8bc13274f384efac1292761467f_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html#a6220442bdf4e2300383aeab839582185" title="UnityEditor.Timeline.Clip\lModifier.TrimStart" alt="" coords="217,5,381,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ae052b0e64c906ce7771af03acff9455d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> UnityEditor.Timeline.ClipItem.m_Clip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00008">8</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="ae39ea6838d3823722bf4935d63fe380e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> UnityEditor.Timeline.ClipItem.clip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3236d82f8bd9b017d76cddd1b6aa5f9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.ClipItem.duration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a216d2a3db463161a4ba7b7b83f34fdee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.ClipItem.end</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f89619f85584dbf5e5d9bc1cd683fea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">TimelineItemGUI</a> UnityEditor.Timeline.ClipItem.gui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a407eace268e8d9f2c3e082bee55a81b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.ClipItem.hasLeftBlend</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00063">63</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a791a99023163f98ba9f23e296611a4c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.ClipItem.hasRightBlend</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00068">68</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e7dc25311cace9abd689441e85b2fce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.ClipItem.leftBlendDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00073">73</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8387b22126602e997cab85b684493e3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> UnityEditor.Timeline.ClipItem.parentTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa80113fb99d31c43de42281d0d29ad9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.ClipItem.rightBlendDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00078">78</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f97c6e72048b5149e1f92282984b10d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.ClipItem.start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8756c4615b4deabd832389244ac706bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.ClipItem.supportsBlending</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a> 第 <a class="el" href="_clip_item_8cs_source.html#l00058">58</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Items/<a class="el" href="_clip_item_8cs_source.html">ClipItem.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:47 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

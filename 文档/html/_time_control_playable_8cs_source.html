@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Playables/TimeControlPlayable.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_73158b3449abf32b74af6545480b215e.html">Playables</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimeControlPlayable.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_time_control_playable_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html">TimeControlPlayable</a> : PlayableBehaviour</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#adc6bf26424fb84321e939c4482843046">   10</a></span>&#160;        <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html">ITimeControl</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#adc6bf26424fb84321e939c4482843046">m_timeControl</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a5220fbe3f972ac409df458677950fc71">   12</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a5220fbe3f972ac409df458677950fc71">m_started</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a5c83bd58ce37a29371dec2b9a040ac74">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> ScriptPlayable&lt;TimeControlPlayable&gt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a5c83bd58ce37a29371dec2b9a040ac74">Create</a>(PlayableGraph graph, <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html">ITimeControl</a> timeControl)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (timeControl == null)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keywordflow">return</span> ScriptPlayable&lt;TimeControlPlayable&gt;.Null;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            var handle = ScriptPlayable&lt;TimeControlPlayable&gt;.Create(graph);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            handle.GetBehaviour().Initialize(timeControl);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> handle;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a855e3e7b2792b55630244e1e8f60312a">   34</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a855e3e7b2792b55630244e1e8f60312a">Initialize</a>(<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html">ITimeControl</a> timeControl)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            m_timeControl = timeControl;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a4585626f7ccc01ec2b654f51e7e82e59">   44</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a4585626f7ccc01ec2b654f51e7e82e59">PrepareFrame</a>(Playable playable, FrameData info)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="namespace_debug.html">Debug</a>.Assert(m_started, <span class="stringliteral">&quot;PrepareFrame has been called without OnControlTimeStart being called first.&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (m_timeControl != null)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                m_timeControl.<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html#ab4c0716cf185f3833bfdf3c332f9c913">SetTime</a>(playable.GetTime());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a75460a3385ed7fb3d554701097b1036e">   56</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a75460a3385ed7fb3d554701097b1036e">OnBehaviourPlay</a>(Playable playable, FrameData info)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (m_timeControl == null)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (!m_started)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                m_timeControl.<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html#a794f2a46049fb4575d0e592b4a86fb7e">OnControlTimeStart</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                m_started = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a959c89cb0e849c6abf3ab237002a5380">   73</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a959c89cb0e849c6abf3ab237002a5380">OnBehaviourPause</a>(Playable playable, FrameData info)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span> (m_timeControl == null)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> (m_started)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                m_timeControl.<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html#a2f7806fb91e9a958735766ca8c81e0c1">OnControlTimeStop</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                m_started = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_time_control_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html">UnityEngine.Timeline.ITimeControl</a></div><div class="ttdoc">Interface that can be implemented by MonoBehaviours indicating that they receive time-related control...</div><div class="ttdef"><b>Definition:</b> <a href="_i_time_control_8cs_source.html#l00009">ITimeControl.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html_a855e3e7b2792b55630244e1e8f60312a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a855e3e7b2792b55630244e1e8f60312a">UnityEngine.Timeline.TimeControlPlayable.Initialize</a></div><div class="ttdeci">void Initialize(ITimeControl timeControl)</div><div class="ttdoc">Initializes the behaviour </div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00034">TimeControlPlayable.cs:34</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_time_control_html_a2f7806fb91e9a958735766ca8c81e0c1"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html#a2f7806fb91e9a958735766ca8c81e0c1">UnityEngine.Timeline.ITimeControl.OnControlTimeStop</a></div><div class="ttdeci">void OnControlTimeStop()</div><div class="ttdoc">Called when the associated Timeline clip becomes deactivated. </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html_a75460a3385ed7fb3d554701097b1036e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a75460a3385ed7fb3d554701097b1036e">UnityEngine.Timeline.TimeControlPlayable.OnBehaviourPlay</a></div><div class="ttdeci">override void OnBehaviourPlay(Playable playable, FrameData info)</div><div class="ttdoc">This function is called when the Playable play state is changed to Playables.PlayState.Playing. </div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00056">TimeControlPlayable.cs:56</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html_a4585626f7ccc01ec2b654f51e7e82e59"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a4585626f7ccc01ec2b654f51e7e82e59">UnityEngine.Timeline.TimeControlPlayable.PrepareFrame</a></div><div class="ttdeci">override void PrepareFrame(Playable playable, FrameData info)</div><div class="ttdoc">This function is called during the PrepareFrame phase of the PlayableGraph. </div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00044">TimeControlPlayable.cs:44</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html">UnityEngine.Timeline.TimeControlPlayable</a></div><div class="ttdoc">A PlayableBehaviour that manages a component that implements the ITimeControl interface ...</div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00008">TimeControlPlayable.cs:8</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html_a5220fbe3f972ac409df458677950fc71"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a5220fbe3f972ac409df458677950fc71">UnityEngine.Timeline.TimeControlPlayable.m_started</a></div><div class="ttdeci">bool m_started</div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00012">TimeControlPlayable.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html_a959c89cb0e849c6abf3ab237002a5380"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a959c89cb0e849c6abf3ab237002a5380">UnityEngine.Timeline.TimeControlPlayable.OnBehaviourPause</a></div><div class="ttdeci">override void OnBehaviourPause(Playable playable, FrameData info)</div><div class="ttdoc">This function is called when the Playable play state is changed to PlayState.Paused. </div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00073">TimeControlPlayable.cs:73</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html_a5c83bd58ce37a29371dec2b9a040ac74"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#a5c83bd58ce37a29371dec2b9a040ac74">UnityEngine.Timeline.TimeControlPlayable.Create</a></div><div class="ttdeci">static ScriptPlayable&lt; TimeControlPlayable &gt; Create(PlayableGraph graph, ITimeControl timeControl)</div><div class="ttdoc">Creates a Playable with a TimeControlPlayable behaviour attached </div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00020">TimeControlPlayable.cs:20</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_control_playable_html_adc6bf26424fb84321e939c4482843046"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_control_playable.html#adc6bf26424fb84321e939c4482843046">UnityEngine.Timeline.TimeControlPlayable.m_timeControl</a></div><div class="ttdeci">ITimeControl m_timeControl</div><div class="ttdef"><b>Definition:</b> <a href="_time_control_playable_8cs_source.html#l00010">TimeControlPlayable.cs:10</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_time_control_html_ab4c0716cf185f3833bfdf3c332f9c913"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html#ab4c0716cf185f3833bfdf3c332f9c913">UnityEngine.Timeline.ITimeControl.SetTime</a></div><div class="ttdeci">void SetTime(double time)</div><div class="ttdoc">Called each frame the Timeline clip is active. </div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_time_control_html_a794f2a46049fb4575d0e592b4a86fb7e"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_time_control.html#a794f2a46049fb4575d0e592b4a86fb7e">UnityEngine.Timeline.ITimeControl.OnControlTimeStart</a></div><div class="ttdeci">void OnControlTimeStart()</div><div class="ttdoc">Called when the associated Timeline clip becomes active. </div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/State/ISequenceState.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_4407639198f330bfb7cc89188cb08b0c.html">State</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ISequenceState.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_sequence_state_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">    7</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">ISequenceState</a> : IDisposable</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a247d8d2cad32a1cd5ca92c5c411687c3">    9</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> asset { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">   10</a></span>&#160;        PlayableDirector director { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a4af4b247a259dd8669e4cc39eb275c9a">   11</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> hostClip { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a728d661f9eb931f9b2e268846fce4786">   12</a></span>&#160;        <span class="keywordtype">double</span> start { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a7229406d76c7221e81f141e6ac28cc9f">   13</a></span>&#160;        <span class="keywordtype">double</span> timeScale { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a713e56e88bc2e68549f4dae26ddcf0bd">   14</a></span>&#160;        <span class="keywordtype">double</span> duration { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ad56c92e4109749915ad28b0a9742ddb9">   15</a></span>&#160;        <span class="keywordtype">bool</span> isReadOnly { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#aa8752b8f028ed08f6ca7a19d2baa3302">   16</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a> viewModel { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a1b008874fa5e6f943c0a168fd2829156">   17</a></span>&#160;        <span class="keywordtype">double</span> time { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a7dce856904128b55d1779e6a4c9c2b42">   18</a></span>&#160;        <span class="keywordtype">int</span> frame { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#adac9c3773981fa0dab6187f77e09e706">   19</a></span>&#160;        <span class="keywordtype">float</span> frameRate { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="struct_unity_editor_1_1_timeline_1_1_range.html">Range</a> GetEvaluableRange();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">string</span> TimeAsString(<span class="keywordtype">double</span> timeValue, <span class="keywordtype">string</span> format = <span class="stringliteral">&quot;F2&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">double</span> ToGlobalTime(<span class="keywordtype">double</span> t);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">double</span> ToLocalTime(<span class="keywordtype">double</span> t);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> ResetIsReadOnly();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html">NullSequenceState</a> : <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">ISequenceState</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a86ae5dd5b43913287b91027db4463241">   38</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> asset { <span class="keyword">get</span> { <span class="keywordflow">return</span> null; } }</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a2df315b6b70169a718405ca5d1d62f68">   39</a></span>&#160;        <span class="keyword">public</span> PlayableDirector director { <span class="keyword">get</span> { <span class="keywordflow">return</span> null; } }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#afdada0a109aed10fca381428ef9bcda1">   40</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> hostClip { <span class="keyword">get</span> { <span class="keywordflow">return</span> null; } }</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ac1e32b49ac7ef3a9963a4b3972276d5f">   41</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> start { <span class="keyword">get</span> { <span class="keywordflow">return</span> 0.0; } }</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a5e99c5036e44ed1d29a747fe1eaa4643">   42</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> timeScale { <span class="keyword">get</span> { <span class="keywordflow">return</span> 1.0; } }</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#acb15d5e410119a6f79a4e8efd90ae093">   43</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> duration { <span class="keyword">get</span> { <span class="keywordflow">return</span> 0.0; } }</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a50b468c958d5f9658959ddaa037e85fc">   44</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> isReadOnly { <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="keyword">false</span>; } }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#aaf2974bb278da51df19ac7c60fe75c0d">   46</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#aaf2974bb278da51df19ac7c60fe75c0d">m_ViewModel</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a> viewModel</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ab469fc2ba2a565a00332c83b54b9f9f9">   49</a></span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span> (m_ViewModel == null)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    m_ViewModel = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">TimelineWindowViewPrefs</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a98c774adcc08b17b4be03b50969767c5">CreateUnassociatedViewModel</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> m_ViewModel;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> time</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a4482d41c9924e2e0e75e02b5688a6b62">   59</a></span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> 0.0; }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            set { <span class="comment">/* NO-OP*/</span> }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> frame</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a64af41fb091d80464f5cf547c6c63901">   65</a></span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            set { <span class="comment">/* NO-OP*/</span> }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> frameRate</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a435b5b12d37256d7c711d30c62ef1b06">   71</a></span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html">EditorSettings</a>.kDefaultFps; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            set { <span class="comment">/* NO-OP*/</span> }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ad5fe4ecec7d1eb5970a90fe0012c038a">   76</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_range.html">Range</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ad5fe4ecec7d1eb5970a90fe0012c038a">GetEvaluableRange</a>()</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_range.html">Range</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a821d0e7ddaf939d7baa31bd46f3ec9e1">   81</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a821d0e7ddaf939d7baa31bd46f3ec9e1">TimeAsString</a>(<span class="keywordtype">double</span> timeValue, <span class="keywordtype">string</span> format = <span class="stringliteral">&quot;F2&quot;</span>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a499f07f788790c9bc41439054972d828">TimeAsTimeCode</a>(timeValue, frameRate, format);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ac8cb0f6ab3a85f8a6fd631183198c154">   86</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ac8cb0f6ab3a85f8a6fd631183198c154">ToGlobalTime</a>(<span class="keywordtype">double</span> t)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a631c51869a94baacf6b06c6d580a9a47">   91</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a631c51869a94baacf6b06c6d580a9a47">ToLocalTime</a>(<span class="keywordtype">double</span> t)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a478e9f51acd7e1deb589b1098f6db668">   96</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a478e9f51acd7e1deb589b1098f6db668">ResetIsReadOnly</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="comment">// NO-OP</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#acb24095af4745560d9b902c5174b9ea6">  101</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#acb24095af4745560d9b902c5174b9ea6">Dispose</a>()</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// NO-OP</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html_a631c51869a94baacf6b06c6d580a9a47"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a631c51869a94baacf6b06c6d580a9a47">UnityEditor.Timeline.NullSequenceState.ToLocalTime</a></div><div class="ttdeci">double ToLocalTime(double t)</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00091">ISequenceState.cs:91</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html_ac8cb0f6ab3a85f8a6fd631183198c154"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ac8cb0f6ab3a85f8a6fd631183198c154">UnityEditor.Timeline.NullSequenceState.ToGlobalTime</a></div><div class="ttdeci">double ToGlobalTime(double t)</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00086">ISequenceState.cs:86</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html">UnityEngine.Timeline.TimeUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00007">TimeUtility.cs:7</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_range_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_range.html">UnityEditor.Timeline.Range</a></div><div class="ttdef"><b>Definition:</b> <a href="_range_8cs_source.html#l00006">Range.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">UnityEditor.Timeline.TimelineWindowViewPrefs</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00009">TimelineWindowViewPrefs.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html_ad5fe4ecec7d1eb5970a90fe0012c038a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ad5fe4ecec7d1eb5970a90fe0012c038a">UnityEditor.Timeline.NullSequenceState.GetEvaluableRange</a></div><div class="ttdeci">Range GetEvaluableRange()</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00076">ISequenceState.cs:76</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">UnityEditor.Timeline.TimelineAssetViewModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00057">TimelineAssetViewModel.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html_acb24095af4745560d9b902c5174b9ea6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#acb24095af4745560d9b902c5174b9ea6">UnityEditor.Timeline.NullSequenceState.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00101">ISequenceState.cs:101</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a98c774adcc08b17b4be03b50969767c5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a98c774adcc08b17b4be03b50969767c5">UnityEditor.Timeline.TimelineWindowViewPrefs.CreateUnassociatedViewModel</a></div><div class="ttdeci">static TimelineAssetViewModel CreateUnassociatedViewModel()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00033">TimelineWindowViewPrefs.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html_a821d0e7ddaf939d7baa31bd46f3ec9e1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a821d0e7ddaf939d7baa31bd46f3ec9e1">UnityEditor.Timeline.NullSequenceState.TimeAsString</a></div><div class="ttdeci">string TimeAsString(double timeValue, string format=&quot;F2&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00081">ISequenceState.cs:81</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html">UnityEngine.Timeline.TimelineAsset.EditorSettings</a></div><div class="ttdoc">Properties of the timeline that are used by the editor </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_8cs_source.html#l00033">TimelineAsset.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html">UnityEditor.Timeline.NullSequenceState</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00036">ISequenceState.cs:36</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">UnityEditor.Timeline.ISequenceState</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00007">ISequenceState.cs:7</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html_a499f07f788790c9bc41439054972d828"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a499f07f788790c9bc41439054972d828">UnityEngine.Timeline.TimeUtility.TimeAsTimeCode</a></div><div class="ttdeci">static string TimeAsTimeCode(double timeValue, double frameRate, string format=&quot;F2&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00088">TimeUtility.cs:88</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html_aaf2974bb278da51df19ac7c60fe75c0d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#aaf2974bb278da51df19ac7c60fe75c0d">UnityEditor.Timeline.NullSequenceState.m_ViewModel</a></div><div class="ttdeci">TimelineAssetViewModel m_ViewModel</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00046">ISequenceState.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_null_sequence_state_html_a478e9f51acd7e1deb589b1098f6db668"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a478e9f51acd7e1deb589b1098f6db668">UnityEditor.Timeline.NullSequenceState.ResetIsReadOnly</a></div><div class="ttdeci">void ResetIsReadOnly()</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00096">ISequenceState.cs:96</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

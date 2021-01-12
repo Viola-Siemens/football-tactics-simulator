@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/TimelineKeyboardNavigation.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_0724e84c20f94a0e0cb26eb6bc9f3803.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineKeyboardNavigation.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_keyboard_navigation_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.IMGUI.Controls;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">    9</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa50fb86f86161b0554c1069295c1020d">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa50fb86f86161b0554c1069295c1020d">FrameTrackHeader</a>(TreeViewItem treeItem = null)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">if</span> (TrackHeadActive())</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                treeItem = treeItem ?? <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a82d710467590a93afb99d7a53d3987b1">SelectedTrackGUI</a>().Last();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                var item = GetVisibleSelectedItems().LastOrDefault();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                treeItem = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad217fa822ebb772d9fb43314a7c800af">allTracks</a>.FirstOrDefault(</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                    x =&gt; item != null &amp;&amp; x.track == item.parentTrack);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (treeItem != null)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">treeView</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#ab68c0e422118f8adfcad4132d3477ce6">FrameItem</a>(treeItem);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">   26</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">TrackHeadActive</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().Any(x =&gt; x.IsVisibleRecursive()) &amp;&amp; !ClipAreaActive();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">   31</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">ClipAreaActive</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> GetVisibleSelectedItems().Any();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a1c0da3c94d0aaf73b5cf0a57fe9a3477">   36</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;ITimelineItem&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a1c0da3c94d0aaf73b5cf0a57fe9a3477">GetVisibleSelectedItems</a>()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a>().Where(x =&gt; x.parentTrack.IsVisibleRecursive());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ad8ca3ddf2091ca52437fdeb4a0f5ee8c">   41</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;TimelineTrackBaseGUI&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ad8ca3ddf2091ca52437fdeb4a0f5ee8c">GetVisibleTracks</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad217fa822ebb772d9fb43314a7c800af">allTracks</a>.Where(x =&gt; x.track.IsVisibleRecursive());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ab292c3c07d1f7157c009b5d003d36679">   46</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ab292c3c07d1f7157c009b5d003d36679">PreviousTrack</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var uiOrderTracks = GetVisibleTracks().Select(t =&gt; t.track).ToList();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            var selIdx = uiOrderTracks.IndexOf(track);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> selIdx &gt; 0 ? uiOrderTracks[selIdx - 1] : null;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aea29bb0ffcc62c3951737c5e7789f1a7">   53</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aea29bb0ffcc62c3951737c5e7789f1a7">NextTrack</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            var uiOrderTracks = GetVisibleTracks().Select(t =&gt; t.track).ToList();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            var selIdx = uiOrderTracks.IndexOf(track);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> selIdx &lt; uiOrderTracks.Count - 1  &amp;&amp; selIdx != -1 ? uiOrderTracks[selIdx + 1] : null;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ad14707af79b0bbf595541fb0c3f5a0cc">   60</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ad14707af79b0bbf595541fb0c3f5a0cc">PreviousItem</a>(<span class="keyword">this</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> item, <span class="keywordtype">bool</span> clipOnly)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            var items = item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2511e28018fb64596b5b6ff038309c3b">parentTrack</a>.GetItems().ToArray();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (clipOnly)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                items = items.Where(x =&gt; x is <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>).ToArray();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                items =  items.Where(x =&gt; x is <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>).ToArray();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            var idx = Array.IndexOf(items, item);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span> idx &gt; 0 ? items[idx - 1] : null;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a6ccfd50d4e8fc10f93d7cc19467a0b71">   76</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a6ccfd50d4e8fc10f93d7cc19467a0b71">NextItem</a>(<span class="keyword">this</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> item, <span class="keywordtype">bool</span> clipOnly)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            var items = item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2511e28018fb64596b5b6ff038309c3b">parentTrack</a>.GetItems().ToArray();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (clipOnly)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                items = items.Where(x =&gt; x is <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>).ToArray();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                items =  items.Where(x =&gt; x is <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>).ToArray();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            var idx = Array.IndexOf(items, item);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">return</span> idx &lt; items.Length - 1 ? items[idx + 1] : null;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae38c4af0c4938000469f192daf813c19">   92</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae38c4af0c4938000469f192daf813c19">FilterItems</a>(ref List&lt;ITimelineItem&gt; items)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            var clipOnly = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">if</span> (items.Any(x =&gt; x is <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>))</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                items = items.Where(x =&gt; x is ClipItem).ToList();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                clipOnly = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">return</span> clipOnly;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a9ef5fd93336a8519c067cb1c8ac3154c">  104</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a9ef5fd93336a8519c067cb1c8ac3154c">GetClosestItem</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> refItem)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            var start = refItem.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a4694088d0315d924289d8cb6f0cba19c">start</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            var end = refItem.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2360a302ec3e02a47f638654ed1c81fb">end</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            var items = track.GetItems().ToList();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">if</span> (refItem is <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                items = items.Where(x =&gt; x is ClipItem).ToList();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                items =  items.Where(x =&gt; x is <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>).ToList();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span> (!items.Any())</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> ret = null;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            var scoreToBeat = <span class="keywordtype">double</span>.NegativeInfinity;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> items)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="comment">// test for overlap</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                var low = Math.Max(item.start, start);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                var high = Math.Min(item.end, end);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordflow">if</span> (low &lt;= high)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    var score = high - low;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    <span class="keywordflow">if</span> (score &gt;= scoreToBeat)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                        scoreToBeat = score;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        ret = item;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa7ad1a269bc3557914d09f595ee88833">  143</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa7ad1a269bc3557914d09f595ee88833">FocusFirstVisibleItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            IEnumerable&lt;TrackAsset&gt; focusTracks = null)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            var timeRange = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">timeAreaShownRange</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            var tracks = focusTracks ?? <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">treeView</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#ac5231b0c9872e8e4a34a17632e307cac">visibleTracks</a>.Where(x =&gt; x.IsVisibleRecursive() &amp;&amp; x.GetItems().Any());</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            var items = tracks.SelectMany(t =&gt; t.GetItems().OfType&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>&gt;().Where(x =&gt; x.end &gt;= timeRange.x &amp;&amp; x.end &lt;= timeRange.y ||</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                x.start &gt;= timeRange.x &amp;&amp; x.start &lt;= timeRange.y)).ToList();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            var itemFullyInView = items.Where(x =&gt; x.end &gt;= timeRange.x &amp;&amp; x.end &lt;= timeRange.y &amp;&amp;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                x.start &gt;= timeRange.x &amp;&amp; x.start &lt;= timeRange.y);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            var itemToSelect = itemFullyInView.FirstOrDefault() ?? items.FirstOrDefault();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">if</span> (itemToSelect != null)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(itemToSelect);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa8458190017b0c60b6d70f8a999296d9">  162</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa8458190017b0c60b6d70f8a999296d9">CollapseGroup</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span> (TrackHeadActive())</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                var quit = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <span class="keywordflow">foreach</span> (var track <span class="keywordflow">in</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>())</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    <span class="keywordflow">if</span> (!track.GetChildTracks().Any())</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    <span class="keywordflow">if</span> (!quit &amp;&amp; !track.GetCollapsed())</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        quit = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    track.SetCollapsed(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="keywordflow">if</span> (quit)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a773c3585d8ee2c63765f06afa6536990">Refresh</a>();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                var selectedTrack = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().LastOrDefault();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                var parent = selectedTrack != null ? selectedTrack.parent as <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> : null;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">if</span> (parent)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(parent);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    FrameTrackHeader(GetVisibleTracks().First(x =&gt; x.track == parent));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4">  193</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4">SelectLeftItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <span class="keywordtype">bool</span> shift = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">if</span> (ClipAreaActive())</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                var items = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a>().ToList();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                var clipOnly = FilterItems(ref items);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                var item = items.Last();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                var prev = item.PreviousItem(clipOnly);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">if</span> (prev != null)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    <span class="keywordflow">if</span> (shift)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca">Contains</a>(prev))</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                            <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">Remove</a>(item);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a>(prev);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(prev);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a6006489f5a3c76ef215d97d622ced077">FrameItems</a>(state, <span class="keyword">new</span>[] {prev});</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item != null &amp;&amp; !shift &amp;&amp; item.parentTrack != state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">editSequence</a>.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a247d8d2cad32a1cd5ca92c5c411687c3">asset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aab981e915aae984ca3702895c88ffbaf">markerTrack</a>)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(item.parentTrack);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9">  221</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9">SelectRightItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <span class="keywordtype">bool</span> shift = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">if</span> (ClipAreaActive())</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                var items = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a>().ToList();</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                var clipOnly = FilterItems(ref items);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                var item = items.Last();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                var next = item.NextItem(clipOnly);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">if</span> (next != null)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    <span class="keywordflow">if</span> (shift)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca">Contains</a>(next))</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                            <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">Remove</a>(item);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a>(next);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(next);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a6006489f5a3c76ef215d97d622ced077">FrameItems</a>(state, <span class="keyword">new</span>[] {next});</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a4fa536a37eaf2544d51b14311eafb048">  247</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a4fa536a37eaf2544d51b14311eafb048">UnCollapseGroup</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">if</span> (TrackHeadActive())</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                var quit = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keywordflow">foreach</span> (var track <span class="keywordflow">in</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>())</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    <span class="keywordflow">if</span> (!track.GetChildTracks().Any()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    <span class="keywordflow">if</span> (!quit &amp;&amp; track.GetCollapsed())</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        quit = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    track.SetCollapsed(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                <span class="keywordflow">if</span> (quit)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a773c3585d8ee2c63765f06afa6536990">Refresh</a>();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="comment">// Transition to Clip area</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                var visibleTracks = GetVisibleTracks().Select(x =&gt; x.track).ToList();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                var idx = visibleTracks.IndexOf(<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().Last());</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> item = null;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">for</span> (var i = idx; i &lt; visibleTracks.Count; ++i)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    var items = visibleTracks[i].GetItems().OfType&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>&gt;();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    <span class="keywordflow">if</span> (!items.Any())</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    item = items.First();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                <span class="keywordflow">if</span> (item != null)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(item);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a6006489f5a3c76ef215d97d622ced077">FrameItems</a>(state, <span class="keyword">new</span>[] {item});</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e">  290</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e">SelectUpTrack</a>(<span class="keywordtype">bool</span> shift = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keywordflow">if</span> (TrackHeadActive())</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                var prevTrack = PreviousTrack(<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().Last());</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                <span class="keywordflow">if</span> (prevTrack != null)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    <span class="keywordflow">if</span> (shift)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                    {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca">Contains</a>(prevTrack))</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                            <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">Remove</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().Last());</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a>(prevTrack);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(prevTrack);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    FrameTrackHeader(GetVisibleTracks().First(x =&gt; x.track == prevTrack));</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae2e24cf8e9a8174a365c5f30e8686c28">  312</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae2e24cf8e9a8174a365c5f30e8686c28">SelectUpItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">if</span> (ClipAreaActive())</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                var refItem = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a>().Last();</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                var prevTrack = refItem.parentTrack.PreviousTrack();</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordflow">while</span> (prevTrack != null)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    var selectionItem = GetClosestItem(prevTrack, refItem);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    <span class="keywordflow">if</span> (selectionItem == null)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                        prevTrack = prevTrack.PreviousTrack();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(selectionItem);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a6006489f5a3c76ef215d97d622ced077">FrameItems</a>(state, <span class="keyword">new</span>[] {selectionItem});</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    FrameTrackHeader(GetVisibleTracks().First(x =&gt; x.track == selectionItem.parentTrack));</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281">  338</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281">SelectDownTrack</a>(<span class="keywordtype">bool</span> shift = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="keywordflow">if</span> (TrackHeadActive())</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                var nextTrack = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().Last().NextTrack();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                <span class="keywordflow">if</span> (nextTrack != null)</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    <span class="keywordflow">if</span> (shift)</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca">Contains</a>(nextTrack))</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                            <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">Remove</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().Last());</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a>(nextTrack);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                    }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                        <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(nextTrack);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    FrameTrackHeader(GetVisibleTracks().First(x =&gt; x.track == nextTrack));</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                }</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aeaa51c167c6ba238bd6b0e28681fa67e">  362</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aeaa51c167c6ba238bd6b0e28681fa67e">SelectDownItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordflow">if</span> (ClipAreaActive())</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                var refItem = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a>().Last();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                var nextTrack = refItem.parentTrack.NextTrack();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                <span class="keywordflow">while</span> (nextTrack != null)</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    var selectionItem = GetClosestItem(nextTrack, refItem);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                    <span class="keywordflow">if</span> (selectionItem == null)</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                    {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                        nextTrack = nextTrack.NextTrack();</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a>(selectionItem);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a6006489f5a3c76ef215d97d622ced077">FrameItems</a>(state, <span class="keyword">new</span>[] {selectionItem});</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                    FrameTrackHeader(GetVisibleTracks().First(x =&gt; x.track == selectionItem.parentTrack));</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clip_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clip_item.html">UnityEditor.Timeline.ClipItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_clip_item_8cs_source.html#l00006">ClipItem.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">UnityEditor.Timeline.SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00008">TimelineSelection.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_aea29bb0ffcc62c3951737c5e7789f1a7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aea29bb0ffcc62c3951737c5e7789f1a7">UnityEditor.Timeline.KeyboardNavigation.NextTrack</a></div><div class="ttdeci">static TrackAsset NextTrack(this TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00053">TimelineKeyboardNavigation.cs:53</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_ad8ca3ddf2091ca52437fdeb4a0f5ee8c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ad8ca3ddf2091ca52437fdeb4a0f5ee8c">UnityEditor.Timeline.KeyboardNavigation.GetVisibleTracks</a></div><div class="ttdeci">static IEnumerable&lt; TimelineTrackBaseGUI &gt; GetVisibleTracks()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00041">TimelineKeyboardNavigation.cs:41</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">UnityEditor.Timeline.KeyboardNavigation</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00009">TimelineKeyboardNavigation.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a82d710467590a93afb99d7a53d3987b1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a82d710467590a93afb99d7a53d3987b1">UnityEditor.Timeline.SelectionManager.SelectedTrackGUI</a></div><div class="ttdeci">static IEnumerable&lt; TimelineTrackBaseGUI &gt; SelectedTrackGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00298">TimelineSelection.cs:298</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ad217fa822ebb772d9fb43314a7c800af"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad217fa822ebb772d9fb43314a7c800af">UnityEditor.Timeline.TimelineWindow.allTracks</a></div><div class="ttdeci">List&lt; TimelineTrackBaseGUI &gt; allTracks</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00050">TimelineWindow.cs:50</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_marker_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_marker_item.html">UnityEditor.Timeline.MarkerItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_marker_item_8cs_source.html#l00007">MarkerItem.cs:7</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i_html_ab68c0e422118f8adfcad4132d3477ce6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#ab68c0e422118f8adfcad4132d3477ce6">UnityEditor.Timeline.TimelineTreeViewGUI.FrameItem</a></div><div class="ttdeci">void FrameItem(TreeViewItem item)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_tree_view_g_u_i_8cs_source.html#l00092">TimelineTreeViewGUI.cs:92</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a6ccfd50d4e8fc10f93d7cc19467a0b71"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a6ccfd50d4e8fc10f93d7cc19467a0b71">UnityEditor.Timeline.KeyboardNavigation.NextItem</a></div><div class="ttdeci">static ITimelineItem NextItem(this ITimelineItem item, bool clipOnly)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00076">TimelineKeyboardNavigation.cs:76</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_ad14707af79b0bbf595541fb0c3f5a0cc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ad14707af79b0bbf595541fb0c3f5a0cc">UnityEditor.Timeline.KeyboardNavigation.PreviousItem</a></div><div class="ttdeci">static ITimelineItem PreviousItem(this ITimelineItem item, bool clipOnly)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00060">TimelineKeyboardNavigation.cs:60</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a1c0da3c94d0aaf73b5cf0a57fe9a3477"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a1c0da3c94d0aaf73b5cf0a57fe9a3477">UnityEditor.Timeline.KeyboardNavigation.GetVisibleSelectedItems</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; GetVisibleSelectedItems()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00036">TimelineKeyboardNavigation.cs:36</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a49a2bb9ea56f328e837b5326d11e8148"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">UnityEditor.Timeline.SelectionManager.SelectOnly</a></div><div class="ttdeci">static void SelectOnly(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00086">TimelineSelection.cs:86</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a43455019dc0eed4ea9c914b3238a264e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e">UnityEditor.Timeline.KeyboardNavigation.SelectUpTrack</a></div><div class="ttdeci">static bool SelectUpTrack(bool shift=false)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00290">TimelineKeyboardNavigation.cs:290</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac00fac3b6de42db10813e9ae7401808b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">UnityEditor.Timeline.TimelineWindow.instance</a></div><div class="ttdeci">static TimelineWindow instance</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00045">TimelineWindow.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html_a6006489f5a3c76ef215d97d622ced077"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a6006489f5a3c76ef215d97d622ced077">UnityEditor.Timeline.TimelineHelpers.FrameItems</a></div><div class="ttdeci">static void FrameItems(WindowState state, IEnumerable&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00726">TimelineHelpers.cs:726</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_ae661d1fe6de708cb7fde5816613f77f4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4">UnityEditor.Timeline.KeyboardNavigation.SelectLeftItem</a></div><div class="ttdeci">static bool SelectLeftItem(WindowState state, bool shift=false)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00193">TimelineKeyboardNavigation.cs:193</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_ab292c3c07d1f7157c009b5d003d36679"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ab292c3c07d1f7157c009b5d003d36679">UnityEditor.Timeline.KeyboardNavigation.PreviousTrack</a></div><div class="ttdeci">static TrackAsset PreviousTrack(this TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00046">TimelineKeyboardNavigation.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_ac0ae8dcaf9f44d7be4fc61cc05f5110b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">UnityEditor.Timeline.SelectionManager.Add</a></div><div class="ttdeci">static void Add(TrackAsset obj)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00024">TimelineSelection.cs:24</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_aa8458190017b0c60b6d70f8a999296d9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa8458190017b0c60b6d70f8a999296d9">UnityEditor.Timeline.KeyboardNavigation.CollapseGroup</a></div><div class="ttdeci">static bool CollapseGroup(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00162">TimelineKeyboardNavigation.cs:162</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a3f7cb4a9d2f8441e66550d00de5ae731"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">UnityEditor.Timeline.SelectionManager.SelectedTracks</a></div><div class="ttdeci">static IEnumerable&lt; TrackAsset &gt; SelectedTracks()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00284">TimelineSelection.cs:284</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_ae448728d849eca9bc36d419ee69c5281"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281">UnityEditor.Timeline.KeyboardNavigation.SelectDownTrack</a></div><div class="ttdeci">static bool SelectDownTrack(bool shift=false)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00338">TimelineKeyboardNavigation.cs:338</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a4fa536a37eaf2544d51b14311eafb048"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a4fa536a37eaf2544d51b14311eafb048">UnityEditor.Timeline.KeyboardNavigation.UnCollapseGroup</a></div><div class="ttdeci">static bool UnCollapseGroup(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00247">TimelineKeyboardNavigation.cs:247</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a247d8d2cad32a1cd5ca92c5c411687c3"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a247d8d2cad32a1cd5ca92c5c411687c3">UnityEditor.Timeline.ISequenceState.asset</a></div><div class="ttdeci">TimelineAsset asset</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00009">ISequenceState.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">UnityEditor.Timeline.ITimelineItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00006">ITimelineItem.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a645472aa417bb1c7fae29140cec88ab9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9">UnityEditor.Timeline.KeyboardNavigation.SelectRightItem</a></div><div class="ttdeci">static bool SelectRightItem(WindowState state, bool shift=false)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00221">TimelineKeyboardNavigation.cs:221</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a773c3585d8ee2c63765f06afa6536990"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a773c3585d8ee2c63765f06afa6536990">UnityEditor.Timeline.WindowState.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00741">WindowState.cs:741</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_ae38c4af0c4938000469f192daf813c19"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae38c4af0c4938000469f192daf813c19">UnityEditor.Timeline.KeyboardNavigation.FilterItems</a></div><div class="ttdeci">static bool FilterItems(ref List&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00092">TimelineKeyboardNavigation.cs:92</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_aa7ad1a269bc3557914d09f595ee88833"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa7ad1a269bc3557914d09f595ee88833">UnityEditor.Timeline.KeyboardNavigation.FocusFirstVisibleItem</a></div><div class="ttdeci">static bool FocusFirstVisibleItem(WindowState state, IEnumerable&lt; TrackAsset &gt; focusTracks=null)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00143">TimelineKeyboardNavigation.cs:143</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">UnityEditor.Timeline.TimelineHelpers</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00014">TimelineHelpers.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a006919b74b71f9f6511d64b138264d4c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">UnityEditor.Timeline.WindowState.editSequence</a></div><div class="ttdeci">ISequenceState editSequence</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00090">WindowState.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a65db7b94313705614e1d2da178a384dd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">UnityEditor.Timeline.TimelineWindow.treeView</a></div><div class="ttdeci">TimelineTreeViewGUI treeView</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___track_gui_8cs_source.html#l00012">TimelineWindow_TrackGui.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a64339f961d920c86357e95ee50bd937d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">UnityEditor.Timeline.SelectionManager.Remove</a></div><div class="ttdeci">static void Remove(TimelineClip item)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00208">TimelineSelection.cs:208</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a9ef5fd93336a8519c067cb1c8ac3154c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a9ef5fd93336a8519c067cb1c8ac3154c">UnityEditor.Timeline.KeyboardNavigation.GetClosestItem</a></div><div class="ttdeci">static ITimelineItem GetClosestItem(TrackAsset track, ITimelineItem refItem)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00104">TimelineKeyboardNavigation.cs:104</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ad7cc22049de06731087eef3858dddbc2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">UnityEditor.Timeline.WindowState.timeAreaShownRange</a></div><div class="ttdeci">Vector2 timeAreaShownRange</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00576">WindowState.cs:576</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html_a4694088d0315d924289d8cb6f0cba19c"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a4694088d0315d924289d8cb6f0cba19c">UnityEditor.Timeline.ITimelineItem.start</a></div><div class="ttdeci">double start</div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00008">ITimelineItem.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_acdb614c68f67d6226c2b3611059edee1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">UnityEditor.Timeline.KeyboardNavigation.ClipAreaActive</a></div><div class="ttdeci">static bool ClipAreaActive()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00031">TimelineKeyboardNavigation.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i_html_ac5231b0c9872e8e4a34a17632e307cac"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#ac5231b0c9872e8e4a34a17632e307cac">UnityEditor.Timeline.TimelineTreeViewGUI.visibleTracks</a></div><div class="ttdeci">TrackAsset[] visibleTracks</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_tree_view_g_u_i_8cs_source.html#l00044">TimelineTreeViewGUI.cs:44</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_ae2e24cf8e9a8174a365c5f30e8686c28"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae2e24cf8e9a8174a365c5f30e8686c28">UnityEditor.Timeline.KeyboardNavigation.SelectUpItem</a></div><div class="ttdeci">static bool SelectUpItem(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00312">TimelineKeyboardNavigation.cs:312</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_aab981e915aae984ca3702895c88ffbaf"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aab981e915aae984ca3702895c88ffbaf">UnityEngine.Timeline.TimelineAsset.markerTrack</a></div><div class="ttdeci">MarkerTrack markerTrack</div><div class="ttdoc">Gets the marker track for this TimelineAsset. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_8cs_source.html#l00298">TimelineAsset.cs:298</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html_a2511e28018fb64596b5b6ff038309c3b"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2511e28018fb64596b5b6ff038309c3b">UnityEditor.Timeline.ITimelineItem.parentTrack</a></div><div class="ttdeci">TrackAsset parentTrack</div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00012">ITimelineItem.cs:12</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html_a2360a302ec3e02a47f638654ed1c81fb"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2360a302ec3e02a47f638654ed1c81fb">UnityEditor.Timeline.ITimelineItem.end</a></div><div class="ttdeci">double end</div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00009">ITimelineItem.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_aeaa51c167c6ba238bd6b0e28681fa67e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aeaa51c167c6ba238bd6b0e28681fa67e">UnityEditor.Timeline.KeyboardNavigation.SelectDownItem</a></div><div class="ttdeci">static bool SelectDownItem(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00362">TimelineKeyboardNavigation.cs:362</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_aa50fb86f86161b0554c1069295c1020d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa50fb86f86161b0554c1069295c1020d">UnityEditor.Timeline.KeyboardNavigation.FrameTrackHeader</a></div><div class="ttdeci">static void FrameTrackHeader(TreeViewItem treeItem=null)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00011">TimelineKeyboardNavigation.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_abce25cf985bb918f83215c038a29abce"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">UnityEditor.Timeline.SelectionManager.SelectedItems</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; SelectedItems()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00309">TimelineSelection.cs:309</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_ab57d9cab613d1e53d50db9a43db506ca"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca">UnityEditor.Timeline.SelectionManager.Contains</a></div><div class="ttdeci">static bool Contains(TrackAsset item)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00158">TimelineSelection.cs:158</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a99c188eeafd7f693af0b3050e1e61497"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">UnityEditor.Timeline.KeyboardNavigation.TrackHeadActive</a></div><div class="ttdeci">static bool TrackHeadActive()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00026">TimelineKeyboardNavigation.cs:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

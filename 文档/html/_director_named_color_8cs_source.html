@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/DirectorNamedColor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DirectorNamedColor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_director_named_color_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Globalization;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.IO;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Reflection;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Text;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html">DirectorNamedColor</a> : ScriptableObject</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a3cd51ef7f978ff51745a8853e56874ab">   15</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a3cd51ef7f978ff51745a8853e56874ab">colorPlayhead</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a50a6c01aa9d97a332e369fa6072e6f73">   18</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a50a6c01aa9d97a332e369fa6072e6f73">colorSelection</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a6c9b03443f8499a69dc7253f87f83e11">   21</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a6c9b03443f8499a69dc7253f87f83e11">colorEndmarker</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a574f6616ed2428df24d02ddc336c078a">   24</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a574f6616ed2428df24d02ddc336c078a">colorGroup</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a721666716526344572f412211d4e0ac6">   27</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a721666716526344572f412211d4e0ac6">colorGroupTrackBackground</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#af1e07bafbad99b17dc76e639cfd05e7f">   30</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#af1e07bafbad99b17dc76e639cfd05e7f">colorAnimation</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a2632069bf223a6216940e55cd4934d55">   33</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a2632069bf223a6216940e55cd4934d55">colorAnimationRecorded</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aa124f88641d22fea1409b1fa0915b176">   36</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aa124f88641d22fea1409b1fa0915b176">colorAudio</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ae336467f01b01777466064c10bf10682">   39</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ae336467f01b01777466064c10bf10682">colorAudioWaveform</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#adb65ac21843e5e44df916352b47dbd35">   42</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#adb65ac21843e5e44df916352b47dbd35">colorActivation</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a246cc4ab8b9fb39e5cfb3cbfb5d41178">   45</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a246cc4ab8b9fb39e5cfb3cbfb5d41178">colorDropTarget</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a101623a00a02f29f755726e54d464c41">   48</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a101623a00a02f29f755726e54d464c41">colorClipFont</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#af0b6deac991f623615b22cb2169c2cfc">   51</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#af0b6deac991f623615b22cb2169c2cfc">colorInvalidClipOverlay</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a38bf402c76cde45b8c3a5e58494704f2">   54</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a38bf402c76cde45b8c3a5e58494704f2">colorTrackBackground</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a291ea2fe6caa6159b1fcadd97e29fa45">   57</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a291ea2fe6caa6159b1fcadd97e29fa45">colorTrackHeaderBackground</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a748b3beea8158bafe24464f4f2496dd2">   60</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a748b3beea8158bafe24464f4f2496dd2">colorTrackDarken</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ad3c5477ade5835351fb2c44480cd942f">   63</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ad3c5477ade5835351fb2c44480cd942f">colorTrackBackgroundRecording</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a5bfb585c6847e70a88beeeccff45c409">   66</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a5bfb585c6847e70a88beeeccff45c409">colorInfiniteTrackBackgroundRecording</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a7ed91554e1a4b5bddf45a3663e361f3f">   69</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a7ed91554e1a4b5bddf45a3663e361f3f">colorTrackBackgroundSelected</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a984d58dc44e93ce83ff03e22f649fc31">   72</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a984d58dc44e93ce83ff03e22f649fc31">colorTrackFont</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a614565e4b9ef4ca6d4d69f3bd4989c0c">   75</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a614565e4b9ef4ca6d4d69f3bd4989c0c">colorClipUnion</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac3b00bc808213b7860222a17378f086a">   78</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac3b00bc808213b7860222a17378f086a">colorTopOutline3</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#adbdc9280133cb7ca23a05c42dcb3f602">   81</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#adbdc9280133cb7ca23a05c42dcb3f602">colorDurationLine</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a24dca092b7933580a466635c97157999">   84</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a24dca092b7933580a466635c97157999">colorRange</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a2cef2ac6916cde733dac40665ae26a58">   87</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a2cef2ac6916cde733dac40665ae26a58">colorSequenceBackground</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a99c25d996c7acf89270c0c8795f4f729">   90</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a99c25d996c7acf89270c0c8795f4f729">colorTooltipBackground</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ab6aa4432a867d5501b17aaa5ecbb087b">   93</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ab6aa4432a867d5501b17aaa5ecbb087b">colorInfiniteClipLine</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a07137f8f5be58b7da63dd4694f0c1da2">   96</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a07137f8f5be58b7da63dd4694f0c1da2">colorDefaultTrackDrawer</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a32d2f195300f38b0519ea80475df8843">   99</a></span>&#160;        <span class="keyword">public</span> Color colorDuration = <span class="keyword">new</span> Color(0.66f, 0.66f, 0.66f, 1.0f);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a8f8c4dc79bf84d46ce43049f4f53cb43">  102</a></span>&#160;        <span class="keyword">public</span> Color colorRecordingClipOutline = <span class="keyword">new</span> Color(1, 0, 0, 0.9f);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a4febd5cdbf2ba9da15f7c4838a912892">  105</a></span>&#160;        <span class="keyword">public</span> Color colorAnimEditorBinding = <span class="keyword">new</span> Color(54.0f / 255.0f, 54.0f / 255.0f, 54.0f / 255.0f);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#af5f2dc4d526378f39c52ed810ba63a17">  108</a></span>&#160;        <span class="keyword">public</span> Color colorTimelineBackground = <span class="keyword">new</span> Color(0.2f, 0.2f, 0.2f, 1.0f);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a086597acb7b135c5a195137a0864904a">  111</a></span>&#160;        <span class="keyword">public</span> Color colorLockTextBG = Color.red;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a8b30ecb524cb41cb8b7a7b48d7f26f39">  114</a></span>&#160;        <span class="keyword">public</span> Color colorInlineCurveVerticalLines = <span class="keyword">new</span> Color(1.0f, 1.0f, 1.0f, 0.2f);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#adfa54510ae47e17ff6ebe47fd880750d">  117</a></span>&#160;        <span class="keyword">public</span> Color colorInlineCurveOutOfRangeOverlay = <span class="keyword">new</span> Color(0.0f, 0.0f, 0.0f, 0.5f);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a540a383b342cf5ed3f722c0a3ec155b4">  120</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a540a383b342cf5ed3f722c0a3ec155b4">colorInlineCurvesBackground</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a982c8020152803af85914bf75dad638f">  123</a></span>&#160;        <span class="keyword">public</span> Color markerDrawerBackgroundColor = <span class="keyword">new</span> Color(0.4f, 0.4f, 0.4f , 1.0f);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a2e04f5eddb1921a23f1a41a196d4eca8">  126</a></span>&#160;        <span class="keyword">public</span> Color markerHeaderDrawerBackgroundColor = <span class="keyword">new</span> Color(0.5f, 0.5f, 0.5f , 1.0f);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ae935e71c03f2bd6dd37767521c4c36b0">  129</a></span>&#160;        <span class="keyword">public</span> Color colorControl = <span class="keyword">new</span> Color(0.2313f, 0.6353f, 0.5843f, 1.0f);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a1d504cc68be936cfa7814adfeccb1a46">  132</a></span>&#160;        <span class="keyword">public</span> Color colorSubSequenceBackground = <span class="keyword">new</span> Color(0.1294118f, 0.1764706f, 0.1764706f, 1.0f);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aff1bf211d854191f111b814a08e4901a">  135</a></span>&#160;        <span class="keyword">public</span> Color colorTrackSubSequenceBackground = <span class="keyword">new</span> Color(0.1607843f, 0.2156863f, 0.2156863f, 1.0f);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aaf48b5550dd814af1f986197881be466">  138</a></span>&#160;        <span class="keyword">public</span> Color colorTrackSubSequenceBackgroundSelected = <span class="keyword">new</span> Color(0.0726923f, 0.252f, 0.252f, 1.0f);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac52057b085d8c01ad64f94f403c26f86">  141</a></span>&#160;        <span class="keyword">public</span> Color colorSubSequenceOverlay = <span class="keyword">new</span> Color(0.02f, 0.025f, 0.025f, 0.30f);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a55920495ccb6b590a940a0e352c34688">  144</a></span>&#160;        <span class="keyword">public</span> Color colorSubSequenceDurationLine = <span class="keyword">new</span> Color(0.0f, 1.0f, 0.88f, 0.46f);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#affb1e40093bef22ba5f980de2a4a35e1">  147</a></span>&#160;        <span class="keyword">public</span> Color clipBckg = <span class="keyword">new</span> Color(0.5f, 0.5f, 0.5f, 1.0f);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aeebfac6e40f690c9d6cbde91aefee80c">  150</a></span>&#160;        <span class="keyword">public</span> Color clipSelectedBckg = <span class="keyword">new</span> Color(0.7f, 0.7f, 0.7f, 1.0f);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ad5d11fe005a53410607aeedc342589aa">  153</a></span>&#160;        <span class="keyword">public</span> Color clipBorderColor = <span class="keyword">new</span> Color(0.4f, 0.4f, 0.4f, 1.0f);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a0f9c3c52f8e4ddebe3108f012b5eedc5">  156</a></span>&#160;        <span class="keyword">public</span> Color clipEaseBckgColor = <span class="keyword">new</span> Color(0.4f, 0.4f, 0.4f, 1.0f);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a45ecb1b43f726d401b4683d6df6f8cfd">  159</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a45ecb1b43f726d401b4683d6df6f8cfd">clipBlendIn</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a8b447ef756b24a103fb17f47662f8feb">  162</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a8b447ef756b24a103fb17f47662f8feb">clipBlendInSelected</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aa4a8005f897014bd45aa4cc659a00f2a">  165</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aa4a8005f897014bd45aa4cc659a00f2a">clipBlendOut</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a7c71f66fe4c741f59a5e1276c7a7f498">  168</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a7c71f66fe4c741f59a5e1276c7a7f498">clipBlendOutSelected</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac30021b15c2b374cb1e4e5f78f36c3c9">  170</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac30021b15c2b374cb1e4e5f78f36c3c9">SetDefault</a>()</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            colorPlayhead = <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#afc7102b2a30867bc43c2320e5365239f">timeCursor</a>.normal.textColor;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            colorSelection = <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#aa0c1d8e5c80501aaa7d945bd005429d5">selectedStyle</a>.normal.textColor;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            colorEndmarker = <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a1dcb740ec0cdef10e25de1b8dbbd91b8">endmarker</a>.normal.textColor;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            colorGroup = <span class="keyword">new</span> Color(0.094f, 0.357f, 0.384f, 0.310f);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            colorGroupTrackBackground = <span class="keyword">new</span> Color(0f, 0f, 0f, 1f);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            colorAnimation = <span class="keyword">new</span> Color(0.3f, 0.39f, 0.46f, 1.0f);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            colorAnimationRecorded = <span class="keyword">new</span> Color(colorAnimation.r * 0.75f, colorAnimation.g * 0.75f, colorAnimation.b * 0.75f, 1.0f);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            colorAudio = <span class="keyword">new</span> Color(1f, 0.635f, 0f);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            colorAudioWaveform = <span class="keyword">new</span> Color(0.129f, 0.164f, 0.254f);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            colorActivation = Color.green;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            colorDropTarget = <span class="keyword">new</span> Color(0.514f, 0.627f, 0.827f);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            colorClipFont = <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a330dd494c036c78800a08b4a1aa95bad">fontClip</a>.normal.textColor;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            colorTrackBackground = <span class="keyword">new</span> Color(0.2f, 0.2f, 0.2f, 1.0f);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            colorTrackBackgroundSelected = <span class="keyword">new</span> Color(1f, 1f, 1f, 0.33f);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            colorInlineCurvesBackground = <span class="keyword">new</span> Color(0.25f, 0.25f, 0.25f, 0.6f);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            colorTrackFont = <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a0ffa7b6ca048e2606cb7a260c8beb9b5">trackHeaderFont</a>.normal.textColor;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            colorClipUnion = <span class="keyword">new</span> Color(0.72f, 0.72f, 0.72f, 0.8f);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            colorTopOutline3 = <span class="keyword">new</span> Color(0.274f, 0.274f, 0.274f, 1.0f);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            colorDurationLine = <span class="keyword">new</span> Color(33.0f / 255.0f, 109.0f / 255.0f, 120.0f / 255.0f);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            colorRange = <span class="keyword">new</span> Color(0.733f, 0.733f, 0.733f, 0.70f);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            colorSequenceBackground = <span class="keyword">new</span> Color(0.16f, 0.16f, 0.16f, 1.0f);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            colorTooltipBackground = <span class="keyword">new</span> Color(29.0f / 255.0f, 32.0f / 255.0f, 33.0f / 255.0f);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            colorInfiniteClipLine = <span class="keyword">new</span> Color(72.0f / 255.0f, 78.0f / 255.0f, 82.0f / 255.0f);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            colorTrackBackgroundRecording = <span class="keyword">new</span> Color(1, 0, 0, 0.1f);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            colorTrackDarken = <span class="keyword">new</span> Color(0.0f, 0.0f, 0.0f, 0.4f);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            colorTrackHeaderBackground = <span class="keyword">new</span> Color(51.0f / 255.0f, 51.0f / 255.0f, 51.0f / 255.0f, 1.0f);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            colorDefaultTrackDrawer = <span class="keyword">new</span> Color(218.0f / 255.0f, 220.0f / 255.0f, 222.0f / 255.0f);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            colorRecordingClipOutline = <span class="keyword">new</span> Color(1, 0, 0, 0.9f);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            colorInlineCurveVerticalLines = <span class="keyword">new</span> Color(1.0f, 1.0f, 1.0f, 0.2f);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            colorInlineCurveOutOfRangeOverlay = <span class="keyword">new</span> Color(0.0f, 0.0f, 0.0f, 0.5f);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aeaba48765f51bcc41de7dbc1b1e47d52">  219</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aeaba48765f51bcc41de7dbc1b1e47d52">ToText</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            StringBuilder builder = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            var fields = GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.DeclaredOnly);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">foreach</span> (var f <span class="keywordflow">in</span> fields)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                <span class="keywordflow">if</span> (f.FieldType != typeof(Color))</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                Color c = (Color)f.GetValue(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                builder.Append(f.Name + <span class="stringliteral">&quot;,&quot;</span> + c);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                builder.Append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            File.WriteAllText(path, builder.ToString());</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae">  236</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae">FromText</a>(<span class="keywordtype">string</span> text)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="comment">// parse to a map</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordtype">string</span>[] lines = text.Split(<span class="keyword">new</span>[] { <span class="charliteral">&#39;\n&#39;</span>, <span class="charliteral">&#39;\r&#39;</span> }, StringSplitOptions.RemoveEmptyEntries);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            var map = <span class="keyword">new</span> Dictionary&lt;string, Color&gt;();</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">foreach</span> (var line <span class="keywordflow">in</span> lines)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                var pieces = line.Replace(<span class="stringliteral">&quot;RGBA(&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;)&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <span class="keywordflow">if</span> (pieces.Length == 5)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    <span class="keywordtype">string</span> name = pieces[0].Trim();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    Color c = Color.black;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    <span class="keywordtype">bool</span> b = ParseFloat(pieces[1], out c.r) &amp;&amp;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        ParseFloat(pieces[2], out c.g) &amp;&amp;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        ParseFloat(pieces[3], out c.b) &amp;&amp;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        ParseFloat(pieces[4], out c.a);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    <span class="keywordflow">if</span> (b)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                        map[name] = c;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            var fields = typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html">DirectorNamedColor</a>).GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.DeclaredOnly);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">foreach</span> (var f <span class="keywordflow">in</span> fields)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="keywordflow">if</span> (f.FieldType != typeof(Color))</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                Color c = Color.black;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="keywordflow">if</span> (map.TryGetValue(f.Name, out c))</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    f.SetValue(<span class="keyword">this</span>, c);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="comment">// Case 938534 - Timeline window has white background when running on .NET 4.6 depending on the set system language</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="comment">// Make sure we&#39;re using an invariant culture so &quot;0.35&quot; is parsed as 0.35 and not 35</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a233f6c5e89bc95ee416ea0fef435ef2e">  276</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a233f6c5e89bc95ee416ea0fef435ef2e">ParseFloat</a>(<span class="keywordtype">string</span> str, out <span class="keywordtype">float</span> f)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordflow">return</span> <span class="keywordtype">float</span>.TryParse(str, NumberStyles.Any, CultureInfo.InvariantCulture, out f);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a506d7a97aee83d1459a5211d6292d701">  281</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html">DirectorNamedColor</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a506d7a97aee83d1459a5211d6292d701">CreateAndLoadFromText</a>(<span class="keywordtype">string</span> text)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html">DirectorNamedColor</a> instance = CreateInstance&lt;DirectorNamedColor&gt;();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            instance.<a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae">FromText</a>(text);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_aeaba48765f51bcc41de7dbc1b1e47d52"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aeaba48765f51bcc41de7dbc1b1e47d52">UnityEngine.Timeline.DirectorNamedColor.ToText</a></div><div class="ttdeci">void ToText(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00219">DirectorNamedColor.cs:219</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_ac30021b15c2b374cb1e4e5f78f36c3c9"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac30021b15c2b374cb1e4e5f78f36c3c9">UnityEngine.Timeline.DirectorNamedColor.SetDefault</a></div><div class="ttdeci">void SetDefault()</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00170">DirectorNamedColor.cs:170</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a38bf402c76cde45b8c3a5e58494704f2"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a38bf402c76cde45b8c3a5e58494704f2">UnityEngine.Timeline.DirectorNamedColor.colorTrackBackground</a></div><div class="ttdeci">Color colorTrackBackground</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00054">DirectorNamedColor.cs:54</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_aa0c1d8e5c80501aaa7d945bd005429d5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#aa0c1d8e5c80501aaa7d945bd005429d5">UnityEditor.Timeline.DirectorStyles.selectedStyle</a></div><div class="ttdeci">GUIStyle selectedStyle</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00079">DirectorStyles.cs:79</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_af1e07bafbad99b17dc76e639cfd05e7f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#af1e07bafbad99b17dc76e639cfd05e7f">UnityEngine.Timeline.DirectorNamedColor.colorAnimation</a></div><div class="ttdeci">Color colorAnimation</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00030">DirectorNamedColor.cs:30</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a5bfb585c6847e70a88beeeccff45c409"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a5bfb585c6847e70a88beeeccff45c409">UnityEngine.Timeline.DirectorNamedColor.colorInfiniteTrackBackgroundRecording</a></div><div class="ttdeci">Color colorInfiniteTrackBackgroundRecording</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00066">DirectorNamedColor.cs:66</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html">UnityEngine.Timeline.DirectorNamedColor</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00012">DirectorNamedColor.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_aa124f88641d22fea1409b1fa0915b176"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aa124f88641d22fea1409b1fa0915b176">UnityEngine.Timeline.DirectorNamedColor.colorAudio</a></div><div class="ttdeci">Color colorAudio</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00036">DirectorNamedColor.cs:36</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_ab6aa4432a867d5501b17aaa5ecbb087b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ab6aa4432a867d5501b17aaa5ecbb087b">UnityEngine.Timeline.DirectorNamedColor.colorInfiniteClipLine</a></div><div class="ttdeci">Color colorInfiniteClipLine</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00093">DirectorNamedColor.cs:93</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a99c25d996c7acf89270c0c8795f4f729"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a99c25d996c7acf89270c0c8795f4f729">UnityEngine.Timeline.DirectorNamedColor.colorTooltipBackground</a></div><div class="ttdeci">Color colorTooltipBackground</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00090">DirectorNamedColor.cs:90</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a6c9b03443f8499a69dc7253f87f83e11"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a6c9b03443f8499a69dc7253f87f83e11">UnityEngine.Timeline.DirectorNamedColor.colorEndmarker</a></div><div class="ttdeci">Color colorEndmarker</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00021">DirectorNamedColor.cs:21</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a233f6c5e89bc95ee416ea0fef435ef2e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a233f6c5e89bc95ee416ea0fef435ef2e">UnityEngine.Timeline.DirectorNamedColor.ParseFloat</a></div><div class="ttdeci">static bool ParseFloat(string str, out float f)</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00276">DirectorNamedColor.cs:276</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_acd308eaa128ca513fc5f6516809b23ae"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae">UnityEngine.Timeline.DirectorNamedColor.FromText</a></div><div class="ttdeci">void FromText(string text)</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00236">DirectorNamedColor.cs:236</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a984d58dc44e93ce83ff03e22f649fc31"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a984d58dc44e93ce83ff03e22f649fc31">UnityEngine.Timeline.DirectorNamedColor.colorTrackFont</a></div><div class="ttdeci">Color colorTrackFont</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00072">DirectorNamedColor.cs:72</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a614565e4b9ef4ca6d4d69f3bd4989c0c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a614565e4b9ef4ca6d4d69f3bd4989c0c">UnityEngine.Timeline.DirectorNamedColor.colorClipUnion</a></div><div class="ttdeci">Color colorClipUnion</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00075">DirectorNamedColor.cs:75</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a291ea2fe6caa6159b1fcadd97e29fa45"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a291ea2fe6caa6159b1fcadd97e29fa45">UnityEngine.Timeline.DirectorNamedColor.colorTrackHeaderBackground</a></div><div class="ttdeci">Color colorTrackHeaderBackground</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00057">DirectorNamedColor.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a7c71f66fe4c741f59a5e1276c7a7f498"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a7c71f66fe4c741f59a5e1276c7a7f498">UnityEngine.Timeline.DirectorNamedColor.clipBlendOutSelected</a></div><div class="ttdeci">Color clipBlendOutSelected</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00168">DirectorNamedColor.cs:168</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_afc7102b2a30867bc43c2320e5365239f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#afc7102b2a30867bc43c2320e5365239f">UnityEditor.Timeline.DirectorStyles.timeCursor</a></div><div class="ttdeci">GUIStyle timeCursor</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00070">DirectorStyles.cs:70</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_clips_actions_8cs_source.html#l00010">ClipsActions.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a45ecb1b43f726d401b4683d6df6f8cfd"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a45ecb1b43f726d401b4683d6df6f8cfd">UnityEngine.Timeline.DirectorNamedColor.clipBlendIn</a></div><div class="ttdeci">Color clipBlendIn</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00159">DirectorNamedColor.cs:159</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a2632069bf223a6216940e55cd4934d55"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a2632069bf223a6216940e55cd4934d55">UnityEngine.Timeline.DirectorNamedColor.colorAnimationRecorded</a></div><div class="ttdeci">Color colorAnimationRecorded</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00033">DirectorNamedColor.cs:33</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a7ed91554e1a4b5bddf45a3663e361f3f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a7ed91554e1a4b5bddf45a3663e361f3f">UnityEngine.Timeline.DirectorNamedColor.colorTrackBackgroundSelected</a></div><div class="ttdeci">Color colorTrackBackgroundSelected</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00069">DirectorNamedColor.cs:69</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_ac3b00bc808213b7860222a17378f086a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac3b00bc808213b7860222a17378f086a">UnityEngine.Timeline.DirectorNamedColor.colorTopOutline3</a></div><div class="ttdeci">Color colorTopOutline3</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00078">DirectorNamedColor.cs:78</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a24dca092b7933580a466635c97157999"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a24dca092b7933580a466635c97157999">UnityEngine.Timeline.DirectorNamedColor.colorRange</a></div><div class="ttdeci">Color colorRange</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00084">DirectorNamedColor.cs:84</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a0ffa7b6ca048e2606cb7a260c8beb9b5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a0ffa7b6ca048e2606cb7a260c8beb9b5">UnityEditor.Timeline.DirectorStyles.trackHeaderFont</a></div><div class="ttdeci">GUIStyle trackHeaderFont</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00067">DirectorStyles.cs:67</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a506d7a97aee83d1459a5211d6292d701"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a506d7a97aee83d1459a5211d6292d701">UnityEngine.Timeline.DirectorNamedColor.CreateAndLoadFromText</a></div><div class="ttdeci">static DirectorNamedColor CreateAndLoadFromText(string text)</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00281">DirectorNamedColor.cs:281</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_ae336467f01b01777466064c10bf10682"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ae336467f01b01777466064c10bf10682">UnityEngine.Timeline.DirectorNamedColor.colorAudioWaveform</a></div><div class="ttdeci">Color colorAudioWaveform</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00039">DirectorNamedColor.cs:39</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a8b447ef756b24a103fb17f47662f8feb"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a8b447ef756b24a103fb17f47662f8feb">UnityEngine.Timeline.DirectorNamedColor.clipBlendInSelected</a></div><div class="ttdeci">Color clipBlendInSelected</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00162">DirectorNamedColor.cs:162</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a748b3beea8158bafe24464f4f2496dd2"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a748b3beea8158bafe24464f4f2496dd2">UnityEngine.Timeline.DirectorNamedColor.colorTrackDarken</a></div><div class="ttdeci">Color colorTrackDarken</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00060">DirectorNamedColor.cs:60</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_ad3c5477ade5835351fb2c44480cd942f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ad3c5477ade5835351fb2c44480cd942f">UnityEngine.Timeline.DirectorNamedColor.colorTrackBackgroundRecording</a></div><div class="ttdeci">Color colorTrackBackgroundRecording</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00063">DirectorNamedColor.cs:63</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_af0b6deac991f623615b22cb2169c2cfc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#af0b6deac991f623615b22cb2169c2cfc">UnityEngine.Timeline.DirectorNamedColor.colorInvalidClipOverlay</a></div><div class="ttdeci">Color colorInvalidClipOverlay</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00051">DirectorNamedColor.cs:51</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a15e95e53dca9e97cb48ed6e7b8f98cbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">UnityEditor.Timeline.DirectorStyles.Instance</a></div><div class="ttdeci">static DirectorStyles Instance</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00124">DirectorStyles.cs:124</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_adb65ac21843e5e44df916352b47dbd35"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#adb65ac21843e5e44df916352b47dbd35">UnityEngine.Timeline.DirectorNamedColor.colorActivation</a></div><div class="ttdeci">Color colorActivation</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00042">DirectorNamedColor.cs:42</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a50a6c01aa9d97a332e369fa6072e6f73"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a50a6c01aa9d97a332e369fa6072e6f73">UnityEngine.Timeline.DirectorNamedColor.colorSelection</a></div><div class="ttdeci">Color colorSelection</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00018">DirectorNamedColor.cs:18</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a574f6616ed2428df24d02ddc336c078a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a574f6616ed2428df24d02ddc336c078a">UnityEngine.Timeline.DirectorNamedColor.colorGroup</a></div><div class="ttdeci">Color colorGroup</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00024">DirectorNamedColor.cs:24</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a2cef2ac6916cde733dac40665ae26a58"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a2cef2ac6916cde733dac40665ae26a58">UnityEngine.Timeline.DirectorNamedColor.colorSequenceBackground</a></div><div class="ttdeci">Color colorSequenceBackground</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00087">DirectorNamedColor.cs:87</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a1dcb740ec0cdef10e25de1b8dbbd91b8"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a1dcb740ec0cdef10e25de1b8dbbd91b8">UnityEditor.Timeline.DirectorStyles.endmarker</a></div><div class="ttdeci">GUIStyle endmarker</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00071">DirectorStyles.cs:71</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a07137f8f5be58b7da63dd4694f0c1da2"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a07137f8f5be58b7da63dd4694f0c1da2">UnityEngine.Timeline.DirectorNamedColor.colorDefaultTrackDrawer</a></div><div class="ttdeci">Color colorDefaultTrackDrawer</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00096">DirectorNamedColor.cs:96</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_aa4a8005f897014bd45aa4cc659a00f2a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#aa4a8005f897014bd45aa4cc659a00f2a">UnityEngine.Timeline.DirectorNamedColor.clipBlendOut</a></div><div class="ttdeci">Color clipBlendOut</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00165">DirectorNamedColor.cs:165</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a3cd51ef7f978ff51745a8853e56874ab"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a3cd51ef7f978ff51745a8853e56874ab">UnityEngine.Timeline.DirectorNamedColor.colorPlayhead</a></div><div class="ttdeci">Color colorPlayhead</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00015">DirectorNamedColor.cs:15</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a721666716526344572f412211d4e0ac6"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a721666716526344572f412211d4e0ac6">UnityEngine.Timeline.DirectorNamedColor.colorGroupTrackBackground</a></div><div class="ttdeci">Color colorGroupTrackBackground</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00027">DirectorNamedColor.cs:27</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_adbdc9280133cb7ca23a05c42dcb3f602"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#adbdc9280133cb7ca23a05c42dcb3f602">UnityEngine.Timeline.DirectorNamedColor.colorDurationLine</a></div><div class="ttdeci">Color colorDurationLine</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00081">DirectorNamedColor.cs:81</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a330dd494c036c78800a08b4a1aa95bad"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a330dd494c036c78800a08b4a1aa95bad">UnityEditor.Timeline.DirectorStyles.fontClip</a></div><div class="ttdeci">GUIStyle fontClip</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00065">DirectorStyles.cs:65</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a101623a00a02f29f755726e54d464c41"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a101623a00a02f29f755726e54d464c41">UnityEngine.Timeline.DirectorNamedColor.colorClipFont</a></div><div class="ttdeci">Color colorClipFont</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00048">DirectorNamedColor.cs:48</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a246cc4ab8b9fb39e5cfb3cbfb5d41178"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a246cc4ab8b9fb39e5cfb3cbfb5d41178">UnityEngine.Timeline.DirectorNamedColor.colorDropTarget</a></div><div class="ttdeci">Color colorDropTarget</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00045">DirectorNamedColor.cs:45</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a540a383b342cf5ed3f722c0a3ec155b4"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a540a383b342cf5ed3f722c0a3ec155b4">UnityEngine.Timeline.DirectorNamedColor.colorInlineCurvesBackground</a></div><div class="ttdeci">Color colorInlineCurvesBackground</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00120">DirectorNamedColor.cs:120</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Manipulators/TimeAreaAutoPanner.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6a547c3745f8ad2865def9ffaf3eba83.html">Manipulators</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimeAreaAutoPanner.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_time_area_auto_panner_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html">    5</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html">TimeAreaAutoPanner</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ae67f7029054f99918d8fe0a6dfde9f4a">    7</a></span>&#160;        readonly <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ae67f7029054f99918d8fe0a6dfde9f4a">m_State</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a8932d1e60e42776a971aa9ea5146b4cb">    8</a></span>&#160;        readonly <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a8932d1e60e42776a971aa9ea5146b4cb">m_Window</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ad7124a732c729c864157a70c7a32c3a5">    9</a></span>&#160;        readonly Rect <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ad7124a732c729c864157a70c7a32c3a5">m_ViewRect</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a7c812730bfbe2c33b9489c7df022926d">   11</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> k_PixelDistanceToMaxSpeed = 100.0f;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#aec6497080bc7e31a1356da74aecf4c7e">   12</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> k_MaxPanSpeed = 30.0f;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a17a04d61872235beea52df32f9fbcbf4">   14</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a17a04d61872235beea52df32f9fbcbf4">TimeAreaAutoPanner</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            m_State = state;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            m_Window = m_State.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">GetWindow</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            var shownRange = m_State.timeAreaShownRange;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            var trackViewBounds = m_Window.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ab38f07b604cb20709d6544fef293128a">sequenceRect</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            m_ViewRect = Rect.MinMaxRect(m_State.TimeToPixel(shownRange.x), trackViewBounds.yMin,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                m_State.TimeToPixel(shownRange.y), trackViewBounds.yMax);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a4bfe7b93d3c8db9e0dc42cf9d42ce97e">   25</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a4bfe7b93d3c8db9e0dc42cf9d42ce97e">OnGUI</a>(Event evt)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (evt.type != <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Layout)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            var hFactor = 0.0f;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            var vFactor = 0.0f;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordtype">bool</span> horizontalPan = GetPanFactor(evt.mousePosition.x, m_ViewRect.xMin, m_ViewRect.xMax, out hFactor);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordtype">bool</span> verticalPan = GetPanFactor(evt.mousePosition.y, m_ViewRect.yMin, m_ViewRect.yMax, out vFactor);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (horizontalPan)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                var translation = m_State.timeAreaTranslation;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                translation.x += hFactor * k_MaxPanSpeed;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                m_State.SetTimeAreaTransform(translation, m_State.timeAreaScale);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (verticalPan)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                var translation = m_Window.treeView.scrollPosition;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                translation.y -= vFactor * k_MaxPanSpeed;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                m_Window.treeView.scrollPosition = translation;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ae69db378b949588905b20e6796c2fcd7">   53</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ae69db378b949588905b20e6796c2fcd7">GetPanFactor</a>(<span class="keywordtype">float</span> v, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, out <span class="keywordtype">float</span> factor)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            factor = 0.0f;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (v &lt; min)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                factor = Mathf.Clamp01((min - v) / k_PixelDistanceToMaxSpeed);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (v &gt; max)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                factor = -Mathf.Clamp01((v - max) / k_PixelDistanceToMaxSpeed);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_af1e0a5f9a63a8aaa835f5ed772a25741"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">UnityEditor.Timeline.WindowState.GetWindow</a></div><div class="ttdeci">TimelineWindow GetWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00627">WindowState.cs:627</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html_ae69db378b949588905b20e6796c2fcd7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ae69db378b949588905b20e6796c2fcd7">UnityEditor.Timeline.TimeAreaAutoPanner.GetPanFactor</a></div><div class="ttdeci">static bool GetPanFactor(float v, float min, float max, out float factor)</div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00053">TimeAreaAutoPanner.cs:53</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html_a4bfe7b93d3c8db9e0dc42cf9d42ce97e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a4bfe7b93d3c8db9e0dc42cf9d42ce97e">UnityEditor.Timeline.TimeAreaAutoPanner.OnGUI</a></div><div class="ttdeci">void OnGUI(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00025">TimeAreaAutoPanner.cs:25</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ab38f07b604cb20709d6544fef293128a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ab38f07b604cb20709d6544fef293128a">UnityEditor.Timeline.TimelineWindow.sequenceRect</a></div><div class="ttdeci">Rect sequenceRect</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___gui_8cs_source.html#l00070">TimelineWindow_Gui.cs:70</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html_a8932d1e60e42776a971aa9ea5146b4cb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a8932d1e60e42776a971aa9ea5146b4cb">UnityEditor.Timeline.TimeAreaAutoPanner.m_Window</a></div><div class="ttdeci">readonly TimelineWindow m_Window</div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00008">TimeAreaAutoPanner.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html_a17a04d61872235beea52df32f9fbcbf4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a17a04d61872235beea52df32f9fbcbf4">UnityEditor.Timeline.TimeAreaAutoPanner.TimeAreaAutoPanner</a></div><div class="ttdeci">TimeAreaAutoPanner(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00014">TimeAreaAutoPanner.cs:14</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html_ae67f7029054f99918d8fe0a6dfde9f4a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ae67f7029054f99918d8fe0a6dfde9f4a">UnityEditor.Timeline.TimeAreaAutoPanner.m_State</a></div><div class="ttdeci">readonly WindowState m_State</div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00007">TimeAreaAutoPanner.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html_ad7124a732c729c864157a70c7a32c3a5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#ad7124a732c729c864157a70c7a32c3a5">UnityEditor.Timeline.TimeAreaAutoPanner.m_ViewRect</a></div><div class="ttdeci">readonly Rect m_ViewRect</div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00009">TimeAreaAutoPanner.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html">UnityEditor.Timeline.TimeAreaAutoPanner</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00005">TimeAreaAutoPanner.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

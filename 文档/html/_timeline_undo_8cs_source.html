@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Utilities/TimelineUndo.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_3783f2849d6c65cfd21f346d22390697.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineUndo.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_undo_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Diagnostics;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">   12</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline, <a class="code" href="namespace_object.html">Object</a> thingToDirty, <a class="code" href="namespace_object.html">Object</a> objectToDestroy, <span class="keywordtype">string</span> operation)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (objectToDestroy == null || !DisableUndoGuard.enableUndo)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (thingToDirty != null)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                EditorUtility.SetDirty(thingToDirty);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (timeline != null)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                EditorUtility.SetDirty(timeline);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            Undo.DestroyObjectImmediate(objectToDestroy);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (objectToDestroy != null)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <a class="code" href="namespace_object.html">Object</a>.Destroy(objectToDestroy);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        [Conditional(<span class="stringliteral">&quot;UNITY_EDITOR&quot;</span>)]</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">   34</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(<a class="code" href="namespace_object.html">Object</a> thingToDirty, <span class="keywordtype">string</span> operation)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (thingToDirty != null &amp;&amp; DisableUndoGuard.enableUndo)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                var track = thingToDirty as <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">if</span> (track != null)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    track.MarkDirty();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                EditorUtility.SetDirty(thingToDirty);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                Undo.RegisterCompleteObjectUndo(thingToDirty, <span class="stringliteral">&quot;Timeline &quot;</span> + operation);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        [Conditional(<span class="stringliteral">&quot;UNITY_EDITOR&quot;</span>)]</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a00de6f820def7986ea36db84a4628f5e">   50</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a00de6f820def7986ea36db84a4628f5e">RegisterCreatedObjectUndo</a>(<a class="code" href="namespace_object.html">Object</a> thingCreated, <span class="keywordtype">string</span> operation)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (DisableUndoGuard.enableUndo)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                Undo.RegisterCreatedObjectUndo(thingCreated, <span class="stringliteral">&quot;Timeline &quot;</span> + operation);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">public</span> <span class="keyword">struct </span>DisableUndoGuard : IDisposable</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> enableUndo = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">static</span> readonly Stack&lt;bool&gt; m_UndoStateStack = <span class="keyword">new</span> Stack&lt;bool&gt;();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordtype">bool</span> m_Disposed;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">public</span> DisableUndoGuard(<span class="keywordtype">bool</span> disable)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                m_Disposed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                m_UndoStateStack.Push(enableUndo);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                enableUndo = !disable;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> Dispose()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">if</span> (!m_Disposed)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">if</span> (m_UndoStateStack.Count == 0)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        <a class="code" href="namespace_debug.html">Debug</a>.LogError(<span class="stringliteral">&quot;UnMatched DisableUndoGuard calls&quot;</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        enableUndo = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    enableUndo = m_UndoStateStack.Pop();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    m_Disposed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a00de6f820def7986ea36db84a4628f5e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a00de6f820def7986ea36db84a4628f5e">UnityEngine.Timeline.TimelineUndo.RegisterCreatedObjectUndo</a></div><div class="ttdeci">static void RegisterCreatedObjectUndo(Object thingCreated, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00050">TimelineUndo.cs:50</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a195c45502177dc1679aba3ba09bf7f41"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">UnityEngine.Timeline.TimelineUndo.PushDestroyUndo</a></div><div class="ttdeci">static void PushDestroyUndo(TimelineAsset timeline, Object thingToDirty, Object objectToDestroy, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00014">TimelineUndo.cs:14</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">UnityEngine.Timeline.TimelineUndo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00012">TimelineUndo.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a2c45dda5e68a6de6f481aee4888b352c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">UnityEngine.Timeline.TimelineUndo.PushUndo</a></div><div class="ttdeci">static void PushUndo(Object thingToDirty, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00034">TimelineUndo.cs:34</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="namespace_object_html"><div class="ttname"><a href="namespace_object.html">Object</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

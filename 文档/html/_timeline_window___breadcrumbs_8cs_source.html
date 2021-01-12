@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Window/TimelineWindow_Breadcrumbs.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_08b42967959711a942dabf507b118564.html">Window</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineWindow_Breadcrumbs.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_window___breadcrumbs_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">partial class </span>TimelineWindow</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a91e6b611e24ecb274abe992d19f33591">   12</a></span>&#160;        List&lt;BreadCrumbTitle&gt; m_BreadCrumbLabels = <span class="keyword">new</span> List&lt;BreadCrumbTitle&gt;(100);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2b00e402082e89363ad693c64b6ddb15">   14</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2b00e402082e89363ad693c64b6ddb15">GetTitleMode</a>(<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">ISequenceState</a> sequence)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            var prefabStage = <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Experimental.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="comment">// Top level</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">if</span> (sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a4af4b247a259dd8669e4cc39eb275c9a">hostClip</a> == null)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keywordflow">if</span> (sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a> != null &amp;&amp; prefabStage != null &amp;&amp; prefabStage.IsPartOfPrefabContents(sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a>.gameObject))</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a>.Prefab;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                if (sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a> != null &amp;&amp; PrefabUtility.IsPartOfPrefabAsset(sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a>))</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a>.PrefabOutOfContext;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                if (sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a> != null &amp;&amp; !sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a>.isActiveAndEnabled)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a>.DisabledComponent;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">if</span> (sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a> != null)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a>.GameObject;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">if</span> (sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a247d8d2cad32a1cd5ca92c5c411687c3">asset</a> != null)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a>.Asset;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">// Subtimelines only get an error icon</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a> != null &amp;&amp; !sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a>.isActiveAndEnabled &amp;&amp; !PrefabUtility.IsPartOfPrefabAsset(sequence.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a>))</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a>.DisabledComponent;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">TitleMode</a>.None;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ae35f5ff2d5520630c25f57ab3e4d71dc">   38</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ae35f5ff2d5520630c25f57ab3e4d71dc">DoBreadcrumbGUI</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (state == null)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">foreach</span> (var sequence <span class="keywordflow">in</span> state.GetAllSequences())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a> title = <span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    name = <a class="code" href="class_unity_editor_1_1_timeline_1_1_display_name_helper.html">DisplayNameHelper</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_display_name_helper.html#ad3251b7ec96b9ffa07e945125876d056">GetDisplayName</a>(sequence),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    mode = GetTitleMode(sequence)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">if</span> (count &gt;= m_BreadCrumbLabels.Count)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    m_BreadCrumbLabels.Add(title);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    m_BreadCrumbLabels[count] = title;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                count++;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (m_BreadCrumbLabels.Count &gt; count)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                m_BreadCrumbLabels.RemoveRange(count, m_BreadCrumbLabels.Count - count);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> EditorGUI.DisabledScope(currentMode.headerState.breadCrumb == <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a>.Disabled))</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html">BreadcrumbDrawer</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a7e7528b64f97f59371c1e019b6c2cf70">Draw</a>(breadCrumbAreaWidth, m_BreadCrumbLabels, NavigateToBreadcrumbIndex);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a25a4b37c9e029b2aa8226dabb22ccdd6">   66</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a25a4b37c9e029b2aa8226dabb22ccdd6">NavigateToBreadcrumbIndex</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            state.PopSequencesUntilCount(index + 1);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a36b27bc4a7054a3db0b832dff3de7693">   71</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a36b27bc4a7054a3db0b832dff3de7693">DoSequenceSelectorGUI</a>()</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> EditorGUI.DisabledScope(currentMode.headerState.sequenceSelector == <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a>.Disabled))</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">if</span> (EditorGUILayout.DropdownButton(<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a970aae556c187a813b334b7e9a5fc54a">timelineSelectorArrow</a>, FocusType.Passive, <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a52e040033921e00125712d2ca632d34c">sequenceSwitcher</a>, GUILayout.Width(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html">WindowConstants</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#ac2c22cf1b335c48c9f2cced796606ec6">selectorWidth</a>)))</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    ShowSequenceSelector();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aaf3fd81be2625d90e331fbd9a0e3aed7">   80</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aaf3fd81be2625d90e331fbd9a0e3aed7">ShowSequenceSelector</a>()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            var allDirectors = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html">TimelineUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#adcef4fe204ae79fbbce8ae7b0c352367">GetDirectorsInSceneUsingAsset</a>(null);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            var formatter = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html">SequenceMenuNameFormater</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            var namesAndDirectors = <span class="keyword">new</span> List&lt;ValueTuple&lt;string, PlayableDirector&gt;&gt;();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">foreach</span> (var d <span class="keywordflow">in</span> allDirectors)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">if</span> (d.playableAsset is <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    var text = formatter.Format(<a class="code" href="class_unity_editor_1_1_timeline_1_1_display_name_helper.html">DisplayNameHelper</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_display_name_helper.html#ad3251b7ec96b9ffa07e945125876d056">GetDisplayName</a>(d));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    namesAndDirectors.Add(<span class="keyword">new</span> ValueTuple&lt;string, PlayableDirector&gt;(text, d));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            var sequenceMenu = <span class="keyword">new</span> GenericMenu();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">foreach</span> (var (timelineName, playableDirector) in namesAndDirectors.OrderBy(i =&gt; i.Item1))</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                var isCurrent = state.masterSequence.director == playableDirector;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                sequenceMenu.AddItem(<span class="keyword">new</span> GUIContent(timelineName), isCurrent, OnSequenceSelected, playableDirector);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (allDirectors.Length == 0)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                sequenceMenu.AddDisabledItem(<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#af01f61a28ce590edd7ce6125246620f9">noTimelinesInScene</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            sequenceMenu.DropDown(EditorGUILayout.s_LastRect);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a78e5af0580fed77a594469efd4216ca7">  108</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a78e5af0580fed77a594469efd4216ca7">OnSequenceSelected</a>(<span class="keywordtype">object</span> arg)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            var directorToBindTo = (PlayableDirector)arg;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (directorToBindTo)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="comment">// don&#39;t just select the object, it may already be selected.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                SetCurrentTimeline(directorToBindTo);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a52e040033921e00125712d2ca632d34c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a52e040033921e00125712d2ca632d34c">UnityEditor.Timeline.DirectorStyles.sequenceSwitcher</a></div><div class="ttdeci">GUIStyle sequenceSwitcher</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00105">DirectorStyles.cs:105</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a49306fce0d7620373e7bc7e6ee7b8ae2"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">UnityEditor.Timeline.TimelineModeGUIState</a></div><div class="ttdeci">TimelineModeGUIState</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00006">TimelineMode.cs:6</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html">UnityEditor.Timeline.WindowConstants</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00003">WindowConstants.cs:3</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">UnityEditor.Timeline.BreadCrumbTitle</a></div><div class="ttdef"><b>Definition:</b> <a href="_breadcrumb_drawer_8cs_source.html#l00018">BreadcrumbDrawer.cs:18</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a2b00e402082e89363ad693c64b6ddb15"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2b00e402082e89363ad693c64b6ddb15">UnityEditor.Timeline.TimelineWindow.GetTitleMode</a></div><div class="ttdeci">static TitleMode GetTitleMode(ISequenceState sequence)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___breadcrumbs_8cs_source.html#l00014">TimelineWindow_Breadcrumbs.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html">UnityEditor.Timeline.TimelineUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_utility_8cs_source.html#l00012">TimelineUtility.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_display_name_helper_html_ad3251b7ec96b9ffa07e945125876d056"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_display_name_helper.html#ad3251b7ec96b9ffa07e945125876d056">UnityEditor.Timeline.DisplayNameHelper.GetDisplayName</a></div><div class="ttdeci">static string GetDisplayName(ISequenceState sequence)</div><div class="ttdef"><b>Definition:</b> <a href="_display_name_helper_8cs_source.html#l00012">DisplayNameHelper.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_af01f61a28ce590edd7ce6125246620f9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#af01f61a28ce590edd7ce6125246620f9">UnityEditor.Timeline.DirectorStyles.noTimelinesInScene</a></div><div class="ttdeci">static readonly GUIContent noTimelinesInScene</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00019">DirectorStyles.cs:19</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html_ac2c22cf1b335c48c9f2cced796606ec6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html#ac2c22cf1b335c48c9f2cced796606ec6">UnityEditor.Timeline.WindowConstants.selectorWidth</a></div><div class="ttdeci">const float selectorWidth</div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00031">WindowConstants.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a247d8d2cad32a1cd5ca92c5c411687c3"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a247d8d2cad32a1cd5ca92c5c411687c3">UnityEditor.Timeline.ISequenceState.asset</a></div><div class="ttdeci">TimelineAsset asset</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00009">ISequenceState.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a970aae556c187a813b334b7e9a5fc54a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a970aae556c187a813b334b7e9a5fc54a">UnityEditor.Timeline.DirectorStyles.timelineSelectorArrow</a></div><div class="ttdeci">static readonly GUIContent timelineSelectorArrow</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00046">DirectorStyles.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html">UnityEditor.Timeline.SequenceMenuNameFormater</a></div><div class="ttdef"><b>Definition:</b> <a href="_sequence_selector_name_formater_8cs_source.html#l00008">SequenceSelectorNameFormater.cs:8</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a4af4b247a259dd8669e4cc39eb275c9a"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a4af4b247a259dd8669e4cc39eb275c9a">UnityEditor.Timeline.ISequenceState.hostClip</a></div><div class="ttdeci">TimelineClip hostClip</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00011">ISequenceState.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a25a4b37c9e029b2aa8226dabb22ccdd6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a25a4b37c9e029b2aa8226dabb22ccdd6">UnityEditor.Timeline.TimelineWindow.NavigateToBreadcrumbIndex</a></div><div class="ttdeci">void NavigateToBreadcrumbIndex(int index)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___breadcrumbs_8cs_source.html#l00066">TimelineWindow_Breadcrumbs.cs:66</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ae35f5ff2d5520630c25f57ab3e4d71dc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ae35f5ff2d5520630c25f57ab3e4d71dc">UnityEditor.Timeline.TimelineWindow.DoBreadcrumbGUI</a></div><div class="ttdeci">void DoBreadcrumbGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___breadcrumbs_8cs_source.html#l00038">TimelineWindow_Breadcrumbs.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a15e95e53dca9e97cb48ed6e7b8f98cbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">UnityEditor.Timeline.DirectorStyles.Instance</a></div><div class="ttdeci">static DirectorStyles Instance</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00124">DirectorStyles.cs:124</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html">UnityEditor.Timeline.BreadcrumbDrawer</a></div><div class="ttdef"><b>Definition:</b> <a href="_breadcrumb_drawer_8cs_source.html#l00024">BreadcrumbDrawer.cs:24</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a36b27bc4a7054a3db0b832dff3de7693"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a36b27bc4a7054a3db0b832dff3de7693">UnityEditor.Timeline.TimelineWindow.DoSequenceSelectorGUI</a></div><div class="ttdeci">void DoSequenceSelectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___breadcrumbs_8cs_source.html#l00071">TimelineWindow_Breadcrumbs.cs:71</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_aaf3fd81be2625d90e331fbd9a0e3aed7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aaf3fd81be2625d90e331fbd9a0e3aed7">UnityEditor.Timeline.TimelineWindow.ShowSequenceSelector</a></div><div class="ttdeci">void ShowSequenceSelector()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___breadcrumbs_8cs_source.html#l00080">TimelineWindow_Breadcrumbs.cs:80</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_display_name_helper_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_display_name_helper.html">UnityEditor.Timeline.DisplayNameHelper</a></div><div class="ttdef"><b>Definition:</b> <a href="_display_name_helper_8cs_source.html#l00006">DisplayNameHelper.cs:6</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">UnityEditor.Timeline.ISequenceState</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00007">ISequenceState.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a78e5af0580fed77a594469efd4216ca7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a78e5af0580fed77a594469efd4216ca7">UnityEditor.Timeline.TimelineWindow.OnSequenceSelected</a></div><div class="ttdeci">void OnSequenceSelected(object arg)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___breadcrumbs_8cs_source.html#l00108">TimelineWindow_Breadcrumbs.cs:108</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a834283c802e55ced7c6c64c4a2d094a6"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6">UnityEditor.Timeline.TitleMode</a></div><div class="ttdeci">TitleMode</div><div class="ttdef"><b>Definition:</b> <a href="_breadcrumb_drawer_8cs_source.html#l00008">BreadcrumbDrawer.cs:8</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a08ce693fcd3a6acc64b0b9bf36d1c29f"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">UnityEditor.Timeline.ISequenceState.director</a></div><div class="ttdeci">PlayableDirector director</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00010">ISequenceState.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_utility_html_adcef4fe204ae79fbbce8ae7b0c352367"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#adcef4fe204ae79fbbce8ae7b0c352367">UnityEditor.Timeline.TimelineUtility.GetDirectorsInSceneUsingAsset</a></div><div class="ttdeci">static PlayableDirector[] GetDirectorsInSceneUsingAsset(PlayableAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_utility_8cs_source.html#l00107">TimelineUtility.cs:107</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_html_a7e7528b64f97f59371c1e019b6c2cf70"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a7e7528b64f97f59371c1e019b6c2cf70">UnityEditor.Timeline.BreadcrumbDrawer.Draw</a></div><div class="ttdeci">static void Draw(float breadcrumbAreaWidth, List&lt; BreadCrumbTitle &gt; labels, Action&lt; int &gt; navigateToBreadcrumbIndex)</div><div class="ttdef"><b>Definition:</b> <a href="_breadcrumb_drawer_8cs_source.html#l00079">BreadcrumbDrawer.cs:79</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

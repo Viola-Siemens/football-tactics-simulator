@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/ManipulationsTimeline.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_8d0d6b838e6896df5d8de1eafe8aaa93.html">treeview</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ManipulationsTimeline.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_manipulations_timeline_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.ShortcutManagement;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html">TimelinePanManipulator</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a956043a4735211472de628f021608658">   10</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> k_MaxPanSpeed = 50.0f;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#ac31d4b7c93cbc9cdeb905fb41bdca553">   11</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#ac31d4b7c93cbc9cdeb905fb41bdca553">m_Active</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#aabc72a3e2033e02d23f8634f20997e70">   13</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#aabc72a3e2033e02d23f8634f20997e70">MouseDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">if</span> ((evt.button == 2 &amp;&amp; evt.modifiers == EventModifiers.None) ||</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                (evt.button == 0 &amp;&amp; evt.modifiers == EventModifiers.Alt))</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">TimelineCursors</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#af3aaa89dd70528922d3b286f8d18bed7">SetCursor</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">TimelineCursors</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>.Pan);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                m_Active = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a583be58ebaab178c375f587050241efa">   27</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a583be58ebaab178c375f587050241efa">MouseUp</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span> (m_Active)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">TimelineCursors</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">ClearCursor</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab9c410b0c9ce67215036ed9ac1f0cf64">editorWindow</a>.Repaint();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#ad1078becb4a1d74d9989b32ceee77e99">   38</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#ad1078becb4a1d74d9989b32ceee77e99">MouseDrag</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">// Note: Do not rely on evt.button here as some 3rd party automation</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">//       software does not properly set the button data during drag.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (!m_Active)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782">Pan</a>(evt, state);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a769327792783375dc782b0418962b3ca">   49</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a769327792783375dc782b0418962b3ca">MouseWheel</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">if</span> (Math.Abs(evt.delta.x) &lt; 1e-5 || Math.Abs(evt.delta.x) &lt;= Math.Abs(evt.delta.y))</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html">TimelineZoomManipulator</a>.InvalidateWheelZoom();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            var panEvent = <span class="keyword">new</span> Event(evt);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            panEvent.delta = <span class="keyword">new</span> Vector2(panEvent.delta.x * k_MaxPanSpeed * -1.0f, 0.0f);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782">Pan</a>(panEvent, state);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a548953168183c0cc9592e2b7a88dc1f4">   62</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a548953168183c0cc9592e2b7a88dc1f4">Pan</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            var cursorRect = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5961bcff17cf5ad8458e2ba6bc8659ad">sequenceContentRect</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            cursorRect.xMax = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.position.xMax;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            cursorRect.yMax = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.position.yMax;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">GetWindow</a>() != null &amp;&amp; state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">GetWindow</a>().<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">treeView</a> != null)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                var scroll = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">GetWindow</a>().<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">treeView</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#ae50c727dc9983ce5ef393eed1d96703b">scrollPosition</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                scroll.y -= evt.delta.y;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">GetWindow</a>().<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">treeView</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#ae50c727dc9983ce5ef393eed1d96703b">scrollPosition</a> = scroll;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a017a7093b7a63019920bca67e6b3687b">OffsetTimeArea</a>((<span class="keywordtype">int</span>)evt.delta.x);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html">   82</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html">TimelineZoomManipulator</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a39d3652e2d89ca3af20c30e739cba8f3">   84</a></span>&#160;        Vector2 m_MouseDownPos = Vector2.zero;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#afea81064337c849615e1ab224c98d6db">   85</a></span>&#160;        Vector2 m_InitialShownRange = Vector2.zero;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ad7f02304837432024635a1e7c81b5d4d">   86</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ad7f02304837432024635a1e7c81b5d4d">m_FocalTime</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a1d064858a1019cd100919fa2d186caf3">   87</a></span>&#160;        <span class="keywordtype">float</span> m_LastMouseMoveX = -1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#adbda93cb1b886139ffc7c7c318aa146b">   88</a></span>&#160;        <span class="keywordtype">float</span> m_ZoomFactor = 1;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ab68c914474664f6e0eacb47c9b6f67d2">   89</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ab68c914474664f6e0eacb47c9b6f67d2">m_WheelUsedLast</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a3c6c9f7b181ba0bcc4d0a3f69950e8f6">   91</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a3c6c9f7b181ba0bcc4d0a3f69950e8f6">TimelineZoomManipulator</a>() {}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#af8879c8ec65d5d2c7a7d2666a2673d9d">   93</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> readonly <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html">TimelineZoomManipulator</a> Instance = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html">TimelineZoomManipulator</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> DoZoom(<span class="keywordtype">float</span> zoomFactor, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            var refRange = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">timeAreaShownRange</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            DoZoom(zoomFactor, state, refRange, (refRange.x + refRange.y) / 2);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">// Force resetting the reference zoom after a Framing operation</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            InvalidateWheelZoom();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a291b51bd750945b665fa08ba8e2dc796">  103</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a291b51bd750945b665fa08ba8e2dc796">DoZoom</a>(<span class="keywordtype">float</span> zoomFactor, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Vector2 refRange, <span class="keywordtype">float</span> focalTime)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> kMinRange = 0.05f; <span class="comment">// matches zoomable area.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            var s = zoomFactor;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">if</span> (s &lt;= 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            var t = Mathf.Max(focalTime, refRange.x);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            var x = (refRange.x + t * (s - 1)) / s;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            var y = (refRange.y + t * (s - 1)) / s;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="comment">// don&#39;t set it if we reach the limit or panning happens</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span> (Math.Abs(x - y) &gt; kMinRange)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="comment">// Zoomable area does not protect 100% against crazy values</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a94a4eb656945f98c6c57c6801b507b29">SetTimeAreaShownRange</a>(</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    Math.Max(x, -<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html">WindowConstants</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a46824a60cb2f9fd4223a6e738b1b3d14">timeAreaShownRangePadding</a>),</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    Math.Min(y, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ac4aff2d5e32a86db775cec803089669f">kMaxShownTime</a>));</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> InvalidateWheelZoom()</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            Instance.m_WheelUsedLast = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ae000b074a1093c89215db745abd9603f">  129</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ae000b074a1093c89215db745abd9603f">MouseDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            m_MouseDownPos = evt.mousePosition;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            m_FocalTime = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a4f51264da0ea7a603a9d6efeecbe1f75">PixelToTime</a>(m_MouseDownPos.x);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            m_InitialShownRange = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">timeAreaShownRange</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a4214baeb3bcbf2f5df40a632d3bd9d76">  137</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a4214baeb3bcbf2f5df40a632d3bd9d76">MouseWheel</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">if</span> (Math.Abs(evt.delta.y) &lt; 1e-5)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            var zoomRect = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5961bcff17cf5ad8458e2ba6bc8659ad">sequenceContentRect</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            zoomRect.yMax += <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a858d5ddfc6d435cb9c5b9be4d33f39c1">horizontalScrollbarHeight</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">if</span> (!zoomRect.Contains(evt.mousePosition))</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">if</span> (!m_WheelUsedLast || Mathf.Abs(m_LastMouseMoveX - evt.mousePosition.x) &gt; 1.0f)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                m_LastMouseMoveX = evt.mousePosition.x;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                m_FocalTime = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a4f51264da0ea7a603a9d6efeecbe1f75">PixelToTime</a>(m_LastMouseMoveX);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                m_InitialShownRange = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">timeAreaShownRange</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                m_ZoomFactor = 1;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            var newZoom = m_ZoomFactor * (-evt.delta.y * 0.02f + 1);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            newZoom = Mathf.Clamp(newZoom, 1e-7f, 1e7f);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            var lastRange = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">timeAreaShownRange</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            DoZoom(newZoom, state, m_InitialShownRange, m_FocalTime);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="comment">// if we hit a limit, don&#39;t change the zoom</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="comment">//  this prevents accumulating when zoom doesn&#39;t change</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span> (lastRange != state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">timeAreaShownRange</a>)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                m_ZoomFactor = newZoom;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            m_WheelUsedLast = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a83d751d1b59664d3b385c6a5d79898f1">  171</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a83d751d1b59664d3b385c6a5d79898f1">MouseDrag</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">// Fast zoom...</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">if</span> (evt.modifiers != EventModifiers.Alt || evt.button != 1) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            var mouseMoveLength = Event.current.mousePosition - m_MouseDownPos;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            var delta = Math.Abs(mouseMoveLength.x) &gt; Math.Abs(mouseMoveLength.y)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                ? mouseMoveLength.x</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                : -mouseMoveLength.y;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            m_ZoomFactor = PixelToZoom(delta);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            DoZoom(m_ZoomFactor, state, m_InitialShownRange, m_FocalTime);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            m_WheelUsedLast = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a4cb00c12df3c523ebf69331bec15d399">  187</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a4cb00c12df3c523ebf69331bec15d399">PixelToZoom</a>(<span class="keywordtype">float</span> x)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> pixel2Zoom = 1 / 300.0f;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            x *=  pixel2Zoom;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (x &lt; -0.75)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="comment">// Rational function that behaves like 1+x on [-0.75,inf) and asymptotically reaches zero on (-inf,-0.75]</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <span class="comment">// The coefficients were obtained by the following constraints:</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <span class="comment">//1) f(-0.75) = 0.25</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="comment">//2) f&#39;(-0.75) = 1 C1 continuity</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="comment">//3) f(-3) = 0.001 (asymptotically zero)</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">return</span> 1 / (98.6667f + 268.444f * x + 189.63f * x * x);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">return</span> 1 + x;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html">  204</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html">TimelineShortcutManipulator</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#a96007fa573663150901cc834c5dff9cb">  206</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#a96007fa573663150901cc834c5dff9cb">ValidateCommand</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">return</span> evt.commandName == EventCommandNames.Copy ||</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                evt.commandName == EventCommandNames.Paste ||</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                evt.commandName == EventCommandNames.Duplicate ||</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                evt.commandName == EventCommandNames.SelectAll ||</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                evt.commandName == EventCommandNames.Delete ||</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                evt.commandName == EventCommandNames.SoftDelete ||</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                evt.commandName == EventCommandNames.FrameSelected;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#acb444591cf652e50a0a43953a463fb2d">  217</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#acb444591cf652e50a0a43953a463fb2d">ExecuteCommand</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a6904fd1570b48a1f42e77c2afcb6f50a">IsCurrentEditingASequencerTextField</a>())</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">if</span> (evt.commandName == EventCommandNames.SelectAll)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a>.Invoke&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_select_all_action.html">SelectAllAction</a>&gt;(state);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> (evt.commandName == EventCommandNames.SoftDelete)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a>.Invoke&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_delete_action.html">DeleteAction</a>&gt;(state);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">if</span> (evt.commandName == EventCommandNames.FrameSelected)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a>.Invoke&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html">FrameSelectedAction</a>&gt;(state);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8b0d1311b3c56f6c8232659bb2ded4ab">HandleShortcut</a>(state, evt);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html">  244</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html">InlineCurvesShortcutManipulator</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a6039d0296bdcef54ef9eb35bdd277b6c">  246</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a6039d0296bdcef54ef9eb35bdd277b6c">ExecuteCommand</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a6904fd1570b48a1f42e77c2afcb6f50a">IsCurrentEditingASequencerTextField</a>())</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            var inlineCurveEditor = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7ed22e96ac29ae8d25dc6a7397c8bbb6">GetCurrentInlineEditorCurve</a>();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordflow">if</span> (inlineCurveEditor == null || !inlineCurveEditor.inlineCurvesSelected)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">if</span> (evt.commandName != EventCommandNames.FrameSelected)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a>.Invoke&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html">FrameSelectedAction</a>&gt;(state);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">// CurveEditor uses an hardcoded shortcut to execute the FrameAll action, preventing the ShortcutManager from</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="comment">// ever picking it up. We have to hijack it to ensure our code is being run when framing inline curves.</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a43bada0377ad58e1b5443c47a2f47395">  264</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a43bada0377ad58e1b5443c47a2f47395">KeyDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            var inlineCurveEditor = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7ed22e96ac29ae8d25dc6a7397c8bbb6">GetCurrentInlineEditorCurve</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">if</span> (inlineCurveEditor == null || !inlineCurveEditor.inlineCurvesSelected)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="comment">// Not conflicting with the hardcoded value</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">if</span> (evt.keyCode != KeyCode.A)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            var combination = ShortcutManager.instance.GetShortcutBinding(<a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts.html">Shortcuts</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6a7f4e382c3ce8ffb20f9bee2225eb68">frameAll</a>)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                .keyCombinationSequence.ToList();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            var shortcutCombination = combination.First();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            var currentCombination = KeyCombination.FromKeyboardInput(evt);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="comment">// User is not actually pressing the correct key combination for FrameAll</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordflow">if</span> (combination.Count == 1 &amp;&amp; shortcutCombination.Equals(currentCombination))</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a>.Invoke&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_frame_all_action.html">FrameAllAction</a>&gt;(state);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_a9c9000df81375a63d52b05a7c890c473"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">UnityEditor.Timeline.TimelineCursors.ClearCursor</a></div><div class="ttdeci">static void ClearCursor()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00077">TimelineCursors.cs:77</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a7ed22e96ac29ae8d25dc6a7397c8bbb6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7ed22e96ac29ae8d25dc6a7397c8bbb6">UnityEditor.Timeline.SelectionManager.GetCurrentInlineEditorCurve</a></div><div class="ttdeci">static IClipCurveEditorOwner GetCurrentInlineEditorCurve()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00148">TimelineSelection.cs:148</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html">UnityEditor.Timeline.TimelineZoomManipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00082">ManipulationsTimeline.cs:82</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">UnityEditor.Timeline.SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00008">TimelineSelection.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html_a46824a60cb2f9fd4223a6e738b1b3d14"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a46824a60cb2f9fd4223a6e738b1b3d14">UnityEditor.Timeline.WindowConstants.timeAreaShownRangePadding</a></div><div class="ttdeci">const float timeAreaShownRangePadding</div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00008">WindowConstants.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html">UnityEditor.Timeline.TimelineShortcutManipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00204">ManipulationsTimeline.cs:204</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html">UnityEditor.Timeline.TimelinePanManipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00008">ManipulationsTimeline.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_af1e0a5f9a63a8aaa835f5ed772a25741"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">UnityEditor.Timeline.WindowState.GetWindow</a></div><div class="ttdeci">TimelineWindow GetWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00627">WindowState.cs:627</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_ad7f02304837432024635a1e7c81b5d4d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ad7f02304837432024635a1e7c81b5d4d">UnityEditor.Timeline.TimelineZoomManipulator.m_FocalTime</a></div><div class="ttdeci">float m_FocalTime</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00086">ManipulationsTimeline.cs:86</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts.html">UnityEditor.Timeline.Shortcuts</a></div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00008">Shortcuts.cs:8</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html">UnityEditor.Timeline.WindowConstants</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00003">WindowConstants.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ac4aff2d5e32a86db775cec803089669f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ac4aff2d5e32a86db775cec803089669f">UnityEditor.Timeline.WindowState.kMaxShownTime</a></div><div class="ttdeci">static readonly float kMaxShownTime</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00039">WindowState.cs:39</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_action_html_a8b0d1311b3c56f6c8232659bb2ded4ab"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8b0d1311b3c56f6c8232659bb2ded4ab">UnityEditor.Timeline.TimelineAction.HandleShortcut</a></div><div class="ttdeci">static bool HandleShortcut(WindowState state, Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00081">TimelineActions.cs:81</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i_html_ae50c727dc9983ce5ef393eed1d96703b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#ae50c727dc9983ce5ef393eed1d96703b">UnityEditor.Timeline.TimelineTreeViewGUI.scrollPosition</a></div><div class="ttdeci">Vector2 scrollPosition</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_tree_view_g_u_i_8cs_source.html#l00077">TimelineTreeViewGUI.cs:77</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator_html_a769327792783375dc782b0418962b3ca"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a769327792783375dc782b0418962b3ca">UnityEditor.Timeline.TimelinePanManipulator.MouseWheel</a></div><div class="ttdeci">override bool MouseWheel(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00049">ManipulationsTimeline.cs:49</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator_html_a43bada0377ad58e1b5443c47a2f47395"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a43bada0377ad58e1b5443c47a2f47395">UnityEditor.Timeline.InlineCurvesShortcutManipulator.KeyDown</a></div><div class="ttdeci">override bool KeyDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00264">ManipulationsTimeline.cs:264</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a6a7f4e382c3ce8ffb20f9bee2225eb68"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6a7f4e382c3ce8ffb20f9bee2225eb68">UnityEditor.Timeline.Shortcuts.Timeline.frameAll</a></div><div class="ttdeci">const string frameAll</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00040">Shortcuts.cs:40</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator_html_a583be58ebaab178c375f587050241efa"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a583be58ebaab178c375f587050241efa">UnityEditor.Timeline.TimelinePanManipulator.MouseUp</a></div><div class="ttdeci">override bool MouseUp(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00027">ManipulationsTimeline.cs:27</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_ae000b074a1093c89215db745abd9603f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ae000b074a1093c89215db745abd9603f">UnityEditor.Timeline.TimelineZoomManipulator.MouseDown</a></div><div class="ttdeci">override bool MouseDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00129">ManipulationsTimeline.cs:129</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_a3c6c9f7b181ba0bcc4d0a3f69950e8f6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a3c6c9f7b181ba0bcc4d0a3f69950e8f6">UnityEditor.Timeline.TimelineZoomManipulator.TimelineZoomManipulator</a></div><div class="ttdeci">TimelineZoomManipulator()</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00091">ManipulationsTimeline.cs:91</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator_html_aabc72a3e2033e02d23f8634f20997e70"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#aabc72a3e2033e02d23f8634f20997e70">UnityEditor.Timeline.TimelinePanManipulator.MouseDown</a></div><div class="ttdeci">override bool MouseDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00013">ManipulationsTimeline.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a6904fd1570b48a1f42e77c2afcb6f50a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a6904fd1570b48a1f42e77c2afcb6f50a">UnityEditor.Timeline.WindowState.IsCurrentEditingASequencerTextField</a></div><div class="ttdeci">bool IsCurrentEditingASequencerTextField()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00777">WindowState.cs:777</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_all_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_all_action.html">UnityEditor.Timeline.SelectAllAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00479">TimelineActions.cs:479</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac00fac3b6de42db10813e9ae7401808b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">UnityEditor.Timeline.TimelineWindow.instance</a></div><div class="ttdeci">static TimelineWindow instance</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00045">TimelineWindow.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html">UnityEditor.Timeline.InlineCurvesShortcutManipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00244">ManipulationsTimeline.cs:244</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_a83d751d1b59664d3b385c6a5d79898f1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a83d751d1b59664d3b385c6a5d79898f1">UnityEditor.Timeline.TimelineZoomManipulator.MouseDrag</a></div><div class="ttdeci">override bool MouseDrag(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00171">ManipulationsTimeline.cs:171</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ab9c410b0c9ce67215036ed9ac1f0cf64"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab9c410b0c9ce67215036ed9ac1f0cf64">UnityEditor.Timeline.WindowState.editorWindow</a></div><div class="ttdeci">EditorWindow editorWindow</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00085">WindowState.cs:85</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator_html_a6039d0296bdcef54ef9eb35bdd277b6c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a6039d0296bdcef54ef9eb35bdd277b6c">UnityEditor.Timeline.InlineCurvesShortcutManipulator.ExecuteCommand</a></div><div class="ttdeci">override bool ExecuteCommand(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00246">ManipulationsTimeline.cs:246</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782">UnityEditor.Timeline.Pan</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_ab68c914474664f6e0eacb47c9b6f67d2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ab68c914474664f6e0eacb47c9b6f67d2">UnityEditor.Timeline.TimelineZoomManipulator.m_WheelUsedLast</a></div><div class="ttdeci">bool m_WheelUsedLast</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00089">ManipulationsTimeline.cs:89</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_a291b51bd750945b665fa08ba8e2dc796"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a291b51bd750945b665fa08ba8e2dc796">UnityEditor.Timeline.TimelineZoomManipulator.DoZoom</a></div><div class="ttdeci">static void DoZoom(float zoomFactor, WindowState state, Vector2 refRange, float focalTime)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00103">ManipulationsTimeline.cs:103</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator_html_ac31d4b7c93cbc9cdeb905fb41bdca553"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#ac31d4b7c93cbc9cdeb905fb41bdca553">UnityEditor.Timeline.TimelinePanManipulator.m_Active</a></div><div class="ttdeci">bool m_Active</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00011">ManipulationsTimeline.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator_html_acb444591cf652e50a0a43953a463fb2d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#acb444591cf652e50a0a43953a463fb2d">UnityEditor.Timeline.TimelineShortcutManipulator.ExecuteCommand</a></div><div class="ttdeci">override bool ExecuteCommand(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00217">ManipulationsTimeline.cs:217</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_af3aaa89dd70528922d3b286f8d18bed7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#af3aaa89dd70528922d3b286f8d18bed7">UnityEditor.Timeline.TimelineCursors.SetCursor</a></div><div class="ttdeci">static void SetCursor(CursorType cursorType)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00060">TimelineCursors.cs:60</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a4f51264da0ea7a603a9d6efeecbe1f75"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a4f51264da0ea7a603a9d6efeecbe1f75">UnityEditor.Timeline.WindowState.PixelToTime</a></div><div class="ttdeci">float PixelToTime(float pixel)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00809">WindowState.cs:809</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html">UnityEditor.Timeline.Manipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00005">Manipulator.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a94a4eb656945f98c6c57c6801b507b29"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a94a4eb656945f98c6c57c6801b507b29">UnityEditor.Timeline.WindowState.SetTimeAreaShownRange</a></div><div class="ttdeci">void SetTimeAreaShownRange(float min, float max)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00482">WindowState.cs:482</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a65db7b94313705614e1d2da178a384dd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">UnityEditor.Timeline.TimelineWindow.treeView</a></div><div class="ttdeci">TimelineTreeViewGUI treeView</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___track_gui_8cs_source.html#l00012">TimelineWindow_TrackGui.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_frame_all_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_frame_all_action.html">UnityEditor.Timeline.FrameAllAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00515">TimelineActions.cs:515</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">UnityEditor.Timeline.TimelineCursors</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00006">TimelineCursors.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a858d5ddfc6d435cb9c5b9be4d33f39c1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a858d5ddfc6d435cb9c5b9be4d33f39c1">UnityEditor.Timeline.TimelineWindow.horizontalScrollbarHeight</a></div><div class="ttdeci">float horizontalScrollbarHeight</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___gui_8cs_source.html#l00100">TimelineWindow_Gui.cs:100</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ad7cc22049de06731087eef3858dddbc2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">UnityEditor.Timeline.WindowState.timeAreaShownRange</a></div><div class="ttdeci">Vector2 timeAreaShownRange</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00576">WindowState.cs:576</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a5961bcff17cf5ad8458e2ba6bc8659ad"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5961bcff17cf5ad8458e2ba6bc8659ad">UnityEditor.Timeline.TimelineWindow.sequenceContentRect</a></div><div class="ttdeci">Rect sequenceContentRect</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___gui_8cs_source.html#l00080">TimelineWindow_Gui.cs:80</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a017a7093b7a63019920bca67e6b3687b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a017a7093b7a63019920bca67e6b3687b">UnityEditor.Timeline.WindowState.OffsetTimeArea</a></div><div class="ttdeci">void OffsetTimeArea(int pixels)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00841">WindowState.cs:841</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">UnityEditor.Timeline.TimelineAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00013">TimelineActions.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_a4214baeb3bcbf2f5df40a632d3bd9d76"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a4214baeb3bcbf2f5df40a632d3bd9d76">UnityEditor.Timeline.TimelineZoomManipulator.MouseWheel</a></div><div class="ttdeci">override bool MouseWheel(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00137">ManipulationsTimeline.cs:137</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator_html_ad1078becb4a1d74d9989b32ceee77e99"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#ad1078becb4a1d74d9989b32ceee77e99">UnityEditor.Timeline.TimelinePanManipulator.MouseDrag</a></div><div class="ttdeci">override bool MouseDrag(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00038">ManipulationsTimeline.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator_html_a548953168183c0cc9592e2b7a88dc1f4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a548953168183c0cc9592e2b7a88dc1f4">UnityEditor.Timeline.TimelinePanManipulator.Pan</a></div><div class="ttdeci">static bool Pan(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00062">ManipulationsTimeline.cs:62</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_adbdb48f56cb46544be558a24d7801358"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">UnityEditor.Timeline.TimelineCursors.CursorType</a></div><div class="ttdeci">CursorType</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00008">TimelineCursors.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator_html_a4cb00c12df3c523ebf69331bec15d399"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a4cb00c12df3c523ebf69331bec15d399">UnityEditor.Timeline.TimelineZoomManipulator.PixelToZoom</a></div><div class="ttdeci">static float PixelToZoom(float x)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00187">ManipulationsTimeline.cs:187</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator_html_a96007fa573663150901cc834c5dff9cb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#a96007fa573663150901cc834c5dff9cb">UnityEditor.Timeline.TimelineShortcutManipulator.ValidateCommand</a></div><div class="ttdeci">override bool ValidateCommand(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_timeline_8cs_source.html#l00206">ManipulationsTimeline.cs:206</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_frame_selected_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html">UnityEditor.Timeline.FrameSelectedAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00565">TimelineActions.cs:565</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_delete_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_delete_action.html">UnityEditor.Timeline.DeleteAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00389">TimelineActions.cs:389</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html">UnityEditor.Timeline.Shortcuts.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00035">Shortcuts.cs:35</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

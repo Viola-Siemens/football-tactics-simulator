@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Packages.Rider.Editor.RiderPathLocator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_packages.html">Packages</a></li><li class="navelem"><a class="el" href="namespace_packages_1_1_rider.html">Rider</a></li><li class="navelem"><a class="el" href="namespace_packages_1_1_rider_1_1_editor.html">Editor</a></li><li class="navelem"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html">RiderPathLocator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">Packages.Rider.Editor.RiderPathLocator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This code is a modified version of the <a class="el" href="namespace_jet_brains.html">JetBrains</a> resharper-unity plugin listed here: <a href="https://github.com/JetBrains/resharper-unity/blob/master/unity/JetBrains.Rider.Unity.Editor/EditorPlugin/RiderPathLocator.cs">https://github.com/JetBrains/resharper-unity/blob/master/unity/JetBrains.Rider.Unity.Editor/EditorPlugin/RiderPathLocator.cs</a>  
+ <a href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_active_application.html">ActiveApplication</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_build_node.html">BuildNode</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_item_node.html">ItemNode</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_logger.html">Logger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_toolbox_history.html">ToolboxHistory</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_toolbox_install_data.html">ToolboxInstallData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a498cde224b78e5145eafc32081f2f558"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#a498cde224b78e5145eafc32081f2f558">GetAllRiderPaths</a> ()</td></tr>
+<tr class="separator:a498cde224b78e5145eafc32081f2f558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a1d02624ebb0aa067164bc7156c6eeee2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#a1d02624ebb0aa067164bc7156c6eeee2">CollectAllRiderPathsLinux</a> ()</td></tr>
+<tr class="separator:a1d02624ebb0aa067164bc7156c6eeee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3413de04b0e0cff9131d4d35987ef653"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#a3413de04b0e0cff9131d4d35987ef653">CollectRiderInfosMac</a> ()</td></tr>
+<tr class="separator:a3413de04b0e0cff9131d4d35987ef653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f90b0a69d299176a9fb8ae5cdc93a16"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#a0f90b0a69d299176a9fb8ae5cdc93a16">CollectRiderInfosWindows</a> ()</td></tr>
+<tr class="separator:a0f90b0a69d299176a9fb8ae5cdc93a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc1efb0338660eee56079437dc89fea"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#adfc1efb0338660eee56079437dc89fea">GetToolboxBaseDir</a> ()</td></tr>
+<tr class="separator:adfc1efb0338660eee56079437dc89fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda7adf13e4b3fbbead0197603b50069"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#aeda7adf13e4b3fbbead0197603b50069">GetRelativePathToBuildTxt</a> ()</td></tr>
+<tr class="separator:aeda7adf13e4b3fbbead0197603b50069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4ab096e5e96ac51ea5704141f35f3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#abf4ab096e5e96ac51ea5704141f35f3f">CollectPathsFromRegistry</a> (string registryKey, List&lt; string &gt; installPaths)</td></tr>
+<tr class="separator:abf4ab096e5e96ac51ea5704141f35f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9ee9917067e779fcf554f3d54223f8"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#a7b9ee9917067e779fcf554f3d54223f8">CollectPathsFromToolbox</a> (string toolboxRiderRootPath, string dirName, string searchPattern, bool isMac)</td></tr>
+<tr class="separator:a7b9ee9917067e779fcf554f3d54223f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea70cc76cbd2ece3c99510da683d3ac"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html#afea70cc76cbd2ece3c99510da683d3ac">GetExecutablePaths</a> (string dirName, string searchPattern, bool isMac, string buildDir)</td></tr>
+<tr class="separator:afea70cc76cbd2ece3c99510da683d3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This code is a modified version of the <a class="el" href="namespace_jet_brains.html">JetBrains</a> resharper-unity plugin listed here: <a href="https://github.com/JetBrains/resharper-unity/blob/master/unity/JetBrains.Rider.Unity.Editor/EditorPlugin/RiderPathLocator.cs">https://github.com/JetBrains/resharper-unity/blob/master/unity/JetBrains.Rider.Unity.Editor/EditorPlugin/RiderPathLocator.cs</a> </p>
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00036">36</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a1d02624ebb0aa067164bc7156c6eeee2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a> [] Packages.Rider.Editor.RiderPathLocator.CollectAllRiderPathsLinux </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00106">106</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf4ab096e5e96ac51ea5704141f35f3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Packages.Rider.Editor.RiderPathLocator.CollectPathsFromRegistry </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>registryKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>installPaths</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00246">246</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b9ee9917067e779fcf554f3d54223f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string [] Packages.Rider.Editor.RiderPathLocator.CollectPathsFromToolbox </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>toolboxRiderRootPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dirName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>searchPattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isMac</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00266">266</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a7b9ee9917067e779fcf554f3d54223f8_cgraph.png" border="0" usemap="#class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a7b9ee9917067e779fcf554f3d54223f8_cgraph" alt=""/></div>
+<map name="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a7b9ee9917067e779fcf554f3d54223f8_cgraph" id="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a7b9ee9917067e779fcf554f3d54223f8_cgraph">
+<area shape="rect" id="node2" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_toolbox_history.html#a882bd18d5a493fa06939c87f9b383149" title="Packages.Rider.Editor.Rider\lPathLocator.ToolboxHistory.GetLatest\lBuildFromJson" alt="" coords="299,5,541,61"/><area shape="rect" id="node3" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_toolbox_install_data.html#a3e97f26de6751bf0ea8613f2406f6b22" title="Packages.Rider.Editor.Rider\lPathLocator.ToolboxInstallData.\lGetLatestBuildFromJson" alt="" coords="317,85,523,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3413de04b0e0cff9131d4d35987ef653"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a> [] Packages.Rider.Editor.RiderPathLocator.CollectRiderInfosMac </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00145">145</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f90b0a69d299176a9fb8ae5cdc93a16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a> [] Packages.Rider.Editor.RiderPathLocator.CollectRiderInfosWindows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00166">166</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a498cde224b78e5145eafc32081f2f558"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a> [] Packages.Rider.Editor.RiderPathLocator.GetAllRiderPaths </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00040">40</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a498cde224b78e5145eafc32081f2f558_icgraph.png" border="0" usemap="#class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a498cde224b78e5145eafc32081f2f558_icgraph" alt=""/></div>
+<map name="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a498cde224b78e5145eafc32081f2f558_icgraph" id="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_a498cde224b78e5145eafc32081f2f558_icgraph">
+<area shape="rect" id="node2" href="class_packages_1_1_rider_1_1_editor_1_1_discovery.html#a85c37ad5dba4b46c1a0e5ca824aa5398" title="Packages.Rider.Editor.Discovery.\lPathCallback" alt="" coords="249,5,465,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afea70cc76cbd2ece3c99510da683d3ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string [] Packages.Rider.Editor.RiderPathLocator.GetExecutablePaths </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dirName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>searchPattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isMac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>buildDir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00323">323</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeda7adf13e4b3fbbead0197603b50069"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.RiderPathLocator.GetRelativePathToBuildTxt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00233">233</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfc1efb0338660eee56079437dc89fea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.RiderPathLocator.GetToolboxBaseDir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_discovery_8cs_source.html">Discovery.cs</a> 第 <a class="el" href="_discovery_8cs_source.html#l00184">184</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/<a class="el" href="_discovery_8cs_source.html">Discovery.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:39 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

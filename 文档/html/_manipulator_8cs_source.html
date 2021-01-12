@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/Manipulator.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_8d0d6b838e6896df5d8de1eafe8aaa93.html">treeview</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Manipulator.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_manipulator_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">    5</a></span>&#160;    <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a4212202b247ad855cfcae33c4629c32c">    7</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a4212202b247ad855cfcae33c4629c32c">m_Id</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a0ad7657a50771c55e1952b9d692c4f78">    9</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a0ad7657a50771c55e1952b9d692c4f78">MouseDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab5cb52df91e4ef59637fa149875deb50">   10</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab5cb52df91e4ef59637fa149875deb50">MouseDrag</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#abd679235960e80eb7498397ca9081f94">   11</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#abd679235960e80eb7498397ca9081f94">MouseWheel</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab07304a4edbfb45f3e6e75c04b78ef30">   12</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab07304a4edbfb45f3e6e75c04b78ef30">MouseUp</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a52348cecff079a6427ee7d100cfaf96b">   13</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a52348cecff079a6427ee7d100cfaf96b">DoubleClick</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a41bf63d4b1c14f70d0153f1ec321d329">   14</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a41bf63d4b1c14f70d0153f1ec321d329">KeyDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aabad1c805ea0d067d49ac42e93ca0909">   15</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aabad1c805ea0d067d49ac42e93ca0909">KeyUp</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a04f91209f2b95af263a33b9ad604abf6">   16</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a04f91209f2b95af263a33b9ad604abf6">ContextClick</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aef99a81de039bff010ddef27640f1281">   17</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aef99a81de039bff010ddef27640f1281">ValidateCommand</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">   18</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">ExecuteCommand</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ae9c99cac4b65a9eddae47948daf8a47d">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ae9c99cac4b65a9eddae47948daf8a47d">Overlay</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state) {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#af52da00330a83b17c0397ac8d430fbf0">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#af52da00330a83b17c0397ac8d430fbf0">HandleEvent</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span> (m_Id == 0)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                m_Id =  GUIUtility.GetPermanentControlID();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordtype">bool</span> isHandled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            var evt = Event.current;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">switch</span> (evt.GetTypeForControl(m_Id))</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.ScrollWheel:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    isHandled = MouseWheel(evt, state);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.MouseUp:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">if</span> (GUIUtility.hotControl == m_Id)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        isHandled = MouseUp(evt, state);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        GUIUtility.hotControl = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        evt.Use();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.MouseDown:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    isHandled = evt.clickCount &lt; 2 ? MouseDown(evt, state) : DoubleClick(evt, state);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keywordflow">if</span> (isHandled)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        GUIUtility.hotControl = m_Id;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.MouseDrag:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <span class="keywordflow">if</span> (GUIUtility.hotControl == m_Id)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        isHandled = MouseDrag(evt, state);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.KeyDown:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    isHandled = KeyDown(evt, state);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.KeyUp:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    isHandled = KeyUp(evt, state);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.ContextClick:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    isHandled = ContextClick(evt, state);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.ValidateCommand:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    isHandled = ValidateCommand(evt, state);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.ExecuteCommand:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    isHandled = ExecuteCommand(evt, state);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span> (isHandled)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                evt.Use();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> isHandled;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_a4212202b247ad855cfcae33c4629c32c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a4212202b247ad855cfcae33c4629c32c">UnityEditor.Timeline.Manipulator.m_Id</a></div><div class="ttdeci">int m_Id</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00007">Manipulator.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_ab07304a4edbfb45f3e6e75c04b78ef30"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab07304a4edbfb45f3e6e75c04b78ef30">UnityEditor.Timeline.Manipulator.MouseUp</a></div><div class="ttdeci">virtual bool MouseUp(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00012">Manipulator.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_aef99a81de039bff010ddef27640f1281"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aef99a81de039bff010ddef27640f1281">UnityEditor.Timeline.Manipulator.ValidateCommand</a></div><div class="ttdeci">virtual bool ValidateCommand(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00017">Manipulator.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_a41bf63d4b1c14f70d0153f1ec321d329"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a41bf63d4b1c14f70d0153f1ec321d329">UnityEditor.Timeline.Manipulator.KeyDown</a></div><div class="ttdeci">virtual bool KeyDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00014">Manipulator.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_abd679235960e80eb7498397ca9081f94"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#abd679235960e80eb7498397ca9081f94">UnityEditor.Timeline.Manipulator.MouseWheel</a></div><div class="ttdeci">virtual bool MouseWheel(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00011">Manipulator.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_a04f91209f2b95af263a33b9ad604abf6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a04f91209f2b95af263a33b9ad604abf6">UnityEditor.Timeline.Manipulator.ContextClick</a></div><div class="ttdeci">virtual bool ContextClick(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00016">Manipulator.cs:16</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html">UnityEditor.Timeline.Manipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00005">Manipulator.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_a52348cecff079a6427ee7d100cfaf96b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a52348cecff079a6427ee7d100cfaf96b">UnityEditor.Timeline.Manipulator.DoubleClick</a></div><div class="ttdeci">virtual bool DoubleClick(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00013">Manipulator.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_a9d791e0587e4c31b4279f597d36d07aa"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">UnityEditor.Timeline.Manipulator.ExecuteCommand</a></div><div class="ttdeci">virtual bool ExecuteCommand(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00018">Manipulator.cs:18</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_af52da00330a83b17c0397ac8d430fbf0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#af52da00330a83b17c0397ac8d430fbf0">UnityEditor.Timeline.Manipulator.HandleEvent</a></div><div class="ttdeci">bool HandleEvent(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00022">Manipulator.cs:22</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_a0ad7657a50771c55e1952b9d692c4f78"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a0ad7657a50771c55e1952b9d692c4f78">UnityEditor.Timeline.Manipulator.MouseDown</a></div><div class="ttdeci">virtual bool MouseDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00009">Manipulator.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_ae9c99cac4b65a9eddae47948daf8a47d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ae9c99cac4b65a9eddae47948daf8a47d">UnityEditor.Timeline.Manipulator.Overlay</a></div><div class="ttdeci">virtual void Overlay(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00020">Manipulator.cs:20</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_ab5cb52df91e4ef59637fa149875deb50"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab5cb52df91e4ef59637fa149875deb50">UnityEditor.Timeline.Manipulator.MouseDrag</a></div><div class="ttdeci">virtual bool MouseDrag(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00010">Manipulator.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html_aabad1c805ea0d067d49ac42e93ca0909"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aabad1c805ea0d067d49ac42e93ca0909">UnityEditor.Timeline.Manipulator.KeyUp</a></div><div class="ttdeci">virtual bool KeyUp(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00015">Manipulator.cs:15</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

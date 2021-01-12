@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Animation/AnimationClipActions.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_634a646981af2d18a86b68ade0843b07.html">Animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AnimationClipActions.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_clip_actions_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.ComponentModel;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_jet_brains.html">JetBrains</a>.Annotations;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="_animation_clip_actions_8cs.html#a1fe99840a218f506c36efa835e51d8dd">    7</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_clip_action.html">ClipAction</a> = <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html">ItemAction</a>&lt;<a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&gt;;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [MenuEntry(<span class="stringliteral">&quot;Match Offsets To Previous Clip&quot;</span>, MenuOrder.CustomClipAction.AnimClipMatchPrevious), UsedImplicitly]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html">MatchOffsetsPreviousAction</a> : <a class="code" href="namespace_clip_action.html">ClipAction</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#a175a4278f0891711813eed37385017d3">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#a175a4278f0891711813eed37385017d3">Execute</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] items)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_offset_menu.html">AnimationOffsetMenu</a>.MatchClipsToPrevious(state, items.Where(x =&gt; IsValidClip(x, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>)).ToArray());</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#aa5df4b707b6015fa3e9362b0e48d7c8f">   20</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#aa5df4b707b6015fa3e9362b0e48d7c8f">IsValidClip</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, PlayableDirector director)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> clip != null &amp;&amp;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a> != null &amp;&amp;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>) != null &amp;&amp;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>.clips.Any(x =&gt; x.start &lt; clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a>) &amp;&amp;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html">TimelineUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#afda348f13d0b24ba875042746d02ebfa">GetSceneGameObject</a>(director, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>) != null;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#a4ee2337985a5868783f1b4557e9a6d0f">   29</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#a4ee2337985a5868783f1b4557e9a6d0f">GetDisplayState</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] items)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (!items.All(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html">TimelineAnimationUtilities</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#add7a8e9d06801430fbec6ec3839c22b4">IsAnimationClip</a>))</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Hidden;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            var director = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            if (<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a> == null)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Hidden;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span> (items.Any(c =&gt; IsValidClip(c, director)))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Visible;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Hidden;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    [MenuEntry(<span class="stringliteral">&quot;Match Offsets To Next Clip&quot;</span>, MenuOrder.CustomClipAction.AnimClipMatchNext), UsedImplicitly]</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html">   46</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html">MatchOffsetsNextAction</a> : <a class="code" href="namespace_clip_action.html">ClipAction</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a843d31501f31c668606c6dec5cfcb7ae">   48</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a843d31501f31c668606c6dec5cfcb7ae">Execute</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] items)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_offset_menu.html">AnimationOffsetMenu</a>.MatchClipsToNext(state, items.Where(x =&gt; IsValidClip(x, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>)).ToArray());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a3519632fc848c62efd1d1369896e2bca">   54</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a3519632fc848c62efd1d1369896e2bca">IsValidClip</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, PlayableDirector director)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> clip != null &amp;&amp;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a> != null &amp;&amp;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>) != null &amp;&amp;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>.clips.Any(x =&gt; x.start &gt; clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a>) &amp;&amp;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html">TimelineUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#afda348f13d0b24ba875042746d02ebfa">GetSceneGameObject</a>(director, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>) != null;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a409f99ee8558ffb0975542164b436f09">   63</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a409f99ee8558ffb0975542164b436f09">GetDisplayState</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] items)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span> (!items.All(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html">TimelineAnimationUtilities</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#add7a8e9d06801430fbec6ec3839c22b4">IsAnimationClip</a>))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Hidden;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            var director = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            if (<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a> == null)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Hidden;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (items.Any(c =&gt; IsValidClip(c, director)))</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Visible;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Hidden;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    [MenuEntry(<span class="stringliteral">&quot;Reset Offsets&quot;</span>, MenuOrder.CustomClipAction.AnimClipResetOffset), UsedImplicitly]</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html">   80</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html">ResetOffsets</a> : <a class="code" href="namespace_clip_action.html">ClipAction</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html#ae3213870efb30d4ea8379c5ce1fbb9c9">   82</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html#ae3213870efb30d4ea8379c5ce1fbb9c9">Execute</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] items)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_offset_menu.html">AnimationOffsetMenu</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_offset_menu.html#ab4b529625d978e4fb65634e427f836c5">ResetClipOffsets</a>(state, items.Where(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html">TimelineAnimationUtilities</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#add7a8e9d06801430fbec6ec3839c22b4">IsAnimationClip</a>).ToArray());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html#a5467e91547058ea8349162fd760d8f7e">   88</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html#a5467e91547058ea8349162fd760d8f7e">GetDisplayState</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] items)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">if</span> (!items.All(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html">TimelineAnimationUtilities</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#add7a8e9d06801430fbec6ec3839c22b4">IsAnimationClip</a>))</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Hidden;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Visible;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action_html_a409f99ee8558ffb0975542164b436f09"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a409f99ee8558ffb0975542164b436f09">UnityEditor.Timeline.MatchOffsetsNextAction.GetDisplayState</a></div><div class="ttdeci">override MenuActionDisplayState GetDisplayState(WindowState state, TimelineClip[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00063">AnimationClipActions.cs:63</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">UnityEngine.Timeline.AnimationPlayableAsset</a></div><div class="ttdoc">A Playable Asset that represents a single AnimationClip clip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00011">AnimationPlayableAsset.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html_a3b3feaeaadd4bc298b30c5b835a91501"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">UnityEditor.Timeline.TimelineEditor.inspectedDirector</a></div><div class="ttdeci">static PlayableDirector inspectedDirector</div><div class="ttdoc">The PlayableDirector associated with the timeline currently being shown in the Timeline window...</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00017">TimelineEditor.cs:17</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2c0e553887357327987faff3f3b06dac"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">UnityEngine.Timeline.TimelineClip.asset</a></div><div class="ttdeci">Object asset</div><div class="ttdoc">The PlayableAsset attached to the clip. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00275">TimelineClip.cs:275</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action_html_a175a4278f0891711813eed37385017d3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#a175a4278f0891711813eed37385017d3">UnityEditor.Timeline.MatchOffsetsPreviousAction.Execute</a></div><div class="ttdeci">override bool Execute(WindowState state, TimelineClip[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00014">AnimationClipActions.cs:14</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html">UnityEditor.Timeline.TimelineAnimationUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_animation_utilities_8cs_source.html#l00013">TimelineAnimationUtilities.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_reset_offsets_html_a5467e91547058ea8349162fd760d8f7e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html#a5467e91547058ea8349162fd760d8f7e">UnityEditor.Timeline.ResetOffsets.GetDisplayState</a></div><div class="ttdeci">override MenuActionDisplayState GetDisplayState(WindowState state, TimelineClip[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00088">AnimationClipActions.cs:88</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html">UnityEditor.Timeline.TimelineUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_utility_8cs_source.html#l00012">TimelineUtility.cs:12</a></div></div>
+<div class="ttc" id="namespace_clip_action_html"><div class="ttname"><a href="namespace_clip_action.html">ClipAction</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html">UnityEditor.Timeline.MatchOffsetsPreviousAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00012">AnimationClipActions.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_utility_html_afda348f13d0b24ba875042746d02ebfa"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#afda348f13d0b24ba875042746d02ebfa">UnityEditor.Timeline.TimelineUtility.GetSceneGameObject</a></div><div class="ttdeci">static GameObject GetSceneGameObject(PlayableDirector director, TrackAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_utility_8cs_source.html#l00072">TimelineUtility.cs:72</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_reset_offsets_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html">UnityEditor.Timeline.ResetOffsets</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00080">AnimationClipActions.cs:80</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_clips_actions_8cs_source.html#l00010">ClipsActions.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities_html_add7a8e9d06801430fbec6ec3839c22b4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#add7a8e9d06801430fbec6ec3839c22b4">UnityEditor.Timeline.TimelineAnimationUtilities.IsAnimationClip</a></div><div class="ttdeci">static bool IsAnimationClip(TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_animation_utilities_8cs_source.html#l00430">TimelineAnimationUtilities.cs:430</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_ac847d1affde0438d85a8fdc5af4f644f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">UnityEngine.Timeline.TimelineClip.start</a></div><div class="ttdeci">double start</div><div class="ttdoc">The start time, in seconds, of the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00173">TimelineClip.cs:173</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2a489fc03b313f4b5a9134620e94bbaf"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">UnityEngine.Timeline.TimelineClip.parentTrack</a></div><div class="ttdeci">TrackAsset parentTrack</div><div class="ttdoc">Returns the TrackAsset to which this clip is attached. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00301">TimelineClip.cs:301</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html">UnityEditor.Timeline.ItemAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00009">ItemAction.cs:9</a></div></div>
+<div class="ttc" id="namespace_jet_brains_html"><div class="ttname"><a href="namespace_jet_brains.html">JetBrains</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action_html_a843d31501f31c668606c6dec5cfcb7ae"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a843d31501f31c668606c6dec5cfcb7ae">UnityEditor.Timeline.MatchOffsetsNextAction.Execute</a></div><div class="ttdeci">override bool Execute(WindowState state, TimelineClip[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00048">AnimationClipActions.cs:48</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action_html_a3519632fc848c62efd1d1369896e2bca"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html#a3519632fc848c62efd1d1369896e2bca">UnityEditor.Timeline.MatchOffsetsNextAction.IsValidClip</a></div><div class="ttdeci">static bool IsValidClip(TimelineClip clip, PlayableDirector director)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00054">AnimationClipActions.cs:54</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a4cdf4501fc4cebf7e77641e22ed40b81"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">UnityEditor.Timeline.MenuActionDisplayState</a></div><div class="ttdeci">MenuActionDisplayState</div><div class="ttdef"><b>Definition:</b> <a href="_menu_item_action_base_8cs_source.html#l00010">MenuItemActionBase.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html">UnityEditor.Timeline.MatchOffsetsNextAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00046">AnimationClipActions.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">UnityEditor.Timeline.TimelineEditor</a></div><div class="ttdoc">Information currently being edited in the Timeline Editor Window. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00012">TimelineEditor.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action_html_aa5df4b707b6015fa3e9362b0e48d7c8f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#aa5df4b707b6015fa3e9362b0e48d7c8f">UnityEditor.Timeline.MatchOffsetsPreviousAction.IsValidClip</a></div><div class="ttdeci">static bool IsValidClip(TimelineClip clip, PlayableDirector director)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00020">AnimationClipActions.cs:20</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action_html_a4ee2337985a5868783f1b4557e9a6d0f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html#a4ee2337985a5868783f1b4557e9a6d0f">UnityEditor.Timeline.MatchOffsetsPreviousAction.GetDisplayState</a></div><div class="ttdeci">override MenuActionDisplayState GetDisplayState(WindowState state, TimelineClip[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00029">AnimationClipActions.cs:29</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_reset_offsets_html_ae3213870efb30d4ea8379c5ce1fbb9c9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_reset_offsets.html#ae3213870efb30d4ea8379c5ce1fbb9c9">UnityEditor.Timeline.ResetOffsets.Execute</a></div><div class="ttdeci">override bool Execute(WindowState state, TimelineClip[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_actions_8cs_source.html#l00082">AnimationClipActions.cs:82</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_offset_menu_html_ab4b529625d978e4fb65634e427f836c5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_offset_menu.html#ab4b529625d978e4fb65634e427f836c5">UnityEditor.Timeline.AnimationOffsetMenu.ResetClipOffsets</a></div><div class="ttdeci">static void ResetClipOffsets(WindowState state, TimelineClip[] clips)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_offset_menu_8cs_source.html#l00065">AnimationOffsetMenu.cs:65</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_offset_menu_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_offset_menu.html">UnityEditor.Timeline.AnimationOffsetMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_offset_menu_8cs_source.html#l00007">AnimationOffsetMenu.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

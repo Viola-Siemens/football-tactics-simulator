@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.test-framework@1.1.14/UnityEditor.TestRunner/Api/ITestAdaptor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_f5068e10fe4d08e1b67d6386819b0c8e.html">com.unity.test-framework@1.1.14</a></li><li class="navelem"><a class="el" href="dir_48747dc8cf5879bab87b9f4ea1110bb9.html">UnityEditor.TestRunner</a></li><li class="navelem"><a class="el" href="dir_17b531b086a1e9fd22210e462311bd52.html">Api</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ITestAdaptor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_test_adaptor_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_n_unit.html">NUnit</a>.Framework.Interfaces;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.TestTools.<a class="code" href="namespace_test_runner.html">TestRunner</a>.Api</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">    6</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a4492bfa2f17a783e7acecf833fb11b30">    8</a></span>&#160;        <span class="keywordtype">string</span> Id { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a49ca92106ee4af718307d733cfb127e8">    9</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="namespace_name.html">Name</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a17521034b69ec4b5bc9531f37e024809">   10</a></span>&#160;        <span class="keywordtype">string</span> FullName { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a4f265bee4e6f646e9e0afa0c11c43fe2">   11</a></span>&#160;        <span class="keywordtype">int</span> TestCaseCount { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a2d633ed97bdbc622df4bcc0e29f6143f">   12</a></span>&#160;        <span class="keywordtype">bool</span> HasChildren { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a01e71dc9fa93ac1dd069aaa3613b0f89">   13</a></span>&#160;        <span class="keywordtype">bool</span> IsSuite { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#ac9d96731cabd313982e2259a0f41a314">   14</a></span>&#160;        IEnumerable&lt;ITestAdaptor&gt; Children { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a963e2dba0559d0f0b4e7c69b3e0bb85c">   15</a></span>&#160;        <a class="code" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a> Parent { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a8788c0bbae9107c4423517128c33216b">   16</a></span>&#160;        <span class="keywordtype">int</span> TestCaseTimeout { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a1148193b25bf01bfa52e857402a262a2">   17</a></span>&#160;        ITypeInfo TypeInfo { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a2579e6a343fba5dfd5f34e4ba0fffdb2">   18</a></span>&#160;        IMethodInfo Method { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a6cbaa5f1984f19a145d3fa4b90e8407d">   19</a></span>&#160;        <span class="keywordtype">string</span>[] Categories { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a732840ad336dd8849b7f0451ff9680dd">   20</a></span>&#160;        <span class="keywordtype">bool</span> IsTestAssembly { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a0c32a783116f602d9074ba172e2cb9ca">   21</a></span>&#160;        <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#ad6bcc775441176dd7331d8173c8527b7">RunState</a> <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#ad6bcc775441176dd7331d8173c8527b7">RunState</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a67c127d13b044ce413216562d9e343b4">   22</a></span>&#160;        <span class="keywordtype">string</span> Description { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#afde4611def4e8c365b266ad368fdaac6">   23</a></span>&#160;        <span class="keywordtype">string</span> SkipReason { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#af5e49dbc3e735a84c444820cdf6f3756">   24</a></span>&#160;        <span class="keywordtype">string</span> ParentId { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a2691867507c8b5215ab264d2ab92525c">   25</a></span>&#160;        <span class="keywordtype">string</span> ParentFullName { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a7df2e24eb950efb92f0686bd07c0a53b">   26</a></span>&#160;        <span class="keywordtype">string</span> UniqueName { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a0bf9aea7449153361567d216dda35cf8">   27</a></span>&#160;        <span class="keywordtype">string</span> ParentUniqueName { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a875588c122ae80173160c9ae5eea4b5c">   28</a></span>&#160;        <span class="keywordtype">int</span> ChildIndex { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a867066d3409942fb831206794c264527">   29</a></span>&#160;        <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a> <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_html_ad6bcc775441176dd7331d8173c8527b7"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#ad6bcc775441176dd7331d8173c8527b7">UnityEditor.TestTools.TestRunner.Api.RunState</a></div><div class="ttdeci">RunState</div><div class="ttdef"><b>Definition:</b> <a href="_run_state_8cs_source.html#l00003">RunState.cs:3</a></div></div>
+<div class="ttc" id="namespace_n_unit_html"><div class="ttname"><a href="namespace_n_unit.html">NUnit</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_html_af169988e2317e7edb0f1b09d920412e9"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">UnityEditor.TestTools.TestRunner.Api.TestMode</a></div><div class="ttdeci">TestMode</div><div class="ttdef"><b>Definition:</b> <a href="_test_mode_8cs_source.html#l00006">TestMode.cs:6</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor_html"><div class="ttname"><a href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">UnityEditor.TestTools.TestRunner.Api.ITestAdaptor</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_test_adaptor_8cs_source.html#l00006">ITestAdaptor.cs:6</a></div></div>
+<div class="ttc" id="namespace_test_runner_html"><div class="ttname"><a href="namespace_test_runner.html">TestRunner</a></div></div>
+<div class="ttc" id="namespace_name_html"><div class="ttname"><a href="namespace_name.html">Name</a></div><div class="ttdoc">包含了球员起名类 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

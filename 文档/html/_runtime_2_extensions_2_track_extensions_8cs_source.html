@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Extensions/TrackExtensions.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_a4b32e9992c5bccdaf30a008c6ce18a0.html">Extensions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TrackExtensions.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_runtime_2_extensions_2_track_extensions_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html">TrackAssetExtensions</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html#adac79cd35b56613366bd07e2bb6787aa">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_group_track.html">GroupTrack</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html#adac79cd35b56613366bd07e2bb6787aa">GetGroup</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (asset == null)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">parent</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_group_track.html">GroupTrack</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html#a2b68a64e3bcf660ec9dd09c2bb1a3e8b">   34</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html#a2b68a64e3bcf660ec9dd09c2bb1a3e8b">SetGroup</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset, <a class="code" href="class_unity_engine_1_1_timeline_1_1_group_track.html">GroupTrack</a> group)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">string</span> undoString = <span class="stringliteral">&quot;Reparent&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span> (asset == null || asset == group || asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">parent</a> == group)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> (group != null &amp;&amp; asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a> != group.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Cannot assign to a group in a different timeline&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(asset, undoString);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            var timeline = asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var parentTrack = asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">parent</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            var parentTimeline = asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">parent</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> (parentTrack != null || parentTimeline != null)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">parent</a>, undoString);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">if</span> (parentTimeline != null)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    parentTimeline.RemoveTrack(asset);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    parentTrack.RemoveSubTrack(asset);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (group == null)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(timeline, undoString);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">parent</a> = asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                timeline.AddTrackInternal(asset);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(group, undoString);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                group.AddChild(asset);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_extensions_html_a2b68a64e3bcf660ec9dd09c2bb1a3e8b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html#a2b68a64e3bcf660ec9dd09c2bb1a3e8b">UnityEngine.Timeline.TrackAssetExtensions.SetGroup</a></div><div class="ttdeci">static void SetGroup(this TrackAsset asset, GroupTrack group)</div><div class="ttdoc">Assigns the track to the specified group track. </div><div class="ttdef"><b>Definition:</b> <a href="_runtime_2_extensions_2_track_extensions_8cs_source.html#l00034">TrackExtensions.cs:34</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a2b63a1f2dc8b3a07e537aa60c12ba5f8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">UnityEngine.Timeline.TrackAsset.timelineAsset</a></div><div class="ttdeci">TimelineAsset timelineAsset</div><div class="ttdoc">The TimelineAsset that this track belongs to. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00163">TrackAsset.cs:163</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">UnityEngine.Timeline.TimelineUndo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00012">TimelineUndo.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_extensions_html_adac79cd35b56613366bd07e2bb6787aa"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html#adac79cd35b56613366bd07e2bb6787aa">UnityEngine.Timeline.TrackAssetExtensions.GetGroup</a></div><div class="ttdeci">static GroupTrack GetGroup(this TrackAsset asset)</div><div class="ttdoc">Gets the GroupTrack this track belongs to. </div><div class="ttdef"><b>Definition:</b> <a href="_runtime_2_extensions_2_track_extensions_8cs_source.html#l00018">TrackExtensions.cs:18</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a2c45dda5e68a6de6f481aee4888b352c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">UnityEngine.Timeline.TimelineUndo.PushUndo</a></div><div class="ttdeci">static void PushUndo(Object thingToDirty, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00034">TimelineUndo.cs:34</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_extensions_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset_extensions.html">UnityEngine.Timeline.TrackAssetExtensions</a></div><div class="ttdoc">Extension methods for TrackAssets </div><div class="ttdef"><b>Definition:</b> <a href="_runtime_2_extensions_2_track_extensions_8cs_source.html#l00011">TrackExtensions.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a63e9de6371c7710f650bed037ea97aec"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">UnityEngine.Timeline.TrackAsset.parent</a></div><div class="ttdeci">PlayableAsset parent</div><div class="ttdoc">The owner of this track. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00189">TrackAsset.cs:189</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_group_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_group_track.html">UnityEngine.Timeline.GroupTrack</a></div><div class="ttdoc">A group track is a container that allows tracks to be arranged in a hierarchical manner. </div><div class="ttdef"><b>Definition:</b> <a href="_group_track_8cs_source.html#l00013">GroupTrack.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

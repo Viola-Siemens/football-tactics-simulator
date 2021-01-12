@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEngine.TestTools.Logging.LogScope类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a class="el" href="namespace_unity_engine_1_1_test_tools.html">TestTools</a></li><li class="navelem"><a class="el" href="namespace_unity_engine_1_1_test_tools_1_1_logging.html">Logging</a></li><li class="navelem"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEngine.TestTools.Logging.LogScope类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEngine.TestTools.Logging.LogScope 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope__inherit__graph.png" border="0" usemap="#_unity_engine_8_test_tools_8_logging_8_log_scope_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEngine.TestTools.Logging.LogScope 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope__coll__graph.png" border="0" usemap="#_unity_engine_8_test_tools_8_logging_8_log_scope_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5985fbc3ddd3f922802ad6f57e5e3b44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a5985fbc3ddd3f922802ad6f57e5e3b44">LogScope</a> ()</td></tr>
+<tr class="separator:a5985fbc3ddd3f922802ad6f57e5e3b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2407467c3df8379e723ec00ae45610f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ad2407467c3df8379e723ec00ae45610f">AddLog</a> (string message, string stacktrace, LogType type)</td></tr>
+<tr class="separator:ad2407467c3df8379e723ec00ae45610f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4a06157d968648607a0c20226a7d2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#acc4a06157d968648607a0c20226a7d2c">Dispose</a> ()</td></tr>
+<tr class="separator:acc4a06157d968648607a0c20226a7d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f3f911329608ab448c2145ddae51bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a54f3f911329608ab448c2145ddae51bb">AnyFailingLogs</a> ()</td></tr>
+<tr class="separator:a54f3f911329608ab448c2145ddae51bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a79260f9c661ea876c83c2fe2db0d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#aa3a79260f9c661ea876c83c2fe2db0d4">ProcessExpectedLogs</a> ()</td></tr>
+<tr class="separator:aa3a79260f9c661ea876c83c2fe2db0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4224b64cb8367ed0037c9b0a717cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a2f4224b64cb8367ed0037c9b0a717cbd">NoUnexpectedReceived</a> ()</td></tr>
+<tr class="separator:a2f4224b64cb8367ed0037c9b0a717cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ac3e2f042f2063eb187e22c31379a0713"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ac3e2f042f2063eb187e22c31379a0713">HasCurrentLogScope</a> ()</td></tr>
+<tr class="separator:ac3e2f042f2063eb187e22c31379a0713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a0edd3277db8450ec2f683bda4f3525c3"><td class="memItemLeft" align="right" valign="top">Queue&lt; LogMatch &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a0edd3277db8450ec2f683bda4f3525c3">ExpectedLogs</a><code> [get, set]</code></td></tr>
+<tr class="separator:a0edd3277db8450ec2f683bda4f3525c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684d506afa788dc6fc5e6d5e825614ea"><td class="memItemLeft" align="right" valign="top">List&lt; LogEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a684d506afa788dc6fc5e6d5e825614ea">AllLogs</a><code> [get]</code></td></tr>
+<tr class="separator:a684d506afa788dc6fc5e6d5e825614ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29362b05459b92d6511170bdf7d3a078"><td class="memItemLeft" align="right" valign="top">List&lt; LogEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a29362b05459b92d6511170bdf7d3a078">FailingLogs</a><code> [get]</code></td></tr>
+<tr class="separator:a29362b05459b92d6511170bdf7d3a078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4fd81fd49f385c71a987499965dd16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#afb4fd81fd49f385c71a987499965dd16">IgnoreFailingMessages</a><code> [get, set]</code></td></tr>
+<tr class="separator:afb4fd81fd49f385c71a987499965dd16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21eca13f4121ad10ac7b91af09d079d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a21eca13f4121ad10ac7b91af09d079d0">IsNUnitException</a><code> [get, private set]</code></td></tr>
+<tr class="separator:a21eca13f4121ad10ac7b91af09d079d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd5db2df5e31fc5945c3de458fd52e1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#acd5db2df5e31fc5945c3de458fd52e1f">IsNUnitSuccessException</a><code> [get, private set]</code></td></tr>
+<tr class="separator:acd5db2df5e31fc5945c3de458fd52e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9838674497b653e18fccbc69e80a7d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#af9838674497b653e18fccbc69e80a7d3">IsNUnitInconclusiveException</a><code> [get, private set]</code></td></tr>
+<tr class="separator:af9838674497b653e18fccbc69e80a7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fcb9fcfa8207d816a054bd95cb1ead2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a3fcb9fcfa8207d816a054bd95cb1ead2">IsNUnitIgnoreException</a><code> [get, private set]</code></td></tr>
+<tr class="separator:a3fcb9fcfa8207d816a054bd95cb1ead2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4679ea78aaf665c823d4383e417e3d2c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a4679ea78aaf665c823d4383e417e3d2c">NUnitExceptionMessage</a><code> [get, private set]</code></td></tr>
+<tr class="separator:a4679ea78aaf665c823d4383e417e3d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85c26f65b99666d125ec65ceabe25a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ad85c26f65b99666d125ec65ceabe25a2">Current</a><code> [get]</code></td></tr>
+<tr class="separator:ad85c26f65b99666d125ec65ceabe25a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:adda7086cd6ea1d634e674f554c7e1ce5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#adda7086cd6ea1d634e674f554c7e1ce5">Activate</a> ()</td></tr>
+<tr class="separator:adda7086cd6ea1d634e674f554c7e1ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8574439b3eb36c4f47e757692d3eaffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a8574439b3eb36c4f47e757692d3eaffa">Deactivate</a> ()</td></tr>
+<tr class="separator:a8574439b3eb36c4f47e757692d3eaffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba22bdb9f379f6a20c44ee574ed513c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a6ba22bdb9f379f6a20c44ee574ed513c">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:a6ba22bdb9f379f6a20c44ee574ed513c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a6f980dc8dc24523bcf3c63014f68a47e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a6f980dc8dc24523bcf3c63014f68a47e">RegisterScope</a> (<a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a> logScope)</td></tr>
+<tr class="separator:a6f980dc8dc24523bcf3c63014f68a47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eab21312b3ae4ef74290087383f8adf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a6eab21312b3ae4ef74290087383f8adf">UnregisterScope</a> (<a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a> logScope)</td></tr>
+<tr class="separator:a6eab21312b3ae4ef74290087383f8adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11710dfe81023e03731f46c7bec9dfce"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a11710dfe81023e03731f46c7bec9dfce">IsNUnitResultStateException</a> (string stacktrace, LogType logType)</td></tr>
+<tr class="separator:a11710dfe81023e03731f46c7bec9dfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c7f52df4654863b68c56f79d37b59f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ab4c7f52df4654863b68c56f79d37b59f">IsFailingLog</a> (LogType type)</td></tr>
+<tr class="separator:ab4c7f52df4654863b68c56f79d37b59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a61765769ffef730744a61fd54af79135"><td class="memItemLeft" align="right" valign="top">readonly object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a61765769ffef730744a61fd54af79135">m_Lock</a> = new object()</td></tr>
+<tr class="separator:a61765769ffef730744a61fd54af79135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda09b87da7b230fceca9e8197b03a35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#abda09b87da7b230fceca9e8197b03a35">m_Disposed</a></td></tr>
+<tr class="separator:abda09b87da7b230fceca9e8197b03a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad46f55539e6310c85365c5f913a18466"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ad46f55539e6310c85365c5f913a18466">m_NeedToProcessLogs</a></td></tr>
+<tr class="separator:ad46f55539e6310c85365c5f913a18466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:ae95747a63ddb4666a71684bac81484c3"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ae95747a63ddb4666a71684bac81484c3">s_ActiveScopes</a> = new List&lt;<a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>&gt;()</td></tr>
+<tr class="separator:ae95747a63ddb4666a71684bac81484c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00008">8</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a5985fbc3ddd3f922802ad6f57e5e3b44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEngine.TestTools.Logging.LogScope.LogScope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="adda7086cd6ea1d634e674f554c7e1ce5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.TestTools.Logging.LogScope.Activate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2407467c3df8379e723ec00ae45610f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.TestTools.Logging.LogScope.AddLog </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stacktrace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LogType&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00075">75</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f_icgraph.png" border="0" usemap="#class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f_icgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f_icgraph" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f_icgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a6f980dc8dc24523bcf3c63014f68a47e" title="UnityEngine.TestTools.Logging.\lLogScope.RegisterScope" alt="" coords="259,5,464,47"/><area shape="rect" id="node3" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a6eab21312b3ae4ef74290087383f8adf" title="UnityEngine.TestTools.Logging.\lLogScope.UnregisterScope" alt="" coords="259,71,464,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a54f3f911329608ab448c2145ddae51bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.AnyFailingLogs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00172">172</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb_icgraph.png" border="0" usemap="#class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb_icgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb_icgraph" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb_icgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_1_1_unity_log_check_delegating_command.html#a2ea0ae3b7d0beb894db2fe8eca27e6c3" title="UnityEngine.TestRunner.NUnit\lExtensions.Runner.UnityLogCheck\lDelegatingCommand.CheckFailingLogs" alt="" coords="259,5,508,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8574439b3eb36c4f47e757692d3eaffa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.TestTools.Logging.LogScope.Deactivate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00058">58</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc4a06157d968648607a0c20226a7d2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.TestTools.Logging.LogScope.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00151">151</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ba22bdb9f379f6a20c44ee574ed513c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.TestTools.Logging.LogScope.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disposing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00157">157</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3e2f042f2063eb187e22c31379a0713"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEngine.TestTools.Logging.LogScope.HasCurrentLogScope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4c7f52df4654863b68c56f79d37b59f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEngine.TestTools.Logging.LogScope.IsFailingLog </td>
+          <td>(</td>
+          <td class="paramtype">LogType&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00138">138</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11710dfe81023e03731f46c7bec9dfce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEngine.TestTools.Logging.LogScope.IsNUnitResultStateException </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>stacktrace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LogType&#160;</td>
+          <td class="paramname"><em>logType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00130">130</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f4224b64cb8367ed0037c9b0a717cbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.TestTools.Logging.LogScope.NoUnexpectedReceived </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00209">209</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd_icgraph.png" border="0" usemap="#class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd_icgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd_icgraph" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd_icgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_test_tools_1_1_log_assert.html#a619ce99fae76887ef55aac6b8da31660" title="UnityEngine.TestTools.Log\lAssert.NoUnexpectedReceived" alt="" coords="301,5,503,47"/><area shape="rect" id="node3" href="class_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_1_1_unity_log_check_delegating_command.html#a10b9c0f8abd590fbb2ea916e20be787e" title="UnityEngine.TestRunner.NUnit\lExtensions.Runner.UnityLogCheck\lDelegatingCommand.PostTestValidation" alt="" coords="275,71,529,127"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3a79260f9c661ea876c83c2fe2db0d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.TestTools.Logging.LogScope.ProcessExpectedLogs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00178">178</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f980dc8dc24523bcf3c63014f68a47e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.TestTools.Logging.LogScope.RegisterScope </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>&#160;</td>
+          <td class="paramname"><em>logScope</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00065">65</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6f980dc8dc24523bcf3c63014f68a47e_cgraph.png" border="0" usemap="#class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6f980dc8dc24523bcf3c63014f68a47e_cgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6f980dc8dc24523bcf3c63014f68a47e_cgraph" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6f980dc8dc24523bcf3c63014f68a47e_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ad2407467c3df8379e723ec00ae45610f" title="UnityEngine.TestTools.Logging.\lLogScope.AddLog" alt="" coords="259,5,464,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6eab21312b3ae4ef74290087383f8adf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.TestTools.Logging.LogScope.UnregisterScope </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>&#160;</td>
+          <td class="paramname"><em>logScope</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00070">70</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6eab21312b3ae4ef74290087383f8adf_cgraph.png" border="0" usemap="#class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6eab21312b3ae4ef74290087383f8adf_cgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6eab21312b3ae4ef74290087383f8adf_cgraph" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a6eab21312b3ae4ef74290087383f8adf_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ad2407467c3df8379e723ec00ae45610f" title="UnityEngine.TestTools.Logging.\lLogScope.AddLog" alt="" coords="259,5,464,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="abda09b87da7b230fceca9e8197b03a35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.m_Disposed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61765769ffef730744a61fd54af79135"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly object UnityEngine.TestTools.Logging.LogScope.m_Lock = new object()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad46f55539e6310c85365c5f913a18466"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.m_NeedToProcessLogs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae95747a63ddb4666a71684bac81484c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>&gt; UnityEngine.TestTools.Logging.LogScope.s_ActiveScopes = new List&lt;<a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a684d506afa788dc6fc5e6d5e825614ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;LogEvent&gt; UnityEngine.TestTools.Logging.LogScope.AllLogs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad85c26f65b99666d125ec65ceabe25a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a> UnityEngine.TestTools.Logging.LogScope.Current</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0edd3277db8450ec2f683bda4f3525c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Queue&lt;LogMatch&gt; UnityEngine.TestTools.Logging.LogScope.ExpectedLogs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29362b05459b92d6511170bdf7d3a078"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;LogEvent&gt; UnityEngine.TestTools.Logging.LogScope.FailingLogs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb4fd81fd49f385c71a987499965dd16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.IgnoreFailingMessages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21eca13f4121ad10ac7b91af09d079d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.IsNUnitException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3fcb9fcfa8207d816a054bd95cb1ead2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.IsNUnitIgnoreException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9838674497b653e18fccbc69e80a7d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.IsNUnitInconclusiveException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd5db2df5e31fc5945c3de458fd52e1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.TestTools.Logging.LogScope.IsNUnitSuccessException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4679ea78aaf665c823d4383e417e3d2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEngine.TestTools.Logging.LogScope.NUnitExceptionMessage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a> 第 <a class="el" href="_log_scope_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.test-framework@1.1.14/UnityEngine.TestRunner/Assertions/LogScope/<a class="el" href="_log_scope_8cs_source.html">LogScope.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:53 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,2641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEngine.Timeline.TimelineClip类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a class="el" href="namespace_unity_engine_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_engine_1_1_timeline_1_1_timeline_clip-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEngine.Timeline.TimelineClip类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Represents a clip on the timeline.  
+ <a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#details">更多...</a></p>
+<div class="dynheader">
+类 UnityEngine.Timeline.TimelineClip 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_clip__inherit__graph.png" border="0" usemap="#_unity_engine_8_timeline_8_timeline_clip_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_engine_8_timeline_8_timeline_clip_inherit__map" id="_unity_engine_8_timeline_8_timeline_clip_inherit__map">
+<area shape="rect" id="node2" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="5,5,107,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEngine.Timeline.TimelineClip 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_clip__coll__graph.png" border="0" usemap="#_unity_engine_8_timeline_8_timeline_clip_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_engine_8_timeline_8_timeline_clip_coll__map" id="_unity_engine_8_timeline_8_timeline_clip_coll__map">
+<area shape="rect" id="node5" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="671,186,851,228"/><area shape="rect" id="node2" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="52,24,153,51"/><area shape="rect" id="node8" href="struct_unity_engine_1_1_timeline_1_1_marker_list.html" title="UnityEngine.Timeline.MarkerList" alt="" coords="313,143,522,170"/><area shape="rect" id="node7" href="interface_unity_engine_1_1_timeline_1_1_i_property_preview.html" title="Implement this interface in a PlayableAsset to specify which properties will be modified when Timelin..." alt="" coords="358,295,477,322"/><area shape="rect" id="node9" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html" title="UnityEngine.Timeline.DiscreteTime" alt="" coords="305,384,529,411"/><area shape="rect" id="node11" href="struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html" title="UnityEngine.Timeline.Track\lAsset.TransientBuildData" alt="" coords="327,436,507,477"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_1_1_timeline_clip_upgrade.html">TimelineClipUpgrade</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a54ae9314c0572ffde0c52930cd7fa7a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> { <br />
+&#160;&#160;<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7a6adf97f83acf6453d4a6a4b1070f3754">ClipExtrapolation.None</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7abcd8db575b47c838e5d551e3973db4ac">ClipExtrapolation.Hold</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7a89d7b10cb4238977d2b523dfd9ea7745">ClipExtrapolation.Loop</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7a99e52704462d3580db3528cad7ea9660">ClipExtrapolation.PingPong</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7aa0bfb8e59e6c13fc8d990781f77694fe">ClipExtrapolation.Continue</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a54ae9314c0572ffde0c52930cd7fa7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">How the clip handles time outside its start and end range.  <a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">更多...</a><br /></td></tr>
+<tr class="separator:a54ae9314c0572ffde0c52930cd7fa7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d5786b6df3859bcf16be89d799ebc0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a> { <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0a06b9281e396db002010bde1de57262eb">BlendCurveMode.Auto</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0ae1ba155a9f2e8c3be94020eef32a0301">BlendCurveMode.Manual</a>
+ }</td></tr>
+<tr class="memdesc:aa6d5786b6df3859bcf16be89d799ebc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">How blend curves are treated in an overlap  <a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">更多...</a><br /></td></tr>
+<tr class="separator:aa6d5786b6df3859bcf16be89d799ebc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2f40592786d437df0032d9b318947220"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2f40592786d437df0032d9b318947220">EvaluateMixOut</a> (double time)</td></tr>
+<tr class="memdesc:a2f40592786d437df0032d9b318947220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a time, returns the weight from the mix out  <a href="#a2f40592786d437df0032d9b318947220">更多...</a><br /></td></tr>
+<tr class="separator:a2f40592786d437df0032d9b318947220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ed921d48ee9b5b49a2a8577ce3c513"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ab3ed921d48ee9b5b49a2a8577ce3c513">EvaluateMixIn</a> (double time)</td></tr>
+<tr class="memdesc:ab3ed921d48ee9b5b49a2a8577ce3c513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a time, returns the weight from the mix in  <a href="#ab3ed921d48ee9b5b49a2a8577ce3c513">更多...</a><br /></td></tr>
+<tr class="separator:ab3ed921d48ee9b5b49a2a8577ce3c513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e93badf4d11e12235eec8e938263184"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a0e93badf4d11e12235eec8e938263184">ToLocalTime</a> (double time)</td></tr>
+<tr class="memdesc:a0e93badf4d11e12235eec8e938263184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts from global time to a clips local time.  <a href="#a0e93badf4d11e12235eec8e938263184">更多...</a><br /></td></tr>
+<tr class="separator:a0e93badf4d11e12235eec8e938263184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a65196511de2353627a38bd9e6e09e2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a5a65196511de2353627a38bd9e6e09e2">ToLocalTimeUnbound</a> (double time)</td></tr>
+<tr class="memdesc:a5a65196511de2353627a38bd9e6e09e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts from global time to local time of the clip  <a href="#a5a65196511de2353627a38bd9e6e09e2">更多...</a><br /></td></tr>
+<tr class="separator:a5a65196511de2353627a38bd9e6e09e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c4571aaaeaa6cac8587c0f48086c44"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a84c4571aaaeaa6cac8587c0f48086c44">IsExtrapolatedTime</a> (double sequenceTime)</td></tr>
+<tr class="memdesc:a84c4571aaaeaa6cac8587c0f48086c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a time, returns whether it falls within the clips extrapolation  <a href="#a84c4571aaaeaa6cac8587c0f48086c44">更多...</a><br /></td></tr>
+<tr class="separator:a84c4571aaaeaa6cac8587c0f48086c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9ff4aba84f327c2822983ac3cdf50b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9b9ff4aba84f327c2822983ac3cdf50b">IsPreExtrapolatedTime</a> (double sequenceTime)</td></tr>
+<tr class="memdesc:a9b9ff4aba84f327c2822983ac3cdf50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a time, returns whether it falls within the clip pre-extrapolation  <a href="#a9b9ff4aba84f327c2822983ac3cdf50b">更多...</a><br /></td></tr>
+<tr class="separator:a9b9ff4aba84f327c2822983ac3cdf50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f54df7e4c0accdefa6dfbc83068083e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7f54df7e4c0accdefa6dfbc83068083e">IsPostExtrapolatedTime</a> (double sequenceTime)</td></tr>
+<tr class="memdesc:a7f54df7e4c0accdefa6dfbc83068083e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a time, returns whether it falls within the clip post-extrapolation  <a href="#a7f54df7e4c0accdefa6dfbc83068083e">更多...</a><br /></td></tr>
+<tr class="separator:a7f54df7e4c0accdefa6dfbc83068083e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8b220fef702dc3ef6edc95d9ece498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9f8b220fef702dc3ef6edc95d9ece498">CreateCurves</a> (string curvesClipName)</td></tr>
+<tr class="memdesc:a9f8b220fef702dc3ef6edc95d9ece498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an AnimationClip to store animated properties for the attached PlayableAsset.  <a href="#a9f8b220fef702dc3ef6edc95d9ece498">更多...</a><br /></td></tr>
+<tr class="separator:a9f8b220fef702dc3ef6edc95d9ece498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33767afb7266c2dfa4eaaeb1fd5a8bfe"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a33767afb7266c2dfa4eaaeb1fd5a8bfe">ToString</a> ()</td></tr>
+<tr class="memdesc:a33767afb7266c2dfa4eaaeb1fd5a8bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs a more readable representation of the timeline clip as a string  <a href="#a33767afb7266c2dfa4eaaeb1fd5a8bfe">更多...</a><br /></td></tr>
+<tr class="separator:a33767afb7266c2dfa4eaaeb1fd5a8bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a719cf9469a3a685dc502df910b45fb00"><td class="memItemLeft" align="right" valign="top">static readonly <a class="el" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a719cf9469a3a685dc502df910b45fb00">kDefaultClipCaps</a> = ClipCaps.Blending</td></tr>
+<tr class="memdesc:a719cf9469a3a685dc502df910b45fb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default capabilities for a clip  <a href="#a719cf9469a3a685dc502df910b45fb00">更多...</a><br /></td></tr>
+<tr class="separator:a719cf9469a3a685dc502df910b45fb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe98af86c914b296c429f0684cab0804"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#afe98af86c914b296c429f0684cab0804">kDefaultClipDurationInSeconds</a> = 5</td></tr>
+<tr class="memdesc:afe98af86c914b296c429f0684cab0804"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default length of a clip in seconds.  <a href="#afe98af86c914b296c429f0684cab0804">更多...</a><br /></td></tr>
+<tr class="separator:afe98af86c914b296c429f0684cab0804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ae30ff18802c1df6826d93b6f7df19"><td class="memItemLeft" align="right" valign="top">static readonly double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#af0ae30ff18802c1df6826d93b6f7df19">kTimeScaleMin</a> = 1.0 / 1000</td></tr>
+<tr class="memdesc:af0ae30ff18802c1df6826d93b6f7df19"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum timescale allowed on a clip  <a href="#af0ae30ff18802c1df6826d93b6f7df19">更多...</a><br /></td></tr>
+<tr class="separator:af0ae30ff18802c1df6826d93b6f7df19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3d15c3e42efd378e951f0e08729172"><td class="memItemLeft" align="right" valign="top">static readonly double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a8b3d15c3e42efd378e951f0e08729172">kTimeScaleMax</a> = 1000</td></tr>
+<tr class="memdesc:a8b3d15c3e42efd378e951f0e08729172"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum timescale allowed on a clip  <a href="#a8b3d15c3e42efd378e951f0e08729172">更多...</a><br /></td></tr>
+<tr class="separator:a8b3d15c3e42efd378e951f0e08729172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a4bd93387d38a05ab818552b358781e07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a4bd93387d38a05ab818552b358781e07">hasPreExtrapolation</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4bd93387d38a05ab818552b358781e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the clip being extrapolated before its start time?  <a href="#a4bd93387d38a05ab818552b358781e07">更多...</a><br /></td></tr>
+<tr class="separator:a4bd93387d38a05ab818552b358781e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc8649e3ac2eb7946d086d48a335566"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aacc8649e3ac2eb7946d086d48a335566">hasPostExtrapolation</a><code> [get]</code></td></tr>
+<tr class="memdesc:aacc8649e3ac2eb7946d086d48a335566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the clip being extrapolated past its end time?  <a href="#aacc8649e3ac2eb7946d086d48a335566">更多...</a><br /></td></tr>
+<tr class="separator:aacc8649e3ac2eb7946d086d48a335566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712e808bd29b4ea5e906353a12e733ce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a712e808bd29b4ea5e906353a12e733ce">timeScale</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a712e808bd29b4ea5e906353a12e733ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">A speed multiplier for the clip;  <a href="#a712e808bd29b4ea5e906353a12e733ce">更多...</a><br /></td></tr>
+<tr class="separator:a712e808bd29b4ea5e906353a12e733ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac847d1affde0438d85a8fdc5af4f644f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac847d1affde0438d85a8fdc5af4f644f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The start time, in seconds, of the clip  <a href="#ac847d1affde0438d85a8fdc5af4f644f">更多...</a><br /></td></tr>
+<tr class="separator:ac847d1affde0438d85a8fdc5af4f644f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9438ddf54af828cacfc0f16fcc87e7ce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9438ddf54af828cacfc0f16fcc87e7ce">duration</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a9438ddf54af828cacfc0f16fcc87e7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The length, in seconds, of the clip  <a href="#a9438ddf54af828cacfc0f16fcc87e7ce">更多...</a><br /></td></tr>
+<tr class="separator:a9438ddf54af828cacfc0f16fcc87e7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397cab8b8496d8ffbb62feafad8ce720"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a397cab8b8496d8ffbb62feafad8ce720">end</a><code> [get]</code></td></tr>
+<tr class="memdesc:a397cab8b8496d8ffbb62feafad8ce720"><td class="mdescLeft">&#160;</td><td class="mdescRight">The end time, in seconds of the clip  <a href="#a397cab8b8496d8ffbb62feafad8ce720">更多...</a><br /></td></tr>
+<tr class="separator:a397cab8b8496d8ffbb62feafad8ce720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5805d1f833658b85625437328ccd24"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a4b5805d1f833658b85625437328ccd24">clipIn</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4b5805d1f833658b85625437328ccd24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local offset time of the clip.  <a href="#a4b5805d1f833658b85625437328ccd24">更多...</a><br /></td></tr>
+<tr class="separator:a4b5805d1f833658b85625437328ccd24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2868e2d17cc2c3cb3ae3afad8f8712d8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2868e2d17cc2c3cb3ae3afad8f8712d8">displayName</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2868e2d17cc2c3cb3ae3afad8f8712d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name displayed on the clip  <a href="#a2868e2d17cc2c3cb3ae3afad8f8712d8">更多...</a><br /></td></tr>
+<tr class="separator:a2868e2d17cc2c3cb3ae3afad8f8712d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2157a21f9cc6af97747825c08ba7a5fd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2157a21f9cc6af97747825c08ba7a5fd">clipAssetDuration</a><code> [get]</code></td></tr>
+<tr class="memdesc:a2157a21f9cc6af97747825c08ba7a5fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The length, in seconds, of the PlayableAsset attached to the clip.  <a href="#a2157a21f9cc6af97747825c08ba7a5fd">更多...</a><br /></td></tr>
+<tr class="separator:a2157a21f9cc6af97747825c08ba7a5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4922742bb044dbd4270829393d1b14"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7c4922742bb044dbd4270829393d1b14">curves</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7c4922742bb044dbd4270829393d1b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">An animation clip containing animated properties of the attached PlayableAsset  <a href="#a7c4922742bb044dbd4270829393d1b14">更多...</a><br /></td></tr>
+<tr class="separator:a7c4922742bb044dbd4270829393d1b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e3b605eb2ebafa400e54ef80d25353"><td class="memItemLeft" align="right" valign="top">string ICurvesOwner.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac2e3b605eb2ebafa400e54ef80d25353">defaultCurvesName</a><code> [get]</code></td></tr>
+<tr class="separator:ac2e3b605eb2ebafa400e54ef80d25353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ef83ba4243f939f2dbf6aae8133651"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a38ef83ba4243f939f2dbf6aae8133651">hasCurves</a><code> [get]</code></td></tr>
+<tr class="memdesc:a38ef83ba4243f939f2dbf6aae8133651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this clip contains animated properties for the attached PlayableAsset.  <a href="#a38ef83ba4243f939f2dbf6aae8133651">更多...</a><br /></td></tr>
+<tr class="separator:a38ef83ba4243f939f2dbf6aae8133651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0e553887357327987faff3f3b06dac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2c0e553887357327987faff3f3b06dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The PlayableAsset attached to the clip.  <a href="#a2c0e553887357327987faff3f3b06dac">更多...</a><br /></td></tr>
+<tr class="separator:a2c0e553887357327987faff3f3b06dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4c96bc101b057c305a4d800154b894"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> ICurvesOwner.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9b4c96bc101b057c305a4d800154b894">assetOwner</a><code> [get]</code></td></tr>
+<tr class="separator:a9b4c96bc101b057c305a4d800154b894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f33eb7eca0687bcdebb57ac94b659d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> ICurvesOwner.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a8f33eb7eca0687bcdebb57ac94b659d6">targetTrack</a><code> [get]</code></td></tr>
+<tr class="separator:a8f33eb7eca0687bcdebb57ac94b659d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82eb9e557b3e7b3f24e3bca0a82f2b81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a82eb9e557b3e7b3f24e3bca0a82f2b81">underlyingAsset</a><code> [get, set]</code></td></tr>
+<tr class="separator:a82eb9e557b3e7b3f24e3bca0a82f2b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a489fc03b313f4b5a9134620e94bbaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2a489fc03b313f4b5a9134620e94bbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. ">TrackAsset</a> to which this clip is attached.  <a href="#a2a489fc03b313f4b5a9134620e94bbaf">更多...</a><br /></td></tr>
+<tr class="separator:a2a489fc03b313f4b5a9134620e94bbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3cd3606936b31a041bd56b8abcdb541"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ab3cd3606936b31a041bd56b8abcdb541">easeInDuration</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ab3cd3606936b31a041bd56b8abcdb541"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ease in duration of the timeline clip in seconds. This only applies if the start of the clip is not overlapping.  <a href="#ab3cd3606936b31a041bd56b8abcdb541">更多...</a><br /></td></tr>
+<tr class="separator:ab3cd3606936b31a041bd56b8abcdb541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1858701f2310f8b6db4affca3957eb0f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a1858701f2310f8b6db4affca3957eb0f">easeOutDuration</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1858701f2310f8b6db4affca3957eb0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ease out duration of the timeline clip in seconds. This only applies if the end of the clip is not overlapping.  <a href="#a1858701f2310f8b6db4affca3957eb0f">更多...</a><br /></td></tr>
+<tr class="separator:a1858701f2310f8b6db4affca3957eb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297f7bd7873593d65818cbc8fe4945ab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a297f7bd7873593d65818cbc8fe4945ab">eastOutTime</a><code> [get]</code></td></tr>
+<tr class="separator:a297f7bd7873593d65818cbc8fe4945ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3006f3263128dd652d3cf0333b6a6808"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a3006f3263128dd652d3cf0333b6a6808">easeOutTime</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3006f3263128dd652d3cf0333b6a6808"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time in seconds that the ease out begins  <a href="#a3006f3263128dd652d3cf0333b6a6808">更多...</a><br /></td></tr>
+<tr class="separator:a3006f3263128dd652d3cf0333b6a6808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43f21068267ec0c062a6605e6ee98c6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ad43f21068267ec0c062a6605e6ee98c6">blendInDuration</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad43f21068267ec0c062a6605e6ee98c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of overlap in seconds on the start of a clip.  <a href="#ad43f21068267ec0c062a6605e6ee98c6">更多...</a><br /></td></tr>
+<tr class="separator:ad43f21068267ec0c062a6605e6ee98c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c3c352b096260855294ac71c3befdf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac0c3c352b096260855294ac71c3befdf">blendOutDuration</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac0c3c352b096260855294ac71c3befdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of overlap in seconds at the end of a clip.  <a href="#ac0c3c352b096260855294ac71c3befdf">更多...</a><br /></td></tr>
+<tr class="separator:ac0c3c352b096260855294ac71c3befdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43850d1fd7075d3f61001bfde502c3c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a43850d1fd7075d3f61001bfde502c3c5">blendInCurveMode</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a43850d1fd7075d3f61001bfde502c3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mode for calculating the blend curve of the overlap at the start of the clip  <a href="#a43850d1fd7075d3f61001bfde502c3c5">更多...</a><br /></td></tr>
+<tr class="separator:a43850d1fd7075d3f61001bfde502c3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217794754fab883dd0b738fe19e74933"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a217794754fab883dd0b738fe19e74933">blendOutCurveMode</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a217794754fab883dd0b738fe19e74933"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mode for calculating the blend curve of the overlap at the end of the clip  <a href="#a217794754fab883dd0b738fe19e74933">更多...</a><br /></td></tr>
+<tr class="separator:a217794754fab883dd0b738fe19e74933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07dcb68c250896eaec01d5be9b66a7fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a07dcb68c250896eaec01d5be9b66a7fb">hasBlendIn</a><code> [get]</code></td></tr>
+<tr class="memdesc:a07dcb68c250896eaec01d5be9b66a7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the clip is blending in  <a href="#a07dcb68c250896eaec01d5be9b66a7fb">更多...</a><br /></td></tr>
+<tr class="separator:a07dcb68c250896eaec01d5be9b66a7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c977dd3d3cb998a6196305d60f67fac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a6c977dd3d3cb998a6196305d60f67fac">hasBlendOut</a><code> [get]</code></td></tr>
+<tr class="memdesc:a6c977dd3d3cb998a6196305d60f67fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the clip is blending out  <a href="#a6c977dd3d3cb998a6196305d60f67fac">更多...</a><br /></td></tr>
+<tr class="separator:a6c977dd3d3cb998a6196305d60f67fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabd810813745f27181baeb4abb6d197"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aaabd810813745f27181baeb4abb6d197">mixInCurve</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aaabd810813745f27181baeb4abb6d197"><td class="mdescLeft">&#160;</td><td class="mdescRight">The animation curve used for calculating weights during an ease in or a blend in.  <a href="#aaabd810813745f27181baeb4abb6d197">更多...</a><br /></td></tr>
+<tr class="separator:aaabd810813745f27181baeb4abb6d197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dac4c1434693b06c0c7b57298b3ac8c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a5dac4c1434693b06c0c7b57298b3ac8c">mixInPercentage</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5dac4c1434693b06c0c7b57298b3ac8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of the clip being used for ease or blend in as a percentage  <a href="#a5dac4c1434693b06c0c7b57298b3ac8c">更多...</a><br /></td></tr>
+<tr class="separator:a5dac4c1434693b06c0c7b57298b3ac8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5f22b8aa3ab100e2584e8a52b15cdf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a0d5f22b8aa3ab100e2584e8a52b15cdf">mixInDuration</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0d5f22b8aa3ab100e2584e8a52b15cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of the clip blending or easing in, in seconds  <a href="#a0d5f22b8aa3ab100e2584e8a52b15cdf">更多...</a><br /></td></tr>
+<tr class="separator:a0d5f22b8aa3ab100e2584e8a52b15cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60948cb2774df6f4c4e68e16b93435d"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa60948cb2774df6f4c4e68e16b93435d">mixOutCurve</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa60948cb2774df6f4c4e68e16b93435d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The animation curve used for calculating weights during an ease out or a blend out.  <a href="#aa60948cb2774df6f4c4e68e16b93435d">更多...</a><br /></td></tr>
+<tr class="separator:aa60948cb2774df6f4c4e68e16b93435d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1e580de3dcbc255654f7f001a3480c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a5f1e580de3dcbc255654f7f001a3480c">mixOutTime</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5f1e580de3dcbc255654f7f001a3480c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time in seconds that an ease out or blend out starts  <a href="#a5f1e580de3dcbc255654f7f001a3480c">更多...</a><br /></td></tr>
+<tr class="separator:a5f1e580de3dcbc255654f7f001a3480c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dfc0aa2096ffaa715b0d4952e122411"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2dfc0aa2096ffaa715b0d4952e122411">mixOutDuration</a><code> [get]</code></td></tr>
+<tr class="memdesc:a2dfc0aa2096ffaa715b0d4952e122411"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of the clip blending or easing out, in seconds  <a href="#a2dfc0aa2096ffaa715b0d4952e122411">更多...</a><br /></td></tr>
+<tr class="separator:a2dfc0aa2096ffaa715b0d4952e122411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3ecf967ff372bd448c256978ec0c2d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a0f3ecf967ff372bd448c256978ec0c2d">mixOutPercentage</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0f3ecf967ff372bd448c256978ec0c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of the clip being used for ease or blend out as a percentage  <a href="#a0f3ecf967ff372bd448c256978ec0c2d">更多...</a><br /></td></tr>
+<tr class="separator:a0f3ecf967ff372bd448c256978ec0c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e7fe2586994c2fcd88155fd96c2832"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac0e7fe2586994c2fcd88155fd96c2832">recordable</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac0e7fe2586994c2fcd88155fd96c2832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether this clip is recordable in editor  <a href="#ac0e7fe2586994c2fcd88155fd96c2832">更多...</a><br /></td></tr>
+<tr class="separator:ac0e7fe2586994c2fcd88155fd96c2832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1756c2ea0b8e9c84d4ef1fc6688758b"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ad1756c2ea0b8e9c84d4ef1fc6688758b">exposedParameters</a><code> [get]</code></td></tr>
+<tr class="separator:ad1756c2ea0b8e9c84d4ef1fc6688758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbb0474ab15817016cf04e09b2f18b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aabbb0474ab15817016cf04e09b2f18b5">clipCaps</a><code> [get]</code></td></tr>
+<tr class="memdesc:aabbb0474ab15817016cf04e09b2f18b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the capabilities supported by this clip.  <a href="#aabbb0474ab15817016cf04e09b2f18b5">更多...</a><br /></td></tr>
+<tr class="separator:aabbb0474ab15817016cf04e09b2f18b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f2a996dccd69d4babddd9eaac27153"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a06f2a996dccd69d4babddd9eaac27153">animationClip</a><code> [get]</code></td></tr>
+<tr class="memdesc:a06f2a996dccd69d4babddd9eaac27153"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this contains an animation asset, returns the animation clip attached. Otherwise returns null.  <a href="#a06f2a996dccd69d4babddd9eaac27153">更多...</a><br /></td></tr>
+<tr class="separator:a06f2a996dccd69d4babddd9eaac27153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2e36aa15f071d4e96640c7cfc1f9ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aca2e36aa15f071d4e96640c7cfc1f9ff">postExtrapolationMode</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aca2e36aa15f071d4e96640c7cfc1f9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the clip is being extrapolated past the end time.  <a href="#aca2e36aa15f071d4e96640c7cfc1f9ff">更多...</a><br /></td></tr>
+<tr class="separator:aca2e36aa15f071d4e96640c7cfc1f9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa523b5cfd49bce31cadf33695cc644"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7fa523b5cfd49bce31cadf33695cc644">preExtrapolationMode</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7fa523b5cfd49bce31cadf33695cc644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the clip is being extrapolated before the start time.  <a href="#a7fa523b5cfd49bce31cadf33695cc644">更多...</a><br /></td></tr>
+<tr class="separator:a7fa523b5cfd49bce31cadf33695cc644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22adf658f79c7fe23862c33ba9947bac"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a22adf658f79c7fe23862c33ba9947bac">extrapolatedStart</a><code> [get]</code></td></tr>
+<tr class="memdesc:a22adf658f79c7fe23862c33ba9947bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The start time of the clip, accounting for pre-extrapolation  <a href="#a22adf658f79c7fe23862c33ba9947bac">更多...</a><br /></td></tr>
+<tr class="separator:a22adf658f79c7fe23862c33ba9947bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70408e35d63b451caf35afc06d1693cc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a70408e35d63b451caf35afc06d1693cc">extrapolatedDuration</a><code> [get]</code></td></tr>
+<tr class="memdesc:a70408e35d63b451caf35afc06d1693cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The length of the clip in seconds, including extrapolation.  <a href="#a70408e35d63b451caf35afc06d1693cc">更多...</a><br /></td></tr>
+<tr class="separator:a70408e35d63b451caf35afc06d1693cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">UnityEngine.Timeline.ICurvesOwner</a></td></tr>
+<tr class="memitem:aa0282b62272d7604ec32d7435e3df8ac inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#aa0282b62272d7604ec32d7435e3df8ac">curves</a><code> [get]</code></td></tr>
+<tr class="separator:aa0282b62272d7604ec32d7435e3df8ac inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd12bebb33bcbf6dcd4e22d84218b706 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#acd12bebb33bcbf6dcd4e22d84218b706">hasCurves</a><code> [get]</code></td></tr>
+<tr class="separator:acd12bebb33bcbf6dcd4e22d84218b706 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f34dff9986f3b059e248a91791d23cd inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a5f34dff9986f3b059e248a91791d23cd">duration</a><code> [get]</code></td></tr>
+<tr class="separator:a5f34dff9986f3b059e248a91791d23cd inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0f9bb14f3fee221cd7d4b09461df86 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a5b0f9bb14f3fee221cd7d4b09461df86">defaultCurvesName</a><code> [get]</code></td></tr>
+<tr class="separator:a5b0f9bb14f3fee221cd7d4b09461df86 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c50dbccf04b0ec111bb3f392a5a63f inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a93c50dbccf04b0ec111bb3f392a5a63f">asset</a><code> [get]</code></td></tr>
+<tr class="separator:a93c50dbccf04b0ec111bb3f392a5a63f inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5edd301660496564d0d6a79ebe928ef inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#ab5edd301660496564d0d6a79ebe928ef">assetOwner</a><code> [get]</code></td></tr>
+<tr class="separator:ab5edd301660496564d0d6a79ebe928ef inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a160ff95c0f43676673d86d64ca8a8e inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a2a160ff95c0f43676673d86d64ca8a8e">targetTrack</a><code> [get]</code></td></tr>
+<tr class="separator:a2a160ff95c0f43676673d86d64ca8a8e inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:ac03686bc51024ddeb1911452e5907fce"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac03686bc51024ddeb1911452e5907fce">Versions</a> { <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac03686bc51024ddeb1911452e5907fcea4f2a91e15af2631ff9424564b8a45fb2">Versions.Initial</a> = 0, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac03686bc51024ddeb1911452e5907fcea3a7996abad9c8041136230a4c23c9aae">Versions.ClipInFromGlobalToLocal</a> = 1
+ }</td></tr>
+<tr class="separator:ac03686bc51024ddeb1911452e5907fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a0ec59814d14372927739cbb941e92df9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a0ec59814d14372927739cbb941e92df9">UpgradeToLatestVersion</a> ()</td></tr>
+<tr class="separator:a0ec59814d14372927739cbb941e92df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ccdc30a797e53a4614d9fca3b99df4"><td class="memItemLeft" align="right" valign="top">void ISerializationCallbackReceiver.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a10ccdc30a797e53a4614d9fca3b99df4">OnBeforeSerialize</a> ()</td></tr>
+<tr class="separator:a10ccdc30a797e53a4614d9fca3b99df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dfefa1378f4303d11cea5cca1c3b89a"><td class="memItemLeft" align="right" valign="top">void ISerializationCallbackReceiver.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a8dfefa1378f4303d11cea5cca1c3b89a">OnAfterDeserialize</a> ()</td></tr>
+<tr class="separator:a8dfefa1378f4303d11cea5cca1c3b89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec52bc06023a69364e7af6daed6619d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a5ec52bc06023a69364e7af6daed6619d">UpdateDirty</a> (double oldValue, double newValue)</td></tr>
+<tr class="separator:a5ec52bc06023a69364e7af6daed6619d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:aee1a12f3ad87150edf6566ba87ec19ed"><td class="memItemLeft" align="right" valign="top">static AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aee1a12f3ad87150edf6566ba87ec19ed">GetDefaultMixInCurve</a> ()</td></tr>
+<tr class="separator:aee1a12f3ad87150edf6566ba87ec19ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee1f7c03713d9bf3e468187860b5ac3"><td class="memItemLeft" align="right" valign="top">static AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a1ee1f7c03713d9bf3e468187860b5ac3">GetDefaultMixOutCurve</a> ()</td></tr>
+<tr class="separator:a1ee1f7c03713d9bf3e468187860b5ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e5fd8f064cf5e6a95bdb01d327d0b2"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ab2e5fd8f064cf5e6a95bdb01d327d0b2">SanitizeTimeValue</a> (double value, double defaultValue)</td></tr>
+<tr class="separator:ab2e5fd8f064cf5e6a95bdb01d327d0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac450e9204a02d72bcb7bac55471f6da9"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac450e9204a02d72bcb7bac55471f6da9">GetExtrapolatedTime</a> (double time, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> mode, double <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9438ddf54af828cacfc0f16fcc87e7ce">duration</a>)</td></tr>
+<tr class="separator:ac450e9204a02d72bcb7bac55471f6da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9e860201257415cd3701ea9f072c8c9e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9e860201257415cd3701ea9f072c8c9e">k_LatestVersion</a> = (int)Versions.ClipInFromGlobalToLocal</td></tr>
+<tr class="separator:a9e860201257415cd3701ea9f072c8c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509e228d38667aa42c437d19fab53955"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a509e228d38667aa42c437d19fab53955">m_Version</a></td></tr>
+<tr class="separator:a509e228d38667aa42c437d19fab53955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e45c42714079b3548e72920fc0403c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ad1e45c42714079b3548e72920fc0403c">m_Start</a></td></tr>
+<tr class="separator:ad1e45c42714079b3548e72920fc0403c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b0c157f774a084cf538dbc65cd8fdc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a81b0c157f774a084cf538dbc65cd8fdc">m_ClipIn</a></td></tr>
+<tr class="separator:a81b0c157f774a084cf538dbc65cd8fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61601f2bc2e605d62a44176c02ad01a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a61601f2bc2e605d62a44176c02ad01a6">m_Asset</a></td></tr>
+<tr class="separator:a61601f2bc2e605d62a44176c02ad01a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada902fcad1018218290f905623ff1045"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ada902fcad1018218290f905623ff1045">m_Duration</a></td></tr>
+<tr class="separator:ada902fcad1018218290f905623ff1045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c33b4c6b93f92cb8a6d16e15f4f8e23"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a5c33b4c6b93f92cb8a6d16e15f4f8e23">m_TimeScale</a> = 1.0</td></tr>
+<tr class="separator:a5c33b4c6b93f92cb8a6d16e15f4f8e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffeb5c79043c74d9f49afb9c906f5a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aeffeb5c79043c74d9f49afb9c906f5a1">m_ParentTrack</a></td></tr>
+<tr class="separator:aeffeb5c79043c74d9f49afb9c906f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a8b01cb6f25991567ee809b9cf6962"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a36a8b01cb6f25991567ee809b9cf6962">m_EaseInDuration</a></td></tr>
+<tr class="separator:a36a8b01cb6f25991567ee809b9cf6962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc12ac80d53f63e1e40ff4a9ebbb895b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#abc12ac80d53f63e1e40ff4a9ebbb895b">m_EaseOutDuration</a></td></tr>
+<tr class="separator:abc12ac80d53f63e1e40ff4a9ebbb895b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d68cfa59137ce7dba5af0a4badfe5e9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a6d68cfa59137ce7dba5af0a4badfe5e9">m_BlendInDuration</a> = -1.0f</td></tr>
+<tr class="separator:a6d68cfa59137ce7dba5af0a4badfe5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6d059f6c8746ea75d2586e52042158"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a6b6d059f6c8746ea75d2586e52042158">m_BlendOutDuration</a> = -1.0f</td></tr>
+<tr class="separator:a6b6d059f6c8746ea75d2586e52042158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239c3ce3255de9b4d6d91f48e712a60a"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a239c3ce3255de9b4d6d91f48e712a60a">m_MixInCurve</a></td></tr>
+<tr class="separator:a239c3ce3255de9b4d6d91f48e712a60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6079c556ba75cb48b6b273499b3d939e"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a6079c556ba75cb48b6b273499b3d939e">m_MixOutCurve</a></td></tr>
+<tr class="separator:a6079c556ba75cb48b6b273499b3d939e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17b7a8935f81f61d2d049c5a67a838e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#af17b7a8935f81f61d2d049c5a67a838e">m_BlendInCurveMode</a> = BlendCurveMode.Auto</td></tr>
+<tr class="separator:af17b7a8935f81f61d2d049c5a67a838e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a969cda25ec069458c2af9950eb1f560d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a969cda25ec069458c2af9950eb1f560d">m_BlendOutCurveMode</a> = BlendCurveMode.Auto</td></tr>
+<tr class="separator:a969cda25ec069458c2af9950eb1f560d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4845ea3f969da341de98aa6893a3ec77"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a4845ea3f969da341de98aa6893a3ec77">m_ExposedParameterNames</a></td></tr>
+<tr class="separator:a4845ea3f969da341de98aa6893a3ec77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e622294d74bb3ccc6d413254cde19d"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a27e622294d74bb3ccc6d413254cde19d">m_AnimationCurves</a></td></tr>
+<tr class="separator:a27e622294d74bb3ccc6d413254cde19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348b701f9530b78daad69a04dcd0b752"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a348b701f9530b78daad69a04dcd0b752">m_Recordable</a></td></tr>
+<tr class="separator:a348b701f9530b78daad69a04dcd0b752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b63ff39e03284ba9852cf0724378817"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a8b63ff39e03284ba9852cf0724378817">m_PostExtrapolationMode</a></td></tr>
+<tr class="separator:a8b63ff39e03284ba9852cf0724378817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5965d12dcdefe53d486b6a25bf3ff97a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a5965d12dcdefe53d486b6a25bf3ff97a">m_PreExtrapolationMode</a></td></tr>
+<tr class="separator:a5965d12dcdefe53d486b6a25bf3ff97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab953e71ddc9bd8ab07198cda51ade198"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ab953e71ddc9bd8ab07198cda51ade198">m_PostExtrapolationTime</a></td></tr>
+<tr class="separator:ab953e71ddc9bd8ab07198cda51ade198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5f6ccb0edc3ad32636865bbafdb888"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#abc5f6ccb0edc3ad32636865bbafdb888">m_PreExtrapolationTime</a></td></tr>
+<tr class="separator:abc5f6ccb0edc3ad32636865bbafdb888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac044cb160c2904737921ebc70427256f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac044cb160c2904737921ebc70427256f">m_DisplayName</a></td></tr>
+<tr class="separator:ac044cb160c2904737921ebc70427256f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Represents a clip on the timeline. </p>
+
+<p>在文件 <a class="el" href="_clip_upgrade_8cs_source.html">ClipUpgrade.cs</a> 第 <a class="el" href="_clip_upgrade_8cs_source.html#l00003">3</a> 行定义.</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="aa6d5786b6df3859bcf16be89d799ebc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">UnityEngine.Timeline.TimelineClip.BlendCurveMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How blend curves are treated in an overlap </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="aa6d5786b6df3859bcf16be89d799ebc0a06b9281e396db002010bde1de57262eb"></a>Auto&#160;</td><td class="fielddoc">
+<p>The curve is normalized against the opposing clip </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa6d5786b6df3859bcf16be89d799ebc0ae1ba155a9f2e8c3be94020eef32a0301"></a>Manual&#160;</td><td class="fielddoc">
+<p>The blend curve is fixed. </p>
+</td></tr>
+</table>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00086">86</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54ae9314c0572ffde0c52930cd7fa7a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">UnityEngine.Timeline.TimelineClip.ClipExtrapolation</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How the clip handles time outside its start and end range. </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a54ae9314c0572ffde0c52930cd7fa7a7a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc">
+<p>No extrapolation is applied. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a54ae9314c0572ffde0c52930cd7fa7a7abcd8db575b47c838e5d551e3973db4ac"></a>Hold&#160;</td><td class="fielddoc">
+<p>Hold the time at the end value of the clip. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a54ae9314c0572ffde0c52930cd7fa7a7a89d7b10cb4238977d2b523dfd9ea7745"></a>Loop&#160;</td><td class="fielddoc">
+<p>Repeat time values outside the start/end range. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a54ae9314c0572ffde0c52930cd7fa7a7a99e52704462d3580db3528cad7ea9660"></a>PingPong&#160;</td><td class="fielddoc">
+<p>Repeat time values outside the start/end range, reversing direction at each loop </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a54ae9314c0572ffde0c52930cd7fa7a7aa0bfb8e59e6c13fc8d990781f77694fe"></a>Continue&#160;</td><td class="fielddoc">
+<p>Time values are passed in without modification, extending beyond the clips range </p>
+</td></tr>
+</table>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00055">55</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac03686bc51024ddeb1911452e5907fce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac03686bc51024ddeb1911452e5907fce">UnityEngine.Timeline.TimelineClip.Versions</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="ac03686bc51024ddeb1911452e5907fcea4f2a91e15af2631ff9424564b8a45fb2"></a>Initial&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac03686bc51024ddeb1911452e5907fcea3a7996abad9c8041136230a4c23c9aae"></a>ClipInFromGlobalToLocal&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>在文件 <a class="el" href="_clip_upgrade_8cs_source.html">ClipUpgrade.cs</a> 第 <a class="el" href="_clip_upgrade_8cs_source.html#l00005">5</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a9f8b220fef702dc3ef6edc95d9ece498"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineClip.CreateCurves </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>curvesClipName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an AnimationClip to store animated properties for the attached PlayableAsset. </p>
+<p>If curves already exists for this clip, this method produces no result regardless of the value specified for curvesClipName. </p>
+<p>When used from the editor, this method attempts to save the created curves clip to the <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html" title="A PlayableAsset that represents a timeline. ">TimelineAsset</a>. The <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html" title="A PlayableAsset that represents a timeline. ">TimelineAsset</a> must already exist in the AssetDatabase to save the curves clip. If the <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html" title="A PlayableAsset that represents a timeline. ">TimelineAsset</a> does not exist, the curves clip is still created but it is not saved. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">curvesClipName</td><td>The name of the AnimationClip to create. This method does not ensure unique names. If you want a unique clip name, you must provide one. See ObjectNames.GetUniqueName for information on a method that creates unique names. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#ab52a5e233698ceda9cb60b5ebbcdf528">UnityEngine.Timeline.ICurvesOwner</a>.</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00774">774</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_clip_a9f8b220fef702dc3ef6edc95d9ece498_cgraph.png" border="0" usemap="#class_unity_engine_1_1_timeline_1_1_timeline_clip_a9f8b220fef702dc3ef6edc95d9ece498_cgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_timeline_1_1_timeline_clip_a9f8b220fef702dc3ef6edc95d9ece498_cgraph" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_a9f8b220fef702dc3ef6edc95d9ece498_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a26d5ea9930b97e5a37098ff809adc52b" title="UnityEngine.Timeline.Timeline\lCreateUtilities.CreateAnimationClip\lForTrack" alt="" coords="249,5,475,61"/><area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a00de6f820def7986ea36db84a4628f5e" title="UnityEngine.Timeline.Timeline\lUndo.RegisterCreatedObjectUndo" alt="" coords="523,13,740,54"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3ed921d48ee9b5b49a2a8577ce3c513"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Timeline.TimelineClip.EvaluateMixIn </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a time, returns the weight from the mix in </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>Time (relative to the timeline)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00527">527</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f40592786d437df0032d9b318947220"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Timeline.TimelineClip.EvaluateMixOut </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a time, returns the weight from the mix out </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>Time (relative to the timeline)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00508">508</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee1a12f3ad87150edf6566ba87ec19ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static AnimationCurve UnityEngine.Timeline.TimelineClip.GetDefaultMixInCurve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00541">541</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ee1f7c03713d9bf3e468187860b5ac3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static AnimationCurve UnityEngine.Timeline.TimelineClip.GetDefaultMixOutCurve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00546">546</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac450e9204a02d72bcb7bac55471f6da9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double UnityEngine.Timeline.TimelineClip.GetExtrapolatedTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00714">714</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84c4571aaaeaa6cac8587c0f48086c44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.IsExtrapolatedTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sequenceTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a time, returns whether it falls within the clips extrapolation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sequenceTime</td><td>The time relative to the timeline</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00656">656</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f54df7e4c0accdefa6dfbc83068083e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.IsPostExtrapolatedTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sequenceTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a time, returns whether it falls within the clip post-extrapolation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sequenceTime</td><td>The time relative to the timeline</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00675">675</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b9ff4aba84f327c2822983ac3cdf50b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.IsPreExtrapolatedTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sequenceTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a time, returns whether it falls within the clip pre-extrapolation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sequenceTime</td><td>The time relative to the timeline</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00665">665</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8dfefa1378f4303d11cea5cca1c3b89a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializationCallbackReceiver. UnityEngine.Timeline.TimelineClip.OnAfterDeserialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00787">787</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10ccdc30a797e53a4614d9fca3b99df4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializationCallbackReceiver. UnityEngine.Timeline.TimelineClip.OnBeforeSerialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00782">782</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2e5fd8f064cf5e6a95bdb01d327d0b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double UnityEngine.Timeline.TimelineClip.SanitizeTimeValue </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>defaultValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00613">613</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e93badf4d11e12235eec8e938263184"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.ToLocalTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts from global time to a clips local time. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>time relative to the timeline</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The local time with extrapolation applied </dd></dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00558">558</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a65196511de2353627a38bd9e6e09e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.ToLocalTimeUnbound </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts from global time to local time of the clip </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>The time relative to the timeline</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The local time, ignoring any extrapolation or bounds</dd></dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00583">583</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_clip_a5a65196511de2353627a38bd9e6e09e2_icgraph.png" border="0" usemap="#class_unity_engine_1_1_timeline_1_1_timeline_clip_a5a65196511de2353627a38bd9e6e09e2_icgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_timeline_1_1_timeline_clip_a5a65196511de2353627a38bd9e6e09e2_icgraph" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_a5a65196511de2353627a38bd9e6e09e2_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#aeb9c8cc3c428cb16a6c3c63d68c28c14" title="UnityEditor.Timeline.Timeline\lRecording.ProcessPlayableAssetRecording" alt="" coords="249,5,524,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ad30f9d694a07ceba13394f254c4cba00" title="UnityEditor.Timeline.Timeline\lWindowTimeControl.ToAnimationClipTime" alt="" coords="255,71,518,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a33767afb7266c2dfa4eaaeb1fd5a8bfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string UnityEngine.Timeline.TimelineClip.ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Outputs a more readable representation of the timeline clip as a string </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00799">799</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ec52bc06023a69364e7af6daed6619d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineClip.UpdateDirty </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oldValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>newValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00818">818</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ec59814d14372927739cbb941e92df9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineClip.UpgradeToLatestVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_upgrade_8cs_source.html">ClipUpgrade.cs</a> 第 <a class="el" href="_clip_upgrade_8cs_source.html#l00015">15</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_clip_a0ec59814d14372927739cbb941e92df9_cgraph.png" border="0" usemap="#class_unity_engine_1_1_timeline_1_1_timeline_clip_a0ec59814d14372927739cbb941e92df9_cgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_timeline_1_1_timeline_clip_a0ec59814d14372927739cbb941e92df9_cgraph" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_a0ec59814d14372927739cbb941e92df9_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_1_1_timeline_clip_upgrade.html#af806268a173aa1b232c39f4c5bb80962" title="UnityEngine.Timeline.Timeline\lClip.TimelineClipUpgrade.Upgrade\lClipInFromGlobalToLocal" alt="" coords="249,5,468,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a9e860201257415cd3701ea9f072c8c9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int UnityEngine.Timeline.TimelineClip.k_LatestVersion = (int)Versions.ClipInFromGlobalToLocal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_upgrade_8cs_source.html">ClipUpgrade.cs</a> 第 <a class="el" href="_clip_upgrade_8cs_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a719cf9469a3a685dc502df910b45fb00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a> UnityEngine.Timeline.TimelineClip.kDefaultClipCaps = ClipCaps.Blending</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default capabilities for a clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe98af86c914b296c429f0684cab0804"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEngine.Timeline.TimelineClip.kDefaultClipDurationInSeconds = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default length of a clip in seconds. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b3d15c3e42efd378e951f0e08729172"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly double UnityEngine.Timeline.TimelineClip.kTimeScaleMax = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The maximum timescale allowed on a clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0ae30ff18802c1df6826d93b6f7df19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly double UnityEngine.Timeline.TimelineClip.kTimeScaleMin = 1.0 / 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The minimum timescale allowed on a clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27e622294d74bb3ccc6d413254cde19d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationClip UnityEngine.Timeline.TimelineClip.m_AnimationCurves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00128">128</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61601f2bc2e605d62a44176c02ad01a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> UnityEngine.Timeline.TimelineClip.m_Asset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00107">107</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af17b7a8935f81f61d2d049c5a67a838e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a> UnityEngine.Timeline.TimelineClip.m_BlendInCurveMode = BlendCurveMode.Auto</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00124">124</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d68cfa59137ce7dba5af0a4badfe5e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_BlendInDuration = -1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00117">117</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a969cda25ec069458c2af9950eb1f560d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a> UnityEngine.Timeline.TimelineClip.m_BlendOutCurveMode = BlendCurveMode.Auto</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00125">125</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b6d059f6c8746ea75d2586e52042158"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_BlendOutDuration = -1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00118">118</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81b0c157f774a084cf538dbc65cd8fdc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_ClipIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00106">106</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac044cb160c2904737921ebc70427256f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEngine.Timeline.TimelineClip.m_DisplayName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00138">138</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ada902fcad1018218290f905623ff1045"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_Duration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00108">108</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a36a8b01cb6f25991567ee809b9cf6962"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_EaseInDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00113">113</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc12ac80d53f63e1e40ff4a9ebbb895b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_EaseOutDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00114">114</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4845ea3f969da341de98aa6893a3ec77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; UnityEngine.Timeline.TimelineClip.m_ExposedParameterNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00127">127</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a239c3ce3255de9b4d6d91f48e712a60a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve UnityEngine.Timeline.TimelineClip.m_MixInCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00121">121</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6079c556ba75cb48b6b273499b3d939e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve UnityEngine.Timeline.TimelineClip.m_MixOutCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00122">122</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeffeb5c79043c74d9f49afb9c906f5a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> UnityEngine.Timeline.TimelineClip.m_ParentTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00110">110</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b63ff39e03284ba9852cf0724378817"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> UnityEngine.Timeline.TimelineClip.m_PostExtrapolationMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00133">133</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab953e71ddc9bd8ab07198cda51ade198"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_PostExtrapolationTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00135">135</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5965d12dcdefe53d486b6a25bf3ff97a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> UnityEngine.Timeline.TimelineClip.m_PreExtrapolationMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00134">134</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc5f6ccb0edc3ad32636865bbafdb888"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_PreExtrapolationTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00136">136</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a348b701f9530b78daad69a04dcd0b752"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.m_Recordable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00130">130</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1e45c42714079b3548e72920fc0403c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_Start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00105">105</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c33b4c6b93f92cb8a6d16e15f4f8e23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.m_TimeScale = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00109">109</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a509e228d38667aa42c437d19fab53955"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEngine.Timeline.TimelineClip.m_Version</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_clip_upgrade_8cs_source.html">ClipUpgrade.cs</a> 第 <a class="el" href="_clip_upgrade_8cs_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a06f2a996dccd69d4babddd9eaac27153"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationClip UnityEngine.Timeline.TimelineClip.animationClip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If this contains an animation asset, returns the animation clip attached. Otherwise returns null. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00602">602</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c0e553887357327987faff3f3b06dac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> UnityEngine.Timeline.TimelineClip.asset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The PlayableAsset attached to the clip. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00275">275</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b4c96bc101b057c305a4d800154b894"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> ICurvesOwner. UnityEngine.Timeline.TimelineClip.assetOwner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00281">281</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43850d1fd7075d3f61001bfde502c3c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a> UnityEngine.Timeline.TimelineClip.blendInCurveMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The mode for calculating the blend curve of the overlap at the start of the clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00372">372</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad43f21068267ec0c062a6605e6ee98c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.blendInDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of overlap in seconds on the start of a clip. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00354">354</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a217794754fab883dd0b738fe19e74933"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aa6d5786b6df3859bcf16be89d799ebc0">BlendCurveMode</a> UnityEngine.Timeline.TimelineClip.blendOutCurveMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The mode for calculating the blend curve of the overlap at the end of the clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00381">381</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0c3c352b096260855294ac71c3befdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.blendOutDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of overlap in seconds at the end of a clip. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00363">363</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2157a21f9cc6af97747825c08ba7a5fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.clipAssetDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The length, in seconds, of the PlayableAsset attached to the clip. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00235">235</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aabbb0474ab15817016cf04e09b2f18b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a> UnityEngine.Timeline.TimelineClip.clipCaps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the capabilities supported by this clip. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00485">485</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b5805d1f833658b85625437328ccd24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.clipIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Local offset time of the clip. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00212">212</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c4922742bb044dbd4270829393d1b14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationClip UnityEngine.Timeline.TimelineClip.curves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An animation clip containing animated properties of the attached PlayableAsset </p>
+<p>This is where animated clip properties are stored. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00250">250</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2e3b605eb2ebafa400e54ef80d25353"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ICurvesOwner. UnityEngine.Timeline.TimelineClip.defaultCurvesName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00256">256</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2868e2d17cc2c3cb3ae3afad8f8712d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEngine.Timeline.TimelineClip.displayName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The name displayed on the clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00225">225</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9438ddf54af828cacfc0f16fcc87e7ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.duration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The length, in seconds, of the clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00191">191</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3cd3606936b31a041bd56b8abcdb541"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.easeInDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The ease in duration of the timeline clip in seconds. This only applies if the start of the clip is not overlapping. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00322">322</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1858701f2310f8b6db4affca3957eb0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.easeOutDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The ease out duration of the timeline clip in seconds. This only applies if the end of the clip is not overlapping. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00331">331</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3006f3263128dd652d3cf0333b6a6808"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.easeOutTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The time in seconds that the ease out begins </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00346">346</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a297f7bd7873593d65818cbc8fe4945ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.eastOutTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00338">338</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a397cab8b8496d8ffbb62feafad8ce720"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.end</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The end time, in seconds of the clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00204">204</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1756c2ea0b8e9c84d4ef1fc6688758b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; UnityEngine.Timeline.TimelineClip.exposedParameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00477">477</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70408e35d63b451caf35afc06d1693cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.extrapolatedDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The length of the clip in seconds, including extrapolation. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00699">699</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22adf658f79c7fe23862c33ba9947bac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.extrapolatedStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The start time of the clip, accounting for pre-extrapolation </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00685">685</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a07dcb68c250896eaec01d5be9b66a7fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.hasBlendIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the clip is blending in </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00389">389</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c977dd3d3cb998a6196305d60f67fac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.hasBlendOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the clip is blending out </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00394">394</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38ef83ba4243f939f2dbf6aae8133651"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.hasCurves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether this clip contains animated properties for the attached PlayableAsset. </p>
+<p>This property is false if the curves property is null or if it contains no information. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00267">267</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aacc8649e3ac2eb7946d086d48a335566"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.hasPostExtrapolation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is the clip being extrapolated past its end time? </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00152">152</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bd93387d38a05ab818552b358781e07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.hasPreExtrapolation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is the clip being extrapolated before its start time? </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00144">144</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaabd810813745f27181baeb4abb6d197"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve UnityEngine.Timeline.TimelineClip.mixInCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The animation curve used for calculating weights during an ease in or a blend in. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00400">400</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d5f22b8aa3ab100e2584e8a52b15cdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.mixInDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of the clip blending or easing in, in seconds </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00424">424</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dac4c1434693b06c0c7b57298b3ac8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Timeline.TimelineClip.mixInPercentage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of the clip being used for ease or blend in as a percentage </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00416">416</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa60948cb2774df6f4c4e68e16b93435d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve UnityEngine.Timeline.TimelineClip.mixOutCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The animation curve used for calculating weights during an ease out or a blend out. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00432">432</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dfc0aa2096ffaa715b0d4952e122411"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.mixOutDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of the clip blending or easing out, in seconds </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00454">454</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f3ecf967ff372bd448c256978ec0c2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Timeline.TimelineClip.mixOutPercentage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of the clip being used for ease or blend out as a percentage </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00462">462</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f1e580de3dcbc255654f7f001a3480c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.mixOutTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The time in seconds that an ease out or blend out starts </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00446">446</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2a489fc03b313f4b5a9134620e94bbaf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> UnityEngine.Timeline.TimelineClip.parentTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. ">TrackAsset</a> to which this clip is attached. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00301">301</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca2e36aa15f071d4e96640c7cfc1f9ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> UnityEngine.Timeline.TimelineClip.postExtrapolationMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the clip is being extrapolated past the end time. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00628">628</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fa523b5cfd49bce31cadf33695cc644"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> UnityEngine.Timeline.TimelineClip.preExtrapolationMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the clip is being extrapolated before the start time. </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00637">637</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0e7fe2586994c2fcd88155fd96c2832"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimelineClip.recordable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether this clip is recordable in editor </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00470">470</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac847d1affde0438d85a8fdc5af4f644f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The start time, in seconds, of the clip </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00173">173</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f33eb7eca0687bcdebb57ac94b659d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> ICurvesOwner. UnityEngine.Timeline.TimelineClip.targetTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00286">286</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a712e808bd29b4ea5e906353a12e733ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineClip.timeScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A speed multiplier for the clip; </p>
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00160">160</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82eb9e557b3e7b3f24e3bca0a82f2b81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> UnityEngine.Timeline.TimelineClip.underlyingAsset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a> 第 <a class="el" href="_timeline_clip_8cs_source.html#l00292">292</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Runtime/AssetUpgrade/<a class="el" href="_clip_upgrade_8cs_source.html">ClipUpgrade.cs</a></li>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Runtime/<a class="el" href="_timeline_clip_8cs_source.html">TimelineClip.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:55 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

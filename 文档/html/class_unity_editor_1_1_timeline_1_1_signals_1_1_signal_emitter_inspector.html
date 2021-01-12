@@ -1,0 +1,1147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.Signals.SignalEmitterInspector类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline_1_1_signals.html">Signals</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html">SignalEmitterInspector</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.Signals.SignalEmitterInspector类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.Signals.SignalEmitterInspector 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_signals_8_signal_emitter_inspector_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_signals_8_signal_emitter_inspector_inherit__map" id="_unity_editor_8_timeline_8_signals_8_signal_emitter_inspector_inherit__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_marker_inspector.html" title="MarkerInspector" alt="" coords="19,155,134,181"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_basic_asset_inspector.html" title="BasicAssetInspector" alt="" coords="5,80,148,107"/><area shape="rect" id="node5" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html" title="ISignalAssetProvider" alt="" coords="158,155,299,181"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.Signals.SignalEmitterInspector 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_signals_8_signal_emitter_inspector_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_signals_8_signal_emitter_inspector_coll__map" id="_unity_editor_8_timeline_8_signals_8_signal_emitter_inspector_coll__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_marker_inspector.html" title="MarkerInspector" alt="" coords="497,11,612,37"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_basic_asset_inspector.html" title="BasicAssetInspector" alt="" coords="194,5,337,32"/><area shape="rect" id="node5" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html" title="ISignalAssetProvider" alt="" coords="484,63,625,89"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html" title="Marker that emits a signal to a SignalReceiver. " alt="" coords="463,115,647,157"/><area shape="rect" id="node7" href="class_unity_engine_1_1_timeline_1_1_marker.html" title="Use Marker as a base class when creating a custom marker. " alt="" coords="234,123,297,149"/><area shape="rect" id="node12" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html" title="An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver..." alt="" coords="173,57,357,98"/><area shape="rect" id="node9" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html" title="Interface implemented by markers. " alt="" coords="32,131,97,157"/><area shape="rect" id="node11" href="interface_unity_engine_1_1_timeline_1_1_i_notification_option_provider.html" title="Implement this interface to change the behaviour of an INotification. " alt="" coords="179,224,352,251"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a195ef47d79d4e4bd401e5dfe882adb8e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a195ef47d79d4e4bd401e5dfe882adb8e">OnInspectorGUI</a> ()</td></tr>
+<tr class="separator:a195ef47d79d4e4bd401e5dfe882adb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_unity_editor_1_1_timeline_1_1_basic_asset_inspector"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_unity_editor_1_1_timeline_1_1_basic_asset_inspector')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_basic_asset_inspector.html">UnityEditor.Timeline.BasicAssetInspector</a></td></tr>
+<tr class="memitem:a0534792755865084d2416f3cd46b1047 inherit pub_methods_class_unity_editor_1_1_timeline_1_1_basic_asset_inspector"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_basic_asset_inspector.html#a0534792755865084d2416f3cd46b1047">OnInspectorGUI</a> ()</td></tr>
+<tr class="separator:a0534792755865084d2416f3cd46b1047 inherit pub_methods_class_unity_editor_1_1_timeline_1_1_basic_asset_inspector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bffd090e7f639c40817f79eeb2e8ecc inherit pub_methods_class_unity_editor_1_1_timeline_1_1_basic_asset_inspector"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_basic_asset_inspector.html#a9bffd090e7f639c40817f79eeb2e8ecc">ApplyChanges</a> ()</td></tr>
+<tr class="separator:a9bffd090e7f639c40817f79eeb2e8ecc inherit pub_methods_class_unity_editor_1_1_timeline_1_1_basic_asset_inspector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a1dc7f6107fbc0195f494528c1a4bc616"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a1dc7f6107fbc0195f494528c1a4bc616">signalAsset</a><code> [get, set]</code></td></tr>
+<tr class="separator:a1dc7f6107fbc0195f494528c1a4bc616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492285f736009cebe8df8968ce4b9007"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a492285f736009cebe8df8968ce4b9007">signalAssetSameValue</a><code> [get]</code></td></tr>
+<tr class="separator:a492285f736009cebe8df8968ce4b9007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html">UnityEditor.Timeline.Signals.ISignalAssetProvider</a></td></tr>
+<tr class="memitem:a3e723f0774d714db87ed6b18ab2fc712 inherit properties_interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html#a3e723f0774d714db87ed6b18ab2fc712">signalAsset</a><code> [get, set]</code></td></tr>
+<tr class="separator:a3e723f0774d714db87ed6b18ab2fc712 inherit properties_interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ae3bbdbd0c43c85ebcf3bc08212586c1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ae3bbdbd0c43c85ebcf3bc08212586c1a">OnEnable</a> ()</td></tr>
+<tr class="separator:ae3bbdbd0c43c85ebcf3bc08212586c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bd900ca909fcf31fd6f22ce9c2ba04"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> &gt; ISignalAssetProvider.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a30bd900ca909fcf31fd6f22ce9c2ba04">AvailableSignalAssets</a> ()</td></tr>
+<tr class="separator:a30bd900ca909fcf31fd6f22ce9c2ba04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0d77c5e28714c2c9086da9ac2f8e28"><td class="memItemLeft" align="right" valign="top">void ISignalAssetProvider.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a1e0d77c5e28714c2c9086da9ac2f8e28">CreateNewSignalAsset</a> (string path)</td></tr>
+<tr class="separator:a1e0d77c5e28714c2c9086da9ac2f8e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1372a23947ef9540b440cfef62f4b75f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a1372a23947ef9540b440cfef62f4b75f">UpdateState</a> ()</td></tr>
+<tr class="separator:a1372a23947ef9540b440cfef62f4b75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fde34cb4bb161327bad5091407c49a9"><td class="memItemLeft" align="right" valign="top">Editor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a2fde34cb4bb161327bad5091407c49a9">GetOrCreateReceiverEditor</a> (<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a> c)</td></tr>
+<tr class="separator:a2fde34cb4bb161327bad5091407c49a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5d916cac331f3d13c259af0e67a9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a9e5d916cac331f3d13c259af0e67a9f8">OnDisable</a> ()</td></tr>
+<tr class="separator:a9e5d916cac331f3d13c259af0e67a9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af69b909c08e15622bc4127b1e48468cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#af69b909c08e15622bc4127b1e48468cd">OnDestroy</a> ()</td></tr>
+<tr class="separator:af69b909c08e15622bc4127b1e48468cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742a2bd18768caf98c6ae0a0a3f1dd63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a742a2bd18768caf98c6ae0a0a3f1dd63">OnUndoRedo</a> ()</td></tr>
+<tr class="separator:a742a2bd18768caf98c6ae0a0a3f1dd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace53b7eb8933123d650152a6feb491e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ace53b7eb8933123d650152a6feb491e9">ApplyChangesAndRefreshReceivers</a> ()</td></tr>
+<tr class="separator:ace53b7eb8933123d650152a6feb491e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ba73de56c7bb000e5a848c833d2313"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ac0ba73de56c7bb000e5a848c833d2313">DrawNameSelectorAndSignalList</a> ()</td></tr>
+<tr class="separator:ac0ba73de56c7bb000e5a848c833d2313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87404c5614182f02f7fccfd6be206e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a87404c5614182f02f7fccfd6be206e25">DrawReceivers</a> ()</td></tr>
+<tr class="separator:a87404c5614182f02f7fccfd6be206e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3443e4b3c252c1007f22daaf2b98e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a6d3443e4b3c252c1007f22daaf2b98e1">DrawSignalFlags</a> ()</td></tr>
+<tr class="separator:a6d3443e4b3c252c1007f22daaf2b98e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e573f31b2cc9b0279d2d217cc5ddc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a08e573f31b2cc9b0279d2d217cc5ddc5">DrawSignal</a> ()</td></tr>
+<tr class="separator:a08e573f31b2cc9b0279d2d217cc5ddc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25257e8ee462c85ebb683667cf8aad6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a25257e8ee462c85ebb683667cf8aad6d">AssignSignalAsset</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> newAsset)</td></tr>
+<tr class="separator:a25257e8ee462c85ebb683667cf8aad6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e20e713536062764523eb4e59fdb03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a90e20e713536062764523eb4e59fdb03">DrawNameSelector</a> ()</td></tr>
+<tr class="separator:a90e20e713536062764523eb4e59fdb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0141e9f5841b244746dda95eff2dc6f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a0141e9f5841b244746dda95eff2dc6f0">DrawReceiverHeader</a> (<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a> receiver)</td></tr>
+<tr class="separator:a0141e9f5841b244746dda95eff2dc6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571f6750717f37764968132d2716cb12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a571f6750717f37764968132d2716cb12">DrawReceiverObjectField</a> ()</td></tr>
+<tr class="separator:a571f6750717f37764968132d2716cb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f76e65c89034a1ba42d66dbf6424d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a90f76e65c89034a1ba42d66dbf6424d9">AddReceiverComponent</a> ()</td></tr>
+<tr class="separator:a90f76e65c89034a1ba42d66dbf6424d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:acac694683a968fafcafb877a3a8c2a66"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#acac694683a968fafcafb877a3a8c2a66">SkipField</a> (string fieldName)</td></tr>
+<tr class="separator:acac694683a968fafcafb877a3a8c2a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6659a8a72f1ed5c73a0cfd4f3135748"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ab6659a8a72f1ed5c73a0cfd4f3135748">DrawSplitLine</a> (float y)</td></tr>
+<tr class="separator:ab6659a8a72f1ed5c73a0cfd4f3135748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c9169edf79b4ea8ef5cbc676f04a08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#aa1c9169edf79b4ea8ef5cbc676f04a08">GetBoundGameObject</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, PlayableDirector associatedDirector)</td></tr>
+<tr class="separator:aa1c9169edf79b4ea8ef5cbc676f04a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809ee14501d23820b2071f48037987e4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a809ee14501d23820b2071f48037987e4">IsCurrentSequenceReadOnly</a> ()</td></tr>
+<tr class="separator:a809ee14501d23820b2071f48037987e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ae188cf6180071e54bf87e9dd9b94d30d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ae188cf6180071e54bf87e9dd9b94d30d">m_RetroactiveProperty</a></td></tr>
+<tr class="separator:ae188cf6180071e54bf87e9dd9b94d30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4841c980b4fb7b03e9d71861ebb113d9"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a4841c980b4fb7b03e9d71861ebb113d9">m_EmitOnceProperty</a></td></tr>
+<tr class="separator:a4841c980b4fb7b03e9d71861ebb113d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32a2ad695830b3a3762d8bc2c46e90b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">SignalEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ad32a2ad695830b3a3762d8bc2c46e90b">m_Signal</a></td></tr>
+<tr class="separator:ad32a2ad695830b3a3762d8bc2c46e90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9e9692834d00161639279c1f87dce5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a4e9e9692834d00161639279c1f87dce5">m_BoundGameObject</a></td></tr>
+<tr class="separator:a4e9e9692834d00161639279c1f87dce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471973106dd0f3788a51bea8801a8f4b"><td class="memItemLeft" align="right" valign="top">PlayableDirector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a471973106dd0f3788a51bea8801a8f4b">m_AssociatedDirector</a></td></tr>
+<tr class="separator:a471973106dd0f3788a51bea8801a8f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8179ba25b629e80e95cbf8b357d566"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#a7b8179ba25b629e80e95cbf8b357d566">m_TargetsHaveTheSameBinding</a></td></tr>
+<tr class="separator:a7b8179ba25b629e80e95cbf8b357d566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4354658d82dc265d16738109a577c27"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; <a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, Editor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ad4354658d82dc265d16738109a577c27">m_Editors</a> = new Dictionary&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, Editor&gt;()</td></tr>
+<tr class="separator:ad4354658d82dc265d16738109a577c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23aff22afd22bbf4c3c0fe0fc41fb8a"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; <a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ac23aff22afd22bbf4c3c0fe0fc41fb8a">m_Foldouts</a> = new Dictionary&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, bool&gt;()</td></tr>
+<tr class="separator:ac23aff22afd22bbf4c3c0fe0fc41fb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7cdbd07b760378587f1f37a1d1f7d85"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#ab7cdbd07b760378587f1f37a1d1f7d85">m_Receivers</a> = new List&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&gt;()</td></tr>
+<tr class="separator:ab7cdbd07b760378587f1f37a1d1f7d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:aee55949333283573ad287860eebd72c6"><td class="memItemLeft" align="right" valign="top">static GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector.html#aee55949333283573ad287860eebd72c6">s_FoldoutStyle</a></td></tr>
+<tr class="separator:aee55949333283573ad287860eebd72c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00012">12</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a90f76e65c89034a1ba42d66dbf6424d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.AddReceiverComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00336">336</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace53b7eb8933123d650152a6feb491e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.ApplyChangesAndRefreshReceivers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00192">192</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25257e8ee462c85ebb683667cf8aad6d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.AssignSignalAsset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&#160;</td>
+          <td class="paramname"><em>newAsset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00294">294</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a25257e8ee462c85ebb683667cf8aad6d_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a25257e8ee462c85ebb683667cf8aad6d_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a25257e8ee462c85ebb683667cf8aad6d_cgraph" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a25257e8ee462c85ebb683667cf8aad6d_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="320,5,516,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a30bd900ca909fcf31fd6f22ce9c2ba04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&gt; ISignalAssetProvider. UnityEditor.Timeline.Signals.SignalEmitterInspector.AvailableSignalAssets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html#ad65cf80e8fae32643a78a86519f1af05">UnityEditor.Timeline.Signals.ISignalAssetProvider</a>.</p>
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e0d77c5e28714c2c9086da9ac2f8e28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISignalAssetProvider. UnityEditor.Timeline.Signals.SignalEmitterInspector.CreateNewSignalAsset </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html#a29e2eafd6932cc77ea21c7bfa1dc72d2">UnityEditor.Timeline.Signals.ISignalAssetProvider</a>.</p>
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00131">131</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a1e0d77c5e28714c2c9086da9ac2f8e28_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a1e0d77c5e28714c2c9086da9ac2f8e28_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a1e0d77c5e28714c2c9086da9ac2f8e28_cgraph" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a1e0d77c5e28714c2c9086da9ac2f8e28_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a54d05289ad6d60ebe6a543b2cb2c1326" title="UnityEditor.Timeline.Signals.\lSignalManager.CreateSignalAssetInstance" alt="" coords="273,13,543,54"/><area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="591,13,787,54"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a90e20e713536062764523eb4e59fdb03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawNameSelector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00304">304</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a90e20e713536062764523eb4e59fdb03_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a90e20e713536062764523eb4e59fdb03_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a90e20e713536062764523eb4e59fdb03_cgraph" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a90e20e713536062764523eb4e59fdb03_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#a2141200344f5a019d081f59bc0de7637" title="UnityEditor.Timeline.Signals.\lSignalUtility.DrawSignalNames" alt="" coords="321,50,523,91"/><area shape="rect" id="node3" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html#ad65cf80e8fae32643a78a86519f1af05" title="UnityEditor.Timeline.Signals.\lISignalAssetProvider.AvailableSignal\lAssets" alt="" coords="594,5,826,61"/><area shape="rect" id="node4" href="interface_unity_editor_1_1_timeline_1_1_signals_1_1_i_signal_asset_provider.html#a29e2eafd6932cc77ea21c7bfa1dc72d2" title="UnityEditor.Timeline.Signals.\lISignalAssetProvider.CreateNewSignalAsset" alt="" coords="571,86,849,127"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0ba73de56c7bb000e5a848c833d2313"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawNameSelectorAndSignalList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00200">200</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0141e9f5841b244746dda95eff2dc6f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawReceiverHeader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&#160;</td>
+          <td class="paramname"><em>receiver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00309">309</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a571f6750717f37764968132d2716cb12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawReceiverObjectField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00329">329</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a87404c5614182f02f7fccfd6be206e25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawReceivers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00214">214</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a87404c5614182f02f7fccfd6be206e25_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a87404c5614182f02f7fccfd6be206e25_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a87404c5614182f02f7fccfd6be206e25_cgraph" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a87404c5614182f02f7fccfd6be206e25_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#ac78643addefb5d72ceee836f03db453e" title="UnityEditor.Timeline.Signals.\lSignalUtility.DrawCenteredMessage" alt="" coords="296,5,525,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#acaab023f8cfec29556403e3ad4066d41" title="UnityEditor.Timeline.Signals.\lSignalUtility.DrawCenteredButton" alt="" coords="303,71,518,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a08e573f31b2cc9b0279d2d217cc5ddc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawSignal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00265">265</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a08e573f31b2cc9b0279d2d217cc5ddc5_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a08e573f31b2cc9b0279d2d217cc5ddc5_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a08e573f31b2cc9b0279d2d217cc5ddc5_cgraph" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a08e573f31b2cc9b0279d2d217cc5ddc5_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#ac78643addefb5d72ceee836f03db453e" title="UnityEditor.Timeline.Signals.\lSignalUtility.DrawCenteredMessage" alt="" coords="276,5,505,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#acaab023f8cfec29556403e3ad4066d41" title="UnityEditor.Timeline.Signals.\lSignalUtility.DrawCenteredButton" alt="" coords="283,71,498,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#a11321ac55fb1285d7627406e3972a9f4" title="UnityEditor.Timeline.Signals.\lSignalUtility.GetNewSignalPath" alt="" coords="289,136,493,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d3443e4b3c252c1007f22daaf2b98e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawSignalFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00259">259</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6659a8a72f1ed5c73a0cfd4f3135748"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.Signals.SignalEmitterInspector.DrawSplitLine </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00347">347</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1c9169edf79b4ea8ef5cbc676f04a08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> UnityEditor.Timeline.Signals.SignalEmitterInspector.GetBoundGameObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableDirector&#160;</td>
+          <td class="paramname"><em>associatedDirector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00358">358</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_aa1c9169edf79b4ea8ef5cbc676f04a08_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_aa1c9169edf79b4ea8ef5cbc676f04a08_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_aa1c9169edf79b4ea8ef5cbc676f04a08_cgraph" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_aa1c9169edf79b4ea8ef5cbc676f04a08_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#afda348f13d0b24ba875042746d02ebfa" title="UnityEditor.Timeline.Timeline\lUtility.GetSceneGameObject" alt="" coords="304,13,495,54"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2fde34cb4bb161327bad5091407c49a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Editor UnityEditor.Timeline.Signals.SignalEmitterInspector.GetOrCreateReceiverEditor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00155">155</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a809ee14501d23820b2071f48037987e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.Signals.SignalEmitterInspector.IsCurrentSequenceReadOnly </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00372">372</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af69b909c08e15622bc4127b1e48468cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00178">178</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e5d916cac331f3d13c259af0e67a9f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.OnDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00173">173</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3bbdbd0c43c85ebcf3bc08212586c1a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00062">62</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a195ef47d79d4e4bd401e5dfe882adb8e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEditor.Timeline.Signals.SignalEmitterInspector.OnInspectorGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00080">80</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a195ef47d79d4e4bd401e5dfe882adb8e_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a195ef47d79d4e4bd401e5dfe882adb8e_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a195ef47d79d4e4bd401e5dfe882adb8e_cgraph" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_inspector_a195ef47d79d4e4bd401e5dfe882adb8e_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="303,5,493,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a742a2bd18768caf98c6ae0a0a3f1dd63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.OnUndoRedo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00187">187</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acac694683a968fafcafb877a3a8c2a66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.Signals.SignalEmitterInspector.SkipField </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fieldName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00342">342</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1372a23947ef9540b440cfef62f4b75f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalEmitterInspector.UpdateState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00143">143</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a471973106dd0f3788a51bea8801a8f4b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PlayableDirector UnityEditor.Timeline.Signals.SignalEmitterInspector.m_AssociatedDirector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e9e9692834d00161639279c1f87dce5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> UnityEditor.Timeline.Signals.SignalEmitterInspector.m_BoundGameObject</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4354658d82dc265d16738109a577c27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, Editor&gt; UnityEditor.Timeline.Signals.SignalEmitterInspector.m_Editors = new Dictionary&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, Editor&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4841c980b4fb7b03e9d71861ebb113d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty UnityEditor.Timeline.Signals.SignalEmitterInspector.m_EmitOnceProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac23aff22afd22bbf4c3c0fe0fc41fb8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, bool&gt; UnityEditor.Timeline.Signals.SignalEmitterInspector.m_Foldouts = new Dictionary&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>, bool&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7cdbd07b760378587f1f37a1d1f7d85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&gt; UnityEditor.Timeline.Signals.SignalEmitterInspector.m_Receivers = new List&lt;<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae188cf6180071e54bf87e9dd9b94d30d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty UnityEditor.Timeline.Signals.SignalEmitterInspector.m_RetroactiveProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad32a2ad695830b3a3762d8bc2c46e90b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">SignalEmitter</a> UnityEditor.Timeline.Signals.SignalEmitterInspector.m_Signal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b8179ba25b629e80e95cbf8b357d566"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.Signals.SignalEmitterInspector.m_TargetsHaveTheSameBinding</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee55949333283573ad287860eebd72c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIStyle UnityEditor.Timeline.Signals.SignalEmitterInspector.s_FoldoutStyle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a1dc7f6107fbc0195f494528c1a4bc616"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> UnityEditor.Timeline.Signals.SignalEmitterInspector.signalAsset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a492285f736009cebe8df8968ce4b9007"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.Signals.SignalEmitterInspector.signalAssetSameValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a> 第 <a class="el" href="_signal_emitter_inspector_8cs_source.html#l00054">54</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Signals/<a class="el" href="_signal_emitter_inspector_8cs_source.html">SignalEmitterInspector.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:53 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

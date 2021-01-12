@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/GlyphRectPropertyDrawer.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GlyphRectPropertyDrawer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_glyph_rect_property_drawer_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a>.EditorUtilities</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [CustomPropertyDrawer(typeof(GlyphRect))]</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html">GlyphRectPropertyDrawer</a> : PropertyDrawer</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html#ad2e2517972d94bb190ba141d814e5cad">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html#ad2e2517972d94bb190ba141d814e5cad">OnGUI</a>(Rect position, SerializedProperty property, GUIContent label)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="comment">//EditorGUI.BeginProperty(position, label, property);</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            SerializedProperty prop_X = <span class="keyword">property</span>.FindPropertyRelative(<span class="stringliteral">&quot;m_X&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            SerializedProperty prop_Y = <span class="keyword">property</span>.FindPropertyRelative(<span class="stringliteral">&quot;m_Y&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            SerializedProperty prop_Width = <span class="keyword">property</span>.FindPropertyRelative(<span class="stringliteral">&quot;m_Width&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            SerializedProperty prop_Height = <span class="keyword">property</span>.FindPropertyRelative(<span class="stringliteral">&quot;m_Height&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="comment">// We get Rect since a valid position may not be provided by the caller.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            Rect rect = <span class="keyword">new</span> Rect(position.x, position.y, position.width, 49);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            EditorGUI.LabelField(rect, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Glyph Rect&quot;</span>));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            EditorGUIUtility.labelWidth = 30f;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            EditorGUIUtility.fieldWidth = 10f;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="comment">//GUI.enabled = false;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordtype">float</span> width = (rect.width - 75f) / 4;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            EditorGUI.PropertyField(<span class="keyword">new</span> Rect(rect.x + width * 0, rect.y + 20, width - 5f, 18), prop_X, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;X:&quot;</span>));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            EditorGUI.PropertyField(<span class="keyword">new</span> Rect(rect.x + width * 1, rect.y + 20, width - 5f, 18), prop_Y, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Y:&quot;</span>));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            EditorGUI.PropertyField(<span class="keyword">new</span> Rect(rect.x + width * 2, rect.y + 20, width - 5f, 18), prop_Width, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;W:&quot;</span>));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            EditorGUI.PropertyField(<span class="keyword">new</span> Rect(rect.x + width * 3, rect.y + 20, width - 5f, 18), prop_Height, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;H:&quot;</span>));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">//EditorGUI.EndProperty();</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html#a6ade0a682ac1ae19c7fb0893af4ec6fe">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">float</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html#a6ade0a682ac1ae19c7fb0893af4ec6fe">GetPropertyHeight</a>(SerializedProperty property, GUIContent label)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> 45f;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer_html_ad2e2517972d94bb190ba141d814e5cad"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html#ad2e2517972d94bb190ba141d814e5cad">TMPro.EditorUtilities.GlyphRectPropertyDrawer.OnGUI</a></div><div class="ttdeci">override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</div><div class="ttdef"><b>Definition:</b> <a href="_glyph_rect_property_drawer_8cs_source.html#l00013">GlyphRectPropertyDrawer.cs:13</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer_html_a6ade0a682ac1ae19c7fb0893af4ec6fe"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html#a6ade0a682ac1ae19c7fb0893af4ec6fe">TMPro.EditorUtilities.GlyphRectPropertyDrawer.GetPropertyHeight</a></div><div class="ttdeci">override float GetPropertyHeight(SerializedProperty property, GUIContent label)</div><div class="ttdef"><b>Definition:</b> <a href="_glyph_rect_property_drawer_8cs_source.html#l00039">GlyphRectPropertyDrawer.cs:39</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html">TMPro.EditorUtilities.GlyphRectPropertyDrawer</a></div><div class="ttdef"><b>Definition:</b> <a href="_glyph_rect_property_drawer_8cs_source.html#l00011">GlyphRectPropertyDrawer.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

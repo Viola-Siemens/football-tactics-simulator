@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_LineInfo.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a7d267b27539021f3422d98d206ea06f.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_LineInfo.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___line_info_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html">    7</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html">TMP_LineInfo</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">int</span> controlCharacterCount;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a46fd32d5cb7ef22c3271920bbd943db5">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a46fd32d5cb7ef22c3271920bbd943db5">characterCount</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a7b8f73404dad3ef77774d60757adc2ae">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a7b8f73404dad3ef77774d60757adc2ae">visibleCharacterCount</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ae1ac899765122ca72a864aa9c9092101">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ae1ac899765122ca72a864aa9c9092101">spaceCount</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a5c5c82928595ce3573d26df72a19e041">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a5c5c82928595ce3573d26df72a19e041">wordCount</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#acf7aa2ff53854af329771357909c69b0">   15</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#acf7aa2ff53854af329771357909c69b0">firstCharacterIndex</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a8c8089c64c819c3212964c9520e66008">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a8c8089c64c819c3212964c9520e66008">firstVisibleCharacterIndex</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ab23c89a15901d65307ca0249ea16a6e2">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ab23c89a15901d65307ca0249ea16a6e2">lastCharacterIndex</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ae2b5b0d83015f93ee156c295c79139c5">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ae2b5b0d83015f93ee156c295c79139c5">lastVisibleCharacterIndex</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a1c87f92a9502adab77de554f9db6854e">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a1c87f92a9502adab77de554f9db6854e">length</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a61e038b94a1163610fb48f9294ed36d4">   21</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a61e038b94a1163610fb48f9294ed36d4">lineHeight</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a6d532182b74c4703af35abd5e7a0699c">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a6d532182b74c4703af35abd5e7a0699c">ascender</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a1fa19a22a16455f8212e4e7d803acb47">   23</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a1fa19a22a16455f8212e4e7d803acb47">baseline</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a05552d37339366d37fc255d31e051c1d">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a05552d37339366d37fc255d31e051c1d">descender</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a98d385a72db2f104c3495148cb3cef55">   25</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a98d385a72db2f104c3495148cb3cef55">maxAdvance</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a83588bf25880d72d2f7296fdbe4788ad">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a83588bf25880d72d2f7296fdbe4788ad">width</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a9d5bfd42c63189115d59e29cbbfb3635">   28</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a9d5bfd42c63189115d59e29cbbfb3635">marginLeft</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a0628e316a9d4ae36e2b25e83768c3095">   29</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a0628e316a9d4ae36e2b25e83768c3095">marginRight</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a352a17cd7468f53cd4947092f7c7c785">   31</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_t_m_pro.html#a1dd743b58b1fd4057c00e4b98ab86301">TextAlignmentOptions</a> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#a352a17cd7468f53cd4947092f7c7c785">alignment</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ad02e4f4672f757a4caba50835a5c09b0">   32</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_t_m_pro_1_1_extents.html">Extents</a> <a class="code" href="struct_t_m_pro_1_1_t_m_p___line_info.html#ad02e4f4672f757a4caba50835a5c09b0">lineExtents</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//public string GetLineText()</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//{</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//    string word = string.Empty;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//    TMP_CharacterInfo[] charInfo = textComponent.textInfo.characterInfo;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//    for (int i = firstCharacterIndex; i &lt; lastCharacterIndex + 1; i++)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//    {</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">//        word += charInfo[i].character;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//    }</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//    return word;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//}</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html">TMPro.TMP_LineInfo</a></div><div class="ttdoc">Structure which contains information about the individual lines of text. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00007">TMP_LineInfo.cs:7</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a352a17cd7468f53cd4947092f7c7c785"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a352a17cd7468f53cd4947092f7c7c785">TMPro.TMP_LineInfo.alignment</a></div><div class="ttdeci">TextAlignmentOptions alignment</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00031">TMP_LineInfo.cs:31</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a9d5bfd42c63189115d59e29cbbfb3635"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a9d5bfd42c63189115d59e29cbbfb3635">TMPro.TMP_LineInfo.marginLeft</a></div><div class="ttdeci">float marginLeft</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00028">TMP_LineInfo.cs:28</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_ad02e4f4672f757a4caba50835a5c09b0"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#ad02e4f4672f757a4caba50835a5c09b0">TMPro.TMP_LineInfo.lineExtents</a></div><div class="ttdeci">Extents lineExtents</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00032">TMP_LineInfo.cs:32</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_ae2b5b0d83015f93ee156c295c79139c5"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#ae2b5b0d83015f93ee156c295c79139c5">TMPro.TMP_LineInfo.lastVisibleCharacterIndex</a></div><div class="ttdeci">int lastVisibleCharacterIndex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00018">TMP_LineInfo.cs:18</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a1c87f92a9502adab77de554f9db6854e"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a1c87f92a9502adab77de554f9db6854e">TMPro.TMP_LineInfo.length</a></div><div class="ttdeci">float length</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00020">TMP_LineInfo.cs:20</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a83588bf25880d72d2f7296fdbe4788ad"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a83588bf25880d72d2f7296fdbe4788ad">TMPro.TMP_LineInfo.width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00027">TMP_LineInfo.cs:27</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a8c8089c64c819c3212964c9520e66008"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a8c8089c64c819c3212964c9520e66008">TMPro.TMP_LineInfo.firstVisibleCharacterIndex</a></div><div class="ttdeci">int firstVisibleCharacterIndex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00016">TMP_LineInfo.cs:16</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_ae1ac899765122ca72a864aa9c9092101"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#ae1ac899765122ca72a864aa9c9092101">TMPro.TMP_LineInfo.spaceCount</a></div><div class="ttdeci">int spaceCount</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00013">TMP_LineInfo.cs:13</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a0628e316a9d4ae36e2b25e83768c3095"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a0628e316a9d4ae36e2b25e83768c3095">TMPro.TMP_LineInfo.marginRight</a></div><div class="ttdeci">float marginRight</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00029">TMP_LineInfo.cs:29</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a7b8f73404dad3ef77774d60757adc2ae"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a7b8f73404dad3ef77774d60757adc2ae">TMPro.TMP_LineInfo.visibleCharacterCount</a></div><div class="ttdeci">int visibleCharacterCount</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00012">TMP_LineInfo.cs:12</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a46fd32d5cb7ef22c3271920bbd943db5"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a46fd32d5cb7ef22c3271920bbd943db5">TMPro.TMP_LineInfo.characterCount</a></div><div class="ttdeci">int characterCount</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00011">TMP_LineInfo.cs:11</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_acf7aa2ff53854af329771357909c69b0"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#acf7aa2ff53854af329771357909c69b0">TMPro.TMP_LineInfo.firstCharacterIndex</a></div><div class="ttdeci">int firstCharacterIndex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00015">TMP_LineInfo.cs:15</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_extents_html"><div class="ttname"><a href="struct_t_m_pro_1_1_extents.html">TMPro.Extents</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_pro___mesh_utilities_8cs_source.html#l00221">TMPro_MeshUtilities.cs:221</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_ab23c89a15901d65307ca0249ea16a6e2"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#ab23c89a15901d65307ca0249ea16a6e2">TMPro.TMP_LineInfo.lastCharacterIndex</a></div><div class="ttdeci">int lastCharacterIndex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00017">TMP_LineInfo.cs:17</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a5c5c82928595ce3573d26df72a19e041"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a5c5c82928595ce3573d26df72a19e041">TMPro.TMP_LineInfo.wordCount</a></div><div class="ttdeci">int wordCount</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00014">TMP_LineInfo.cs:14</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a1fa19a22a16455f8212e4e7d803acb47"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a1fa19a22a16455f8212e4e7d803acb47">TMPro.TMP_LineInfo.baseline</a></div><div class="ttdeci">float baseline</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00023">TMP_LineInfo.cs:23</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a98d385a72db2f104c3495148cb3cef55"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a98d385a72db2f104c3495148cb3cef55">TMPro.TMP_LineInfo.maxAdvance</a></div><div class="ttdeci">float maxAdvance</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00025">TMP_LineInfo.cs:25</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a6d532182b74c4703af35abd5e7a0699c"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a6d532182b74c4703af35abd5e7a0699c">TMPro.TMP_LineInfo.ascender</a></div><div class="ttdeci">float ascender</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00022">TMP_LineInfo.cs:22</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a1dd743b58b1fd4057c00e4b98ab86301"><div class="ttname"><a href="namespace_t_m_pro.html#a1dd743b58b1fd4057c00e4b98ab86301">TMPro.TextAlignmentOptions</a></div><div class="ttdeci">TextAlignmentOptions</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l00024">TMP_Text.cs:24</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a05552d37339366d37fc255d31e051c1d"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a05552d37339366d37fc255d31e051c1d">TMPro.TMP_LineInfo.descender</a></div><div class="ttdeci">float descender</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00024">TMP_LineInfo.cs:24</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___line_info_html_a61e038b94a1163610fb48f9294ed36d4"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___line_info.html#a61e038b94a1163610fb48f9294ed36d4">TMPro.TMP_LineInfo.lineHeight</a></div><div class="ttdeci">float lineHeight</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___line_info_8cs_source.html#l00021">TMP_LineInfo.cs:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:33 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

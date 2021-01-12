@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: VSCodeEditor.IGenerator接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_v_s_code_editor.html">VSCodeEditor</a></li><li class="navelem"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html">IGenerator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="interface_v_s_code_editor_1_1_i_generator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">VSCodeEditor.IGenerator接口 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 VSCodeEditor.IGenerator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_v_s_code_editor_1_1_i_generator__inherit__graph.png" border="0" usemap="#_v_s_code_editor_8_i_generator_inherit__map" alt="Inheritance graph"/></div>
+<map name="_v_s_code_editor_8_i_generator_inherit__map" id="_v_s_code_editor_8_i_generator_inherit__map">
+<area shape="rect" id="node2" href="class_v_s_code_editor_1_1_project_generation.html" title="VSCodeEditor.ProjectGeneration" alt="" coords="5,80,217,107"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afa900c81de62d4fb86bc02fa7d4469a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html#afa900c81de62d4fb86bc02fa7d4469a9">SyncIfNeeded</a> (List&lt; string &gt; affectedFiles, string[] reimportedFiles)</td></tr>
+<tr class="separator:afa900c81de62d4fb86bc02fa7d4469a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e06d460c86ab85db6de13df7b53895a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html#a8e06d460c86ab85db6de13df7b53895a">Sync</a> ()</td></tr>
+<tr class="separator:a8e06d460c86ab85db6de13df7b53895a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fa3cbfc5efdb5c8cfa5303e5084e67"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html#a92fa3cbfc5efdb5c8cfa5303e5084e67">SolutionFile</a> ()</td></tr>
+<tr class="separator:a92fa3cbfc5efdb5c8cfa5303e5084e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b6ef4921133b74e0a2f30cbab894c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html#ad1b6ef4921133b74e0a2f30cbab894c2">GenerateAll</a> (bool generateAll)</td></tr>
+<tr class="separator:ad1b6ef4921133b74e0a2f30cbab894c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affaee448c8914281e680158a39b38e0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html#affaee448c8914281e680158a39b38e0c">SolutionExists</a> ()</td></tr>
+<tr class="separator:affaee448c8914281e680158a39b38e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:aac6b768bfc67ebb70ab9bca54e330d3e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html#aac6b768bfc67ebb70ab9bca54e330d3e">ProjectDirectory</a><code> [get]</code></td></tr>
+<tr class="separator:aac6b768bfc67ebb70ab9bca54e330d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c0aa36b2fe51d41b5cd1e317cb08ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_v_s_code_editor_1_1_i_assembly_name_provider.html">IAssemblyNameProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_v_s_code_editor_1_1_i_generator.html#a17c0aa36b2fe51d41b5cd1e317cb08ee">AssemblyNameProvider</a><code> [get]</code></td></tr>
+<tr class="separator:a17c0aa36b2fe51d41b5cd1e317cb08ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="com_8unity_8ide_8vscode@1_82_81_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8vscode@1_82_81_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00015">15</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ad1b6ef4921133b74e0a2f30cbab894c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VSCodeEditor.IGenerator.GenerateAll </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>generateAll</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_v_s_code_editor_1_1_project_generation.html#ae385e6404a2d16774f1fbe47dfbb3fd0">VSCodeEditor.ProjectGeneration</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="affaee448c8914281e680158a39b38e0c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VSCodeEditor.IGenerator.SolutionExists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_v_s_code_editor_1_1_project_generation.html#ad3895e06fcd00a4aa29e456e912b82d8">VSCodeEditor.ProjectGeneration</a> 内被实现.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_v_s_code_editor_1_1_i_generator_affaee448c8914281e680158a39b38e0c_icgraph.png" border="0" usemap="#interface_v_s_code_editor_1_1_i_generator_affaee448c8914281e680158a39b38e0c_icgraph" alt=""/></div>
+<map name="interface_v_s_code_editor_1_1_i_generator_affaee448c8914281e680158a39b38e0c_icgraph" id="interface_v_s_code_editor_1_1_i_generator_affaee448c8914281e680158a39b38e0c_icgraph">
+<area shape="rect" id="node2" href="class_v_s_code_editor_1_1_v_s_code_script_editor.html#aba06d39e77ea3de0c6ac14eea38728c3" title="VSCodeEditor.VSCodeScript\lEditor.CreateIfDoesntExist" alt="" coords="225,5,416,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a92fa3cbfc5efdb5c8cfa5303e5084e67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string VSCodeEditor.IGenerator.SolutionFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_v_s_code_editor_1_1_project_generation.html#a939ea1ad635f126eb182eff5e428af17">VSCodeEditor.ProjectGeneration</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e06d460c86ab85db6de13df7b53895a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VSCodeEditor.IGenerator.Sync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_v_s_code_editor_1_1_project_generation.html#a0b027bde77c5135f4bfdea3bf19b1a00">VSCodeEditor.ProjectGeneration</a> 内被实现.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_v_s_code_editor_1_1_i_generator_a8e06d460c86ab85db6de13df7b53895a_icgraph.png" border="0" usemap="#interface_v_s_code_editor_1_1_i_generator_a8e06d460c86ab85db6de13df7b53895a_icgraph" alt=""/></div>
+<map name="interface_v_s_code_editor_1_1_i_generator_a8e06d460c86ab85db6de13df7b53895a_icgraph" id="interface_v_s_code_editor_1_1_i_generator_a8e06d460c86ab85db6de13df7b53895a_icgraph">
+<area shape="rect" id="node2" href="class_v_s_code_editor_1_1_v_s_code_script_editor.html#ac29ab20bace82921185c1c7d5f9ce346" title="VSCodeEditor.VSCodeScript\lEditor.RegenerateProjectFiles" alt="" coords="256,5,451,47"/><area shape="rect" id="node4" href="class_v_s_code_editor_1_1_v_s_code_script_editor.html#aba06d39e77ea3de0c6ac14eea38728c3" title="VSCodeEditor.VSCodeScript\lEditor.CreateIfDoesntExist" alt="" coords="258,71,449,112"/><area shape="rect" id="node5" href="class_v_s_code_editor_1_1_v_s_code_script_editor.html#aeb78af562ff11f73c7dcb946ab1be533" title="VSCodeEditor.VSCodeScript\lEditor.SyncAll" alt="" coords="258,136,449,177"/><area shape="rect" id="node3" href="class_v_s_code_editor_1_1_v_s_code_script_editor.html#a9b426ee84d2a35d6dd45fd8f61da0a2a" title="VSCodeEditor.VSCodeScript\lEditor.OnGUI" alt="" coords="499,5,689,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afa900c81de62d4fb86bc02fa7d4469a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VSCodeEditor.IGenerator.SyncIfNeeded </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>affectedFiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>reimportedFiles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_v_s_code_editor_1_1_project_generation.html#a2b1552956b45f8d60f4637c43de6f1eb">VSCodeEditor.ProjectGeneration</a> 内被实现.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_v_s_code_editor_1_1_i_generator_afa900c81de62d4fb86bc02fa7d4469a9_icgraph.png" border="0" usemap="#interface_v_s_code_editor_1_1_i_generator_afa900c81de62d4fb86bc02fa7d4469a9_icgraph" alt=""/></div>
+<map name="interface_v_s_code_editor_1_1_i_generator_afa900c81de62d4fb86bc02fa7d4469a9_icgraph" id="interface_v_s_code_editor_1_1_i_generator_afa900c81de62d4fb86bc02fa7d4469a9_icgraph">
+<area shape="rect" id="node2" href="class_v_s_code_editor_1_1_v_s_code_script_editor.html#abcb3f955a7ac9188c31d5a4850f3ad66" title="VSCodeEditor.VSCodeScript\lEditor.SyncIfNeeded" alt="" coords="225,5,416,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a17c0aa36b2fe51d41b5cd1e317cb08ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_v_s_code_editor_1_1_i_assembly_name_provider.html">IAssemblyNameProvider</a> VSCodeEditor.IGenerator.AssemblyNameProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8vscode@1_82_81_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8vscode@1_82_81_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac6b768bfc67ebb70ab9bca54e330d3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string VSCodeEditor.IGenerator.ProjectDirectory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8vscode@1_82_81_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8vscode@1_82_81_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.ide.vscode@1.2.1/Editor/ProjectGeneration/<a class="el" href="com_8unity_8ide_8vscode@1_82_81_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:55 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

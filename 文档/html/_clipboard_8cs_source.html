@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/Clipboard.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_0724e84c20f94a0e0cb26eb6bc9f3803.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Clipboard.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_clipboard_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html">Clipboard</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html">   10</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html">ExposedReferenceTable</a> : IExposedPropertyTable</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#a2561ec9814d2058515969afe1d13c7ce">   12</a></span>&#160;            Dictionary&lt;PropertyName, Object&gt; m_ReferenceTable = <span class="keyword">new</span> Dictionary&lt;PropertyName, Object&gt;();</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#ad2e64415cf21389b6b15a14455991bd3">   13</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#ad2e64415cf21389b6b15a14455991bd3">SetReferenceValue</a>(PropertyName <span class="keywordtype">id</span>, <a class="code" href="namespace_object.html">Object</a> value)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                m_ReferenceTable[id] = value;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#a888c390d104a64b201f5704a2967af28">   18</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_object.html">Object</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#a888c390d104a64b201f5704a2967af28">GetReferenceValue</a>(PropertyName <span class="keywordtype">id</span>, out <span class="keywordtype">bool</span> idValid)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <a class="code" href="namespace_object.html">Object</a> reference;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                idValid = m_ReferenceTable.TryGetValue(<span class="keywordtype">id</span>, out reference);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keywordflow">return</span> reference;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#afc4232f286987950394f6f5b0bbffd2d">   25</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#afc4232f286987950394f6f5b0bbffd2d">ClearReferenceValue</a>(PropertyName <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                m_ReferenceTable.Remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#ae287d3766da099c00ce6b5d717804bd5">   30</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#ae287d3766da099c00ce6b5d717804bd5">Clear</a>()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                m_ReferenceTable.Clear();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html">   36</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html">ClipboardTrackEntry</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html#a4dc74777fbbd79f983f0932c72a8f284">   38</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html#a4dc74777fbbd79f983f0932c72a8f284">item</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html#ad7ebe18d8d947fac5d789e417e42185b">   39</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html#ad7ebe18d8d947fac5d789e417e42185b">parent</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a5843f4cc633ac1d4c001ea3f1d7ab300">   42</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">int</span> kListInitialSize = 10;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#ace63eaeaffe2771d7bf399d67f430e14">   44</a></span>&#160;        readonly List&lt;ItemsPerTrack&gt; m_ItemsData = <span class="keyword">new</span> List&lt;ItemsPerTrack&gt;(kListInitialSize);</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#aaf303f03e88eea0f5f419b5628105ea5">   45</a></span>&#160;        readonly List&lt;ClipboardTrackEntry&gt; m_trackData = <span class="keyword">new</span> List&lt;ClipboardTrackEntry&gt;(kListInitialSize);</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a512275db16a3d11f8b1b39da7d065dad">   46</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a512275db16a3d11f8b1b39da7d065dad">rootTimeline</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a3e95f3aa683c059f823957cb3dc3c028">   48</a></span>&#160;        <span class="keyword">public</span> readonly IExposedPropertyTable exposedPropertyTable = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html">ExposedReferenceTable</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#aeef7c0b99566b6ed64b0521405b7a90c">   50</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#aeef7c0b99566b6ed64b0521405b7a90c">Clipboard</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            rootTimeline = CreateTimeline();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            EditorApplication.playModeStateChanged  += OnPlayModeChanged;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a5914f261e51836cca04280323b999938">   57</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a5914f261e51836cca04280323b999938">CopyItems</a>(IEnumerable&lt;ITimelineItem&gt; items)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.DisableUndoGuard(<span class="keyword">true</span>))</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                var itemsByParent = items.ToLookup(i =&gt; i.parentTrack);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">foreach</span> (var itemsGroup <span class="keywordflow">in</span> itemsByParent)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    var parent = itemsGroup.Key;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    var itemsList = <span class="keyword">new</span> List&lt;ITimelineItem&gt;();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> itemsGroup)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        <span class="keywordflow">if</span> (item is <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                            itemsList.Add(CopyItem((ClipItem)item));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item is <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                            itemsList.Add(CopyItem((MarkerItem)item));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    m_ItemsData.Add(<span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html">ItemsPerTrack</a>(parent, itemsList));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a592dcf93b43f588112f25c7d715237b5">   78</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a592dcf93b43f588112f25c7d715237b5">CopyItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a> clipItem)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            var newClip = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a1fa5029776007597867809545f70440b">Clone</a>(clipItem.<a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html#ae39ea6838d3823722bf4935d63fe380e">clip</a>, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">state</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">editSequence</a>.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a>, exposedPropertyTable, rootTimeline);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>(newClip);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#aed8aa68b9458da4e32cfa39fef69e202">   84</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#aed8aa68b9458da4e32cfa39fef69e202">CopyItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a> markerItem)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            var markerObject = markerItem.<a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html#ab108c3326693a72e4327d50e9c3a13c5">marker</a> as <a class="code" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">if</span> (markerObject != null)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                var newMarker = Object.Instantiate(markerObject);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                newMarker.name = markerObject.name;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>((<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a>)newMarker);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#af1d82a969fa21e45bc6ec6ff98a3b5cb">   97</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#af1d82a969fa21e45bc6ec6ff98a3b5cb">CopyTracks</a>(IEnumerable&lt;TrackAsset&gt; tracks)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.DisableUndoGuard(<span class="keyword">true</span>))</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">foreach</span> (var track <span class="keywordflow">in</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_extensions.html">TrackExtensions</a>.FilterTracks(tracks))</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    var newTrack = track.Duplicate(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.clipboard.<a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a3e95f3aa683c059f823957cb3dc3c028">exposedPropertyTable</a>, rootTimeline);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    m_trackData.Add(<span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html">ClipboardTrackEntry</a> {item = newTrack, parent = track.<a class="code" href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html#ad7ebe18d8d947fac5d789e417e42185b">parent</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>});</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a0e42ba50d46d0cb8d26096c253674ffd">  109</a></span>&#160;        <span class="keyword">public</span> IEnumerable&lt;ClipboardTrackEntry&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a0e42ba50d46d0cb8d26096c253674ffd">GetTracks</a>()</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> m_trackData;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a8c136431808e29f2f6d8064e02280aad">  114</a></span>&#160;        <span class="keyword">public</span> IEnumerable&lt;ItemsPerTrack&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a8c136431808e29f2f6d8064e02280aad">GetCopiedItems</a>()</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">return</span> m_ItemsData;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a3dfe80217cbb34e3f02ff306f3e4402d">  119</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a3dfe80217cbb34e3f02ff306f3e4402d">Clear</a>()</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            m_ItemsData.Clear();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            m_trackData.Clear();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            rootTimeline = CreateTimeline();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            ((<a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html">ExposedReferenceTable</a>)exposedPropertyTable).Clear();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a0aae728ffc1b06093bff9d9446f710cc">  127</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a0aae728ffc1b06093bff9d9446f710cc">OnPlayModeChanged</a>(PlayModeStateChange state)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">if</span> (state == PlayModeStateChange.EnteredEditMode || state == PlayModeStateChange.EnteredPlayMode)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                Clear();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a2e05f7b052e17e91a07f322ab49c4914">  133</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a2e05f7b052e17e91a07f322ab49c4914">CreateTimeline</a>()</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            var timeline = ScriptableObject.CreateInstance&lt;<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&gt;();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            timeline.hideFlags |= HideFlags.DontSave;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            timeline.name = <span class="stringliteral">&quot;Clipboard&quot;</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">return</span> timeline;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clip_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clip_item.html">UnityEditor.Timeline.ClipItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_clip_item_8cs_source.html#l00006">ClipItem.cs:6</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry_html_a4dc74777fbbd79f983f0932c72a8f284"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html#a4dc74777fbbd79f983f0932c72a8f284">UnityEditor.Timeline.Clipboard.ClipboardTrackEntry.item</a></div><div class="ttdeci">TrackAsset item</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00038">Clipboard.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html_a3b3feaeaadd4bc298b30c5b835a91501"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">UnityEditor.Timeline.TimelineEditor.inspectedDirector</a></div><div class="ttdeci">static PlayableDirector inspectedDirector</div><div class="ttdoc">The PlayableDirector associated with the timeline currently being shown in the Timeline window...</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00017">TimelineEditor.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table_html_afc4232f286987950394f6f5b0bbffd2d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#afc4232f286987950394f6f5b0bbffd2d">UnityEditor.Timeline.Clipboard.ExposedReferenceTable.ClearReferenceValue</a></div><div class="ttdeci">void ClearReferenceValue(PropertyName id)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00025">Clipboard.cs:25</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a3e95f3aa683c059f823957cb3dc3c028"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a3e95f3aa683c059f823957cb3dc3c028">UnityEditor.Timeline.Clipboard.exposedPropertyTable</a></div><div class="ttdeci">readonly IExposedPropertyTable exposedPropertyTable</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00048">Clipboard.cs:48</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a3dfe80217cbb34e3f02ff306f3e4402d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a3dfe80217cbb34e3f02ff306f3e4402d">UnityEditor.Timeline.Clipboard.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00119">Clipboard.cs:119</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a592dcf93b43f588112f25c7d715237b5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a592dcf93b43f588112f25c7d715237b5">UnityEditor.Timeline.Clipboard.CopyItem</a></div><div class="ttdeci">ClipItem CopyItem(ClipItem clipItem)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00078">Clipboard.cs:78</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html">UnityEditor.Timeline.Clipboard.ClipboardTrackEntry</a></div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00036">Clipboard.cs:36</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a2e05f7b052e17e91a07f322ab49c4914"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a2e05f7b052e17e91a07f322ab49c4914">UnityEditor.Timeline.Clipboard.CreateTimeline</a></div><div class="ttdeci">static TimelineAsset CreateTimeline()</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00133">Clipboard.cs:133</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_aed8aa68b9458da4e32cfa39fef69e202"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#aed8aa68b9458da4e32cfa39fef69e202">UnityEditor.Timeline.Clipboard.CopyItem</a></div><div class="ttdeci">static MarkerItem CopyItem(MarkerItem markerItem)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00084">Clipboard.cs:84</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_marker_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_marker_item.html">UnityEditor.Timeline.MarkerItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_marker_item_8cs_source.html#l00007">MarkerItem.cs:7</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html">UnityEditor.Timeline.Clipboard</a></div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00008">Clipboard.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html_a1fa5029776007597867809545f70440b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a1fa5029776007597867809545f70440b">UnityEditor.Timeline.TimelineHelpers.Clone</a></div><div class="ttdeci">static TimelineClip Clone(TimelineClip clip, IExposedPropertyTable sourceTable, IExposedPropertyTable destTable, double time, PlayableAsset newOwner=null)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00114">TimelineHelpers.cs:114</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_extensions_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_extensions.html">UnityEditor.Timeline.TrackExtensions</a></div><div class="ttdef"><b>Definition:</b> <a href="_editor_2_extensions_2_track_extensions_8cs_source.html#l00011">TrackExtensions.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a350f3db7ab1c08de30a609f4c66c8775"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">UnityEditor.Timeline.TimelineWindow.state</a></div><div class="ttdeci">WindowState state</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00057">TimelineWindow.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table_html_a888c390d104a64b201f5704a2967af28"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#a888c390d104a64b201f5704a2967af28">UnityEditor.Timeline.Clipboard.ExposedReferenceTable.GetReferenceValue</a></div><div class="ttdeci">Object GetReferenceValue(PropertyName id, out bool idValid)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00018">Clipboard.cs:18</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac00fac3b6de42db10813e9ae7401808b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">UnityEditor.Timeline.TimelineWindow.instance</a></div><div class="ttdeci">static TimelineWindow instance</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00045">TimelineWindow.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table_html_ad2e64415cf21389b6b15a14455991bd3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#ad2e64415cf21389b6b15a14455991bd3">UnityEditor.Timeline.Clipboard.ExposedReferenceTable.SetReferenceValue</a></div><div class="ttdeci">void SetReferenceValue(PropertyName id, Object value)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00013">Clipboard.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_marker_item_html_ab108c3326693a72e4327d50e9c3a13c5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_marker_item.html#ab108c3326693a72e4327d50e9c3a13c5">UnityEditor.Timeline.MarkerItem.marker</a></div><div class="ttdeci">IMarker marker</div><div class="ttdef"><b>Definition:</b> <a href="_marker_item_8cs_source.html#l00012">MarkerItem.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a512275db16a3d11f8b1b39da7d065dad"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a512275db16a3d11f8b1b39da7d065dad">UnityEditor.Timeline.Clipboard.rootTimeline</a></div><div class="ttdeci">TimelineAsset rootTimeline</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00046">Clipboard.cs:46</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">UnityEngine.Timeline.TimelineUndo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00012">TimelineUndo.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table_html_ae287d3766da099c00ce6b5d717804bd5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html#ae287d3766da099c00ce6b5d717804bd5">UnityEditor.Timeline.Clipboard.ExposedReferenceTable.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00030">Clipboard.cs:30</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a0e42ba50d46d0cb8d26096c253674ffd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a0e42ba50d46d0cb8d26096c253674ffd">UnityEditor.Timeline.Clipboard.GetTracks</a></div><div class="ttdeci">IEnumerable&lt; ClipboardTrackEntry &gt; GetTracks()</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00109">Clipboard.cs:109</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a8c136431808e29f2f6d8064e02280aad"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a8c136431808e29f2f6d8064e02280aad">UnityEditor.Timeline.Clipboard.GetCopiedItems</a></div><div class="ttdeci">IEnumerable&lt; ItemsPerTrack &gt; GetCopiedItems()</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00114">Clipboard.cs:114</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">UnityEditor.Timeline.TimelineHelpers</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00014">TimelineHelpers.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a006919b74b71f9f6511d64b138264d4c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">UnityEditor.Timeline.WindowState.editSequence</a></div><div class="ttdeci">ISequenceState editSequence</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00090">WindowState.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a5914f261e51836cca04280323b999938"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a5914f261e51836cca04280323b999938">UnityEditor.Timeline.Clipboard.CopyItems</a></div><div class="ttdeci">void CopyItems(IEnumerable&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00057">Clipboard.cs:57</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_marker_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">UnityEngine.Timeline.IMarker</a></div><div class="ttdoc">Interface implemented by markers. </div><div class="ttdef"><b>Definition:</b> <a href="_i_marker_8cs_source.html#l00010">IMarker.cs:10</a></div></div>
+<div class="ttc" id="_t_m_pro___font_asset_creator_window_8cs_html_aef19bab18b9814edeef255c43e4f6bbc"><div class="ttname"><a href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a></div><div class="ttdeci">UnityEngine.Object Object</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00011">TMPro_FontAssetCreatorWindow.cs:11</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry_html_ad7ebe18d8d947fac5d789e417e42185b"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html#ad7ebe18d8d947fac5d789e417e42185b">UnityEditor.Timeline.Clipboard.ClipboardTrackEntry.parent</a></div><div class="ttdeci">TrackAsset parent</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00039">Clipboard.cs:39</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">UnityEditor.Timeline.TimelineEditor</a></div><div class="ttdoc">Information currently being edited in the Timeline Editor Window. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00012">TimelineEditor.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_af1d82a969fa21e45bc6ec6ff98a3b5cb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#af1d82a969fa21e45bc6ec6ff98a3b5cb">UnityEditor.Timeline.Clipboard.CopyTracks</a></div><div class="ttdeci">void CopyTracks(IEnumerable&lt; TrackAsset &gt; tracks)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00097">Clipboard.cs:97</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_aeef7c0b99566b6ed64b0521405b7a90c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#aeef7c0b99566b6ed64b0521405b7a90c">UnityEditor.Timeline.Clipboard.Clipboard</a></div><div class="ttdeci">Clipboard()</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00050">Clipboard.cs:50</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_html_a0aae728ffc1b06093bff9d9446f710cc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard.html#a0aae728ffc1b06093bff9d9446f710cc">UnityEditor.Timeline.Clipboard.OnPlayModeChanged</a></div><div class="ttdeci">void OnPlayModeChanged(PlayModeStateChange state)</div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00127">Clipboard.cs:127</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html">UnityEditor.Timeline.Clipboard.ExposedReferenceTable</a></div><div class="ttdef"><b>Definition:</b> <a href="_clipboard_8cs_source.html#l00010">Clipboard.cs:10</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a08ce693fcd3a6acc64b0b9bf36d1c29f"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">UnityEditor.Timeline.ISequenceState.director</a></div><div class="ttdeci">PlayableDirector director</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00010">ISequenceState.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clip_item_html_ae39ea6838d3823722bf4935d63fe380e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clip_item.html#ae39ea6838d3823722bf4935d63fe380e">UnityEditor.Timeline.ClipItem.clip</a></div><div class="ttdeci">TimelineClip clip</div><div class="ttdef"><b>Definition:</b> <a href="_clip_item_8cs_source.html#l00011">ClipItem.cs:11</a></div></div>
+<div class="ttc" id="namespace_object_html"><div class="ttname"><a href="namespace_object.html">Object</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_per_track_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_per_track.html">UnityEditor.Timeline.ItemsPerTrack</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_per_track_8cs_source.html#l00008">ItemsPerTrack.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.test-framework@1.1.14/UnityEditor.TestRunner/Api/CallbacksHolder.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_f5068e10fe4d08e1b67d6386819b0c8e.html">com.unity.test-framework@1.1.14</a></li><li class="navelem"><a class="el" href="dir_48747dc8cf5879bab87b9f4ea1110bb9.html">UnityEditor.TestRunner</a></li><li class="navelem"><a class="el" href="dir_17b531b086a1e9fd22210e462311bd52.html">Api</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CallbacksHolder.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_callbacks_holder_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.TestTools.<a class="code" href="namespace_test_runner.html">TestRunner</a>.Api</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">internal</span> <span class="keyword">class </span>CallbacksHolder : ScriptableSingleton&lt;CallbacksHolder&gt;, ICallbacksHolder</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">private</span> List&lt;CallbackWithPriority&gt; m_Callbacks = <span class="keyword">new</span> List&lt;CallbackWithPriority&gt;();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Add(ICallbacks callback, <span class="keywordtype">int</span> priority)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            m_Callbacks.Add(<span class="keyword">new</span> CallbackWithPriority(callback, priority));</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Remove(ICallbacks callback)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            m_Callbacks.RemoveAll(callbackWithPriority =&gt; callbackWithPriority.Callback == callback);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> ICallbacks[] GetAll()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> m_Callbacks.OrderByDescending(callback =&gt; callback.Priority).Select(callback =&gt; callback.Callback).ToArray();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Clear()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            m_Callbacks.Clear();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html">   30</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html">CallbackWithPriority</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#acece570af92d376d76a25452d027822b">   32</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks.html">ICallbacks</a> <a class="code" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#acece570af92d376d76a25452d027822b">Callback</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#a708f1a320e58ec4b1517a192921606ed">   33</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#a708f1a320e58ec4b1517a192921606ed">Priority</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#a5cdaec79485542a6fba83bde533dec09">   34</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#a5cdaec79485542a6fba83bde533dec09">CallbackWithPriority</a>(<a class="code" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks.html">ICallbacks</a> callback, <span class="keywordtype">int</span> priority)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                Callback = callback;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                Priority = priority;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// Sometimes - such as when we want to test the test framework itself - it&#39;s necessary to launch a test run from</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// inside a test. Because callbacks are registered globally, this can cause a lot of confusion (e.g. the in-test</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// run will emit UTP messages, utterly confusing UTR). In such circumstances the safest thing to do is to</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// temporarily suppress all registered callbacks for the duration of the in-test run. This method can be called</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// to set up a using() block which will suppress the callbacks for the scope.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span> IDisposable TemporarilySuppressCallbacks()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> Suppressor(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html">   51</a></span>&#160;        <span class="keyword">private</span> sealed <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html">Suppressor</a> : IDisposable</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a727f2224758ba0c1439df824f3379741">   53</a></span>&#160;            <span class="keyword">private</span> readonly CallbacksHolder <a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a727f2224758ba0c1439df824f3379741">_instance</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a2cc1931af2164b2ca8890a8b9781cd0d">   54</a></span>&#160;            <span class="keyword">private</span> readonly List&lt;CallbackWithPriority&gt; <a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a2cc1931af2164b2ca8890a8b9781cd0d">_suppressed</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a1aa7b49677953ab91305a87c1d1a4960">   56</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a1aa7b49677953ab91305a87c1d1a4960">Suppressor</a>(CallbacksHolder instance)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                _instance = instance;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                _suppressed = <span class="keyword">new</span> List&lt;CallbackWithPriority&gt;(instance.m_Callbacks);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                instance.m_Callbacks.Clear();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#aad6a279dc5d1fccc92d1bfbc9baa0065">   63</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#aad6a279dc5d1fccc92d1bfbc9baa0065">Dispose</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                _instance.m_Callbacks.AddRange(_suppressed);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor_html"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.Suppressor</a></div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00051">CallbacksHolder.cs:51</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor_html_a727f2224758ba0c1439df824f3379741"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a727f2224758ba0c1439df824f3379741">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.Suppressor._instance</a></div><div class="ttdeci">readonly CallbacksHolder _instance</div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00053">CallbacksHolder.cs:53</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor_html_a2cc1931af2164b2ca8890a8b9781cd0d"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a2cc1931af2164b2ca8890a8b9781cd0d">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.Suppressor._suppressed</a></div><div class="ttdeci">readonly List&lt; CallbackWithPriority &gt; _suppressed</div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00054">CallbacksHolder.cs:54</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor_html_a1aa7b49677953ab91305a87c1d1a4960"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#a1aa7b49677953ab91305a87c1d1a4960">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.Suppressor.Suppressor</a></div><div class="ttdeci">Suppressor(CallbacksHolder instance)</div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00056">CallbacksHolder.cs:56</a></div></div>
+<div class="ttc" id="namespace_test_runner_html"><div class="ttname"><a href="namespace_test_runner.html">TestRunner</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority_html"><div class="ttname"><a href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.CallbackWithPriority</a></div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00030">CallbacksHolder.cs:30</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor_html_aad6a279dc5d1fccc92d1bfbc9baa0065"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html#aad6a279dc5d1fccc92d1bfbc9baa0065">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.Suppressor.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00063">CallbacksHolder.cs:63</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority_html_a5cdaec79485542a6fba83bde533dec09"><div class="ttname"><a href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#a5cdaec79485542a6fba83bde533dec09">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.CallbackWithPriority.CallbackWithPriority</a></div><div class="ttdeci">CallbackWithPriority(ICallbacks callback, int priority)</div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00034">CallbacksHolder.cs:34</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority_html_acece570af92d376d76a25452d027822b"><div class="ttname"><a href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#acece570af92d376d76a25452d027822b">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.CallbackWithPriority.Callback</a></div><div class="ttdeci">ICallbacks Callback</div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00032">CallbacksHolder.cs:32</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority_html_a708f1a320e58ec4b1517a192921606ed"><div class="ttname"><a href="struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html#a708f1a320e58ec4b1517a192921606ed">UnityEditor.TestTools.TestRunner.Api.CallbacksHolder.CallbackWithPriority.Priority</a></div><div class="ttdeci">int Priority</div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_holder_8cs_source.html#l00033">CallbacksHolder.cs:33</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_html"><div class="ttname"><a href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks.html">UnityEditor.TestTools.TestRunner.Api.ICallbacks</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_callbacks_8cs_source.html#l00003">ICallbacks.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Evaluation/InfiniteRuntimeClip.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_37ed1f8af52f48f4a163c0af26b574a2.html">Evaluation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">InfiniteRuntimeClip.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_infinite_runtime_clip_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html">InfiniteRuntimeClip</a> : <a class="code" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a334e9b42695e569c5566b403424f11ac">   12</a></span>&#160;        <span class="keyword">private</span> Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a334e9b42695e569c5566b403424f11ac">m_Playable</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#af45d958f68a27fb7f1c908992081ec13">   13</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> readonly Int64 kIntervalEnd = <a class="code" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html">DiscreteTime</a>.<a class="code" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a8874a1b1dd33b35c24b49fe8543cde44">GetNearestTick</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.kMaxTimeValue);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a2f6e72ecd54a5d4bd899e62e32e06c5f">   15</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a2f6e72ecd54a5d4bd899e62e32e06c5f">InfiniteRuntimeClip</a>(Playable playable)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            m_Playable = playable;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> Int64 intervalStart</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#afe30a078bf4644d0775e7ac63a38df77">   21</a></span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> Int64 intervalEnd</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a03a906a93d20c84b9f0471f0976497de">   26</a></span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> kIntervalEnd; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> enable</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a3cde1d11fe41d49474ee843b3f0f0a52">   31</a></span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            set</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">if</span> (value)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    m_Playable.Play();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    m_Playable.Pause();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a0b9bda6a6f6e2de65eb3aa8ca8b3c803">   41</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a0b9bda6a6f6e2de65eb3aa8ca8b3c803">EvaluateAt</a>(<span class="keywordtype">double</span> localTime, FrameData frameData)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            m_Playable.SetTime(localTime);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip_html_a0b9bda6a6f6e2de65eb3aa8ca8b3c803"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a0b9bda6a6f6e2de65eb3aa8ca8b3c803">UnityEngine.Timeline.InfiniteRuntimeClip.EvaluateAt</a></div><div class="ttdeci">override void EvaluateAt(double localTime, FrameData frameData)</div><div class="ttdef"><b>Definition:</b> <a href="_infinite_runtime_clip_8cs_source.html#l00041">InfiniteRuntimeClip.cs:41</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html">UnityEngine.Timeline.InfiniteRuntimeClip</a></div><div class="ttdoc">Runtime clip customized for &#39;infinite&#39; tracks playables. Used for clips whose time needs to match the...</div><div class="ttdef"><b>Definition:</b> <a href="_infinite_runtime_clip_8cs_source.html#l00010">InfiniteRuntimeClip.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_runtime_element_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">UnityEngine.Timeline.RuntimeElement</a></div><div class="ttdef"><b>Definition:</b> <a href="_runtime_element_8cs_source.html#l00006">RuntimeElement.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip_html_a334e9b42695e569c5566b403424f11ac"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a334e9b42695e569c5566b403424f11ac">UnityEngine.Timeline.InfiniteRuntimeClip.m_Playable</a></div><div class="ttdeci">Playable m_Playable</div><div class="ttdef"><b>Definition:</b> <a href="_infinite_runtime_clip_8cs_source.html#l00012">InfiniteRuntimeClip.cs:12</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_discrete_time_html"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html">UnityEngine.Timeline.DiscreteTime</a></div><div class="ttdef"><b>Definition:</b> <a href="_discrete_time_8cs_source.html#l00005">DiscreteTime.cs:5</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_discrete_time_html_a8874a1b1dd33b35c24b49fe8543cde44"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a8874a1b1dd33b35c24b49fe8543cde44">UnityEngine.Timeline.DiscreteTime.GetNearestTick</a></div><div class="ttdeci">static Int64 GetNearestTick(double time)</div><div class="ttdef"><b>Definition:</b> <a href="_discrete_time_8cs_source.html#l00221">DiscreteTime.cs:221</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip_html_a2f6e72ecd54a5d4bd899e62e32e06c5f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a2f6e72ecd54a5d4bd899e62e32e06c5f">UnityEngine.Timeline.InfiniteRuntimeClip.InfiniteRuntimeClip</a></div><div class="ttdeci">InfiniteRuntimeClip(Playable playable)</div><div class="ttdef"><b>Definition:</b> <a href="_infinite_runtime_clip_8cs_source.html#l00015">InfiniteRuntimeClip.cs:15</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

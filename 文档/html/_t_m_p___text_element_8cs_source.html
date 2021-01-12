@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_TextElement.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a7d267b27539021f3422d98d206ea06f.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_TextElement.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___text_element_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespace_t_m_pro.html#a6da9ed2a6658be8e5fbfaede6653d4d4">    7</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_t_m_pro.html#a6da9ed2a6658be8e5fbfaede6653d4d4">TextElementType</a> : byte</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ab5662f47179bf1b81c575ecf80b24065a76a40e4f974fd895a0a2598c1cee28b4">Character</a>   = 0x1,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd">Sprite</a>      = 0x2,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html">   17</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html">TMP_TextElement</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#a3af771c660c4d3fc12f24c9ae4821384">   22</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_t_m_pro.html#a6da9ed2a6658be8e5fbfaede6653d4d4">TextElementType</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a3af771c660c4d3fc12f24c9ae4821384">elementType</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a456f6fb082e75ace57960fefcc76af5a">m_ElementType</a>; } }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#aec0a8edf2939d7a7cc7fb3064ded4636">   27</a></span>&#160;        <span class="keyword">public</span> uint <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#aec0a8edf2939d7a7cc7fb3064ded4636">unicode</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a6e6b887dacedba39afdd6595695cc6aa">m_Unicode</a>; } set { <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a6e6b887dacedba39afdd6595695cc6aa">m_Unicode</a> = value; } }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">   32</a></span>&#160;        <span class="keyword">public</span> Glyph <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a9d62d33c9d1ba7b9e60e073d19e30e55">m_Glyph</a>; } set { <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a9d62d33c9d1ba7b9e60e073d19e30e55">m_Glyph</a> = value; } }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#aca05b4261be961608c6c46656c419974">   37</a></span>&#160;        <span class="keyword">public</span> uint <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#aca05b4261be961608c6c46656c419974">glyphIndex</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a8cce98ad712eac0570f914b745d20d75">m_GlyphIndex</a>; } set { <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a8cce98ad712eac0570f914b745d20d75">m_GlyphIndex</a> = value; } }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#a555701c73d767af5770e029ef3b243b2">   42</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a555701c73d767af5770e029ef3b243b2">scale</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a0505505ac8cface28e8fbe73b208554a">m_Scale</a>; } set { <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a0505505ac8cface28e8fbe73b208554a">m_Scale</a> = value; } }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// =============================================</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// Private backing fields for public properties.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// =============================================</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#a456f6fb082e75ace57960fefcc76af5a">   49</a></span>&#160;        <span class="keyword">protected</span> <a class="code" href="namespace_t_m_pro.html#a6da9ed2a6658be8e5fbfaede6653d4d4">TextElementType</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a456f6fb082e75ace57960fefcc76af5a">m_ElementType</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#a6e6b887dacedba39afdd6595695cc6aa">   52</a></span>&#160;        <span class="keyword">private</span> uint <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a6e6b887dacedba39afdd6595695cc6aa">m_Unicode</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#a9d62d33c9d1ba7b9e60e073d19e30e55">   54</a></span>&#160;        <span class="keyword">private</span> Glyph <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a9d62d33c9d1ba7b9e60e073d19e30e55">m_Glyph</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#a8cce98ad712eac0570f914b745d20d75">   57</a></span>&#160;        <span class="keyword">private</span> uint <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a8cce98ad712eac0570f914b745d20d75">m_GlyphIndex</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_element.html#a0505505ac8cface28e8fbe73b208554a">   60</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a0505505ac8cface28e8fbe73b208554a">m_Scale</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_aca05b4261be961608c6c46656c419974"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#aca05b4261be961608c6c46656c419974">TMPro.TMP_TextElement.glyphIndex</a></div><div class="ttdeci">uint glyphIndex</div><div class="ttdoc">The index of the glyph used by this text element. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00037">TMP_TextElement.cs:37</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a0505505ac8cface28e8fbe73b208554a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a0505505ac8cface28e8fbe73b208554a">TMPro.TMP_TextElement.m_Scale</a></div><div class="ttdeci">float m_Scale</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00060">TMP_TextElement.cs:60</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a6da9ed2a6658be8e5fbfaede6653d4d4"><div class="ttname"><a href="namespace_t_m_pro.html#a6da9ed2a6658be8e5fbfaede6653d4d4">TMPro.TextElementType</a></div><div class="ttdeci">TextElementType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00007">TMP_TextElement.cs:7</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a8cce98ad712eac0570f914b745d20d75"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a8cce98ad712eac0570f914b745d20d75">TMPro.TMP_TextElement.m_GlyphIndex</a></div><div class="ttdeci">uint m_GlyphIndex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00057">TMP_TextElement.cs:57</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd"><div class="ttname"><a href="namespace_t_m_pro.html#ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd">TMPro.Sprite</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_aec0a8edf2939d7a7cc7fb3064ded4636"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#aec0a8edf2939d7a7cc7fb3064ded4636">TMPro.TMP_TextElement.unicode</a></div><div class="ttdeci">uint unicode</div><div class="ttdoc">The unicode value (code point) of the character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00027">TMP_TextElement.cs:27</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a555701c73d767af5770e029ef3b243b2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a555701c73d767af5770e029ef3b243b2">TMPro.TMP_TextElement.scale</a></div><div class="ttdeci">float scale</div><div class="ttdoc">The relative scale of the character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00042">TMP_TextElement.cs:42</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a3af771c660c4d3fc12f24c9ae4821384"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a3af771c660c4d3fc12f24c9ae4821384">TMPro.TMP_TextElement.elementType</a></div><div class="ttdeci">TextElementType elementType</div><div class="ttdoc">The type of text element which can be a character or sprite. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00022">TMP_TextElement.cs:22</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ab5662f47179bf1b81c575ecf80b24065a76a40e4f974fd895a0a2598c1cee28b4"><div class="ttname"><a href="namespace_t_m_pro.html#ab5662f47179bf1b81c575ecf80b24065a76a40e4f974fd895a0a2598c1cee28b4">TMPro.Character</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html">TMPro.TMP_TextElement</a></div><div class="ttdoc">Base class for all text elements like Character and SpriteCharacter. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00017">TMP_TextElement.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a456f6fb082e75ace57960fefcc76af5a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a456f6fb082e75ace57960fefcc76af5a">TMPro.TMP_TextElement.m_ElementType</a></div><div class="ttdeci">TextElementType m_ElementType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00049">TMP_TextElement.cs:49</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a9d62d33c9d1ba7b9e60e073d19e30e55"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a9d62d33c9d1ba7b9e60e073d19e30e55">TMPro.TMP_TextElement.m_Glyph</a></div><div class="ttdeci">Glyph m_Glyph</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00054">TMP_TextElement.cs:54</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_ad5dc79c42484df5931180899e38c397c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">TMPro.TMP_TextElement.glyph</a></div><div class="ttdeci">Glyph glyph</div><div class="ttdoc">The glyph used by this text element. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00032">TMP_TextElement.cs:32</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a6e6b887dacedba39afdd6595695cc6aa"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a6e6b887dacedba39afdd6595695cc6aa">TMPro.TMP_TextElement.m_Unicode</a></div><div class="ttdeci">uint m_Unicode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00052">TMP_TextElement.cs:52</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:33 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_TextParsingUtilities.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a7d267b27539021f3422d98d206ea06f.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_TextParsingUtilities.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___text_parsing_utilities_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html">    7</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html">TMP_TextParsingUtilities</a> </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a3ccf1c1cba0291696c7e98d1c81b8175">    9</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> readonly <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html">TMP_TextParsingUtilities</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a3ccf1c1cba0291696c7e98d1c81b8175">s_Instance</a> = <span class="keyword">new</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ac32c8d26d32c3e5b0f37dff280d84077">TMP_TextParsingUtilities</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ac32c8d26d32c3e5b0f37dff280d84077">   14</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ac32c8d26d32c3e5b0f37dff280d84077">TMP_TextParsingUtilities</a>() { }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html">TMP_TextParsingUtilities</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a85f6b261d0ed9648cde265abc08f2221">instance</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a85f6b261d0ed9648cde265abc08f2221">   21</a></span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a3ccf1c1cba0291696c7e98d1c81b8175">s_Instance</a>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#accd46ae607b754312d2d4c808099ded0">   29</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> uint <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#accd46ae607b754312d2d4c808099ded0">GetHashCode</a>(<span class="keywordtype">string</span> s)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            uint hashCode = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                hashCode = ((hashCode &lt;&lt; 5) + hashCode) ^ <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a57e8e32bda8815e697db41cb4820d56a">ToUpperASCIIFast</a>(s[i]);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a29a684b2b0692679420558b383c5a3d5">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a29a684b2b0692679420558b383c5a3d5">GetHashCodeCaseSensitive</a>(<span class="keywordtype">string</span> s)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">int</span> hashCode = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; s.Length; i++)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                hashCode = ((hashCode &lt;&lt; 5) + hashCode) ^ s[i];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#af106b91f4790b8437da2deb726e633c0">   53</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#af106b91f4790b8437da2deb726e633c0">k_LookupStringL</a> = <span class="stringliteral">&quot;-------------------------------- !-#$%&amp;-()*+,-./0123456789:;&lt;=&gt;?@abcdefghijklmnopqrstuvwxyz[-]^_`abcdefghijklmnopqrstuvwxyz{|}~-&quot;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a31c742915db4ca4e7a7594c950fa01ee">   58</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a31c742915db4ca4e7a7594c950fa01ee">k_LookupStringU</a> = <span class="stringliteral">&quot;-------------------------------- !-#$%&amp;-()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[-]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~-&quot;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//[MethodImpl(MethodImplOptions.AggressiveInlining)]</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ae8727745fb67672cd72e7cb3e2cd12f8">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ae8727745fb67672cd72e7cb3e2cd12f8">ToLowerASCIIFast</a>(<span class="keywordtype">char</span> c)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (c &gt; k_LookupStringL.Length - 1)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> k_LookupStringL[c];</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//[MethodImpl(MethodImplOptions.AggressiveInlining)]</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a57e8e32bda8815e697db41cb4820d56a">   78</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a57e8e32bda8815e697db41cb4820d56a">ToUpperASCIIFast</a>(<span class="keywordtype">char</span> c)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">if</span> (c &gt; k_LookupStringU.Length - 1)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> k_LookupStringU[c];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">//[MethodImpl(MethodImplOptions.AggressiveInlining)]</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ab51375da32109d357129a13219174803">   91</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> uint <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ab51375da32109d357129a13219174803">ToUpperASCIIFast</a>(uint c)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span> (c &gt; k_LookupStringU.Length - 1)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">return</span> k_LookupStringU[(int)c];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//[MethodImpl(MethodImplOptions.AggressiveInlining)]</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#aaff8cac98f068d2b194b6498f1671ef3">  104</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> uint <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#aaff8cac98f068d2b194b6498f1671ef3">ToLowerASCIIFast</a>(uint c)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (c &gt; k_LookupStringL.Length - 1)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> k_LookupStringL[(int)c];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">//[MethodImpl(MethodImplOptions.AggressiveInlining)]</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#aadd2ccbd621a23db1cd801e9c33e9717">  119</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#aadd2ccbd621a23db1cd801e9c33e9717">IsHighSurrogate</a>(uint c)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span> c &gt; 0xD800 &amp;&amp; c &lt; 0xDBFF;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">//[MethodImpl(MethodImplOptions.AggressiveInlining)]</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a6c8eabbdeffe86bbefdcf0ec50d0c5ab">  130</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a6c8eabbdeffe86bbefdcf0ec50d0c5ab">IsLowSurrogate</a>(uint c)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">return</span> c &gt; 0xDC00 &amp;&amp; c &lt; 0xDFFF;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_ae8727745fb67672cd72e7cb3e2cd12f8"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ae8727745fb67672cd72e7cb3e2cd12f8">TMPro.TMP_TextParsingUtilities.ToLowerASCIIFast</a></div><div class="ttdeci">static char ToLowerASCIIFast(char c)</div><div class="ttdoc">Get lowercase version of this ASCII character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00065">TMP_TextParsingUtilities.cs:65</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_a57e8e32bda8815e697db41cb4820d56a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a57e8e32bda8815e697db41cb4820d56a">TMPro.TMP_TextParsingUtilities.ToUpperASCIIFast</a></div><div class="ttdeci">static char ToUpperASCIIFast(char c)</div><div class="ttdoc">Get uppercase version of this ASCII character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00078">TMP_TextParsingUtilities.cs:78</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_a85f6b261d0ed9648cde265abc08f2221"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a85f6b261d0ed9648cde265abc08f2221">TMPro.TMP_TextParsingUtilities.instance</a></div><div class="ttdeci">static TMP_TextParsingUtilities instance</div><div class="ttdoc">Get a singleton instance of the TextModuleUtilities. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00021">TMP_TextParsingUtilities.cs:21</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_ac32c8d26d32c3e5b0f37dff280d84077"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ac32c8d26d32c3e5b0f37dff280d84077">TMPro.TMP_TextParsingUtilities.TMP_TextParsingUtilities</a></div><div class="ttdeci">static TMP_TextParsingUtilities()</div><div class="ttdoc">Default constructor </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00014">TMP_TextParsingUtilities.cs:14</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_af106b91f4790b8437da2deb726e633c0"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#af106b91f4790b8437da2deb726e633c0">TMPro.TMP_TextParsingUtilities.k_LookupStringL</a></div><div class="ttdeci">const string k_LookupStringL</div><div class="ttdoc">Table used to convert character to lowercase. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00053">TMP_TextParsingUtilities.cs:53</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_a31c742915db4ca4e7a7594c950fa01ee"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a31c742915db4ca4e7a7594c950fa01ee">TMPro.TMP_TextParsingUtilities.k_LookupStringU</a></div><div class="ttdeci">const string k_LookupStringU</div><div class="ttdoc">Table used to convert character to uppercase. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00058">TMP_TextParsingUtilities.cs:58</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_ab51375da32109d357129a13219174803"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#ab51375da32109d357129a13219174803">TMPro.TMP_TextParsingUtilities.ToUpperASCIIFast</a></div><div class="ttdeci">static uint ToUpperASCIIFast(uint c)</div><div class="ttdoc">Get uppercase version of this ASCII character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00091">TMP_TextParsingUtilities.cs:91</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_accd46ae607b754312d2d4c808099ded0"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#accd46ae607b754312d2d4c808099ded0">TMPro.TMP_TextParsingUtilities.GetHashCode</a></div><div class="ttdeci">static uint GetHashCode(string s)</div><div class="ttdoc">Function returning the hashcode value of a given string. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00029">TMP_TextParsingUtilities.cs:29</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html">TMPro.TMP_TextParsingUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00007">TMP_TextParsingUtilities.cs:7</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_a3ccf1c1cba0291696c7e98d1c81b8175"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a3ccf1c1cba0291696c7e98d1c81b8175">TMPro.TMP_TextParsingUtilities.s_Instance</a></div><div class="ttdeci">static readonly TMP_TextParsingUtilities s_Instance</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00009">TMP_TextParsingUtilities.cs:9</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_aadd2ccbd621a23db1cd801e9c33e9717"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#aadd2ccbd621a23db1cd801e9c33e9717">TMPro.TMP_TextParsingUtilities.IsHighSurrogate</a></div><div class="ttdeci">static bool IsHighSurrogate(uint c)</div><div class="ttdoc">Check if Unicode is High Surrogate </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00119">TMP_TextParsingUtilities.cs:119</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_a6c8eabbdeffe86bbefdcf0ec50d0c5ab"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a6c8eabbdeffe86bbefdcf0ec50d0c5ab">TMPro.TMP_TextParsingUtilities.IsLowSurrogate</a></div><div class="ttdeci">static bool IsLowSurrogate(uint c)</div><div class="ttdoc">Check if Unicode is Low Surrogate </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00130">TMP_TextParsingUtilities.cs:130</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_aaff8cac98f068d2b194b6498f1671ef3"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#aaff8cac98f068d2b194b6498f1671ef3">TMPro.TMP_TextParsingUtilities.ToLowerASCIIFast</a></div><div class="ttdeci">static uint ToLowerASCIIFast(uint c)</div><div class="ttdoc">Get lowercase version of this ASCII character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00104">TMP_TextParsingUtilities.cs:104</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_parsing_utilities_html_a29a684b2b0692679420558b383c5a3d5"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a29a684b2b0692679420558b383c5a3d5">TMPro.TMP_TextParsingUtilities.GetHashCodeCaseSensitive</a></div><div class="ttdeci">static int GetHashCodeCaseSensitive(string s)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_parsing_utilities_8cs_source.html#l00039">TMP_TextParsingUtilities.cs:39</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:33 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

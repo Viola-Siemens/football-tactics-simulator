@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Window/Modes/TimelineMode.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_08b42967959711a942dabf507b118564.html">Window</a></li><li class="navelem"><a class="el" href="dir_9caa343bd12cfa3ae28eab91c251b0e1.html">Modes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineMode.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_mode_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">    6</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81ab9f5c797ebbf55adccdd8539a65a0241">Disabled</a>,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81a7acdf85c69cc3c5305456a293524386e">Hidden</a>,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2a00d23a76e43b46dae9ec7aa9dcbebb32">Enabled</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html">   13</a></span>&#160;    <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html">TimelineMode</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html">   15</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html">HeaderState</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#aad168c2ff63a1aaddcc1c157c2aa7a28">   17</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#aad168c2ff63a1aaddcc1c157c2aa7a28">breadCrumb</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#ac71818c9d116bdea8db301d0789c4ec5">   18</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#ac71818c9d116bdea8db301d0789c4ec5">sequenceSelector</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#ab32e3f8c3827fb91faad9648f6460195">   19</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#ab32e3f8c3827fb91faad9648f6460195">options</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html">TrackOptionsState</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html#a90a068ca9f1940594bac85ad9af7f50c">   24</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html#a90a068ca9f1940594bac85ad9af7f50c">newButton</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html#a14367ad0c29c44b0037ab3cde31e12a3">   25</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html#a14367ad0c29c44b0037ab3cde31e12a3">editAsAssetButton</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a517a84a1e248ae77d927e59bd62eef77">   28</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html">HeaderState</a> headerState { <span class="keyword">get</span>; <span class="keyword">protected</span> set; }</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a87c94b72f5070e8f133f5a25f2be8944">   29</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html">TrackOptionsState</a> trackOptionsState { <span class="keyword">get</span>; <span class="keyword">protected</span> set; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ab4e096916047a8970c8b8ffaacd03440">   30</a></span>&#160;        <span class="keyword">public</span> TimelineModes mode { <span class="keyword">get</span>; <span class="keyword">protected</span> set; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keywordtype">bool</span> ShouldShowPlayRange(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keywordtype">bool</span> ShouldShowTimeCursor(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a4377506541c811569e243ff9747fe38a">   35</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a4377506541c811569e243ff9747fe38a">ShouldShowTrackBindings</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> ShouldShowTimeCursor(state);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a9b588ac9f73eb8079e88e753c0f69b3c">   40</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a9b588ac9f73eb8079e88e753c0f69b3c">ShouldShowTimeArea</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> !state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab59853e41198216c7deb7b3f5c0b9af0">IsEditingAnEmptyTimeline</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">public</span> <span class="keyword">abstract</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> TrackState(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span> <span class="keyword">abstract</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> ToolbarState(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ac1f9db7aadb6c59ca7e8d835195215e7">   48</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ac1f9db7aadb6c59ca7e8d835195215e7">PreviewState</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> Application.isPlaying ? <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a>.Disabled : <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a>.Enabled;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ad82ce2a8ec3c0353c3db3a3bfba5f2ab">   53</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ad82ce2a8ec3c0353c3db3a3bfba5f2ab">EditModeButtonsState</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">TimelineModeGUIState</a>.Enabled;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    [Flags]</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">internal</span> <span class="keyword">enum</span> TimelineModes</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        None = 0,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        Active = 1,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        ReadOnly = 2,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        Inactive = 4,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        Disabled = 8,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        AssetEdition = 16,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        All = Active | ReadOnly | Inactive | Disabled,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        Default = Active | AssetEdition</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_mode_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html">UnityEditor.Timeline.TimelineMode</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00013">TimelineMode.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a49306fce0d7620373e7bc7e6ee7b8ae2"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2">UnityEditor.Timeline.TimelineModeGUIState</a></div><div class="ttdeci">TimelineModeGUIState</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00006">TimelineMode.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ab59853e41198216c7deb7b3f5c0b9af0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab59853e41198216c7deb7b3f5c0b9af0">UnityEditor.Timeline.WindowState.IsEditingAnEmptyTimeline</a></div><div class="ttdeci">bool IsEditingAnEmptyTimeline()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00766">WindowState.cs:766</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a4cdf4501fc4cebf7e77641e22ed40b81a7acdf85c69cc3c5305456a293524386e"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81a7acdf85c69cc3c5305456a293524386e">UnityEditor.Timeline.Hidden</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html">UnityEditor.Timeline.TimelineMode.HeaderState</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00015">TimelineMode.cs:15</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_mode_html_ad82ce2a8ec3c0353c3db3a3bfba5f2ab"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ad82ce2a8ec3c0353c3db3a3bfba5f2ab">UnityEditor.Timeline.TimelineMode.EditModeButtonsState</a></div><div class="ttdeci">virtual TimelineModeGUIState EditModeButtonsState(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00053">TimelineMode.cs:53</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state_html_a90a068ca9f1940594bac85ad9af7f50c"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html#a90a068ca9f1940594bac85ad9af7f50c">UnityEditor.Timeline.TimelineMode.TrackOptionsState.newButton</a></div><div class="ttdeci">TimelineModeGUIState newButton</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00024">TimelineMode.cs:24</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_mode_html_a9b588ac9f73eb8079e88e753c0f69b3c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a9b588ac9f73eb8079e88e753c0f69b3c">UnityEditor.Timeline.TimelineMode.ShouldShowTimeArea</a></div><div class="ttdeci">virtual bool ShouldShowTimeArea(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00040">TimelineMode.cs:40</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_mode_html_a4377506541c811569e243ff9747fe38a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a4377506541c811569e243ff9747fe38a">UnityEditor.Timeline.TimelineMode.ShouldShowTrackBindings</a></div><div class="ttdeci">virtual bool ShouldShowTrackBindings(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00035">TimelineMode.cs:35</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state_html_a14367ad0c29c44b0037ab3cde31e12a3"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html#a14367ad0c29c44b0037ab3cde31e12a3">UnityEditor.Timeline.TimelineMode.TrackOptionsState.editAsAssetButton</a></div><div class="ttdeci">TimelineModeGUIState editAsAssetButton</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00025">TimelineMode.cs:25</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html">UnityEditor.Timeline.TimelineMode.TrackOptionsState</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00022">TimelineMode.cs:22</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a4cdf4501fc4cebf7e77641e22ed40b81ab9f5c797ebbf55adccdd8539a65a0241"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81ab9f5c797ebbf55adccdd8539a65a0241">UnityEditor.Timeline.Disabled</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a49306fce0d7620373e7bc7e6ee7b8ae2a00d23a76e43b46dae9ec7aa9dcbebb32"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a49306fce0d7620373e7bc7e6ee7b8ae2a00d23a76e43b46dae9ec7aa9dcbebb32">UnityEditor.Timeline.Enabled</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_mode_html_ac1f9db7aadb6c59ca7e8d835195215e7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ac1f9db7aadb6c59ca7e8d835195215e7">UnityEditor.Timeline.TimelineMode.PreviewState</a></div><div class="ttdeci">virtual TimelineModeGUIState PreviewState(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00048">TimelineMode.cs:48</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state_html_aad168c2ff63a1aaddcc1c157c2aa7a28"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#aad168c2ff63a1aaddcc1c157c2aa7a28">UnityEditor.Timeline.TimelineMode.HeaderState.breadCrumb</a></div><div class="ttdeci">TimelineModeGUIState breadCrumb</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00017">TimelineMode.cs:17</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state_html_ab32e3f8c3827fb91faad9648f6460195"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#ab32e3f8c3827fb91faad9648f6460195">UnityEditor.Timeline.TimelineMode.HeaderState.options</a></div><div class="ttdeci">TimelineModeGUIState options</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00019">TimelineMode.cs:19</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state_html_ac71818c9d116bdea8db301d0789c4ec5"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_header_state.html#ac71818c9d116bdea8db301d0789c4ec5">UnityEditor.Timeline.TimelineMode.HeaderState.sequenceSelector</a></div><div class="ttdeci">TimelineModeGUIState sequenceSelector</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00018">TimelineMode.cs:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

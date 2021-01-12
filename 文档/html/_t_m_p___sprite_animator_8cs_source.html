@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_SpriteAnimator.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a7d267b27539021f3422d98d206ea06f.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_SpriteAnimator.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___sprite_animator_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [DisallowMultipleComponent]</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html">TMP_SpriteAnimator</a> : MonoBehaviour</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ab39df19fa74ea4792b0607f87f6d3fe9">   11</a></span>&#160;        <span class="keyword">private</span> Dictionary&lt;int, bool&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ab39df19fa74ea4792b0607f87f6d3fe9">m_animations</a> = <span class="keyword">new</span> Dictionary&lt;int, bool&gt;(16);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">//private bool isPlaying = false;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#afd4390e99668bf2cdad6d61a10a18c6a">   14</a></span>&#160;        <span class="keyword">private</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___text.html">TMP_Text</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#afd4390e99668bf2cdad6d61a10a18c6a">m_TextComponent</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ac711a8704f406ecee3bdcf9a0039487b">   17</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ac711a8704f406ecee3bdcf9a0039487b">Awake</a>()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            m_TextComponent = GetComponent&lt;TMP_Text&gt;();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a21803be85c20eb5800b7b91bba00ef6f">   25</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a21803be85c20eb5800b7b91bba00ef6f">OnEnable</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="comment">//m_playAnimations = true;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a112ea082d27be707753e4b57c0b4213b">   31</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a112ea082d27be707753e4b57c0b4213b">OnDisable</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">//m_playAnimations = false;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ade0c942998e861854cd24c280c679320">   37</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ade0c942998e861854cd24c280c679320">StopAllAnimations</a>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            StopAllCoroutines();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            m_animations.Clear();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#aaea8d585b20ea1d6f9d96c60033dc1a6">   45</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#aaea8d585b20ea1d6f9d96c60033dc1a6">DoSpriteAnimation</a>(<span class="keywordtype">int</span> currentCharacter, <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, <span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end, <span class="keywordtype">int</span> framerate)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="comment">// Need to add tracking of coroutines that have been lunched for this text object.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (!m_animations.TryGetValue(currentCharacter, out <span class="keywordtype">bool</span> isPlaying))</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                StartCoroutine(<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a67cc7dd827db153552560727532c72cc">DoSpriteAnimationInternal</a>(currentCharacter, spriteAsset, start, end, framerate));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                m_animations.Add(currentCharacter, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a67cc7dd827db153552560727532c72cc">   56</a></span>&#160;        IEnumerator <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a67cc7dd827db153552560727532c72cc">DoSpriteAnimationInternal</a>(<span class="keywordtype">int</span> currentCharacter, <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, <span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end, <span class="keywordtype">int</span> framerate)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (m_TextComponent == null) yield <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">// We yield otherwise this gets called before the sprite has rendered.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            yield <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">int</span> currentFrame = start;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// Make sure end frame does not exceed the number of sprites in the sprite asset.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (end &gt; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6baf2b46d5fe0a56c994ec428bb4164e">spriteCharacterTable</a>.Count)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                end = spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6baf2b46d5fe0a56c994ec428bb4164e">spriteCharacterTable</a>.Count - 1;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">// Get a reference to the geometry of the current character.</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="struct_t_m_pro_1_1_t_m_p___character_info.html">TMP_CharacterInfo</a> charInfo = m_TextComponent.<a class="code" href="class_t_m_pro_1_1_t_m_p___text.html#a4b2d23d558ff8f9aecf5814f046bcef6">textInfo</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_info.html#ae539414faa4f544ff7a08c2ef5c36d25">characterInfo</a>[currentCharacter];</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordtype">int</span> materialIndex = charInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___character_info.html#aec65f6b555fa50bc7b2a5510dd488ef8">materialReferenceIndex</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">int</span> vertexIndex = charInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___character_info.html#a92354221459bdb806b3ebbb17bf066da">vertexIndex</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="struct_t_m_pro_1_1_t_m_p___mesh_info.html">TMP_MeshInfo</a> meshInfo = m_TextComponent.<a class="code" href="class_t_m_pro_1_1_t_m_p___text.html#a4b2d23d558ff8f9aecf5814f046bcef6">textInfo</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_info.html#a944c68132d16336aee460c0d99e78442">meshInfo</a>[materialIndex];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">float</span> elapsedTime = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">float</span> targetTime = 1f / Mathf.Abs(framerate);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">if</span> (elapsedTime &gt; targetTime)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    elapsedTime = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="comment">// Get a reference to the current sprite</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_character.html">TMP_SpriteCharacter</a> spriteCharacter = spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6baf2b46d5fe0a56c994ec428bb4164e">spriteCharacterTable</a>[currentFrame];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="comment">// Update the vertices for the new sprite</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    Vector3[] vertices = meshInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7f31f8c5b18a9d84129a7f2cb5981728">vertices</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    Vector2 origin = <span class="keyword">new</span> Vector2(charInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___character_info.html#adb1943c1989c4178129a3763af82ef09">origin</a>, charInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___character_info.html#aa4e9ea324c757e38321a2fe59c8c1287">baseLine</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordtype">float</span> spriteScale = charInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___character_info.html#ade9e06ebc56c1d6bd5650241ca37814f">fontAsset</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a>.ascentLine / spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.metrics.height * spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a555701c73d767af5770e029ef3b243b2">scale</a> * charInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___character_info.html#aa6eae7bb3d16d8601eb1f5d02e9775a5">scale</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    Vector3 bl = <span class="keyword">new</span> Vector3(origin.x + spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.metrics.horizontalBearingX * spriteScale, origin.y + (spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.metrics.horizontalBearingY - spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.metrics.height) * spriteScale);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    Vector3 tl = <span class="keyword">new</span> Vector3(bl.x, origin.y + spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.metrics.horizontalBearingY * spriteScale);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    Vector3 tr = <span class="keyword">new</span> Vector3(origin.x + (spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.metrics.horizontalBearingX + spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.metrics.width) * spriteScale, tl.y);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    Vector3 br = <span class="keyword">new</span> Vector3(tr.x, bl.y);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    vertices[vertexIndex + 0] = bl;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    vertices[vertexIndex + 1] = tl;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    vertices[vertexIndex + 2] = tr;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    vertices[vertexIndex + 3] = br;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="comment">// Update the UV to point to the new sprite</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    Vector2[] uvs0 = meshInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#aa6816d4ade18d6066c2c0b17d1fe5987">uvs0</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    Vector2 uv0 = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.glyphRect.x / spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">spriteSheet</a>.width, (<span class="keywordtype">float</span>)spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.glyphRect.y / spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">spriteSheet</a>.height);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    Vector2 uv1 = <span class="keyword">new</span> Vector2(uv0.x, (<span class="keywordtype">float</span>)(spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.glyphRect.y + spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.glyphRect.height) / spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">spriteSheet</a>.height);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    Vector2 uv2 = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)(spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.glyphRect.x + spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">glyph</a>.glyphRect.width) / spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">spriteSheet</a>.width, uv1.y);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    Vector2 uv3 = <span class="keyword">new</span> Vector2(uv2.x, uv0.y);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    uvs0[vertexIndex + 0] = uv0;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    uvs0[vertexIndex + 1] = uv1;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    uvs0[vertexIndex + 2] = uv2;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    uvs0[vertexIndex + 3] = uv3;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    <span class="comment">// Update the modified vertex attributes</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    meshInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#a2b53d43187ab86ccefe3f5dd6babcfef">mesh</a>.vertices = vertices;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    meshInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#a2b53d43187ab86ccefe3f5dd6babcfef">mesh</a>.uv = uvs0;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    m_TextComponent.<a class="code" href="class_t_m_pro_1_1_t_m_p___text.html#a555f26eef9b5a5e51d27217c4c8adb8a">UpdateGeometry</a>(meshInfo.<a class="code" href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#a2b53d43187ab86ccefe3f5dd6babcfef">mesh</a>, materialIndex);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    <span class="keywordflow">if</span> (framerate &gt; 0)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        <span class="keywordflow">if</span> (currentFrame &lt; end)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                            currentFrame += 1;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                            currentFrame = start;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                        <span class="keywordflow">if</span> (currentFrame &gt; start)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                            currentFrame -= 1;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                            currentFrame = end;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                elapsedTime += Time.deltaTime;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                yield <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___character_info_html_ade9e06ebc56c1d6bd5650241ca37814f"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___character_info.html#ade9e06ebc56c1d6bd5650241ca37814f">TMPro.TMP_CharacterInfo.fontAsset</a></div><div class="ttdeci">TMP_FontAsset fontAsset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_info_8cs_source.html#l00032">TMP_CharacterInfo.cs:32</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_html_a555f26eef9b5a5e51d27217c4c8adb8a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text.html#a555f26eef9b5a5e51d27217c4c8adb8a">TMPro.TMP_Text.UpdateGeometry</a></div><div class="ttdeci">virtual void UpdateGeometry(Mesh mesh, int index)</div><div class="ttdoc">Function to force the regeneration of the text object. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l01612">TMP_Text.cs:1612</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___mesh_info_html_aa6816d4ade18d6066c2c0b17d1fe5987"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#aa6816d4ade18d6066c2c0b17d1fe5987">TMPro.TMP_MeshInfo.uvs0</a></div><div class="ttdeci">Vector2[] uvs0</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___mesh_info_8cs_source.html#l00029">TMP_MeshInfo.cs:29</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___character_info_html_aec65f6b555fa50bc7b2a5510dd488ef8"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___character_info.html#aec65f6b555fa50bc7b2a5510dd488ef8">TMPro.TMP_CharacterInfo.materialReferenceIndex</a></div><div class="ttdeci">int materialReferenceIndex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_info_8cs_source.html#l00036">TMP_CharacterInfo.cs:36</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMPro.TMP_SpriteAsset</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00010">TMP_SpriteAsset.cs:10</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_info_html_ae539414faa4f544ff7a08c2ef5c36d25"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_info.html#ae539414faa4f544ff7a08c2ef5c36d25">TMPro.TMP_TextInfo.characterInfo</a></div><div class="ttdeci">TMP_CharacterInfo[] characterInfo</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_info_8cs_source.html#l00030">TMP_TextInfo.cs:30</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a42eafee651621d6645ea8c424faa2f1a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">TMPro.TMP_FontAsset.faceInfo</a></div><div class="ttdeci">FaceInfo faceInfo</div><div class="ttdoc">Information about the font face. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00085">TMP_FontAsset.cs:85</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_a112ea082d27be707753e4b57c0b4213b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a112ea082d27be707753e4b57c0b4213b">TMPro.TMP_SpriteAnimator.OnDisable</a></div><div class="ttdeci">void OnDisable()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00031">TMP_SpriteAnimator.cs:31</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___mesh_info_html_a2b53d43187ab86ccefe3f5dd6babcfef"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#a2b53d43187ab86ccefe3f5dd6babcfef">TMPro.TMP_MeshInfo.mesh</a></div><div class="ttdeci">Mesh mesh</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___mesh_info_8cs_source.html#l00022">TMP_MeshInfo.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text.html">TMPro.TMP_Text</a></div><div class="ttdoc">Base class which contains common properties and functions shared between the TextMeshPro and TextMesh...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l00107">TMP_Text.cs:107</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_ade0c942998e861854cd24c280c679320"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ade0c942998e861854cd24c280c679320">TMPro.TMP_SpriteAnimator.StopAllAnimations</a></div><div class="ttdeci">void StopAllAnimations()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00037">TMP_SpriteAnimator.cs:37</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a555701c73d767af5770e029ef3b243b2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a555701c73d767af5770e029ef3b243b2">TMPro.TMP_TextElement.scale</a></div><div class="ttdeci">float scale</div><div class="ttdoc">The relative scale of the character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00042">TMP_TextElement.cs:42</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_ad58008ac004e19c361192d6159f34367"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">TMPro.TMP_SpriteAsset.spriteSheet</a></div><div class="ttdeci">Texture spriteSheet</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00029">TMP_SpriteAsset.cs:29</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___mesh_info_html_a7f31f8c5b18a9d84129a7f2cb5981728"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7f31f8c5b18a9d84129a7f2cb5981728">TMPro.TMP_MeshInfo.vertices</a></div><div class="ttdeci">Vector3[] vertices</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___mesh_info_8cs_source.html#l00025">TMP_MeshInfo.cs:25</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_info_html_a944c68132d16336aee460c0d99e78442"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_info.html#a944c68132d16336aee460c0d99e78442">TMPro.TMP_TextInfo.meshInfo</a></div><div class="ttdeci">TMP_MeshInfo[] meshInfo</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_info_8cs_source.html#l00035">TMP_TextInfo.cs:35</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___character_info_html_a92354221459bdb806b3ebbb17bf066da"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___character_info.html#a92354221459bdb806b3ebbb17bf066da">TMPro.TMP_CharacterInfo.vertexIndex</a></div><div class="ttdeci">int vertexIndex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_info_8cs_source.html#l00047">TMP_CharacterInfo.cs:47</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_ab39df19fa74ea4792b0607f87f6d3fe9"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ab39df19fa74ea4792b0607f87f6d3fe9">TMPro.TMP_SpriteAnimator.m_animations</a></div><div class="ttdeci">Dictionary&lt; int, bool &gt; m_animations</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00011">TMP_SpriteAnimator.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_afd4390e99668bf2cdad6d61a10a18c6a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#afd4390e99668bf2cdad6d61a10a18c6a">TMPro.TMP_SpriteAnimator.m_TextComponent</a></div><div class="ttdeci">TMP_Text m_TextComponent</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00014">TMP_SpriteAnimator.cs:14</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___character_info_html_adb1943c1989c4178129a3763af82ef09"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___character_info.html#adb1943c1989c4178129a3763af82ef09">TMPro.TMP_CharacterInfo.origin</a></div><div class="ttdeci">float origin</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_info_8cs_source.html#l00057">TMP_CharacterInfo.cs:57</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html">TMPro.TMP_SpriteAnimator</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00009">TMP_SpriteAnimator.cs:9</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_aaea8d585b20ea1d6f9d96c60033dc1a6"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#aaea8d585b20ea1d6f9d96c60033dc1a6">TMPro.TMP_SpriteAnimator.DoSpriteAnimation</a></div><div class="ttdeci">void DoSpriteAnimation(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00045">TMP_SpriteAnimator.cs:45</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a6baf2b46d5fe0a56c994ec428bb4164e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6baf2b46d5fe0a56c994ec428bb4164e">TMPro.TMP_SpriteAsset.spriteCharacterTable</a></div><div class="ttdeci">List&lt; TMP_SpriteCharacter &gt; spriteCharacterTable</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00032">TMP_SpriteAsset.cs:32</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___character_info_html_aa4e9ea324c757e38321a2fe59c8c1287"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___character_info.html#aa4e9ea324c757e38321a2fe59c8c1287">TMPro.TMP_CharacterInfo.baseLine</a></div><div class="ttdeci">float baseLine</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_info_8cs_source.html#l00059">TMP_CharacterInfo.cs:59</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_ad5dc79c42484df5931180899e38c397c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#ad5dc79c42484df5931180899e38c397c">TMPro.TMP_TextElement.glyph</a></div><div class="ttdeci">Glyph glyph</div><div class="ttdoc">The glyph used by this text element. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00032">TMP_TextElement.cs:32</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___mesh_info_html"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___mesh_info.html">TMPro.TMP_MeshInfo</a></div><div class="ttdoc">Structure which contains the vertex attributes (geometry) of the text object. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___mesh_info_8cs_source.html#l00015">TMP_MeshInfo.cs:15</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___character_info_html"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___character_info.html">TMPro.TMP_CharacterInfo</a></div><div class="ttdoc">Structure containing information about individual text elements (character or sprites). </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_info_8cs_source.html#l00021">TMP_CharacterInfo.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_ac711a8704f406ecee3bdcf9a0039487b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ac711a8704f406ecee3bdcf9a0039487b">TMPro.TMP_SpriteAnimator.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00017">TMP_SpriteAnimator.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_character_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_character.html">TMPro.TMP_SpriteCharacter</a></div><div class="ttdoc">A basic element of text representing a pictograph, image, sprite or emoji. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_character_8cs_source.html#l00010">TMP_SpriteCharacter.cs:10</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___character_info_html_aa6eae7bb3d16d8601eb1f5d02e9775a5"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___character_info.html#aa6eae7bb3d16d8601eb1f5d02e9775a5">TMPro.TMP_CharacterInfo.scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_info_8cs_source.html#l00064">TMP_CharacterInfo.cs:64</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_a21803be85c20eb5800b7b91bba00ef6f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a21803be85c20eb5800b7b91bba00ef6f">TMPro.TMP_SpriteAnimator.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00025">TMP_SpriteAnimator.cs:25</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_animator_html_a67cc7dd827db153552560727532c72cc"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a67cc7dd827db153552560727532c72cc">TMPro.TMP_SpriteAnimator.DoSpriteAnimationInternal</a></div><div class="ttdeci">IEnumerator DoSpriteAnimationInternal(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_animator_8cs_source.html#l00056">TMP_SpriteAnimator.cs:56</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_html_a4b2d23d558ff8f9aecf5814f046bcef6"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text.html#a4b2d23d558ff8f9aecf5814f046bcef6">TMPro.TMP_Text.textInfo</a></div><div class="ttdeci">TMP_TextInfo textInfo</div><div class="ttdoc">Returns data about the text object which includes information about each character, word, line, link, etc. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l01022">TMP_Text.cs:1022</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:33 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

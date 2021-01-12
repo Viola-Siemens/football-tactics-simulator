@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/ManipulationsTracks.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_8d0d6b838e6896df5d8de1eafe8aaa93.html">treeview</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ManipulationsTracks.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_manipulations_tracks_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html">InlineCurveResize</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#af79ae31d9348a90718214f7851524089">    9</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#af79ae31d9348a90718214f7851524089">m_Captured</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a2043f20f04c3cdc0b64e128745b57074">   11</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a2043f20f04c3cdc0b64e128745b57074">m_CapturedHeight</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a3445d1fc95d0813cfed053eeb83b8e01">   12</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a3445d1fc95d0813cfed053eeb83b8e01">m_CaptureMouseYPos</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a091c9c3c370a40466ba26973f069ea93">   14</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html">InlineCurveResizeHandle</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a091c9c3c370a40466ba26973f069ea93">m_Target</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a7790a1a38d7a879cfc49dcdf936c8836">   16</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a7790a1a38d7a879cfc49dcdf936c8836">MouseDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            m_Target = <a class="code" href="class_unity_editor_1_1_timeline_1_1_picker_utils.html">PickerUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_picker_utils.html#a219049f5c107d3f50909cacc5373731a">PickedInlineCurveResizer</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">if</span> (m_Target == null)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            m_Captured = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            m_CapturedHeight = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">TimelineWindowViewPrefs</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a08aa34ccf96773cb4698f8ac935c8bba">GetInlineCurveHeight</a>(m_Target.<a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html#acfde6f80f6f58a6989be372bacfd8627">trackGUI</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a4907df580e1956c8aad31d2190231b96">track</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            m_CaptureMouseYPos = GUIUtility.GUIToScreenPoint(Event.current.mousePosition).y;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aea2f15e02d1c279836c9147416a00fc8">AddCaptured</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a0d59d348cd58770a63026dbb5822bbf4">   30</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a0d59d348cd58770a63026dbb5822bbf4">MouseDrag</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (!m_Captured || m_Target == null)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            var trackGUI = m_Target.<a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html#acfde6f80f6f58a6989be372bacfd8627">trackGUI</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordtype">float</span> inlineTrackHeight = m_CapturedHeight +</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                (GUIUtility.GUIToScreenPoint(Event.current.mousePosition).y - m_CaptureMouseYPos);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">TimelineWindowViewPrefs</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#ad8afb858a6221b2fa09e3d6412c30144">SetInlineCurveHeight</a>(trackGUI.track, Mathf.Max(inlineTrackHeight, 60.0f));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">GetWindow</a>().<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">treeView</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#a1bd7597c1e734d20a80d83a84afac176">CalculateRowRects</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#adad32165528301b602928bfd332d0f0f">   47</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#adad32165528301b602928bfd332d0f0f">MouseUp</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span> (!m_Captured)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab02338c9f0effff10b0ab8d4e7c791d9">RemoveCaptured</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            m_Captured = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_double_click.html">   59</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_track_double_click.html">TrackDoubleClick</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_double_click.html#acc6f5d23205de0f1056cba2c0edfb325">   61</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_double_click.html#acc6f5d23205de0f1056cba2c0edfb325">DoubleClick</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (evt.button != 0)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            var trackGUI = <a class="code" href="class_unity_editor_1_1_timeline_1_1_picker_utils.html">PickerUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_picker_utils.html#a8cdb8336ee1e7124e84465e4a1ad0b7a">PickedTrackBaseGUI</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (trackGUI == null)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="comment">// Double-click is only available for AnimationTracks: it conflicts with selection mechanics on other tracks</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> ((trackGUI.track as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>) == null)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window.html">EditTrackInAnimationWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window.html#acf9a5e0f36bb4d60274a7ff77455e8f7">Do</a>(state, trackGUI.track);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html">   79</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html">TrackShortcutManipulator</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483">   81</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483">ExecuteCommand</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a6904fd1570b48a1f42e77c2afcb6f50a">IsCurrentEditingASequencerTextField</a>())</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            var tracks = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a>().ToList();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            var itemGUIs = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac3460020a973e3a6c241f84d75cf0ecc">SelectedClipGUI</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">foreach</span> (var itemGUI <span class="keywordflow">in</span> itemGUIs)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                var trackGUI = itemGUI.parent == null ? null : itemGUI.parent as <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html">TimelineTrackBaseGUI</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">if</span> (trackGUI == null)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">if</span> (!tracks.Contains(trackGUI.track))</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    tracks.Add(trackGUI.track);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a95af73057a5aec7baa1c83c337346dd7">HandleShortcut</a>(state, evt, tracks.ToArray());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html_af79ae31d9348a90718214f7851524089"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#af79ae31d9348a90718214f7851524089">UnityEditor.Timeline.InlineCurveResize.m_Captured</a></div><div class="ttdeci">bool m_Captured</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00009">ManipulationsTracks.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_ac3460020a973e3a6c241f84d75cf0ecc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac3460020a973e3a6c241f84d75cf0ecc">UnityEditor.Timeline.SelectionManager.SelectedClipGUI</a></div><div class="ttdeci">static IEnumerable&lt; TimelineClipGUI &gt; SelectedClipGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00264">TimelineSelection.cs:264</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">UnityEditor.Timeline.SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00008">TimelineSelection.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_af1e0a5f9a63a8aaa835f5ed772a25741"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">UnityEditor.Timeline.WindowState.GetWindow</a></div><div class="ttdeci">TimelineWindow GetWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00627">WindowState.cs:627</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_action.html">UnityEditor.Timeline.TrackAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_actions_8cs_source.html#l00011">TrackActions.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html">UnityEngine.Timeline.AnimationTrack</a></div><div class="ttdoc">A Timeline track used for playing back animations on an Animator. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00124">AnimationTrack.cs:124</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_action_html_a95af73057a5aec7baa1c83c337346dd7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_action.html#a95af73057a5aec7baa1c83c337346dd7">UnityEditor.Timeline.TrackAction.HandleShortcut</a></div><div class="ttdeci">static bool HandleShortcut(WindowState state, Event evt, TrackAsset[] tracks)</div><div class="ttdef"><b>Definition:</b> <a href="_track_actions_8cs_source.html#l00082">TrackActions.cs:82</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html_adad32165528301b602928bfd332d0f0f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#adad32165528301b602928bfd332d0f0f">UnityEditor.Timeline.InlineCurveResize.MouseUp</a></div><div class="ttdeci">override bool MouseUp(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00047">ManipulationsTracks.cs:47</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ab02338c9f0effff10b0ab8d4e7c791d9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab02338c9f0effff10b0ab8d4e7c791d9">UnityEditor.Timeline.WindowState.RemoveCaptured</a></div><div class="ttdeci">void RemoveCaptured(Manipulator manipulator)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00135">WindowState.cs:135</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html_a3445d1fc95d0813cfed053eeb83b8e01"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a3445d1fc95d0813cfed053eeb83b8e01">UnityEditor.Timeline.InlineCurveResize.m_CaptureMouseYPos</a></div><div class="ttdeci">float m_CaptureMouseYPos</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00012">ManipulationsTracks.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html">UnityEditor.Timeline.InlineCurveResizeHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="_inline_curve_editor_8cs_source.html#l00016">InlineCurveEditor.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html">UnityEditor.Timeline.TimelineTrackBaseGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_track_base_g_u_i_8cs_source.html#l00008">TimelineTrackBaseGUI.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a08aa34ccf96773cb4698f8ac935c8bba"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a08aa34ccf96773cb4698f8ac935c8bba">UnityEditor.Timeline.TimelineWindowViewPrefs.GetInlineCurveHeight</a></div><div class="ttdeci">static float GetInlineCurveHeight(TrackAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00156">TimelineWindowViewPrefs.cs:156</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a6904fd1570b48a1f42e77c2afcb6f50a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a6904fd1570b48a1f42e77c2afcb6f50a">UnityEditor.Timeline.WindowState.IsCurrentEditingASequencerTextField</a></div><div class="ttdeci">bool IsCurrentEditingASequencerTextField()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00777">WindowState.cs:777</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html_a7790a1a38d7a879cfc49dcdf936c8836"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a7790a1a38d7a879cfc49dcdf936c8836">UnityEditor.Timeline.InlineCurveResize.MouseDown</a></div><div class="ttdeci">override bool MouseDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00016">ManipulationsTracks.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">UnityEditor.Timeline.TimelineWindowViewPrefs</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00009">TimelineWindowViewPrefs.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_ad8afb858a6221b2fa09e3d6412c30144"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#ad8afb858a6221b2fa09e3d6412c30144">UnityEditor.Timeline.TimelineWindowViewPrefs.SetInlineCurveHeight</a></div><div class="ttdeci">static void SetInlineCurveHeight(TrackAsset asset, float height)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00164">TimelineWindowViewPrefs.cs:164</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a3f7cb4a9d2f8441e66550d00de5ae731"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">UnityEditor.Timeline.SelectionManager.SelectedTracks</a></div><div class="ttdeci">static IEnumerable&lt; TrackAsset &gt; SelectedTracks()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00284">TimelineSelection.cs:284</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html">UnityEditor.Timeline.TrackShortcutManipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00079">ManipulationsTracks.cs:79</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html">UnityEditor.Timeline.Manipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00005">Manipulator.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i_html_a1bd7597c1e734d20a80d83a84afac176"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#a1bd7597c1e734d20a80d83a84afac176">UnityEditor.Timeline.TimelineTreeViewGUI.CalculateRowRects</a></div><div class="ttdeci">void CalculateRowRects()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_tree_view_g_u_i_8cs_source.html#l00137">TimelineTreeViewGUI.cs:137</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a65db7b94313705614e1d2da178a384dd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a65db7b94313705614e1d2da178a384dd">UnityEditor.Timeline.TimelineWindow.treeView</a></div><div class="ttdeci">TimelineTreeViewGUI treeView</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window___track_gui_8cs_source.html#l00012">TimelineWindow_TrackGui.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html">UnityEditor.Timeline.InlineCurveResize</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00007">ManipulationsTracks.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_picker_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_picker_utils.html">UnityEditor.Timeline.PickerUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_picker_utils_8cs_source.html#l00007">PickerUtils.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window.html">UnityEditor.Timeline.EditTrackInAnimationWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_actions_8cs_source.html#l00114">TrackActions.cs:114</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator_html_ae7603696d6d41e04b49a42efb5435483"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483">UnityEditor.Timeline.TrackShortcutManipulator.ExecuteCommand</a></div><div class="ttdeci">override bool ExecuteCommand(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00081">ManipulationsTracks.cs:81</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window_html_acf9a5e0f36bb4d60274a7ff77455e8f7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window.html#acf9a5e0f36bb4d60274a7ff77455e8f7">UnityEditor.Timeline.EditTrackInAnimationWindow.Do</a></div><div class="ttdeci">static bool Do(WindowState state, TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_track_actions_8cs_source.html#l00116">TrackActions.cs:116</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html_a2043f20f04c3cdc0b64e128745b57074"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a2043f20f04c3cdc0b64e128745b57074">UnityEditor.Timeline.InlineCurveResize.m_CapturedHeight</a></div><div class="ttdeci">float m_CapturedHeight</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00011">ManipulationsTracks.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html_a091c9c3c370a40466ba26973f069ea93"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a091c9c3c370a40466ba26973f069ea93">UnityEditor.Timeline.InlineCurveResize.m_Target</a></div><div class="ttdeci">InlineCurveResizeHandle m_Target</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00014">ManipulationsTracks.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_html_a4907df580e1956c8aad31d2190231b96"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a4907df580e1956c8aad31d2190231b96">UnityEditor.Timeline.TimelineTrackBaseGUI.track</a></div><div class="ttdeci">TrackAsset track</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_track_base_g_u_i_8cs_source.html#l00030">TimelineTrackBaseGUI.cs:30</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_aea2f15e02d1c279836c9147416a00fc8"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#aea2f15e02d1c279836c9147416a00fc8">UnityEditor.Timeline.WindowState.AddCaptured</a></div><div class="ttdeci">void AddCaptured(Manipulator manipulator)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00129">WindowState.cs:129</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_picker_utils_html_a219049f5c107d3f50909cacc5373731a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_picker_utils.html#a219049f5c107d3f50909cacc5373731a">UnityEditor.Timeline.PickerUtils.PickedInlineCurveResizer</a></div><div class="ttdeci">static InlineCurveResizeHandle PickedInlineCurveResizer()</div><div class="ttdef"><b>Definition:</b> <a href="_picker_utils_8cs_source.html#l00031">PickerUtils.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_double_click_html_acc6f5d23205de0f1056cba2c0edfb325"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_double_click.html#acc6f5d23205de0f1056cba2c0edfb325">UnityEditor.Timeline.TrackDoubleClick.DoubleClick</a></div><div class="ttdeci">override bool DoubleClick(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00061">ManipulationsTracks.cs:61</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle_html_acfde6f80f6f58a6989be372bacfd8627"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html#acfde6f80f6f58a6989be372bacfd8627">UnityEditor.Timeline.InlineCurveResizeHandle.trackGUI</a></div><div class="ttdeci">TimelineTrackGUI trackGUI</div><div class="ttdef"><b>Definition:</b> <a href="_inline_curve_editor_8cs_source.html#l00020">InlineCurveEditor.cs:20</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_html_a0d59d348cd58770a63026dbb5822bbf4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a0d59d348cd58770a63026dbb5822bbf4">UnityEditor.Timeline.InlineCurveResize.MouseDrag</a></div><div class="ttdeci">override bool MouseDrag(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00030">ManipulationsTracks.cs:30</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_double_click_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_double_click.html">UnityEditor.Timeline.TrackDoubleClick</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulations_tracks_8cs_source.html#l00059">ManipulationsTracks.cs:59</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_picker_utils_html_a8cdb8336ee1e7124e84465e4a1ad0b7a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_picker_utils.html#a8cdb8336ee1e7124e84465e4a1ad0b7a">UnityEditor.Timeline.PickerUtils.PickedTrackBaseGUI</a></div><div class="ttdeci">static TimelineTrackBaseGUI PickedTrackBaseGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_picker_utils_8cs_source.html#l00036">PickerUtils.cs:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

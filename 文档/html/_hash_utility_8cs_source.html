@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Utilities/HashUtility.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_3783f2849d6c65cfd21f346d22390697.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">HashUtility.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_hash_utility_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html">    3</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html">HashUtility</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        <span class="comment">// Note. We could have used &quot;params int[] hashes&quot; but we want to avoid allocating.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#af38a869440eb13947833bbf226b43d50">    7</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#af38a869440eb13947833bbf226b43d50">CombineHash</a>(<span class="keyword">this</span> <span class="keywordtype">int</span> h1, <span class="keywordtype">int</span> h2)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            <span class="keywordflow">return</span> h1 ^ (int)(h2 + 0x9e3779b9 + (h1 &lt;&lt; 6) + (h1 &gt;&gt; 2)); <span class="comment">// Similar to c++ boost::hash_combine</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        }</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#af74e0d3c1d0f25ec5559fa76b6c4ded5">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#af74e0d3c1d0f25ec5559fa76b6c4ded5">CombineHash</a>(<span class="keywordtype">int</span> h1, <span class="keywordtype">int</span> h2, <span class="keywordtype">int</span> h3)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordflow">return</span> CombineHash(h1, h2).CombineHash(h3);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a2e9ba9c7a37ff2d568c38b7abbbe717e">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a2e9ba9c7a37ff2d568c38b7abbbe717e">CombineHash</a>(<span class="keywordtype">int</span> h1, <span class="keywordtype">int</span> h2, <span class="keywordtype">int</span> h3, <span class="keywordtype">int</span> h4)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">return</span> CombineHash(h1, h2, h3).CombineHash(h4);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#aea939f2a64e1284d4db848b2813af419">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#aea939f2a64e1284d4db848b2813af419">CombineHash</a>(<span class="keywordtype">int</span> h1, <span class="keywordtype">int</span> h2, <span class="keywordtype">int</span> h3, <span class="keywordtype">int</span> h4, <span class="keywordtype">int</span> h5)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> CombineHash(h1, h2, h3, h4).CombineHash(h5);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a299c09f04ec92c5b26177239dcffd317">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a299c09f04ec92c5b26177239dcffd317">CombineHash</a>(<span class="keywordtype">int</span> h1, <span class="keywordtype">int</span> h2, <span class="keywordtype">int</span> h3, <span class="keywordtype">int</span> h4, <span class="keywordtype">int</span> h5, <span class="keywordtype">int</span> h6)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> CombineHash(h1, h2, h3, h4, h5).CombineHash(h6);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a59f4934f1b5129994b07ec3eb5885294">   32</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a59f4934f1b5129994b07ec3eb5885294">CombineHash</a>(<span class="keywordtype">int</span> h1, <span class="keywordtype">int</span> h2, <span class="keywordtype">int</span> h3, <span class="keywordtype">int</span> h4, <span class="keywordtype">int</span> h5, <span class="keywordtype">int</span> h6, <span class="keywordtype">int</span> h7)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> CombineHash(h1, h2, h3, h4, h5, h6).CombineHash(h7);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#ab40fbb64e0fb8b489c3f3cd19956babd">   37</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#ab40fbb64e0fb8b489c3f3cd19956babd">CombineHash</a>(<span class="keywordtype">int</span>[] hashes)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">if</span> (hashes == null || hashes.Length == 0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            var h = hashes[0];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; hashes.Length; ++i)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                h = CombineHash(h, hashes[i]);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> h;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html_a2e9ba9c7a37ff2d568c38b7abbbe717e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a2e9ba9c7a37ff2d568c38b7abbbe717e">UnityEngine.Timeline.HashUtility.CombineHash</a></div><div class="ttdeci">static int CombineHash(int h1, int h2, int h3, int h4)</div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00017">HashUtility.cs:17</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html_a299c09f04ec92c5b26177239dcffd317"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a299c09f04ec92c5b26177239dcffd317">UnityEngine.Timeline.HashUtility.CombineHash</a></div><div class="ttdeci">static int CombineHash(int h1, int h2, int h3, int h4, int h5, int h6)</div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00027">HashUtility.cs:27</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html_af38a869440eb13947833bbf226b43d50"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#af38a869440eb13947833bbf226b43d50">UnityEngine.Timeline.HashUtility.CombineHash</a></div><div class="ttdeci">static int CombineHash(this int h1, int h2)</div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00007">HashUtility.cs:7</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html_a59f4934f1b5129994b07ec3eb5885294"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#a59f4934f1b5129994b07ec3eb5885294">UnityEngine.Timeline.HashUtility.CombineHash</a></div><div class="ttdeci">static int CombineHash(int h1, int h2, int h3, int h4, int h5, int h6, int h7)</div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00032">HashUtility.cs:32</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html_ab40fbb64e0fb8b489c3f3cd19956babd"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#ab40fbb64e0fb8b489c3f3cd19956babd">UnityEngine.Timeline.HashUtility.CombineHash</a></div><div class="ttdeci">static int CombineHash(int[] hashes)</div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00037">HashUtility.cs:37</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html_af74e0d3c1d0f25ec5559fa76b6c4ded5"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#af74e0d3c1d0f25ec5559fa76b6c4ded5">UnityEngine.Timeline.HashUtility.CombineHash</a></div><div class="ttdeci">static int CombineHash(int h1, int h2, int h3)</div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00012">HashUtility.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html">UnityEngine.Timeline.HashUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00003">HashUtility.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_hash_utility_html_aea939f2a64e1284d4db848b2813af419"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_hash_utility.html#aea939f2a64e1284d4db848b2813af419">UnityEngine.Timeline.HashUtility.CombineHash</a></div><div class="ttdeci">static int CombineHash(int h1, int h2, int h3, int h4, int h5)</div><div class="ttdef"><b>Definition:</b> <a href="_hash_utility_8cs_source.html#l00022">HashUtility.cs:22</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

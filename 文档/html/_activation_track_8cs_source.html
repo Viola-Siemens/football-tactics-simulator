@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Activation/ActivationTrack.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_32953ca09b6b6e02451a6853d5de8ea4.html">Activation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ActivationTrack.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_activation_track_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [TrackClipType(typeof(ActivationPlayableAsset))]</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [TrackBindingType(typeof(GameObject))]</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [ExcludeFromPreset]</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a> : <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a90e8fa6e7aa39fb531a8167125b4eb9f">   16</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a> m_PostPlaybackState = <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a>.LeaveAsIs;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#ae3f25d4861db4755186f6b3b91fc88a9">   17</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html">ActivationMixerPlayable</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#ae3f25d4861db4755186f6b3b91fc88a9">m_ActivationMixer</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            Active,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            Inactive,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            Revert,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            LeaveAsIs</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> CanCompileClips()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> !hasClips || base.CanCompileClips();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span> PostPlaybackState postPlaybackState</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a0481f502c86b90706501954f10d6e3c7">   54</a></span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_PostPlaybackState; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            set { m_PostPlaybackState = value; UpdateTrackMode(); }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a2bdaef90137b4649efd00503b463f425">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a2bdaef90137b4649efd00503b463f425">CreateTrackMixer</a>(PlayableGraph graph, GameObject go, <span class="keywordtype">int</span> inputCount)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            var mixer = <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html">ActivationMixerPlayable</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#adaf1e16b22ebbffe4855d4e218e272cc">Create</a>(graph, inputCount);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            m_ActivationMixer = mixer.GetBehaviour();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            UpdateTrackMode();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> mixer;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> UpdateTrackMode()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (m_ActivationMixer != null)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                m_ActivationMixer.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a15c21182dbf09d4c5d630da014a79dcf">postPlaybackState</a> = m_PostPlaybackState;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#af4cf30aaabb54e30d80694a248dd32ff">   77</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#af4cf30aaabb54e30d80694a248dd32ff">GatherProperties</a>(PlayableDirector director, <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html">IPropertyCollector</a> driver)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            var gameObject = GetGameObjectBinding(director);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">if</span> (gameObject != null)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                driver.<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a16d43ced11cef5522db23c48166837c3">AddFromName</a>(gameObject, <span class="stringliteral">&quot;m_IsActive&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a1287f3867043f910168ebf7f578201dc">   87</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a1287f3867043f910168ebf7f578201dc">OnCreateClip</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2868e2d17cc2c3cb3ae3afad8f8712d8">displayName</a> = <span class="stringliteral">&quot;Active&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            base.OnCreateClip(clip);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html_ae3f25d4861db4755186f6b3b91fc88a9"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html#ae3f25d4861db4755186f6b3b91fc88a9">UnityEngine.Timeline.ActivationTrack.m_ActivationMixer</a></div><div class="ttdeci">ActivationMixerPlayable m_ActivationMixer</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00017">ActivationTrack.cs:17</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html">UnityEngine.Timeline.ActivationMixerPlayable</a></div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00005">ActivationMixerPlayable.cs:5</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html_a1287f3867043f910168ebf7f578201dc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a1287f3867043f910168ebf7f578201dc">UnityEngine.Timeline.ActivationTrack.OnCreateClip</a></div><div class="ttdeci">override void OnCreateClip(TimelineClip clip)</div><div class="ttdoc">Called when a clip is created on a track. The timeline clip added to this trackUse this method to set...</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00087">ActivationTrack.cs:87</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html_a94c69bfc06c3d82628b16a29d189672f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">UnityEngine.Timeline.ActivationTrack.PostPlaybackState</a></div><div class="ttdeci">PostPlaybackState</div><div class="ttdoc">Specify what state to leave the GameObject in after the Timeline has finished playing. </div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00022">ActivationTrack.cs:22</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_a15c21182dbf09d4c5d630da014a79dcf"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a15c21182dbf09d4c5d630da014a79dcf">UnityEngine.Timeline.ActivationMixerPlayable.postPlaybackState</a></div><div class="ttdeci">ActivationTrack.PostPlaybackState postPlaybackState</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00019">ActivationMixerPlayable.cs:19</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2868e2d17cc2c3cb3ae3afad8f8712d8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2868e2d17cc2c3cb3ae3afad8f8712d8">UnityEngine.Timeline.TimelineClip.displayName</a></div><div class="ttdeci">string displayName</div><div class="ttdoc">The name displayed on the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00225">TimelineClip.cs:225</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html_a2bdaef90137b4649efd00503b463f425"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a2bdaef90137b4649efd00503b463f425">UnityEngine.Timeline.ActivationTrack.CreateTrackMixer</a></div><div class="ttdeci">override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount)</div><div class="ttdoc">Creates a mixer used to blend playables generated by clips on the track. The graph to inject playable...</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00060">ActivationTrack.cs:60</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_property_collector_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html">UnityEngine.Timeline.IPropertyCollector</a></div><div class="ttdoc">Interface used to inform the Timeline Editor about potential property modifications that may occur wh...</div><div class="ttdef"><b>Definition:</b> <a href="_i_property_collector_8cs_source.html#l00008">IPropertyCollector.cs:8</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_property_collector_html_a16d43ced11cef5522db23c48166837c3"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a16d43ced11cef5522db23c48166837c3">UnityEngine.Timeline.IPropertyCollector.AddFromName</a></div><div class="ttdeci">void AddFromName(string name)</div><div class="ttdoc">Add property modifications using the serialized property name. </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_adaf1e16b22ebbffe4855d4e218e272cc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#adaf1e16b22ebbffe4855d4e218e272cc">UnityEngine.Timeline.ActivationMixerPlayable.Create</a></div><div class="ttdeci">static ScriptPlayable&lt; ActivationMixerPlayable &gt; Create(PlayableGraph graph, int inputCount)</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00013">ActivationMixerPlayable.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html_af4cf30aaabb54e30d80694a248dd32ff"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html#af4cf30aaabb54e30d80694a248dd32ff">UnityEngine.Timeline.ActivationTrack.GatherProperties</a></div><div class="ttdeci">override void GatherProperties(PlayableDirector director, IPropertyCollector driver)</div><div class="ttdoc">Called by the Timeline Editor to gather properties requiring preview. The PlayableDirector invoking t...</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00077">ActivationTrack.cs:77</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html">UnityEngine.Timeline.ActivationTrack</a></div><div class="ttdoc">Track that can be used to control the active state of a GameObject. </div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00013">ActivationTrack.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

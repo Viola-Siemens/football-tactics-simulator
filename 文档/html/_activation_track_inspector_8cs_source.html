@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Activation/ActivationTrackInspector.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_2b1693035a6fb85b86f8b6336d96f773.html">Activation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ActivationTrackInspector.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_activation_track_inspector_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    [CustomEditor(typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>))]</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html">ActivationTrackInspector</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_asset_inspector.html">TrackAssetInspector</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles.html">    9</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles.html">Styles</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles.html#aa8c84962e15c544477fa24a35f93c9a4">   11</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent PostPlaybackStateText = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Post-playback state&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#a143b3eaee681a2078a34362e338ebea2">   14</a></span>&#160;        SerializedProperty <a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#a143b3eaee681a2078a34362e338ebea2">m_PostPlaybackProperty</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#ae4e4c55bcc4457c69eea5e23ffb7b72f">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#ae4e4c55bcc4457c69eea5e23ffb7b72f">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> EditorGUI.DisabledScope(IsTrackLocked()))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                serializedObject.Update();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">if</span> (m_PostPlaybackProperty != null)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    EditorGUILayout.PropertyField(m_PostPlaybackProperty, <a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles.html#aa8c84962e15c544477fa24a35f93c9a4">PostPlaybackStateText</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    var activationTrack = target as <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <span class="keywordflow">if</span> (activationTrack != null)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        activationTrack.UpdateTrackMode();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#ae8f4226f3d1bddd1c6812450a602bcd5">   37</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#ae8f4226f3d1bddd1c6812450a602bcd5">OnEnable</a>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            base.OnEnable();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            m_PostPlaybackProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_PostPlaybackState&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles.html">UnityEditor.Timeline.ActivationTrackInspector.Styles</a></div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_inspector_8cs_source.html#l00009">ActivationTrackInspector.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html">UnityEditor.Timeline.ActivationTrackInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_inspector_8cs_source.html#l00007">ActivationTrackInspector.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_html_a143b3eaee681a2078a34362e338ebea2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#a143b3eaee681a2078a34362e338ebea2">UnityEditor.Timeline.ActivationTrackInspector.m_PostPlaybackProperty</a></div><div class="ttdeci">SerializedProperty m_PostPlaybackProperty</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_inspector_8cs_source.html#l00014">ActivationTrackInspector.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles_html_aa8c84962e15c544477fa24a35f93c9a4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_1_1_styles.html#aa8c84962e15c544477fa24a35f93c9a4">UnityEditor.Timeline.ActivationTrackInspector.Styles.PostPlaybackStateText</a></div><div class="ttdeci">static readonly GUIContent PostPlaybackStateText</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_inspector_8cs_source.html#l00011">ActivationTrackInspector.cs:11</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_html_ae8f4226f3d1bddd1c6812450a602bcd5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#ae8f4226f3d1bddd1c6812450a602bcd5">UnityEditor.Timeline.ActivationTrackInspector.OnEnable</a></div><div class="ttdeci">override void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_inspector_8cs_source.html#l00037">ActivationTrackInspector.cs:37</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_asset_inspector_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_asset_inspector.html">UnityEditor.Timeline.TrackAssetInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_inspector_8cs_source.html#l00012">TrackAssetInspector.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html">UnityEngine.Timeline.ActivationTrack</a></div><div class="ttdoc">Track that can be used to control the active state of a GameObject. </div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00013">ActivationTrack.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_inspector_html_ae4e4c55bcc4457c69eea5e23ffb7b72f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_inspector.html#ae4e4c55bcc4457c69eea5e23ffb7b72f">UnityEditor.Timeline.ActivationTrackInspector.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_inspector_8cs_source.html#l00016">ActivationTrackInspector.cs:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Ball类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="class_ball-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">Ball类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>足球信息与控制类  
+ <a href="class_ball.html#details">更多...</a></p>
+<div class="dynheader">
+类 Ball 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ball__inherit__graph.png" border="0" usemap="#_ball_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Ball 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ball__coll__graph.png" border="0" usemap="#_ball_coll__map" alt="Collaboration graph"/></div>
+<map name="_ball_coll__map" id="_ball_coll__map">
+<area shape="rect" id="node3" href="class_player.html" title="球员类（含预测模型） " alt="" coords="213,185,271,212"/><area shape="rect" id="node6" href="class_team.html" title="球队类 " alt="" coords="276,367,331,393"/><area shape="rect" id="node7" href="class_team_1_1_member.html" title="Team.Member" alt="" coords="92,276,197,303"/><area shape="rect" id="node4" href="class_position_score.html" title="球员各位置得分类 " alt="" coords="99,81,201,108"/><area shape="rect" id="node5" href="class_ability.html" title="球员各方面能力 " alt="" coords="226,81,285,108"/><area shape="rect" id="node8" href="class_tactics.html" title="战术 " alt="" coords="489,276,553,303"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a9bd849d2cb2974671bea8ccab6a6d5b8"><td class="memItemLeft" align="right" valign="top">Rigidbody&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a></td></tr>
+<tr class="memdesc:a9bd849d2cb2974671bea8ccab6a6d5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">足球刚体引用  <a href="#a9bd849d2cb2974671bea8ccab6a6d5b8">更多...</a><br /></td></tr>
+<tr class="separator:a9bd849d2cb2974671bea8ccab6a6d5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd237a48f850192d316a07913016b606"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#abd237a48f850192d316a07913016b606">preTouch</a> = null</td></tr>
+<tr class="memdesc:abd237a48f850192d316a07913016b606"><td class="mdescLeft">&#160;</td><td class="mdescRight">上一个接触者  <a href="#abd237a48f850192d316a07913016b606">更多...</a><br /></td></tr>
+<tr class="separator:abd237a48f850192d316a07913016b606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fed8e49f01e122dfa765f2efffe014f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#a7fed8e49f01e122dfa765f2efffe014f">curTouch</a> = null</td></tr>
+<tr class="memdesc:a7fed8e49f01e122dfa765f2efffe014f"><td class="mdescLeft">&#160;</td><td class="mdescRight">最后一个接触者  <a href="#a7fed8e49f01e122dfa765f2efffe014f">更多...</a><br /></td></tr>
+<tr class="separator:a7fed8e49f01e122dfa765f2efffe014f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca0df907cc2fcf0bc84a3cccc4f55e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#acca0df907cc2fcf0bc84a3cccc4f55e5">isKick</a></td></tr>
+<tr class="memdesc:acca0df907cc2fcf0bc84a3cccc4f55e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">攻方门将是否无法用手接球  <a href="#acca0df907cc2fcf0bc84a3cccc4f55e5">更多...</a><br /></td></tr>
+<tr class="separator:acca0df907cc2fcf0bc84a3cccc4f55e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf5a162009600f159ce4ebf29e3fd71"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#aaaf5a162009600f159ce4ebf29e3fd71">kickBallTime</a></td></tr>
+<tr class="memdesc:aaaf5a162009600f159ce4ebf29e3fd71"><td class="mdescLeft">&#160;</td><td class="mdescRight">最后一次被踢出的时间  <a href="#aaaf5a162009600f159ce4ebf29e3fd71">更多...</a><br /></td></tr>
+<tr class="separator:aaaf5a162009600f159ce4ebf29e3fd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f57adca854d97c66f9029d64974480d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a></td></tr>
+<tr class="memdesc:a5f57adca854d97c66f9029d64974480d"><td class="mdescLeft">&#160;</td><td class="mdescRight">发球指令  <a href="#a5f57adca854d97c66f9029d64974480d">更多...</a><br /></td></tr>
+<tr class="separator:a5f57adca854d97c66f9029d64974480d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a8fb7b593a419523a48d198214e323"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#a94a8fb7b593a419523a48d198214e323">hasGo</a></td></tr>
+<tr class="memdesc:a94a8fb7b593a419523a48d198214e323"><td class="mdescLeft">&#160;</td><td class="mdescRight">已经发球  <a href="#a94a8fb7b593a419523a48d198214e323">更多...</a><br /></td></tr>
+<tr class="separator:a94a8fb7b593a419523a48d198214e323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6bbdd093263e193f2d0b30d9e7b1d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">GoalReset</a></td></tr>
+<tr class="memdesc:a0e6bbdd093263e193f2d0b30d9e7b1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">中圈开球  <a href="#a0e6bbdd093263e193f2d0b30d9e7b1d6">更多...</a><br /></td></tr>
+<tr class="separator:a0e6bbdd093263e193f2d0b30d9e7b1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a8c01669ff303c1de83ef95db96dd555f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#a8c01669ff303c1de83ef95db96dd555f">Awake</a> ()</td></tr>
+<tr class="memdesc:a8c01669ff303c1de83ef95db96dd555f"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒时调用 插件被唤醒时，重设发球信号，并获取足球刚体的引用。  <a href="#a8c01669ff303c1de83ef95db96dd555f">更多...</a><br /></td></tr>
+<tr class="separator:a8c01669ff303c1de83ef95db96dd555f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416edd5ceab970ca26f787363e7ccb22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball.html#a416edd5ceab970ca26f787363e7ccb22">Update</a> ()</td></tr>
+<tr class="memdesc:a416edd5ceab970ca26f787363e7ccb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧调用 程序运行时的每一帧根据足球旋转更新足球运动。  <a href="#a416edd5ceab970ca26f787363e7ccb22">更多...</a><br /></td></tr>
+<tr class="separator:a416edd5ceab970ca26f787363e7ccb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>足球信息与控制类 </p>
+<p>包含了足球动态信息与控制方法。 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00014">14</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a8c01669ff303c1de83ef95db96dd555f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ball.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>唤醒时调用 插件被唤醒时，重设发球信号，并获取足球刚体的引用。 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a416edd5ceab970ca26f787363e7ccb22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ball.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每帧调用 程序运行时的每一帧根据足球旋转更新足球运动。 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a7fed8e49f01e122dfa765f2efffe014f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a> Ball.curTouch = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最后一个接触者 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e6bbdd093263e193f2d0b30d9e7b1d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ball.GoalReset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>中圈开球 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94a8fb7b593a419523a48d198214e323"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ball.hasGo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>已经发球 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f57adca854d97c66f9029d64974480d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ball.isGo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发球指令 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acca0df907cc2fcf0bc84a3cccc4f55e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ball.isKick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>攻方门将是否无法用手接球 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaaf5a162009600f159ce4ebf29e3fd71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Ball.kickBallTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最后一次被踢出的时间 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd237a48f850192d316a07913016b606"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a> Ball.preTouch = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上一个接触者 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9bd849d2cb2974671bea8ccab6a6d5b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody Ball.rig</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>足球刚体引用 </p>
+
+<p>在文件 <a class="el" href="_ball_8cs_source.html">Ball.cs</a> 第 <a class="el" href="_ball_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Ball/<a class="el" href="_ball_8cs_source.html">Ball.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:38 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

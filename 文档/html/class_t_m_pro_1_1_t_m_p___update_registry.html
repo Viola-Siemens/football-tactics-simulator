@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: TMPro.TMP_UpdateRegistry类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_t_m_pro.html">TMPro</a></li><li class="navelem"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html">TMP_UpdateRegistry</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_t_m_pro_1_1_t_m_p___update_registry-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">TMPro.TMP_UpdateRegistry类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class for handling and scheduling text object updates.  
+ <a href="class_t_m_pro_1_1_t_m_p___update_registry.html#details">更多...</a></p>
+<div class="dynheader">
+TMPro.TMP_UpdateRegistry 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry__coll__graph.png" border="0" usemap="#_t_m_pro_8_t_m_p___update_registry_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:af6cca1c5d46be0cb39cf1fc822a7ef1b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#af6cca1c5d46be0cb39cf1fc822a7ef1b">RegisterCanvasElementForLayoutRebuild</a> (ICanvasElement element)</td></tr>
+<tr class="memdesc:af6cca1c5d46be0cb39cf1fc822a7ef1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to register elements which require a layout rebuild.  <a href="#af6cca1c5d46be0cb39cf1fc822a7ef1b">更多...</a><br /></td></tr>
+<tr class="separator:af6cca1c5d46be0cb39cf1fc822a7ef1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac449cc7e45976566e6420c763ab8c5af"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#ac449cc7e45976566e6420c763ab8c5af">RegisterCanvasElementForGraphicRebuild</a> (ICanvasElement element)</td></tr>
+<tr class="memdesc:ac449cc7e45976566e6420c763ab8c5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to register elements which require a graphic rebuild.  <a href="#ac449cc7e45976566e6420c763ab8c5af">更多...</a><br /></td></tr>
+<tr class="separator:ac449cc7e45976566e6420c763ab8c5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd464c5a6919c3383c4d8fa19fe60df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#abdd464c5a6919c3383c4d8fa19fe60df">UnRegisterCanvasElementForRebuild</a> (ICanvasElement element)</td></tr>
+<tr class="memdesc:abdd464c5a6919c3383c4d8fa19fe60df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to unregister elements which no longer require a rebuild.  <a href="#abdd464c5a6919c3383c4d8fa19fe60df">更多...</a><br /></td></tr>
+<tr class="separator:abdd464c5a6919c3383c4d8fa19fe60df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ace9d173b85d91abac839f7fb70b73b9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#ace9d173b85d91abac839f7fb70b73b9f">TMP_UpdateRegistry</a> ()</td></tr>
+<tr class="memdesc:ace9d173b85d91abac839f7fb70b73b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register to receive callback from the Canvas System.  <a href="#ace9d173b85d91abac839f7fb70b73b9f">更多...</a><br /></td></tr>
+<tr class="separator:ace9d173b85d91abac839f7fb70b73b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a4b7cc4e0c23baf71b6925bad7d8aca97"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html">TMP_UpdateRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#a4b7cc4e0c23baf71b6925bad7d8aca97">instance</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4b7cc4e0c23baf71b6925bad7d8aca97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a singleton instance of the registry  <a href="#a4b7cc4e0c23baf71b6925bad7d8aca97">更多...</a><br /></td></tr>
+<tr class="separator:a4b7cc4e0c23baf71b6925bad7d8aca97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aeca52d0e9c90d6ee87e2576380eb42fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#aeca52d0e9c90d6ee87e2576380eb42fb">InternalRegisterCanvasElementForLayoutRebuild</a> (ICanvasElement element)</td></tr>
+<tr class="separator:aeca52d0e9c90d6ee87e2576380eb42fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffe59c0a3c1f0671faf140834663cd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#adffe59c0a3c1f0671faf140834663cd1">InternalRegisterCanvasElementForGraphicRebuild</a> (ICanvasElement element)</td></tr>
+<tr class="separator:adffe59c0a3c1f0671faf140834663cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9468674b3ba754d179a5a0d799f98dde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#a9468674b3ba754d179a5a0d799f98dde">PerformUpdateForCanvasRendererObjects</a> ()</td></tr>
+<tr class="memdesc:a9468674b3ba754d179a5a0d799f98dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to handle objects that need updating.  <a href="#a9468674b3ba754d179a5a0d799f98dde">更多...</a><br /></td></tr>
+<tr class="separator:a9468674b3ba754d179a5a0d799f98dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b14a90c01f3f48285d0a1ba37207f23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#a5b14a90c01f3f48285d0a1ba37207f23">PerformUpdateForMeshRendererObjects</a> ()</td></tr>
+<tr class="memdesc:a5b14a90c01f3f48285d0a1ba37207f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to handle objects that need updating.  <a href="#a5b14a90c01f3f48285d0a1ba37207f23">更多...</a><br /></td></tr>
+<tr class="separator:a5b14a90c01f3f48285d0a1ba37207f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae220b0e303a3df85e09c5cb1ad8ed757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#ae220b0e303a3df85e09c5cb1ad8ed757">InternalUnRegisterCanvasElementForLayoutRebuild</a> (ICanvasElement element)</td></tr>
+<tr class="separator:ae220b0e303a3df85e09c5cb1ad8ed757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af137e2a239cd21cd1330adcf9d140724"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#af137e2a239cd21cd1330adcf9d140724">InternalUnRegisterCanvasElementForGraphicRebuild</a> (ICanvasElement element)</td></tr>
+<tr class="separator:af137e2a239cd21cd1330adcf9d140724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aa06598fc4f93044a0746f3954674c93a"><td class="memItemLeft" align="right" valign="top">readonly List&lt; ICanvasElement &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#aa06598fc4f93044a0746f3954674c93a">m_LayoutRebuildQueue</a> = new List&lt;ICanvasElement&gt;()</td></tr>
+<tr class="separator:aa06598fc4f93044a0746f3954674c93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3390487f897b8e037ef0c630fafe50"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#a9d3390487f897b8e037ef0c630fafe50">m_LayoutQueueLookup</a> = new Dictionary&lt;int, int&gt;()</td></tr>
+<tr class="separator:a9d3390487f897b8e037ef0c630fafe50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa474cdd84f312d3da5f7f5f3938d5750"><td class="memItemLeft" align="right" valign="top">readonly List&lt; ICanvasElement &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#aa474cdd84f312d3da5f7f5f3938d5750">m_GraphicRebuildQueue</a> = new List&lt;ICanvasElement&gt;()</td></tr>
+<tr class="separator:aa474cdd84f312d3da5f7f5f3938d5750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09be9c032b2ea3110530170b3ffea7ad"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#a09be9c032b2ea3110530170b3ffea7ad">m_GraphicQueueLookup</a> = new Dictionary&lt;int, int&gt;()</td></tr>
+<tr class="separator:a09be9c032b2ea3110530170b3ffea7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a37e2b5c1cc3ae603dadf78717c11bbcd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html">TMP_UpdateRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html#a37e2b5c1cc3ae603dadf78717c11bbcd">s_Instance</a></td></tr>
+<tr class="separator:a37e2b5c1cc3ae603dadf78717c11bbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Class for handling and scheduling text object updates. </p>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00013">13</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ace9d173b85d91abac839f7fb70b73b9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMPro.TMP_UpdateRegistry.TMP_UpdateRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register to receive callback from the Canvas System. </p>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00043">43</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_ace9d173b85d91abac839f7fb70b73b9f_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_ace9d173b85d91abac839f7fb70b73b9f_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_ace9d173b85d91abac839f7fb70b73b9f_cgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_ace9d173b85d91abac839f7fb70b73b9f_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#a9468674b3ba754d179a5a0d799f98dde" title="Method to handle objects that need updating. " alt="" coords="244,5,465,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="adffe59c0a3c1f0671faf140834663cd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.TMP_UpdateRegistry.InternalRegisterCanvasElementForGraphicRebuild </td>
+          <td>(</td>
+          <td class="paramtype">ICanvasElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00082">82</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_adffe59c0a3c1f0671faf140834663cd1_icgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_adffe59c0a3c1f0671faf140834663cd1_icgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_adffe59c0a3c1f0671faf140834663cd1_icgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_adffe59c0a3c1f0671faf140834663cd1_icgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#ac449cc7e45976566e6420c763ab8c5af" title="Function to register elements which require a graphic rebuild. " alt="" coords="275,5,499,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aeca52d0e9c90d6ee87e2576380eb42fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.TMP_UpdateRegistry.InternalRegisterCanvasElementForLayoutRebuild </td>
+          <td>(</td>
+          <td class="paramtype">ICanvasElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00059">59</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_aeca52d0e9c90d6ee87e2576380eb42fb_icgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_aeca52d0e9c90d6ee87e2576380eb42fb_icgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_aeca52d0e9c90d6ee87e2576380eb42fb_icgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_aeca52d0e9c90d6ee87e2576380eb42fb_icgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#af6cca1c5d46be0cb39cf1fc822a7ef1b" title="Function to register elements which require a layout rebuild. " alt="" coords="275,5,493,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af137e2a239cd21cd1330adcf9d140724"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_UpdateRegistry.InternalUnRegisterCanvasElementForGraphicRebuild </td>
+          <td>(</td>
+          <td class="paramtype">ICanvasElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00169">169</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_af137e2a239cd21cd1330adcf9d140724_icgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_af137e2a239cd21cd1330adcf9d140724_icgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_af137e2a239cd21cd1330adcf9d140724_icgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_af137e2a239cd21cd1330adcf9d140724_icgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#abdd464c5a6919c3383c4d8fa19fe60df" title="Function to unregister elements which no longer require a rebuild. " alt="" coords="272,13,511,54"/><area shape="rect" id="node3" href="class_t_m_pro_1_1_t_m_p___sub_mesh_u_i.html#a06ee252d51e45e951fdef895135559b4" title="TMPro.TMP_SubMeshUI.OnDisable" alt="" coords="559,20,788,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae220b0e303a3df85e09c5cb1ad8ed757"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_UpdateRegistry.InternalUnRegisterCanvasElementForLayoutRebuild </td>
+          <td>(</td>
+          <td class="paramtype">ICanvasElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00159">159</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_ae220b0e303a3df85e09c5cb1ad8ed757_icgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_ae220b0e303a3df85e09c5cb1ad8ed757_icgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_ae220b0e303a3df85e09c5cb1ad8ed757_icgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_ae220b0e303a3df85e09c5cb1ad8ed757_icgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#abdd464c5a6919c3383c4d8fa19fe60df" title="Function to unregister elements which no longer require a rebuild. " alt="" coords="272,13,511,54"/><area shape="rect" id="node3" href="class_t_m_pro_1_1_t_m_p___sub_mesh_u_i.html#a06ee252d51e45e951fdef895135559b4" title="TMPro.TMP_SubMeshUI.OnDisable" alt="" coords="559,20,788,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9468674b3ba754d179a5a0d799f98dde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_UpdateRegistry.PerformUpdateForCanvasRendererObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to handle objects that need updating. </p>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00099">99</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_a9468674b3ba754d179a5a0d799f98dde_icgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_a9468674b3ba754d179a5a0d799f98dde_icgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_a9468674b3ba754d179a5a0d799f98dde_icgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_a9468674b3ba754d179a5a0d799f98dde_icgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#ace9d173b85d91abac839f7fb70b73b9f" title="Register to receive callback from the Canvas System. " alt="" coords="275,13,465,54"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b14a90c01f3f48285d0a1ba37207f23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_UpdateRegistry.PerformUpdateForMeshRendererObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to handle objects that need updating. </p>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac449cc7e45976566e6420c763ab8c5af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TMPro.TMP_UpdateRegistry.RegisterCanvasElementForGraphicRebuild </td>
+          <td>(</td>
+          <td class="paramtype">ICanvasElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to register elements which require a graphic rebuild. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00077">77</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_ac449cc7e45976566e6420c763ab8c5af_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_ac449cc7e45976566e6420c763ab8c5af_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_ac449cc7e45976566e6420c763ab8c5af_cgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_ac449cc7e45976566e6420c763ab8c5af_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#adffe59c0a3c1f0671faf140834663cd1" title="TMPro.TMP_UpdateRegistry.\lInternalRegisterCanvasElementFor\lGraphicRebuild" alt="" coords="277,5,499,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af6cca1c5d46be0cb39cf1fc822a7ef1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TMPro.TMP_UpdateRegistry.RegisterCanvasElementForLayoutRebuild </td>
+          <td>(</td>
+          <td class="paramtype">ICanvasElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to register elements which require a layout rebuild. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00054">54</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_af6cca1c5d46be0cb39cf1fc822a7ef1b_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_af6cca1c5d46be0cb39cf1fc822a7ef1b_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_af6cca1c5d46be0cb39cf1fc822a7ef1b_cgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_af6cca1c5d46be0cb39cf1fc822a7ef1b_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#aeca52d0e9c90d6ee87e2576380eb42fb" title="TMPro.TMP_UpdateRegistry.\lInternalRegisterCanvasElementFor\lLayoutRebuild" alt="" coords="272,5,493,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abdd464c5a6919c3383c4d8fa19fe60df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TMPro.TMP_UpdateRegistry.UnRegisterCanvasElementForRebuild </td>
+          <td>(</td>
+          <td class="paramtype">ICanvasElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to unregister elements which no longer require a rebuild. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00152">152</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_cgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___update_registry.html#ae220b0e303a3df85e09c5cb1ad8ed757" title="TMPro.TMP_UpdateRegistry.\lInternalUnRegisterCanvasElement\lForLayoutRebuild" alt="" coords="292,5,511,61"/><area shape="rect" id="node3" href="class_t_m_pro_1_1_t_m_p___update_registry.html#af137e2a239cd21cd1330adcf9d140724" title="TMPro.TMP_UpdateRegistry.\lInternalUnRegisterCanvasElement\lForGraphicRebuild" alt="" coords="292,85,511,141"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_icgraph.png" border="0" usemap="#class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_icgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_icgraph" id="class_t_m_pro_1_1_t_m_p___update_registry_abdd464c5a6919c3383c4d8fa19fe60df_icgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___sub_mesh_u_i.html#a06ee252d51e45e951fdef895135559b4" title="TMPro.TMP_SubMeshUI.OnDisable" alt="" coords="292,13,521,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a09be9c032b2ea3110530170b3ffea7ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;int, int&gt; TMPro.TMP_UpdateRegistry.m_GraphicQueueLookup = new Dictionary&lt;int, int&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa474cdd84f312d3da5f7f5f3938d5750"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;ICanvasElement&gt; TMPro.TMP_UpdateRegistry.m_GraphicRebuildQueue = new List&lt;ICanvasElement&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d3390487f897b8e037ef0c630fafe50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;int, int&gt; TMPro.TMP_UpdateRegistry.m_LayoutQueueLookup = new Dictionary&lt;int, int&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa06598fc4f93044a0746f3954674c93a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;ICanvasElement&gt; TMPro.TMP_UpdateRegistry.m_LayoutRebuildQueue = new List&lt;ICanvasElement&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37e2b5c1cc3ae603dadf78717c11bbcd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html">TMP_UpdateRegistry</a> TMPro.TMP_UpdateRegistry.s_Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a4b7cc4e0c23baf71b6925bad7d8aca97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___update_registry.html">TMP_UpdateRegistry</a> TMPro.TMP_UpdateRegistry.instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a singleton instance of the registry </p>
+
+<p>在文件 <a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a> 第 <a class="el" href="_t_m_p___update_registery_8cs_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/<a class="el" href="_t_m_p___update_registery_8cs_source.html">TMP_UpdateRegistery.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:43 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

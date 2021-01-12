@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Signals/SignalManager.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_2c300a7ab6bcbaf4a24a50e447574c73.html">Signals</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SignalManager.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_signal_manager_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.IO;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_signal_manager_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">    6</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_object.html">Object</a> = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline.Signals</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html">SignalManager</a> : IDisposable</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#ac96cd799e6847a1b1f54534174f25653">   12</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html">SignalManager</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#ac96cd799e6847a1b1f54534174f25653">m_Instance</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a5b286dd144b7590dbbbb2ee21004831b">   13</a></span>&#160;        readonly List&lt;SignalAsset&gt; m_assets = <span class="keyword">new</span> List&lt;SignalAsset&gt;();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html">SignalManager</a> instance</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keywordflow">if</span> (m_Instance == null)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    m_Instance = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html">SignalManager</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    m_Instance.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#afd7472b045ca50f77eeeb28697424735">Refresh</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">return</span> m_Instance;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            set { m_Instance = value; }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">internal</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html">SignalManager</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>.OnEnableCallback += Register;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;SignalAsset&gt; assets</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a090d00bd66ca5aafc4b024f9ff73bf17">   37</a></span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">foreach</span> (var asset <span class="keywordflow">in</span> instance.m_assets)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="keywordflow">if</span> (asset != null)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        yield <span class="keywordflow">return</span> asset;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a54d05289ad6d60ebe6a543b2cb2c1326">   48</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a54d05289ad6d60ebe6a543b2cb2c1326">CreateSignalAssetInstance</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            var newSignal = ScriptableObject.CreateInstance&lt;<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&gt;();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            newSignal.name = Path.GetFileNameWithoutExtension(path);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            var asset = AssetDatabase.LoadMainAssetAtPath(path) as <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (asset != null)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(asset, <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#a07e8bca615df71206e03d96be2d472ef">UndoCreateSignalAsset</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                EditorUtility.CopySerialized(newSignal, asset);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <a class="code" href="namespace_object.html">Object</a>.DestroyImmediate(newSignal);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> asset;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            AssetDatabase.CreateAsset(newSignal, path);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> newSignal;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a7e6b5ec850e88a5c88eff387a54325b4">   66</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a7e6b5ec850e88a5c88eff387a54325b4">Dispose</a>()</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>.OnEnableCallback -= Register;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#ae81f5e18561ad7e517a04c73ca0d4a83">   71</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#ae81f5e18561ad7e517a04c73ca0d4a83">Register</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> a)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            m_assets.Add(a);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#afd7472b045ca50f77eeeb28697424735">   76</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#afd7472b045ca50f77eeeb28697424735">Refresh</a>()</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            var guids = AssetDatabase.FindAssets(<span class="stringliteral">&quot;t:SignalAsset&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">foreach</span> (var g <span class="keywordflow">in</span> guids)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                var path = AssetDatabase.GUIDToAssetPath(g);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                var asset = AssetDatabase.LoadAssetAtPath&lt;<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&gt;(path);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                m_assets.Add(asset);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager_html_afd7472b045ca50f77eeeb28697424735"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#afd7472b045ca50f77eeeb28697424735">UnityEditor.Timeline.Signals.SignalManager.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_manager_8cs_source.html#l00076">SignalManager.cs:76</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager_html_a54d05289ad6d60ebe6a543b2cb2c1326"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a54d05289ad6d60ebe6a543b2cb2c1326">UnityEditor.Timeline.Signals.SignalManager.CreateSignalAssetInstance</a></div><div class="ttdeci">static SignalAsset CreateSignalAssetInstance(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_manager_8cs_source.html#l00048">SignalManager.cs:48</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html">UnityEditor.Timeline.Signals.Styles</a></div><div class="ttdef"><b>Definition:</b> <a href="_styles_8cs_source.html#l00005">Styles.cs:5</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager_html_ac96cd799e6847a1b1f54534174f25653"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#ac96cd799e6847a1b1f54534174f25653">UnityEditor.Timeline.Signals.SignalManager.m_Instance</a></div><div class="ttdeci">static SignalManager m_Instance</div><div class="ttdef"><b>Definition:</b> <a href="_signal_manager_8cs_source.html#l00012">SignalManager.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_signal_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">UnityEngine.Timeline.SignalAsset</a></div><div class="ttdoc">An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver...</div><div class="ttdef"><b>Definition:</b> <a href="_signal_asset_8cs_source.html#l00012">SignalAsset.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager_html_ae81f5e18561ad7e517a04c73ca0d4a83"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#ae81f5e18561ad7e517a04c73ca0d4a83">UnityEditor.Timeline.Signals.SignalManager.Register</a></div><div class="ttdeci">void Register(SignalAsset a)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_manager_8cs_source.html#l00071">SignalManager.cs:71</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager_html_a7e6b5ec850e88a5c88eff387a54325b4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html#a7e6b5ec850e88a5c88eff387a54325b4">UnityEditor.Timeline.Signals.SignalManager.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_manager_8cs_source.html#l00066">SignalManager.cs:66</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles_html_a07e8bca615df71206e03d96be2d472ef"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#a07e8bca615df71206e03d96be2d472ef">UnityEditor.Timeline.Signals.Styles.UndoCreateSignalAsset</a></div><div class="ttdeci">static readonly string UndoCreateSignalAsset</div><div class="ttdef"><b>Definition:</b> <a href="_styles_8cs_source.html#l00027">Styles.cs:27</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_manager.html">UnityEditor.Timeline.Signals.SignalManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_manager_8cs_source.html#l00010">SignalManager.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">UnityEngine.Timeline.TimelineUndo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00012">TimelineUndo.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a2c45dda5e68a6de6f481aee4888b352c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">UnityEngine.Timeline.TimelineUndo.PushUndo</a></div><div class="ttdeci">static void PushUndo(Object thingToDirty, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00034">TimelineUndo.cs:34</a></div></div>
+<div class="ttc" id="namespace_object_html"><div class="ttname"><a href="namespace_object.html">Object</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

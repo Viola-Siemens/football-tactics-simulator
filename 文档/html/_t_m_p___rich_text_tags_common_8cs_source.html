@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_RichTextTagsCommon.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a7d267b27539021f3422d98d206ea06f.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_RichTextTagsCommon.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___rich_text_tags_common_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Bindings;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8ee">   10</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8ee">RichTextTag</a> : uint</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">// Rich Text Tags</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea2909dd0e0336f10b6da9735b859a3d19">BOLD</a> = 66,                      <span class="comment">// &lt;b&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea2ecb9c429c72036480352055a1c11433">SLASH_BOLD</a> = 1613,              <span class="comment">// &lt;/b&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea25093123b8943308104129e1d762f3b7">ITALIC</a> = 73,                    <span class="comment">// &lt;i&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeafcc8f66f469777ae8d85c59be3562fd0">SLASH_ITALIC</a> = 1606,            <span class="comment">// &lt;/i&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea0086c73c90c261db630b4dc8aea09bcf">UNDERLINE</a> = 85,                 <span class="comment">// &lt;u&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaf8fa7dcc13e8f353ff434bc392347448">SLASH_UNDERLINE</a> = 1626,         <span class="comment">// &lt;/u&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaad166989fa2b7da7d238b3e7105c64f8">STRIKETHROUGH</a> = 83,             <span class="comment">// &lt;s&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea20ab7fe386a7609009cf3243034a9bdb">SLASH_STRIKETHROUGH</a> = 1628,     <span class="comment">// &lt;/s&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea04bd834032febb3fda8c6936ee140949">COLOR</a> = 81999901,               <span class="comment">// &lt;color&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaba5424afaa679a803ad02c05472afed7">SLASH_COLOR</a> = 1909026194,       <span class="comment">// &lt;/color&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea62e5cef85d46f1a5a2144d9fd463b79e">SIZE</a> = 3061285,                 <span class="comment">// &lt;size&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea7fb957905d27bf1bd34c56f47ce4acbe">SLASH_SIZE</a> = 58429962,          <span class="comment">// &lt;/size&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea2a3389b1d8bc619aed964477ec7b1a2d">SPRITE</a> = 3303439849,            <span class="comment">// &lt;sprite&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea19d3326f3137cbadd21ce901a9bed4a7">BR</a> = 2256,                      <span class="comment">// &lt;br&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea264709ebce8699b21d39a308b1f9d32c">STYLE</a> = 100252951,              <span class="comment">// &lt;style&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea830df2fe6c93cfe7edb1821067863b36">SLASH_STYLE</a> = 1927738392,       <span class="comment">// &lt;/style&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea4aaf23261cd3bd2064183cf1b53f1023">FONT</a> = 2586451,                 <span class="comment">// &lt;font&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5ff19cc74dfaa9e9d66609a91dbcbd2e">SLASH_FONT</a> = 57747708,          <span class="comment">// &lt;/font&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea58c0a0e97e6d2f615bc264c2775fda44">LINK</a> = 2656128,                 <span class="comment">// &lt;link&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea18fcf3df861cc3d4b29753ea50882539">SLASH_LINK</a> = 57686191,          <span class="comment">// &lt;/link&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac247ec6f5fb398afd30f63d374f461dc">FONT_WEIGHT</a> = 2405071134,       <span class="comment">// &lt;font-weight=xxx&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeacc9e9422241d82219225cdcb6dedc138">SLASH_FONT_WEIGHT</a> = 3536990865, <span class="comment">// &lt;/font-weight&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// Font Features</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea41864d483246b979c121ec262afa3d83">LIGA</a> = 2655971,                 <span class="comment">// &lt;liga&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea0c83a917752ee172693977ee93f0b693">SLASH_LIGA</a> = 57686604,          <span class="comment">// &lt;/liga&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea84530a763aaabd1c6fc3016f827c339c">FRAC</a> = 2598518,                 <span class="comment">// &lt;frac&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea23277b4e5d3e3a1652669a65431e4f61">SLASH_FRAC</a> = 57774681,          <span class="comment">// &lt;/frac&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// Attributes</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaad32e604e17467fc435538334fbddf3e">NAME</a> = 2875623,                 <span class="comment">// &lt;sprite name=&quot;Name of Sprite&quot;&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeacb4ae3b37047fb4b2c0d16f8bf84f076">INDEX</a> = 84268030,               <span class="comment">// &lt;sprite index=7&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea9cfa0f0470ae36e8abcb453720a2d667">TINT</a> = 2960519,                 <span class="comment">// &lt;tint=bool&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea801e4429e6c1785b2cda151cf15217b2">ANIM</a> = 2283339,                 <span class="comment">// &lt;anim=&quot;first frame, last frame, frame rate&quot;&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac740ce1ae95095daaa5eb2362f3151b3">MATERIAL</a> = 825491659,           <span class="comment">// &lt;font=&quot;Name of font asset&quot; material=&quot;Name of material&quot;&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// Named Colors</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaa2d9547b5d3dd9f05984475f7c926da0">RED</a> = 91635,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea9de0e5dd94e861317e74964bed179fa0">GREEN</a> = 87065851,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea1b3e1ee9bff86431dea6b181365ba65f">BLUE</a> = 2457214,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea8a568e5f41b7e4da88fe5c4a00aad34e">YELLOW</a> = 3412522628,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5b6490317b6f7270bc3ab5ffd07c1f52">ORANGE</a> = 3186379376,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// Prefix and Unit suffix</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea883acd43c77567e1c3baced84ccf6ed7">PLUS</a> = 43,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaffc0d9b54a1fe677c4c9e6b050e67c81">MINUS</a> = 45,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea87e6c078833a3c35b65067a50c936b37">PX</a> = 2568,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeae52807e46332d7ae143e013f4d66bef4">PLUS_PX</a> = 49507,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea1795575d7247544addde4867b81090fb">MINUS_PX</a> = 47461,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeab95c3d50fa47443166f7d356eaed8006">EM</a> = 2216,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea7286612b3fba385e698013e90319e6ca">PLUS_EM</a> = 49091,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaccc358645143a4fa3d4c3d0780c77fd8">MINUS_EM</a> = 46789,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac1b9a5bfdcf1b4b586c4953afeff622b">PCT</a> = 85031,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea21575e2e5f0fb5768830e9f0491db88d">PLUS_PCT</a> = 1634348,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5c4bb3aa2745387d933efc100a20b161">MINUS_PCT</a> = 1567082,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea21ee69ba26b6e644d4dddce593855d84">PERCENTAGE</a> = 37,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea1379bf4ca166dc8066db7d23fb77c1b5">PLUS_PERCENTAGE</a> = 1454,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaa4e2a6a1ed7b295dafe15f4fffe6c34c">MINUS_PERCENTAGE</a> = 1512,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac0d83f0b82a6b30de8811e69e6d95c61">TRUE</a> = 2932022,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea946003f97ccc52d5d3b54ac0ec31bbfc">FALSE</a> = 85422813,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a> = 3673993291,           <span class="comment">// &lt;font=&quot;Default&quot;&gt;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    };</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0f">   83</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0f">TagValueType</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0fa6adf97f83acf6453d4a6a4b1070f3754">None</a>            = 0x0,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0fa4bd29445f343ee08aabed8c83c64f046">NumericalValue</a>  = 0x1,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0faf6d2b0e17b94cf73adf2a5be1f0ca160">StringValue</a>     = 0x2,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0facce4f6bbe06c14f98350c773d340f169">ColorValue</a>      = 0x4,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3">TagUnitType</a></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3ac3d2f5d37334dc978fd8b17fc77408a1">Pixels</a>      = 0x0,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3a4d8eede677534fa5db530d40134ed258">FontUnits</a>   = 0x1,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3a37be07209f53a5d636d5c904ca9ae64c">Percentage</a>  = 0x2,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73">  101</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73">UnicodeCharacter</a> : uint</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a7efce9c530b260c967b1acd2bd307b91">HYPHEN_MINUS</a> = 0x2D,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a0dbd603baa7a69555ceff0f9eaae0edd">SOFT_HYPHEN</a> = 0xAD,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73aa4c9d25ff11ed2fba63df25f445f5b10">HYPHEN</a> = 0x2010,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a76d0d74677801605de1326191a56ed80">NON_BREAKING_HYPHEN</a> = 0x2011,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a709af910196ffdfb3aedce5c7eb8eaad">ZERO_WIDTH_SPACE</a> = 0x200B,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a8e69eeaa109e6599de6418118a03c60d">RIGHT_SINGLE_QUOTATION</a> = 0x2019,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a9df35983f4024e31955de0f1e545e888">APOSTROPHE</a> = 0x27,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a5768db66fb2452c2489e8e8254341801">WORD_JOINER</a> = 0x2060,           <span class="comment">// Prohibits line break.</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73aa4c9d25ff11ed2fba63df25f445f5b10"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73aa4c9d25ff11ed2fba63df25f445f5b10">TMPro.HYPHEN</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73a8e69eeaa109e6599de6418118a03c60d"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a8e69eeaa109e6599de6418118a03c60d">TMPro.RIGHT_SINGLE_QUOTATION</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaba5424afaa679a803ad02c05472afed7"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaba5424afaa679a803ad02c05472afed7">TMPro.SLASH_COLOR</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea2909dd0e0336f10b6da9735b859a3d19"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea2909dd0e0336f10b6da9735b859a3d19">TMPro.BOLD</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea5b39c8b553c821e7cddc6da64b5bd2ee"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5b39c8b553c821e7cddc6da64b5bd2ee">TMPro.DEFAULT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeac247ec6f5fb398afd30f63d374f461dc"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac247ec6f5fb398afd30f63d374f461dc">TMPro.FONT_WEIGHT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeacc9e9422241d82219225cdcb6dedc138"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeacc9e9422241d82219225cdcb6dedc138">TMPro.SLASH_FONT_WEIGHT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea0c83a917752ee172693977ee93f0b693"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea0c83a917752ee172693977ee93f0b693">TMPro.SLASH_LIGA</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a9d72007c13ac0bf341a0ea96f1175f0f"><div class="ttname"><a href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0f">TMPro.TagValueType</a></div><div class="ttdeci">TagValueType</div><div class="ttdoc">Defines the type of value used by a rich text tag or tag attribute. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___rich_text_tags_common_8cs_source.html#l00083">TMP_RichTextTagsCommon.cs:83</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea19d3326f3137cbadd21ce901a9bed4a7"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea19d3326f3137cbadd21ce901a9bed4a7">TMPro.BR</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea0086c73c90c261db630b4dc8aea09bcf"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea0086c73c90c261db630b4dc8aea09bcf">TMPro.UNDERLINE</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a4291ad75b83d74e657781bd9e36613f3ac3d2f5d37334dc978fd8b17fc77408a1"><div class="ttname"><a href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3ac3d2f5d37334dc978fd8b17fc77408a1">TMPro.Pixels</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaad166989fa2b7da7d238b3e7105c64f8"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaad166989fa2b7da7d238b3e7105c64f8">TMPro.STRIKETHROUGH</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea25093123b8943308104129e1d762f3b7"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea25093123b8943308104129e1d762f3b7">TMPro.ITALIC</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73">TMPro.UnicodeCharacter</a></div><div class="ttdeci">UnicodeCharacter</div><div class="ttdoc">Commonly referenced Unicode characters in the text generation process. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___rich_text_tags_common_8cs_source.html#l00101">TMP_RichTextTagsCommon.cs:101</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea7fb957905d27bf1bd34c56f47ce4acbe"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea7fb957905d27bf1bd34c56f47ce4acbe">TMPro.SLASH_SIZE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73a709af910196ffdfb3aedce5c7eb8eaad"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a709af910196ffdfb3aedce5c7eb8eaad">TMPro.ZERO_WIDTH_SPACE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaf8fa7dcc13e8f353ff434bc392347448"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaf8fa7dcc13e8f353ff434bc392347448">TMPro.SLASH_UNDERLINE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a4291ad75b83d74e657781bd9e36613f3"><div class="ttname"><a href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3">TMPro.TagUnitType</a></div><div class="ttdeci">TagUnitType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___rich_text_tags_common_8cs_source.html#l00091">TMP_RichTextTagsCommon.cs:91</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea1b3e1ee9bff86431dea6b181365ba65f"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea1b3e1ee9bff86431dea6b181365ba65f">TMPro.BLUE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeae52807e46332d7ae143e013f4d66bef4"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeae52807e46332d7ae143e013f4d66bef4">TMPro.PLUS_PX</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeafcc8f66f469777ae8d85c59be3562fd0"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeafcc8f66f469777ae8d85c59be3562fd0">TMPro.SLASH_ITALIC</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea41864d483246b979c121ec262afa3d83"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea41864d483246b979c121ec262afa3d83">TMPro.LIGA</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea2a3389b1d8bc619aed964477ec7b1a2d"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea2a3389b1d8bc619aed964477ec7b1a2d">TMPro.SPRITE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea5c4bb3aa2745387d933efc100a20b161"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5c4bb3aa2745387d933efc100a20b161">TMPro.MINUS_PCT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a9d72007c13ac0bf341a0ea96f1175f0facce4f6bbe06c14f98350c773d340f169"><div class="ttname"><a href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0facce4f6bbe06c14f98350c773d340f169">TMPro.ColorValue</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea04bd834032febb3fda8c6936ee140949"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea04bd834032febb3fda8c6936ee140949">TMPro.COLOR</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea20ab7fe386a7609009cf3243034a9bdb"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea20ab7fe386a7609009cf3243034a9bdb">TMPro.SLASH_STRIKETHROUGH</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a4291ad75b83d74e657781bd9e36613f3a37be07209f53a5d636d5c904ca9ae64c"><div class="ttname"><a href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3a37be07209f53a5d636d5c904ca9ae64c">TMPro.Percentage</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeac0d83f0b82a6b30de8811e69e6d95c61"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac0d83f0b82a6b30de8811e69e6d95c61">TMPro.TRUE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea21ee69ba26b6e644d4dddce593855d84"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea21ee69ba26b6e644d4dddce593855d84">TMPro.PERCENTAGE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73a5768db66fb2452c2489e8e8254341801"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a5768db66fb2452c2489e8e8254341801">TMPro.WORD_JOINER</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaa4e2a6a1ed7b295dafe15f4fffe6c34c"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaa4e2a6a1ed7b295dafe15f4fffe6c34c">TMPro.MINUS_PERCENTAGE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea830df2fe6c93cfe7edb1821067863b36"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea830df2fe6c93cfe7edb1821067863b36">TMPro.SLASH_STYLE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a9d72007c13ac0bf341a0ea96f1175f0fa4bd29445f343ee08aabed8c83c64f046"><div class="ttname"><a href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0fa4bd29445f343ee08aabed8c83c64f046">TMPro.NumericalValue</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73a76d0d74677801605de1326191a56ed80"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a76d0d74677801605de1326191a56ed80">TMPro.NON_BREAKING_HYPHEN</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea8a568e5f41b7e4da88fe5c4a00aad34e"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea8a568e5f41b7e4da88fe5c4a00aad34e">TMPro.YELLOW</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaffc0d9b54a1fe677c4c9e6b050e67c81"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaffc0d9b54a1fe677c4c9e6b050e67c81">TMPro.MINUS</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeac740ce1ae95095daaa5eb2362f3151b3"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac740ce1ae95095daaa5eb2362f3151b3">TMPro.MATERIAL</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73a7efce9c530b260c967b1acd2bd307b91"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a7efce9c530b260c967b1acd2bd307b91">TMPro.HYPHEN_MINUS</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea1795575d7247544addde4867b81090fb"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea1795575d7247544addde4867b81090fb">TMPro.MINUS_PX</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea1379bf4ca166dc8066db7d23fb77c1b5"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea1379bf4ca166dc8066db7d23fb77c1b5">TMPro.PLUS_PERCENTAGE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea801e4429e6c1785b2cda151cf15217b2"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea801e4429e6c1785b2cda151cf15217b2">TMPro.ANIM</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a9d72007c13ac0bf341a0ea96f1175f0fa6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0fa6adf97f83acf6453d4a6a4b1070f3754">TMPro.None</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea9de0e5dd94e861317e74964bed179fa0"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea9de0e5dd94e861317e74964bed179fa0">TMPro.GREEN</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea84530a763aaabd1c6fc3016f827c339c"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea84530a763aaabd1c6fc3016f827c339c">TMPro.FRAC</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea9cfa0f0470ae36e8abcb453720a2d667"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea9cfa0f0470ae36e8abcb453720a2d667">TMPro.TINT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaccc358645143a4fa3d4c3d0780c77fd8"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaccc358645143a4fa3d4c3d0780c77fd8">TMPro.MINUS_EM</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea23277b4e5d3e3a1652669a65431e4f61"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea23277b4e5d3e3a1652669a65431e4f61">TMPro.SLASH_FRAC</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea18fcf3df861cc3d4b29753ea50882539"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea18fcf3df861cc3d4b29753ea50882539">TMPro.SLASH_LINK</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a9d72007c13ac0bf341a0ea96f1175f0faf6d2b0e17b94cf73adf2a5be1f0ca160"><div class="ttname"><a href="namespace_t_m_pro.html#a9d72007c13ac0bf341a0ea96f1175f0faf6d2b0e17b94cf73adf2a5be1f0ca160">TMPro.StringValue</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a4291ad75b83d74e657781bd9e36613f3a4d8eede677534fa5db530d40134ed258"><div class="ttname"><a href="namespace_t_m_pro.html#a4291ad75b83d74e657781bd9e36613f3a4d8eede677534fa5db530d40134ed258">TMPro.FontUnits</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea87e6c078833a3c35b65067a50c936b37"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea87e6c078833a3c35b65067a50c936b37">TMPro.PX</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeacb4ae3b37047fb4b2c0d16f8bf84f076"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeacb4ae3b37047fb4b2c0d16f8bf84f076">TMPro.INDEX</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeac1b9a5bfdcf1b4b586c4953afeff622b"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeac1b9a5bfdcf1b4b586c4953afeff622b">TMPro.PCT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea5ff19cc74dfaa9e9d66609a91dbcbd2e"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5ff19cc74dfaa9e9d66609a91dbcbd2e">TMPro.SLASH_FONT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8ee"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8ee">TMPro.RichTextTag</a></div><div class="ttdeci">RichTextTag</div><div class="ttdoc">Rich Text Tags and Attribute definitions and their respective HashCode values. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___rich_text_tags_common_8cs_source.html#l00010">TMP_RichTextTagsCommon.cs:10</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea58c0a0e97e6d2f615bc264c2775fda44"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea58c0a0e97e6d2f615bc264c2775fda44">TMPro.LINK</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea946003f97ccc52d5d3b54ac0ec31bbfc"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea946003f97ccc52d5d3b54ac0ec31bbfc">TMPro.FALSE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea21575e2e5f0fb5768830e9f0491db88d"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea21575e2e5f0fb5768830e9f0491db88d">TMPro.PLUS_PCT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea5b6490317b6f7270bc3ab5ffd07c1f52"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea5b6490317b6f7270bc3ab5ffd07c1f52">TMPro.ORANGE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea4aaf23261cd3bd2064183cf1b53f1023"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea4aaf23261cd3bd2064183cf1b53f1023">TMPro.FONT</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea62e5cef85d46f1a5a2144d9fd463b79e"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea62e5cef85d46f1a5a2144d9fd463b79e">TMPro.SIZE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea264709ebce8699b21d39a308b1f9d32c"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea264709ebce8699b21d39a308b1f9d32c">TMPro.STYLE</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea7286612b3fba385e698013e90319e6ca"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea7286612b3fba385e698013e90319e6ca">TMPro.PLUS_EM</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaad32e604e17467fc435538334fbddf3e"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaad32e604e17467fc435538334fbddf3e">TMPro.NAME</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73a9df35983f4024e31955de0f1e545e888"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a9df35983f4024e31955de0f1e545e888">TMPro.APOSTROPHE</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeab95c3d50fa47443166f7d356eaed8006"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeab95c3d50fa47443166f7d356eaed8006">TMPro.EM</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eeaa2d9547b5d3dd9f05984475f7c926da0"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eeaa2d9547b5d3dd9f05984475f7c926da0">TMPro.RED</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea2ecb9c429c72036480352055a1c11433"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea2ecb9c429c72036480352055a1c11433">TMPro.SLASH_BOLD</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ac289c61e23e09044581076f817fbf8eea883acd43c77567e1c3baced84ccf6ed7"><div class="ttname"><a href="namespace_t_m_pro.html#ac289c61e23e09044581076f817fbf8eea883acd43c77567e1c3baced84ccf6ed7">TMPro.PLUS</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a8009759a25fe96f60b9665e24ea8ae73a0dbd603baa7a69555ceff0f9eaae0edd"><div class="ttname"><a href="namespace_t_m_pro.html#a8009759a25fe96f60b9665e24ea8ae73a0dbd603baa7a69555ceff0f9eaae0edd">TMPro.SOFT_HYPHEN</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:33 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

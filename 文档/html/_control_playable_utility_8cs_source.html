@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/ControlPlayableUtility.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_0724e84c20f94a0e0cb26eb6bc9f3803.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ControlPlayableUtility.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_control_playable_utility_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html">    7</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html">ControlPlayableUtility</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a239614efebae47ddf892fd43feddb4b2">    9</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a239614efebae47ddf892fd43feddb4b2">DetectCycle</a>(</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html">ControlPlayableAsset</a> asset, PlayableDirector director, HashSet&lt;PlayableDirector&gt; set = null)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordflow">if</span> (director == null || asset == null || !asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a37408636f4557858239e4319d9f15003">updateDirector</a>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">if</span> (set == null)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                set = <span class="keyword">new</span> HashSet&lt;PlayableDirector&gt;();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">if</span> (set.Contains(director))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            var gameObject = asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a0cfea1ea61823e2b3a7287ff101435a9">sourceGameObject</a>.Resolve(director);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (gameObject == null)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            set.Add(director);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">foreach</span> (var subDirector <span class="keywordflow">in</span> asset.GetComponent&lt;PlayableDirector&gt;(gameObject))</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">foreach</span> (var childAsset <span class="keywordflow">in</span> GetPlayableAssets(subDirector))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <span class="keywordflow">if</span> (DetectCycle(childAsset, subDirector, set))</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            set.Remove(director);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a90e7ed44a50217cccb56b71f805462ad">   41</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;ControlPlayableAsset&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a90e7ed44a50217cccb56b71f805462ad">GetPlayableAssets</a>(PlayableDirector director)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            var timeline = director != null ? (director.playableAsset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>) : null;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (timeline != null)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">foreach</span> (var t <span class="keywordflow">in</span> timeline.GetOutputTracks())</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    var controlTrack = t as <a class="code" href="class_unity_engine_1_1_timeline_1_1_control_track.html">ControlTrack</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="keywordflow">if</span> (controlTrack != null)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        <span class="keywordflow">foreach</span> (var c <span class="keywordflow">in</span> t.GetClips())</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            var asset = c.asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html">ControlPlayableAsset</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            <span class="keywordflow">if</span> (asset != null)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                yield <span class="keywordflow">return</span> asset;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_control_playable_asset_html_a0cfea1ea61823e2b3a7287ff101435a9"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a0cfea1ea61823e2b3a7287ff101435a9">UnityEngine.Timeline.ControlPlayableAsset.sourceGameObject</a></div><div class="ttdeci">ExposedReference&lt; GameObject &gt; sourceGameObject</div><div class="ttdoc">GameObject in the scene to control, or the parent of the instantiated prefab. </div><div class="ttdef"><b>Definition:</b> <a href="_control_playable_asset_8cs_source.html#l00021">ControlPlayableAsset.cs:21</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_control_playable_asset_html_a37408636f4557858239e4319d9f15003"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a37408636f4557858239e4319d9f15003">UnityEngine.Timeline.ControlPlayableAsset.updateDirector</a></div><div class="ttdeci">bool updateDirector</div><div class="ttdoc">Indicates whether playableDirectors are controlled. </div><div class="ttdef"><b>Definition:</b> <a href="_control_playable_asset_8cs_source.html#l00044">ControlPlayableAsset.cs:44</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_control_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_control_track.html">UnityEngine.Timeline.ControlTrack</a></div><div class="ttdoc">A Track whose clips control time-related elements on a GameObject. </div><div class="ttdef"><b>Definition:</b> <a href="_control_track_8cs_source.html#l00011">ControlTrack.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_control_playable_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html">UnityEngine.Timeline.ControlPlayableAsset</a></div><div class="ttdoc">Playable Asset that generates playables for controlling time-related elements on a GameObject...</div><div class="ttdef"><b>Definition:</b> <a href="_control_playable_asset_8cs_source.html#l00012">ControlPlayableAsset.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_control_playable_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html">UnityEditor.Timeline.ControlPlayableUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_playable_utility_8cs_source.html#l00007">ControlPlayableUtility.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_control_playable_utility_html_a239614efebae47ddf892fd43feddb4b2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a239614efebae47ddf892fd43feddb4b2">UnityEditor.Timeline.ControlPlayableUtility.DetectCycle</a></div><div class="ttdeci">static bool DetectCycle(ControlPlayableAsset asset, PlayableDirector director, HashSet&lt; PlayableDirector &gt; set=null)</div><div class="ttdef"><b>Definition:</b> <a href="_control_playable_utility_8cs_source.html#l00009">ControlPlayableUtility.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_control_playable_utility_html_a90e7ed44a50217cccb56b71f805462ad"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a90e7ed44a50217cccb56b71f805462ad">UnityEditor.Timeline.ControlPlayableUtility.GetPlayableAssets</a></div><div class="ttdeci">static IEnumerable&lt; ControlPlayableAsset &gt; GetPlayableAssets(PlayableDirector director)</div><div class="ttdef"><b>Definition:</b> <a href="_control_playable_utility_8cs_source.html#l00041">ControlPlayableUtility.cs:41</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Actions/ItemAction.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_3afc184059edadb21e699df9871f4945.html">Actions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ItemAction.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_item_action_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [ActiveInMode(TimelineModes.Default)]</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html">    9</a></span>&#160;    <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html">ItemAction</a>&lt;T&gt; : <a class="code" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">MenuItemActionBase</a> where T : class</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keywordtype">bool</span> Execute(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, T[] items);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a4c21bc6c6ef3ef813b317f20aa71cf68">   13</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a4c21bc6c6ef3ef813b317f20aa71cf68">GetDisplayState</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, T[] items)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> items.Length &gt; 0 ? <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Visible : <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Disabled;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a8a10a60f5d56b6ee2e98328fc27ab207">   18</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a8a10a60f5d56b6ee2e98328fc27ab207">GetDisplayName</a>(T[] items)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> menuName;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a0fe683c25b21a216ccd20967511f83be">   23</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a0fe683c25b21a216ccd20967511f83be">CanExecute</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, T[] items)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span> GetDisplayState(state, items) == <a class="code" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>.Visible;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a13a8d1b8e3449ac313a5a5882afa7456">   28</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a13a8d1b8e3449ac313a5a5882afa7456">AddMenuItem</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, T[] items, List&lt;MenuActionItem&gt; menuItem)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            var mode = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.currentMode.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ab4e096916047a8970c8b8ffaacd03440">mode</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            menuItem.Add(</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    category = category,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    entryName = GetDisplayName(items),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    shortCut = this.shortCut,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    isChecked = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    isActiveInMode = IsActionActiveInMode(<span class="keyword">this</span>, mode),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    priority = priority,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    state = GetDisplayState(state, items),</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    callback = () =&gt; Execute(state, items)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#aab9b449c05f93c479a730380a3c10abf">   46</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#aab9b449c05f93c479a730380a3c10abf">HandleShortcut</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Event evt, T item)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            T[] items = { item };</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">foreach</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html">ItemAction&lt;T&gt;</a> action <span class="keywordflow">in</span> actions)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                var attr = action.GetType().GetCustomAttributes(typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcut_attribute.html">ShortcutAttribute</a>), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">foreach</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcut_attribute.html">ShortcutAttribute</a> shortcut <span class="keywordflow">in</span> attr)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordflow">if</span> (shortcut.<a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcut_attribute.html#a527ae86b27596f7171aab86f3adfa749">MatchesEvent</a>(evt))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        <span class="keywordflow">if</span> (s_ShowActionTriggeredByShortcut)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                            <a class="code" href="namespace_debug.html">Debug</a>.Log(action.GetType().Name);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        <span class="keywordflow">if</span> (!IsActionActiveInMode(action, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.currentMode.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ab4e096916047a8970c8b8ffaacd03440">mode</a>))</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        var result = action.<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a11f32d2b5a6416a3269271315f81b01c">Execute</a>(state, items);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a773c3585d8ee2c63765f06afa6536990">Refresh</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab469068a54205d03f681a4ca66919395">Evaluate</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a8e908a06d33dc99772c31c790e3316f2">   75</a></span>&#160;        <span class="keyword">static</span> List&lt;ItemAction&lt;T&gt;&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a8e908a06d33dc99772c31c790e3316f2">s_ActionClasses</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">static</span> List&lt;ItemAction&lt;T&gt;&gt; actions</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#afd06781c32085a8272ad0312db645b18">   78</a></span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">if</span> (s_ActionClasses == null)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    s_ActionClasses = GetActionsOfType(typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html">ItemAction&lt;T&gt;</a>)).Select(x =&gt; (<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html">ItemAction&lt;T&gt;</a>)x.GetConstructors()[0].Invoke(null)).ToList();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">return</span> s_ActionClasses;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#ae9de1df6067d3c58f06355affd2b2b99">   90</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#ae9de1df6067d3c58f06355affd2b2b99">GetMenuEntries</a>(T[] items, List&lt;MenuActionItem&gt; menuItems)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">if</span> (items == null || items.Length == 0)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> actions)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> (action.showInMenu)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    action.AddMenuItem(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">state</a>, items, menuItems);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a854f4cc98ba25dda77a31a0f9a28ea99">  102</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> Invoke&lt;TAction&gt;(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, T[] items)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            where TAction : <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html">ItemAction&lt;T&gt;</a></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            var itemsDerived = items.ToArray();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">if</span> (!itemsDerived.Any())</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            var action = actions.FirstOrDefault(x =&gt; x.GetType() == typeof(TAction));</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">if</span> (action != null)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> action.<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html#a11f32d2b5a6416a3269271315f81b01c">Execute</a>(state, itemsDerived);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_action.html#abf464a60e6f5541ad14d4a6a98c2a88f">  118</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> Invoke&lt;TAction&gt;(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, T item)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            where TAction : <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_action.html">ItemAction&lt;T&gt;</a></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span> Invoke&lt;TAction&gt;(state, <span class="keyword">new</span>[] {item});</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcut_attribute_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcut_attribute.html">UnityEditor.Timeline.ShortcutAttribute</a></div><div class="ttdef"><b>Definition:</b> <a href="_shortcut_attribute_8cs_source.html#l00009">ShortcutAttribute.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_a4c21bc6c6ef3ef813b317f20aa71cf68"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#a4c21bc6c6ef3ef813b317f20aa71cf68">UnityEditor.Timeline.ItemAction.GetDisplayState</a></div><div class="ttdeci">virtual MenuActionDisplayState GetDisplayState(WindowState state, T[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00013">ItemAction.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_a8a10a60f5d56b6ee2e98328fc27ab207"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#a8a10a60f5d56b6ee2e98328fc27ab207">UnityEditor.Timeline.ItemAction.GetDisplayName</a></div><div class="ttdeci">virtual string GetDisplayName(T[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00018">ItemAction.cs:18</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ab469068a54205d03f681a4ca66919395"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab469068a54205d03f681a4ca66919395">UnityEditor.Timeline.WindowState.Evaluate</a></div><div class="ttdeci">void Evaluate()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00706">WindowState.cs:706</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_a8e908a06d33dc99772c31c790e3316f2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#a8e908a06d33dc99772c31c790e3316f2">UnityEditor.Timeline.ItemAction.s_ActionClasses</a></div><div class="ttdeci">static List&lt; ItemAction&lt; T &gt; &gt; s_ActionClasses</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00075">ItemAction.cs:75</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a350f3db7ab1c08de30a609f4c66c8775"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">UnityEditor.Timeline.TimelineWindow.state</a></div><div class="ttdeci">WindowState state</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00057">TimelineWindow.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac00fac3b6de42db10813e9ae7401808b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">UnityEditor.Timeline.TimelineWindow.instance</a></div><div class="ttdeci">static TimelineWindow instance</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00045">TimelineWindow.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_mode_html_ab4e096916047a8970c8b8ffaacd03440"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#ab4e096916047a8970c8b8ffaacd03440">UnityEditor.Timeline.TimelineMode.mode</a></div><div class="ttdeci">TimelineModes mode</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_mode_8cs_source.html#l00030">TimelineMode.cs:30</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_menu_item_action_base_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></div><div class="ttdef"><b>Definition:</b> <a href="_menu_item_action_base_8cs_source.html#l00029">MenuItemActionBase.cs:29</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a773c3585d8ee2c63765f06afa6536990"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a773c3585d8ee2c63765f06afa6536990">UnityEditor.Timeline.WindowState.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00741">WindowState.cs:741</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_a11f32d2b5a6416a3269271315f81b01c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#a11f32d2b5a6416a3269271315f81b01c">UnityEditor.Timeline.ItemAction.Execute</a></div><div class="ttdeci">abstract bool Execute(WindowState state, T[] items)</div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html">UnityEditor.Timeline.ItemAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00009">ItemAction.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_ae9de1df6067d3c58f06355affd2b2b99"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#ae9de1df6067d3c58f06355affd2b2b99">UnityEditor.Timeline.ItemAction.GetMenuEntries</a></div><div class="ttdeci">static void GetMenuEntries(T[] items, List&lt; MenuActionItem &gt; menuItems)</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00090">ItemAction.cs:90</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a4cdf4501fc4cebf7e77641e22ed40b81"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">UnityEditor.Timeline.MenuActionDisplayState</a></div><div class="ttdeci">MenuActionDisplayState</div><div class="ttdef"><b>Definition:</b> <a href="_menu_item_action_base_8cs_source.html#l00010">MenuItemActionBase.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_a13a8d1b8e3449ac313a5a5882afa7456"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#a13a8d1b8e3449ac313a5a5882afa7456">UnityEditor.Timeline.ItemAction.AddMenuItem</a></div><div class="ttdeci">virtual void AddMenuItem(WindowState state, T[] items, List&lt; MenuActionItem &gt; menuItem)</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00028">ItemAction.cs:28</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_a0fe683c25b21a216ccd20967511f83be"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#a0fe683c25b21a216ccd20967511f83be">UnityEditor.Timeline.ItemAction.CanExecute</a></div><div class="ttdeci">bool CanExecute(WindowState state, T[] items)</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00023">ItemAction.cs:23</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcut_attribute_html_a527ae86b27596f7171aab86f3adfa749"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcut_attribute.html#a527ae86b27596f7171aab86f3adfa749">UnityEditor.Timeline.ShortcutAttribute.MatchesEvent</a></div><div class="ttdeci">bool MatchesEvent(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcut_attribute_8cs_source.html#l00047">ShortcutAttribute.cs:47</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_menu_action_item_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">UnityEditor.Timeline.MenuActionItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_menu_item_action_base_8cs_source.html#l00017">MenuItemActionBase.cs:17</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_action_html_aab9b449c05f93c479a730380a3c10abf"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_action.html#aab9b449c05f93c479a730380a3c10abf">UnityEditor.Timeline.ItemAction.HandleShortcut</a></div><div class="ttdeci">static bool HandleShortcut(WindowState state, Event evt, T item)</div><div class="ttdef"><b>Definition:</b> <a href="_item_action_8cs_source.html#l00046">ItemAction.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

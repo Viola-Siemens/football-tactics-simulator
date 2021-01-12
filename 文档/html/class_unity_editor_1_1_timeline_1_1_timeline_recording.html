@@ -1,0 +1,1594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.TimelineRecording类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html">TimelineRecording</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_timeline_recording-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.TimelineRecording类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+UnityEditor.Timeline.TimelineRecording 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_timeline_recording_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_timeline_recording_coll__map" id="_unity_editor_8_timeline_8_timeline_recording_coll__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html" title="UnityEditor.Timeline.Animation\lTrackRecorder" alt="" coords="1547,569,1747,610"/><area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_animation_track.html" title="A Timeline track used for playing back animations on an Animator. " alt="" coords="1544,634,1751,675"/><area shape="rect" id="node4" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="1360,428,1448,455"/><area shape="rect" id="node14" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="609,405,789,446"/><area shape="rect" id="node17" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html" title="A Playable Asset that represents a single AnimationClip clip. " alt="" coords="596,802,803,843"/><area shape="rect" id="node6" href="interface_unity_engine_1_1_timeline_1_1_i_property_preview.html" title="Implement this interface in a PlayableAsset to specify which properties will be modified when Timelin..." alt="" coords="302,743,421,769"/><area shape="rect" id="node7" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="311,489,412,516"/><area shape="rect" id="node12" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html" title="Represents a clip on the timeline. " alt="" coords="944,540,1163,567"/><area shape="rect" id="node9" href="struct_unity_engine_1_1_timeline_1_1_marker_list.html" title="UnityEngine.Timeline.MarkerList" alt="" coords="257,305,466,332"/><area shape="rect" id="node10" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html" title="UnityEngine.Timeline.DiscreteTime" alt="" coords="249,104,473,131"/><area shape="rect" id="node15" href="struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html" title="UnityEngine.Timeline.Track\lAsset.TransientBuildData" alt="" coords="271,357,451,398"/><area shape="rect" id="node16" href="interface_unity_engine_1_1_timeline_1_1_i_layerable.html" title="Implement this interface on a TrackAsset derived class to support layers " alt="" coords="1363,575,1445,601"/><area shape="rect" id="node18" href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html" title="Implement this interface to support advanced features of timeline clips. " alt="" coords="297,833,426,860"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>RecordingState</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a74c314936d5cac62080e046ac0f56f82"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a74c314936d5cac62080e046ac0f56f82">GetRecordingTrack</a> (SerializedProperty property, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a74c314936d5cac62080e046ac0f56f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54798d4b85fe72e2b9c2a52c5f4c4a9b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a54798d4b85fe72e2b9c2a52c5f4c4a9b">CanRecord</a> (SerializedProperty property, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a54798d4b85fe72e2b9c2a52c5f4c4a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06c3d0226b294981e259fc5c453cb0c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#af06c3d0226b294981e259fc5c453cb0c">AddKey</a> (SerializedProperty prop, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:af06c3d0226b294981e259fc5c453cb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5129cab2687187abd77dcceec8649358"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a5129cab2687187abd77dcceec8649358">AddKey</a> (IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a5129cab2687187abd77dcceec8649358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116a82c4d85240836a5e6dab9138425b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a116a82c4d85240836a5e6dab9138425b">HasCurve</a> (IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a116a82c4d85240836a5e6dab9138425b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d905fb5ffabd7c830d447c9e12d9e53"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a6d905fb5ffabd7c830d447c9e12d9e53">HasKey</a> (IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a6d905fb5ffabd7c830d447c9e12d9e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d54b65d285ef0f2af29fd5efd30c81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a15d54b65d285ef0f2af29fd5efd30c81">RemoveKey</a> (<a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a15d54b65d285ef0f2af29fd5efd30c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc14c79c4685789e3f96515e171dc55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#abfc14c79c4685789e3f96515e171dc55">NextKey</a> (<a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:abfc14c79c4685789e3f96515e171dc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924e7cebe8101ece5ad41c58ed225f4f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a924e7cebe8101ece5ad41c58ed225f4f">PrevKey</a> (<a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a924e7cebe8101ece5ad41c58ed225f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e176560e441081ad627ebdef02eadc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#aa3e176560e441081ad627ebdef02eadc">RemoveCurve</a> (<a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:aa3e176560e441081ad627ebdef02eadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80aa3e11df445a724b0f97de4877e17b"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a80aa3e11df445a724b0f97de4877e17b">GetRecordableGameObjects</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a80aa3e11df445a724b0f97de4877e17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a17f5881b23a60d4f9d8a7884fcacfb1a"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a17f5881b23a60d4f9d8a7884fcacfb1a">kLocalPosition</a> = &quot;m_LocalPosition&quot;</td></tr>
+<tr class="separator:a17f5881b23a60d4f9d8a7884fcacfb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5dd261d2cc0e12a4954681f03a5e35"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a7f5dd261d2cc0e12a4954681f03a5e35">kLocalRotation</a> = &quot;m_LocalRotation&quot;</td></tr>
+<tr class="separator:a7f5dd261d2cc0e12a4954681f03a5e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21163522a2ebda2c65e7e29521548af7"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a21163522a2ebda2c65e7e29521548af7">kLocalEulerHint</a> = &quot;m_LocalEulerAnglesHint&quot;</td></tr>
+<tr class="separator:a21163522a2ebda2c65e7e29521548af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a2fc835fdd129f1d11f8a97b203a42a4a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a2fc835fdd129f1d11f8a97b203a42a4a">IsRecordingAnimationTrack</a><code> [get, private set]</code></td></tr>
+<tr class="separator:a2fc835fdd129f1d11f8a97b203a42a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:abb65cab507cc6ccb09944584d7301646"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#abb65cab507cc6ccb09944584d7301646">GetTarget</a> (UndoPropertyModification undo)</td></tr>
+<tr class="separator:abb65cab507cc6ccb09944584d7301646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bf3140a6069b7bd8eb88cdb4879c4eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a7bf3140a6069b7bd8eb88cdb4879c4eb">GetTrackForGameObject</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> gameObject, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a7bf3140a6069b7bd8eb88cdb4879c4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22e7967b1525fb046a8037fbed4096f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#ab22e7967b1525fb046a8037fbed4096f">GatherModifications</a> (SerializedProperty property, List&lt; PropertyModification &gt; modifications)</td></tr>
+<tr class="separator:ab22e7967b1525fb046a8037fbed4096f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047cb1809d3d31f0f130e8bc552c68de"><td class="memItemLeft" align="right" valign="top">static UndoPropertyModification&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a047cb1809d3d31f0f130e8bc552c68de">PropertyModificationToUndoPropertyModification</a> (PropertyModification prop)</td></tr>
+<tr class="separator:a047cb1809d3d31f0f130e8bc552c68de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa828967eb26b99ab2e57c0ac0872c4d5"><td class="memItemLeft" align="right" valign="top">static AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#aa828967eb26b99ab2e57c0ac0872c4d5">GetRecordingClip</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, out double startTime, out double timeScale)</td></tr>
+<tr class="separator:aa828967eb26b99ab2e57c0ac0872c4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8c1a4429292fea5dc4435ffaa910eb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a1c8c1a4429292fea5dc4435ffaa910eb">GetClipAndRelativeTime</a> (<a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, out AnimationClip outClip, out double keyTime, out bool keyInRange)</td></tr>
+<tr class="separator:a1c8c1a4429292fea5dc4435ffaa910eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4932ed554528d729bae48a4fda662c5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#ac4932ed554528d729bae48a4fda662c5">HasBinding</a> (<a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, PropertyModification modification, AnimationClip clip, out EditorCurveBinding binding)</td></tr>
+<tr class="separator:ac4932ed554528d729bae48a4fda662c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ccf62f5be3ff63006d14652d587b1f"><td class="memItemLeft" align="right" valign="top">static HashSet&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a54ccf62f5be3ff63006d14652d587b1f">GetKeyTimes</a> (<a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> target, IEnumerable&lt; PropertyModification &gt; modifications, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a54ccf62f5be3ff63006d14652d587b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0751144c9505a919d94c3fcf6000ef01"><td class="memItemLeft" align="right" valign="top">static UndoPropertyModification[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a0751144c9505a919d94c3fcf6000ef01">GatherRelatedModifications</a> (UndoPropertyModification toMatch, List&lt; UndoPropertyModification &gt; list)</td></tr>
+<tr class="separator:a0751144c9505a919d94c3fcf6000ef01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3518ba62b1acdbbc08f2256dd0d98308"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a3518ba62b1acdbbc08f2256dd0d98308">GetGameObjectFromModification</a> (UndoPropertyModification mod)</td></tr>
+<tr class="separator:a3518ba62b1acdbbc08f2256dd0d98308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15953f6f7721660d9a8a33ff5e29a9e5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a15953f6f7721660d9a8a33ff5e29a9e5">GetChildLevel</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> parent, <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> child)</td></tr>
+<tr class="separator:a15953f6f7721660d9a8a33ff5e29a9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67a09ccf0124ec3add2ee7e1ee09cded"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a67a09ccf0124ec3add2ee7e1ee09cded">DoesPropertyPathMatch</a> (string a, string b)</td></tr>
+<tr class="separator:a67a09ccf0124ec3add2ee7e1ee09cded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151011dcc2141a10573c5713229c86f5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a151011dcc2141a10573c5713229c86f5">ProcessPlayableAssetModification</a> (UndoPropertyModification mod, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a151011dcc2141a10573c5713229c86f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9c8cc3c428cb16a6c3c63d68c28c14"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#aeb9c8cc3c428cb16a6c3c63d68c28c14">ProcessPlayableAssetRecording</a> (UndoPropertyModification mod, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">ICurvesOwner</a> curvesOwner)</td></tr>
+<tr class="separator:aeb9c8cc3c428cb16a6c3c63d68c28c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a610d0422ce87684d61da2bc4be8b2634"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a610d0422ce87684d61da2bc4be8b2634">IsPlayableAssetProperty</a> (SerializedProperty property)</td></tr>
+<tr class="separator:a610d0422ce87684d61da2bc4be8b2634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a30c2c1f342cf2308200c04776f9ba4cd"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a30c2c1f342cf2308200c04776f9ba4cd">kRotationWarning</a> = &quot;You are recording with an initial rotation offset. This may result in a misrepresentation of euler angles. When recording transform properties, it is recommended to reset rotation prior to recording&quot;</td></tr>
+<tr class="separator:a30c2c1f342cf2308200c04776f9ba4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a9b52efaca67d15bdf78a1ef3ee484222"><td class="memItemLeft" align="right" valign="top">static readonly List&lt; PropertyModification &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a9b52efaca67d15bdf78a1ef3ee484222">s_TempPropertyModifications</a> = new List&lt;PropertyModification&gt;(6)</td></tr>
+<tr class="separator:a9b52efaca67d15bdf78a1ef3ee484222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c181c2e7d641652b58e8b6df5ae783"><td class="memItemLeft" align="right" valign="top">static readonly RecordingState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a25c181c2e7d641652b58e8b6df5ae783">s_RecordState</a> = new RecordingState()</td></tr>
+<tr class="separator:a25c181c2e7d641652b58e8b6df5ae783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af416552a2e190475a36ca6386e882b3a"><td class="memItemLeft" align="right" valign="top">static readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html">AnimationTrackRecorder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#af416552a2e190475a36ca6386e882b3a">s_TrackRecorder</a> = new <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html">AnimationTrackRecorder</a>()</td></tr>
+<tr class="separator:af416552a2e190475a36ca6386e882b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ade2e1253b22d171ed46bea6c18861"><td class="memItemLeft" align="right" valign="top">static readonly List&lt; UndoPropertyModification &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a09ade2e1253b22d171ed46bea6c18861">s_UnprocessedMods</a> = new List&lt;UndoPropertyModification&gt;()</td></tr>
+<tr class="separator:a09ade2e1253b22d171ed46bea6c18861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f83849bec39063e5ba45ec4755374c"><td class="memItemLeft" align="right" valign="top">static readonly List&lt; UndoPropertyModification &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#ad5f83849bec39063e5ba45ec4755374c">s_ModsToProcess</a> = new List&lt;UndoPropertyModification&gt;()</td></tr>
+<tr class="separator:ad5f83849bec39063e5ba45ec4755374c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f30061e4ea4c38a5f2d750d0f565e8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a02f30061e4ea4c38a5f2d750d0f565e8">s_LastTrackWarning</a></td></tr>
+<tr class="separator:a02f30061e4ea4c38a5f2d750d0f565e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00010">10</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="af06c3d0226b294981e259fc5c453cb0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineRecording.AddKey </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>prop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00157">157</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_af06c3d0226b294981e259fc5c453cb0c_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_af06c3d0226b294981e259fc5c453cb0c_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_af06c3d0226b294981e259fc5c453cb0c_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_af06c3d0226b294981e259fc5c453cb0c_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#a819e37210739420394efcbbf72a0f943" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.AddKey" alt="" coords="244,5,499,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5129cab2687187abd77dcceec8649358"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineRecording.AddKey </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00167">167</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54798d4b85fe72e2b9c2a52c5f4c4a9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.CanRecord </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00144">144</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a54798d4b85fe72e2b9c2a52c5f4c4a9b_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a54798d4b85fe72e2b9c2a52c5f4c4a9b_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a54798d4b85fe72e2b9c2a52c5f4c4a9b_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a54798d4b85fe72e2b9c2a52c5f4c4a9b_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#ab0b2466f13dc6634d4a4475df5054587" title="UnityEditor.Timeline.Animated\lParameterUtility.IsTypeAnimatable" alt="" coords="244,5,467,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a67a09ccf0124ec3add2ee7e1ee09cded"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.DoesPropertyPathMatch </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00505">505</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab22e7967b1525fb046a8037fbed4096f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineRecording.GatherModifications </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00090">90</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0751144c9505a919d94c3fcf6000ef01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UndoPropertyModification [] UnityEditor.Timeline.TimelineRecording.GatherRelatedModifications </td>
+          <td>(</td>
+          <td class="paramtype">UndoPropertyModification&#160;</td>
+          <td class="paramname"><em>toMatch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; UndoPropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00454">454</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15953f6f7721660d9a8a33ff5e29a9e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int UnityEditor.Timeline.TimelineRecording.GetChildLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>child</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00487">487</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c8c1a4429292fea5dc4435ffaa910eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.GetClipAndRelativeTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out AnimationClip&#160;</td>
+          <td class="paramname"><em>outClip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out double&#160;</td>
+          <td class="paramname"><em>keyTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out bool&#160;</td>
+          <td class="paramname"><em>keyInRange</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00209">209</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a1c8c1a4429292fea5dc4435ffaa910eb_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a1c8c1a4429292fea5dc4435ffaa910eb_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a1c8c1a4429292fea5dc4435ffaa910eb_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a1c8c1a4429292fea5dc4435ffaa910eb_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#adce35ff4cf343b78d9e7deb1c9cf38e7" title="UnityEditor.Timeline.Animated\lParameterUtility.ToCurvesOwner" alt="" coords="276,5,485,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a3b879f9d05ee6125537fcc2580ad0071" title="UnityEditor.Timeline.Window\lState.IsTrackRecordable" alt="" coords="287,71,475,112"/><area shape="rect" id="node4" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#ab52a5e233698ceda9cb60b5ebbcdf528" title="UnityEngine.Timeline.ICurves\lOwner.CreateCurves" alt="" coords="285,136,476,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3518ba62b1acdbbc08f2256dd0d98308"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> UnityEditor.Timeline.TimelineRecording.GetGameObjectFromModification </td>
+          <td>(</td>
+          <td class="paramtype">UndoPropertyModification&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00473">473</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54ccf62f5be3ff63006d14652d587b1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static HashSet&lt;double&gt; UnityEditor.Timeline.TimelineRecording.GetKeyTimes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00354">354</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a54ccf62f5be3ff63006d14652d587b1f_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a54ccf62f5be3ff63006d14652d587b1f_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a54ccf62f5be3ff63006d14652d587b1f_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a54ccf62f5be3ff63006d14652d587b1f_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85" title="UnityEditor.Timeline.Animation\lClipCurveCache.GetCurveInfo" alt="" coords="244,5,444,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a80aa3e11df445a724b0f97de4877e17b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&gt; UnityEditor.Timeline.TimelineRecording.GetRecordableGameObjects </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00476">476</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a82a8c61e425d1d7448bf5a0822ad6c2a" title="Gets a list of all output tracks in the Timeline. " alt="" coords="304,5,500,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#afda348f13d0b24ba875042746d02ebfa" title="UnityEditor.Timeline.Timeline\lUtility.GetSceneGameObject" alt="" coords="307,71,497,112"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a80aa3e11df445a724b0f97de4877e17b_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#a22edf363e0a8da169cede4cd1b0c6dc4" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.IsAnimatable" alt="" coords="304,5,587,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa828967eb26b99ab2e57c0ac0872c4d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static AnimationClip UnityEditor.Timeline.TimelineRecording.GetRecordingClip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>asset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out double&#160;</td>
+          <td class="paramname"><em>startTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out double&#160;</td>
+          <td class="paramname"><em>timeScale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00190">190</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74c314936d5cac62080e046ac0f56f82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> UnityEditor.Timeline.TimelineRecording.GetRecordingTrack </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00078">78</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb65cab507cc6ccb09944584d7301646"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> UnityEditor.Timeline.TimelineRecording.GetTarget </td>
+          <td>(</td>
+          <td class="paramtype">UndoPropertyModification&#160;</td>
+          <td class="paramname"><em>undo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bf3140a6069b7bd8eb88cdb4879c4eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> UnityEditor.Timeline.TimelineRecording.GetTrackForGameObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>gameObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00031">31</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a7bf3140a6069b7bd8eb88cdb4879c4eb_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a7bf3140a6069b7bd8eb88cdb4879c4eb_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a7bf3140a6069b7bd8eb88cdb4879c4eb_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a7bf3140a6069b7bd8eb88cdb4879c4eb_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#afda348f13d0b24ba875042746d02ebfa" title="UnityEditor.Timeline.Timeline\lUtility.GetSceneGameObject" alt="" coords="283,5,473,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4932ed554528d729bae48a4fda662c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.HasBinding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PropertyModification&#160;</td>
+          <td class="paramname"><em>modification</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out EditorCurveBinding&#160;</td>
+          <td class="paramname"><em>binding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00282">282</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_ac4932ed554528d729bae48a4fda662c5_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_ac4932ed554528d729bae48a4fda662c5_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_ac4932ed554528d729bae48a4fda662c5_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_ac4932ed554528d729bae48a4fda662c5_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#aa679d77932c1cd955ba38de624ff7a18" title="UnityEditor.Timeline.Animated\lParameterUtility.GetAnimatedParameter\lBindingName" alt="" coords="244,31,499,87"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_cache.html#a7b278ef6f1a49cd5b7bb00c4052e859a" title="UnityEditor.Timeline.Animated\lParameterCache.TryGetBindingName" alt="" coords="547,5,785,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_cache.html#a7a693b8622a7bb7f2bf0bc77d3687756" title="UnityEditor.Timeline.Animated\lParameterCache.SetBindingName" alt="" coords="556,71,776,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a116a82c4d85240836a5e6dab9138425b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.HasCurve </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00263">263</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a116a82c4d85240836a5e6dab9138425b_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a116a82c4d85240836a5e6dab9138425b_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a116a82c4d85240836a5e6dab9138425b_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a116a82c4d85240836a5e6dab9138425b_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#a761d52cdc723626c7c9dae929b83153f" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.Curve\lExists" alt="" coords="244,5,484,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d905fb5ffabd7c830d447c9e12d9e53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.HasKey </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00269">269</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_curve_edit_utility.html#acd8714f2f924d9add19df7f2e6701a49" title="UnityEditor.Timeline.Curve\lEditUtility.KeyCompare" alt="" coords="244,5,419,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a6d905fb5ffabd7c830d447c9e12d9e53_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#a7acbe1e3e43266e9a16704334ea4801b" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.Key\lExists" alt="" coords="244,5,475,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a610d0422ce87684d61da2bc4be8b2634"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.IsPlayableAssetProperty </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>property</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___playable_asset_8cs_source.html">TimelineRecording_PlayableAsset.cs</a> 第 <a class="el" href="_timeline_recording___playable_asset_8cs_source.html#l00110">110</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abfc14c79c4685789e3f96515e171dc55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineRecording.NextKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00426">426</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_abfc14c79c4685789e3f96515e171dc55_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_abfc14c79c4685789e3f96515e171dc55_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_abfc14c79c4685789e3f96515e171dc55_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_abfc14c79c4685789e3f96515e171dc55_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#ae0645004c320a89464de0310d48845bc" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.GoTo\lNextKeyframe" alt="" coords="244,5,483,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a924e7cebe8101ece5ad41c58ed225f4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineRecording.PrevKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00439">439</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a924e7cebe8101ece5ad41c58ed225f4f_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a924e7cebe8101ece5ad41c58ed225f4f_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a924e7cebe8101ece5ad41c58ed225f4f_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a924e7cebe8101ece5ad41c58ed225f4f_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#a53f95a869711008bb5729be1d9158c50" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.GoTo\lPreviousKeyframe" alt="" coords="244,5,483,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a151011dcc2141a10573c5713229c86f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.ProcessPlayableAssetModification </td>
+          <td>(</td>
+          <td class="paramtype">UndoPropertyModification&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___playable_asset_8cs_source.html">TimelineRecording_PlayableAsset.cs</a> 第 <a class="el" href="_timeline_recording___playable_asset_8cs_source.html#l00040">40</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a151011dcc2141a10573c5713229c86f5_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a151011dcc2141a10573c5713229c86f5_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a151011dcc2141a10573c5713229c86f5_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a151011dcc2141a10573c5713229c86f5_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#adce35ff4cf343b78d9e7deb1c9cf38e7" title="UnityEditor.Timeline.Animated\lParameterUtility.ToCurvesOwner" alt="" coords="339,5,548,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb9c8cc3c428cb16a6c3c63d68c28c14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineRecording.ProcessPlayableAssetRecording </td>
+          <td>(</td>
+          <td class="paramtype">UndoPropertyModification&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">ICurvesOwner</a>&#160;</td>
+          <td class="paramname"><em>curvesOwner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___playable_asset_8cs_source.html">TimelineRecording_PlayableAsset.cs</a> 第 <a class="el" href="_timeline_recording___playable_asset_8cs_source.html#l00062">62</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_aeb9c8cc3c428cb16a6c3c63d68c28c14_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_aeb9c8cc3c428cb16a6c3c63d68c28c14_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_aeb9c8cc3c428cb16a6c3c63d68c28c14_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_aeb9c8cc3c428cb16a6c3c63d68c28c14_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a5a65196511de2353627a38bd9e6e09e2" title="Converts from global time to local time of the clip " alt="" coords="337,5,533,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741" title="UnityEditor.Timeline.Window\lState.GetWindow" alt="" coords="341,71,529,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html#a1bd7597c1e734d20a80d83a84afac176" title="UnityEditor.Timeline.Timeline\lTreeViewGUI.CalculateRowRects" alt="" coords="328,136,543,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a047cb1809d3d31f0f130e8bc552c68de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UndoPropertyModification UnityEditor.Timeline.TimelineRecording.PropertyModificationToUndoPropertyModification </td>
+          <td>(</td>
+          <td class="paramtype">PropertyModification&#160;</td>
+          <td class="paramname"><em>prop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00173">173</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3e176560e441081ad627ebdef02eadc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineRecording.RemoveCurve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00452">452</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="244,5,440,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_aa3e176560e441081ad627ebdef02eadc_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#ad27f9f6b004a1948de542514ddc1aed7" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.RemoveCurve" alt="" coords="244,5,531,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a15d54b65d285ef0f2af29fd5efd30c81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineRecording.RemoveKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; PropertyModification &gt;&#160;</td>
+          <td class="paramname"><em>modifications</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00308">308</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="271,5,467,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_curve_edit_utility.html#a73eb00b46c3a5210350370d16fef0ae7" title="UnityEditor.Timeline.Curve\lEditUtility.RemoveObjectKey" alt="" coords="275,71,464,112"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_curve_edit_utility.html#aae2899ea9324ce269ef133516b85c5f7" title="UnityEditor.Timeline.Curve\lEditUtility.GetObjectKeyCount" alt="" coords="270,136,469,177"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_curve_edit_utility.html#a95e647cd0a9e53703435b4a07f5feaca" title="UnityEditor.Timeline.Curve\lEditUtility.RemoveKeyFrameFromCurve" alt="" coords="244,201,495,243"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85" title="UnityEditor.Timeline.Animation\lClipCurveCache.GetCurveInfo" alt="" coords="543,104,743,145"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_a15d54b65d285ef0f2af29fd5efd30c81_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_recording_contextual_responder.html#a23f7dca89b0e059e3b146b4b6201224a" title="UnityEditor.Timeline.Timeline\lRecordingContextualResponder.RemoveKey" alt="" coords="244,5,521,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a21163522a2ebda2c65e7e29521548af7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string UnityEditor.Timeline.TimelineRecording.kLocalEulerHint = &quot;m_LocalEulerAnglesHint&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00051">51</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17f5881b23a60d4f9d8a7884fcacfb1a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string UnityEditor.Timeline.TimelineRecording.kLocalPosition = &quot;m_LocalPosition&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f5dd261d2cc0e12a4954681f03a5e35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string UnityEditor.Timeline.TimelineRecording.kLocalRotation = &quot;m_LocalRotation&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a30c2c1f342cf2308200c04776f9ba4cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string UnityEditor.Timeline.TimelineRecording.kRotationWarning = &quot;You are recording with an initial rotation offset. This may result in a misrepresentation of euler angles. When recording transform properties, it is recommended to reset rotation prior to recording&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02f30061e4ea4c38a5f2d750d0f565e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> UnityEditor.Timeline.TimelineRecording.s_LastTrackWarning</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5f83849bec39063e5ba45ec4755374c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;UndoPropertyModification&gt; UnityEditor.Timeline.TimelineRecording.s_ModsToProcess = new List&lt;UndoPropertyModification&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25c181c2e7d641652b58e8b6df5ae783"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly RecordingState UnityEditor.Timeline.TimelineRecording.s_RecordState = new RecordingState()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b52efaca67d15bdf78a1ef3ee484222"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;PropertyModification&gt; UnityEditor.Timeline.TimelineRecording.s_TempPropertyModifications = new List&lt;PropertyModification&gt;(6)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a> 第 <a class="el" href="_timeline_recording_8cs_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af416552a2e190475a36ca6386e882b3a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html">AnimationTrackRecorder</a> UnityEditor.Timeline.TimelineRecording.s_TrackRecorder = new <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html">AnimationTrackRecorder</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09ade2e1253b22d171ed46bea6c18861"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;UndoPropertyModification&gt; UnityEditor.Timeline.TimelineRecording.s_UnprocessedMods = new List&lt;UndoPropertyModification&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a2fc835fdd129f1d11f8a97b203a42a4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineRecording.IsRecordingAnimationTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a> 第 <a class="el" href="_timeline_recording___monobehaviour_8cs_source.html#l00055">55</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Recording/<a class="el" href="_timeline_recording_8cs_source.html">TimelineRecording.cs</a></li>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Recording/<a class="el" href="_timeline_recording___monobehaviour_8cs_source.html">TimelineRecording_Monobehaviour.cs</a></li>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Recording/<a class="el" href="_timeline_recording___playable_asset_8cs_source.html">TimelineRecording_PlayableAsset.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:51 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

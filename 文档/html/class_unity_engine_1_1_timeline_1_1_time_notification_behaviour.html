@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEngine.Timeline.TimeNotificationBehaviour类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a class="el" href="namespace_unity_engine_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">TimeNotificationBehaviour</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEngine.Timeline.TimeNotificationBehaviour类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Use this PlayableBehaviour to send notifications at a given time.  
+ <a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#details">更多...</a></p>
+<div class="dynheader">
+类 UnityEngine.Timeline.TimeNotificationBehaviour 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour__inherit__graph.png" border="0" usemap="#_unity_engine_8_timeline_8_time_notification_behaviour_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEngine.Timeline.TimeNotificationBehaviour 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour__coll__graph.png" border="0" usemap="#_unity_engine_8_timeline_8_time_notification_behaviour_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a70798078c052162d622c7fa1f4ea80eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a70798078c052162d622c7fa1f4ea80eb">AddNotification</a> (double time, INotification payload, <a class="el" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a> flags=NotificationFlags.Retroactive)</td></tr>
+<tr class="memdesc:a70798078c052162d622c7fa1f4ea80eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a notification to be sent with flags, at a specific time.  <a href="#a70798078c052162d622c7fa1f4ea80eb">更多...</a><br /></td></tr>
+<tr class="separator:a70798078c052162d622c7fa1f4ea80eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7a533c6baec1d03403a7974a85da8a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a9a7a533c6baec1d03403a7974a85da8a">OnGraphStart</a> (Playable playable)</td></tr>
+<tr class="memdesc:a9a7a533c6baec1d03403a7974a85da8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called when the PlayableGraph that owns this PlayableBehaviour starts.  <a href="#a9a7a533c6baec1d03403a7974a85da8a">更多...</a><br /></td></tr>
+<tr class="separator:a9a7a533c6baec1d03403a7974a85da8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c97f08062fba7190308d972f3e3b82e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a2c97f08062fba7190308d972f3e3b82e">OnBehaviourPause</a> (Playable playable, FrameData info)</td></tr>
+<tr class="memdesc:a2c97f08062fba7190308d972f3e3b82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called when the Playable play state is changed to PlayState.Paused  <a href="#a2c97f08062fba7190308d972f3e3b82e">更多...</a><br /></td></tr>
+<tr class="separator:a2c97f08062fba7190308d972f3e3b82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a03a6dc9d74c476aff5f753be19008"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac1a03a6dc9d74c476aff5f753be19008">PrepareFrame</a> (Playable playable, FrameData info)</td></tr>
+<tr class="memdesc:ac1a03a6dc9d74c476aff5f753be19008"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called during the PrepareFrame phase of the PlayableGraph.  <a href="#ac1a03a6dc9d74c476aff5f753be19008">更多...</a><br /></td></tr>
+<tr class="separator:ac1a03a6dc9d74c476aff5f753be19008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:abba726150be9160b8285515789e9723f"><td class="memItemLeft" align="right" valign="top">static ScriptPlayable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">TimeNotificationBehaviour</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#abba726150be9160b8285515789e9723f">Create</a> (PlayableGraph graph, double duration, DirectorWrapMode loopMode)</td></tr>
+<tr class="memdesc:abba726150be9160b8285515789e9723f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and initializes a ScriptPlayable with a <a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html" title="Use this PlayableBehaviour to send notifications at a given time. ">TimeNotificationBehaviour</a>.  <a href="#abba726150be9160b8285515789e9723f">更多...</a><br /></td></tr>
+<tr class="separator:abba726150be9160b8285515789e9723f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a66137895677979bf7017aa853b61bd96"><td class="memItemLeft" align="right" valign="top">Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a66137895677979bf7017aa853b61bd96">timeSource</a><code> [set]</code></td></tr>
+<tr class="memdesc:a66137895677979bf7017aa853b61bd96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an optional Playable that provides duration and Wrap mode information.  <a href="#a66137895677979bf7017aa853b61bd96">更多...</a><br /></td></tr>
+<tr class="separator:a66137895677979bf7017aa853b61bd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aec69f29c6b315cc4a6f0f650d3f032dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aec69f29c6b315cc4a6f0f650d3f032dc">SortNotifications</a> ()</td></tr>
+<tr class="separator:aec69f29c6b315cc4a6f0f650d3f032dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a34dfd17e01a9dc86c8addb4be19ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac3a34dfd17e01a9dc86c8addb4be19ef">TriggerNotificationsInRange</a> (double start, double end, FrameData info, Playable playable, bool checkState)</td></tr>
+<tr class="separator:ac3a34dfd17e01a9dc86c8addb4be19ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196357085fd9eca1c5814f6b997f7673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a196357085fd9eca1c5814f6b997f7673">SyncDurationWithExternalSource</a> (Playable playable)</td></tr>
+<tr class="separator:a196357085fd9eca1c5814f6b997f7673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:aaff33e7ff0e729903e135bb2bf5b309c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aaff33e7ff0e729903e135bb2bf5b309c">CanRestoreNotification</a> (<a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a> e, FrameData info, double currentTime, double previousTime)</td></tr>
+<tr class="separator:aaff33e7ff0e729903e135bb2bf5b309c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f1df7a45bdbebe054afefe62b40a06"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a97f1df7a45bdbebe054afefe62b40a06">Trigger_internal</a> (Playable playable, PlayableOutput output, ref <a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a> e)</td></tr>
+<tr class="separator:a97f1df7a45bdbebe054afefe62b40a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e24f02826430b43c5c1d70419269ef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a22e24f02826430b43c5c1d70419269ef">Restore_internal</a> (ref <a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a> e)</td></tr>
+<tr class="separator:a22e24f02826430b43c5c1d70419269ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a41ad56c9b313c48295dcb6efe83df7cd"><td class="memItemLeft" align="right" valign="top">readonly List&lt; <a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a41ad56c9b313c48295dcb6efe83df7cd">m_Notifications</a> = new List&lt;<a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a>&gt;()</td></tr>
+<tr class="separator:a41ad56c9b313c48295dcb6efe83df7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab006d91a9ceb9efd630ba163b2fb17b4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ab006d91a9ceb9efd630ba163b2fb17b4">m_PreviousTime</a></td></tr>
+<tr class="separator:ab006d91a9ceb9efd630ba163b2fb17b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303a5e2ac8789d22b950fb0704e22288"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a303a5e2ac8789d22b950fb0704e22288">m_NeedSortNotifications</a></td></tr>
+<tr class="separator:a303a5e2ac8789d22b950fb0704e22288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b08faad538604b122ad8f3cf2c5342c"><td class="memItemLeft" align="right" valign="top">Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a4b08faad538604b122ad8f3cf2c5342c">m_TimeSource</a></td></tr>
+<tr class="separator:a4b08faad538604b122ad8f3cf2c5342c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Use this PlayableBehaviour to send notifications at a given time. </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f" title="Use these flags to specify the notification behaviour. ">UnityEngine.Timeline.NotificationFlags</a></dd></dl>
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00011">11</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a70798078c052162d622c7fa1f4ea80eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimeNotificationBehaviour.AddNotification </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INotification&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>NotificationFlags.Retroactive</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a notification to be sent with flags, at a specific time. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>The time to send the notification.</td></tr>
+    <tr><td class="paramname">payload</td><td>The notification.</td></tr>
+    <tr><td class="paramname">flags</td><td>The notification flags that determine the notification behaviour. This parameter is set to Retroactive by default.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f" title="Use these flags to specify the notification behaviour. ">UnityEngine.Timeline.NotificationFlags</a></dd></dl>
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00074">74</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaff33e7ff0e729903e135bb2bf5b309c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEngine.Timeline.TimeNotificationBehaviour.CanRestoreNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a>&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>currentTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>previousTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00191">191</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abba726150be9160b8285515789e9723f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ScriptPlayable&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">TimeNotificationBehaviour</a>&gt; UnityEngine.Timeline.TimeNotificationBehaviour.Create </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DirectorWrapMode&#160;</td>
+          <td class="paramname"><em>loopMode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and initializes a ScriptPlayable with a <a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html" title="Use this PlayableBehaviour to send notifications at a given time. ">TimeNotificationBehaviour</a>. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The playable graph.</td></tr>
+    <tr><td class="paramname">duration</td><td>The duration of the playable.</td></tr>
+    <tr><td class="paramname">loopMode</td><td>The loop mode of the playable.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>A new <a class="el" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html" title="Use this PlayableBehaviour to send notifications at a given time. ">TimeNotificationBehaviour</a> linked to the PlayableGraph.</dd></dl>
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00058">58</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_abba726150be9160b8285515789e9723f_icgraph.png" border="0" usemap="#class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_abba726150be9160b8285515789e9723f_icgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_abba726150be9160b8285515789e9723f_icgraph" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_abba726150be9160b8285515789e9723f_icgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html#ae0afbe19914b59f54d2f09bb76059988" title="UnityEngine.Timeline.Notification\lUtilities.CreateNotificationsPlayable" alt="" coords="237,5,465,47"/><area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a940f43efc4600a790e6d611e72234aea" title="UnityEngine.Timeline.Track\lAsset.CreateNotificationsPlayable" alt="" coords="513,5,732,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c97f08062fba7190308d972f3e3b82e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.TimeNotificationBehaviour.OnBehaviourPause </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method is called when the Playable play state is changed to PlayState.Paused </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The reference to the playable associated with this PlayableBehaviour.</td></tr>
+    <tr><td class="paramname">info</td><td>Playable context information such as weight, evaluationType, and so on.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00107">107</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a7a533c6baec1d03403a7974a85da8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.TimeNotificationBehaviour.OnGraphStart </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method is called when the PlayableGraph that owns this PlayableBehaviour starts. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The reference to the playable associated with this PlayableBehaviour.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00089">89</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1a03a6dc9d74c476aff5f753be19008"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.TimeNotificationBehaviour.PrepareFrame </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method is called during the PrepareFrame phase of the PlayableGraph. </p>
+<p>Called once before processing starts. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The reference to the playable associated with this PlayableBehaviour.</td></tr>
+    <tr><td class="paramname">info</td><td>Playable context information such as weight, evaluationType, and so on.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00137">137</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22e24f02826430b43c5c1d70419269ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.Timeline.TimeNotificationBehaviour.Restore_internal </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00249">249</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec69f29c6b315cc4a6f0f650d3f032dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimeNotificationBehaviour.SortNotifications </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00182">182</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a196357085fd9eca1c5814f6b997f7673"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimeNotificationBehaviour.SyncDurationWithExternalSource </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00234">234</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a97f1df7a45bdbebe054afefe62b40a06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.Timeline.TimeNotificationBehaviour.Trigger_internal </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableOutput&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref <a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a>&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00243">243</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3a34dfd17e01a9dc86c8addb4be19ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimeNotificationBehaviour.TriggerNotificationsInRange </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>checkState</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00202">202</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a303a5e2ac8789d22b950fb0704e22288"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.TimeNotificationBehaviour.m_NeedSortNotifications</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41ad56c9b313c48295dcb6efe83df7cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;<a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a>&gt; UnityEngine.Timeline.TimeNotificationBehaviour.m_Notifications = new List&lt;<a class="el" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab006d91a9ceb9efd630ba163b2fb17b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimeNotificationBehaviour.m_PreviousTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b08faad538604b122ad8f3cf2c5342c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playable UnityEngine.Timeline.TimeNotificationBehaviour.m_TimeSource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a66137895677979bf7017aa853b61bd96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playable UnityEngine.Timeline.TimeNotificationBehaviour.timeSource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets an optional Playable that provides duration and Wrap mode information. </p>
+<p>timeSource is optional. By default, the duration and Wrap mode will come from the current Playable. </p>
+
+<p>在文件 <a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a> 第 <a class="el" href="_time_notification_behaviour_8cs_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Playables/<a class="el" href="_time_notification_behaviour_8cs_source.html">TimeNotificationBehaviour.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:55 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

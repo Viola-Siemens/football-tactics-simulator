@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore.LowLevel;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Text.RegularExpressions;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a>.EditorUtilities</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [CustomPropertyDrawer(typeof(TMP_GlyphPairAdjustmentRecord))]</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer</a> : PropertyDrawer</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a8289c51ad548be7b71c6f923c19ca63d">   15</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> isEditingEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#afeb62de88d4fb783ba7402a681425453">   16</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> isSelectable = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a90161d72bc973f59b030aacc858c8cfe">   18</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> m_FirstCharacter = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a5bc93e304552893971094735df8a339d">   19</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> m_SecondCharacter = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a5ebcb9bcfb14f7f3d88c061c98e30343">   20</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a5ebcb9bcfb14f7f3d88c061c98e30343">m_PreviousInput</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#afea8ad328c36a50ca475fef42be354ff">   22</a></span>&#160;        <span class="keyword">static</span> GUIContent s_CharacterTextFieldLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Char:&quot;</span>, <span class="stringliteral">&quot;Enter the character or its UTF16 or UTF32 Unicode character escape sequence. For UTF16 use \&quot;\\uFF00\&quot; and for UTF32 use \&quot;\\UFF00FF00\&quot; representation.&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9678ea64a0d19a7db339d95d39dacccf">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9678ea64a0d19a7db339d95d39dacccf">OnGUI</a>(Rect position, SerializedProperty property, GUIContent label)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            SerializedProperty prop_FirstAdjustmentRecord = <span class="keyword">property</span>.FindPropertyRelative(<span class="stringliteral">&quot;m_FirstAdjustmentRecord&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            SerializedProperty prop_SecondAdjustmentRecord = <span class="keyword">property</span>.FindPropertyRelative(<span class="stringliteral">&quot;m_SecondAdjustmentRecord&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            SerializedProperty prop_FirstGlyphIndex = prop_FirstAdjustmentRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_GlyphIndex&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            SerializedProperty prop_FirstGlyphValueRecord = prop_FirstAdjustmentRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_GlyphValueRecord&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            SerializedProperty prop_SecondGlyphIndex = prop_SecondAdjustmentRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_GlyphIndex&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            SerializedProperty prop_SecondGlyphValueRecord = prop_SecondAdjustmentRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_GlyphValueRecord&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            SerializedProperty prop_FontFeatureLookupFlags = <span class="keyword">property</span>.FindPropertyRelative(<span class="stringliteral">&quot;m_FeatureLookupFlags&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            position.yMin += 2;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordtype">float</span> width = position.width / 2;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordtype">float</span> padding = 5.0f;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            Rect rect;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            isEditingEnabled = GUI.enabled;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            isSelectable = label.text == <span class="stringliteral">&quot;Selectable&quot;</span> ? <span class="keyword">true</span> : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (isSelectable)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                GUILayoutUtility.GetRect(position.width, 75);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                GUILayoutUtility.GetRect(position.width, 55);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            GUIStyle style = <span class="keyword">new</span> GUIStyle(EditorStyles.label);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            style.richText = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">// First Glyph</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            GUI.enabled = isEditingEnabled;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (isSelectable)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                rect = <span class="keyword">new</span> Rect(position.x + 70, position.y, position.width, 49);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordtype">float</span> labelWidth = GUI.skin.label.CalcSize(<span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;ID: &quot;</span> + prop_FirstGlyphIndex.intValue)).x;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                EditorGUI.LabelField(<span class="keyword">new</span> Rect(position.x + (64 - labelWidth) / 2, position.y + 60, 64f, 18f), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;ID: &lt;color=#FFFF80&gt;&quot;</span> + prop_FirstGlyphIndex.intValue + <span class="stringliteral">&quot;&lt;/color&gt;&quot;</span>), style);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                GUI.enabled = isEditingEnabled;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                EditorGUIUtility.labelWidth = 30f;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                rect = <span class="keyword">new</span> Rect(position.x + 70, position.y + 10, (width - 70) - padding, 18);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                EditorGUI.PropertyField(rect, prop_FirstGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OX:&quot;</span>));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                rect.y += 20;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                EditorGUI.PropertyField(rect, prop_FirstGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_YPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OY:&quot;</span>));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                rect.y += 20;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                EditorGUI.PropertyField(rect, prop_FirstGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XAdvance&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;AX:&quot;</span>));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="comment">//rect.y += 20;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="comment">//EditorGUI.PropertyField(rect, prop_FirstGlyphValueRecord.FindPropertyRelative(&quot;m_YAdvance&quot;), new GUIContent(&quot;AY:&quot;));</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                DrawGlyph((uint)prop_FirstGlyphIndex.intValue, <span class="keyword">new</span> Rect(position.x, position.y, position.width, position.height), property);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                rect = <span class="keyword">new</span> Rect(position.x, position.y, width / 2 * 0.8f - padding, 18);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                EditorGUIUtility.labelWidth = 40f;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="comment">// First Character Lookup</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                GUI.SetNextControlName(<span class="stringliteral">&quot;FirstCharacterField&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordtype">string</span> firstCharacter = EditorGUI.TextField(rect, s_CharacterTextFieldLabel, m_FirstCharacter);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">if</span> (GUI.GetNameOfFocusedControl() == <span class="stringliteral">&quot;FirstCharacterField&quot;</span>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">if</span> (ValidateInput(firstCharacter))</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        <span class="comment">//Debug.Log(&quot;1st Unicode value: [&quot; + firstCharacter + &quot;]&quot;);</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        uint unicode = GetUnicodeCharacter(firstCharacter);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="comment">// Lookup glyph index</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        <a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html">TMP_SerializedPropertyHolder</a> propertyHolder = <span class="keyword">property</span>.serializedObject.targetObject as <a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html">TMP_SerializedPropertyHolder</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset = propertyHolder.<a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html#a808b96b1fa2a6575a3f87ccfb338333c">fontAsset</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        <span class="keywordflow">if</span> (fontAsset != null)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                            prop_FirstGlyphIndex.intValue = (int)fontAsset.GetGlyphIndex(unicode);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                            propertyHolder.<a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html#acb5b08b28642d61b64d5dad90bde775f">firstCharacter</a> = unicode;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    m_FirstCharacter = firstCharacter;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="comment">// First Glyph Index</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                rect.x += width / 2 * 0.8f;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                EditorGUIUtility.labelWidth = 25f;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                EditorGUI.PropertyField(rect, prop_FirstGlyphIndex, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;ID:&quot;</span>));</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                GUI.enabled = isEditingEnabled;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                EditorGUIUtility.labelWidth = 25f;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                rect = <span class="keyword">new</span> Rect(position.x, position.y + 20, width * 0.5f - padding, 18);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                EditorGUI.PropertyField(rect, prop_FirstGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OX&quot;</span>));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                rect.x += width * 0.5f;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                EditorGUI.PropertyField(rect, prop_FirstGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_YPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OY&quot;</span>));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                rect.x = position.x;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                rect.y += 20;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                EditorGUI.PropertyField(rect, prop_FirstGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XAdvance&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;AX&quot;</span>));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="comment">//rect.x += width * 0.5f;</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="comment">//EditorGUI.PropertyField(rect, prop_FirstGlyphAdjustment.FindPropertyRelative(&quot;m_YAdvance&quot;), new GUIContent(&quot;AY&quot;));</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="comment">// Second Glyph</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            GUI.enabled = isEditingEnabled;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">if</span> (isSelectable)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="keywordtype">float</span> labelWidth = GUI.skin.label.CalcSize(<span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;ID: &quot;</span> + prop_SecondGlyphIndex.intValue)).x;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                EditorGUI.LabelField(<span class="keyword">new</span> Rect(position.width / 2 + 20 + (64 - labelWidth) / 2, position.y + 60, 64f, 18f), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;ID: &lt;color=#FFFF80&gt;&quot;</span> + prop_SecondGlyphIndex.intValue + <span class="stringliteral">&quot;&lt;/color&gt;&quot;</span>), style);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                GUI.enabled = isEditingEnabled;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                EditorGUIUtility.labelWidth = 30f;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                rect = <span class="keyword">new</span> Rect(position.width / 2 + 20 + 70, position.y + 10, (width - 70) - padding, 18);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                EditorGUI.PropertyField(rect, prop_SecondGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OX:&quot;</span>));</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                rect.y += 20;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                EditorGUI.PropertyField(rect, prop_SecondGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_YPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OY:&quot;</span>));</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                rect.y += 20;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                EditorGUI.PropertyField(rect, prop_SecondGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XAdvance&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;AX:&quot;</span>));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="comment">//rect.y += 20;</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="comment">//EditorGUI.PropertyField(rect, prop_SecondGlyphAdjustment.FindPropertyRelative(&quot;m_YAdvance&quot;), new GUIContent(&quot;AY&quot;));</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                DrawGlyph((uint)prop_SecondGlyphIndex.intValue, <span class="keyword">new</span> Rect(position.width / 2 + 20, position.y, position.width, position.height), property);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                rect = <span class="keyword">new</span> Rect(position.width / 2 + 20, position.y, width / 2 * 0.8f - padding, 18);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                EditorGUIUtility.labelWidth = 40f;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="comment">// Second Character Lookup</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                GUI.SetNextControlName(<span class="stringliteral">&quot;SecondCharacterField&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="keywordtype">string</span> secondCharacter = EditorGUI.TextField(rect, s_CharacterTextFieldLabel, m_SecondCharacter);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <span class="keywordflow">if</span> (GUI.GetNameOfFocusedControl() == <span class="stringliteral">&quot;SecondCharacterField&quot;</span>)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    <span class="keywordflow">if</span> (ValidateInput(secondCharacter))</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                    {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                        <span class="comment">//Debug.Log(&quot;2nd Unicode value: [&quot; + secondCharacter + &quot;]&quot;);</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                        uint unicode = GetUnicodeCharacter(secondCharacter);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        <span class="comment">// Lookup glyph index</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                        <a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html">TMP_SerializedPropertyHolder</a> propertyHolder = <span class="keyword">property</span>.serializedObject.targetObject as <a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html">TMP_SerializedPropertyHolder</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                        <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset = propertyHolder.<a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html#a808b96b1fa2a6575a3f87ccfb338333c">fontAsset</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        <span class="keywordflow">if</span> (fontAsset != null)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                            prop_SecondGlyphIndex.intValue = (int)fontAsset.GetGlyphIndex(unicode);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                            propertyHolder.<a class="code" href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html#af636c4eb38fe9c7a3f014b1b57c164a1">secondCharacter</a> = unicode;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    m_SecondCharacter = secondCharacter;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                <span class="comment">// Second Glyph Index</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                rect.x += width / 2 * 0.8f;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                EditorGUIUtility.labelWidth = 25f;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                EditorGUI.PropertyField(rect, prop_SecondGlyphIndex, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;ID:&quot;</span>));</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                GUI.enabled = isEditingEnabled;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                EditorGUIUtility.labelWidth = 25f;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                rect = <span class="keyword">new</span> Rect(position.width / 2 + 20, position.y + 20, width * 0.5f - padding, 18);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                EditorGUI.PropertyField(rect, prop_SecondGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OX&quot;</span>));</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                rect.x += width * 0.5f;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                EditorGUI.PropertyField(rect, prop_SecondGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_YPlacement&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OY&quot;</span>));</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                rect.x = position.width / 2 + 20;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                rect.y += 20;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                EditorGUI.PropertyField(rect, prop_SecondGlyphValueRecord.FindPropertyRelative(<span class="stringliteral">&quot;m_XAdvance&quot;</span>), <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;AX&quot;</span>));</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                <span class="comment">//rect.x += width * 0.5f;</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <span class="comment">//EditorGUI.PropertyField(rect, prop_SecondGlyphAdjustment.FindPropertyRelative(&quot;m_YAdvance&quot;), new GUIContent(&quot;AY&quot;));</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="comment">// Font Feature Lookup Flags</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> (isSelectable)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                EditorGUIUtility.labelWidth = 55f;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                rect.x = position.width - 255;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                rect.y += 23;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                rect.width = 270; <span class="comment">// width - 70 - padding;</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <a class="code" href="namespace_t_m_pro.html#a7a1b2ac459f1a69fbd8a373219f1e13c">FontFeatureLookupFlags</a> flags = (<a class="code" href="namespace_t_m_pro.html#a7a1b2ac459f1a69fbd8a373219f1e13c">FontFeatureLookupFlags</a>)prop_FontFeatureLookupFlags.intValue;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                flags = (<a class="code" href="namespace_t_m_pro.html#a7a1b2ac459f1a69fbd8a373219f1e13c">FontFeatureLookupFlags</a>)EditorGUI.EnumFlagsField(rect, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Options:&quot;</span>), flags);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    prop_FontFeatureLookupFlags.intValue = (int)flags;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#ab86856a31e550f42d74db872c0479f63">  248</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#ab86856a31e550f42d74db872c0479f63">ValidateInput</a>(<span class="keywordtype">string</span> source)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordtype">int</span> length = <span class="keywordtype">string</span>.IsNullOrEmpty(source) ? 0 : source.Length;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            Event evt = Event.current;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordtype">char</span> c = evt.character;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">if</span> (c != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">switch</span> (length)</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        <span class="keywordflow">if</span> (source != m_PreviousInput)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        <span class="keywordflow">if</span> ((source[0] == <span class="charliteral">&#39;\\&#39;</span> &amp;&amp; (c == <span class="charliteral">&#39;u&#39;</span> || c == <span class="charliteral">&#39;U&#39;</span>)) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                            evt.character = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                        <span class="keywordflow">if</span> ((c &lt; &#39;0&#39; || c &gt; <span class="charliteral">&#39;9&#39;</span>) &amp;&amp; (c &lt; &#39;a&#39; || c &gt; <span class="charliteral">&#39;f&#39;</span>) &amp;&amp; (c &lt; &#39;A&#39; || c &gt; <span class="charliteral">&#39;F&#39;</span>))</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                            evt.character = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                    <span class="keywordflow">case</span> 7:</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    <span class="keywordflow">case</span> 9:</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        <span class="keywordflow">if</span> (source[1] == <span class="charliteral">&#39;u&#39;</span> || (c &lt; &#39;0&#39; || c &gt; <span class="charliteral">&#39;9&#39;</span>) &amp;&amp; (c &lt; &#39;a&#39; || c &gt; <span class="charliteral">&#39;f&#39;</span>) &amp;&amp; (c &lt; &#39;A&#39; || c &gt; <span class="charliteral">&#39;F&#39;</span>))</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                            evt.character = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                        <span class="comment">// Validate input</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                        <span class="keywordflow">if</span> (length == 6 &amp;&amp; source[1] == <span class="charliteral">&#39;u&#39;</span> &amp;&amp; source != m_PreviousInput)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    <span class="keywordflow">case</span> 10:</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                        <span class="keywordflow">if</span> (source != m_PreviousInput)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        evt.character = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            m_PreviousInput = source;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9e4a485cd25b4124aafbeaefff0684db">  303</a></span>&#160;        uint <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9e4a485cd25b4124aafbeaefff0684db">GetUnicodeCharacter</a> (<span class="keywordtype">string</span> source)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            uint unicode;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">if</span> (source.Length == 1)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                unicode = source[0];</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (source.Length == 6)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                unicode = (uint)<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMP_TextUtilities</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html#ad5a9161e825c2e1a7717dd16ebff7410">StringHexToInt</a>(source.Replace(<span class="stringliteral">&quot;\\u&quot;</span>, <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                unicode = (uint)<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMP_TextUtilities</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html#ad5a9161e825c2e1a7717dd16ebff7410">StringHexToInt</a>(source.Replace(<span class="stringliteral">&quot;\\U&quot;</span>, <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">return</span> unicode;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a27100ab97eb2920fefac99465884110d">  317</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a27100ab97eb2920fefac99465884110d">DrawGlyph</a>(uint glyphIndex, Rect position, SerializedProperty property)</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="comment">// Get a reference to the sprite texture</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset = <span class="keyword">property</span>.serializedObject.targetObject as <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">if</span> (fontAsset == null)</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="comment">// Check if glyph currently exists in the atlas texture.</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">if</span> (!fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#ae479d9a3f8788cabcf689c2bebee35d2">glyphLookupTable</a>.TryGetValue(glyphIndex, out Glyph glyph))</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="comment">// Get reference to atlas texture.</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordtype">int</span> atlasIndex = fontAsset.m_AtlasTextureIndex;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            Texture2D atlasTexture = fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a>.Length &gt; atlasIndex ? fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">atlasTextures</a>[atlasIndex] : null;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">if</span> (atlasTexture == null)</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            Material mat;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordflow">if</span> (((GlyphRasterModes)fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02dbb30284fafaab27013502060d1cbb">atlasRenderMode</a> &amp; GlyphRasterModes.RASTER_MODE_BITMAP) == GlyphRasterModes.RASTER_MODE_BITMAP)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                mat = <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___font_asset_editor.html">TMP_FontAssetEditor</a>.internalBitmapMaterial;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                <span class="keywordflow">if</span> (mat == null)</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                mat.mainTexture = atlasTexture;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                mat = <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___font_asset_editor.html">TMP_FontAssetEditor</a>.internalSDFMaterial;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="keywordflow">if</span> (mat == null)</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                mat.mainTexture = atlasTexture;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                mat.SetFloat(<a class="code" href="class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.<a class="code" href="class_t_m_pro_1_1_shader_utilities.html#ad95991c22362ecf0725aa6806338fbea">ID_GradientScale</a>, fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a10ea3cba57114687428dcaf11aa8416d">atlasPadding</a> + 1);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            }</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="comment">// Draw glyph from atlas texture.</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            Rect glyphDrawPosition = <span class="keyword">new</span> Rect(position.x, position.y + 2, 64, 60);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            GlyphRect glyphRect = glyph.glyphRect;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordtype">float</span> normalizedHeight = fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a>.ascentLine - fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a>.descentLine;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordtype">float</span> scale = glyphDrawPosition.width / normalizedHeight;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <span class="comment">// Compute the normalized texture coordinates</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            Rect texCoords = <span class="keyword">new</span> Rect((<span class="keywordtype">float</span>)glyphRect.x / atlasTexture.width, (<span class="keywordtype">float</span>)glyphRect.y / atlasTexture.height, (<span class="keywordtype">float</span>)glyphRect.width / atlasTexture.width, (<span class="keywordtype">float</span>)glyphRect.height / atlasTexture.height);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">if</span> (Event.current.type == <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Repaint)</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                glyphDrawPosition.x += (glyphDrawPosition.width - glyphRect.width * scale) / 2;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                glyphDrawPosition.y += (glyphDrawPosition.height - glyphRect.height * scale) / 2;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                glyphDrawPosition.width = glyphRect.width * scale;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                glyphDrawPosition.height = glyphRect.height * scale;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                <span class="comment">// Could switch to using the default material of the font asset which would require passing scale to the shader.</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                Graphics.DrawTexture(glyphDrawPosition, atlasTexture, texCoords, 0, 0, 0, 0, <span class="keyword">new</span> Color(1f, 1f, 1f), mat);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_html_a9e4a485cd25b4124aafbeaefff0684db"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9e4a485cd25b4124aafbeaefff0684db">TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.GetUnicodeCharacter</a></div><div class="ttdeci">uint GetUnicodeCharacter(string source)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00303">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs:303</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_html_a9678ea64a0d19a7db339d95d39dacccf"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9678ea64a0d19a7db339d95d39dacccf">TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.OnGUI</a></div><div class="ttdeci">override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00024">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs:24</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_html_ab86856a31e550f42d74db872c0479f63"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#ab86856a31e550f42d74db872c0479f63">TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.ValidateInput</a></div><div class="ttdeci">bool ValidateInput(string source)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00248">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs:248</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_shader_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_shader_utilities.html">TMPro.ShaderUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___shader_utilities_8cs_source.html#l00008">TMP_ShaderUtilities.cs:8</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_shader_utilities_html_ad95991c22362ecf0725aa6806338fbea"><div class="ttname"><a href="class_t_m_pro_1_1_shader_utilities.html#ad95991c22362ecf0725aa6806338fbea">TMPro.ShaderUtilities.ID_GradientScale</a></div><div class="ttdeci">static int ID_GradientScale</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___shader_utilities_8cs_source.html#l00033">TMP_ShaderUtilities.cs:33</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html">TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00013">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs:13</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_utilities_html_ad5a9161e825c2e1a7717dd16ebff7410"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_utilities.html#ad5a9161e825c2e1a7717dd16ebff7410">TMPro.TMP_TextUtilities.StringHexToInt</a></div><div class="ttdeci">static int StringHexToInt(string s)</div><div class="ttdoc">Function to convert a properly formatted string which contains an hex value to its decimal value...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_utilities_8cs_source.html#l02266">TMP_TextUtilities.cs:2266</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_ac59bb522cd9a07608104b362e94509e3"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#ac59bb522cd9a07608104b362e94509e3">TMPro.TMP_FontAsset.atlasTextures</a></div><div class="ttdeci">Texture2D[] atlasTextures</div><div class="ttdoc">Array of atlas textures that contain the glyphs used by this font asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00170">TMP_FontAsset.cs:170</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_html_a5ebcb9bcfb14f7f3d88c061c98e30343"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a5ebcb9bcfb14f7f3d88c061c98e30343">TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.m_PreviousInput</a></div><div class="ttdeci">string m_PreviousInput</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00020">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs:20</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___serialized_property_holder_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html">TMPro.TMP_SerializedPropertyHolder</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___serialized_property_holder_8cs_source.html#l00006">TMP_SerializedPropertyHolder.cs:6</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a42eafee651621d6645ea8c424faa2f1a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">TMPro.TMP_FontAsset.faceInfo</a></div><div class="ttdeci">FaceInfo faceInfo</div><div class="ttdoc">Information about the font face. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00085">TMP_FontAsset.cs:85</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a02dbb30284fafaab27013502060d1cbb"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02dbb30284fafaab27013502060d1cbb">TMPro.TMP_FontAsset.atlasRenderMode</a></div><div class="ttdeci">GlyphRenderMode atlasRenderMode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00270">TMP_FontAsset.cs:270</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a10ea3cba57114687428dcaf11aa8416d"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a10ea3cba57114687428dcaf11aa8416d">TMPro.TMP_FontAsset.atlasPadding</a></div><div class="ttdeci">int atlasPadding</div><div class="ttdoc">The padding used between glyphs contained in the atlas texture(s) used by this font asset...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00262">TMP_FontAsset.cs:262</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_html_a27100ab97eb2920fefac99465884110d"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a27100ab97eb2920fefac99465884110d">TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.DrawGlyph</a></div><div class="ttdeci">void DrawGlyph(uint glyphIndex, Rect position, SerializedProperty property)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00317">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs:317</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___font_asset_editor_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___font_asset_editor.html">TMPro.EditorUtilities.TMP_FontAssetEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_editor_8cs_source.html#l00044">TMP_FontAssetEditor.cs:44</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___serialized_property_holder_html_acb5b08b28642d61b64d5dad90bde775f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html#acb5b08b28642d61b64d5dad90bde775f">TMPro.TMP_SerializedPropertyHolder.firstCharacter</a></div><div class="ttdeci">uint firstCharacter</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___serialized_property_holder_8cs_source.html#l00009">TMP_SerializedPropertyHolder.cs:9</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMPro.TMP_TextUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_utilities_8cs_source.html#l00024">TMP_TextUtilities.cs:24</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___serialized_property_holder_html_af636c4eb38fe9c7a3f014b1b57c164a1"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html#af636c4eb38fe9c7a3f014b1b57c164a1">TMPro.TMP_SerializedPropertyHolder.secondCharacter</a></div><div class="ttdeci">uint secondCharacter</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___serialized_property_holder_8cs_source.html#l00010">TMP_SerializedPropertyHolder.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___serialized_property_holder_html_a808b96b1fa2a6575a3f87ccfb338333c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___serialized_property_holder.html#a808b96b1fa2a6575a3f87ccfb338333c">TMPro.TMP_SerializedPropertyHolder.fontAsset</a></div><div class="ttdeci">TMP_FontAsset fontAsset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___serialized_property_holder_8cs_source.html#l00008">TMP_SerializedPropertyHolder.cs:8</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMPro.TMP_FontAsset</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00022">TMP_FontAsset.cs:22</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a7a1b2ac459f1a69fbd8a373219f1e13c"><div class="ttname"><a href="namespace_t_m_pro.html#a7a1b2ac459f1a69fbd8a373219f1e13c">TMPro.FontFeatureLookupFlags</a></div><div class="ttdeci">FontFeatureLookupFlags</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_features_common_8cs_source.html#l00010">TMP_FontFeaturesCommon.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_ae479d9a3f8788cabcf689c2bebee35d2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#ae479d9a3f8788cabcf689c2bebee35d2">TMPro.TMP_FontAsset.glyphLookupTable</a></div><div class="ttdeci">Dictionary&lt; uint, Glyph &gt; glyphLookupTable</div><div class="ttdoc">Dictionary used to lookup glyphs contained in the font asset by their index. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00108">TMP_FontAsset.cs:108</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

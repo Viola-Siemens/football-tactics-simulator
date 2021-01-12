@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/TrackResourceCache.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_0724e84c20f94a0e0cb26eb6bc9f3803.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TrackResourceCache.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_track_resource_cache_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html">    9</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html">TrackResourceCache</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#ab1cd0c397405e60f3b565e512fe3de5d">   11</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Dictionary&lt;<a class="code" href="namespace_system.html">System</a>.Type, GUIContent&gt; s_TrackIconCache = <span class="keyword">new</span> Dictionary&lt;Type, GUIContent&gt;(10);</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a87160b2917ffde12a95920dd8cb28e10">   12</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Dictionary&lt;<a class="code" href="namespace_system.html">System</a>.Type, Color&gt; s_TrackColorCache = <span class="keyword">new</span> Dictionary&lt;Type, Color&gt;(10);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a06acbc63c135f5a935b5ed6989edf3f5">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIContent s_DefaultIcon = EditorGUIUtility.IconContent(<span class="stringliteral">&quot;UnityEngine/ScriptableObject Icon&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a6d00d5c42be74fcf3ed92a4d2bd95eda">   15</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIContent <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a6d00d5c42be74fcf3ed92a4d2bd95eda">GetTrackIcon</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keywordflow">return</span> s_DefaultIcon;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            GUIContent content = null;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (!s_TrackIconCache.TryGetValue(track.GetType(), out content))</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                content = FindTrackIcon(track);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                s_TrackIconCache[track.GetType()] = content;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> content;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a29a0328cf46ba198f5be5f80fc8e8e9c">   29</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Color <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a29a0328cf46ba198f5be5f80fc8e8e9c">GetTrackColor</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">return</span> Color.white;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// Try to ensure DirectorStyles is initialized first</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">// Note: GUISkin.current must exist to be able do so</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a373f978a75dc5ebdb76c24c18fc787df">IsInitialized</a> &amp;&amp; GUISkin.current != null)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a732bfd255994e36e43c4b7fe1567738e">ReloadStylesIfNeeded</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            Color color;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (!s_TrackColorCache.TryGetValue(track.GetType(), out color))</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                var attr = track.GetType().GetCustomAttributes(typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_color_attribute.html">TrackColorAttribute</a>), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">if</span> (attr.Length &gt; 0)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    color = ((<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_color_attribute.html">TrackColorAttribute</a>)attr[0]).color;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="comment">// case 1141958</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="comment">// There was an error initializing DirectorStyles</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a373f978a75dc5ebdb76c24c18fc787df">IsInitialized</a>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        <span class="keywordflow">return</span> Color.white;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    color = <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">customSkin</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a07137f8f5be58b7da63dd4694f0c1da2">colorDefaultTrackDrawer</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                s_TrackColorCache[track.GetType()] = color;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> color;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a75d06f95433e84f1b9fa4e98cee1b498">   62</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a75d06f95433e84f1b9fa4e98cee1b498">ClearTrackIconCache</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            s_TrackIconCache.Clear();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a2c507f8425cfbf562d205692692bc1dc">   67</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetTrackIcon&lt;T&gt;(GUIContent content) where T : <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            s_TrackIconCache[typeof(T)] = content;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#aa34d222123efa2c6f18e4270d294e8ec">   72</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#aa34d222123efa2c6f18e4270d294e8ec">ClearTrackColorCache</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            s_TrackColorCache.Clear();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#ae3afdd6ff4cffd2245290a14808edfe1">   77</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetTrackColor&lt;T&gt;(Color c) where T : <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            s_TrackColorCache[typeof(T)] = c;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a1aa92f8e98821c683bb2790ad9d14372">   82</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> GUIContent <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a1aa92f8e98821c683bb2790ad9d14372">FindTrackIcon</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="comment">// backwards compatible -- try to load from Gizmos folder</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            Texture2D texture = AssetDatabase.LoadAssetAtPath&lt;Texture2D&gt;(<span class="stringliteral">&quot;Assets/Gizmos/&quot;</span> + track.GetType().Name + <span class="stringliteral">&quot;.png&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (texture != null)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> GUIContent(texture);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="comment">// try to load based on the binding type</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            var binding = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a01b6d00e9e62a9a5d317cf3616e38427">outputs</a>.FirstOrDefault();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (binding.outputTargetType != null)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="comment">// Type calls don&#39;t properly handle monobehaviours, because an instance is required to</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="comment">//  get the monoscript icons</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">if</span> (typeof(MonoBehaviour).IsAssignableFrom(binding.outputTargetType))</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    texture = null;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    var scripts = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Resources.FindObjectsOfTypeAll&lt;MonoScript&gt;();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="keywordflow">foreach</span> (var script <span class="keywordflow">in</span> scripts)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        <span class="keywordflow">if</span> (script.GetClass() == binding.outputTargetType)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                            texture = AssetPreview.GetMiniThumbnail(script);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    texture = EditorGUIUtility.FindTexture(binding.outputTargetType);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">if</span> (texture != null)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">new</span> GUIContent(texture);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="comment">// default to the scriptable object icon</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">return</span> s_DefaultIcon;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_resource_cache_html_a75d06f95433e84f1b9fa4e98cee1b498"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a75d06f95433e84f1b9fa4e98cee1b498">UnityEditor.Timeline.TrackResourceCache.ClearTrackIconCache</a></div><div class="ttdeci">static void ClearTrackIconCache()</div><div class="ttdef"><b>Definition:</b> <a href="_track_resource_cache_8cs_source.html#l00062">TrackResourceCache.cs:62</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_resource_cache_html_a29a0328cf46ba198f5be5f80fc8e8e9c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a29a0328cf46ba198f5be5f80fc8e8e9c">UnityEditor.Timeline.TrackResourceCache.GetTrackColor</a></div><div class="ttdeci">static Color GetTrackColor(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_track_resource_cache_8cs_source.html#l00029">TrackResourceCache.cs:29</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a04488ba3eee7c6d9dda98d4998bd7b93"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">UnityEditor.Timeline.DirectorStyles.customSkin</a></div><div class="ttdeci">DirectorNamedColor customSkin</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00148">DirectorStyles.cs:148</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a732bfd255994e36e43c4b7fe1567738e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a732bfd255994e36e43c4b7fe1567738e">UnityEditor.Timeline.DirectorStyles.ReloadStylesIfNeeded</a></div><div class="ttdeci">static void ReloadStylesIfNeeded()</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00137">DirectorStyles.cs:137</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_resource_cache_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html">UnityEditor.Timeline.TrackResourceCache</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_resource_cache_8cs_source.html#l00009">TrackResourceCache.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a01b6d00e9e62a9a5d317cf3616e38427"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a01b6d00e9e62a9a5d317cf3616e38427">UnityEngine.Timeline.TrackAsset.outputs</a></div><div class="ttdeci">override IEnumerable&lt; PlayableBinding &gt; outputs</div><div class="ttdoc">Returns a description of the PlayableOutputs that will be created by this track. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00270">TrackAsset.cs:270</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_resource_cache_html_aa34d222123efa2c6f18e4270d294e8ec"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#aa34d222123efa2c6f18e4270d294e8ec">UnityEditor.Timeline.TrackResourceCache.ClearTrackColorCache</a></div><div class="ttdeci">static void ClearTrackColorCache()</div><div class="ttdef"><b>Definition:</b> <a href="_track_resource_cache_8cs_source.html#l00072">TrackResourceCache.cs:72</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_color_attribute_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_color_attribute.html">UnityEngine.Timeline.TrackColorAttribute</a></div><div class="ttdoc">Attribute used to specify the color of the track and its clips inside the Timeline Editor...</div><div class="ttdef"><b>Definition:</b> <a href="_track_color_attribute_8cs_source.html#l00010">TrackColorAttribute.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_resource_cache_html_a6d00d5c42be74fcf3ed92a4d2bd95eda"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a6d00d5c42be74fcf3ed92a4d2bd95eda">UnityEditor.Timeline.TrackResourceCache.GetTrackIcon</a></div><div class="ttdeci">static GUIContent GetTrackIcon(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_track_resource_cache_8cs_source.html#l00015">TrackResourceCache.cs:15</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a15e95e53dca9e97cb48ed6e7b8f98cbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">UnityEditor.Timeline.DirectorStyles.Instance</a></div><div class="ttdeci">static DirectorStyles Instance</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00124">DirectorStyles.cs:124</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_a07137f8f5be58b7da63dd4694f0c1da2"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#a07137f8f5be58b7da63dd4694f0c1da2">UnityEngine.Timeline.DirectorNamedColor.colorDefaultTrackDrawer</a></div><div class="ttdeci">Color colorDefaultTrackDrawer</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00096">DirectorNamedColor.cs:96</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a373f978a75dc5ebdb76c24c18fc787df"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a373f978a75dc5ebdb76c24c18fc787df">UnityEditor.Timeline.DirectorStyles.IsInitialized</a></div><div class="ttdeci">static bool IsInitialized</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00119">DirectorStyles.cs:119</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_resource_cache_html_a1aa92f8e98821c683bb2790ad9d14372"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a1aa92f8e98821c683bb2790ad9d14372">UnityEditor.Timeline.TrackResourceCache.FindTrackIcon</a></div><div class="ttdeci">static GUIContent FindTrackIcon(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_track_resource_cache_8cs_source.html#l00082">TrackResourceCache.cs:82</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

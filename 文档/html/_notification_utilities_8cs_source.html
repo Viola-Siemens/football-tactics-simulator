@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Utilities/NotificationUtilities.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_3783f2849d6c65cfd21f346d22390697.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NotificationUtilities.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_notification_utilities_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html">    7</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html">NotificationUtilities</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html#ae0afbe19914b59f54d2f09bb76059988">    9</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> ScriptPlayable&lt;TimeNotificationBehaviour&gt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html#ae0afbe19914b59f54d2f09bb76059988">CreateNotificationsPlayable</a>(PlayableGraph graph, IEnumerable&lt;IMarker&gt; markers, GameObject go)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            var notificationPlayable = ScriptPlayable&lt;TimeNotificationBehaviour&gt;.Null;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            var director = go.GetComponent&lt;PlayableDirector&gt;();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">foreach</span> (var e <span class="keywordflow">in</span> markers)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                var notif = e as INotification;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <span class="keywordflow">if</span> (notif == null)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keywordflow">if</span> (notificationPlayable.Equals(ScriptPlayable&lt;TimeNotificationBehaviour&gt;.Null))</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    notificationPlayable = <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">TimeNotificationBehaviour</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#abba726150be9160b8285515789e9723f">Create</a>(graph,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                        director.playableAsset.duration, director.extrapolationMode);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                var time = (<a class="code" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html">DiscreteTime</a>)e.time;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                var tlDuration = (<a class="code" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html">DiscreteTime</a>)director.playableAsset.duration;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">if</span> (time &gt;= tlDuration &amp;&amp; time &lt;= tlDuration.OneTickAfter() &amp;&amp; tlDuration != 0)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    time = tlDuration.OneTickBefore();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                var notificationOptionProvider = e as <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_notification_option_provider.html">INotificationOptionProvider</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">if</span> (notificationOptionProvider != null)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    notificationPlayable.GetBehaviour().AddNotification((<span class="keywordtype">double</span>)time, notif, notificationOptionProvider.flags);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    notificationPlayable.GetBehaviour().AddNotification((<span class="keywordtype">double</span>)time, notif);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> notificationPlayable;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html#a08d0a9743d9c54c89254782421ee56c8">   46</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html#a08d0a9743d9c54c89254782421ee56c8">TrackTypeSupportsNotifications</a>(Type type)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var binding = (<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_binding_type_attribute.html">TrackBindingTypeAttribute</a>)Attribute.GetCustomAttribute(type, typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_binding_type_attribute.html">TrackBindingTypeAttribute</a>));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> binding != null &amp;&amp;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                (typeof(<a class="code" href="namespace_component.html">Component</a>).IsAssignableFrom(binding.type) ||</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    typeof(GameObject).IsAssignableFrom(binding.type));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_abba726150be9160b8285515789e9723f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#abba726150be9160b8285515789e9723f">UnityEngine.Timeline.TimeNotificationBehaviour.Create</a></div><div class="ttdeci">static ScriptPlayable&lt; TimeNotificationBehaviour &gt; Create(PlayableGraph graph, double duration, DirectorWrapMode loopMode)</div><div class="ttdoc">Creates and initializes a ScriptPlayable with a TimeNotificationBehaviour. </div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00058">TimeNotificationBehaviour.cs:58</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">UnityEngine.Timeline.TimeNotificationBehaviour</a></div><div class="ttdoc">Use this PlayableBehaviour to send notifications at a given time. </div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00011">TimeNotificationBehaviour.cs:11</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_notification_option_provider_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_notification_option_provider.html">UnityEngine.Timeline.INotificationOptionProvider</a></div><div class="ttdoc">Implement this interface to change the behaviour of an INotification. </div><div class="ttdef"><b>Definition:</b> <a href="_i_notification_option_provider_8cs_source.html#l00008">INotificationOptionProvider.cs:8</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_notification_utilities_html_ae0afbe19914b59f54d2f09bb76059988"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html#ae0afbe19914b59f54d2f09bb76059988">UnityEngine.Timeline.NotificationUtilities.CreateNotificationsPlayable</a></div><div class="ttdeci">static ScriptPlayable&lt; TimeNotificationBehaviour &gt; CreateNotificationsPlayable(PlayableGraph graph, IEnumerable&lt; IMarker &gt; markers, GameObject go)</div><div class="ttdef"><b>Definition:</b> <a href="_notification_utilities_8cs_source.html#l00009">NotificationUtilities.cs:9</a></div></div>
+<div class="ttc" id="namespace_component_html"><div class="ttname"><a href="namespace_component.html">Component</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_binding_type_attribute_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_binding_type_attribute.html">UnityEngine.Timeline.TrackBindingTypeAttribute</a></div><div class="ttdoc">Specifies the type of object that should be bound to a TrackAsset. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_attributes_8cs_source.html#l00091">TimelineAttributes.cs:91</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_notification_utilities_html_a08d0a9743d9c54c89254782421ee56c8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html#a08d0a9743d9c54c89254782421ee56c8">UnityEngine.Timeline.NotificationUtilities.TrackTypeSupportsNotifications</a></div><div class="ttdeci">static bool TrackTypeSupportsNotifications(Type type)</div><div class="ttdef"><b>Definition:</b> <a href="_notification_utilities_8cs_source.html#l00046">NotificationUtilities.cs:46</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_discrete_time_html"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html">UnityEngine.Timeline.DiscreteTime</a></div><div class="ttdef"><b>Definition:</b> <a href="_discrete_time_8cs_source.html#l00005">DiscreteTime.cs:5</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_notification_utilities_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_notification_utilities.html">UnityEngine.Timeline.NotificationUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_notification_utilities_8cs_source.html#l00007">NotificationUtilities.cs:7</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

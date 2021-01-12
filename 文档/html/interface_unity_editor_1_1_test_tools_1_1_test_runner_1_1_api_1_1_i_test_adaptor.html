@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.TestTools.TestRunner.Api.ITestAdaptor接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_test_tools.html">TestTools</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner.html">TestRunner</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html">Api</a></li><li class="navelem"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#properties">属性</a> &#124;
+<a href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.TestTools.TestRunner.Api.ITestAdaptor接口 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.TestTools.TestRunner.Api.ITestAdaptor 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor__inherit__graph.png" border="0" usemap="#_unity_editor_8_test_tools_8_test_runner_8_api_8_i_test_adaptor_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a4492bfa2f17a783e7acecf833fb11b30"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a4492bfa2f17a783e7acecf833fb11b30">Id</a><code> [get]</code></td></tr>
+<tr class="separator:a4492bfa2f17a783e7acecf833fb11b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ca92106ee4af718307d733cfb127e8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a49ca92106ee4af718307d733cfb127e8">Name</a><code> [get]</code></td></tr>
+<tr class="separator:a49ca92106ee4af718307d733cfb127e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17521034b69ec4b5bc9531f37e024809"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a17521034b69ec4b5bc9531f37e024809">FullName</a><code> [get]</code></td></tr>
+<tr class="separator:a17521034b69ec4b5bc9531f37e024809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f265bee4e6f646e9e0afa0c11c43fe2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a4f265bee4e6f646e9e0afa0c11c43fe2">TestCaseCount</a><code> [get]</code></td></tr>
+<tr class="separator:a4f265bee4e6f646e9e0afa0c11c43fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d633ed97bdbc622df4bcc0e29f6143f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a2d633ed97bdbc622df4bcc0e29f6143f">HasChildren</a><code> [get]</code></td></tr>
+<tr class="separator:a2d633ed97bdbc622df4bcc0e29f6143f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e71dc9fa93ac1dd069aaa3613b0f89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a01e71dc9fa93ac1dd069aaa3613b0f89">IsSuite</a><code> [get]</code></td></tr>
+<tr class="separator:a01e71dc9fa93ac1dd069aaa3613b0f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d96731cabd313982e2259a0f41a314"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#ac9d96731cabd313982e2259a0f41a314">Children</a><code> [get]</code></td></tr>
+<tr class="separator:ac9d96731cabd313982e2259a0f41a314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963e2dba0559d0f0b4e7c69b3e0bb85c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a963e2dba0559d0f0b4e7c69b3e0bb85c">Parent</a><code> [get]</code></td></tr>
+<tr class="separator:a963e2dba0559d0f0b4e7c69b3e0bb85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8788c0bbae9107c4423517128c33216b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a8788c0bbae9107c4423517128c33216b">TestCaseTimeout</a><code> [get]</code></td></tr>
+<tr class="separator:a8788c0bbae9107c4423517128c33216b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1148193b25bf01bfa52e857402a262a2"><td class="memItemLeft" align="right" valign="top">ITypeInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a1148193b25bf01bfa52e857402a262a2">TypeInfo</a><code> [get]</code></td></tr>
+<tr class="separator:a1148193b25bf01bfa52e857402a262a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2579e6a343fba5dfd5f34e4ba0fffdb2"><td class="memItemLeft" align="right" valign="top">IMethodInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a2579e6a343fba5dfd5f34e4ba0fffdb2">Method</a><code> [get]</code></td></tr>
+<tr class="separator:a2579e6a343fba5dfd5f34e4ba0fffdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbaa5f1984f19a145d3fa4b90e8407d"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a6cbaa5f1984f19a145d3fa4b90e8407d">Categories</a><code> [get]</code></td></tr>
+<tr class="separator:a6cbaa5f1984f19a145d3fa4b90e8407d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732840ad336dd8849b7f0451ff9680dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a732840ad336dd8849b7f0451ff9680dd">IsTestAssembly</a><code> [get]</code></td></tr>
+<tr class="separator:a732840ad336dd8849b7f0451ff9680dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c32a783116f602d9074ba172e2cb9ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#ad6bcc775441176dd7331d8173c8527b7">RunState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a0c32a783116f602d9074ba172e2cb9ca">RunState</a><code> [get]</code></td></tr>
+<tr class="separator:a0c32a783116f602d9074ba172e2cb9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c127d13b044ce413216562d9e343b4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a67c127d13b044ce413216562d9e343b4">Description</a><code> [get]</code></td></tr>
+<tr class="separator:a67c127d13b044ce413216562d9e343b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde4611def4e8c365b266ad368fdaac6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#afde4611def4e8c365b266ad368fdaac6">SkipReason</a><code> [get]</code></td></tr>
+<tr class="separator:afde4611def4e8c365b266ad368fdaac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e49dbc3e735a84c444820cdf6f3756"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#af5e49dbc3e735a84c444820cdf6f3756">ParentId</a><code> [get]</code></td></tr>
+<tr class="separator:af5e49dbc3e735a84c444820cdf6f3756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2691867507c8b5215ab264d2ab92525c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a2691867507c8b5215ab264d2ab92525c">ParentFullName</a><code> [get]</code></td></tr>
+<tr class="separator:a2691867507c8b5215ab264d2ab92525c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df2e24eb950efb92f0686bd07c0a53b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a7df2e24eb950efb92f0686bd07c0a53b">UniqueName</a><code> [get]</code></td></tr>
+<tr class="separator:a7df2e24eb950efb92f0686bd07c0a53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf9aea7449153361567d216dda35cf8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a0bf9aea7449153361567d216dda35cf8">ParentUniqueName</a><code> [get]</code></td></tr>
+<tr class="separator:a0bf9aea7449153361567d216dda35cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875588c122ae80173160c9ae5eea4b5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a875588c122ae80173160c9ae5eea4b5c">ChildIndex</a><code> [get]</code></td></tr>
+<tr class="separator:a875588c122ae80173160c9ae5eea4b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867066d3409942fb831206794c264527"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html#a867066d3409942fb831206794c264527">TestMode</a><code> [get]</code></td></tr>
+<tr class="separator:a867066d3409942fb831206794c264527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00006">6</a> 行定义.</p>
+</div><h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a6cbaa5f1984f19a145d3fa4b90e8407d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.Categories</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a875588c122ae80173160c9ae5eea4b5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.ChildIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9d96731cabd313982e2259a0f41a314"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a>&gt; UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.Children</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a67c127d13b044ce413216562d9e343b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.Description</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17521034b69ec4b5bc9531f37e024809"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.FullName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d633ed97bdbc622df4bcc0e29f6143f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.HasChildren</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4492bfa2f17a783e7acecf833fb11b30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.Id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00008">8</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a01e71dc9fa93ac1dd069aaa3613b0f89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.IsSuite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a732840ad336dd8849b7f0451ff9680dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.IsTestAssembly</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2579e6a343fba5dfd5f34e4ba0fffdb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IMethodInfo UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.Method</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49ca92106ee4af718307d733cfb127e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.Name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a963e2dba0559d0f0b4e7c69b3e0bb85c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a> UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.Parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2691867507c8b5215ab264d2ab92525c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.ParentFullName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5e49dbc3e735a84c444820cdf6f3756"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.ParentId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0bf9aea7449153361567d216dda35cf8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.ParentUniqueName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c32a783116f602d9074ba172e2cb9ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#ad6bcc775441176dd7331d8173c8527b7">RunState</a> UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.RunState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afde4611def4e8c365b266ad368fdaac6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.SkipReason</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f265bee4e6f646e9e0afa0c11c43fe2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.TestCaseCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8788c0bbae9107c4423517128c33216b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.TestCaseTimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a867066d3409942fb831206794c264527"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a> UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.TestMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1148193b25bf01bfa52e857402a262a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ITypeInfo UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.TypeInfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7df2e24eb950efb92f0686bd07c0a53b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestAdaptor.UniqueName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a> 第 <a class="el" href="_i_test_adaptor_8cs_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.test-framework@1.1.14/UnityEditor.TestRunner/Api/<a class="el" href="_i_test_adaptor_8cs_source.html">ITestAdaptor.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:46 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

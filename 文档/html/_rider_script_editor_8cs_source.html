@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/RiderScriptEditor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_32686730bbc6d3167bfde4cfe0a50c15.html">com.unity.ide.rider@1.1.4</a></li><li class="navelem"><a class="el" href="dir_758adcb6e05a214d4705ebd2d4e574e8.html">Rider</a></li><li class="navelem"><a class="el" href="dir_0a30d460110a22d34d2a947efc5146a0.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RiderScriptEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_rider_script_editor_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Diagnostics;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.IO;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_packages.html">Packages</a>.<a class="code" href="namespace_packages_1_1_rider.html">Rider</a>.<a class="code" href="namespace_packages_1_1_rider_1_1_editor.html">Editor</a>.<a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_util.html">Util</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> Unity.CodeEditor;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="_rider_script_editor_8cs.html#a0100be52d45f14348918ea69ec09f959">    9</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_debug.html">Debug</a> = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Debug;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_packages.html">Packages</a>.Rider.Editor</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  [InitializeOnLoad]</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html">   14</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html">RiderScriptEditor</a> : IExternalCodeEditor</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ae2506284eef5f76e1480065cee724ee3">   16</a></span>&#160;    <a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_discovery.html">IDiscovery</a> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ae2506284eef5f76e1480065cee724ee3">m_Discoverability</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab11351a2d71decc7c6c6ee2c8ced2f17">   17</a></span>&#160;    <a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html">IGenerator</a> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab11351a2d71decc7c6c6ee2c8ced2f17">m_ProjectGeneration</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7ab4cc10c5aae77e24857ad5a1696436">   18</a></span>&#160;    RiderInitializer m_Initiliazer = <span class="keyword">new</span> RiderInitializer();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4ee46a0bf8d504d483eda23803f08956">   20</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4ee46a0bf8d504d483eda23803f08956">RiderScriptEditor</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        var projectGeneration = <span class="keyword">new</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html">ProjectGeneration</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        var editor = <span class="keyword">new</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html">RiderScriptEditor</a>(<span class="keyword">new</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_discovery.html">Discovery</a>(), projectGeneration);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        CodeEditor.Register(editor);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        var path = GetEditorRealPath(CodeEditor.CurrentEditorInstallation);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (IsRiderInstallation(path))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          <span class="keywordflow">if</span> (!<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.InitializedOnce)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            var installations = editor.Installations;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// is toolbox and outdated - update</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> (installations.Any() &amp;&amp; <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html">RiderPathLocator</a>.IsToolbox(path) &amp;&amp; installations.All(a =&gt; a.Path != path))</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;              var toolboxInstallations = installations.Where(a =&gt; a.Name.Contains(<span class="stringliteral">&quot;(JetBrains Toolbox)&quot;</span>)).ToArray();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;              <span class="keywordflow">if</span> (toolboxInstallations.Any())</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;              {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                var newEditor = toolboxInstallations.Last().Path;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                CodeEditor.SetExternalScriptEditor(newEditor);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                path = newEditor;  </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;              }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;              <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                var newEditor = installations.Last().Path;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                CodeEditor.SetExternalScriptEditor(newEditor);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                path = newEditor;  </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;              }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// exists, is non toolbox and outdated - notify</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (installations.Any() &amp;&amp; <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">FileSystemUtil</a>.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">EditorPathExists</a>(path) &amp;&amp; installations.All(a =&gt; a.Path != path))</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;              var newEditorName = installations.Last().Name;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;              <a class="code" href="namespace_debug.html">Debug</a>.LogWarning($<span class="stringliteral">&quot;Consider updating External Editor in Unity to Rider {newEditorName}.&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            ShowWarningOnUnexpectedScriptEditor(path);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.InitializedOnce = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keywordflow">if</span> (!<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">FileSystemUtil</a>.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">EditorPathExists</a>(path)) <span class="comment">// previously used rider was removed</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            var installations = editor.Installations;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (installations.Any())</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;              var newEditor = installations.Last().Path;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;              CodeEditor.SetExternalScriptEditor(newEditor);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;              path = newEditor;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html#a325e760364977ea0e0d18ecb1e31168f">Init</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          editor.CreateSolutionIfDoesntExist();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.shouldLoadEditorPlugin)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            editor.m_Initiliazer.Initialize(path);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          InitProjectFilesWatcher();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">catch</span> (Exception e)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="namespace_debug.html">Debug</a>.LogException(e);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3b4eac5234f4fa2da28c3b73c2ad9e25">   90</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3b4eac5234f4fa2da28c3b73c2ad9e25">ShowWarningOnUnexpectedScriptEditor</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="comment">// Show warning, when Unity was started from Rider, but external editor is different https://github.com/JetBrains/resharper-unity/issues/1127</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      var args = Environment.GetCommandLineArgs();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      var commandlineParser = <span class="keyword">new</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_command_line_parser.html">CommandLineParser</a>(args);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">if</span> (commandlineParser.Options.ContainsKey(<span class="stringliteral">&quot;-riderPath&quot;</span>))</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        var originRiderPath = commandlineParser.Options[<span class="stringliteral">&quot;-riderPath&quot;</span>];</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        var originRealPath = GetEditorRealPath(originRiderPath);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        var originVersion = <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html">RiderPathLocator</a>.GetBuildNumber(originRealPath);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        var version = <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html">RiderPathLocator</a>.GetBuildNumber(path);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (originVersion != <span class="keywordtype">string</span>.Empty &amp;&amp; originVersion != version)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          <a class="code" href="namespace_debug.html">Debug</a>.LogWarning(<span class="stringliteral">&quot;Unity was started by a version of Rider that is not the current default external editor. Advanced integration features cannot be enabled.&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          <a class="code" href="namespace_debug.html">Debug</a>.Log($<span class="stringliteral">&quot;Unity was started by Rider {originVersion}, but external editor is set to: {path}&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a2e736705962f47e76b2fd9349728396c">  109</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a2e736705962f47e76b2fd9349728396c">InitProjectFilesWatcher</a>()</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      var watcher = <span class="keyword">new</span> FileSystemWatcher();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      watcher.Path = Directory.GetCurrentDirectory();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      watcher.NotifyFilter = NotifyFilters.LastWrite; <span class="comment">//Watch for changes in LastWrite times</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      watcher.Filter = <span class="stringliteral">&quot;*.*&quot;</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="comment">// Add event handlers.</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      watcher.Changed += OnChanged;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      watcher.Created += OnChanged;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      watcher.EnableRaisingEvents = <span class="keyword">true</span>; <span class="comment">// Begin watching.</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      AppDomain.CurrentDomain.DomainUnload += (EventHandler) ((_, __) =&gt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        watcher.Dispose();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      });</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a9b47e569a7211ecf7b4dfe4cde493684">  128</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a9b47e569a7211ecf7b4dfe4cde493684">OnChanged</a>(<span class="keywordtype">object</span> sender, FileSystemEventArgs e)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      var extension = Path.GetExtension(e.FullPath);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="keywordflow">if</span> (extension == <span class="stringliteral">&quot;.sln&quot;</span> || extension == <span class="stringliteral">&quot;.csproj&quot;</span>) </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.HasChanges = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">string</span> GetEditorRealPath(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(path))</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> path;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">FileSystemUtil</a>.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">EditorPathExists</a>(path))</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> path;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="keywordflow">if</span> (SystemInfo.operatingSystemFamily != OperatingSystemFamily.Windows)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        var realPath = <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">FileSystemUtil</a>.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a879251b5a89590e35198369830de4c74">GetFinalPathName</a>(path);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">// case of snap installation</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span> (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Linux)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;          <span class="keywordflow">if</span> (<span class="keyword">new</span> FileInfo(path).<a class="code" href="namespace_name.html">Name</a>.ToLowerInvariant() == <span class="stringliteral">&quot;rider&quot;</span> &amp;&amp;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;              <span class="keyword">new</span> FileInfo(realPath).<a class="code" href="class_name_1_1_name.html">Name</a>.ToLowerInvariant() == <span class="stringliteral">&quot;snap&quot;</span>)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;          {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            var snapInstallPath = <span class="stringliteral">&quot;/snap/rider/current/bin/rider.sh&quot;</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">new</span> FileInfo(snapInstallPath).Exists)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;              <span class="keywordflow">return</span> snapInstallPath;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;          }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="comment">// in case of symlink</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> realPath;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordflow">return</span> path;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#af421a0fd09ed0fd1db78f120364b5fc7">  168</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> unity_generate_all = <span class="stringliteral">&quot;unity_generate_all_csproj&quot;</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a8121a56659c06bf8a3695e6443961057">  170</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a8121a56659c06bf8a3695e6443961057">RiderScriptEditor</a>(<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_discovery.html">IDiscovery</a> discovery, <a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html">IGenerator</a> projectGeneration)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      m_Discoverability = discovery;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      m_ProjectGeneration = projectGeneration;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span>[] defaultExtensions</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7e69be8f27c0782ca95a914c7e0e0df9">  177</a></span>&#160;    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keyword">get</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        var customExtensions = <span class="keyword">new</span>[] {<span class="stringliteral">&quot;json&quot;</span>, <span class="stringliteral">&quot;asmdef&quot;</span>, <span class="stringliteral">&quot;log&quot;</span>, <span class="stringliteral">&quot;xaml&quot;</span>};</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">return</span> EditorSettings.projectGenerationBuiltinExtensions.Concat(EditorSettings.projectGenerationUserExtensions)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;          .Concat(customExtensions).Distinct().ToArray();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span>[] HandledExtensions</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3258cc365a9b5a4374c801e515319aaa">  187</a></span>&#160;    {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keyword">get</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> HandledExtensionsString.Split(<span class="keyword">new</span>[] {<span class="charliteral">&#39;;&#39;</span>}, StringSplitOptions.RemoveEmptyEntries).Select(s =&gt; s.TrimStart(<span class="charliteral">&#39;.&#39;</span>, <span class="charliteral">&#39;*&#39;</span>))</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;          .ToArray();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      } </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> HandledExtensionsString</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a11211c1617c56c73ab7fd4b7390437a8">  196</a></span>&#160;    {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keyword">get</span> { <span class="keywordflow">return</span> EditorPrefs.GetString(<span class="stringliteral">&quot;Rider_UserExtensions&quot;</span>, <span class="keywordtype">string</span>.Join(<span class="stringliteral">&quot;;&quot;</span>, defaultExtensions));}</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      set { EditorPrefs.SetString(<span class="stringliteral">&quot;Rider_UserExtensions&quot;</span>, value); }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab555ef43bdb2f7db6e83e631e5365b93">  201</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab555ef43bdb2f7db6e83e631e5365b93">SupportsExtension</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      var extension = Path.GetExtension(path);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(extension))</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keywordflow">return</span> HandledExtensions.Contains(extension.TrimStart(<span class="charliteral">&#39;.&#39;</span>));</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab67aa62d6561dd387b52e39e3bbba193">  209</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab67aa62d6561dd387b52e39e3bbba193">OnGUI</a>()</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      var prevGenerate = EditorPrefs.GetBool(unity_generate_all, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      var generateAll = EditorGUILayout.Toggle(<span class="stringliteral">&quot;Generate all .csproj files.&quot;</span>, prevGenerate);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <span class="keywordflow">if</span> (generateAll != prevGenerate)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        EditorPrefs.SetBool(unity_generate_all, generateAll);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      m_ProjectGeneration.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a96f0b674e31daaf36fa8ccc67f9d9a00">GenerateAll</a>(generateAll);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.shouldLoadEditorPlugin)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        HandledExtensionsString = EditorGUILayout.TextField(<span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Extensions handled: &quot;</span>), HandledExtensionsString);  </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a41543b63fec44cba19ec63db6d52cbc3">  226</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a41543b63fec44cba19ec63db6d52cbc3">SyncIfNeeded</a>(<span class="keywordtype">string</span>[] addedFiles, <span class="keywordtype">string</span>[] deletedFiles, <span class="keywordtype">string</span>[] movedFiles, <span class="keywordtype">string</span>[] movedFromFiles,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keywordtype">string</span>[] importedFiles)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      m_ProjectGeneration.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a6407005e3e72f333248d29ddceb861ab">SyncIfNeeded</a>(addedFiles.Union(deletedFiles).Union(movedFiles).Union(movedFromFiles),</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        importedFiles);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#abb34135b5bd405c295aa0947e431b643">  233</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#abb34135b5bd405c295aa0947e431b643">SyncAll</a>()</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      AssetDatabase.Refresh();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.HasChanges)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        m_ProjectGeneration.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a18d4c0b40c7ed4698d4e67fc06cf2c12">Sync</a>();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.HasChanges = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a31a75c6d68eb9ced6f93ae384491b33b">  243</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a31a75c6d68eb9ced6f93ae384491b33b">Initialize</a>(<span class="keywordtype">string</span> editorInstallationPath) <span class="comment">// is called each time ExternalEditor is changed</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">RiderScriptEditorData</a>.instance.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html#aef9faff99ea4bbb1ec17f39049a0af18">Invalidate</a>(editorInstallationPath);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      m_ProjectGeneration.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a18d4c0b40c7ed4698d4e67fc06cf2c12">Sync</a>(); <span class="comment">// regenerate csproj and sln for new editor</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a5275b5a4c038c1661f5aa27173a51a80">  249</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a5275b5a4c038c1661f5aa27173a51a80">OpenProject</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">int</span> line, <span class="keywordtype">int</span> column)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keywordflow">if</span> (path != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; !SupportsExtension(path)) <span class="comment">// Assets - Open C# Project passes empty path here</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordflow">if</span> (path == <span class="stringliteral">&quot;&quot;</span> &amp;&amp; SystemInfo.operatingSystemFamily == OperatingSystemFamily.MacOSX)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="comment">// there is a bug in DllImplementation - use package implementation here instead https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider/issues/21</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span> OpenOSXApp(path, line, column);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordflow">if</span> (!IsUnityScript(path))</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        var fastOpenResult = <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_editor_plugin_interop.html">EditorPluginInterop</a>.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_editor_plugin_interop.html#a54e8c8e04ca03b88675787d9bb208950">OpenFileDllImplementation</a>(path, line, column);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> (fastOpenResult)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <span class="keywordflow">if</span> (SystemInfo.operatingSystemFamily == OperatingSystemFamily.MacOSX)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span> OpenOSXApp(path, line, column);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      var solution = GetSolutionFile(path); <span class="comment">// TODO: If solution file doesn&#39;t exist resync.</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      solution = solution == <span class="stringliteral">&quot;&quot;</span> ? <span class="stringliteral">&quot;&quot;</span> : $<span class="stringliteral">&quot;\&quot;{solution}\&quot;&quot;</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      var process = <span class="keyword">new</span> Process</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        StartInfo = <span class="keyword">new</span> ProcessStartInfo</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;          FileName = CodeEditor.CurrentEditorInstallation,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;          Arguments = $<span class="stringliteral">&quot;{solution} -l {line} \&quot;{path}\&quot;&quot;</span>,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;          UseShellExecute = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      };</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      process.Start();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad7c027f49d6d01fdc6c010390679c4a6">  291</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad7c027f49d6d01fdc6c010390679c4a6">OpenOSXApp</a>(<span class="keywordtype">string</span> path, <span class="keywordtype">int</span> line, <span class="keywordtype">int</span> column)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      var solution = GetSolutionFile(path); <span class="comment">// TODO: If solution file doesn&#39;t exist resync.</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      solution = solution == <span class="stringliteral">&quot;&quot;</span> ? <span class="stringliteral">&quot;&quot;</span> : $<span class="stringliteral">&quot;\&quot;{solution}\&quot;&quot;</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      var pathArguments = path == <span class="stringliteral">&quot;&quot;</span> ? <span class="stringliteral">&quot;&quot;</span> : $<span class="stringliteral">&quot;-l {line} \&quot;{path}\&quot;&quot;</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      var process = <span class="keyword">new</span> Process</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        StartInfo = <span class="keyword">new</span> ProcessStartInfo</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;          FileName = <span class="stringliteral">&quot;open&quot;</span>,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;          Arguments = $<span class="stringliteral">&quot;-n \&quot;{CodeEditor.CurrentEditorInstallation}\&quot; --args {solution} {pathArguments}&quot;</span>,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          CreateNoWindow = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;          UseShellExecute = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      };</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      process.Start();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3f6cc8268ff8bf52591221c9f98c90b8">  312</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3f6cc8268ff8bf52591221c9f98c90b8">GetSolutionFile</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      <span class="keywordflow">if</span> (IsUnityScript(path))</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">return</span> Path.Combine(GetBaseUnityDeveloperFolder(), <span class="stringliteral">&quot;Projects/CSharp/Unity.CSharpProjects.gen.sln&quot;</span>);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      var solutionFile = m_ProjectGeneration.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a7810290b7f4f86366553a2670ae0bece">SolutionFile</a>();</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keywordflow">if</span> (File.Exists(solutionFile))</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">return</span> solutionFile;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad9b770cc707ce3df94a65de66fa0f700">  328</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad9b770cc707ce3df94a65de66fa0f700">IsUnityScript</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Unsupported.IsDeveloperBuild())</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        var baseFolder = GetBaseUnityDeveloperFolder().Replace(<span class="stringliteral">&quot;\\&quot;</span>, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        var lowerPath = path.ToLowerInvariant().Replace(<span class="stringliteral">&quot;\\&quot;</span>, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">if</span> (lowerPath.Contains((baseFolder + <span class="stringliteral">&quot;/Runtime&quot;</span>).ToLowerInvariant())</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;          || lowerPath.Contains((baseFolder + <span class="stringliteral">&quot;/Editor&quot;</span>).ToLowerInvariant()))</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4259cbe1310d0d6e04681f36e03ed931">  345</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4259cbe1310d0d6e04681f36e03ed931">GetBaseUnityDeveloperFolder</a>()</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <span class="keywordflow">return</span> Directory.GetParent(EditorApplication.applicationPath).Parent.Parent.FullName;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a95ae6ac6342a23b1ec07668b9ff1dabc">  350</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a95ae6ac6342a23b1ec07668b9ff1dabc">TryGetInstallationForPath</a>(<span class="keywordtype">string</span> editorPath, out CodeEditor.Installation installation)</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">FileSystemUtil</a>.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">EditorPathExists</a>(editorPath) &amp;&amp; IsRiderInstallation(editorPath))</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;      {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        var info = <span class="keyword">new</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html">RiderPathLocator</a>.<a class="code" href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">RiderInfo</a>(editorPath, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        installation = <span class="keyword">new</span> CodeEditor.Installation</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;          <a class="code" href="namespace_name.html">Name</a> = info.Presentation,</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;          Path = info.Path</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        };</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      installation = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#adf9f526d4291aee496f1d33d15e63c56">  367</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#adf9f526d4291aee496f1d33d15e63c56">IsRiderInstallation</a>(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <span class="keywordflow">if</span> (IsAssetImportWorkerProcess())</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(path))</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      var fileInfo = <span class="keyword">new</span> FileInfo(path);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      var filename = fileInfo.Name.ToLowerInvariant();</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      <span class="keywordflow">return</span> filename.StartsWith(<span class="stringliteral">&quot;rider&quot;</span>, StringComparison.Ordinal);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab9c8f25e03b8d5cb199e9d1f3b5478fa">  382</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab9c8f25e03b8d5cb199e9d1f3b5478fa">IsAssetImportWorkerProcess</a>()</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">#if UNITY_2019_3_OR_NEWER</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Experimental.AssetDatabaseExperimental.IsAssetImportWorkerProcess();</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> CurrentEditor <span class="comment">// works fast, doesn&#39;t validate if executable really exists</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4cd617d3f36357b90ee33ffe9ef2a0b0">  392</a></span>&#160;      =&gt; EditorPrefs.GetString(<span class="stringliteral">&quot;kScriptsDefaultApp&quot;</span>);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ac447c3036b762b58e71df2e706166a86">  394</a></span>&#160;    <span class="keyword">public</span> CodeEditor.Installation[] Installations =&gt; m_Discoverability.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_discovery.html#a26a618bf6be5f15d96ccd8df7d755c29">PathCallback</a>();</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7dedf234a8bd96644cae85ad854962ed">  396</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7dedf234a8bd96644cae85ad854962ed">CreateSolutionIfDoesntExist</a>()</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      <span class="keywordflow">if</span> (!m_ProjectGeneration.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#af2a293f64febed320e60d6e3a88276cb">HasSolutionBeenGenerated</a>())</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        m_ProjectGeneration.<a class="code" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a18d4c0b40c7ed4698d4e67fc06cf2c12">Sync</a>();</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;}</div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_generator_html_a7810290b7f4f86366553a2670ae0bece"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a7810290b7f4f86366553a2670ae0bece">Packages.Rider.Editor.IGenerator.SolutionFile</a></div><div class="ttdeci">string SolutionFile()</div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a31a75c6d68eb9ced6f93ae384491b33b"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a31a75c6d68eb9ced6f93ae384491b33b">Packages.Rider.Editor.RiderScriptEditor.Initialize</a></div><div class="ttdeci">void Initialize(string editorInstallationPath)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00243">RiderScriptEditor.cs:243</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_abb34135b5bd405c295aa0947e431b643"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#abb34135b5bd405c295aa0947e431b643">Packages.Rider.Editor.RiderScriptEditor.SyncAll</a></div><div class="ttdeci">void SyncAll()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00233">RiderScriptEditor.cs:233</a></div></div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_discovery_html"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_discovery.html">Packages.Rider.Editor.IDiscovery</a></div><div class="ttdef"><b>Definition:</b> <a href="_discovery_8cs_source.html#l00012">Discovery.cs:12</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_project_generation_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html">Packages.Rider.Editor.ProjectGeneration</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00084">ProjectGeneration.cs:84</a></div></div>
+<div class="ttc" id="class_name_1_1_name_html"><div class="ttname"><a href="class_name_1_1_name.html">Name.Name</a></div><div class="ttdef"><b>Definition:</b> <a href="_name_8cs_source.html#l00018">Name.cs:18</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_ab11351a2d71decc7c6c6ee2c8ced2f17"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab11351a2d71decc7c6c6ee2c8ced2f17">Packages.Rider.Editor.RiderScriptEditor.m_ProjectGeneration</a></div><div class="ttdeci">IGenerator m_ProjectGeneration</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00017">RiderScriptEditor.cs:17</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html">Packages.Rider.Editor.RiderScriptEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00014">RiderScriptEditor.cs:14</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_ab67aa62d6561dd387b52e39e3bbba193"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab67aa62d6561dd387b52e39e3bbba193">Packages.Rider.Editor.RiderScriptEditor.OnGUI</a></div><div class="ttdeci">void OnGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00209">RiderScriptEditor.cs:209</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_ab555ef43bdb2f7db6e83e631e5365b93"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab555ef43bdb2f7db6e83e631e5365b93">Packages.Rider.Editor.RiderScriptEditor.SupportsExtension</a></div><div class="ttdeci">static bool SupportsExtension(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00201">RiderScriptEditor.cs:201</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util_html_a879251b5a89590e35198369830de4c74"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a879251b5a89590e35198369830de4c74">Packages.Rider.Editor.Util.FileSystemUtil.GetFinalPathName</a></div><div class="ttdeci">static string GetFinalPathName([NotNull] string path)</div><div class="ttdef"><b>Definition:</b> <a href="_file_system_util_8cs_source.html#l00013">FileSystemUtil.cs:13</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a4259cbe1310d0d6e04681f36e03ed931"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4259cbe1310d0d6e04681f36e03ed931">Packages.Rider.Editor.RiderScriptEditor.GetBaseUnityDeveloperFolder</a></div><div class="ttdeci">static string GetBaseUnityDeveloperFolder()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00345">RiderScriptEditor.cs:345</a></div></div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_generator_html_a96f0b674e31daaf36fa8ccc67f9d9a00"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a96f0b674e31daaf36fa8ccc67f9d9a00">Packages.Rider.Editor.IGenerator.GenerateAll</a></div><div class="ttdeci">void GenerateAll(bool generateAll)</div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a9b47e569a7211ecf7b4dfe4cde493684"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a9b47e569a7211ecf7b4dfe4cde493684">Packages.Rider.Editor.RiderScriptEditor.OnChanged</a></div><div class="ttdeci">static void OnChanged(object sender, FileSystemEventArgs e)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00128">RiderScriptEditor.cs:128</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_command_line_parser_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_command_line_parser.html">Packages.Rider.Editor.Util.CommandLineParser</a></div><div class="ttdef"><b>Definition:</b> <a href="_command_line_parser_8cs_source.html#l00005">CommandLineParser.cs:5</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a3f6cc8268ff8bf52591221c9f98c90b8"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3f6cc8268ff8bf52591221c9f98c90b8">Packages.Rider.Editor.RiderScriptEditor.GetSolutionFile</a></div><div class="ttdeci">string GetSolutionFile(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00312">RiderScriptEditor.cs:312</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data_html_aef9faff99ea4bbb1ec17f39049a0af18"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html#aef9faff99ea4bbb1ec17f39049a0af18">Packages.Rider.Editor.RiderScriptEditorData.Invalidate</a></div><div class="ttdeci">void Invalidate(string editorInstallationPath)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_data_8cs_source.html#l00020">RiderScriptEditorData.cs:20</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a7dedf234a8bd96644cae85ad854962ed"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7dedf234a8bd96644cae85ad854962ed">Packages.Rider.Editor.RiderScriptEditor.CreateSolutionIfDoesntExist</a></div><div class="ttdeci">void CreateSolutionIfDoesntExist()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00396">RiderScriptEditor.cs:396</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a3b4eac5234f4fa2da28c3b73c2ad9e25"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3b4eac5234f4fa2da28c3b73c2ad9e25">Packages.Rider.Editor.RiderScriptEditor.ShowWarningOnUnexpectedScriptEditor</a></div><div class="ttdeci">static void ShowWarningOnUnexpectedScriptEditor(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00090">RiderScriptEditor.cs:90</a></div></div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_discovery_html_a26a618bf6be5f15d96ccd8df7d755c29"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_discovery.html#a26a618bf6be5f15d96ccd8df7d755c29">Packages.Rider.Editor.IDiscovery.PathCallback</a></div><div class="ttdeci">CodeEditor.Installation[] PathCallback()</div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_util_html"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_util.html">Packages.Rider.Editor.Util</a></div><div class="ttdef"><b>Definition:</b> <a href="_command_line_parser_8cs_source.html#l00003">CommandLineParser.cs:3</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_ae2506284eef5f76e1480065cee724ee3"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ae2506284eef5f76e1480065cee724ee3">Packages.Rider.Editor.RiderScriptEditor.m_Discoverability</a></div><div class="ttdeci">IDiscovery m_Discoverability</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00016">RiderScriptEditor.cs:16</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a4ee46a0bf8d504d483eda23803f08956"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4ee46a0bf8d504d483eda23803f08956">Packages.Rider.Editor.RiderScriptEditor.RiderScriptEditor</a></div><div class="ttdeci">static RiderScriptEditor()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00020">RiderScriptEditor.cs:20</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a5275b5a4c038c1661f5aa27173a51a80"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a5275b5a4c038c1661f5aa27173a51a80">Packages.Rider.Editor.RiderScriptEditor.OpenProject</a></div><div class="ttdeci">bool OpenProject(string path, int line, int column)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00249">RiderScriptEditor.cs:249</a></div></div>
+<div class="ttc" id="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info_html"><div class="ttname"><a href="struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html">Packages.Rider.Editor.RiderPathLocator.RiderInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="_discovery_8cs_source.html#l00415">Discovery.cs:415</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a2e736705962f47e76b2fd9349728396c"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a2e736705962f47e76b2fd9349728396c">Packages.Rider.Editor.RiderScriptEditor.InitProjectFilesWatcher</a></div><div class="ttdeci">static void InitProjectFilesWatcher()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00109">RiderScriptEditor.cs:109</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator.html">Packages.Rider.Editor.RiderPathLocator</a></div><div class="ttdoc">This code is a modified version of the JetBrains resharper-unity plugin listed here: https://github...</div><div class="ttdef"><b>Definition:</b> <a href="_discovery_8cs_source.html#l00036">Discovery.cs:36</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_html"><div class="ttname"><a href="namespace_packages_1_1_rider.html">Packages.Rider</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data_html_a325e760364977ea0e0d18ecb1e31168f"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html#a325e760364977ea0e0d18ecb1e31168f">Packages.Rider.Editor.RiderScriptEditorData.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_data_8cs_source.html#l00014">RiderScriptEditorData.cs:14</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_ad7c027f49d6d01fdc6c010390679c4a6"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad7c027f49d6d01fdc6c010390679c4a6">Packages.Rider.Editor.RiderScriptEditor.OpenOSXApp</a></div><div class="ttdeci">bool OpenOSXApp(string path, int line, int column)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00291">RiderScriptEditor.cs:291</a></div></div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_generator_html"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html">Packages.Rider.Editor.IGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00018">ProjectGeneration.cs:18</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_html"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor.html">Packages.Rider.Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="_discovery_8cs_source.html#l00010">Discovery.cs:10</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_generator_html_a6407005e3e72f333248d29ddceb861ab"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a6407005e3e72f333248d29ddceb861ab">Packages.Rider.Editor.IGenerator.SyncIfNeeded</a></div><div class="ttdeci">bool SyncIfNeeded(IEnumerable&lt; string &gt; affectedFiles, IEnumerable&lt; string &gt; reimportedFiles)</div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util_html_a6ae94bf5a7e99ad1c7df838e9d36459d"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">Packages.Rider.Editor.Util.FileSystemUtil.EditorPathExists</a></div><div class="ttdeci">static bool EditorPathExists(string editorPath)</div><div class="ttdef"><b>Definition:</b> <a href="_file_system_util_8cs_source.html#l00060">FileSystemUtil.cs:60</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a41543b63fec44cba19ec63db6d52cbc3"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a41543b63fec44cba19ec63db6d52cbc3">Packages.Rider.Editor.RiderScriptEditor.SyncIfNeeded</a></div><div class="ttdeci">void SyncIfNeeded(string[] addedFiles, string[] deletedFiles, string[] movedFiles, string[] movedFromFiles, string[] importedFiles)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00226">RiderScriptEditor.cs:226</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">Packages.Rider.Editor.Util.FileSystemUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="_file_system_util_8cs_source.html#l00010">FileSystemUtil.cs:10</a></div></div>
+<div class="ttc" id="namespace_packages_html"><div class="ttname"><a href="namespace_packages.html">Packages</a></div></div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_generator_html_a18d4c0b40c7ed4698d4e67fc06cf2c12"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a18d4c0b40c7ed4698d4e67fc06cf2c12">Packages.Rider.Editor.IGenerator.Sync</a></div><div class="ttdeci">void Sync()</div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_ad9b770cc707ce3df94a65de66fa0f700"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad9b770cc707ce3df94a65de66fa0f700">Packages.Rider.Editor.RiderScriptEditor.IsUnityScript</a></div><div class="ttdeci">static bool IsUnityScript(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00328">RiderScriptEditor.cs:328</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_adf9f526d4291aee496f1d33d15e63c56"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#adf9f526d4291aee496f1d33d15e63c56">Packages.Rider.Editor.RiderScriptEditor.IsRiderInstallation</a></div><div class="ttdeci">static bool IsRiderInstallation(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00367">RiderScriptEditor.cs:367</a></div></div>
+<div class="ttc" id="interface_packages_1_1_rider_1_1_editor_1_1_i_generator_html_af2a293f64febed320e60d6e3a88276cb"><div class="ttname"><a href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#af2a293f64febed320e60d6e3a88276cb">Packages.Rider.Editor.IGenerator.HasSolutionBeenGenerated</a></div><div class="ttdeci">bool HasSolutionBeenGenerated()</div></div>
+<div class="ttc" id="namespace_name_html"><div class="ttname"><a href="namespace_name.html">Name</a></div><div class="ttdoc">包含了球员起名类 </div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_ab9c8f25e03b8d5cb199e9d1f3b5478fa"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab9c8f25e03b8d5cb199e9d1f3b5478fa">Packages.Rider.Editor.RiderScriptEditor.IsAssetImportWorkerProcess</a></div><div class="ttdeci">static bool IsAssetImportWorkerProcess()</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00382">RiderScriptEditor.cs:382</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a8121a56659c06bf8a3695e6443961057"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a8121a56659c06bf8a3695e6443961057">Packages.Rider.Editor.RiderScriptEditor.RiderScriptEditor</a></div><div class="ttdeci">RiderScriptEditor(IDiscovery discovery, IGenerator projectGeneration)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00170">RiderScriptEditor.cs:170</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_discovery_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_discovery.html">Packages.Rider.Editor.Discovery</a></div><div class="ttdef"><b>Definition:</b> <a href="_discovery_8cs_source.html#l00017">Discovery.cs:17</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_editor_plugin_interop_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_editor_plugin_interop.html">Packages.Rider.Editor.EditorPluginInterop</a></div><div class="ttdef"><b>Definition:</b> <a href="_editor_plugin_interop_8cs_source.html#l00010">EditorPluginInterop.cs:10</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_data.html">Packages.Rider.Editor.RiderScriptEditorData</a></div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_data_8cs_source.html#l00007">RiderScriptEditorData.cs:7</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor_html_a95ae6ac6342a23b1ec07668b9ff1dabc"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a95ae6ac6342a23b1ec07668b9ff1dabc">Packages.Rider.Editor.RiderScriptEditor.TryGetInstallationForPath</a></div><div class="ttdeci">bool TryGetInstallationForPath(string editorPath, out CodeEditor.Installation installation)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_script_editor_8cs_source.html#l00350">RiderScriptEditor.cs:350</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_editor_plugin_interop_html_a54e8c8e04ca03b88675787d9bb208950"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_editor_plugin_interop.html#a54e8c8e04ca03b88675787d9bb208950">Packages.Rider.Editor.EditorPluginInterop.OpenFileDllImplementation</a></div><div class="ttdeci">static bool OpenFileDllImplementation(string path, int line, int column)</div><div class="ttdef"><b>Definition:</b> <a href="_editor_plugin_interop_8cs_source.html#l00070">EditorPluginInterop.cs:70</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

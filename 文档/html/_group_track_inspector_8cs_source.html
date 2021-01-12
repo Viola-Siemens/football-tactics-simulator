@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/inspectors/GroupTrackInspector.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_bba7133523a795d5c56d4d084320b853.html">inspectors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GroupTrackInspector.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_group_track_inspector_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#define PERF_PROFILE</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor_internal.html">UnityEditorInternal</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [CustomEditor(typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_group_track.html">GroupTrack</a>)), CanEditMultipleObjects]</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html">GroupTrackInspector</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_asset_inspector.html">TrackAssetInspector</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">   13</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">Styles</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a64ac0bb0f04796255d93b290de89bf58">   15</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent GroupSubTrackHeaderName     = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Name&quot;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a6dfba8e0cf0ecd41aa07e04f86ff6335">   16</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent GroupSubTrackHeaderType     = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Type&quot;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#aeb72c8f9234053f4778637aa03a86b66">   17</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent GroupSubTrackHeaderDuration = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Duration&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a7d8b5599cef78cbad35d31d4b982212c">   18</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent GroupSubTrackHeaderFrames   = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Frames&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a1835bb0ae3f78fc2c703426dd80287d1">   19</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent GroupInvalidTrack           = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Invalid Track&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#a48b29a8ca12d3864e11cfe39e28995bd">   22</a></span>&#160;        ReorderableList <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#a48b29a8ca12d3864e11cfe39e28995bd">m_SubTracks</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#ab213a0268b393fac32e9595f3145f92d">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#ab213a0268b393fac32e9595f3145f92d">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">foreach</span> (var group <span class="keywordflow">in</span> targets)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                var groupTrack = group as <a class="code" href="class_unity_engine_1_1_timeline_1_1_group_track.html">GroupTrack</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">if</span> (groupTrack == null) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                var childrenTracks = groupTrack.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#aa2031fe30133f8c28e14483768ce8e29">GetChildTracks</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                var groupTrackName = groupTrack.name;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                GUILayout.Label(childrenTracks.Count() &gt; 0</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    ? groupTrackName + <span class="stringliteral">&quot; (&quot;</span> + childrenTracks.Count() + <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    : groupTrackName, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                GUILayout.Space(3.0f);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="comment">// the subTrackObjects is used because it&#39;s the internal list</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                m_SubTracks.list = groupTrack.subTracksObjects;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                m_SubTracks.DoLayoutList();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                m_SubTracks.index = -1;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#ad863103a3d37c5389f7b774c7f7b5412">   46</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#ad863103a3d37c5389f7b774c7f7b5412">OnEnable</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            base.OnEnable();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            m_SubTracks = <span class="keyword">new</span> ReorderableList(<span class="keyword">new</span> <span class="keywordtype">string</span>[] {}, typeof(<span class="keywordtype">string</span>), <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                drawElementCallback = OnDrawSubTrack,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                drawHeaderCallback = OnDrawHeader,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                showDefaultBackground = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                index = 0,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                elementHeight = 20</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#abaffe0cd9c3a0174aef48723f7d4709a">   60</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#abaffe0cd9c3a0174aef48723f7d4709a">OnDrawHeader</a>(Rect rect)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">int</span> sections = 4;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">float</span> sectionWidth = rect.width / sections;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            rect.width = sectionWidth;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            GUI.Label(rect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a64ac0bb0f04796255d93b290de89bf58">GroupSubTrackHeaderName</a>, EditorStyles.label);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            rect.x += sectionWidth;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            GUI.Label(rect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a6dfba8e0cf0ecd41aa07e04f86ff6335">GroupSubTrackHeaderType</a>, EditorStyles.label);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            rect.x += sectionWidth;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            GUI.Label(rect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#aeb72c8f9234053f4778637aa03a86b66">GroupSubTrackHeaderDuration</a>, EditorStyles.label);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            rect.x += sectionWidth;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            GUI.Label(rect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a7d8b5599cef78cbad35d31d4b982212c">GroupSubTrackHeaderFrames</a>, EditorStyles.label);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#a9b2b4919440901d6cb74cb44e2c2fd3a">   75</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#a9b2b4919440901d6cb74cb44e2c2fd3a">OnDrawSubTrack</a>(Rect rect, <span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> selected, <span class="keywordtype">bool</span> focused)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">int</span> sections = 4;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">float</span> sectionWidth = rect.width / sections;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            var childrenTrack = m_SubTracks.list[index] as <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (childrenTrack == null)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordtype">object</span> o = m_SubTracks.list[index];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                rect.width = sectionWidth;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">if</span> (o != null) <span class="comment">// track is loaded, but has broken script</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordtype">string</span> name = ((<a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object)m_SubTracks.list[index]).name;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    GUI.Label(rect, name, EditorStyles.label);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                rect.x += sectionWidth;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keyword">using</span> (<span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_g_u_i_color_override.html">GUIColorOverride</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a90c09296f96b26928f291a3c510d484d">kClipErrorColor</a>))</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    GUI.Label(rect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a1835bb0ae3f78fc2c703426dd80287d1">GroupInvalidTrack</a>.text, EditorStyles.label);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            rect.width = sectionWidth;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            GUI.Label(rect, childrenTrack.name, EditorStyles.label);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            rect.x += sectionWidth;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            GUI.Label(rect, childrenTrack.GetType().Name, EditorStyles.label);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            rect.x += sectionWidth;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            GUI.Label(rect, childrenTrack.duration.ToString(), EditorStyles.label);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            rect.x += sectionWidth;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">double</span> exactFrames = <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#aea7e48bf3e1946af01d937120df3f049">ToExactFrames</a>(childrenTrack.duration, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">state</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab1e28ef166711b4749c92c74c40f7020">referenceSequence</a>.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#adac9c3773981fa0dab6187f77e09e706">frameRate</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            GUI.Label(rect, exactFrames.ToString(), EditorStyles.label);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_html_ab213a0268b393fac32e9595f3145f92d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#ab213a0268b393fac32e9595f3145f92d">UnityEditor.Timeline.GroupTrackInspector.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00024">GroupTrackInspector.cs:24</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles_html_a1835bb0ae3f78fc2c703426dd80287d1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a1835bb0ae3f78fc2c703426dd80287d1">UnityEditor.Timeline.GroupTrackInspector.Styles.GroupInvalidTrack</a></div><div class="ttdeci">static readonly GUIContent GroupInvalidTrack</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00019">GroupTrackInspector.cs:19</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_html_a48b29a8ca12d3864e11cfe39e28995bd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#a48b29a8ca12d3864e11cfe39e28995bd">UnityEditor.Timeline.GroupTrackInspector.m_SubTracks</a></div><div class="ttdeci">ReorderableList m_SubTracks</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00022">GroupTrackInspector.cs:22</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_g_u_i_color_override_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_g_u_i_color_override.html">UnityEditor.Timeline.GUIColorOverride</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_color_override_8cs_source.html#l00006">GUIColorOverride.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles_html_a7d8b5599cef78cbad35d31d4b982212c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a7d8b5599cef78cbad35d31d4b982212c">UnityEditor.Timeline.GroupTrackInspector.Styles.GroupSubTrackHeaderFrames</a></div><div class="ttdeci">static readonly GUIContent GroupSubTrackHeaderFrames</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00018">GroupTrackInspector.cs:18</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html">UnityEngine.Timeline.TimeUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00007">TimeUtility.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a350f3db7ab1c08de30a609f4c66c8775"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">UnityEditor.Timeline.TimelineWindow.state</a></div><div class="ttdeci">WindowState state</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00057">TimelineWindow.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a90c09296f96b26928f291a3c510d484d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a90c09296f96b26928f291a3c510d484d">UnityEditor.Timeline.DirectorStyles.kClipErrorColor</a></div><div class="ttdeci">static readonly Color kClipErrorColor</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00054">DirectorStyles.cs:54</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac00fac3b6de42db10813e9ae7401808b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">UnityEditor.Timeline.TimelineWindow.instance</a></div><div class="ttdeci">static TimelineWindow instance</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00045">TimelineWindow.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html">UnityEditor.Timeline.GroupTrackInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00011">GroupTrackInspector.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_asset_inspector_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_asset_inspector.html">UnityEditor.Timeline.TrackAssetInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_inspector_8cs_source.html#l00012">TrackAssetInspector.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ab1e28ef166711b4749c92c74c40f7020"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab1e28ef166711b4749c92c74c40f7020">UnityEditor.Timeline.WindowState.referenceSequence</a></div><div class="ttdeci">ISequenceState referenceSequence</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00107">WindowState.cs:107</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_html_abaffe0cd9c3a0174aef48723f7d4709a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#abaffe0cd9c3a0174aef48723f7d4709a">UnityEditor.Timeline.GroupTrackInspector.OnDrawHeader</a></div><div class="ttdeci">static void OnDrawHeader(Rect rect)</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00060">GroupTrackInspector.cs:60</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_html_a9b2b4919440901d6cb74cb44e2c2fd3a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#a9b2b4919440901d6cb74cb44e2c2fd3a">UnityEditor.Timeline.GroupTrackInspector.OnDrawSubTrack</a></div><div class="ttdeci">void OnDrawSubTrack(Rect rect, int index, bool selected, bool focused)</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00075">GroupTrackInspector.cs:75</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_html_ad863103a3d37c5389f7b774c7f7b5412"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector.html#ad863103a3d37c5389f7b774c7f7b5412">UnityEditor.Timeline.GroupTrackInspector.OnEnable</a></div><div class="ttdeci">override void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00046">GroupTrackInspector.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles_html_a64ac0bb0f04796255d93b290de89bf58"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a64ac0bb0f04796255d93b290de89bf58">UnityEditor.Timeline.GroupTrackInspector.Styles.GroupSubTrackHeaderName</a></div><div class="ttdeci">static readonly GUIContent GroupSubTrackHeaderName</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00015">GroupTrackInspector.cs:15</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html_aea7e48bf3e1946af01d937120df3f049"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html#aea7e48bf3e1946af01d937120df3f049">UnityEngine.Timeline.TimeUtility.ToExactFrames</a></div><div class="ttdeci">static double ToExactFrames(double time, double frameRate)</div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00033">TimeUtility.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles_html_aeb72c8f9234053f4778637aa03a86b66"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#aeb72c8f9234053f4778637aa03a86b66">UnityEditor.Timeline.GroupTrackInspector.Styles.GroupSubTrackHeaderDuration</a></div><div class="ttdeci">static readonly GUIContent GroupSubTrackHeaderDuration</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00017">GroupTrackInspector.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html">UnityEditor.Timeline.GroupTrackInspector.Styles</a></div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00013">GroupTrackInspector.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_aa2031fe30133f8c28e14483768ce8e29"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#aa2031fe30133f8c28e14483768ce8e29">UnityEngine.Timeline.TrackAsset.GetChildTracks</a></div><div class="ttdeci">IEnumerable&lt; TrackAsset &gt; GetChildTracks()</div><div class="ttdoc">The list of subtracks or child tracks attached to this track. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00292">TrackAsset.cs:292</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_adac9c3773981fa0dab6187f77e09e706"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#adac9c3773981fa0dab6187f77e09e706">UnityEditor.Timeline.ISequenceState.frameRate</a></div><div class="ttdeci">float frameRate</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00019">ISequenceState.cs:19</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_group_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_group_track.html">UnityEngine.Timeline.GroupTrack</a></div><div class="ttdoc">A group track is a container that allows tracks to be arranged in a hierarchical manner. </div><div class="ttdef"><b>Definition:</b> <a href="_group_track_8cs_source.html#l00013">GroupTrack.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="namespace_unity_editor_internal_html"><div class="ttname"><a href="namespace_unity_editor_internal.html">UnityEditorInternal</a></div><div class="ttdef"><b>Definition:</b> <a href="_binding_tree_view_data_source_8cs_source.html#l00008">BindingTreeViewDataSource.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles_html_a6dfba8e0cf0ecd41aa07e04f86ff6335"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_group_track_inspector_1_1_styles.html#a6dfba8e0cf0ecd41aa07e04f86ff6335">UnityEditor.Timeline.GroupTrackInspector.Styles.GroupSubTrackHeaderType</a></div><div class="ttdeci">static readonly GUIContent GroupSubTrackHeaderType</div><div class="ttdef"><b>Definition:</b> <a href="_group_track_inspector_8cs_source.html#l00016">GroupTrackInspector.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

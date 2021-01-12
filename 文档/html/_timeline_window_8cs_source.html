@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Window/TimelineWindow.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_08b42967959711a942dabf507b118564.html">Window</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineWindow.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_window_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Callbacks;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Events;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.SceneManagement;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [EditorWindowTitle(title = <span class="stringliteral">&quot;Timeline&quot;</span>, useTypeNameAsIconName = <span class="keyword">true</span>)]</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">   13</a></span>&#160;    <span class="keyword">partial class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a> : EditorWindow, IHasCustomMenu</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        [Serializable]</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html">TimelineWindowPreferences</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#aa9e43505e1bda11f03e98ffc78348bf2">   18</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> frameSnap = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#a72b547a3644ddadb1ed004ba7f858a39">   19</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> edgeSnaps = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#a62fb2bfcbff596ba18afdc8f6975c1fc">   20</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> muteAudioScrub = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#a7ade566b5adc501180cdafb312d67035">   21</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> playRangeLoopMode = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#af72d3fb4a921e6a457f949ed643f4c72">   22</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74f">PlaybackScrollMode</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#af72d3fb4a921e6a457f949ed643f4c72">autoScrollMode</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#a7f2d9bd49b0f0812d915fad242c1f1ce">   23</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a19edf561ab1bc6b6adab834432833794">EditType</a> editType = <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a19edf561ab1bc6b6adab834432833794">EditType</a>.Mix;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#a8f4b09bce972678c9d84a5fea5b2c355">   24</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#ae7c0c91099bc8a27bc46341422688d61">TimeReferenceMode</a> timeReferenceMode = <a class="code" href="namespace_unity_editor_1_1_timeline.html#ae7c0c91099bc8a27bc46341422688d61">TimeReferenceMode</a>.Local;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a6edf201dbff63700330518e4173dbd36">   27</a></span>&#160;        [SerializeField] <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html">TimelineWindowPreferences</a> m_Preferences = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html">TimelineWindowPreferences</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aa2e5993033673bbcf289f1342ec2814e">   28</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html">TimelineWindowPreferences</a> preferences { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Preferences; } }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aaf700eda7285941ae8d2b82d5cfd3b2e">   31</a></span>&#160;        EditorGUIUtility.EditorLockTracker m_LockTracker = <span class="keyword">new</span> EditorGUIUtility.EditorLockTracker();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#acd77109eb4baacde8e8c4ee62989f258">   33</a></span>&#160;        readonly PreviewResizer m_PreviewResizer = <span class="keyword">new</span> PreviewResizer();</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2e228d7a3c0222106b66f10c6904237b">   34</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2e228d7a3c0222106b66f10c6904237b">m_LastFrameHadSequence</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#adeac54d002ca7ad0c498a716a91d7e67">   35</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#adeac54d002ca7ad0c498a716a91d7e67">m_ForceRefreshLastSelection</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a9be7113a186b879289630be4e729a3a6">   36</a></span>&#160;        <span class="keywordtype">int</span> m_CurrentSceneHashCode = -1;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        [NonSerialized]</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5e80f8a5f67345e6d27e86b4391142e2">   39</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5e80f8a5f67345e6d27e86b4391142e2">m_HasBeenInitialized</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a1ceec4339779d1b22cc1593158426099">   42</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html">SequenceHierarchy</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a1ceec4339779d1b22cc1593158426099">m_SequenceHierarchy</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a20926ea45984d132eaaee7e122cdff5b">   43</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html">SequenceHierarchy</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a20926ea45984d132eaaee7e122cdff5b">s_LastHierarchy</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">   45</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a> instance { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a0ed9a2e30757af1be8c8c663abe77596">   46</a></span>&#160;        <span class="keyword">public</span> Rect clientArea { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a437210fb79f593404541e1ed63f8e9c1">   47</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> isDragging { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#acc6a7462a47ecb733ce3393adf1414e1">   48</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a> styles { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>; } }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">public</span> List&lt;TimelineTrackBaseGUI&gt; allTracks</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad217fa822ebb772d9fb43314a7c800af">   50</a></span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">return</span> treeView != null ? treeView.allTrackGuis : <span class="keyword">new</span> List&lt;TimelineTrackBaseGUI&gt;();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">   57</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> locked</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a9f2b59aace6df3d2d605a221ebbc2108">   60</a></span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">// we can never be in a locked state if there is no timeline asset</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">if</span> (state.editSequence.asset == null)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> m_LockTracker.isLocked;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            set { m_LockTracker.isLocked = value; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a9bac1030c0eeb676298effd1cbda3970">   72</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> hierarchyChangedThisFrame { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a045ce4cba651b31f92d23ef9cb6809ae">   74</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a045ce4cba651b31f92d23ef9cb6809ae">TimelineWindow</a>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            InitializeManipulators();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            m_LockTracker.lockStateChanged.AddPersistentListener(OnLockStateChanged, UnityEventCallState.EditorAndRuntime);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ada1616ff17afd973a06d2bc9d350fdee">   80</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ada1616ff17afd973a06d2bc9d350fdee">OnLockStateChanged</a>(<span class="keywordtype">bool</span> locked)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">// Make sure that upon unlocking, any selection change is updated</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// Case 1123119 -- only force rebuild if not recording</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> (!locked)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                RefreshSelection(state != null &amp;&amp; !state.recording);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5358f1ca17e955996afaf5c9ac237bf4">   88</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5358f1ca17e955996afaf5c9ac237bf4">OnEnable</a>()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">if</span> (m_SequencePath == null)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                m_SequencePath = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html">SequencePath</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span> (m_SequenceHierarchy == null)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="comment">// The sequence hierarchy will become null if maximize on play is used for in/out of playmode</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="comment">// a static var will hang on to the reference</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> (s_LastHierarchy != null)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    m_SequenceHierarchy = s_LastHierarchy;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    m_SequenceHierarchy = <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html">SequenceHierarchy</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html#a0229f31da2a67188dd91f840cbfabb2d">CreateInstance</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                state = null;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            s_LastHierarchy = m_SequenceHierarchy;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            titleContent = GetLocalizedTitleContent();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            m_PreviewResizer.Init(<span class="stringliteral">&quot;TimelineWindow&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="comment">// Unmaximize fix : when unmaximizing, a new window is enabled and disabled. Prevent it from overriding the instance pointer.</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (instance == null)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                instance = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#aefff77a81056ad7445f4f43cb8c6b5df">OnEnable</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>.OnClipPlayableCreate += m_PlayableLookup.UpdatePlayableLookup;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>.OnTrackAnimationPlayableCreate += m_PlayableLookup.UpdatePlayableLookup;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">if</span> (state == null)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                state = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>(<span class="keyword">this</span>, s_LastHierarchy);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                Initialize();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                RefreshSelection(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                m_ForceRefreshLastSelection = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#afb2f81115046a8e30b26a860173156ee">  127</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#afb2f81115046a8e30b26a860173156ee">OnDisable</a>()</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">if</span> (instance == <span class="keyword">this</span>)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                instance = null;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (state != null)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                state.Reset();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">if</span> (instance == null)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ad4ae0d8cfbca3ef6705e5b46072bbcdb">RemoveTimelineSelection</a>();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a22c0b73ee6b99053dca7495e944ae7a7">OnDisable</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>.OnClipPlayableCreate -= m_PlayableLookup.UpdatePlayableLookup;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>.OnTrackAnimationPlayableCreate -= m_PlayableLookup.UpdatePlayableLookup;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">TimelineWindowViewPrefs</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#aa735e93abbae1f9e72de6fcfcb8c81e5">SaveAll</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">TimelineWindowViewPrefs</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6fe9483e36416f40449981d5ec9a8cfd">UnloadAllViewModels</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a6597ab99f61dac1b9f06c4afdc17a854">  145</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a6597ab99f61dac1b9f06c4afdc17a854">OnDestroy</a>()</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">if</span> (state != null)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                state.OnDestroy();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            m_HasBeenInitialized = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            RemoveEditorCallbacks();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#aaa5222401da1f0b2adf907a4d860fad9">Clear</a>();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html">TimelineAnimationUtilities</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a47707ebe8e4ca8ef074e07ed71ffda76">UnlinkAnimationWindow</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a42d2699ca3f7ea067d6f73c6709e2fc9">  157</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a42d2699ca3f7ea067d6f73c6709e2fc9">OnLostFocus</a>()</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            isDragging = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">if</span> (state != null)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                state.captured.Clear();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            Repaint();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#af2725eef7d9e04742230988c380bcd2c">  167</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#af2725eef7d9e04742230988c380bcd2c">OnFocus</a>()</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span> (state == null) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">if</span> (lastSelectedGO != Selection.activeObject)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="comment">// selection may have changed while Timeline Editor was looking away</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                RefreshSelection(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="comment">// Inline curves may have become out of sync</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                RefreshInlineCurves();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a43cb4f8f458bd030e6c5d61153e400d9">  181</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a43cb4f8f458bd030e6c5d61153e400d9">OnHierarchyChange</a>()</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            hierarchyChangedThisFrame = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            Repaint();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a41e86e6a99bd517c0a6acbe26a0a9d9c">  187</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a41e86e6a99bd517c0a6acbe26a0a9d9c">OnStateChange</a>()</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            state.UpdateRecordingState();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">if</span> (treeView != null &amp;&amp; state.editSequence.asset != null)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                treeView.Reload();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">if</span> (m_MarkerHeaderGUI != null)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                m_MarkerHeaderGUI.Rebuild();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a7327db99348d465b7c37571f863e05e6">  196</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a7327db99348d465b7c37571f863e05e6">OnGUI</a>()</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            InitializeGUIIfRequired();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            UpdateGUIConstants();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            UpdateViewStateHash();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a407e1f0dd46e7c9e34844f0a9025a7df">HandleModeClutch</a>(); <span class="comment">// TODO We Want that here?</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            DetectStylesChange();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            DetectActiveSceneChanges();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            DetectStateChanges();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            state.ProcessStartFramePendingUpdates();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            var clipRect = <span class="keyword">new</span> Rect(0.0f, 0.0f, position.width, position.height);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            clipRect.xMin += state.sequencerHeaderWidth;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_g_u_i_viewport_scope.html">GUIViewportScope</a>(clipRect))</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                state.InvokeWindowOnGuiStarted(Event.current);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">if</span> (Event.current.type == <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.MouseDrag &amp;&amp; state != null &amp;&amp; state.mouseDragLag &gt; 0.0f)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                state.mouseDragLag -= Time.deltaTime;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">if</span> (PerformUndo())</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">if</span> (EditorApplication.isPlaying)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                <span class="keywordflow">if</span> (state != null)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    <span class="keywordflow">if</span> (state.recording)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                        state.recording = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                Repaint();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            clientArea = position;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html">PlaybackScroller</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#aaa021cddc6523b23558da7b2146d2ca9">AutoScroll</a>(state);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            DoLayout();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="comment">// overlays</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">if</span> (state.captured.Count &gt; 0)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                <span class="keyword">using</span> (<span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_g_u_i_viewport_scope.html">GUIViewportScope</a>(clipRect))</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    <span class="keywordflow">foreach</span> (var o <span class="keywordflow">in</span> state.captured)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        o.Overlay(Event.current, state);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    Repaint();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">if</span> (state.showQuadTree)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                state.spacePartitioner.DebugDraw();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="comment">// attempt another rebuild -- this will avoid 1 frame flashes</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">if</span> (Event.current.type == <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Repaint)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                RebuildGraphIfNecessary();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                state.ProcessEndFramePendingUpdates();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_g_u_i_viewport_scope.html">GUIViewportScope</a>(clipRect))</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                <span class="keywordflow">if</span> (Event.current.type == <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Repaint)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a95b4aaadb94d67a585e952e88d091846">inputHandler</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler.html#ad58b7623e3306c66106cc13f8d263b24">OnGUI</a>(state, Event.current);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">if</span> (Event.current.type == <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Repaint)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                hierarchyChangedThisFrame = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad94f53f12f86e4cd93cdc791a9a467bf">  273</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad94f53f12f86e4cd93cdc791a9a467bf">DetectStylesChange</a>()</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a732bfd255994e36e43c4b7fe1567738e">ReloadStylesIfNeeded</a>();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5c6dd0f36a409c626b6b29ead9f85e8b">  278</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5c6dd0f36a409c626b6b29ead9f85e8b">DetectActiveSceneChanges</a>()</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">if</span> (m_CurrentSceneHashCode == -1)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                m_CurrentSceneHashCode = SceneManager.GetActiveScene().GetHashCode();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">if</span> (m_CurrentSceneHashCode != SceneManager.GetActiveScene().GetHashCode())</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                <span class="keywordtype">bool</span> isSceneStillLoaded = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; SceneManager.sceneCount; a++)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    var scene = SceneManager.GetSceneAt(a);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    <span class="keywordflow">if</span> (scene.GetHashCode() == m_CurrentSceneHashCode &amp;&amp; scene.isLoaded)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        isSceneStillLoaded = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">if</span> (!isSceneStillLoaded)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    <span class="keywordflow">if</span> (!locked)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                        ClearCurrentTimeline();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    m_CurrentSceneHashCode = SceneManager.GetActiveScene().GetHashCode();</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5ae996057cc74f621eafda545087b950">  307</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5ae996057cc74f621eafda545087b950">DetectStateChanges</a>()</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">if</span> (state != null)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                state.editSequence.ResetIsReadOnly();   <span class="comment">//Force reset readonly for asset flag for each frame.</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="comment">// detect if the sequence was removed under our feet</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <span class="keywordflow">if</span> (m_LastFrameHadSequence &amp;&amp; state.editSequence.asset == null)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    ClearCurrentTimeline();</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                m_LastFrameHadSequence = state.editSequence.asset != null;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="comment">// the currentDirector can get set to null by a deletion or scene unloading so polling is required</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keywordflow">if</span> (state.editSequence.director == null)</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    state.recording = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    state.previewMode = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    <span class="comment">//Case 1201405 : Check if the lock state is valid with the lock tracker state</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    <span class="keywordflow">if</span> (locked != m_LockTracker.isLocked)</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        m_LockTracker.isLocked = locked;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    <span class="keywordflow">if</span> (!locked &amp;&amp; m_LastFrameHadSequence)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                        <span class="comment">// the user may be adding a new PlayableDirector to a selected GameObject, make sure the timeline editor is shows the proper director if none is already showing</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                        var selectedGameObject = Selection.activeObject != null ? Selection.activeObject as <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> : null;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                        var selectedDirector = selectedGameObject != null ? selectedGameObject.GetComponent&lt;PlayableDirector&gt;() : null;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                        <span class="keywordflow">if</span> (selectedDirector != null)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                        {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                            SetCurrentTimeline(selectedDirector);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                        }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    <span class="comment">// the user may have changed the timeline associated with the current director</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                    <span class="keywordflow">if</span> (state.editSequence.asset != state.editSequence.director.playableAsset)</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                    {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                        <span class="keywordflow">if</span> (!locked)</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                        {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                            SetCurrentTimeline(state.editSequence.director);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                        }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                        {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                            <span class="comment">// Keep locked on the current timeline but set the current director to null since it&#39;s not the timeline owner anymore</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                            SetCurrentTimeline(state.editSequence.asset);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                        }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                }</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a154053a04b8716bb8c258652728cf13e">  359</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a154053a04b8716bb8c258652728cf13e">Initialize</a>()</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">if</span> (!m_HasBeenInitialized)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                InitializeStateChange();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                InitializeEditorCallbacks();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                m_HasBeenInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a337ed9e40af240c57e4cffadc6df0c86">  369</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a337ed9e40af240c57e4cffadc6df0c86">RefreshLastSelectionIfRequired</a>()</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="comment">// case 1088918 - workaround for the instanceID to object cache being update during Awake.</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            <span class="comment">// This corrects any playableDirector ptrs with the correct cached version</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <span class="comment">// This can happen when going from edit to playmode</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordflow">if</span> (m_ForceRefreshLastSelection)</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                m_ForceRefreshLastSelection = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                RestoreLastSelection(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#afce80cc0189cfed84bad9b8b18aa5ec8">  381</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#afce80cc0189cfed84bad9b8b18aa5ec8">InitializeGUIIfRequired</a>()</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            RefreshLastSelectionIfRequired();</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            InitializeTimeArea();</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordflow">if</span> (treeView == null &amp;&amp; state.editSequence.asset != null)</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                treeView = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html">TimelineTreeViewGUI</a>(<span class="keyword">this</span>, state.editSequence.asset, position);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2ae2382c9a977c30399366584bb4ceba">  391</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2ae2382c9a977c30399366584bb4ceba">UpdateGUIConstants</a>()</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            m_HorizontalScrollBarSize =</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                GUI.skin.horizontalScrollbar.fixedHeight + GUI.skin.horizontalScrollbar.margin.top;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            m_VerticalScrollBarSize = (treeView != null &amp;&amp; treeView.showingVerticalScrollBar)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                ? GUI.skin.verticalScrollbar.fixedWidth + GUI.skin.verticalScrollbar.margin.left</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                : 0;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a8fcb17301661a225c64eaa8897427e30">  400</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a8fcb17301661a225c64eaa8897427e30">UpdateViewStateHash</a>()</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        {</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <span class="keywordflow">if</span> (Event.current.type == <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Layout)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                state.UpdateViewStateHash();</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        }</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
+<div class="line"><a name="l00406"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5a79b0aead05cc45d5bdbd1daf6a8830">  406</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5a79b0aead05cc45d5bdbd1daf6a8830">PerformUndo</a>()</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keywordflow">if</span> (!Event.current.isKey)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            <span class="keywordflow">if</span> (Event.current.keyCode != KeyCode.Z)</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="keywordflow">if</span> (!EditorGUI.actionKey)</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#acc50183d8d8bb06a0714764d62452f77">  420</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#acc50183d8d8bb06a0714764d62452f77">RebuildGraphIfNecessary</a>(<span class="keywordtype">bool</span> evaluate = <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">if</span> (state == null || state.editSequence.director == null || state.editSequence.asset == null)</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            <span class="keywordflow">if</span> (state.rebuildGraph)</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                <span class="comment">// rebuilding the graph resets the time</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                <span class="keywordtype">double</span> time = state.editSequence.time;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                var wasPlaying = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                <span class="comment">// disable preview mode,</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                <span class="keywordflow">if</span> (!EditorApplication.isPlaying)</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                    wasPlaying = state.playing;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                    state.previewMode = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                    state.GatherProperties(state.masterSequence.director);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                state.RebuildPlayableGraph();</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                state.editSequence.time = time;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                <span class="keywordflow">if</span> (wasPlaying)</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                    state.Play();</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                <span class="keywordflow">if</span> (evaluate)</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                {</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                    <span class="comment">// put the scene back in the correct state</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                    state.EvaluateImmediate();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                    <span class="comment">// this is necessary to see accurate results when inspector refreshes</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                    <span class="comment">// case 1154802 - this will property re-force time on the director, so</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                    <span class="comment">//  the play head won&#39;t snap back to the timeline duration on rebuilds</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                    <span class="keywordflow">if</span> (!state.playing)</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                        state.Evaluate();</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                }</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                Repaint();</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;            }</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;            state.rebuildGraph = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        }</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <span class="comment">// for tests</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a58f8119e2e0fe86b3cf6a8b2cb921b9f">  464</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">new</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a58f8119e2e0fe86b3cf6a8b2cb921b9f">RepaintImmediately</a>()</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            base.RepaintImmediately();</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsEditingTimelineAsset(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timelineAsset)</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">return</span> instance != null &amp;&amp; instance.state != null &amp;&amp; instance.state.editSequence.asset == timelineAsset;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RepaintIfEditingTimelineAsset(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timelineAsset)</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            <span class="keywordflow">if</span> (IsEditingTimelineAsset(timelineAsset))</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                instance.Repaint();</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <span class="keyword">internal</span> <span class="keyword">class </span>DoCreateTimeline : ProjectWindowCallback.EndNameEditAction</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        {</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Action(<span class="keywordtype">int</span> instanceId, <span class="keywordtype">string</span> pathName, <span class="keywordtype">string</span> resourceFile)</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            {</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                var timeline = ScriptableObject.CreateInstance&lt;<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&gt;();</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                AssetDatabase.CreateAsset(timeline, pathName);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                ProjectWindowUtil.ShowCreatedAsset(timeline);</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            }</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        }</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        [MenuItem(<span class="stringliteral">&quot;Assets/Create/Timeline&quot;</span>, <span class="keyword">false</span>, 450)]</div>
+<div class="line"><a name="l00491"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a0779556412d4d525d42161460fe7010c">  491</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a0779556412d4d525d42161460fe7010c">CreateNewTimeline</a>()</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        {</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            var icon = EditorGUIUtility.IconContent(<span class="stringliteral">&quot;TimelineAsset Icon&quot;</span>).image as Texture2D;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, ScriptableObject.CreateInstance&lt;DoCreateTimeline&gt;(), <span class="stringliteral">&quot;New Timeline.playable&quot;</span>, icon, null);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        }</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        [MenuItem(<span class="stringliteral">&quot;Window/Sequencing/Timeline&quot;</span>, <span class="keyword">false</span>, 1)]</div>
+<div class="line"><a name="l00498"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad66e1ef336c238c6829dc5afe27e2355">  498</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad66e1ef336c238c6829dc5afe27e2355">ShowWindow</a>()</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        {</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;            GetWindow&lt;TimelineWindow&gt;(typeof(SceneView));</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;            instance.Focus();</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        }</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        [OnOpenAsset(1)]</div>
+<div class="line"><a name="l00505"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a61dc1c4d874f0eb918673a6a5672640c">  505</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a61dc1c4d874f0eb918673a6a5672640c">OnDoubleClick</a>(<span class="keywordtype">int</span> instanceID, <span class="keywordtype">int</span> line)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            var assetDoubleClicked = EditorUtility.InstanceIDToObject(instanceID) as <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;            <span class="keywordflow">if</span> (assetDoubleClicked == null)</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;            ShowWindow();</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            instance.SetCurrentTimeline(assetDoubleClicked);</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        }</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
+<div class="line"><a name="l00517"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aa16f516515474d7b99c68bc47a84f4f6">  517</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aa16f516515474d7b99c68bc47a84f4f6">AddItemsToMenu</a>(GenericMenu menu)</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            <span class="keywordtype">bool</span> disabled = state == null || state.editSequence.asset == null;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;            m_LockTracker.AddItemsToMenu(menu, disabled);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        }</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
+<div class="line"><a name="l00524"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac2d8339fa2eee401722cae036e5651a9">  524</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac2d8339fa2eee401722cae036e5651a9">ShowButton</a>(Rect r)</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;            <span class="keywordtype">bool</span> disabled = state == null || state.editSequence.asset == null;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;            m_LockTracker.ShowButton(r, <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#ac3cc0218cb51a4c38f1da7700d0ce492">lockButton</a>, disabled);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> TreeViewKeyboardCallback()</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        {</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;            <span class="keywordflow">if</span> (Event.current.type != <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.KeyDown)</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8b0d1311b3c56f6c8232659bb2ded4ab">HandleShortcut</a>(state, Event.current))</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            {</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                Event.current.Use();</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;            }</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        }</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    }</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">UnityEditor.Timeline.SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00008">TimelineSelection.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a58f8119e2e0fe86b3cf6a8b2cb921b9f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a58f8119e2e0fe86b3cf6a8b2cb921b9f">UnityEditor.Timeline.TimelineWindow.RepaintImmediately</a></div><div class="ttdeci">new void RepaintImmediately()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00464">TimelineWindow.cs:464</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_aaa5222401da1f0b2adf907a4d860fad9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#aaa5222401da1f0b2adf907a4d860fad9">UnityEditor.Timeline.AnimationClipCurveCache.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00360">AnimationClipCurveCache.cs:360</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a95b4aaadb94d67a585e952e88d091846"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a95b4aaadb94d67a585e952e88d091846">UnityEditor.Timeline.EditMode.inputHandler</a></div><div class="ttdeci">static EditModeInputHandler inputHandler</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00105">EditMode.cs:105</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a20926ea45984d132eaaee7e122cdff5b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a20926ea45984d132eaaee7e122cdff5b">UnityEditor.Timeline.TimelineWindow.s_LastHierarchy</a></div><div class="ttdeci">static SequenceHierarchy s_LastHierarchy</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00043">TimelineWindow.cs:43</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a19edf561ab1bc6b6adab834432833794"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a19edf561ab1bc6b6adab834432833794">UnityEditor.Timeline.EditMode.EditType</a></div><div class="ttdeci">EditType</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00010">EditMode.cs:10</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html">UnityEditor.Timeline.SequenceHierarchy</a></div><div class="ttdef"><b>Definition:</b> <a href="_sequence_hierarchy_8cs_source.html#l00009">SequenceHierarchy.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_action_html_a8b0d1311b3c56f6c8232659bb2ded4ab"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8b0d1311b3c56f6c8232659bb2ded4ab">UnityEditor.Timeline.TimelineAction.HandleShortcut</a></div><div class="ttdeci">static bool HandleShortcut(WindowState state, Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00081">TimelineActions.cs:81</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_aa735e93abbae1f9e72de6fcfcb8c81e5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#aa735e93abbae1f9e72de6fcfcb8c81e5">UnityEditor.Timeline.TimelineWindowViewPrefs.SaveAll</a></div><div class="ttdeci">static void SaveAll()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00059">TimelineWindowViewPrefs.cs:59</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a5a79b0aead05cc45d5bdbd1daf6a8830"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5a79b0aead05cc45d5bdbd1daf6a8830">UnityEditor.Timeline.TimelineWindow.PerformUndo</a></div><div class="ttdeci">static bool PerformUndo()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00406">TimelineWindow.cs:406</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a2e228d7a3c0222106b66f10c6904237b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2e228d7a3c0222106b66f10c6904237b">UnityEditor.Timeline.TimelineWindow.m_LastFrameHadSequence</a></div><div class="ttdeci">bool m_LastFrameHadSequence</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00034">TimelineWindow.cs:34</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_html_ad58b7623e3306c66106cc13f8d263b24"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler.html#ad58b7623e3306c66106cc13f8d263b24">UnityEditor.Timeline.EditModeInputHandler.OnGUI</a></div><div class="ttdeci">void OnGUI(WindowState state, Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_input_handler_8cs_source.html#l00039">EditModeInputHandler.cs:39</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ad94f53f12f86e4cd93cdc791a9a467bf"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad94f53f12f86e4cd93cdc791a9a467bf">UnityEditor.Timeline.TimelineWindow.DetectStylesChange</a></div><div class="ttdeci">static void DetectStylesChange()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00273">TimelineWindow.cs:273</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a8fcb17301661a225c64eaa8897427e30"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a8fcb17301661a225c64eaa8897427e30">UnityEditor.Timeline.TimelineWindow.UpdateViewStateHash</a></div><div class="ttdeci">void UpdateViewStateHash()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00400">TimelineWindow.cs:400</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html">UnityEditor.Timeline.TimelineAnimationUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_animation_utilities_8cs_source.html#l00013">TimelineAnimationUtilities.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a61dc1c4d874f0eb918673a6a5672640c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a61dc1c4d874f0eb918673a6a5672640c">UnityEditor.Timeline.TimelineWindow.OnDoubleClick</a></div><div class="ttdeci">static bool OnDoubleClick(int instanceID, int line)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00505">TimelineWindow.cs:505</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a732bfd255994e36e43c4b7fe1567738e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a732bfd255994e36e43c4b7fe1567738e">UnityEditor.Timeline.DirectorStyles.ReloadStylesIfNeeded</a></div><div class="ttdeci">static void ReloadStylesIfNeeded()</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00137">DirectorStyles.cs:137</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ad66e1ef336c238c6829dc5afe27e2355"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad66e1ef336c238c6829dc5afe27e2355">UnityEditor.Timeline.TimelineWindow.ShowWindow</a></div><div class="ttdeci">static void ShowWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00498">TimelineWindow.cs:498</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a42d2699ca3f7ea067d6f73c6709e2fc9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a42d2699ca3f7ea067d6f73c6709e2fc9">UnityEditor.Timeline.TimelineWindow.OnLostFocus</a></div><div class="ttdeci">void OnLostFocus()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00157">TimelineWindow.cs:157</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_aa16f516515474d7b99c68bc47a84f4f6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aa16f516515474d7b99c68bc47a84f4f6">UnityEditor.Timeline.TimelineWindow.AddItemsToMenu</a></div><div class="ttdeci">virtual void AddItemsToMenu(GenericMenu menu)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00517">TimelineWindow.cs:517</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a5e80f8a5f67345e6d27e86b4391142e2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5e80f8a5f67345e6d27e86b4391142e2">UnityEditor.Timeline.TimelineWindow.m_HasBeenInitialized</a></div><div class="ttdeci">bool m_HasBeenInitialized</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00039">TimelineWindow.cs:39</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">UnityEditor.Timeline.GameObject</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">UnityEditor.Timeline.TimelineWindowViewPrefs</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00009">TimelineWindowViewPrefs.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_playback_scroller_html_aaa021cddc6523b23558da7b2146d2ca9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#aaa021cddc6523b23558da7b2146d2ca9">UnityEditor.Timeline.PlaybackScroller.AutoScroll</a></div><div class="ttdeci">static void AutoScroll(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00014">PlaybackScroller.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_ac3cc0218cb51a4c38f1da7700d0ce492"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#ac3cc0218cb51a4c38f1da7700d0ce492">UnityEditor.Timeline.DirectorStyles.lockButton</a></div><div class="ttdeci">GUIStyle lockButton</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00099">DirectorStyles.cs:99</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences_html_af72d3fb4a921e6a457f949ed643f4c72"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#af72d3fb4a921e6a457f949ed643f4c72">UnityEditor.Timeline.TimelineWindow.TimelineWindowPreferences.autoScrollMode</a></div><div class="ttdeci">PlaybackScrollMode autoScrollMode</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00022">TimelineWindow.cs:22</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac2d8339fa2eee401722cae036e5651a9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac2d8339fa2eee401722cae036e5651a9">UnityEditor.Timeline.TimelineWindow.ShowButton</a></div><div class="ttdeci">virtual void ShowButton(Rect r)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00524">TimelineWindow.cs:524</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_acc50183d8d8bb06a0714764d62452f77"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#acc50183d8d8bb06a0714764d62452f77">UnityEditor.Timeline.TimelineWindow.RebuildGraphIfNecessary</a></div><div class="ttdeci">void RebuildGraphIfNecessary(bool evaluate=true)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00420">TimelineWindow.cs:420</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_ad4ae0d8cfbca3ef6705e5b46072bbcdb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ad4ae0d8cfbca3ef6705e5b46072bbcdb">UnityEditor.Timeline.SelectionManager.RemoveTimelineSelection</a></div><div class="ttdeci">static void RemoveTimelineSelection()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00249">TimelineSelection.cs:249</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a337ed9e40af240c57e4cffadc6df0c86"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a337ed9e40af240c57e4cffadc6df0c86">UnityEditor.Timeline.TimelineWindow.RefreshLastSelectionIfRequired</a></div><div class="ttdeci">void RefreshLastSelectionIfRequired()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00369">TimelineWindow.cs:369</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_adeac54d002ca7ad0c498a716a91d7e67"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#adeac54d002ca7ad0c498a716a91d7e67">UnityEditor.Timeline.TimelineWindow.m_ForceRefreshLastSelection</a></div><div class="ttdeci">bool m_ForceRefreshLastSelection</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00035">TimelineWindow.cs:35</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">UnityEditor.Timeline.EditMode</a></div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00008">EditMode.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a7327db99348d465b7c37571f863e05e6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a7327db99348d465b7c37571f863e05e6">UnityEditor.Timeline.TimelineWindow.OnGUI</a></div><div class="ttdeci">void OnGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00196">TimelineWindow.cs:196</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_afce80cc0189cfed84bad9b8b18aa5ec8"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#afce80cc0189cfed84bad9b8b18aa5ec8">UnityEditor.Timeline.TimelineWindow.InitializeGUIIfRequired</a></div><div class="ttdeci">void InitializeGUIIfRequired()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00381">TimelineWindow.cs:381</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a43cb4f8f458bd030e6c5d61153e400d9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a43cb4f8f458bd030e6c5d61153e400d9">UnityEditor.Timeline.TimelineWindow.OnHierarchyChange</a></div><div class="ttdeci">void OnHierarchyChange()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00181">TimelineWindow.cs:181</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ada1616ff17afd973a06d2bc9d350fdee"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ada1616ff17afd973a06d2bc9d350fdee">UnityEditor.Timeline.TimelineWindow.OnLockStateChanged</a></div><div class="ttdeci">void OnLockStateChanged(bool locked)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00080">TimelineWindow.cs:80</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html">UnityEditor.Timeline.TimelineWindow.TimelineWindowPreferences</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00016">TimelineWindow.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a6fe9483e36416f40449981d5ec9a8cfd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6fe9483e36416f40449981d5ec9a8cfd">UnityEditor.Timeline.TimelineWindowViewPrefs.UnloadAllViewModels</a></div><div class="ttdeci">static void UnloadAllViewModels()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00075">TimelineWindowViewPrefs.cs:75</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_a79d05c439c5628c4f5ffa5a49d793e4e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">UnityEditor.Timeline.AnimationClipCurveCache.Instance</a></div><div class="ttdeci">static AnimationClipCurveCache Instance</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00277">AnimationClipCurveCache.cs:277</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a0779556412d4d525d42161460fe7010c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a0779556412d4d525d42161460fe7010c">UnityEditor.Timeline.TimelineWindow.CreateNewTimeline</a></div><div class="ttdeci">static void CreateNewTimeline()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00491">TimelineWindow.cs:491</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a6597ab99f61dac1b9f06c4afdc17a854"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a6597ab99f61dac1b9f06c4afdc17a854">UnityEditor.Timeline.TimelineWindow.OnDestroy</a></div><div class="ttdeci">void OnDestroy()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00145">TimelineWindow.cs:145</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_afb2f81115046a8e30b26a860173156ee"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#afb2f81115046a8e30b26a860173156ee">UnityEditor.Timeline.TimelineWindow.OnDisable</a></div><div class="ttdeci">void OnDisable()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00127">TimelineWindow.cs:127</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_g_u_i_viewport_scope_html"><div class="ttname"><a href="struct_unity_editor_1_1_g_u_i_viewport_scope.html">UnityEditor.GUIViewportScope</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_viewport_scope_8cs_source.html#l00007">GUIViewportScope.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a15e95e53dca9e97cb48ed6e7b8f98cbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">UnityEditor.Timeline.DirectorStyles.Instance</a></div><div class="ttdeci">static DirectorStyles Instance</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00124">DirectorStyles.cs:124</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_ae7c0c91099bc8a27bc46341422688d61"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#ae7c0c91099bc8a27bc46341422688d61">UnityEditor.Timeline.TimeReferenceMode</a></div><div class="ttdeci">TimeReferenceMode</div><div class="ttdef"><b>Definition:</b> <a href="_time_reference_mode_8cs_source.html#l00003">TimeReferenceMode.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a407e1f0dd46e7c9e34844f0a9025a7df"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a407e1f0dd46e7c9e34844f0a9025a7df">UnityEditor.Timeline.EditMode.HandleModeClutch</a></div><div class="ttdeci">static void HandleModeClutch()</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00274">EditMode.cs:274</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a5ae996057cc74f621eafda545087b950"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5ae996057cc74f621eafda545087b950">UnityEditor.Timeline.TimelineWindow.DetectStateChanges</a></div><div class="ttdeci">void DetectStateChanges()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00307">TimelineWindow.cs:307</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html">UnityEditor.Timeline.SequencePath</a></div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00011">SequencePath.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a1ceec4339779d1b22cc1593158426099"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a1ceec4339779d1b22cc1593158426099">UnityEditor.Timeline.TimelineWindow.m_SequenceHierarchy</a></div><div class="ttdeci">SequenceHierarchy m_SequenceHierarchy</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00042">TimelineWindow.cs:42</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_action_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">UnityEditor.Timeline.TimelineAction</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_actions_8cs_source.html#l00013">TimelineActions.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a2ae2382c9a977c30399366584bb4ceba"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a2ae2382c9a977c30399366584bb4ceba">UnityEditor.Timeline.TimelineWindow.UpdateGUIConstants</a></div><div class="ttdeci">void UpdateGUIConstants()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00391">TimelineWindow.cs:391</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a5c6dd0f36a409c626b6b29ead9f85e8b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5c6dd0f36a409c626b6b29ead9f85e8b">UnityEditor.Timeline.TimelineWindow.DetectActiveSceneChanges</a></div><div class="ttdeci">void DetectActiveSceneChanges()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00278">TimelineWindow.cs:278</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a154053a04b8716bb8c258652728cf13e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a154053a04b8716bb8c258652728cf13e">UnityEditor.Timeline.TimelineWindow.Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00359">TimelineWindow.cs:359</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_af2725eef7d9e04742230988c380bcd2c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#af2725eef7d9e04742230988c380bcd2c">UnityEditor.Timeline.TimelineWindow.OnFocus</a></div><div class="ttdeci">void OnFocus()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00167">TimelineWindow.cs:167</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html">UnityEditor.Timeline.TimelineTreeViewGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_tree_view_g_u_i_8cs_source.html#l00009">TimelineTreeViewGUI.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities_html_a47707ebe8e4ca8ef074e07ed71ffda76"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a47707ebe8e4ca8ef074e07ed71ffda76">UnityEditor.Timeline.TimelineAnimationUtilities.UnlinkAnimationWindow</a></div><div class="ttdeci">static void UnlinkAnimationWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_animation_utilities_8cs_source.html#l00361">TimelineAnimationUtilities.cs:361</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a41e86e6a99bd517c0a6acbe26a0a9d9c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a41e86e6a99bd517c0a6acbe26a0a9d9c">UnityEditor.Timeline.TimelineWindow.OnStateChange</a></div><div class="ttdeci">void OnStateChange()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00187">TimelineWindow.cs:187</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_a22c0b73ee6b99053dca7495e944ae7a7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a22c0b73ee6b99053dca7495e944ae7a7">UnityEditor.Timeline.AnimationClipCurveCache.OnDisable</a></div><div class="ttdeci">void OnDisable()</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00298">AnimationClipCurveCache.cs:298</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_aefff77a81056ad7445f4f43cb8c6b5df"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#aefff77a81056ad7445f4f43cb8c6b5df">UnityEditor.Timeline.AnimationClipCurveCache.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00289">AnimationClipCurveCache.cs:289</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a5358f1ca17e955996afaf5c9ac237bf4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5358f1ca17e955996afaf5c9ac237bf4">UnityEditor.Timeline.TimelineWindow.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00088">TimelineWindow.cs:88</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a91c84eececcade75bec4fb407dc1e74f"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74f">UnityEditor.Timeline.PlaybackScrollMode</a></div><div class="ttdeci">PlaybackScrollMode</div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00005">PlaybackScroller.cs:5</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy_html_a0229f31da2a67188dd91f840cbfabb2d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html#a0229f31da2a67188dd91f840cbfabb2d">UnityEditor.Timeline.SequenceHierarchy.CreateInstance</a></div><div class="ttdeci">static SequenceHierarchy CreateInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_hierarchy_8cs_source.html#l00038">SequenceHierarchy.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a045ce4cba651b31f92d23ef9cb6809ae"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a045ce4cba651b31f92d23ef9cb6809ae">UnityEditor.Timeline.TimelineWindow.TimelineWindow</a></div><div class="ttdeci">TimelineWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00074">TimelineWindow.cs:74</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">UnityEditor.Timeline.AnimationClipCurveCache</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00269">AnimationClipCurveCache.cs:269</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_playback_scroller_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html">UnityEditor.Timeline.PlaybackScroller</a></div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00012">PlaybackScroller.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

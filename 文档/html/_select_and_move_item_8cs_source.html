@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Manipulators/Sequence/SelectAndMoveItem.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6a547c3745f8ad2865def9ffaf3eba83.html">Manipulators</a></li><li class="navelem"><a class="el" href="dir_6cbc4b3ca62bb4fd9b49d989468b470d.html">Sequence</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SelectAndMoveItem.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_select_and_move_item_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clear_selection.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_clear_selection.html">ClearSelection</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_clear_selection.html#ab5032714fa1e7a8a9a601db3f39ff5a7">   10</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clear_selection.html#ab5032714fa1e7a8a9a601db3f39ff5a7">MouseDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="comment">// If we hit this point this means no one used the mouse down events. We can safely clear the selection if needed</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">if</span> (evt.button != 0)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            var window = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">GetWindow</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">if</span> (!window.sequenceRect.Contains(evt.mousePosition))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html">ItemSelection</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#af9badc1edb526d2b9117722d678ce7bd">CanClearSelection</a>(evt))</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a587eb1360aef383023f0eb0c7fe0d3a9">Clear</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_selection.html">   31</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html">ItemSelection</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#af9badc1edb526d2b9117722d678ce7bd">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#af9badc1edb526d2b9117722d678ce7bd">CanClearSelection</a>(Event evt)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> !evt.control &amp;&amp; !evt.command &amp;&amp; !evt.shift;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aea8371f25c13e03f6a14329a012e7813">   38</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aea8371f25c13e03f6a14329a012e7813">RangeSelectItems</a>(<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> lastItemToSelect)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            var selectSorted = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a>().ToList();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            var firstSelect = selectSorted.FirstOrDefault();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> (firstSelect == null)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a>(lastItemToSelect);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var allTracks = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aca43ad0a8433e031d73c6c697fda3ab1">inspectedAsset</a>.flattenedTracks;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            var allItems = allTracks.SelectMany(<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html">ItemsUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aca264cd129ca29ad4a93724826f235f6">GetItems</a>).ToList();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.RangeSelect(allItems, selectSorted, lastItemToSelect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a>, <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">Remove</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#ab1740c69f7eb3963c7d93cd7b8107424">   53</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html">ISelectable</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#ab1740c69f7eb3963c7d93cd7b8107424">HandleSingleSelection</a>(Event evt)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            var item = <a class="code" href="class_unity_editor_1_1_timeline_1_1_picker_utils.html">PickerUtils</a>.PickedLayerableOfType&lt;<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html">ISelectable</a>&gt;();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (item != null)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                var selected = item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#aef30b18031329a6dce7a727f40da58b0">IsSelected</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (!selected &amp;&amp; CanClearSelection(evt))</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a587eb1360aef383023f0eb0c7fe0d3a9">Clear</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span> (evt.modifiers == EventModifiers.Shift)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">if</span> (!selected)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        RangeSelectItems((item as <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">TimelineItemGUI</a>).item);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    HandleItemSelection(evt, item);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> item;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aa0eeca0ebc436b2511ef3e37376d509b">   77</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aa0eeca0ebc436b2511ef3e37376d509b">HandleItemSelection</a>(Event evt, <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html">ISelectable</a> item)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (evt.modifiers == <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulators_utils.html">ManipulatorsUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulators_utils.html#ac85fb4f0b27bc04e06495e344391c617">actionModifier</a>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">if</span> (item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#aef30b18031329a6dce7a727f40da58b0">IsSelected</a>())</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#af0befaba3a64127d10c7769cb2d6f24e">Deselect</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#a425fc32e986a45940d4bbbb7731dbfed">Select</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">if</span> (!item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#aef30b18031329a6dce7a727f40da58b0">IsSelected</a>())</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#a425fc32e986a45940d4bbbb7731dbfed">Select</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html">   94</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html">SelectAndMoveItem</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a8bdfd7ee45eea8d7181f1f797afb1c1f">   96</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a8bdfd7ee45eea8d7181f1f797afb1c1f">m_Dragged</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#abfa9eb905c5d9e3c54f4e709cb716a72">   97</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html">SnapEngine</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#abfa9eb905c5d9e3c54f4e709cb716a72">m_SnapEngine</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a9d7b3f619cb43e19b6936c434bd79e1c">   98</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html">TimeAreaAutoPanner</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a9d7b3f619cb43e19b6936c434bd79e1c">m_TimeAreaAutoPanner</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a3d4cfbc30d1329cf9e19e9bb2ae88c7a">   99</a></span>&#160;        Vector2 <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a3d4cfbc30d1329cf9e19e9bb2ae88c7a">m_MouseDownPosition</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a1122e3c2ef2044c43d7aec2227c1081b">  101</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a1122e3c2ef2044c43d7aec2227c1081b">m_HorizontalMovementDone</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a7c8558b1252b56cc351015138125870d">  102</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a7c8558b1252b56cc351015138125870d">m_VerticalMovementDone</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a6cb4825e9c32476994e42e423fe3f6b5">  104</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">MoveItemHandler</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a6cb4825e9c32476994e42e423fe3f6b5">m_MoveItemHandler</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a0ea72649dad2f43f833efa4a9da5a55f">  105</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a0ea72649dad2f43f833efa4a9da5a55f">m_CycleMarkersPending</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad4020ba581b92bfb5b9f7b2cb4f31b08">  107</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad4020ba581b92bfb5b9f7b2cb4f31b08">MouseDown</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">if</span> (evt.alt || evt.button != 0)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            m_Dragged = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="comment">// Cycling markers and selection are mutually exclusive operations</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span> (!HandleMarkerCycle() &amp;&amp; !HandleSingleSelection(evt))</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            m_MouseDownPosition = evt.mousePosition;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            m_VerticalMovementDone = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            m_HorizontalMovementDone = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#aecb8a0d92c548adb53b2ccc269fac49b">  125</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#aecb8a0d92c548adb53b2ccc269fac49b">MouseUp</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">if</span> (!m_Dragged)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                var item = <a class="code" href="class_unity_editor_1_1_timeline_1_1_picker_utils.html">PickerUtils</a>.PickedLayerableOfType&lt;<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html">ISelectable</a>&gt;();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">if</span> (item == null)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">if</span> (!item.IsSelected())</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="comment">// Re-selecting an item part of a multi-selection should only keep this item selected.</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a36e54ba2047967874d2b9d9046c86603">Count</a>() &gt; 1 &amp;&amp; <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html">ItemSelection</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#af9badc1edb526d2b9117722d678ce7bd">CanClearSelection</a>(evt))</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a587eb1360aef383023f0eb0c7fe0d3a9">Clear</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                    item.Select();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">if</span> (m_CycleMarkersPending)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    m_CycleMarkersPending = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html">TimelineMarkerClusterGUI</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#acc755444644d6c6854e8a0e968d24391">CycleMarkers</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            m_TimeAreaAutoPanner = null;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            DropItems();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            m_SnapEngine = null;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            m_MoveItemHandler = null;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab469068a54205d03f681a4ca66919395">Evaluate</a>();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab02338c9f0effff10b0ab8d4e7c791d9">RemoveCaptured</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            m_Dragged = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">TimelineCursors</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">ClearCursor</a>();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#acc43f51dc81e97926496cbcd5f3d0056">  170</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#acc43f51dc81e97926496cbcd5f3d0056">DoubleClick</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">return</span> MouseDown(evt, state) &amp;&amp; MouseUp(evt, state);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a584bdd0d566071b66460cdbf2c518833">  175</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a584bdd0d566071b66460cdbf2c518833">MouseDrag</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">editSequence</a>.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ad56c92e4109749915ad28b0a9742ddb9">isReadOnly</a>)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="comment">// case 1099285 - ctrl-click can cause no clips to be selected</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            var selectedItemsGUI = <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a>();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">if</span> (!selectedItemsGUI.Any())</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                m_Dragged = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> hDeadZone = 5.0f;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> vDeadZone = 5.0f;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordtype">bool</span> vDone = m_VerticalMovementDone || Math.Abs(evt.mousePosition.y - m_MouseDownPosition.y) &gt; vDeadZone;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordtype">bool</span> hDone = m_HorizontalMovementDone || Math.Abs(evt.mousePosition.x - m_MouseDownPosition.x) &gt; hDeadZone;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            m_CycleMarkersPending = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">if</span> (!m_Dragged)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                var canStartMove = vDone || hDone;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="keywordflow">if</span> (canStartMove)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aea2f15e02d1c279836c9147416a00fc8">AddCaptured</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    m_Dragged = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    var referenceTrack = GetTrackDropTargetAt(state, m_MouseDownPosition);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> selectedItemsGUI)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        item.gui.StartDrag();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    m_MoveItemHandler = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">MoveItemHandler</a>(state);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a41063e72fac96982c4279b18b3d31933">Grab</a>(selectedItemsGUI, referenceTrack, m_MouseDownPosition);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    m_SnapEngine = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html">SnapEngine</a>(m_MoveItemHandler, m_MoveItemHandler, <a class="code" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a>.Both,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                        state, m_MouseDownPosition);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    m_TimeAreaAutoPanner = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html">TimeAreaAutoPanner</a>(state);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">if</span> (!m_VerticalMovementDone)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                m_VerticalMovementDone = vDone;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="keywordflow">if</span> (m_VerticalMovementDone)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a7b570643b67be7c901469b4add0dbb34">OnTrackDetach</a>();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">if</span> (!m_HorizontalMovementDone)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                m_HorizontalMovementDone = hDone;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">if</span> (m_Dragged)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <span class="keywordflow">if</span> (m_HorizontalMovementDone)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    m_SnapEngine.<a class="code" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a1c3e3807454a0740cc09637fb9bd18cf">Snap</a>(evt.mousePosition, evt.modifiers);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="keywordflow">if</span> (m_VerticalMovementDone)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                    var track = GetTrackDropTargetAt(state, evt.mousePosition);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab1639c22edd815e767d83be8a89c07cc">UpdateTrackTarget</a>(track);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab469068a54205d03f681a4ca66919395">Evaluate</a>();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad5d4f7cc6db5e644894ab1bc095b2dfc">  251</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad5d4f7cc6db5e644894ab1bc095b2dfc">Overlay</a>(Event evt, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">if</span> (!m_Dragged)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">if</span> (m_TimeAreaAutoPanner != null)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                m_TimeAreaAutoPanner.<a class="code" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a4bfe7b93d3c8db9e0dc42cf9d42ce97e">OnGUI</a>(evt);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ad8bec61d6764d51dc980d8b33f261329">OnGUI</a>(evt);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">if</span> (!m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ae237f8e0f6012b8139faff759da40bbe">allowTrackSwitch</a> || m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a4b69398c4d251bf74d8ed4068604d15d">targetTrack</a> != null)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_indicator.html">TimeIndicator</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_time_indicator.html#af49e52245919669a9569b9b5483d67de">Draw</a>(state, m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#afc853e1ff924806afdef4115be5a3a51">start</a>, m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a23b2b53203e4ce18675db3103e4ba08e">end</a>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                m_SnapEngine.<a class="code" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aee4e629de9386458110f14f4c5037f1a">OnGUI</a>();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a82eb0e69f57810c7235d43c242d53b72">  268</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a82eb0e69f57810c7235d43c242d53b72">HandleMarkerCycle</a>()</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            m_CycleMarkersPending = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html">TimelineMarkerClusterGUI</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#aa0132c4586d05ffdd1de517ec54ed8bb">CanCycleMarkers</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">return</span> m_CycleMarkersPending;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a04b273f754178b24e89f6ff24ec8c85a">  274</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a04b273f754178b24e89f6ff24ec8c85a">HandleSingleSelection</a>(Event evt)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html">ItemSelection</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#ab1740c69f7eb3963c7d93cd7b8107424">HandleSingleSelection</a>(evt) != null;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#abb4af5273c748931c4dac3649c3e3de5">  279</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#abb4af5273c748931c4dac3649c3e3de5">DropItems</a>()</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="comment">// Order matters here: m_MoveItemHandler.movingItems is destroyed during call to Drop()</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">foreach</span> (var movingItem <span class="keywordflow">in</span> m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a82c36b809654e8104bc5293d41d05d1c">movingItems</a>)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> movingItem.items)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    item.gui.StopDrag();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            m_MoveItemHandler.<a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3569772e77425ba2b50916cf2710c721">Drop</a>();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a4f7de9f5606733f437852e6c001c12c6">  291</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a4f7de9f5606733f437852e6c001c12c6">GetTrackDropTargetAt</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Vector2 point)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            var track = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad59ddb64e61e454d87680beaf26e99dc">spacePartitioner</a>.GetItemsAtPosition&lt;<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a>&gt;(point).FirstOrDefault();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">return</span> track != null ? track.asset : null;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_a9c9000df81375a63d52b05a7c890c473"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">UnityEditor.Timeline.TimelineCursors.ClearCursor</a></div><div class="ttdeci">static void ClearCursor()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00077">TimelineCursors.cs:77</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_selectable_html_aef30b18031329a6dce7a727f40da58b0"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#aef30b18031329a6dce7a727f40da58b0">UnityEditor.Timeline.ISelectable.IsSelected</a></div><div class="ttdeci">bool IsSelected()</div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">UnityEditor.Timeline.SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00008">TimelineSelection.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_snap_engine_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_snap_engine.html">UnityEditor.Timeline.SnapEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_snap_engine_8cs_source.html#l00016">SnapEngine.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_acc43f51dc81e97926496cbcd5f3d0056"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#acc43f51dc81e97926496cbcd5f3d0056">UnityEditor.Timeline.SelectAndMoveItem.DoubleClick</a></div><div class="ttdeci">override bool DoubleClick(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00170">SelectAndMoveItem.cs:170</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_snap_engine_html_aee4e629de9386458110f14f4c5037f1a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aee4e629de9386458110f14f4c5037f1a">UnityEditor.Timeline.SnapEngine.OnGUI</a></div><div class="ttdeci">void OnGUI(bool showLeft=true, bool showRight=true)</div><div class="ttdef"><b>Definition:</b> <a href="_snap_engine_8cs_source.html#l00239">SnapEngine.cs:239</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a4f7de9f5606733f437852e6c001c12c6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a4f7de9f5606733f437852e6c001c12c6">UnityEditor.Timeline.SelectAndMoveItem.GetTrackDropTargetAt</a></div><div class="ttdeci">static TrackAsset GetTrackDropTargetAt(WindowState state, Vector2 point)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00291">SelectAndMoveItem.cs:291</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_af1e0a5f9a63a8aaa835f5ed772a25741"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741">UnityEditor.Timeline.WindowState.GetWindow</a></div><div class="ttdeci">TimelineWindow GetWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00627">WindowState.cs:627</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_selection_html_ab1740c69f7eb3963c7d93cd7b8107424"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_selection.html#ab1740c69f7eb3963c7d93cd7b8107424">UnityEditor.Timeline.ItemSelection.HandleSingleSelection</a></div><div class="ttdeci">static ISelectable HandleSingleSelection(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00053">SelectAndMoveItem.cs:53</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a82eb0e69f57810c7235d43c242d53b72"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a82eb0e69f57810c7235d43c242d53b72">UnityEditor.Timeline.SelectAndMoveItem.HandleMarkerCycle</a></div><div class="ttdeci">bool HandleMarkerCycle()</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00268">SelectAndMoveItem.cs:268</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a82c36b809654e8104bc5293d41d05d1c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a82c36b809654e8104bc5293d41d05d1c">UnityEditor.Timeline.MoveItemHandler.movingItems</a></div><div class="ttdeci">MovingItems[] movingItems</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00026">MoveItemHandler.cs:26</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i_html_aa0132c4586d05ffdd1de517ec54ed8bb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#aa0132c4586d05ffdd1de517ec54ed8bb">UnityEditor.Timeline.TimelineMarkerClusterGUI.CanCycleMarkers</a></div><div class="ttdeci">static bool CanCycleMarkers()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_marker_cluster_g_u_i_8cs_source.html#l00124">TimelineMarkerClusterGUI.cs:124</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_item_g_u_i_8cs_source.html#l00044">TimelineItemGUI.cs:44</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_abfa9eb905c5d9e3c54f4e709cb716a72"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#abfa9eb905c5d9e3c54f4e709cb716a72">UnityEditor.Timeline.SelectAndMoveItem.m_SnapEngine</a></div><div class="ttdeci">SnapEngine m_SnapEngine</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00097">SelectAndMoveItem.cs:97</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html_a4bfe7b93d3c8db9e0dc42cf9d42ce97e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html#a4bfe7b93d3c8db9e0dc42cf9d42ce97e">UnityEditor.Timeline.TimeAreaAutoPanner.OnGUI</a></div><div class="ttdeci">void OnGUI(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00025">TimeAreaAutoPanner.cs:25</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a1122e3c2ef2044c43d7aec2227c1081b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a1122e3c2ef2044c43d7aec2227c1081b">UnityEditor.Timeline.SelectAndMoveItem.m_HorizontalMovementDone</a></div><div class="ttdeci">bool m_HorizontalMovementDone</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00101">SelectAndMoveItem.cs:101</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a23b2b53203e4ce18675db3103e4ba08e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a23b2b53203e4ce18675db3103e4ba08e">UnityEditor.Timeline.MoveItemHandler.end</a></div><div class="ttdeci">double end</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00169">MoveItemHandler.cs:169</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ab469068a54205d03f681a4ca66919395"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab469068a54205d03f681a4ca66919395">UnityEditor.Timeline.WindowState.Evaluate</a></div><div class="ttdeci">void Evaluate()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00706">WindowState.cs:706</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a3569772e77425ba2b50916cf2710c721"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3569772e77425ba2b50916cf2710c721">UnityEditor.Timeline.MoveItemHandler.Drop</a></div><div class="ttdeci">void Drop()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00096">MoveItemHandler.cs:96</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_snap_engine_html_a1c3e3807454a0740cc09637fb9bd18cf"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a1c3e3807454a0740cc09637fb9bd18cf">UnityEditor.Timeline.SnapEngine.Snap</a></div><div class="ttdeci">void Snap(Vector2 currentMousePosition, EventModifiers modifiers)</div><div class="ttdef"><b>Definition:</b> <a href="_snap_engine_8cs_source.html#l00170">SnapEngine.cs:170</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ab02338c9f0effff10b0ab8d4e7c791d9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab02338c9f0effff10b0ab8d4e7c791d9">UnityEditor.Timeline.WindowState.RemoveCaptured</a></div><div class="ttdeci">void RemoveCaptured(Manipulator manipulator)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00135">WindowState.cs:135</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a7b570643b67be7c901469b4add0dbb34"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a7b570643b67be7c901469b4add0dbb34">UnityEditor.Timeline.MoveItemHandler.OnTrackDetach</a></div><div class="ttdeci">void OnTrackDetach()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00307">MoveItemHandler.cs:307</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_ad5d4f7cc6db5e644894ab1bc095b2dfc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad5d4f7cc6db5e644894ab1bc095b2dfc">UnityEditor.Timeline.SelectAndMoveItem.Overlay</a></div><div class="ttdeci">override void Overlay(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00251">SelectAndMoveItem.cs:251</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a8bdfd7ee45eea8d7181f1f797afb1c1f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a8bdfd7ee45eea8d7181f1f797afb1c1f">UnityEditor.Timeline.SelectAndMoveItem.m_Dragged</a></div><div class="ttdeci">bool m_Dragged</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00096">SelectAndMoveItem.cs:96</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clear_selection_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clear_selection.html">UnityEditor.Timeline.ClearSelection</a></div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00008">SelectAndMoveItem.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a6cb4825e9c32476994e42e423fe3f6b5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a6cb4825e9c32476994e42e423fe3f6b5">UnityEditor.Timeline.SelectAndMoveItem.m_MoveItemHandler</a></div><div class="ttdeci">MoveItemHandler m_MoveItemHandler</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00104">SelectAndMoveItem.cs:104</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ad59ddb64e61e454d87680beaf26e99dc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad59ddb64e61e454d87680beaf26e99dc">UnityEditor.Timeline.WindowState.spacePartitioner</a></div><div class="ttdeci">SpacePartitioner spacePartitioner</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00120">WindowState.cs:120</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_selectable_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html">UnityEditor.Timeline.ISelectable</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_selectable_8cs_source.html#l00005">ISelectable.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html_aca43ad0a8433e031d73c6c697fda3ab1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aca43ad0a8433e031d73c6c697fda3ab1">UnityEditor.Timeline.TimelineEditor.inspectedAsset</a></div><div class="ttdeci">static TimelineAsset inspectedAsset</div><div class="ttdoc">The TimelineAsset currently being shown in the Timeline window. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00027">TimelineEditor.cs:27</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_afc853e1ff924806afdef4115be5a3a51"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#afc853e1ff924806afdef4115be5a3a51">UnityEditor.Timeline.MoveItemHandler.start</a></div><div class="ttdeci">double start</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00167">MoveItemHandler.cs:167</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulators_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulators_utils.html">UnityEditor.Timeline.ManipulatorsUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulators_utils_8cs_source.html#l00005">ManipulatorsUtils.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_ac0ae8dcaf9f44d7be4fc61cc05f5110b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">UnityEditor.Timeline.SelectionManager.Add</a></div><div class="ttdeci">static void Add(TrackAsset obj)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00024">TimelineSelection.cs:24</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i_html_acc755444644d6c6854e8a0e968d24391"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#acc755444644d6c6854e8a0e968d24391">UnityEditor.Timeline.TimelineMarkerClusterGUI.CycleMarkers</a></div><div class="ttdeci">static void CycleMarkers()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_marker_cluster_g_u_i_8cs_source.html#l00138">TimelineMarkerClusterGUI.cs:138</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_abb4af5273c748931c4dac3649c3e3de5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#abb4af5273c748931c4dac3649c3e3de5">UnityEditor.Timeline.SelectAndMoveItem.DropItems</a></div><div class="ttdeci">void DropItems()</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00279">SelectAndMoveItem.cs:279</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">UnityEditor.Timeline.ITimelineItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00006">ITimelineItem.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_indicator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_indicator.html">UnityEditor.Timeline.TimeIndicator</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_indicator_8cs_source.html#l00005">TimeIndicator.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulators_utils_html_ac85fb4f0b27bc04e06495e344391c617"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulators_utils.html#ac85fb4f0b27bc04e06495e344391c617">UnityEditor.Timeline.ManipulatorsUtils.actionModifier</a></div><div class="ttdeci">static EventModifiers actionModifier</div><div class="ttdef"><b>Definition:</b> <a href="_manipulators_utils_8cs_source.html#l00008">ManipulatorsUtils.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_selection_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_selection.html">UnityEditor.Timeline.ItemSelection</a></div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00031">SelectAndMoveItem.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">UnityEditor.Timeline.TimelineHelpers</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00014">TimelineHelpers.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_manipulator_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_manipulator.html">UnityEditor.Timeline.Manipulator</a></div><div class="ttdef"><b>Definition:</b> <a href="_manipulator_8cs_source.html#l00005">Manipulator.cs:5</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a37fdbb4c03841e24c39cc760798b55c0"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">UnityEditor.Timeline.ManipulateEdges</a></div><div class="ttdeci">ManipulateEdges</div><div class="ttdef"><b>Definition:</b> <a href="_snap_engine_8cs_source.html#l00009">SnapEngine.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a006919b74b71f9f6511d64b138264d4c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">UnityEditor.Timeline.WindowState.editSequence</a></div><div class="ttdeci">ISequenceState editSequence</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00090">WindowState.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">UnityEditor.Timeline.MoveItemHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00008">MoveItemHandler.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_ad4020ba581b92bfb5b9f7b2cb4f31b08"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad4020ba581b92bfb5b9f7b2cb4f31b08">UnityEditor.Timeline.SelectAndMoveItem.MouseDown</a></div><div class="ttdeci">override bool MouseDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00107">SelectAndMoveItem.cs:107</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">UnityEditor.Timeline.TimelineCursors</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00006">TimelineCursors.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a64339f961d920c86357e95ee50bd937d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">UnityEditor.Timeline.SelectionManager.Remove</a></div><div class="ttdeci">static void Remove(TimelineClip item)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00208">TimelineSelection.cs:208</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_picker_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_picker_utils.html">UnityEditor.Timeline.PickerUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_picker_utils_8cs_source.html#l00007">PickerUtils.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a7c8558b1252b56cc351015138125870d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a7c8558b1252b56cc351015138125870d">UnityEditor.Timeline.SelectAndMoveItem.m_VerticalMovementDone</a></div><div class="ttdeci">bool m_VerticalMovementDone</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00102">SelectAndMoveItem.cs:102</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_ab1639c22edd815e767d83be8a89c07cc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab1639c22edd815e767d83be8a89c07cc">UnityEditor.Timeline.MoveItemHandler.UpdateTrackTarget</a></div><div class="ttdeci">void UpdateTrackTarget(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00177">MoveItemHandler.cs:177</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_selection_html_af9badc1edb526d2b9117722d678ce7bd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_selection.html#af9badc1edb526d2b9117722d678ce7bd">UnityEditor.Timeline.ItemSelection.CanClearSelection</a></div><div class="ttdeci">static bool CanClearSelection(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00033">SelectAndMoveItem.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_ae237f8e0f6012b8139faff759da40bbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ae237f8e0f6012b8139faff759da40bbe">UnityEditor.Timeline.MoveItemHandler.allowTrackSwitch</a></div><div class="ttdeci">bool allowTrackSwitch</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00020">MoveItemHandler.cs:20</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_ad8bec61d6764d51dc980d8b33f261329"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ad8bec61d6764d51dc980d8b33f261329">UnityEditor.Timeline.MoveItemHandler.OnGUI</a></div><div class="ttdeci">void OnGUI(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00203">MoveItemHandler.cs:203</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a41063e72fac96982c4279b18b3d31933"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a41063e72fac96982c4279b18b3d31933">UnityEditor.Timeline.MoveItemHandler.Grab</a></div><div class="ttdeci">void Grab(IEnumerable&lt; ITimelineItem &gt; items, TrackAsset referenceTrack)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00033">MoveItemHandler.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_indicator_html_af49e52245919669a9569b9b5483d67de"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_indicator.html#af49e52245919669a9569b9b5483d67de">UnityEditor.Timeline.TimeIndicator.Draw</a></div><div class="ttdeci">static void Draw(WindowState state, double time)</div><div class="ttdef"><b>Definition:</b> <a href="_time_indicator_8cs_source.html#l00009">TimeIndicator.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clear_selection_html_ab5032714fa1e7a8a9a601db3f39ff5a7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clear_selection.html#ab5032714fa1e7a8a9a601db3f39ff5a7">UnityEditor.Timeline.ClearSelection.MouseDown</a></div><div class="ttdeci">override bool MouseDown(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00010">SelectAndMoveItem.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_aea2f15e02d1c279836c9147416a00fc8"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#aea2f15e02d1c279836c9147416a00fc8">UnityEditor.Timeline.WindowState.AddCaptured</a></div><div class="ttdeci">void AddCaptured(Manipulator manipulator)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00129">WindowState.cs:129</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_selectable_html_a425fc32e986a45940d4bbbb7731dbfed"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#a425fc32e986a45940d4bbbb7731dbfed">UnityEditor.Timeline.ISelectable.Select</a></div><div class="ttdeci">void Select()</div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a36e54ba2047967874d2b9d9046c86603"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a36e54ba2047967874d2b9d9046c86603">UnityEditor.Timeline.SelectionManager.Count</a></div><div class="ttdeci">static int Count()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00259">TimelineSelection.cs:259</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">UnityEditor.Timeline.IRowGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_row_g_u_i_8cs_source.html#l00006">IRowGUI.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">UnityEditor.Timeline.TimelineEditor</a></div><div class="ttdoc">Information currently being edited in the Timeline Editor Window. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00012">TimelineEditor.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_a587eb1360aef383023f0eb0c7fe0d3a9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a587eb1360aef383023f0eb0c7fe0d3a9">UnityEditor.Timeline.SelectionManager.Clear</a></div><div class="ttdeci">static void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00196">TimelineSelection.cs:196</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a04b273f754178b24e89f6ff24ec8c85a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a04b273f754178b24e89f6ff24ec8c85a">UnityEditor.Timeline.SelectAndMoveItem.HandleSingleSelection</a></div><div class="ttdeci">bool HandleSingleSelection(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00274">SelectAndMoveItem.cs:274</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html">UnityEditor.Timeline.SelectAndMoveItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00094">SelectAndMoveItem.cs:94</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_ad56c92e4109749915ad28b0a9742ddb9"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ad56c92e4109749915ad28b0a9742ddb9">UnityEditor.Timeline.ISequenceState.isReadOnly</a></div><div class="ttdeci">bool isReadOnly</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00015">ISequenceState.cs:15</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html">UnityEditor.Timeline.ItemsUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00008">ItemsUtils.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a3d4cfbc30d1329cf9e19e9bb2ae88c7a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a3d4cfbc30d1329cf9e19e9bb2ae88c7a">UnityEditor.Timeline.SelectAndMoveItem.m_MouseDownPosition</a></div><div class="ttdeci">Vector2 m_MouseDownPosition</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00099">SelectAndMoveItem.cs:99</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_abce25cf985bb918f83215c038a29abce"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">UnityEditor.Timeline.SelectionManager.SelectedItems</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; SelectedItems()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00309">TimelineSelection.cs:309</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_selectable_html_af0befaba3a64127d10c7769cb2d6f24e"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html#af0befaba3a64127d10c7769cb2d6f24e">UnityEditor.Timeline.ISelectable.Deselect</a></div><div class="ttdeci">void Deselect()</div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html">UnityEditor.Timeline.TimelineMarkerClusterGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_marker_cluster_g_u_i_8cs_source.html#l00010">TimelineMarkerClusterGUI.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_selection_html_aea8371f25c13e03f6a14329a012e7813"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aea8371f25c13e03f6a14329a012e7813">UnityEditor.Timeline.ItemSelection.RangeSelectItems</a></div><div class="ttdeci">static void RangeSelectItems(ITimelineItem lastItemToSelect)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00038">SelectAndMoveItem.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a584bdd0d566071b66460cdbf2c518833"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a584bdd0d566071b66460cdbf2c518833">UnityEditor.Timeline.SelectAndMoveItem.MouseDrag</a></div><div class="ttdeci">override bool MouseDrag(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00175">SelectAndMoveItem.cs:175</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_aecb8a0d92c548adb53b2ccc269fac49b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#aecb8a0d92c548adb53b2ccc269fac49b">UnityEditor.Timeline.SelectAndMoveItem.MouseUp</a></div><div class="ttdeci">override bool MouseUp(Event evt, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00125">SelectAndMoveItem.cs:125</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_aca264cd129ca29ad4a93724826f235f6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aca264cd129ca29ad4a93724826f235f6">UnityEditor.Timeline.ItemsUtils.GetItems</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; GetItems(this TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00052">ItemsUtils.cs:52</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a9d7b3f619cb43e19b6936c434bd79e1c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a9d7b3f619cb43e19b6936c434bd79e1c">UnityEditor.Timeline.SelectAndMoveItem.m_TimeAreaAutoPanner</a></div><div class="ttdeci">TimeAreaAutoPanner m_TimeAreaAutoPanner</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00098">SelectAndMoveItem.cs:98</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html">UnityEditor.Timeline.TimeAreaAutoPanner</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_area_auto_panner_8cs_source.html#l00005">TimeAreaAutoPanner.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a4b69398c4d251bf74d8ed4068604d15d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a4b69398c4d251bf74d8ed4068604d15d">UnityEditor.Timeline.MoveItemHandler.targetTrack</a></div><div class="ttdeci">TrackAsset targetTrack</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00018">MoveItemHandler.cs:18</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_select_and_move_item_html_a0ea72649dad2f43f833efa4a9da5a55f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a0ea72649dad2f43f833efa4a9da5a55f">UnityEditor.Timeline.SelectAndMoveItem.m_CycleMarkersPending</a></div><div class="ttdeci">bool m_CycleMarkersPending</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00105">SelectAndMoveItem.cs:105</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_item_selection_html_aa0eeca0ebc436b2511ef3e37376d509b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aa0eeca0ebc436b2511ef3e37376d509b">UnityEditor.Timeline.ItemSelection.HandleItemSelection</a></div><div class="ttdeci">static void HandleItemSelection(Event evt, ISelectable item)</div><div class="ttdef"><b>Definition:</b> <a href="_select_and_move_item_8cs_source.html#l00077">SelectAndMoveItem.cs:77</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Manipulators/Move/MoveItemHandler.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6a547c3745f8ad2865def9ffaf3eba83.html">Manipulators</a></li><li class="navelem"><a class="el" href="dir_1329e60b5a08c062e207fbd2c9fecce0.html">Move</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MoveItemHandler.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_move_item_handler_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">MoveItemHandler</a> : <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a>, <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html">IAttractionHandler</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a62fc26ecdceb148b1f6bddf0ebf3c7f3">   10</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a62fc26ecdceb148b1f6bddf0ebf3c7f3">m_Grabbing</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a0200720bff118902c3b319ac28729642">   12</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_moving_items.html">MovingItems</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a0200720bff118902c3b319ac28729642">m_LeftMostMovingItems</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5d4acd4b041cddd8d95cd7d9e58499d5">   13</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_moving_items.html">MovingItems</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5d4acd4b041cddd8d95cd7d9e58499d5">m_RightMostMovingItems</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a2e2c135b194a95de5898b240098e3e91">   15</a></span>&#160;        HashSet&lt;TimelineItemGUI&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a2e2c135b194a95de5898b240098e3e91">m_ItemGUIs</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aa1d0ded7f9106b1a9186af04b1146d14">   16</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_group.html">ItemsGroup</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aa1d0ded7f9106b1a9186af04b1146d14">m_ItemsGroup</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a4b69398c4d251bf74d8ed4068604d15d">   18</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> targetTrack { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ae237f8e0f6012b8139faff759da40bbe">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> allowTrackSwitch { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ae7db03aa9553feba52df0f5e48cd10e1">   22</a></span>&#160;        <span class="keywordtype">int</span> m_GrabbedModalUndoGroup = -1;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a9b700f0264634fb45bacdba3bcd4343b">   24</a></span>&#160;        readonly <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a9b700f0264634fb45bacdba3bcd4343b">m_State</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a82c36b809654e8104bc5293d41d05d1c">   26</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_moving_items.html">MovingItems</a>[] movingItems { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3b4a148ee3d503dcfb6bec4b35ce7c04">   28</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3b4a148ee3d503dcfb6bec4b35ce7c04">MoveItemHandler</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            m_State = state;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a41063e72fac96982c4279b18b3d31933">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a41063e72fac96982c4279b18b3d31933">Grab</a>(IEnumerable&lt;ITimelineItem&gt; items, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> referenceTrack)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            Grab(items, referenceTrack, Vector2.zero);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a56751ba720182e4e848c9601c8ab5ba6">   38</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a56751ba720182e4e848c9601c8ab5ba6">Grab</a>(IEnumerable&lt;ITimelineItem&gt; items, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> referenceTrack, Vector2 mousePosition)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (items == null) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            items = items.ToArray(); <span class="comment">// Cache enumeration result</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (!items.Any()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            m_GrabbedModalUndoGroup = Undo.GetCurrentGroup();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var trackItems = items.GroupBy(c =&gt; c.parentTrack).ToArray();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            var trackItemsCount = trackItems.Length;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            var tracks = items.Select(c =&gt; c.parentTrack).Where(x =&gt; x != null).Distinct();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            movingItems = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_moving_items.html">MovingItems</a>[trackItemsCount];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            allowTrackSwitch = trackItemsCount == 1 &amp;&amp; !trackItems.SelectMany(x =&gt; x).Any(x =&gt; x is <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>); <span class="comment">// For now, track switch is only supported when all items are on the same track and there are no items</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">foreach</span> (var sourceTrack <span class="keywordflow">in</span> tracks)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">// one push per track handles all the clips on the track</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(sourceTrack, <span class="stringliteral">&quot;Move Items&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="comment">// push all markers on the track because of ripple</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">foreach</span> (var marker <span class="keywordflow">in</span> sourceTrack.GetMarkers().OfType&lt;ScriptableObject&gt;())</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(marker, <span class="stringliteral">&quot;Move Items&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; trackItemsCount; ++i)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                var track = trackItems[i].Key;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                var grabbedItems = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_moving_items.html">MovingItems</a>(m_State, track, trackItems[i].ToArray(), referenceTrack, mousePosition, allowTrackSwitch);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                movingItems[i] = grabbedItems;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            m_LeftMostMovingItems = null;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            m_RightMostMovingItems = null;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">foreach</span> (var grabbedTrackItems <span class="keywordflow">in</span> movingItems)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">if</span> (m_LeftMostMovingItems == null || m_LeftMostMovingItems.<a class="code" href="class_unity_editor_1_1_timeline_1_1_moving_items.html#a793146bb2142fe061d7d8e3865769f57">start</a> &gt; grabbedTrackItems.start)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    m_LeftMostMovingItems = grabbedTrackItems;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">if</span> (m_RightMostMovingItems == null || m_RightMostMovingItems.<a class="code" href="class_unity_editor_1_1_timeline_1_1_moving_items.html#a3e9b900991f4e9cc4597ac7e97004fde">end</a> &lt; grabbedTrackItems.end)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    m_RightMostMovingItems = grabbedTrackItems;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            m_ItemGUIs = <span class="keyword">new</span> HashSet&lt;TimelineItemGUI&gt;();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            m_ItemsGroup = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_group.html">ItemsGroup</a>(items);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> items)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                m_ItemGUIs.Add(item.gui);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            targetTrack = referenceTrack;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a588166c8e155a312b72ab90ab26f021c">BeginMove</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            m_Grabbing = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3569772e77425ba2b50916cf2710c721">   96</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3569772e77425ba2b50916cf2710c721">Drop</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">if</span> (IsValidDrop())</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">foreach</span> (var grabbedItems <span class="keywordflow">in</span> movingItems)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    var track = grabbedItems.targetTrack;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(track, <span class="stringliteral">&quot;Move Items&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html">EditModeUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#aea3795bb46ce99d0e6754e0afef2e908">IsInfiniteTrack</a>(track) &amp;&amp; grabbedItems.clips.Any())</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        ((<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>)track).ConvertToClipMode();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a65a01ef5fa96430145d99d00470f9578">FinishMove</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                Done();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                Cancel();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a76a7fee252506a941372c8c55381fcf4">ClearEditMode</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#acbb0d70e18d387b34dd64f57394a31f7">  121</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#acbb0d70e18d387b34dd64f57394a31f7">IsValidDrop</a>()</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> movingItems.All(g =&gt; g.canDrop);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aaded91156beefb815e1ae9cfb0da9acb">  126</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aaded91156beefb815e1ae9cfb0da9acb">Cancel</a>()</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">if</span> (!m_Grabbing)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="comment">// TODO fix undo reselection persistency</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="comment">// identify the clips by their playable asset, since that reference will survive the undo</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="comment">// This is a workaround, until a more persistent fix for selection of clips across Undo can be found</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            var assets = movingItems.SelectMany(x =&gt; x.clips).Select(x =&gt; x.asset);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            Undo.RevertAllDownToGroup(m_GrabbedModalUndoGroup);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="comment">// reselect the clips from the original clip</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            var clipsToSelect = movingItems.Select(x =&gt; x.originalTrack).SelectMany(x =&gt; x.GetClips()).Where(x =&gt; assets.Contains(x.asset)).ToArray();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ad4ae0d8cfbca3ef6705e5b46072bbcdb">RemoveTimelineSelection</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">foreach</span> (var c <span class="keywordflow">in</span> clipsToSelect)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a>(c);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            Done();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a6f3a5305b0bb819b346de72ac732572d">  148</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a6f3a5305b0bb819b346de72ac732572d">Done</a>()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">foreach</span> (var movingItem <span class="keywordflow">in</span> movingItems)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> movingItem.items)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    <span class="keywordflow">if</span> (item.gui != null)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                        item.gui.isInvalid = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            movingItems = null;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            m_LeftMostMovingItems = null;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            m_RightMostMovingItems = null;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            m_Grabbing = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            m_State.Refresh();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#afc853e1ff924806afdef4115be5a3a51">  167</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> start { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_ItemsGroup.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_group.html#af61e972b14c6519b8ce3a2d05af9f0cd">start</a>; } }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a23b2b53203e4ce18675db3103e4ba08e">  169</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> end { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_ItemsGroup.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_group.html#a8f3720aa515e8cfb3ece10f93cd3a2a3">end</a>; } }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#afde4b5d6492fcbd7b410523d02c93b78">  171</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#afde4b5d6492fcbd7b410523d02c93b78">ShouldSnapTo</a>(<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">ISnappable</a> snappable)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            var itemGUI = snappable as <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">TimelineItemGUI</a>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">return</span> itemGUI != null &amp;&amp; !m_ItemGUIs.Contains(itemGUI);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab1639c22edd815e767d83be8a89c07cc">  177</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab1639c22edd815e767d83be8a89c07cc">UpdateTrackTarget</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a93a9f02b65c7db005f5354ba8964db37">AllowTrackSwitch</a>())</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            targetTrack = track;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            var targetTracksChanged = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">foreach</span> (var grabbedItem <span class="keywordflow">in</span> movingItems)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                var prevTrackGUI = grabbedItem.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#ab5486e3bc52a45e9561cab8e975446fd">targetTrack</a>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                grabbedItem.SetReferenceTrack(track);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                targetTracksChanged = grabbedItem.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#ab5486e3bc52a45e9561cab8e975446fd">targetTrack</a> != prevTrackGUI;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">if</span> (targetTracksChanged)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a06c40811a3c02e9da3bfd4e7d07e9771">HandleTrackSwitch</a>(movingItems);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            RefreshPreviewItems();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            m_State.rebuildGraph |= targetTracksChanged;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ad8bec61d6764d51dc980d8b33f261329">  203</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ad8bec61d6764d51dc980d8b33f261329">OnGUI</a>(Event evt)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">if</span> (!m_Grabbing)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> (evt.type != <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Repaint)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            var isValid = IsValidDrop();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> <a class="code" href="struct_unity_editor_1_1_g_u_i_viewport_scope.html">GUIViewportScope</a>(m_State.GetWindow().sequenceContentRect))</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                <span class="keywordflow">foreach</span> (var grabbedClip <span class="keywordflow">in</span> movingItems)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    grabbedClip.RefreshBounds(m_State, evt.mousePosition);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    <span class="keywordflow">if</span> (!grabbedClip.HasAnyDetachedParents())</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    grabbedClip.Draw(isValid);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="keywordflow">if</span> (isValid)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a788ec0ccf1a753ec95101b738c59aca0">DrawMoveGUI</a>(m_State, movingItems);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">TimelineCursors</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">ClearCursor</a>();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a544e7f85d72a7ad51bf348973c40ff12">  236</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a544e7f85d72a7ad51bf348973c40ff12">OnAttractedEdge</a>(<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a> attractable, <a class="code" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a> manipulateEdges, <a class="code" href="namespace_unity_editor_1_1_timeline.html#a3272c43adbb9fe36c7552d4c05e21183">AttractedEdge</a> edge, <span class="keywordtype">double</span> time)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordtype">double</span> offset;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">if</span> (edge == <a class="code" href="namespace_unity_editor_1_1_timeline.html#a3272c43adbb9fe36c7552d4c05e21183">AttractedEdge</a>.Right)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                var duration = end - start;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                var startTime = time - duration;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                startTime = <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a410c5325a1f334bbe03e4e568b7c45e1">AdjustStartTime</a>(m_State, m_RightMostMovingItems, startTime);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                offset = startTime + duration - end;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="keywordflow">if</span> (edge == <a class="code" href="namespace_unity_editor_1_1_timeline.html#a3272c43adbb9fe36c7552d4c05e21183">AttractedEdge</a>.Left)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                    time = <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a410c5325a1f334bbe03e4e568b7c45e1">AdjustStartTime</a>(m_State, m_LeftMostMovingItems, time);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                offset = time - start;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">if</span> (start + offset &lt; 0.0)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                offset = -start;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">if</span> (!offset.Equals(0.0))</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                <span class="keywordflow">foreach</span> (var grabbedClips <span class="keywordflow">in</span> movingItems)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    grabbedClips.start += offset;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a0a5de2f13697b390854d9d1c95bbe534">UpdateMove</a>();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                RefreshPreviewItems();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5bd2232dc5b53e272c87bfc2444085d3">  270</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5bd2232dc5b53e272c87bfc2444085d3">RefreshPreviewItems</a>()</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordflow">foreach</span> (var movingItemsGroup <span class="keywordflow">in</span> movingItems)</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="comment">// Check validity</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                var valid = ValidateItemDrag(movingItemsGroup);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> movingItemsGroup.items)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                    <span class="keywordflow">if</span> (item.gui != null)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                        item.gui.isInvalid = !valid;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                movingItemsGroup.canDrop = valid;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab9bd1c1c198cffb1dd29661437f67da7">  287</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab9bd1c1c198cffb1dd29661437f67da7">ValidateItemDrag</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html">ItemsPerTrack</a> itemsGroup)</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="comment">//TODO-marker: this is to prevent the drag operation from being canceled when moving only markers</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">if</span> (itemsGroup.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a1d143fbb4b05d030fe1b6f8a0955a9af">clips</a>.Any())</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="keywordflow">if</span> (itemsGroup.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a14da4c0a7f88a227907be38a98351073">targetTrack</a> == null)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                <span class="keywordflow">if</span> (itemsGroup.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a14da4c0a7f88a227907be38a98351073">targetTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#afc911f4ea4e35d00e8951dddcf04c764">lockedInHierarchy</a>)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">if</span> (itemsGroup.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a9d7aeea8e6a0e84fb1205ffefd11fc27">items</a>.Any(i =&gt; !i.IsCompatibleWithTrack(itemsGroup.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a14da4c0a7f88a227907be38a98351073">targetTrack</a>)))</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#ad29b94cb7c4603efa133f06259d101f9">ValidateDrag</a>(itemsGroup);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a7b570643b67be7c901469b4add0dbb34">  307</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a7b570643b67be7c901469b4add0dbb34">OnTrackDetach</a>()</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">EditMode</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#aa7e178f0a7b3d1f74605d8dba74ab436">OnTrackDetach</a>(movingItems);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_a9c9000df81375a63d52b05a7c890c473"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">UnityEditor.Timeline.TimelineCursors.ClearCursor</a></div><div class="ttdeci">static void ClearCursor()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00077">TimelineCursors.cs:77</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a93a9f02b65c7db005f5354ba8964db37"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a93a9f02b65c7db005f5354ba8964db37">UnityEditor.Timeline.EditMode.AllowTrackSwitch</a></div><div class="ttdeci">static bool AllowTrackSwitch()</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00227">EditMode.cs:227</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">UnityEditor.Timeline.SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00008">TimelineSelection.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a06c40811a3c02e9da3bfd4e7d07e9771"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a06c40811a3c02e9da3bfd4e7d07e9771">UnityEditor.Timeline.EditMode.HandleTrackSwitch</a></div><div class="ttdeci">static void HandleTrackSwitch(IEnumerable&lt; ItemsPerTrack &gt; grabbedTrackItems)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00222">EditMode.cs:222</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a9b700f0264634fb45bacdba3bcd4343b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a9b700f0264634fb45bacdba3bcd4343b">UnityEditor.Timeline.MoveItemHandler.m_State</a></div><div class="ttdeci">readonly WindowState m_State</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00024">MoveItemHandler.cs:24</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_ab5486e3bc52a45e9561cab8e975446fd"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#ab5486e3bc52a45e9561cab8e975446fd">UnityEngine.Timeline.TrackAsset.targetTrack</a></div><div class="ttdeci">TrackAsset ICurvesOwner. targetTrack</div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00329">TrackAsset.cs:329</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a3b4a148ee3d503dcfb6bec4b35ce7c04"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3b4a148ee3d503dcfb6bec4b35ce7c04">UnityEditor.Timeline.MoveItemHandler.MoveItemHandler</a></div><div class="ttdeci">MoveItemHandler(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00028">MoveItemHandler.cs:28</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_ab9bd1c1c198cffb1dd29661437f67da7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab9bd1c1c198cffb1dd29661437f67da7">UnityEditor.Timeline.MoveItemHandler.ValidateItemDrag</a></div><div class="ttdeci">static bool ValidateItemDrag(ItemsPerTrack itemsGroup)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00287">MoveItemHandler.cs:287</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a76a7fee252506a941372c8c55381fcf4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a76a7fee252506a941372c8c55381fcf4">UnityEditor.Timeline.EditMode.ClearEditMode</a></div><div class="ttdeci">static void ClearEditMode()</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00159">EditMode.cs:159</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_group_html_a8f3720aa515e8cfb3ece10f93cd3a2a3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_group.html#a8f3720aa515e8cfb3ece10f93cd3a2a3">UnityEditor.Timeline.ItemsGroup.end</a></div><div class="ttdeci">double end</div><div class="ttdef"><b>Definition:</b> <a href="_items_group_8cs_source.html#l00031">ItemsGroup.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_item_g_u_i_8cs_source.html#l00044">TimelineItemGUI.cs:44</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html">UnityEngine.Timeline.AnimationTrack</a></div><div class="ttdoc">A Timeline track used for playing back animations on an Animator. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00124">AnimationTrack.cs:124</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_marker_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_marker_item.html">UnityEditor.Timeline.MarkerItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_marker_item_8cs_source.html#l00007">MarkerItem.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_acbb0d70e18d387b34dd64f57394a31f7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#acbb0d70e18d387b34dd64f57394a31f7">UnityEditor.Timeline.MoveItemHandler.IsValidDrop</a></div><div class="ttdeci">bool IsValidDrop()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00121">MoveItemHandler.cs:121</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_group_html_af61e972b14c6519b8ce3a2d05af9f0cd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_group.html#af61e972b14c6519b8ce3a2d05af9f0cd">UnityEditor.Timeline.ItemsGroup.start</a></div><div class="ttdeci">double start</div><div class="ttdef"><b>Definition:</b> <a href="_items_group_8cs_source.html#l00019">ItemsGroup.cs:19</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a3569772e77425ba2b50916cf2710c721"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3569772e77425ba2b50916cf2710c721">UnityEditor.Timeline.MoveItemHandler.Drop</a></div><div class="ttdeci">void Drop()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00096">MoveItemHandler.cs:96</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_per_track_html_a9d7aeea8e6a0e84fb1205ffefd11fc27"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a9d7aeea8e6a0e84fb1205ffefd11fc27">UnityEditor.Timeline.ItemsPerTrack.items</a></div><div class="ttdeci">IEnumerable&lt; ITimelineItem &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="_items_per_track_8cs_source.html#l00013">ItemsPerTrack.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a5d4acd4b041cddd8d95cd7d9e58499d5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5d4acd4b041cddd8d95cd7d9e58499d5">UnityEditor.Timeline.MoveItemHandler.m_RightMostMovingItems</a></div><div class="ttdeci">MovingItems m_RightMostMovingItems</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00013">MoveItemHandler.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a7b570643b67be7c901469b4add0dbb34"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a7b570643b67be7c901469b4add0dbb34">UnityEditor.Timeline.MoveItemHandler.OnTrackDetach</a></div><div class="ttdeci">void OnTrackDetach()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00307">MoveItemHandler.cs:307</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a2e2c135b194a95de5898b240098e3e91"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a2e2c135b194a95de5898b240098e3e91">UnityEditor.Timeline.MoveItemHandler.m_ItemGUIs</a></div><div class="ttdeci">HashSet&lt; TimelineItemGUI &gt; m_ItemGUIs</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00015">MoveItemHandler.cs:15</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a588166c8e155a312b72ab90ab26f021c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a588166c8e155a312b72ab90ab26f021c">UnityEditor.Timeline.EditMode.BeginMove</a></div><div class="ttdeci">static void BeginMove(MoveItemHandler moveItemHandler)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00206">EditMode.cs:206</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_aa1d0ded7f9106b1a9186af04b1146d14"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aa1d0ded7f9106b1a9186af04b1146d14">UnityEditor.Timeline.MoveItemHandler.m_ItemsGroup</a></div><div class="ttdeci">ItemsGroup m_ItemsGroup</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00016">MoveItemHandler.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a410c5325a1f334bbe03e4e568b7c45e1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a410c5325a1f334bbe03e4e568b7c45e1">UnityEditor.Timeline.EditMode.AdjustStartTime</a></div><div class="ttdeci">static double AdjustStartTime(WindowState state, ItemsPerTrack itemsGroup, double time)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00232">EditMode.cs:232</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a544e7f85d72a7ad51bf348973c40ff12"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a544e7f85d72a7ad51bf348973c40ff12">UnityEditor.Timeline.MoveItemHandler.OnAttractedEdge</a></div><div class="ttdeci">void OnAttractedEdge(IAttractable attractable, ManipulateEdges manipulateEdges, AttractedEdge edge, double time)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00236">MoveItemHandler.cs:236</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_per_track_html_a14da4c0a7f88a227907be38a98351073"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a14da4c0a7f88a227907be38a98351073">UnityEditor.Timeline.ItemsPerTrack.targetTrack</a></div><div class="ttdeci">virtual TrackAsset targetTrack</div><div class="ttdef"><b>Definition:</b> <a href="_items_per_track_8cs_source.html#l00010">ItemsPerTrack.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_ad29b94cb7c4603efa133f06259d101f9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#ad29b94cb7c4603efa133f06259d101f9">UnityEditor.Timeline.EditMode.ValidateDrag</a></div><div class="ttdeci">static bool ValidateDrag(ItemsPerTrack itemsGroup)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00237">EditMode.cs:237</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a3272c43adbb9fe36c7552d4c05e21183"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a3272c43adbb9fe36c7552d4c05e21183">UnityEditor.Timeline.AttractedEdge</a></div><div class="ttdeci">AttractedEdge</div><div class="ttdef"><b>Definition:</b> <a href="_i_attractable_8cs_source.html#l00003">IAttractable.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_per_track_html_a1d143fbb4b05d030fe1b6f8a0955a9af"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_per_track.html#a1d143fbb4b05d030fe1b6f8a0955a9af">UnityEditor.Timeline.ItemsPerTrack.clips</a></div><div class="ttdeci">IEnumerable&lt; TimelineClip &gt; clips</div><div class="ttdef"><b>Definition:</b> <a href="_items_per_track_8cs_source.html#l00018">ItemsPerTrack.cs:18</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_ac0ae8dcaf9f44d7be4fc61cc05f5110b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">UnityEditor.Timeline.SelectionManager.Add</a></div><div class="ttdeci">static void Add(TrackAsset obj)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00024">TimelineSelection.cs:24</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_selection_manager_html_ad4ae0d8cfbca3ef6705e5b46072bbcdb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ad4ae0d8cfbca3ef6705e5b46072bbcdb">UnityEditor.Timeline.SelectionManager.RemoveTimelineSelection</a></div><div class="ttdeci">static void RemoveTimelineSelection()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_selection_8cs_source.html#l00249">TimelineSelection.cs:249</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">UnityEngine.Timeline.TimelineUndo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00012">TimelineUndo.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html">UnityEditor.Timeline.EditModeUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_utils_8cs_source.html#l00008">EditModeUtils.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html">UnityEditor.Timeline.EditMode</a></div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00008">EditMode.cs:8</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a2c45dda5e68a6de6f481aee4888b352c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">UnityEngine.Timeline.TimelineUndo.PushUndo</a></div><div class="ttdeci">static void PushUndo(Object thingToDirty, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00034">TimelineUndo.cs:34</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_moving_items_html_a793146bb2142fe061d7d8e3865769f57"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_moving_items.html#a793146bb2142fe061d7d8e3865769f57">UnityEditor.Timeline.MovingItems.start</a></div><div class="ttdeci">double start</div><div class="ttdef"><b>Definition:</b> <a href="_moving_items_8cs_source.html#l00034">MovingItems.cs:34</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_utils_html_aea3795bb46ce99d0e6754e0afef2e908"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#aea3795bb46ce99d0e6754e0afef2e908">UnityEditor.Timeline.EditModeUtils.IsInfiniteTrack</a></div><div class="ttdeci">static bool IsInfiniteTrack(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_utils_8cs_source.html#l00103">EditModeUtils.cs:103</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a0200720bff118902c3b319ac28729642"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a0200720bff118902c3b319ac28729642">UnityEditor.Timeline.MoveItemHandler.m_LeftMostMovingItems</a></div><div class="ttdeci">MovingItems m_LeftMostMovingItems</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00012">MoveItemHandler.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_moving_items_html_a3e9b900991f4e9cc4597ac7e97004fde"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_moving_items.html#a3e9b900991f4e9cc4597ac7e97004fde">UnityEditor.Timeline.MovingItems.end</a></div><div class="ttdeci">double end</div><div class="ttdef"><b>Definition:</b> <a href="_moving_items_8cs_source.html#l00040">MovingItems.cs:40</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a37fdbb4c03841e24c39cc760798b55c0"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">UnityEditor.Timeline.ManipulateEdges</a></div><div class="ttdeci">ManipulateEdges</div><div class="ttdef"><b>Definition:</b> <a href="_snap_engine_8cs_source.html#l00009">SnapEngine.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_moving_items_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_moving_items.html">UnityEditor.Timeline.MovingItems</a></div><div class="ttdef"><b>Definition:</b> <a href="_moving_items_8cs_source.html#l00008">MovingItems.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">UnityEditor.Timeline.MoveItemHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00008">MoveItemHandler.cs:8</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_attractable_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">UnityEditor.Timeline.IAttractable</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_attractable_8cs_source.html#l00010">IAttractable.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a65a01ef5fa96430145d99d00470f9578"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a65a01ef5fa96430145d99d00470f9578">UnityEditor.Timeline.EditMode.FinishMove</a></div><div class="ttdeci">static void FinishMove()</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00247">EditMode.cs:247</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">UnityEditor.Timeline.TimelineCursors</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00006">TimelineCursors.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_afde4b5d6492fcbd7b410523d02c93b78"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#afde4b5d6492fcbd7b410523d02c93b78">UnityEditor.Timeline.MoveItemHandler.ShouldSnapTo</a></div><div class="ttdeci">bool ShouldSnapTo(ISnappable snappable)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00171">MoveItemHandler.cs:171</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_aaded91156beefb815e1ae9cfb0da9acb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aaded91156beefb815e1ae9cfb0da9acb">UnityEditor.Timeline.MoveItemHandler.Cancel</a></div><div class="ttdeci">void Cancel()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00126">MoveItemHandler.cs:126</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a0a5de2f13697b390854d9d1c95bbe534"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a0a5de2f13697b390854d9d1c95bbe534">UnityEditor.Timeline.EditMode.UpdateMove</a></div><div class="ttdeci">static void UpdateMove()</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00212">EditMode.cs:212</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_group_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_group.html">UnityEditor.Timeline.ItemsGroup</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_group_8cs_source.html#l00007">ItemsGroup.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_ab1639c22edd815e767d83be8a89c07cc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab1639c22edd815e767d83be8a89c07cc">UnityEditor.Timeline.MoveItemHandler.UpdateTrackTarget</a></div><div class="ttdeci">void UpdateTrackTarget(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00177">MoveItemHandler.cs:177</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_g_u_i_viewport_scope_html"><div class="ttname"><a href="struct_unity_editor_1_1_g_u_i_viewport_scope.html">UnityEditor.GUIViewportScope</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_u_i_viewport_scope_8cs_source.html#l00007">GUIViewportScope.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_ad8bec61d6764d51dc980d8b33f261329"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ad8bec61d6764d51dc980d8b33f261329">UnityEditor.Timeline.MoveItemHandler.OnGUI</a></div><div class="ttdeci">void OnGUI(Event evt)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00203">MoveItemHandler.cs:203</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a41063e72fac96982c4279b18b3d31933"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a41063e72fac96982c4279b18b3d31933">UnityEditor.Timeline.MoveItemHandler.Grab</a></div><div class="ttdeci">void Grab(IEnumerable&lt; ITimelineItem &gt; items, TrackAsset referenceTrack)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00033">MoveItemHandler.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_aa7e178f0a7b3d1f74605d8dba74ab436"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#aa7e178f0a7b3d1f74605d8dba74ab436">UnityEditor.Timeline.EditMode.OnTrackDetach</a></div><div class="ttdeci">static void OnTrackDetach(IEnumerable&lt; ItemsPerTrack &gt; grabbedTrackItems)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00217">EditMode.cs:217</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a6f3a5305b0bb819b346de72ac732572d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a6f3a5305b0bb819b346de72ac732572d">UnityEditor.Timeline.MoveItemHandler.Done</a></div><div class="ttdeci">void Done()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00148">MoveItemHandler.cs:148</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_afc911f4ea4e35d00e8951dddcf04c764"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#afc911f4ea4e35d00e8951dddcf04c764">UnityEngine.Timeline.TrackAsset.lockedInHierarchy</a></div><div class="ttdeci">bool lockedInHierarchy</div><div class="ttdoc">The locked state of a track. (RO) </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00362">TrackAsset.cs:362</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a5bd2232dc5b53e272c87bfc2444085d3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5bd2232dc5b53e272c87bfc2444085d3">UnityEditor.Timeline.MoveItemHandler.RefreshPreviewItems</a></div><div class="ttdeci">void RefreshPreviewItems()</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00270">MoveItemHandler.cs:270</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html">UnityEditor.Timeline.IAttractionHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_attractable_8cs_source.html#l00017">IAttractable.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a56751ba720182e4e848c9601c8ab5ba6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a56751ba720182e4e848c9601c8ab5ba6">UnityEditor.Timeline.MoveItemHandler.Grab</a></div><div class="ttdeci">void Grab(IEnumerable&lt; ITimelineItem &gt; items, TrackAsset referenceTrack, Vector2 mousePosition)</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00038">MoveItemHandler.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_move_item_handler_html_a62fc26ecdceb148b1f6bddf0ebf3c7f3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a62fc26ecdceb148b1f6bddf0ebf3c7f3">UnityEditor.Timeline.MoveItemHandler.m_Grabbing</a></div><div class="ttdeci">bool m_Grabbing</div><div class="ttdef"><b>Definition:</b> <a href="_move_item_handler_8cs_source.html#l00010">MoveItemHandler.cs:10</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_snappable_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">UnityEditor.Timeline.ISnappable</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_snappable_8cs_source.html#l00018">ISnappable.cs:18</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_html_a788ec0ccf1a753ec95101b738c59aca0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a788ec0ccf1a753ec95101b738c59aca0">UnityEditor.Timeline.EditMode.DrawMoveGUI</a></div><div class="ttdeci">static void DrawMoveGUI(WindowState state, IEnumerable&lt; MovingItems &gt; movingItems)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_8cs_source.html#l00242">EditMode.cs:242</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_per_track_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_per_track.html">UnityEditor.Timeline.ItemsPerTrack</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_per_track_8cs_source.html#l00008">ItemsPerTrack.cs:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Manipulators/Utils/EditModeReplaceUtils.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6a547c3745f8ad2865def9ffaf3eba83.html">Manipulators</a></li><li class="navelem"><a class="el" href="dir_97ffbead7fe577a686c209310701d5cd.html">Utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EditModeReplaceUtils.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_edit_mode_replace_utils_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html">    7</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html">EditModeReplaceUtils</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html#a5137712fb4320691badf67d7a7251a7e">    9</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html#a5137712fb4320691badf67d7a7251a7e">Insert</a>(IEnumerable&lt;ItemsPerTrack&gt; itemsGroups)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keywordflow">foreach</span> (var itemsGroup <span class="keywordflow">in</span> itemsGroups)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                Insert(itemsGroup.targetTrack, itemsGroup.items);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html#a596456a66e778dae07a71c8ab080cf54">   17</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html#a596456a66e778dae07a71c8ab080cf54">Insert</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, IEnumerable&lt;ITimelineItem&gt; items)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">if</span> (track == null) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            var orderedItems = <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html">ItemsUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2ae8052a7e4b58a6382e07c43d07db64">GetItemsExcept</a>(track, items)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                .OfType&lt;<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a>&gt;()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                .OrderBy(i =&gt; i.start).ToArray();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> items.OfType&lt;<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a>&gt;())</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                var from = item.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a4694088d0315d924289d8cb6f0cba19c">start</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                var to = item.end;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                var overlappedItems = orderedItems.Where(i =&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html">EditModeUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#ab2f7dd4daa8ad3ff1aa6dd7f5d7fe311">Overlaps</a>(i, from, to));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">foreach</span> (var overlappedItem <span class="keywordflow">in</span> overlappedItems)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html">EditModeUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#a280eb4fd6e4e47560cbdf24580f02f0b">IsItemWithinRange</a>(overlappedItem, from, to))</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        overlappedItem.Delete();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <span class="keywordflow">if</span> (overlappedItem.start &gt;= from)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                            overlappedItem.TrimStart(to);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                            overlappedItem.TrimEnd(from);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                var includingItems = orderedItems.Where(c =&gt; c.start&lt;from &amp;&amp; c.end&gt; to);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">foreach</span> (var includingItem <span class="keywordflow">in</span> includingItems)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    var newItem = includingItem.CloneTo(track, includingItem.start) as <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    includingItem.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html#a06e63618871cc0229e450070177cf37e">TrimStart</a>(to);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="keywordflow">if</span> (newItem != null)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        newItem.SetEnd(from, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_trimmable_html_a06e63618871cc0229e450070177cf37e"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html#a06e63618871cc0229e450070177cf37e">UnityEditor.Timeline.ITrimmable.TrimStart</a></div><div class="ttdeci">void TrimStart(double time)</div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_utils_html_a280eb4fd6e4e47560cbdf24580f02f0b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#a280eb4fd6e4e47560cbdf24580f02f0b">UnityEditor.Timeline.EditModeUtils.IsItemWithinRange</a></div><div class="ttdeci">static bool IsItemWithinRange(ITimelineItem item, double from, double to)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_utils_8cs_source.html#l00072">EditModeUtils.cs:72</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html">UnityEditor.Timeline.EditModeReplaceUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_replace_utils_8cs_source.html#l00007">EditModeReplaceUtils.cs:7</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils_html_a5137712fb4320691badf67d7a7251a7e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html#a5137712fb4320691badf67d7a7251a7e">UnityEditor.Timeline.EditModeReplaceUtils.Insert</a></div><div class="ttdeci">static void Insert(IEnumerable&lt; ItemsPerTrack &gt; itemsGroups)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_replace_utils_8cs_source.html#l00009">EditModeReplaceUtils.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html">UnityEditor.Timeline.EditModeUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_utils_8cs_source.html#l00008">EditModeUtils.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_utils_html_ab2f7dd4daa8ad3ff1aa6dd7f5d7fe311"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#ab2f7dd4daa8ad3ff1aa6dd7f5d7fe311">UnityEditor.Timeline.EditModeUtils.Overlaps</a></div><div class="ttdeci">static bool Overlaps(ITimelineItem item, double from, double to)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_utils_8cs_source.html#l00055">EditModeUtils.cs:55</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a2ae8052a7e4b58a6382e07c43d07db64"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2ae8052a7e4b58a6382e07c43d07db64">UnityEditor.Timeline.ItemsUtils.GetItemsExcept</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; GetItemsExcept(this TrackAsset track, IEnumerable&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00073">ItemsUtils.cs:73</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html_a4694088d0315d924289d8cb6f0cba19c"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a4694088d0315d924289d8cb6f0cba19c">UnityEditor.Timeline.ITimelineItem.start</a></div><div class="ttdeci">double start</div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00008">ITimelineItem.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils_html_a596456a66e778dae07a71c8ab080cf54"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_replace_utils.html#a596456a66e778dae07a71c8ab080cf54">UnityEditor.Timeline.EditModeReplaceUtils.Insert</a></div><div class="ttdeci">static void Insert(TrackAsset track, IEnumerable&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_replace_utils_8cs_source.html#l00017">EditModeReplaceUtils.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html">UnityEditor.Timeline.ItemsUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00008">ItemsUtils.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_trimmable_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">UnityEditor.Timeline.ITrimmable</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00022">ITimelineItem.cs:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

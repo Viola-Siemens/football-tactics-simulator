@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/inspectors/TimelineAssetInspector.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_bba7133523a795d5c56d4d084320b853.html">inspectors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineAssetInspector.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_asset_inspector_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    [CustomEditor(typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>)), CanEditMultipleObjects]</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html">TimelineAssetInspector</a> : Editor</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">    9</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">Styles</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#a8d01ab6dbfa6be931de1131fdbd95074">   11</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent FrameRate = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Frame Rate&quot;</span>, <span class="stringliteral">&quot;The frame rate at which this sequence updates&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#af4dad141783fb11abc0e6f8a10a55631">   12</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent DurationMode = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Duration Mode&quot;</span>, <span class="stringliteral">&quot;Specified how the duration of the sequence is calculated&quot;</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#ad5819b7af6ca3c17bfda8cca3f7c2604">   13</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent Duration = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Duration&quot;</span>, <span class="stringliteral">&quot;The length of the sequence&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#a6db64f257a0d263e344ee658ab387bc2">   14</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent HeaderTitleMultiselection = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Timeline Assets&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a8493e76e2beb5e671e2a37061932334f">   17</a></span>&#160;        SerializedProperty <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a8493e76e2beb5e671e2a37061932334f">m_FrameRateProperty</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a2ef67d12e259059e9bb48a17c0395b0e">   18</a></span>&#160;        SerializedProperty <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a2ef67d12e259059e9bb48a17c0395b0e">m_DurationModeProperty</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a86af7e05e8ea50e1f6f1b3f44534c656">   19</a></span>&#160;        SerializedProperty <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a86af7e05e8ea50e1f6f1b3f44534c656">m_FixedDurationProperty</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a144e86ec440fdd81a8cb41679b2c97d4">   21</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a144e86ec440fdd81a8cb41679b2c97d4">InitializeProperties</a>()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            m_FrameRateProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_EditorSettings&quot;</span>).FindPropertyRelative(<span class="stringliteral">&quot;m_Framerate&quot;</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            m_DurationModeProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_DurationMode&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            m_FixedDurationProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_FixedDuration&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#ad4669e882c90cc847abf9530d7499384">   28</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#ad4669e882c90cc847abf9530d7499384">OnEnable</a>()</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            InitializeProperties();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> IsEnabled()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> !FileUtil.HasReadOnly(targets) &amp;&amp; base.IsEnabled();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a4358571677b4d170fee510782d5b5545">   38</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a4358571677b4d170fee510782d5b5545">OnHeaderGUI</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordtype">string</span> headerTitle;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> (targets.Length == 1)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                headerTitle = target.name;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                headerTitle = targets.Length.ToString() + <span class="stringliteral">&quot; &quot;</span> + <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#a6db64f257a0d263e344ee658ab387bc2">HeaderTitleMultiselection</a>.text;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            DrawHeaderGUI(<span class="keyword">this</span>, headerTitle, 0);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a8537073c5765434d1086082815767fb2">   49</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a8537073c5765434d1086082815767fb2">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            serializedObject.Update();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            EditorGUILayout.PropertyField(m_FrameRateProperty, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#a8d01ab6dbfa6be931de1131fdbd95074">FrameRate</a>, GUILayout.MinWidth(140));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            var frameRate = m_FrameRateProperty.doubleValue;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            EditorGUILayout.PropertyField(m_DurationModeProperty, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#af4dad141783fb11abc0e6f8a10a55631">DurationMode</a>, GUILayout.MinWidth(140));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            var durationMode = (<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1a">DurationMode</a>)m_DurationModeProperty.enumValueIndex;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            var inputEvent = <a class="code" href="namespace_unity_editor_1_1_timeline.html#aed7b8e93c689129b6ecc636f0918cb3a">InputEvent</a>.None;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            if (durationMode == <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1a">DurationMode</a>.FixedLength)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html">TimelineInspectorUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html#af54652dd1c15ec56d401d98e269d67d3">TimeField</a>(m_FixedDurationProperty, <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#ad5819b7af6ca3c17bfda8cca3f7c2604">Duration</a>, <span class="keyword">false</span>, frameRate, <span class="keywordtype">double</span>.Epsilon, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.kMaxTimeValue * 2, ref inputEvent);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                var isMixed = targets.Length &gt; 1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html">TimelineInspectorUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html#af54652dd1c15ec56d401d98e269d67d3">TimeField</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#ad5819b7af6ca3c17bfda8cca3f7c2604">Duration</a>, ((<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>)target).duration, <span class="keyword">true</span>, isMixed, frameRate, <span class="keywordtype">double</span>.MinValue, <span class="keywordtype">double</span>.MaxValue, ref inputEvent);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">bool</span> changed = EditorGUI.EndChangeCheck();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (changed)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.RepaintIfEditingTimelineAsset((<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>)target);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_aed7b8e93c689129b6ecc636f0918cb3a"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#aed7b8e93c689129b6ecc636f0918cb3a">UnityEditor.Timeline.InputEvent</a></div><div class="ttdeci">InputEvent</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_inspector_utility_8cs_source.html#l00008">TimelineInspectorUtility.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html_a86af7e05e8ea50e1f6f1b3f44534c656"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a86af7e05e8ea50e1f6f1b3f44534c656">UnityEditor.Timeline.TimelineAssetInspector.m_FixedDurationProperty</a></div><div class="ttdeci">SerializedProperty m_FixedDurationProperty</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00019">TimelineAssetInspector.cs:19</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles_html_a8d01ab6dbfa6be931de1131fdbd95074"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#a8d01ab6dbfa6be931de1131fdbd95074">UnityEditor.Timeline.TimelineAssetInspector.Styles.FrameRate</a></div><div class="ttdeci">static readonly GUIContent FrameRate</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00011">TimelineAssetInspector.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html_ad4669e882c90cc847abf9530d7499384"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#ad4669e882c90cc847abf9530d7499384">UnityEditor.Timeline.TimelineAssetInspector.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00028">TimelineAssetInspector.cs:28</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html">UnityEditor.Timeline.TimelineAssetInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00007">TimelineAssetInspector.cs:7</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">UnityEditor.Timeline.TimelineAssetInspector.Styles</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00009">TimelineAssetInspector.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles_html_af4dad141783fb11abc0e6f8a10a55631"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#af4dad141783fb11abc0e6f8a10a55631">UnityEditor.Timeline.TimelineAssetInspector.Styles.DurationMode</a></div><div class="ttdeci">static readonly GUIContent DurationMode</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00012">TimelineAssetInspector.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html_a8537073c5765434d1086082815767fb2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a8537073c5765434d1086082815767fb2">UnityEditor.Timeline.TimelineAssetInspector.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00049">TimelineAssetInspector.cs:49</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles_html_a6db64f257a0d263e344ee658ab387bc2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#a6db64f257a0d263e344ee658ab387bc2">UnityEditor.Timeline.TimelineAssetInspector.Styles.HeaderTitleMultiselection</a></div><div class="ttdeci">static readonly GUIContent HeaderTitleMultiselection</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00014">TimelineAssetInspector.cs:14</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html_a4358571677b4d170fee510782d5b5545"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a4358571677b4d170fee510782d5b5545">UnityEditor.Timeline.TimelineAssetInspector.OnHeaderGUI</a></div><div class="ttdeci">override void OnHeaderGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00038">TimelineAssetInspector.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html_a144e86ec440fdd81a8cb41679b2c97d4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a144e86ec440fdd81a8cb41679b2c97d4">UnityEditor.Timeline.TimelineAssetInspector.InitializeProperties</a></div><div class="ttdeci">void InitializeProperties()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00021">TimelineAssetInspector.cs:21</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles_html_ad5819b7af6ca3c17bfda8cca3f7c2604"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html#ad5819b7af6ca3c17bfda8cca3f7c2604">UnityEditor.Timeline.TimelineAssetInspector.Styles.Duration</a></div><div class="ttdeci">static readonly GUIContent Duration</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00013">TimelineAssetInspector.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html_a2ef67d12e259059e9bb48a17c0395b0e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a2ef67d12e259059e9bb48a17c0395b0e">UnityEditor.Timeline.TimelineAssetInspector.m_DurationModeProperty</a></div><div class="ttdeci">SerializedProperty m_DurationModeProperty</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00018">TimelineAssetInspector.cs:18</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_html_a8493e76e2beb5e671e2a37061932334f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a8493e76e2beb5e671e2a37061932334f">UnityEditor.Timeline.TimelineAssetInspector.m_FrameRateProperty</a></div><div class="ttdeci">SerializedProperty m_FrameRateProperty</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_inspector_8cs_source.html#l00017">TimelineAssetInspector.cs:17</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_ae97149925f4adf36a27e28f85ccb8a1a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1a">UnityEngine.Timeline.TimelineAsset.DurationMode</a></div><div class="ttdeci">DurationMode</div><div class="ttdoc">How the duration of the timeline is determined. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_8cs_source.html#l00017">TimelineAsset.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility_html_af54652dd1c15ec56d401d98e269d67d3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html#af54652dd1c15ec56d401d98e269d67d3">UnityEditor.Timeline.TimelineInspectorUtility.TimeField</a></div><div class="ttdeci">static void TimeField(SerializedProperty property, GUIContent label, bool readOnly, double frameRate, double minValue, double maxValue, ref InputEvent inputEvent)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_inspector_utility_8cs_source.html#l00034">TimelineInspectorUtility.cs:34</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html">UnityEditor.Timeline.TimelineInspectorUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_inspector_utility_8cs_source.html#l00026">TimelineInspectorUtility.cs:26</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

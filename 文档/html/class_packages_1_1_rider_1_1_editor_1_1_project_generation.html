@@ -1,0 +1,2448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Packages.Rider.Editor.ProjectGeneration类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_packages.html">Packages</a></li><li class="navelem"><a class="el" href="namespace_packages_1_1_rider.html">Rider</a></li><li class="navelem"><a class="el" href="namespace_packages_1_1_rider_1_1_editor.html">Editor</a></li><li class="navelem"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html">ProjectGeneration</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_packages_1_1_rider_1_1_editor_1_1_project_generation-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">Packages.Rider.Editor.ProjectGeneration类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 Packages.Rider.Editor.ProjectGeneration 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_packages_1_1_rider_1_1_editor_1_1_project_generation__inherit__graph.png" border="0" usemap="#_packages_8_rider_8_editor_8_project_generation_inherit__map" alt="Inheritance graph"/></div>
+<map name="_packages_8_rider_8_editor_8_project_generation_inherit__map" id="_packages_8_rider_8_editor_8_project_generation_inherit__map">
+<area shape="rect" id="node2" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html" title="IGenerator" alt="" coords="63,5,145,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Packages.Rider.Editor.ProjectGeneration 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_packages_1_1_rider_1_1_editor_1_1_project_generation__coll__graph.png" border="0" usemap="#_packages_8_rider_8_editor_8_project_generation_coll__map" alt="Collaboration graph"/></div>
+<map name="_packages_8_rider_8_editor_8_project_generation_coll__map" id="_packages_8_rider_8_editor_8_project_generation_coll__map">
+<area shape="rect" id="node2" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html" title="IGenerator" alt="" coords="87,5,170,32"/><area shape="rect" id="node3" href="interface_packages_1_1_rider_1_1_editor_1_1_i_assembly_name_provider.html" title="Packages.Rider.Editor.IAssembly\lNameProvider" alt="" coords="20,57,237,98"/><area shape="rect" id="node4" href="interface_packages_1_1_rider_1_1_editor_1_1_i_g_u_i_d_generator.html" title="Packages.Rider.Editor.IGUIDGenerator" alt="" coords="5,123,252,149"/><area shape="rect" id="node5" href="interface_packages_1_1_rider_1_1_editor_1_1_i_file_i_o.html" title="Packages.Rider.Editor.IFileIO" alt="" coords="32,173,225,200"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abc6f5ea86448ea3e7e88cdad87ef3ab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abc6f5ea86448ea3e7e88cdad87ef3ab0">GenerateAll</a> (bool generateAll)</td></tr>
+<tr class="separator:abc6f5ea86448ea3e7e88cdad87ef3ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2022c502387b01b78f70b3c13cd61220"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a2022c502387b01b78f70b3c13cd61220">ProjectGeneration</a> ()</td></tr>
+<tr class="separator:a2022c502387b01b78f70b3c13cd61220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53aef38bdeef990f7b779a96ecd227da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a53aef38bdeef990f7b779a96ecd227da">ProjectGeneration</a> (string tempDirectory)</td></tr>
+<tr class="separator:a53aef38bdeef990f7b779a96ecd227da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a901cf0a906bf70f2669aed81c13eea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a7a901cf0a906bf70f2669aed81c13eea">ProjectGeneration</a> (string tempDirectory, <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_assembly_name_provider.html">IAssemblyNameProvider</a> assemblyNameProvider, <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_file_i_o.html">IFileIO</a> fileIoProvider, <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_g_u_i_d_generator.html">IGUIDGenerator</a> guidGenerator)</td></tr>
+<tr class="separator:a7a901cf0a906bf70f2669aed81c13eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9afac3af177b6017d48ea0dc68636ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ab9afac3af177b6017d48ea0dc68636ef">SyncIfNeeded</a> (IEnumerable&lt; string &gt; affectedFiles, IEnumerable&lt; string &gt; reimportedFiles)</td></tr>
+<tr class="memdesc:ab9afac3af177b6017d48ea0dc68636ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syncs the scripting solution if any affected files are relevant.  <a href="#ab9afac3af177b6017d48ea0dc68636ef">更多...</a><br /></td></tr>
+<tr class="separator:ab9afac3af177b6017d48ea0dc68636ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df4c31a74fb47f70fb901fc0e93b8a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a7df4c31a74fb47f70fb901fc0e93b8a2">Sync</a> ()</td></tr>
+<tr class="separator:a7df4c31a74fb47f70fb901fc0e93b8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add02f728d5b30eb5ab7714322c97a2b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#add02f728d5b30eb5ab7714322c97a2b2">HasSolutionBeenGenerated</a> ()</td></tr>
+<tr class="separator:add02f728d5b30eb5ab7714322c97a2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c773d55e6fc95774f6eb998a8c2ff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a98c773d55e6fc95774f6eb998a8c2ff8">GenerateAndWriteSolutionAndProjects</a> (Type[] types)</td></tr>
+<tr class="separator:a98c773d55e6fc95774f6eb998a8c2ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162401ee4ea22a027ef350478beca2f5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a162401ee4ea22a027ef350478beca2f5">ProjectFile</a> (Assembly assembly)</td></tr>
+<tr class="separator:a162401ee4ea22a027ef350478beca2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9e79381de332f27c30b34fa6cfade3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abf9e79381de332f27c30b34fa6cfade3">SolutionFile</a> ()</td></tr>
+<tr class="separator:abf9e79381de332f27c30b34fa6cfade3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ac24c22229cbee20613cc74b282edf1f0"><td class="memItemLeft" align="right" valign="top">static Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ac24c22229cbee20613cc74b282edf1f0">GetAssetPostprocessorTypes</a> ()</td></tr>
+<tr class="separator:ac24c22229cbee20613cc74b282edf1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a18e719ee76fd926f3fe5551dcd2eb3c2"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a18e719ee76fd926f3fe5551dcd2eb3c2">MSBuildNamespaceUri</a> = &quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;</td></tr>
+<tr class="separator:a18e719ee76fd926f3fe5551dcd2eb3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:ace9691f97f0a858512b322908215ded5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ace9691f97f0a858512b322908215ded5">ProjectDirectory</a><code> [get]</code></td></tr>
+<tr class="separator:ace9691f97f0a858512b322908215ded5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_packages_1_1_rider_1_1_editor_1_1_i_generator"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_packages_1_1_rider_1_1_editor_1_1_i_generator')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html">Packages.Rider.Editor.IGenerator</a></td></tr>
+<tr class="memitem:a17ff8a9fdb95f10342f402f871d253cb inherit properties_interface_packages_1_1_rider_1_1_editor_1_1_i_generator"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a17ff8a9fdb95f10342f402f871d253cb">ProjectDirectory</a><code> [get]</code></td></tr>
+<tr class="separator:a17ff8a9fdb95f10342f402f871d253cb inherit properties_interface_packages_1_1_rider_1_1_editor_1_1_i_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:a4ff398b9f09dc05eeb464e5c7a5d1e3d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a> { <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3da6adf97f83acf6453d4a6a4b1070f3754">ScriptingLanguage.None</a>, 
+<a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3da83925001a044cdfe0c64e9a44345b66d">ScriptingLanguage.CSharp</a>
+ }</td></tr>
+<tr class="separator:a4ff398b9f09dc05eeb464e5c7a5d1e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ae768ca2f1c832c6892d8847b6b58a0bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ae768ca2f1c832c6892d8847b6b58a0bc">HasFilesBeenModified</a> (IEnumerable&lt; string &gt; affectedFiles, IEnumerable&lt; string &gt; reimportedFiles)</td></tr>
+<tr class="separator:ae768ca2f1c832c6892d8847b6b58a0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99b22143f4ce07dc864c15f2d27c02b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ab99b22143f4ce07dc864c15f2d27c02b">SetupProjectSupportedExtensions</a> ()</td></tr>
+<tr class="separator:ab99b22143f4ce07dc864c15f2d27c02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea2dc1c783a54abda5dc807ed45bbd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#afea2dc1c783a54abda5dc807ed45bbd9">ShouldFileBePartOfSolution</a> (string file)</td></tr>
+<tr class="separator:afea2dc1c783a54abda5dc807ed45bbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016d9c6ecb1d923d586d6fd9520fab14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a016d9c6ecb1d923d586d6fd9520fab14">IsSupportedExtension</a> (string extension)</td></tr>
+<tr class="separator:a016d9c6ecb1d923d586d6fd9520fab14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa7f3f8420c2cce8c9dc3b95b0a9a42"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; ResponseFileData &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a9aa7f3f8420c2cce8c9dc3b95b0a9a42">ParseResponseFileData</a> (Assembly assembly)</td></tr>
+<tr class="separator:a9aa7f3f8420c2cce8c9dc3b95b0a9a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63143b27688d6de69c210872cde5e489"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a63143b27688d6de69c210872cde5e489">GenerateAllAssetProjectParts</a> ()</td></tr>
+<tr class="separator:a63143b27688d6de69c210872cde5e489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fc24831d5ef989afcf2395e38dc2d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a26fc24831d5ef989afcf2395e38dc2d0">IsInternalizedPackagePath</a> (string file)</td></tr>
+<tr class="separator:a26fc24831d5ef989afcf2395e38dc2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eba7535bdd97f1f4ce59036e30eeda0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a2eba7535bdd97f1f4ce59036e30eeda0">SyncProject</a> (Assembly island, Dictionary&lt; string, string &gt; allAssetsProjectParts, IEnumerable&lt; ResponseFileData &gt; responseFilesData, List&lt; Assembly &gt; allProjectIslands, Type[] types)</td></tr>
+<tr class="separator:a2eba7535bdd97f1f4ce59036e30eeda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7572c2cac0d0f39a1e4af071c43905"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a5c7572c2cac0d0f39a1e4af071c43905">SyncProjectFileIfNotChanged</a> (string path, string newContents, Type[] types)</td></tr>
+<tr class="separator:a5c7572c2cac0d0f39a1e4af071c43905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d168be2834c434d458dd7676937e59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a57d168be2834c434d458dd7676937e59">SyncSolutionFileIfNotChanged</a> (string path, string newContents, Type[] types)</td></tr>
+<tr class="separator:a57d168be2834c434d458dd7676937e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18daa379bcf615add9c70857abc5dc76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a18daa379bcf615add9c70857abc5dc76">SyncFileIfNotChanged</a> (string filename, string newContents)</td></tr>
+<tr class="separator:a18daa379bcf615add9c70857abc5dc76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469fdafe7270e2f5cda9f7a23952b2bb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a469fdafe7270e2f5cda9f7a23952b2bb">ProjectText</a> (Assembly assembly, Dictionary&lt; string, string &gt; allAssetsProjectParts, List&lt; ResponseFileData &gt; responseFilesData, List&lt; Assembly &gt; allProjectIslands)</td></tr>
+<tr class="separator:a469fdafe7270e2f5cda9f7a23952b2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a1f1ce1089500d0a607fd744a153c5e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a0a1f1ce1089500d0a607fd744a153c5e">ProjectHeader</a> (Assembly assembly, List&lt; ResponseFileData &gt; responseFilesData)</td></tr>
+<tr class="separator:a0a1f1ce1089500d0a607fd744a153c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f156b5622fb966f6ac23a45babc4f9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a84f156b5622fb966f6ac23a45babc4f9">GenerateDocumentationFile</a> (IEnumerable&lt; string &gt; paths)</td></tr>
+<tr class="separator:a84f156b5622fb966f6ac23a45babc4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce6272b37ccb50b5002f4ba276806f8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a3ce6272b37ccb50b5002f4ba276806f8">GenerateWarningAsError</a> (IEnumerable&lt; string &gt; enumerable)</td></tr>
+<tr class="separator:a3ce6272b37ccb50b5002f4ba276806f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb57188769cea9f0856b64a42f020ff"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#aabb57188769cea9f0856b64a42f020ff">GenerateWarningLevel</a> (IEnumerable&lt; string &gt; warningLevel)</td></tr>
+<tr class="separator:aabb57188769cea9f0856b64a42f020ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658821a6b0fc5938aa67c3ef9d5408ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a658821a6b0fc5938aa67c3ef9d5408ed">SyncSolution</a> (IEnumerable&lt; Assembly &gt; islands, Type[] types)</td></tr>
+<tr class="separator:a658821a6b0fc5938aa67c3ef9d5408ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6aeee346db67af24d9fb8fba506d935"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ac6aeee346db67af24d9fb8fba506d935">SolutionText</a> (IEnumerable&lt; Assembly &gt; islands)</td></tr>
+<tr class="separator:ac6aeee346db67af24d9fb8fba506d935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2749119bc56cffd44518e0591339ec8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ac2749119bc56cffd44518e0591339ec8">GenerateLangVersion</a> (IEnumerable&lt; string &gt; langVersionList)</td></tr>
+<tr class="separator:ac2749119bc56cffd44518e0591339ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94acdb4e61b28d8988e06c48c54b880f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a94acdb4e61b28d8988e06c48c54b880f">GetProjectEntries</a> (IEnumerable&lt; Assembly &gt; islands)</td></tr>
+<tr class="memdesc:a94acdb4e61b28d8988e06c48c54b880f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a Project("{guid}") = "MyProject", "MyProject.unityproj", "{projectguid}" entry for each relevant language  <a href="#a94acdb4e61b28d8988e06c48c54b880f">更多...</a><br /></td></tr>
+<tr class="separator:a94acdb4e61b28d8988e06c48c54b880f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24ba1cee1c7ca27d720bb11831755f6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#aa24ba1cee1c7ca27d720bb11831755f6">GetProjectActiveConfigurations</a> (string projectGuid)</td></tr>
+<tr class="memdesc:aa24ba1cee1c7ca27d720bb11831755f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the active configuration string for a given project guid  <a href="#aa24ba1cee1c7ca27d720bb11831755f6">更多...</a><br /></td></tr>
+<tr class="separator:aa24ba1cee1c7ca27d720bb11831755f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a648acf56dfa1c094b0faee31b59dd7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4a648acf56dfa1c094b0faee31b59dd7">EscapedRelativePathFor</a> (string file)</td></tr>
+<tr class="separator:a4a648acf56dfa1c094b0faee31b59dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a2c352436978742f508eb01641be93eb0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a2c352436978742f508eb01641be93eb0">ShouldSyncOnReimportedAsset</a> (string asset)</td></tr>
+<tr class="separator:a2c352436978742f508eb01641be93eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64eb089daac495f3eddfc1af6201b315"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a64eb089daac495f3eddfc1af6201b315">ScriptingLanguageFor</a> (Assembly island)</td></tr>
+<tr class="separator:a64eb089daac495f3eddfc1af6201b315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3e174e5f0a9e8fc6e4d888839b8220"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abd3e174e5f0a9e8fc6e4d888839b8220">GetExtensionOfSourceFiles</a> (string[] files)</td></tr>
+<tr class="separator:abd3e174e5f0a9e8fc6e4d888839b8220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2070bb1bae407a33b3a9e9f059d53987"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a2070bb1bae407a33b3a9e9f059d53987">GetExtensionOfSourceFile</a> (string file)</td></tr>
+<tr class="separator:a2070bb1bae407a33b3a9e9f059d53987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac2ae53a0ae72165585e19ff646d4a3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#adac2ae53a0ae72165585e19ff646d4a3">ScriptingLanguageFor</a> (string extension)</td></tr>
+<tr class="separator:adac2ae53a0ae72165585e19ff646d4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed2451785f85d3b3584309d91a760a6"><td class="memItemLeft" align="right" valign="top">static List&lt; Type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a5ed2451785f85d3b3584309d91a760a6">SafeGetTypes</a> (System.Reflection.Assembly a)</td></tr>
+<tr class="separator:a5ed2451785f85d3b3584309d91a760a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7254737f52f821f696397b171f6a96f9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a7254737f52f821f696397b171f6a96f9">OnGeneratedCSProjectFiles</a> (Type[] types)</td></tr>
+<tr class="separator:a7254737f52f821f696397b171f6a96f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81851cc15193c00880a9fb12bdb89943"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a81851cc15193c00880a9fb12bdb89943">OnPreGeneratingCSProjectFiles</a> (Type[] types)</td></tr>
+<tr class="separator:a81851cc15193c00880a9fb12bdb89943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bb39cd58a14cb114f445958c6e70a8"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ac4bb39cd58a14cb114f445958c6e70a8">OnGeneratedCSProject</a> (string path, string content, Type[] types)</td></tr>
+<tr class="separator:ac4bb39cd58a14cb114f445958c6e70a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26811657a140152e7d1a5d759e055c9e"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a26811657a140152e7d1a5d759e055c9e">OnGeneratedSlnSolution</a> (string path, string content, Type[] types)</td></tr>
+<tr class="separator:a26811657a140152e7d1a5d759e055c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b158fc022460c1897cfec74d3d05487"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a1b158fc022460c1897cfec74d3d05487">AppendReference</a> (string fullReference, StringBuilder projectBuilder)</td></tr>
+<tr class="separator:a1b158fc022460c1897cfec74d3d05487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8128fd94def00fcafdb72f26b9b1ec8"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#aa8128fd94def00fcafdb72f26b9b1ec8">GetSolutionText</a> ()</td></tr>
+<tr class="separator:aa8128fd94def00fcafdb72f26b9b1ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4c45711242cd478dccb207ef8f592b"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abc4c45711242cd478dccb207ef8f592b">GetProjectFooterTemplate</a> ()</td></tr>
+<tr class="separator:abc4c45711242cd478dccb207ef8f592b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6eb2db19f90a364fe2ab373eb4d89f0"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ac6eb2db19f90a364fe2ab373eb4d89f0">GetProjectHeaderTemplate</a> ()</td></tr>
+<tr class="separator:ac6eb2db19f90a364fe2ab373eb4d89f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f42c48409d923cb4e17020013aaa69"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a82f42c48409d923cb4e17020013aaa69">GenerateAnalyserItemGroup</a> (string[] paths)</td></tr>
+<tr class="separator:a82f42c48409d923cb4e17020013aaa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae448ef9245d52db7954e7b003a6cb793"><td class="memItemLeft" align="right" valign="top">static ILookup&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ae448ef9245d52db7954e7b003a6cb793">GetOtherArgumentsFromResponseFilesData</a> (List&lt; ResponseFileData &gt; responseFilesData)</td></tr>
+<tr class="separator:ae448ef9245d52db7954e7b003a6cb793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19cca39b531abedbcd0c760a0e200e5d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a19cca39b531abedbcd0c760a0e200e5d">GenerateAnalyserRuleSet</a> (string[] paths)</td></tr>
+<tr class="separator:a19cca39b531abedbcd0c760a0e200e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addad3265fdf3d6d2134a39f7c3036cea"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#addad3265fdf3d6d2134a39f7c3036cea">GenerateAnalyserAdditionalFiles</a> (string[] paths)</td></tr>
+<tr class="separator:addad3265fdf3d6d2134a39f7c3036cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9506088d7663186bf4a02349f1904e"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a0e9506088d7663186bf4a02349f1904e">GenerateNoWarn</a> (string[] codes)</td></tr>
+<tr class="separator:a0e9506088d7663186bf4a02349f1904e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88706669e6e65eb3a76912be19b4ee5b"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; Assembly &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a88706669e6e65eb3a76912be19b4ee5b">RelevantIslandsForMode</a> (IEnumerable&lt; Assembly &gt; islands)</td></tr>
+<tr class="separator:a88706669e6e65eb3a76912be19b4ee5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac86894a0c9c929d424ad1f7da5059ed"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#aac86894a0c9c929d424ad1f7da5059ed">SkipPathPrefix</a> (string path, string prefix)</td></tr>
+<tr class="separator:aac86894a0c9c929d424ad1f7da5059ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd074f23b2175a99b4e2b7cc0c2cd487"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abd074f23b2175a99b4e2b7cc0c2cd487">NormalizePath</a> (string path)</td></tr>
+<tr class="separator:abd074f23b2175a99b4e2b7cc0c2cd487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b222d5621b00b80b8e8f19f653debd"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ae9b222d5621b00b80b8e8f19f653debd">ProjectFooter</a> ()</td></tr>
+<tr class="separator:ae9b222d5621b00b80b8e8f19f653debd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf82a28a2781ea51a50e54e67f81c99d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abf82a28a2781ea51a50e54e67f81c99d">GetProjectExtension</a> ()</td></tr>
+<tr class="separator:abf82a28a2781ea51a50e54e67f81c99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:abb6e98bbc81eac2c82af639d568ff625"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abb6e98bbc81eac2c82af639d568ff625">m_SolutionProjectEntryTemplate</a></td></tr>
+<tr class="separator:abb6e98bbc81eac2c82af639d568ff625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279d3ac463a9905c7a0d65527d08e93c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a279d3ac463a9905c7a0d65527d08e93c">m_SolutionProjectConfigurationTemplate</a></td></tr>
+<tr class="separator:a279d3ac463a9905c7a0d65527d08e93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6947df4faeda3ff2154bf685b810bee"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ae6947df4faeda3ff2154bf685b810bee">m_ProjectSupportedExtensions</a> = new string[0]</td></tr>
+<tr class="separator:ae6947df4faeda3ff2154bf685b810bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed35365ebcb750a8112ed3126390ccb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a6ed35365ebcb750a8112ed3126390ccb">m_ShouldGenerateAll</a></td></tr>
+<tr class="separator:a6ed35365ebcb750a8112ed3126390ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc524dbf32ff748585d55ee31750b40"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#aafc524dbf32ff748585d55ee31750b40">m_ProjectName</a></td></tr>
+<tr class="separator:aafc524dbf32ff748585d55ee31750b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4df6534e383f5c85f61f7d6adfbc47"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_assembly_name_provider.html">IAssemblyNameProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a5c4df6534e383f5c85f61f7d6adfbc47">m_AssemblyNameProvider</a></td></tr>
+<tr class="separator:a5c4df6534e383f5c85f61f7d6adfbc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd98a91b7f3bb053492e235bac411af"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_file_i_o.html">IFileIO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a3fd98a91b7f3bb053492e235bac411af">m_FileIOProvider</a></td></tr>
+<tr class="separator:a3fd98a91b7f3bb053492e235bac411af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907a18572bc4eefc14c2aedec275dbce"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_g_u_i_d_generator.html">IGUIDGenerator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a907a18572bc4eefc14c2aedec275dbce">m_GUIDGenerator</a></td></tr>
+<tr class="separator:a907a18572bc4eefc14c2aedec275dbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a711bfa974e0ccfbe23b0555e11a3cf14"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a711bfa974e0ccfbe23b0555e11a3cf14">k_ToolsVersion</a> = &quot;4.0&quot;</td></tr>
+<tr class="separator:a711bfa974e0ccfbe23b0555e11a3cf14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468a462476d200eaefa38bd427b569f0"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a468a462476d200eaefa38bd427b569f0">k_ProductVersion</a> = &quot;10.0.20506&quot;</td></tr>
+<tr class="separator:a468a462476d200eaefa38bd427b569f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47563391933e2d93782d20b4783cafb4"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a47563391933e2d93782d20b4783cafb4">k_BaseDirectory</a> = &quot;.&quot;</td></tr>
+<tr class="separator:a47563391933e2d93782d20b4783cafb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2d668290232bb2d04493f1ba7eee5a"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a1d2d668290232bb2d04493f1ba7eee5a">k_TargetFrameworkVersion</a> = &quot;v4.7.1&quot;</td></tr>
+<tr class="separator:a1d2d668290232bb2d04493f1ba7eee5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b74129fac8d27b88f4b77acc987b0c7"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a3b74129fac8d27b88f4b77acc987b0c7">k_TargetLanguageVersion</a> = &quot;latest&quot;</td></tr>
+<tr class="separator:a3b74129fac8d27b88f4b77acc987b0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a04d7a61362bcd4bbd87047b5dbeb946d"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; string, <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a04d7a61362bcd4bbd87047b5dbeb946d">k_BuiltinSupportedExtensions</a></td></tr>
+<tr class="memdesc:a04d7a61362bcd4bbd87047b5dbeb946d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map source extensions to ScriptingLanguages  <a href="#a04d7a61362bcd4bbd87047b5dbeb946d">更多...</a><br /></td></tr>
+<tr class="separator:a04d7a61362bcd4bbd87047b5dbeb946d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5b42d9dae7315184a74fa39aea3c07"><td class="memItemLeft" align="right" valign="top">static readonly string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#adb5b42d9dae7315184a74fa39aea3c07">k_ReimportSyncExtensions</a> = {&quot;.dll&quot;, &quot;.asmdef&quot;}</td></tr>
+<tr class="separator:adb5b42d9dae7315184a74fa39aea3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bdfb31b6275f39dabd97ab9ad0c256"><td class="memItemLeft" align="right" valign="top">static readonly Regex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ad2bdfb31b6275f39dabd97ab9ad0c256">k_ScriptReferenceExpression</a></td></tr>
+<tr class="memdesc:ad2bdfb31b6275f39dabd97ab9ad0c256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map ScriptingLanguages to project extensions  <a href="#ad2bdfb31b6275f39dabd97ab9ad0c256">更多...</a><br /></td></tr>
+<tr class="separator:ad2bdfb31b6275f39dabd97ab9ad0c256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089d682986e6bc486ee7e270a0d249d5"><td class="memItemLeft" align="right" valign="top">static readonly Regex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a089d682986e6bc486ee7e270a0d249d5">scriptReferenceExpression</a></td></tr>
+<tr class="separator:a089d682986e6bc486ee7e270a0d249d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00084">84</a> 行定义.</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="a4ff398b9f09dc05eeb464e5c7a5d1e3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">Packages.Rider.Editor.ProjectGeneration.ScriptingLanguage</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a4ff398b9f09dc05eeb464e5c7a5d1e3da6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4ff398b9f09dc05eeb464e5c7a5d1e3da83925001a044cdfe0c64e9a44345b66d"></a>CSharp&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00086">86</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a2022c502387b01b78f70b3c13cd61220"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Packages.Rider.Editor.ProjectGeneration.ProjectGeneration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00162">162</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53aef38bdeef990f7b779a96ecd227da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Packages.Rider.Editor.ProjectGeneration.ProjectGeneration </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tempDirectory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00166">166</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a901cf0a906bf70f2669aed81c13eea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Packages.Rider.Editor.ProjectGeneration.ProjectGeneration </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tempDirectory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_assembly_name_provider.html">IAssemblyNameProvider</a>&#160;</td>
+          <td class="paramname"><em>assemblyNameProvider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_file_i_o.html">IFileIO</a>&#160;</td>
+          <td class="paramname"><em>fileIoProvider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_g_u_i_d_generator.html">IGUIDGenerator</a>&#160;</td>
+          <td class="paramname"><em>guidGenerator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00170">170</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a1b158fc022460c1897cfec74d3d05487"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Packages.Rider.Editor.ProjectGeneration.AppendReference </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fullReference</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>projectBuilder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00646">646</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_packages_1_1_rider_1_1_editor_1_1_project_generation_a1b158fc022460c1897cfec74d3d05487_cgraph.png" border="0" usemap="#class_packages_1_1_rider_1_1_editor_1_1_project_generation_a1b158fc022460c1897cfec74d3d05487_cgraph" alt=""/></div>
+<map name="class_packages_1_1_rider_1_1_editor_1_1_project_generation_a1b158fc022460c1897cfec74d3d05487_cgraph" id="class_packages_1_1_rider_1_1_editor_1_1_project_generation_a1b158fc022460c1897cfec74d3d05487_cgraph">
+<area shape="rect" id="node2" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#ae6410748630d7e8df4737958d49bbd76" title="Packages.Rider.Editor.Util.\lFileSystemUtil.FileNameWithoutExtension" alt="" coords="251,5,520,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a648acf56dfa1c094b0faee31b59dd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.EscapedRelativePathFor </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l01010">1010</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc6f5ea86448ea3e7e88cdad87ef3ab0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.GenerateAll </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>generateAll</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a96f0b674e31daaf36fa8ccc67f9d9a00">Packages.Rider.Editor.IGenerator</a>.</p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63143b27688d6de69c210872cde5e489"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, string&gt; Packages.Rider.Editor.ProjectGeneration.GenerateAllAssetProjectParts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00339">339</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_packages_1_1_rider_1_1_editor_1_1_project_generation_a63143b27688d6de69c210872cde5e489_cgraph.png" border="0" usemap="#class_packages_1_1_rider_1_1_editor_1_1_project_generation_a63143b27688d6de69c210872cde5e489_cgraph" alt=""/></div>
+<map name="class_packages_1_1_rider_1_1_editor_1_1_project_generation_a63143b27688d6de69c210872cde5e489_cgraph" id="class_packages_1_1_rider_1_1_editor_1_1_project_generation_a63143b27688d6de69c210872cde5e489_cgraph">
+<area shape="rect" id="node2" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#ae6410748630d7e8df4737958d49bbd76" title="Packages.Rider.Editor.Util.\lFileSystemUtil.FileNameWithoutExtension" alt="" coords="316,5,585,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="addad3265fdf3d6d2134a39f7c3036cea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GenerateAnalyserAdditionalFiles </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00953">953</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82f42c48409d923cb4e17020013aaa69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GenerateAnalyserItemGroup </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00888">888</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19cca39b531abedbcd0c760a0e200e5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GenerateAnalyserRuleSet </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00944">944</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98c773d55e6fc95774f6eb998a8c2ff8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.GenerateAndWriteSolutionAndProjects </td>
+          <td>(</td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00293">293</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84f156b5622fb966f6ac23a45babc4f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.GenerateDocumentationFile </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00709">709</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2749119bc56cffd44518e0591339ec8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.GenerateLangVersion </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>langVersionList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00936">936</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e9506088d7663186bf4a02349f1904e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GenerateNoWarn </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>codes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00969">969</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ce6272b37ccb50b5002f4ba276806f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.GenerateWarningAsError </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>enumerable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00718">718</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aabb57188769cea9f0856b64a42f020ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.GenerateWarningLevel </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>warningLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00743">743</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac24c22229cbee20613cc74b282edf1f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type [] Packages.Rider.Editor.ProjectGeneration.GetAssetPostprocessorTypes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00465">465</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2070bb1bae407a33b3a9e9f059d53987"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GetExtensionOfSourceFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00279">279</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd3e174e5f0a9e8fc6e4d888839b8220"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GetExtensionOfSourceFiles </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>files</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00274">274</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae448ef9245d52db7954e7b003a6cb793"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ILookup&lt;string, string&gt; Packages.Rider.Editor.ProjectGeneration.GetOtherArgumentsFromResponseFilesData </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; ResponseFileData &gt;&#160;</td>
+          <td class="paramname"><em>responseFilesData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00907">907</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa24ba1cee1c7ca27d720bb11831755f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.GetProjectActiveConfigurations </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projectGuid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate the active configuration string for a given project guid </p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l01003">1003</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94acdb4e61b28d8988e06c48c54b880f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.GetProjectEntries </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; Assembly &gt;&#160;</td>
+          <td class="paramname"><em>islands</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a Project("{guid}") = "MyProject", "MyProject.unityproj", "{projectguid}" entry for each relevant language </p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00987">987</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf82a28a2781ea51a50e54e67f81c99d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GetProjectExtension </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l01047">1047</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc4c45711242cd478dccb207ef8f592b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GetProjectFooterTemplate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00774">774</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6eb2db19f90a364fe2ab373eb4d89f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GetProjectHeaderTemplate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00790">790</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8128fd94def00fcafdb72f26b9b1ec8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.GetSolutionText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00752">752</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae768ca2f1c832c6892d8847b6b58a0bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Packages.Rider.Editor.ProjectGeneration.HasFilesBeenModified </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>affectedFiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>reimportedFiles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00204">204</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="add02f728d5b30eb5ab7714322c97a2b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Packages.Rider.Editor.ProjectGeneration.HasSolutionBeenGenerated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#af2a293f64febed320e60d6e3a88276cb">Packages.Rider.Editor.IGenerator</a>.</p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00229">229</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26fc24831d5ef989afcf2395e38dc2d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Packages.Rider.Editor.ProjectGeneration.IsInternalizedPackagePath </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00383">383</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a016d9c6ecb1d923d586d6fd9520fab14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Packages.Rider.Editor.ProjectGeneration.IsSupportedExtension </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>extension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00259">259</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd074f23b2175a99b4e2b7cc0c2cd487"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.NormalizePath </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l01035">1035</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4bb39cd58a14cb114f445958c6e70a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.OnGeneratedCSProject </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00494">494</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7254737f52f821f696397b171f6a96f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Packages.Rider.Editor.ProjectGeneration.OnGeneratedCSProjectFiles </td>
+          <td>(</td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00448">448</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26811657a140152e7d1a5d759e055c9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.OnGeneratedSlnSolution </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00517">517</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81851cc15193c00880a9fb12bdb89943"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Packages.Rider.Editor.ProjectGeneration.OnPreGeneratingCSProjectFiles </td>
+          <td>(</td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00470">470</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9aa7f3f8420c2cce8c9dc3b95b0a9a42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;ResponseFileData&gt; Packages.Rider.Editor.ProjectGeneration.ParseResponseFileData </td>
+          <td>(</td>
+          <td class="paramtype">Assembly&#160;</td>
+          <td class="paramname"><em>assembly</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00312">312</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a162401ee4ea22a027ef350478beca2f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.ProjectFile </td>
+          <td>(</td>
+          <td class="paramtype">Assembly&#160;</td>
+          <td class="paramname"><em>assembly</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00657">657</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9b222d5621b00b80b8e8f19f653debd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.ProjectFooter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l01042">1042</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a1f1ce1089500d0a607fd744a153c5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.ProjectHeader </td>
+          <td>(</td>
+          <td class="paramtype">Assembly&#160;</td>
+          <td class="paramname"><em>assembly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; ResponseFileData &gt;&#160;</td>
+          <td class="paramname"><em>responseFilesData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00667">667</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a469fdafe7270e2f5cda9f7a23952b2bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.ProjectText </td>
+          <td>(</td>
+          <td class="paramtype">Assembly&#160;</td>
+          <td class="paramname"><em>assembly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Dictionary&lt; string, string &gt;&#160;</td>
+          <td class="paramname"><em>allAssetsProjectParts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; ResponseFileData &gt;&#160;</td>
+          <td class="paramname"><em>responseFilesData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Assembly &gt;&#160;</td>
+          <td class="paramname"><em>allProjectIslands</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00557">557</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88706669e6e65eb3a76912be19b4ee5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;Assembly&gt; Packages.Rider.Editor.ProjectGeneration.RelevantIslandsForMode </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; Assembly &gt;&#160;</td>
+          <td class="paramname"><em>islands</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00977">977</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ed2451785f85d3b3584309d91a760a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;Type&gt; Packages.Rider.Editor.ProjectGeneration.SafeGetTypes </td>
+          <td>(</td>
+          <td class="paramtype">System.Reflection.Assembly&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00428">428</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64eb089daac495f3eddfc1af6201b315"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a> Packages.Rider.Editor.ProjectGeneration.ScriptingLanguageFor </td>
+          <td>(</td>
+          <td class="paramtype">Assembly&#160;</td>
+          <td class="paramname"><em>island</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00269">269</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adac2ae53a0ae72165585e19ff646d4a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a> Packages.Rider.Editor.ProjectGeneration.ScriptingLanguageFor </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>extension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00286">286</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab99b22143f4ce07dc864c15f2d27c02b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.SetupProjectSupportedExtensions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00234">234</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afea2dc1c783a54abda5dc807ed45bbd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Packages.Rider.Editor.ProjectGeneration.ShouldFileBePartOfSolution </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00239">239</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c352436978742f508eb01641be93eb0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Packages.Rider.Editor.ProjectGeneration.ShouldSyncOnReimportedAsset </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>asset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00209">209</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac86894a0c9c929d424ad1f7da5059ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Packages.Rider.Editor.ProjectGeneration.SkipPathPrefix </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>prefix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l01028">1028</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf9e79381de332f27c30b34fa6cfade3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.SolutionFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a7810290b7f4f86366553a2670ae0bece">Packages.Rider.Editor.IGenerator</a>.</p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00662">662</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6aeee346db67af24d9fb8fba506d935"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.SolutionText </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; Assembly &gt;&#160;</td>
+          <td class="paramname"><em>islands</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00876">876</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7df4c31a74fb47f70fb901fc0e93b8a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.Sync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a18d4c0b40c7ed4698d4e67fc06cf2c12">Packages.Rider.Editor.IGenerator</a>.</p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00214">214</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18daa379bcf615add9c70857abc5dc76"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.SyncFileIfNotChanged </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>newContents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00540">540</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9afac3af177b6017d48ea0dc68636ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Packages.Rider.Editor.ProjectGeneration.SyncIfNeeded </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>affectedFiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>reimportedFiles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Syncs the scripting solution if any affected files are relevant. </p>
+<dl class="section return"><dt>返回</dt><dd>Whether the solution was synced. </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">affectedFiles</td><td>A set of files whose status has changed </td></tr>
+    <tr><td class="paramname">reimportedFiles</td><td>A set of files that got reimported </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a6407005e3e72f333248d29ddceb861ab">Packages.Rider.Editor.IGenerator</a>.</p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00191">191</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2eba7535bdd97f1f4ce59036e30eeda0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.SyncProject </td>
+          <td>(</td>
+          <td class="paramtype">Assembly&#160;</td>
+          <td class="paramname"><em>island</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Dictionary&lt; string, string &gt;&#160;</td>
+          <td class="paramname"><em>allAssetsProjectParts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; ResponseFileData &gt;&#160;</td>
+          <td class="paramname"><em>responseFilesData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Assembly &gt;&#160;</td>
+          <td class="paramname"><em>allProjectIslands</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00400">400</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c7572c2cac0d0f39a1e4af071c43905"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.SyncProjectFileIfNotChanged </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>newContents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00411">411</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a658821a6b0fc5938aa67c3ef9d5408ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.SyncSolution </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; Assembly &gt;&#160;</td>
+          <td class="paramname"><em>islands</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00871">871</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57d168be2834c434d458dd7676937e59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Packages.Rider.Editor.ProjectGeneration.SyncSolutionFileIfNotChanged </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>newContents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00421">421</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a47563391933e2d93782d20b4783cafb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Packages.Rider.Editor.ProjectGeneration.k_BaseDirectory = &quot;.&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00154">154</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04d7a61362bcd4bbd87047b5dbeb946d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;string, <a class="el" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>&gt; Packages.Rider.Editor.ProjectGeneration.k_BuiltinSupportedExtensions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      <span class="keyword">new</span> Dictionary&lt;string, ScriptingLanguage&gt;</div>
+<div class="line">      {</div>
+<div class="line">        {<span class="stringliteral">&quot;cs&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.CSharp},</div>
+<div class="line">        {<span class="stringliteral">&quot;uxml&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;uss&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;shader&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;compute&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;cginc&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;hlsl&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;glslinc&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;template&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None},</div>
+<div class="line">        {<span class="stringliteral">&quot;raytrace&quot;</span>, <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a4ff398b9f09dc05eeb464e5c7a5d1e3d">ScriptingLanguage</a>.None}</div>
+<div class="line">      }</div>
+</div><!-- fragment -->
+<p>Map source extensions to ScriptingLanguages </p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00097">97</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a468a462476d200eaefa38bd427b569f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Packages.Rider.Editor.ProjectGeneration.k_ProductVersion = &quot;10.0.20506&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00153">153</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb5b42d9dae7315184a74fa39aea3c07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string [] Packages.Rider.Editor.ProjectGeneration.k_ReimportSyncExtensions = {&quot;.dll&quot;, &quot;.asmdef&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00122">122</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2bdfb31b6275f39dabd97ab9ad0c256"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Regex Packages.Rider.Editor.ProjectGeneration.k_ScriptReferenceExpression</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Regex(</div>
+<div class="line">      <span class="stringliteral">@&quot;^Library.ScriptAssemblies.(?&lt;dllname&gt;(?&lt;project&gt;.*)\.dll$)&quot;</span>,</div>
+<div class="line">      RegexOptions.Compiled | RegexOptions.IgnoreCase)</div>
+</div><!-- fragment -->
+<p>Map ScriptingLanguages to project extensions </p>
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00132">132</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d2d668290232bb2d04493f1ba7eee5a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Packages.Rider.Editor.ProjectGeneration.k_TargetFrameworkVersion = &quot;v4.7.1&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00155">155</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b74129fac8d27b88f4b77acc987b0c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Packages.Rider.Editor.ProjectGeneration.k_TargetLanguageVersion = &quot;latest&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00156">156</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a711bfa974e0ccfbe23b0555e11a3cf14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Packages.Rider.Editor.ProjectGeneration.k_ToolsVersion = &quot;4.0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00152">152</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c4df6534e383f5c85f61f7d6adfbc47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_assembly_name_provider.html">IAssemblyNameProvider</a> Packages.Rider.Editor.ProjectGeneration.m_AssemblyNameProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00147">147</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3fd98a91b7f3bb053492e235bac411af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_file_i_o.html">IFileIO</a> Packages.Rider.Editor.ProjectGeneration.m_FileIOProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00148">148</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a907a18572bc4eefc14c2aedec275dbce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_packages_1_1_rider_1_1_editor_1_1_i_g_u_i_d_generator.html">IGUIDGenerator</a> Packages.Rider.Editor.ProjectGeneration.m_GUIDGenerator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00149">149</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafc524dbf32ff748585d55ee31750b40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string Packages.Rider.Editor.ProjectGeneration.m_ProjectName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00146">146</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6947df4faeda3ff2154bf685b810bee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] Packages.Rider.Editor.ProjectGeneration.m_ProjectSupportedExtensions = new string[0]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00136">136</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ed35365ebcb750a8112ed3126390ccb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Packages.Rider.Editor.ProjectGeneration.m_ShouldGenerateAll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00137">137</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a279d3ac463a9905c7a0d65527d08e93c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.m_SolutionProjectConfigurationTemplate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keywordtype">string</span>.Join(Environment.NewLine,</div>
+<div class="line">      <span class="stringliteral">@&quot;        {{{0}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">@&quot;        {{{0}}}.Debug|Any CPU.Build.0 = Debug|Any CPU&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">@&quot;        {{{0}}}.Release|Any CPU.ActiveCfg = Release|Any CPU&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">@&quot;        {{{0}}}.Release|Any CPU.Build.0 = Release|Any CPU&quot;</span>).Replace(<span class="stringliteral">&quot;    &quot;</span>, <span class="stringliteral">&quot;\t&quot;</span>)</div>
+</div><!-- fragment -->
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00116">116</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb6e98bbc81eac2c82af639d568ff625"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.m_SolutionProjectEntryTemplate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keywordtype">string</span>.Join(Environment.NewLine,</div>
+<div class="line">      <span class="stringliteral">@&quot;Project(&quot;&quot;{{{0}}}&quot;&quot;) = &quot;&quot;{1}&quot;&quot;, &quot;&quot;{2}&quot;&quot;, &quot;&quot;{{{3}}}&quot;&quot;&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">@&quot;EndProject&quot;</span>).Replace(<span class="stringliteral">&quot;    &quot;</span>, <span class="stringliteral">&quot;\t&quot;</span>)</div>
+</div><!-- fragment -->
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00112">112</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18e719ee76fd926f3fe5551dcd2eb3c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string Packages.Rider.Editor.ProjectGeneration.MSBuildNamespaceUri = &quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00092">92</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a089d682986e6bc486ee7e270a0d249d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Regex Packages.Rider.Editor.ProjectGeneration.scriptReferenceExpression</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Regex(</div>
+<div class="line">      <span class="stringliteral">@&quot;^Library.ScriptAssemblies.(?&lt;dllname&gt;(?&lt;project&gt;.*)\.dll$)&quot;</span>,</div>
+<div class="line">      RegexOptions.Compiled | RegexOptions.IgnoreCase)</div>
+</div><!-- fragment -->
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00158">158</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="ace9691f97f0a858512b322908215ded5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Packages.Rider.Editor.ProjectGeneration.ProjectDirectory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a> 第 <a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html#l00139">139</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/ProjectGeneration/<a class="el" href="com_8unity_8ide_8rider@1_81_84_2_rider_2_editor_2_project_generation_2_project_generation_8cs_source.html">ProjectGeneration.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:39 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

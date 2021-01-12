@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEngine.Timeline.ActivationControlPlayable类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a class="el" href="namespace_unity_engine_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html">ActivationControlPlayable</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_engine_1_1_timeline_1_1_activation_control_playable-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEngine.Timeline.ActivationControlPlayable类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Playable that controls the active state of a GameObject.  
+ <a href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#details">更多...</a></p>
+<div class="dynheader">
+类 UnityEngine.Timeline.ActivationControlPlayable 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_activation_control_playable__inherit__graph.png" border="0" usemap="#_unity_engine_8_timeline_8_activation_control_playable_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEngine.Timeline.ActivationControlPlayable 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_activation_control_playable__coll__graph.png" border="0" usemap="#_unity_engine_8_timeline_8_activation_control_playable_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a228073fb9829bd4bc24a2a43978683b0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">PostPlaybackState</a> { <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0a4d3d769b812b6faa6b76e1a8abaece2d">PostPlaybackState.Active</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0a3cab03c00dbd11bc3569afa0748013f0">PostPlaybackState.Inactive</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048">PostPlaybackState.Revert</a>
+ }</td></tr>
+<tr class="memdesc:a228073fb9829bd4bc24a2a43978683b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The state of a GameObject's activeness when a PlayableGraph stops.  <a href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">更多...</a><br /></td></tr>
+<tr class="separator:a228073fb9829bd4bc24a2a43978683b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aae53200c3e07ebd7ebba641e545a6e2d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#aae53200c3e07ebd7ebba641e545a6e2d">OnBehaviourPlay</a> (Playable playable, FrameData info)</td></tr>
+<tr class="memdesc:aae53200c3e07ebd7ebba641e545a6e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called when the Playable play state is changed to Playables.PlayState.Playing.  <a href="#aae53200c3e07ebd7ebba641e545a6e2d">更多...</a><br /></td></tr>
+<tr class="separator:aae53200c3e07ebd7ebba641e545a6e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abededec513d961d115c76df4293c9bc1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#abededec513d961d115c76df4293c9bc1">OnBehaviourPause</a> (Playable playable, FrameData info)</td></tr>
+<tr class="memdesc:abededec513d961d115c76df4293c9bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called when the Playable play state is changed to PlayState.Paused.  <a href="#abededec513d961d115c76df4293c9bc1">更多...</a><br /></td></tr>
+<tr class="separator:abededec513d961d115c76df4293c9bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13961b1744389296983deea61380dbed"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a13961b1744389296983deea61380dbed">ProcessFrame</a> (Playable playable, FrameData info, object userData)</td></tr>
+<tr class="memdesc:a13961b1744389296983deea61380dbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called during the ProcessFrame phase of the PlayableGraph.  <a href="#a13961b1744389296983deea61380dbed">更多...</a><br /></td></tr>
+<tr class="separator:a13961b1744389296983deea61380dbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddce0025b859f40265d516ac9df8a15"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#acddce0025b859f40265d516ac9df8a15">OnGraphStart</a> (Playable playable)</td></tr>
+<tr class="memdesc:acddce0025b859f40265d516ac9df8a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called when the PlayableGraph that owns this PlayableBehaviour starts.  <a href="#acddce0025b859f40265d516ac9df8a15">更多...</a><br /></td></tr>
+<tr class="separator:acddce0025b859f40265d516ac9df8a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6ee42b061f54e995a07c4edfd15125"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2e6ee42b061f54e995a07c4edfd15125">OnPlayableDestroy</a> (Playable playable)</td></tr>
+<tr class="memdesc:a2e6ee42b061f54e995a07c4edfd15125"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called when the Playable that owns the PlayableBehaviour is destroyed.  <a href="#a2e6ee42b061f54e995a07c4edfd15125">更多...</a><br /></td></tr>
+<tr class="separator:a2e6ee42b061f54e995a07c4edfd15125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a1ba91d4b5b4099c740762c6e15f86b0a"><td class="memItemLeft" align="right" valign="top">static ScriptPlayable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html">ActivationControlPlayable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a1ba91d4b5b4099c740762c6e15f86b0a">Create</a> (PlayableGraph graph, GameObject <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a7c4a44700d0813c5086060405c689bd0">gameObject</a>, <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">ActivationControlPlayable.PostPlaybackState</a> postPlaybackState)</td></tr>
+<tr class="memdesc:a1ba91d4b5b4099c740762c6e15f86b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a ScriptPlayable with an <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html" title="Playable that controls the active state of a GameObject. ">ActivationControlPlayable</a> behaviour attached  <a href="#a1ba91d4b5b4099c740762c6e15f86b0a">更多...</a><br /></td></tr>
+<tr class="separator:a1ba91d4b5b4099c740762c6e15f86b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a7c4a44700d0813c5086060405c689bd0"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a7c4a44700d0813c5086060405c689bd0">gameObject</a> = null</td></tr>
+<tr class="separator:a7c4a44700d0813c5086060405c689bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0bc61e572391fcba2a882278a98714"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">PostPlaybackState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#afb0bc61e572391fcba2a882278a98714">postPlayback</a> = PostPlaybackState.Revert</td></tr>
+<tr class="separator:afb0bc61e572391fcba2a882278a98714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:a2c478e8a65853f7e74b0ddcebd4e7c7d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">InitialState</a> { <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7dac9f88e098f6fe4e4e112eeb05ccb9671">InitialState.Unset</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7da4d3d769b812b6faa6b76e1a8abaece2d">InitialState.Active</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7da3cab03c00dbd11bc3569afa0748013f0">InitialState.Inactive</a>
+ }</td></tr>
+<tr class="separator:a2c478e8a65853f7e74b0ddcebd4e7c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9035471dfbb460601bd47f970c08d52d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">InitialState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a9035471dfbb460601bd47f970c08d52d">m_InitialState</a></td></tr>
+<tr class="separator:a9035471dfbb460601bd47f970c08d52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Playable that controls the active state of a GameObject. </p>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00008">8</a> 行定义.</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a class="anchor" id="a2c478e8a65853f7e74b0ddcebd4e7c7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">UnityEngine.Timeline.ActivationControlPlayable.InitialState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a2c478e8a65853f7e74b0ddcebd4e7c7dac9f88e098f6fe4e4e112eeb05ccb9671"></a>Unset&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2c478e8a65853f7e74b0ddcebd4e7c7da4d3d769b812b6faa6b76e1a8abaece2d"></a>Active&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2c478e8a65853f7e74b0ddcebd4e7c7da3cab03c00dbd11bc3569afa0748013f0"></a>Inactive&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a228073fb9829bd4bc24a2a43978683b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">UnityEngine.Timeline.ActivationControlPlayable.PostPlaybackState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The state of a GameObject's activeness when a PlayableGraph stops. </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a228073fb9829bd4bc24a2a43978683b0a4d3d769b812b6faa6b76e1a8abaece2d"></a>Active&#160;</td><td class="fielddoc">
+<p>Set the GameObject to active when the PlayableGraph stops. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a228073fb9829bd4bc24a2a43978683b0a3cab03c00dbd11bc3569afa0748013f0"></a>Inactive&#160;</td><td class="fielddoc">
+<p>Set the GameObject to inactive when the [[PlayableGraph]] stops. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048"></a>Revert&#160;</td><td class="fielddoc">
+<p>Revert the GameObject to the active state it was before the [[PlayableGraph]] started. </p>
+</td></tr>
+</table>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a1ba91d4b5b4099c740762c6e15f86b0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ScriptPlayable&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html">ActivationControlPlayable</a>&gt; UnityEngine.Timeline.ActivationControlPlayable.Create </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>gameObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">ActivationControlPlayable.PostPlaybackState</a>&#160;</td>
+          <td class="paramname"><em>postPlaybackState</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a ScriptPlayable with an <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html" title="Playable that controls the active state of a GameObject. ">ActivationControlPlayable</a> behaviour attached </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>PlayableGraph that will own the playable</td></tr>
+    <tr><td class="paramname">gameObject</td><td>The GameObject that triggered the graph build</td></tr>
+    <tr><td class="paramname">postPlaybackState</td><td>The state to leave the gameObject after the graph is stopped</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Returns a playable that controls activation of a game object</dd></dl>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00049">49</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_activation_control_playable_a1ba91d4b5b4099c740762c6e15f86b0a_icgraph.png" border="0" usemap="#class_unity_engine_1_1_timeline_1_1_activation_control_playable_a1ba91d4b5b4099c740762c6e15f86b0a_icgraph" alt=""/></div>
+<map name="class_unity_engine_1_1_timeline_1_1_activation_control_playable_a1ba91d4b5b4099c740762c6e15f86b0a_icgraph" id="class_unity_engine_1_1_timeline_1_1_activation_control_playable_a1ba91d4b5b4099c740762c6e15f86b0a_icgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a810ee2585134d702afcdd5a69e9c9dec" title="UnityEngine.Timeline.Control\lPlayableAsset.CreateActivationPlayable" alt="" coords="257,5,512,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abededec513d961d115c76df4293c9bc1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.ActivationControlPlayable.OnBehaviourPause </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is called when the Playable play state is changed to PlayState.Paused. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The playable this behaviour is attached to.</td></tr>
+    <tr><td class="paramname">info</td><td>The information about this frame</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00080">80</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aae53200c3e07ebd7ebba641e545a6e2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.ActivationControlPlayable.OnBehaviourPlay </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is called when the Playable play state is changed to Playables.PlayState.Playing. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The playable this behaviour is attached to.</td></tr>
+    <tr><td class="paramname">info</td><td>The information about this frame</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00067">67</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acddce0025b859f40265d516ac9df8a15"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.ActivationControlPlayable.OnGraphStart </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is called when the PlayableGraph that owns this PlayableBehaviour starts. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The playable this behaviour is attached to.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00106">106</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e6ee42b061f54e995a07c4edfd15125"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.ActivationControlPlayable.OnPlayableDestroy </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is called when the Playable that owns the PlayableBehaviour is destroyed. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The playable this behaviour is attached to.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00119">119</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13961b1744389296983deea61380dbed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.Timeline.ActivationControlPlayable.ProcessFrame </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>userData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is called during the ProcessFrame phase of the PlayableGraph. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playable</td><td>The playable this behaviour is attached to.</td></tr>
+    <tr><td class="paramname">info</td><td>A FrameData structure that contains information about the current frame context.</td></tr>
+    <tr><td class="paramname">userData</td><td>unused</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00096">96</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a7c4a44700d0813c5086060405c689bd0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject UnityEngine.Timeline.ActivationControlPlayable.gameObject = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9035471dfbb460601bd47f970c08d52d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">InitialState</a> UnityEngine.Timeline.ActivationControlPlayable.m_InitialState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb0bc61e572391fcba2a882278a98714"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">PostPlaybackState</a> UnityEngine.Timeline.ActivationControlPlayable.postPlayback = PostPlaybackState.Revert</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a> 第 <a class="el" href="_activation_control_playable_8cs_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Playables/<a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:54 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

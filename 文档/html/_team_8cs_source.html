@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Assets/Behavior/Team.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7ab79e34423b4813ae06b29f761e99f3.html">Assets</a></li><li class="navelem"><a class="el" href="dir_fe256eaee5b4e7f3b4761f0bd5ab12de.html">Behavior</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Team.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_team_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83">   19</a></span>&#160;<span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83">Position</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*  ====门将====  */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/* 门将 */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a38ca808f3eb88baea5374803eee54cb4">GoalKeeper</a> = 0,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*  ====后场====  */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">/* 中后卫 */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83adf269514afe1beb01d5960d5454d5a04">MidCenterBack</a> = 1,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">/* 左边后卫 */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a5eca76149b4f445a0b3af1d50f863391">LeftSideBack</a> = 2,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">/* 右边后卫 */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83ae15a35e8add1cc46287502a1f521b695">RightSideBack</a> = 3,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*  ====中场====  */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/* 后腰 */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83afe0d508adb4f53bf4d36c9e0da821292">DefenceMidfielder</a> = 4,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/* 中前卫 */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83adc036af5115055961edd232ba3e84f6f">CenterMidfielder</a> = 5,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/* 左边前卫 */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a3a7e3f09c04ea60e43003f099293cca5">LeftSideMidfielder</a> = 6,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/* 右边前卫 */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a9dc15cca1bb377e6f94ebdc6d7a9d218">RightSideMidfielder</a> = 7,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">/* 前腰 */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a2cd96180b4d5f11c41ad950fd920e649">AttackMidfielder</a> = 8,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/*  ====锋线====  */</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">/* 影锋 */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a10726acdbc40a869e46de42390cb314a">ShadowStriker</a> = 9,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">/* 左边锋 */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a7276b7bf51073c08a9308f3011e1fb7e">LeftWingForward</a> = 10,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">/* 右边锋 */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a69ba476b7c35784009c55e3e5294036e">RightWingForward</a> = 11,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/* 中锋 */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83afbfb3c72980faa6fbaee83b259ac636f">CenterForward</a> = 12</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;[<a class="code" href="namespace_system.html">System</a>.Serializable]</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_tactics.html">   73</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_tactics.html">Tactics</a> {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/*  ====整体====  */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_tactics.html#a8ea6563437700fc9cf18a7a1f8a6cac0">   75</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a8ea6563437700fc9cf18a7a1f8a6cac0">keepForm</a>;         </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/*  ====传球时====  */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_tactics.html#a208dc8bd1c13f0e680b1be51a7cadf02">   78</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a208dc8bd1c13f0e680b1be51a7cadf02">longPassMoti</a>;     </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_tactics.html#a746bbaa5a185e1e1a547541ffe8405ed">   79</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a746bbaa5a185e1e1a547541ffe8405ed">wingSideMoti</a>;     </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_tactics.html#a68b979626de662dc4a4e2b1a56f8da78">   80</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a68b979626de662dc4a4e2b1a56f8da78">advanceSpeed</a>;     </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">/*  ====有球权跑位时====  */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_tactics.html#ac62bcb2630e402e3f1ba816861a060df">   83</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#ac62bcb2630e402e3f1ba816861a060df">defenseLine</a>;      </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_tactics.html#a4611a4725e8eb12a89a6ec9b9a73e48f">   84</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a4611a4725e8eb12a89a6ec9b9a73e48f">supportDist</a>;      </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_tactics.html#a75b2c4a5e4284f4469d48bfe14ed6e9b">   85</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a75b2c4a5e4284f4469d48bfe14ed6e9b">dribblingMoti</a>;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">/*  ====无球权站位时====  */</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_tactics.html#a2315fb58e963c12d93debf76a6adb986">   88</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a2315fb58e963c12d93debf76a6adb986">compactness</a>;      </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_tactics.html#a8e686f7612de9ced91cdd17560cd5b69">   89</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a8e686f7612de9ced91cdd17560cd5b69">centerBlock</a>;      </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">/*  ====施压时====  */</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_tactics.html#ac1f89271d8f2e9880627cfa4dd71992f">   92</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#ac1f89271d8f2e9880627cfa4dd71992f">backwardSpeed</a>;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_tactics.html#a8fae9f2597b9c93c17d535d99541a0a3">   93</a></span>&#160;    <span class="keyword">public</span> ushort <a class="code" href="class_tactics.html#a8fae9f2597b9c93c17d535d99541a0a3">pressureMoti</a>;     </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_tactics.html#aa59f6a809c29eed26f27a2b16de077ff">   98</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_tactics.html#aa59f6a809c29eed26f27a2b16de077ff">Tactics</a>() {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        keepForm = 5;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        longPassMoti = 5;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        wingSideMoti = 5;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        advanceSpeed = 5;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        defenseLine = 5;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        supportDist = 5;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        dribblingMoti = 5;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        compactness = 5;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        centerBlock = 5;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        backwardSpeed = 5;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        pressureMoti = 5;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;[<a class="code" href="namespace_system.html">System</a>.Serializable]</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_team.html">  122</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_team.html">Team</a>: MonoBehaviour {</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_team.html#a6ef199d2a1d5e5a123ee855ab98aeffd">  123</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_team.html#a6ef199d2a1d5e5a123ee855ab98aeffd">TeamName</a>;         </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_team.html#a9d3d0d55707811ba0308c054a4b41c8b">  124</a></span>&#160;    <span class="keyword">public</span> Color <a class="code" href="class_team.html#a9d3d0d55707811ba0308c054a4b41c8b">TeamColor</a>;         </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_team.html#affc8c576d10117f503a535f77a4cde1f">  126</a></span>&#160;    <span class="keyword">public</span> Vector3 <a class="code" href="class_team.html#affc8c576d10117f503a535f77a4cde1f">AdvanceDirect</a>;   </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_team.html#a68fce68292484babd537307a06d21805">  127</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_team.html">Team</a> <a class="code" href="class_team.html#a68fce68292484babd537307a06d21805">enemy</a>;              </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">  129</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>;         </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_team.html#ad87f47fee3b2be2abd574a933ce24fb4">  130</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_team.html#ad87f47fee3b2be2abd574a933ce24fb4">LeftBound</a>;     </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_team.html#abfeea034d4d0dabb69062bfd641e8e71">  131</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_team.html#abfeea034d4d0dabb69062bfd641e8e71">RightBound</a>;    </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_team.html#a33ec2ea75f26025760d9146bd6df12c1">  132</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_team.html#a33ec2ea75f26025760d9146bd6df12c1">TopBound</a>;      </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_team.html#aabf1f876b0ebb3606b36f31e271c1387">  133</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_team.html#aabf1f876b0ebb3606b36f31e271c1387">BottomBound</a>;   </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_team.html#acde2e842fb6befd221af0f35fc10f4b5">  135</a></span>&#160;    <span class="keyword">public</span> Vector3 <a class="code" href="class_team.html#acde2e842fb6befd221af0f35fc10f4b5">heart</a>;           </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_team.html#acd7b88f8dca9934af2e1580b0be4dfe2">  137</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_tactics.html">Tactics</a> <a class="code" href="class_team.html#acd7b88f8dca9934af2e1580b0be4dfe2">tactic</a>;          </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//[HideInInspector]</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">  140</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_player.html">Player</a> <a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a>;       </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">  141</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">getBallTime</a>;       </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_team.html#a986836e8e650000241d5a9f75018d9ae">  143</a></span>&#160;    <a class="code" href="class_ball.html">Ball</a> <a class="code" href="class_team.html#a986836e8e650000241d5a9f75018d9ae">ball</a>;                  </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    [<a class="code" href="namespace_system.html">System</a>.Serializable]</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_team_1_1_member.html">  146</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_team_1_1_member.html">Member</a> {</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">  147</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_player.html">Player</a> <a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>;           </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_team_1_1_member.html#ab21299daadeb27f3efa53c08bd50cf51">  148</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83">Position</a> <a class="code" href="class_team_1_1_member.html#ab21299daadeb27f3efa53c08bd50cf51">position</a>;       </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">  151</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_team_1_1_member.html">Member</a>[] <a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a> = <span class="keyword">new</span> <a class="code" href="class_team_1_1_member.html">Member</a>[11];   </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_team.html#a9c1aa85e5b2128bd8c0cd8bbaadfbb77">  157</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_team.html#a9c1aa85e5b2128bd8c0cd8bbaadfbb77">Awake</a>() {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">if</span> (BallHander == null) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            getBallTime = 0;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            getBallTime = Time.time;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team_1_1_member.html">Member</a> m <span class="keywordflow">in</span> members) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">if</span> (m.<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a> == null) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            m.<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>.<a class="code" href="class_player.html#a0ed0c55e06f476870da6abc3a15ba085">team</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            m.<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>.<a class="code" href="class_player.html#a0fb0e0870f1ac02b505bb192ec1bf7d6">enemy</a> = <a class="code" href="class_team.html#a68fce68292484babd537307a06d21805">enemy</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            m.<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>.<a class="code" href="class_player.html#aadfffc0459193385cb3c1318ab8fbfd5">playPosition</a> = m.<a class="code" href="class_team_1_1_member.html#ab21299daadeb27f3efa53c08bd50cf51">position</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        ball = GameObject.Find(<span class="stringliteral">&quot;Football&quot;</span>).GetComponent&lt;<a class="code" href="class_ball.html">Ball</a>&gt;();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_team.html#aa9da102655a7f186c346f1071e0b7b1f">  177</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_team.html#aa9da102655a7f186c346f1071e0b7b1f">Update</a>() {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (ball.<a class="code" href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">GoalReset</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">float</span> ballDiff = ball.transform.position.x - heart.x;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span> (Mathf.Abs(heart.x) &lt; tactic.<a class="code" href="class_tactics.html#ac62bcb2630e402e3f1ba816861a060df">defenseLine</a> * 20.0f - 10.0f) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            heart.x = Mathf.Sign(heart.x) * (tactic.<a class="code" href="class_tactics.html#ac62bcb2630e402e3f1ba816861a060df">defenseLine</a> * 20.0f - 10.0f);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (Mathf.Abs(heart.x) &gt; tactic.<a class="code" href="class_tactics.html#ac62bcb2630e402e3f1ba816861a060df">defenseLine</a> * 5.0f + 450.0f) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            heart.x = Mathf.Sign(heart.x) * (tactic.<a class="code" href="class_tactics.html#ac62bcb2630e402e3f1ba816861a060df">defenseLine</a> * 5.0f + 450.0f);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> (BallHander != null) {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            heart += AdvanceDirect * (tactic.<a class="code" href="class_tactics.html#a68b979626de662dc4a4e2b1a56f8da78">advanceSpeed</a> * 0.03f + 0.06f);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            heart.x += (Mathf.Pow(Mathf.Abs(ballDiff), 1.0f) * Mathf.Sign(ballDiff) - 200.0f * AdvanceDirect.x) * 0.002f;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (enemy.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> != null) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            heart -= AdvanceDirect * (tactic.<a class="code" href="class_tactics.html#ac1f89271d8f2e9880627cfa4dd71992f">backwardSpeed</a> * 0.06f + 0.12f);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            heart.x += (Mathf.Pow(Mathf.Abs(ballDiff), 1.0f) * Mathf.Sign(ballDiff) - 200.0f * AdvanceDirect.x) * 0.001f;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a38ca808f3eb88baea5374803eee54cb4"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a38ca808f3eb88baea5374803eee54cb4">GoalKeeper</a></div></div>
+<div class="ttc" id="class_team_html_acde2e842fb6befd221af0f35fc10f4b5"><div class="ttname"><a href="class_team.html#acde2e842fb6befd221af0f35fc10f4b5">Team.heart</a></div><div class="ttdeci">Vector3 heart</div><div class="ttdoc">重心（后防线的中点） </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00135">Team.cs:135</a></div></div>
+<div class="ttc" id="class_tactics_html_a75b2c4a5e4284f4469d48bfe14ed6e9b"><div class="ttname"><a href="class_tactics.html#a75b2c4a5e4284f4469d48bfe14ed6e9b">Tactics.dribblingMoti</a></div><div class="ttdeci">ushort dribblingMoti</div><div class="ttdoc">盘球积极性: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00085">Team.cs:85</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83ae15a35e8add1cc46287502a1f521b695"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83ae15a35e8add1cc46287502a1f521b695">RightSideBack</a></div></div>
+<div class="ttc" id="class_team_html"><div class="ttname"><a href="class_team.html">Team</a></div><div class="ttdoc">球队类 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00122">Team.cs:122</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83adc036af5115055961edd232ba3e84f6f"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83adc036af5115055961edd232ba3e84f6f">CenterMidfielder</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83adf269514afe1beb01d5960d5454d5a04"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83adf269514afe1beb01d5960d5454d5a04">MidCenterBack</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a69ba476b7c35784009c55e3e5294036e"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a69ba476b7c35784009c55e3e5294036e">RightWingForward</a></div></div>
+<div class="ttc" id="class_player_html_a0fb0e0870f1ac02b505bb192ec1bf7d6"><div class="ttname"><a href="class_player.html#a0fb0e0870f1ac02b505bb192ec1bf7d6">Player.enemy</a></div><div class="ttdeci">Team enemy</div><div class="ttdoc">球员所在球队的对手队伍信息 </div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00183">Player.cs:183</a></div></div>
+<div class="ttc" id="class_tactics_html"><div class="ttname"><a href="class_tactics.html">Tactics</a></div><div class="ttdoc">战术 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00073">Team.cs:73</a></div></div>
+<div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdoc">足球信息与控制类 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00014">Ball.cs:14</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_tactics_html_a746bbaa5a185e1e1a547541ffe8405ed"><div class="ttname"><a href="class_tactics.html#a746bbaa5a185e1e1a547541ffe8405ed">Tactics.wingSideMoti</a></div><div class="ttdeci">ushort wingSideMoti</div><div class="ttdoc">分边积极性: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00079">Team.cs:79</a></div></div>
+<div class="ttc" id="class_team_html_ad87f47fee3b2be2abd574a933ce24fb4"><div class="ttname"><a href="class_team.html#ad87f47fee3b2be2abd574a933ce24fb4">Team.LeftBound</a></div><div class="ttdeci">float LeftBound</div><div class="ttdoc">球门Z左边界 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00130">Team.cs:130</a></div></div>
+<div class="ttc" id="class_team_html_a6ef199d2a1d5e5a123ee855ab98aeffd"><div class="ttname"><a href="class_team.html#a6ef199d2a1d5e5a123ee855ab98aeffd">Team.TeamName</a></div><div class="ttdeci">string TeamName</div><div class="ttdoc">队名 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00123">Team.cs:123</a></div></div>
+<div class="ttc" id="class_team_html_abfeea034d4d0dabb69062bfd641e8e71"><div class="ttname"><a href="class_team.html#abfeea034d4d0dabb69062bfd641e8e71">Team.RightBound</a></div><div class="ttdeci">float RightBound</div><div class="ttdoc">球门Z右边界 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00131">Team.cs:131</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a9dc15cca1bb377e6f94ebdc6d7a9d218"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a9dc15cca1bb377e6f94ebdc6d7a9d218">RightSideMidfielder</a></div></div>
+<div class="ttc" id="class_team_html_aeb51074e9fe15ef9a19f3b9379209d30"><div class="ttname"><a href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">Team.BallHander</a></div><div class="ttdeci">Player BallHander</div><div class="ttdoc">球权持有者 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00140">Team.cs:140</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a3a7e3f09c04ea60e43003f099293cca5"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a3a7e3f09c04ea60e43003f099293cca5">LeftSideMidfielder</a></div></div>
+<div class="ttc" id="class_player_html_a0ed0c55e06f476870da6abc3a15ba085"><div class="ttname"><a href="class_player.html#a0ed0c55e06f476870da6abc3a15ba085">Player.team</a></div><div class="ttdeci">Team team</div><div class="ttdoc">球员所在的队伍信息 </div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00180">Player.cs:180</a></div></div>
+<div class="ttc" id="class_team_html_a9c1aa85e5b2128bd8c0cd8bbaadfbb77"><div class="ttname"><a href="class_team.html#a9c1aa85e5b2128bd8c0cd8bbaadfbb77">Team.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdoc">唤醒时调用 插件被唤醒时，重设球队持球时间与队员属性，并获得足球引用。 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00157">Team.cs:157</a></div></div>
+<div class="ttc" id="class_tactics_html_ac62bcb2630e402e3f1ba816861a060df"><div class="ttname"><a href="class_tactics.html#ac62bcb2630e402e3f1ba816861a060df">Tactics.defenseLine</a></div><div class="ttdeci">ushort defenseLine</div><div class="ttdoc">防线高度: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00083">Team.cs:83</a></div></div>
+<div class="ttc" id="class_team_html_a9e0dd06d3957ce20d1688922b570ad81"><div class="ttname"><a href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">Team.getBallTime</a></div><div class="ttdeci">float getBallTime</div><div class="ttdoc">最近一次取得球权的时间 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00141">Team.cs:141</a></div></div>
+<div class="ttc" id="class_tactics_html_a68b979626de662dc4a4e2b1a56f8da78"><div class="ttname"><a href="class_tactics.html#a68b979626de662dc4a4e2b1a56f8da78">Tactics.advanceSpeed</a></div><div class="ttdeci">ushort advanceSpeed</div><div class="ttdoc">推进速度: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00080">Team.cs:80</a></div></div>
+<div class="ttc" id="class_team_1_1_member_html_ab926adfc14482d5f8f1246360cdd9c7b"><div class="ttname"><a href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">Team.Member.player</a></div><div class="ttdeci">Player player</div><div class="ttdoc">球员 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00147">Team.cs:147</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a7276b7bf51073c08a9308f3011e1fb7e"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a7276b7bf51073c08a9308f3011e1fb7e">LeftWingForward</a></div></div>
+<div class="ttc" id="class_tactics_html_a8ea6563437700fc9cf18a7a1f8a6cac0"><div class="ttname"><a href="class_tactics.html#a8ea6563437700fc9cf18a7a1f8a6cac0">Tactics.keepForm</a></div><div class="ttdeci">ushort keepForm</div><div class="ttdoc">保持队形: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00075">Team.cs:75</a></div></div>
+<div class="ttc" id="class_player_html_aadfffc0459193385cb3c1318ab8fbfd5"><div class="ttname"><a href="class_player.html#aadfffc0459193385cb3c1318ab8fbfd5">Player.playPosition</a></div><div class="ttdeci">Position playPosition</div><div class="ttdoc">球员在比赛中所踢的位置 </div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00186">Player.cs:186</a></div></div>
+<div class="ttc" id="class_team_html_aa9da102655a7f186c346f1071e0b7b1f"><div class="ttname"><a href="class_team.html#aa9da102655a7f186c346f1071e0b7b1f">Team.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">每帧调用 程序运行时的每一帧动态调整球队重心以实现推进与退防。 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00177">Team.cs:177</a></div></div>
+<div class="ttc" id="class_team_1_1_member_html"><div class="ttname"><a href="class_team_1_1_member.html">Team.Member</a></div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00146">Team.cs:146</a></div></div>
+<div class="ttc" id="class_team_1_1_member_html_ab21299daadeb27f3efa53c08bd50cf51"><div class="ttname"><a href="class_team_1_1_member.html#ab21299daadeb27f3efa53c08bd50cf51">Team.Member.position</a></div><div class="ttdeci">Position position</div><div class="ttdoc">位置 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00148">Team.cs:148</a></div></div>
+<div class="ttc" id="class_tactics_html_a8e686f7612de9ced91cdd17560cd5b69"><div class="ttname"><a href="class_tactics.html#a8e686f7612de9ced91cdd17560cd5b69">Tactics.centerBlock</a></div><div class="ttdeci">ushort centerBlock</div><div class="ttdoc">中路围堵: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00089">Team.cs:89</a></div></div>
+<div class="ttc" id="class_team_html_aabf1f876b0ebb3606b36f31e271c1387"><div class="ttname"><a href="class_team.html#aabf1f876b0ebb3606b36f31e271c1387">Team.BottomBound</a></div><div class="ttdeci">float BottomBound</div><div class="ttdoc">球门Y下边界 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00133">Team.cs:133</a></div></div>
+<div class="ttc" id="class_team_html_affc8c576d10117f503a535f77a4cde1f"><div class="ttname"><a href="class_team.html#affc8c576d10117f503a535f77a4cde1f">Team.AdvanceDirect</a></div><div class="ttdeci">Vector3 AdvanceDirect</div><div class="ttdoc">推进方向 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00126">Team.cs:126</a></div></div>
+<div class="ttc" id="class_tactics_html_a2315fb58e963c12d93debf76a6adb986"><div class="ttname"><a href="class_tactics.html#a2315fb58e963c12d93debf76a6adb986">Tactics.compactness</a></div><div class="ttdeci">ushort compactness</div><div class="ttdoc">紧密度: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00088">Team.cs:88</a></div></div>
+<div class="ttc" id="class_team_html_adadadffd26ac1351598c4c6d455bd502"><div class="ttname"><a href="class_team.html#adadadffd26ac1351598c4c6d455bd502">Team.GoalX</a></div><div class="ttdeci">float GoalX</div><div class="ttdoc">球门X坐标 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00129">Team.cs:129</a></div></div>
+<div class="ttc" id="class_tactics_html_ac1f89271d8f2e9880627cfa4dd71992f"><div class="ttname"><a href="class_tactics.html#ac1f89271d8f2e9880627cfa4dd71992f">Tactics.backwardSpeed</a></div><div class="ttdeci">ushort backwardSpeed</div><div class="ttdoc">回防速度: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00092">Team.cs:92</a></div></div>
+<div class="ttc" id="class_tactics_html_a4611a4725e8eb12a89a6ec9b9a73e48f"><div class="ttname"><a href="class_tactics.html#a4611a4725e8eb12a89a6ec9b9a73e48f">Tactics.supportDist</a></div><div class="ttdeci">ushort supportDist</div><div class="ttdoc">支持距离: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00084">Team.cs:84</a></div></div>
+<div class="ttc" id="class_tactics_html_aa59f6a809c29eed26f27a2b16de077ff"><div class="ttname"><a href="class_tactics.html#aa59f6a809c29eed26f27a2b16de077ff">Tactics.Tactics</a></div><div class="ttdeci">Tactics()</div><div class="ttdoc">Tactics默认构造函数 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00098">Team.cs:98</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a2cd96180b4d5f11c41ad950fd920e649"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a2cd96180b4d5f11c41ad950fd920e649">AttackMidfielder</a></div></div>
+<div class="ttc" id="class_team_html_a68fce68292484babd537307a06d21805"><div class="ttname"><a href="class_team.html#a68fce68292484babd537307a06d21805">Team.enemy</a></div><div class="ttdeci">Team enemy</div><div class="ttdoc">对手球队 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00127">Team.cs:127</a></div></div>
+<div class="ttc" id="class_team_html_a69e50114cfc87e29fad0065ad41ed146"><div class="ttname"><a href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">Team.members</a></div><div class="ttdeci">Member[] members</div><div class="ttdoc">所有队员 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00151">Team.cs:151</a></div></div>
+<div class="ttc" id="class_tactics_html_a8fae9f2597b9c93c17d535d99541a0a3"><div class="ttname"><a href="class_tactics.html#a8fae9f2597b9c93c17d535d99541a0a3">Tactics.pressureMoti</a></div><div class="ttdeci">ushort pressureMoti</div><div class="ttdoc">施压积极性: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00093">Team.cs:93</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83afe0d508adb4f53bf4d36c9e0da821292"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83afe0d508adb4f53bf4d36c9e0da821292">DefenceMidfielder</a></div></div>
+<div class="ttc" id="class_team_html_a33ec2ea75f26025760d9146bd6df12c1"><div class="ttname"><a href="class_team.html#a33ec2ea75f26025760d9146bd6df12c1">Team.TopBound</a></div><div class="ttdeci">float TopBound</div><div class="ttdoc">球门Y上边界 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00132">Team.cs:132</a></div></div>
+<div class="ttc" id="class_tactics_html_a208dc8bd1c13f0e680b1be51a7cadf02"><div class="ttname"><a href="class_tactics.html#a208dc8bd1c13f0e680b1be51a7cadf02">Tactics.longPassMoti</a></div><div class="ttdeci">ushort longPassMoti</div><div class="ttdoc">长传积极性: [1, 10] </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00078">Team.cs:78</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a10726acdbc40a869e46de42390cb314a"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a10726acdbc40a869e46de42390cb314a">ShadowStriker</a></div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">球员类（含预测模型） </div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00143">Player.cs:143</a></div></div>
+<div class="ttc" id="class_team_html_a986836e8e650000241d5a9f75018d9ae"><div class="ttname"><a href="class_team.html#a986836e8e650000241d5a9f75018d9ae">Team.ball</a></div><div class="ttdeci">Ball ball</div><div class="ttdoc">足球引用 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00143">Team.cs:143</a></div></div>
+<div class="ttc" id="class_ball_html_a0e6bbdd093263e193f2d0b30d9e7b1d6"><div class="ttname"><a href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">Ball.GoalReset</a></div><div class="ttdeci">bool GoalReset</div><div class="ttdoc">中圈开球 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00032">Ball.cs:32</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83a5eca76149b4f445a0b3af1d50f863391"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83a5eca76149b4f445a0b3af1d50f863391">LeftSideBack</a></div></div>
+<div class="ttc" id="class_team_html_acd7b88f8dca9934af2e1580b0be4dfe2"><div class="ttname"><a href="class_team.html#acd7b88f8dca9934af2e1580b0be4dfe2">Team.tactic</a></div><div class="ttdeci">Tactics tactic</div><div class="ttdoc">战术 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00137">Team.cs:137</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83afbfb3c72980faa6fbaee83b259ac636f"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83afbfb3c72980faa6fbaee83b259ac636f">CenterForward</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83">Position</a></div><div class="ttdeci">Position</div><div class="ttdoc">球员位置枚举 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00019">Team.cs:19</a></div></div>
+<div class="ttc" id="class_team_html_a9d3d0d55707811ba0308c054a4b41c8b"><div class="ttname"><a href="class_team.html#a9d3d0d55707811ba0308c054a4b41c8b">Team.TeamColor</a></div><div class="ttdeci">Color TeamColor</div><div class="ttdoc">队服颜色 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00124">Team.cs:124</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

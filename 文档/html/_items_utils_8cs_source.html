@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Items/ItemsUtils.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_d14888b20ff61d1b2f4cb3c64318078e.html">Items</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ItemsUtils.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_items_utils_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html">    8</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html">ItemsUtils</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aa937931d01d89731661a226f974b5161">   10</a></span>&#160;        <span class="keyword">static</span> readonly Dictionary&lt;TimelineClip, ClipItem&gt; s_ClipCache = <span class="keyword">new</span> Dictionary&lt;TimelineClip, ClipItem&gt;();</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a5078b6cd04b598880ff84ecfee07f6e0">   11</a></span>&#160;        <span class="keyword">static</span> readonly Dictionary&lt;IMarker, MarkerItem&gt; s_MarkerCache = <span class="keyword">new</span> Dictionary&lt;IMarker, MarkerItem&gt;();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a11a86bacab52a5c4fc222f03ee1764d2">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;ItemsPerTrack&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a11a86bacab52a5c4fc222f03ee1764d2">ToItemsPerTrack</a>(<span class="keyword">this</span> IEnumerable&lt;ITimelineItem&gt; items)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            var groupedItems = items.GroupBy(c =&gt; c.parentTrack);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">foreach</span> (var group <span class="keywordflow">in</span> groupedItems)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                yield <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html">ItemsPerTrack</a>(group.Key, group.ToArray());</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a0db9c7c96ef5089adfc89d4751569f66">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a0db9c7c96ef5089adfc89d4751569f66">ToItem</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span> (s_ClipCache.ContainsKey(clip))</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">return</span> s_ClipCache[clip];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            var ret = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>(clip);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            s_ClipCache.Add(clip, ret);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a26e595dda1457dbe6a809e3a66b4a9aa">   32</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a26e595dda1457dbe6a809e3a66b4a9aa">ToItem</a>(<span class="keyword">this</span> <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (s_MarkerCache.ContainsKey(marker))</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">return</span> s_MarkerCache[marker];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            var ret = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>(marker);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            s_MarkerCache.Add(marker, ret);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2898bee3ce2bf2f53333cfa70e376d2d">   42</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;ITimelineItem&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2898bee3ce2bf2f53333cfa70e376d2d">ToItems</a>(<span class="keyword">this</span> IEnumerable&lt;TimelineClip&gt; clips)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> clips.Select(ToItem);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a3e9d264b59f327e48792ad4bef479799">   47</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;ITimelineItem&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a3e9d264b59f327e48792ad4bef479799">ToItems</a>(<span class="keyword">this</span> IEnumerable&lt;IMarker&gt; markers)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> markers.Select(ToItem);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aca264cd129ca29ad4a93724826f235f6">   52</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;ITimelineItem&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aca264cd129ca29ad4a93724826f235f6">GetItems</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            var list = track.clips.Select(clip =&gt; (<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>) <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>(clip)).ToList();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            list.AddRange(track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2be435785ae018be8940f7c5ce78de87">GetMarkers</a>().Select(marker =&gt; (<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>) <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>(marker)));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            list = list.OrderBy(x =&gt; x.start).ThenBy(x =&gt; x.end).ToList();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> list;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a814321ac961fd09b981d6d272b844e59">   61</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a814321ac961fd09b981d6d272b844e59">GetItemRange</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, out <span class="keywordtype">double</span> start, out <span class="keywordtype">double</span> end)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            start = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            end = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            var items = track.GetItems().ToList();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (items.Any())</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                start = items.Min(p =&gt; p.start);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                end = items.Max(p =&gt; p.end);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2ae8052a7e4b58a6382e07c43d07db64">   73</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;ITimelineItem&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2ae8052a7e4b58a6382e07c43d07db64">GetItemsExcept</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, IEnumerable&lt;ITimelineItem&gt; items)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> GetItems(track).Except(items);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a78158a6dfe0ee75596d15a09491f17e6">   78</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;Type&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a78158a6dfe0ee75596d15a09491f17e6">GetItemTypes</a>(IEnumerable&lt;ITimelineItem&gt; items)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            var types = <span class="keyword">new</span> List&lt;Type&gt;();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (items.OfType&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>&gt;().Any())</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                types.Add(typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_item.html">ClipItem</a>));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span> (items.OfType&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>&gt;().Any())</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                types.Add(typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span> types;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#ae4cd49037524e3fdd19fa4bdccd77fa5">   89</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;Type&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#ae4cd49037524e3fdd19fa4bdccd77fa5">GetItemTypes</a>(IEnumerable&lt;ItemsPerTrack&gt; itemsGroups)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">return</span> GetItemTypes(itemsGroups.SelectMany(i =&gt; i.items)).Distinct();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aa97c3784af2569a63d1308145608ebed">   94</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aa97c3784af2569a63d1308145608ebed">SetItemsStartTime</a>(IEnumerable&lt;ItemsPerTrack&gt; newItems, <span class="keywordtype">double</span> time)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            var startTimes = newItems.Select(d =&gt; d.items.Min(x =&gt; x.start)).ToList();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            var min = startTimes.Min();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            startTimes = startTimes.Select(x =&gt; x - min + time).ToList();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; newItems.Count(); ++i)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html">EditModeUtils</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#ae941acd46080150a4ca7cb04f122fe14">SetStart</a>(newItems.ElementAt(i).items, startTimes[i]);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2c08d4f36cfd96222f8be54f5fbb807d">  104</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2c08d4f36cfd96222f8be54f5fbb807d">TimeGapBetweenItems</a>(<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> leftItem, <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> rightItem, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (leftItem is <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a> &amp;&amp; rightItem is <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_item.html">MarkerItem</a>)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                var markerType = ((MarkerItem)leftItem).marker.GetType();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                var gap = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d">PixelDeltaToDeltaTime</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_style_manager.html">StyleManager</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_style_manager.html#aa4c918b40e52f649c650fbf4392c3696">UssStyleForType</a>(markerType).fixedWidth);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">return</span> gap;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_style_manager_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_style_manager.html">UnityEditor.Timeline.StyleManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_style_manager_8cs_source.html#l00011">StyleManager.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clip_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clip_item.html">UnityEditor.Timeline.ClipItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_clip_item_8cs_source.html#l00006">ClipItem.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_utils_html_ae941acd46080150a4ca7cb04f122fe14"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#ae941acd46080150a4ca7cb04f122fe14">UnityEditor.Timeline.EditModeUtils.SetStart</a></div><div class="ttdeci">static void SetStart(IEnumerable&lt; ITimelineItem &gt; items, double time)</div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_utils_8cs_source.html#l00019">EditModeUtils.cs:19</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_marker_item_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_marker_item.html">UnityEditor.Timeline.MarkerItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_marker_item_8cs_source.html#l00007">MarkerItem.cs:7</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_ae4cd49037524e3fdd19fa4bdccd77fa5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#ae4cd49037524e3fdd19fa4bdccd77fa5">UnityEditor.Timeline.ItemsUtils.GetItemTypes</a></div><div class="ttdeci">static IEnumerable&lt; Type &gt; GetItemTypes(IEnumerable&lt; ItemsPerTrack &gt; itemsGroups)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00089">ItemsUtils.cs:89</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a3e9d264b59f327e48792ad4bef479799"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a3e9d264b59f327e48792ad4bef479799">UnityEditor.Timeline.ItemsUtils.ToItems</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; ToItems(this IEnumerable&lt; IMarker &gt; markers)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00047">ItemsUtils.cs:47</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a0db9c7c96ef5089adfc89d4751569f66"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a0db9c7c96ef5089adfc89d4751569f66">UnityEditor.Timeline.ItemsUtils.ToItem</a></div><div class="ttdeci">static ITimelineItem ToItem(this TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00022">ItemsUtils.cs:22</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a814321ac961fd09b981d6d272b844e59"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a814321ac961fd09b981d6d272b844e59">UnityEditor.Timeline.ItemsUtils.GetItemRange</a></div><div class="ttdeci">static void GetItemRange(this TrackAsset track, out double start, out double end)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00061">ItemsUtils.cs:61</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a26e595dda1457dbe6a809e3a66b4a9aa"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a26e595dda1457dbe6a809e3a66b4a9aa">UnityEditor.Timeline.ItemsUtils.ToItem</a></div><div class="ttdeci">static ITimelineItem ToItem(this IMarker marker)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00032">ItemsUtils.cs:32</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_edit_mode_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html">UnityEditor.Timeline.EditModeUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_edit_mode_utils_8cs_source.html#l00008">EditModeUtils.cs:8</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">UnityEditor.Timeline.ITimelineItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00006">ITimelineItem.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_aa97c3784af2569a63d1308145608ebed"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aa97c3784af2569a63d1308145608ebed">UnityEditor.Timeline.ItemsUtils.SetItemsStartTime</a></div><div class="ttdeci">static void SetItemsStartTime(IEnumerable&lt; ItemsPerTrack &gt; newItems, double time)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00094">ItemsUtils.cs:94</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a2ae8052a7e4b58a6382e07c43d07db64"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2ae8052a7e4b58a6382e07c43d07db64">UnityEditor.Timeline.ItemsUtils.GetItemsExcept</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; GetItemsExcept(this TrackAsset track, IEnumerable&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00073">ItemsUtils.cs:73</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a11a86bacab52a5c4fc222f03ee1764d2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a11a86bacab52a5c4fc222f03ee1764d2">UnityEditor.Timeline.ItemsUtils.ToItemsPerTrack</a></div><div class="ttdeci">static IEnumerable&lt; ItemsPerTrack &gt; ToItemsPerTrack(this IEnumerable&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00013">ItemsUtils.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a2be435785ae018be8940f7c5ce78de87"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2be435785ae018be8940f7c5ce78de87">UnityEngine.Timeline.TrackAsset.GetMarkers</a></div><div class="ttdeci">IEnumerable&lt; IMarker &gt; GetMarkers()</div><div class="ttdoc">Returns an enumerable list of markers on the current asset. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00561">TrackAsset.cs:561</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_style_manager_html_aa4c918b40e52f649c650fbf4392c3696"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_style_manager.html#aa4c918b40e52f649c650fbf4392c3696">UnityEditor.Timeline.StyleManager.UssStyleForType</a></div><div class="ttdeci">static GUIStyle UssStyleForType(Type type)</div><div class="ttdef"><b>Definition:</b> <a href="_style_manager_8cs_source.html#l00019">StyleManager.cs:19</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_marker_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">UnityEngine.Timeline.IMarker</a></div><div class="ttdoc">Interface implemented by markers. </div><div class="ttdef"><b>Definition:</b> <a href="_i_marker_8cs_source.html#l00010">IMarker.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a2898bee3ce2bf2f53333cfa70e376d2d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2898bee3ce2bf2f53333cfa70e376d2d">UnityEditor.Timeline.ItemsUtils.ToItems</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; ToItems(this IEnumerable&lt; TimelineClip &gt; clips)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00042">ItemsUtils.cs:42</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a2c08d4f36cfd96222f8be54f5fbb807d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2c08d4f36cfd96222f8be54f5fbb807d">UnityEditor.Timeline.ItemsUtils.TimeGapBetweenItems</a></div><div class="ttdeci">static double TimeGapBetweenItems(ITimelineItem leftItem, ITimelineItem rightItem, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00104">ItemsUtils.cs:104</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html">UnityEditor.Timeline.ItemsUtils</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00008">ItemsUtils.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_a78158a6dfe0ee75596d15a09491f17e6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a78158a6dfe0ee75596d15a09491f17e6">UnityEditor.Timeline.ItemsUtils.GetItemTypes</a></div><div class="ttdeci">static IEnumerable&lt; Type &gt; GetItemTypes(IEnumerable&lt; ITimelineItem &gt; items)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00078">ItemsUtils.cs:78</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a931c9a7c353584119fd61853d88f561d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d">UnityEditor.Timeline.WindowState.PixelDeltaToDeltaTime</a></div><div class="ttdeci">float PixelDeltaToDeltaTime(float p)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00814">WindowState.cs:814</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_per_track_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_per_track.html">UnityEditor.Timeline.ItemsPerTrack</a></div><div class="ttdef"><b>Definition:</b> <a href="_items_per_track_8cs_source.html#l00008">ItemsPerTrack.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_items_utils_html_aca264cd129ca29ad4a93724826f235f6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_items_utils.html#aca264cd129ca29ad4a93724826f235f6">UnityEditor.Timeline.ItemsUtils.GetItems</a></div><div class="ttdeci">static IEnumerable&lt; ITimelineItem &gt; GetItems(this TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_items_utils_8cs_source.html#l00052">ItemsUtils.cs:52</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

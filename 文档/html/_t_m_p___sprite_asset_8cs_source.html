@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_SpriteAsset.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a7d267b27539021f3422d98d206ea06f.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_SpriteAsset.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___sprite_asset_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> : <a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html">TMP_Asset</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">internal</span> Dictionary&lt;uint, int&gt; m_UnicodeLookup;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">internal</span> Dictionary&lt;int, int&gt; m_NameLookup;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">internal</span> Dictionary&lt;uint, int&gt; m_GlyphIndexLookup;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a20913ff681de8a5b31d69d32e846f94f">version</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a20913ff681de8a5b31d69d32e846f94f">   21</a></span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ab06e6a5ae8dee6bcf0485409b9643596">m_Version</a>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">internal</span> set { <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ab06e6a5ae8dee6bcf0485409b9643596">m_Version</a> = value; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ab06e6a5ae8dee6bcf0485409b9643596">   26</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ab06e6a5ae8dee6bcf0485409b9643596">m_Version</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// The texture which contains the sprites.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">   29</a></span>&#160;        <span class="keyword">public</span> Texture <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">spriteSheet</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span> List&lt;TMP_SpriteCharacter&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6baf2b46d5fe0a56c994ec428bb4164e">spriteCharacterTable</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6baf2b46d5fe0a56c994ec428bb4164e">   32</a></span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">if</span> (m_GlyphIndexLookup == null)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">UpdateLookupTables</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a3756b966bf7bb696e95a5bdf55c73140">m_SpriteCharacterTable</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">internal</span> set { <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a3756b966bf7bb696e95a5bdf55c73140">m_SpriteCharacterTable</a> = value; }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a3756b966bf7bb696e95a5bdf55c73140">   43</a></span>&#160;        <span class="keyword">private</span> List&lt;TMP_SpriteCharacter&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a3756b966bf7bb696e95a5bdf55c73140">m_SpriteCharacterTable</a> = <span class="keyword">new</span> List&lt;TMP_SpriteCharacter&gt;();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span> List&lt;TMP_SpriteGlyph&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a04cbed06c2462ca3ece4b80b53b5ab09">spriteGlyphTable</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a04cbed06c2462ca3ece4b80b53b5ab09">   47</a></span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2e0cfddf0a6dcf9c6f243fcba8535419">m_SpriteGlyphTable</a>; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">internal</span> set { <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2e0cfddf0a6dcf9c6f243fcba8535419">m_SpriteGlyphTable</a> = value; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2e0cfddf0a6dcf9c6f243fcba8535419">   52</a></span>&#160;        <span class="keyword">private</span> List&lt;TMP_SpriteGlyph&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2e0cfddf0a6dcf9c6f243fcba8535419">m_SpriteGlyphTable</a> = <span class="keyword">new</span> List&lt;TMP_SpriteGlyph&gt;();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// List which contains the SpriteInfo for the sprites contained in the sprite sheet.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6770844be35fbf6d455eadbc9a528372">   55</a></span>&#160;        <span class="keyword">public</span> List&lt;TMP_Sprite&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6770844be35fbf6d455eadbc9a528372">spriteInfoList</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//private Dictionary&lt;int, int&gt; m_SpriteUnicodeLookup;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">   67</a></span>&#160;        <span class="keyword">public</span> List&lt;TMP_SpriteAsset&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">bool</span> m_IsSpriteAssetLookupTablesDirty = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a034d2d92c202ecf13fca763d00d458e1">   71</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a034d2d92c202ecf13fca763d00d458e1">Awake</a>()</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">// Check version number of sprite asset to see if it needs to be upgraded.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (this.<a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a> != null &amp;&amp; <span class="keywordtype">string</span>.IsNullOrEmpty(m_Version))</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2fb7d253030a3930af59366ce7e8a31e">UpgradeSpriteAsset</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">        #if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> OnValidate()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="comment">//Debug.Log(&quot;Sprite Asset [&quot; + name + &quot;] has changed.&quot;);</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="comment">//UpdateLookupTables();</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="comment">//TMPro_EventManager.ON_SPRITE_ASSET_PROPERTY_CHANGED(true, this);</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#adace81379a6c64ed64e030f6647ad238">   98</a></span>&#160;        Material <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#adace81379a6c64ed64e030f6647ad238">GetDefaultSpriteMaterial</a>()</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">//isEditingAsset = true;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.<a class="code" href="class_t_m_pro_1_1_shader_utilities.html#a0274e3055f8915a0178e3bdcec5118cb">GetShaderPropertyIDs</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// Add a new material</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            Shader shader = Shader.Find(<span class="stringliteral">&quot;TextMeshPro/Sprite&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            Material tempMaterial = <span class="keyword">new</span> Material(shader);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            tempMaterial.SetTexture(<a class="code" href="class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.<a class="code" href="class_t_m_pro_1_1_shader_utilities.html#af03786ed7c4f179a5d4764cfc7489ea4">ID_MainTex</a>, spriteSheet);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            tempMaterial.hideFlags = HideFlags.HideInHierarchy;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">            #if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.AssetDatabase.AddObjectToAsset(tempMaterial, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.AssetDatabase.ImportAsset(<a class="code" href="namespace_unity_editor.html">UnityEditor</a>.AssetDatabase.GetAssetPath(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">//isEditingAsset = false;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">return</span> tempMaterial;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">  123</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">UpdateLookupTables</a>()</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="comment">//Debug.Log(&quot;Updating [&quot; + this.name + &quot;] Lookup tables.&quot;);</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="comment">// Check version number of sprite asset to see if it needs to be upgraded.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">if</span> (this.<a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a> != null &amp;&amp; <span class="keywordtype">string</span>.IsNullOrEmpty(m_Version))</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2fb7d253030a3930af59366ce7e8a31e">UpgradeSpriteAsset</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="comment">// Initialize / Clear glyph index lookup dictionary.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (m_GlyphIndexLookup == null)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                m_GlyphIndexLookup = <span class="keyword">new</span> Dictionary&lt;uint, int&gt;();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                m_GlyphIndexLookup.Clear();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_SpriteGlyphTable.Count; i++)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                uint glyphIndex = m_SpriteGlyphTable[i].index;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keywordflow">if</span> (m_GlyphIndexLookup.ContainsKey(glyphIndex) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    m_GlyphIndexLookup.Add(glyphIndex, i);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">if</span> (m_NameLookup == null)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                m_NameLookup = <span class="keyword">new</span> Dictionary&lt;int, int&gt;();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                m_NameLookup.Clear();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (m_UnicodeLookup == null)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                m_UnicodeLookup = <span class="keyword">new</span> Dictionary&lt;uint, int&gt;();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                m_UnicodeLookup.Clear();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_SpriteCharacterTable.Count; i++)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="keywordtype">int</span> nameHashCode = m_SpriteCharacterTable[i].hashCode;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">if</span> (m_NameLookup.ContainsKey(nameHashCode) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    m_NameLookup.Add(nameHashCode, i);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                uint unicode = m_SpriteCharacterTable[i].unicode;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">if</span> (m_UnicodeLookup.ContainsKey(unicode) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    m_UnicodeLookup.Add(unicode, i);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <span class="comment">// Update glyph reference which is not serialized</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                uint glyphIndex = m_SpriteCharacterTable[i].glyphIndex;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="keywordflow">if</span> (m_GlyphIndexLookup.TryGetValue(glyphIndex, out <span class="keywordtype">int</span> index))</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    m_SpriteCharacterTable[i].glyph = m_SpriteGlyphTable[index];</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            m_IsSpriteAssetLookupTablesDirty = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a9913527431a09b1d82e42f8365b2533c">  183</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a9913527431a09b1d82e42f8365b2533c">GetSpriteIndexFromHashcode</a>(<span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">hashCode</a>)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">if</span> (m_NameLookup == null)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">UpdateLookupTables</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">if</span> (m_NameLookup.TryGetValue(hashCode, out <span class="keywordtype">int</span> index))</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">return</span> index;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8ee6b1fc6a39a615005fe6b53c2906a2">  200</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8ee6b1fc6a39a615005fe6b53c2906a2">GetSpriteIndexFromUnicode</a> (uint unicode)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">if</span> (m_UnicodeLookup == null)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">UpdateLookupTables</a>();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">if</span> (m_UnicodeLookup.TryGetValue(unicode, out <span class="keywordtype">int</span> index))</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keywordflow">return</span> index;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afa0139e3dcab964f9cfcf1fc634caad2">  217</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afa0139e3dcab964f9cfcf1fc634caad2">GetSpriteIndexFromName</a> (<span class="keywordtype">string</span> name)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">if</span> (m_NameLookup == null)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">UpdateLookupTables</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">hashCode</a> = <a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMP_TextUtilities</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html#a84e924d9b433452d0742b2efc6a532b7">GetSimpleHashCode</a>(name);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a9913527431a09b1d82e42f8365b2533c">GetSpriteIndexFromHashcode</a>(hashCode);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a05d44501bdf8169ec31ffa8e90cb7431">  231</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> List&lt;int&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a05d44501bdf8169ec31ffa8e90cb7431">k_searchedSpriteAssets</a>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a606dd23e1463ec7eb3214a75167cc323">  240</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a606dd23e1463ec7eb3214a75167cc323">SearchForSpriteByUnicode</a>(<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, uint unicode, <span class="keywordtype">bool</span> includeFallbacks, out <span class="keywordtype">int</span> spriteIndex)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="comment">// Check to make sure sprite asset is not null</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (spriteAsset == null) { spriteIndex = -1; <span class="keywordflow">return</span> null; }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="comment">// Get sprite index for the given unicode</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            spriteIndex = spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8ee6b1fc6a39a615005fe6b53c2906a2">GetSpriteIndexFromUnicode</a>(unicode);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">if</span> (spriteIndex != -1)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">return</span> spriteAsset;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="comment">// Initialize list to track instance of Sprite Assets that have already been searched.</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordflow">if</span> (k_searchedSpriteAssets == null)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                k_searchedSpriteAssets = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            k_searchedSpriteAssets.Clear();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="comment">// Get instance ID of sprite asset and add to list.</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span> = spriteAsset.GetInstanceID();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            k_searchedSpriteAssets.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="comment">// Search potential fallback sprite assets if includeFallbacks is true.</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">if</span> (includeFallbacks &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a> != null &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>.Count &gt; 0)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103">SearchForSpriteByUnicodeInternal</a>(spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>, unicode, includeFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="comment">// Search default sprite asset potentially assigned in the TMP Settings.</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">if</span> (includeFallbacks &amp;&amp; <a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html#af8adcb47c6fb911f0899f7c5a483cda7">defaultSpriteAsset</a> != null)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103">SearchForSpriteByUnicodeInternal</a>(<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html#af8adcb47c6fb911f0899f7c5a483cda7">defaultSpriteAsset</a>, unicode, includeFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            spriteIndex = -1;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103">  281</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103">SearchForSpriteByUnicodeInternal</a>(List&lt;TMP_SpriteAsset&gt; spriteAssets, uint unicode, <span class="keywordtype">bool</span> includeFallbacks, out <span class="keywordtype">int</span> spriteIndex)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; spriteAssets.Count; i++)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> temp = spriteAssets[i];</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordflow">if</span> (temp == null) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = temp.GetInstanceID();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <span class="comment">// Skip over the fallback sprite asset if it has already been searched.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                <span class="keywordflow">if</span> (k_searchedSpriteAssets.Contains(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="comment">// Add to list of font assets already searched.</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                k_searchedSpriteAssets.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                temp = <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103">SearchForSpriteByUnicodeInternal</a>(temp, unicode, includeFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">if</span> (temp != null)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            spriteIndex = -1;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a1ff5832092f4490f08156f2c75250c55">  315</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a1ff5832092f4490f08156f2c75250c55">SearchForSpriteByUnicodeInternal</a>(<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, uint unicode, <span class="keywordtype">bool</span> includeFallbacks, out <span class="keywordtype">int</span> spriteIndex)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="comment">// Get sprite index for the given unicode</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            spriteIndex = spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8ee6b1fc6a39a615005fe6b53c2906a2">GetSpriteIndexFromUnicode</a>(unicode);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordflow">if</span> (spriteIndex != -1)</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keywordflow">return</span> spriteAsset;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">if</span> (includeFallbacks &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a> != null &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>.Count &gt; 0)</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103">SearchForSpriteByUnicodeInternal</a>(spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>, unicode, includeFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            spriteIndex = -1;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a0a140b6024a1c437a950681c7c9f4212">  338</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a0a140b6024a1c437a950681c7c9f4212">SearchForSpriteByHashCode</a>(<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">hashCode</a>, <span class="keywordtype">bool</span> includeFallbacks, out <span class="keywordtype">int</span> spriteIndex)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="comment">// Make sure sprite asset is not null</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">if</span> (spriteAsset == null) { spriteIndex = -1; <span class="keywordflow">return</span> null; }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            spriteIndex = spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a9913527431a09b1d82e42f8365b2533c">GetSpriteIndexFromHashcode</a>(hashCode);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="keywordflow">if</span> (spriteIndex != -1)</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <span class="keywordflow">return</span> spriteAsset;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="comment">// Initialize list to track instance of Sprite Assets that have already been searched.</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keywordflow">if</span> (k_searchedSpriteAssets == null)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                k_searchedSpriteAssets = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            k_searchedSpriteAssets.Clear();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span> = spriteAsset.GetInstanceID();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="comment">// Add to list of font assets already searched.</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            k_searchedSpriteAssets.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordflow">if</span> (includeFallbacks &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a> != null &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>.Count &gt; 0)</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afbe1a1b485e7142c69a3ea2862d0794d">SearchForSpriteByHashCodeInternal</a>(spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>, hashCode, includeFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="comment">// Search default sprite asset potentially assigned in the TMP Settings.</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">if</span> (includeFallbacks &amp;&amp; <a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html#af8adcb47c6fb911f0899f7c5a483cda7">defaultSpriteAsset</a> != null)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afbe1a1b485e7142c69a3ea2862d0794d">SearchForSpriteByHashCodeInternal</a>(<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html#af8adcb47c6fb911f0899f7c5a483cda7">defaultSpriteAsset</a>, hashCode, includeFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            spriteIndex = -1;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afbe1a1b485e7142c69a3ea2862d0794d">  377</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afbe1a1b485e7142c69a3ea2862d0794d">SearchForSpriteByHashCodeInternal</a>(List&lt;TMP_SpriteAsset&gt; spriteAssets, <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">hashCode</a>, <span class="keywordtype">bool</span> searchFallbacks, out <span class="keywordtype">int</span> spriteIndex)</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="comment">// Search through the list of sprite assets</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; spriteAssets.Count; i++)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> temp = spriteAssets[i];</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                <span class="keywordflow">if</span> (temp == null) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = temp.GetInstanceID();</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                <span class="comment">// Skip over the fallback sprite asset if it has already been searched.</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                <span class="keywordflow">if</span> (k_searchedSpriteAssets.Contains(<span class="keywordtype">id</span>)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                <span class="comment">// Add to list of font assets already searched.</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                k_searchedSpriteAssets.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                temp = <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afbe1a1b485e7142c69a3ea2862d0794d">SearchForSpriteByHashCodeInternal</a>(temp, hashCode, searchFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <span class="keywordflow">if</span> (temp != null)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                    <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            spriteIndex = -1;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8788a98ccd804e46325b64d3e344be18">  412</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8788a98ccd804e46325b64d3e344be18">SearchForSpriteByHashCodeInternal</a>(<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">hashCode</a>, <span class="keywordtype">bool</span> searchFallbacks, out <span class="keywordtype">int</span> spriteIndex)</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="comment">// Get the sprite for the given hash code.</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            spriteIndex = spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a9913527431a09b1d82e42f8365b2533c">GetSpriteIndexFromHashcode</a>(hashCode);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="keywordflow">if</span> (spriteIndex != -1)</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                <span class="keywordflow">return</span> spriteAsset;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="keywordflow">if</span> (searchFallbacks &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a> != null &amp;&amp; spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>.Count &gt; 0)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afbe1a1b485e7142c69a3ea2862d0794d">SearchForSpriteByHashCodeInternal</a>(spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">fallbackSpriteAssets</a>, hashCode, searchFallbacks, out spriteIndex);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            spriteIndex = -1;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#adc3f51befb0e4bcea7459f8249507732">  430</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#adc3f51befb0e4bcea7459f8249507732">SortGlyphTable</a>()</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            <span class="keywordflow">if</span> (m_SpriteGlyphTable == null || m_SpriteGlyphTable.Count == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            m_SpriteGlyphTable = m_SpriteGlyphTable.OrderBy(item =&gt; item.index).ToList();</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        }</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> SortCharacterTable()</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        {</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <span class="keywordflow">if</span> (m_SpriteCharacterTable != null &amp;&amp; m_SpriteCharacterTable.Count &gt; 0)</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                m_SpriteCharacterTable = m_SpriteCharacterTable.OrderBy(c =&gt; c.unicode).ToList();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> SortGlyphAndCharacterTables()</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#adc3f51befb0e4bcea7459f8249507732">SortGlyphTable</a>();</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            SortCharacterTable();</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        }</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00459"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2fb7d253030a3930af59366ce7e8a31e">  459</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2fb7d253030a3930af59366ce7e8a31e">UpgradeSpriteAsset</a>()</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        {</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            m_Version = <span class="stringliteral">&quot;1.1.0&quot;</span>;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <a class="code" href="namespace_debug.html">Debug</a>.Log(<span class="stringliteral">&quot;Upgrading sprite asset [&quot;</span> + this.name + <span class="stringliteral">&quot;] to version &quot;</span> + m_Version + <span class="stringliteral">&quot;.&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;            <span class="comment">// Convert legacy glyph and character tables to new format</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            m_SpriteCharacterTable.Clear();</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            m_SpriteGlyphTable.Clear();</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; spriteInfoList.Count; i++)</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html">TMP_Sprite</a> oldSprite = spriteInfoList[i];</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_glyph.html">TMP_SpriteGlyph</a> spriteGlyph = <span class="keyword">new</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_glyph.html">TMP_SpriteGlyph</a>();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                spriteGlyph.index = (uint)i; </div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                spriteGlyph.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_glyph.html#afdb15976243bde800469fda9a0c2a3aa">sprite</a> = oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ac12a75abda3c4e38c4df03a3a7269168">sprite</a>;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                spriteGlyph.metrics = <span class="keyword">new</span> GlyphMetrics(oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2">width</a>, oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#afbdc44814f873c325c597108c751103c">height</a>, oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4066f69305c1b24dd6256bb2329946cf">xOffset</a>, oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#ae153c7c39a1e894c2d41865beaac40f6">yOffset</a>, oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a09b35711f9a319a4fb0bc3e0020c19d5">xAdvance</a>);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                spriteGlyph.glyphRect = <span class="keyword">new</span> GlyphRect((<span class="keywordtype">int</span>)oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4b96e1773a8f6240d312ea67c5c23724">x</a>, (<span class="keywordtype">int</span>)oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a64f866b5d5dd2676de3a43fe928123d5">y</a>, (<span class="keywordtype">int</span>)oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2">width</a>, (<span class="keywordtype">int</span>)oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#afbdc44814f873c325c597108c751103c">height</a>);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                spriteGlyph.scale = 1.0f;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                spriteGlyph.atlasIndex = 0;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                m_SpriteGlyphTable.Add(spriteGlyph);</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_character.html">TMP_SpriteCharacter</a> spriteCharacter = <span class="keyword">new</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_character.html">TMP_SpriteCharacter</a>((uint)oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae3dfeb6d8025927bc22bb5aa9a71df4e">unicode</a>, spriteGlyph);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_character.html#a6a1f1a7204a4aa88a4b74652ef3afef2">name</a> = oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">name</a>;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                spriteCharacter.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element.html#a555701c73d767af5770e029ef3b243b2">scale</a> = oldSprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a426a5cdcd073e94014033802b4e8dbfe">scale</a>;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                m_SpriteCharacterTable.Add(spriteCharacter);</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            }</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            <span class="comment">// Clear legacy glyph info list.</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            <span class="comment">//spriteInfoList.Clear();</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">UpdateLookupTables</a>();</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="preprocessor">            #if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;            <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.EditorUtility.SetDirty(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.AssetDatabase.SaveAssets();</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        }</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    }</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a4066f69305c1b24dd6256bb2329946cf"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4066f69305c1b24dd6256bb2329946cf">TMPro.TMP_TextElement_Legacy.xOffset</a></div><div class="ttdeci">float xOffset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00020">TMP_TextElement_Legacy.cs:20</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___asset_html_a63f177ff7028859d2b431789737d8ccc"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">TMPro.TMP_Asset.hashCode</a></div><div class="ttdeci">int hashCode</div><div class="ttdoc">HashCode based on the name of the asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___asset_8cs_source.html#l00013">TMP_Asset.cs:13</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_afbe1a1b485e7142c69a3ea2862d0794d"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afbe1a1b485e7142c69a3ea2862d0794d">TMPro.TMP_SpriteAsset.SearchForSpriteByHashCodeInternal</a></div><div class="ttdeci">static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(List&lt; TMP_SpriteAsset &gt; spriteAssets, int hashCode, bool searchFallbacks, out int spriteIndex)</div><div class="ttdoc">Search through the given list of sprite assets and fallbacks for a sprite whose hash code value of it...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00377">TMP_SpriteAsset.cs:377</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_shader_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_shader_utilities.html">TMPro.ShaderUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___shader_utilities_8cs_source.html#l00008">TMP_ShaderUtilities.cs:8</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a9913527431a09b1d82e42f8365b2533c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a9913527431a09b1d82e42f8365b2533c">TMPro.TMP_SpriteAsset.GetSpriteIndexFromHashcode</a></div><div class="ttdeci">int GetSpriteIndexFromHashcode(int hashCode)</div><div class="ttdoc">Function which returns the sprite index using the hashcode of the name </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00183">TMP_SpriteAsset.cs:183</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a04cbed06c2462ca3ece4b80b53b5ab09"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a04cbed06c2462ca3ece4b80b53b5ab09">TMPro.TMP_SpriteAsset.spriteGlyphTable</a></div><div class="ttdeci">List&lt; TMP_SpriteGlyph &gt; spriteGlyphTable</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00047">TMP_SpriteAsset.cs:47</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a417df8b98b5fbf3bdaaa710531376103"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103">TMPro.TMP_SpriteAsset.SearchForSpriteByUnicodeInternal</a></div><div class="ttdeci">static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(List&lt; TMP_SpriteAsset &gt; spriteAssets, uint unicode, bool includeFallbacks, out int spriteIndex)</div><div class="ttdoc">Search through the given list of sprite assets and fallbacks for a sprite whose unicode value matches...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00281">TMP_SpriteAsset.cs:281</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMPro.TMP_SpriteAsset</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00010">TMP_SpriteAsset.cs:10</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a6770844be35fbf6d455eadbc9a528372"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6770844be35fbf6d455eadbc9a528372">TMPro.TMP_SpriteAsset.spriteInfoList</a></div><div class="ttdeci">List&lt; TMP_Sprite &gt; spriteInfoList</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00055">TMP_SpriteAsset.cs:55</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_ae153c7c39a1e894c2d41865beaac40f6"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#ae153c7c39a1e894c2d41865beaac40f6">TMPro.TMP_TextElement_Legacy.yOffset</a></div><div class="ttdeci">float yOffset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00021">TMP_TextElement_Legacy.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a8788a98ccd804e46325b64d3e344be18"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8788a98ccd804e46325b64d3e344be18">TMPro.TMP_SpriteAsset.SearchForSpriteByHashCodeInternal</a></div><div class="ttdeci">static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(TMP_SpriteAsset spriteAsset, int hashCode, bool searchFallbacks, out int spriteIndex)</div><div class="ttdoc">Search through the given sprite asset and fallbacks for a sprite whose hash code value of its name ma...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00412">TMP_SpriteAsset.cs:412</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html_ae3dfeb6d8025927bc22bb5aa9a71df4e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html#ae3dfeb6d8025927bc22bb5aa9a71df4e">TMPro.TMP_Sprite.unicode</a></div><div class="ttdeci">int unicode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00018">TMP_Sprite.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___settings_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___settings.html">TMPro.TMP_Settings</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_8cs_source.html#l00011">TMP_Settings.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a4b96e1773a8f6240d312ea67c5c23724"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4b96e1773a8f6240d312ea67c5c23724">TMPro.TMP_TextElement_Legacy.x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00016">TMP_TextElement_Legacy.cs:16</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a1ff5832092f4490f08156f2c75250c55"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a1ff5832092f4490f08156f2c75250c55">TMPro.TMP_SpriteAsset.SearchForSpriteByUnicodeInternal</a></div><div class="ttdeci">static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex)</div><div class="ttdoc">Search the given sprite asset and fallbacks for a sprite whose unicode value matches the target unico...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00315">TMP_SpriteAsset.cs:315</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_shader_utilities_html_a0274e3055f8915a0178e3bdcec5118cb"><div class="ttname"><a href="class_t_m_pro_1_1_shader_utilities.html#a0274e3055f8915a0178e3bdcec5118cb">TMPro.ShaderUtilities.GetShaderPropertyIDs</a></div><div class="ttdeci">static void GetShaderPropertyIDs()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___shader_utilities_8cs_source.html#l00134">TMP_ShaderUtilities.cs:134</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_ac0d576c7ae191d74887684c5388ca32a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a">TMPro.TMP_SpriteAsset.UpdateLookupTables</a></div><div class="ttdeci">void UpdateLookupTables()</div><div class="ttdoc">Function to update the sprite name and unicode lookup tables. This function should be called when a s...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00123">TMP_SpriteAsset.cs:123</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element_html_a555701c73d767af5770e029ef3b243b2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element.html#a555701c73d767af5770e029ef3b243b2">TMPro.TMP_TextElement.scale</a></div><div class="ttdeci">float scale</div><div class="ttdoc">The relative scale of the character. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element_8cs_source.html#l00042">TMP_TextElement.cs:42</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html">TMPro.TMP_Sprite</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00012">TMP_Sprite.cs:12</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a09b35711f9a319a4fb0bc3e0020c19d5"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a09b35711f9a319a4fb0bc3e0020c19d5">TMPro.TMP_TextElement_Legacy.xAdvance</a></div><div class="ttdeci">float xAdvance</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00022">TMP_TextElement_Legacy.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a426a5cdcd073e94014033802b4e8dbfe"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a426a5cdcd073e94014033802b4e8dbfe">TMPro.TMP_TextElement_Legacy.scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00023">TMP_TextElement_Legacy.cs:23</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_ad58008ac004e19c361192d6159f34367"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">TMPro.TMP_SpriteAsset.spriteSheet</a></div><div class="ttdeci">Texture spriteSheet</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00029">TMP_SpriteAsset.cs:29</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a8ee6b1fc6a39a615005fe6b53c2906a2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8ee6b1fc6a39a615005fe6b53c2906a2">TMPro.TMP_SpriteAsset.GetSpriteIndexFromUnicode</a></div><div class="ttdeci">int GetSpriteIndexFromUnicode(uint unicode)</div><div class="ttdoc">Returns the index of the sprite for the given unicode value. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00200">TMP_SpriteAsset.cs:200</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_glyph_html_afdb15976243bde800469fda9a0c2a3aa"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_glyph.html#afdb15976243bde800469fda9a0c2a3aa">TMPro.TMP_SpriteGlyph.sprite</a></div><div class="ttdeci">Sprite sprite</div><div class="ttdoc">An optional reference to the underlying sprite used to create this glyph. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_glyph_8cs_source.html#l00016">TMP_SpriteGlyph.cs:16</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_utilities_html_a84e924d9b433452d0742b2efc6a532b7"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_utilities.html#a84e924d9b433452d0742b2efc6a532b7">TMPro.TMP_TextUtilities.GetSimpleHashCode</a></div><div class="ttdeci">static int GetSimpleHashCode(string s)</div><div class="ttdoc">Function which returns a simple hashcode from a string. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_utilities_8cs_source.html#l02200">TMP_TextUtilities.cs:2200</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_glyph_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_glyph.html">TMPro.TMP_SpriteGlyph</a></div><div class="ttdoc">The visual representation of the sprite character using this glyph. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_glyph_8cs_source.html#l00011">TMP_SpriteGlyph.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a2fb7d253030a3930af59366ce7e8a31e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2fb7d253030a3930af59366ce7e8a31e">TMPro.TMP_SpriteAsset.UpgradeSpriteAsset</a></div><div class="ttdeci">void UpgradeSpriteAsset()</div><div class="ttdoc">Internal method used to upgrade sprite asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00459">TMP_SpriteAsset.cs:459</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a2e0cfddf0a6dcf9c6f243fcba8535419"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2e0cfddf0a6dcf9c6f243fcba8535419">TMPro.TMP_SpriteAsset.m_SpriteGlyphTable</a></div><div class="ttdeci">List&lt; TMP_SpriteGlyph &gt; m_SpriteGlyphTable</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00052">TMP_SpriteAsset.cs:52</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html_ae78cacfca5d783a5515ce93bc9a6582f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">TMPro.TMP_Sprite.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00016">TMP_Sprite.cs:16</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a6baf2b46d5fe0a56c994ec428bb4164e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6baf2b46d5fe0a56c994ec428bb4164e">TMPro.TMP_SpriteAsset.spriteCharacterTable</a></div><div class="ttdeci">List&lt; TMP_SpriteCharacter &gt; spriteCharacterTable</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00032">TMP_SpriteAsset.cs:32</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMPro.TMP_TextUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_utilities_8cs_source.html#l00024">TMP_TextUtilities.cs:24</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_afbdc44814f873c325c597108c751103c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#afbdc44814f873c325c597108c751103c">TMPro.TMP_TextElement_Legacy.height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00019">TMP_TextElement_Legacy.cs:19</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a0a140b6024a1c437a950681c7c9f4212"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a0a140b6024a1c437a950681c7c9f4212">TMPro.TMP_SpriteAsset.SearchForSpriteByHashCode</a></div><div class="ttdeci">static TMP_SpriteAsset SearchForSpriteByHashCode(TMP_SpriteAsset spriteAsset, int hashCode, bool includeFallbacks, out int spriteIndex)</div><div class="ttdoc">Search the given sprite asset and fallbacks for a sprite whose hash code value of its name matches th...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00338">TMP_SpriteAsset.cs:338</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_adc3f51befb0e4bcea7459f8249507732"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#adc3f51befb0e4bcea7459f8249507732">TMPro.TMP_SpriteAsset.SortGlyphTable</a></div><div class="ttdeci">void SortGlyphTable()</div><div class="ttdoc">Sort the sprite glyph table by glyph index. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00430">TMP_SpriteAsset.cs:430</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___asset_html_a8dcd405969e8c3aaa441c0fe3b0b6eaa"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">TMPro.TMP_Asset.material</a></div><div class="ttdeci">Material material</div><div class="ttdoc">The material used by this asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___asset_8cs_source.html#l00018">TMP_Asset.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a64f866b5d5dd2676de3a43fe928123d5"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a64f866b5d5dd2676de3a43fe928123d5">TMPro.TMP_TextElement_Legacy.y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00017">TMP_TextElement_Legacy.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a3756b966bf7bb696e95a5bdf55c73140"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a3756b966bf7bb696e95a5bdf55c73140">TMPro.TMP_SpriteAsset.m_SpriteCharacterTable</a></div><div class="ttdeci">List&lt; TMP_SpriteCharacter &gt; m_SpriteCharacterTable</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00043">TMP_SpriteAsset.cs:43</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_character_html_a6a1f1a7204a4aa88a4b74652ef3afef2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_character.html#a6a1f1a7204a4aa88a4b74652ef3afef2">TMPro.TMP_SpriteCharacter.name</a></div><div class="ttdeci">string name</div><div class="ttdoc">The name of the sprite element. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_character_8cs_source.html#l00016">TMP_SpriteCharacter.cs:16</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_adace81379a6c64ed64e030f6647ad238"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#adace81379a6c64ed64e030f6647ad238">TMPro.TMP_SpriteAsset.GetDefaultSpriteMaterial</a></div><div class="ttdeci">Material GetDefaultSpriteMaterial()</div><div class="ttdoc">Create a material for the sprite asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00098">TMP_SpriteAsset.cs:98</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a24fb115bccca4a6c83ae92bf31bbd5e2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2">TMPro.TMP_TextElement_Legacy.width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00018">TMP_TextElement_Legacy.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a05d44501bdf8169ec31ffa8e90cb7431"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a05d44501bdf8169ec31ffa8e90cb7431">TMPro.TMP_SpriteAsset.k_searchedSpriteAssets</a></div><div class="ttdeci">static List&lt; int &gt; k_searchedSpriteAssets</div><div class="ttdoc">Used to keep track of which Sprite Assets have been searched. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00231">TMP_SpriteAsset.cs:231</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a20913ff681de8a5b31d69d32e846f94f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a20913ff681de8a5b31d69d32e846f94f">TMPro.TMP_SpriteAsset.version</a></div><div class="ttdeci">string version</div><div class="ttdoc">The version of the sprite asset class. Version 1.1.0 updates the asset data structure to be compatibl...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00021">TMP_SpriteAsset.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_afa0139e3dcab964f9cfcf1fc634caad2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#afa0139e3dcab964f9cfcf1fc634caad2">TMPro.TMP_SpriteAsset.GetSpriteIndexFromName</a></div><div class="ttdeci">int GetSpriteIndexFromName(string name)</div><div class="ttdoc">Returns the index of the sprite for the given name. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00217">TMP_SpriteAsset.cs:217</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___asset_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___asset.html">TMPro.TMP_Asset</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___asset_8cs_source.html#l00008">TMP_Asset.cs:8</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_character_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_character.html">TMPro.TMP_SpriteCharacter</a></div><div class="ttdoc">A basic element of text representing a pictograph, image, sprite or emoji. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_character_8cs_source.html#l00010">TMP_SpriteCharacter.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a034d2d92c202ecf13fca763d00d458e1"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a034d2d92c202ecf13fca763d00d458e1">TMPro.TMP_SpriteAsset.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00071">TMP_SpriteAsset.cs:71</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_ab06e6a5ae8dee6bcf0485409b9643596"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ab06e6a5ae8dee6bcf0485409b9643596">TMPro.TMP_SpriteAsset.m_Version</a></div><div class="ttdeci">string m_Version</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00026">TMP_SpriteAsset.cs:26</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_shader_utilities_html_af03786ed7c4f179a5d4764cfc7489ea4"><div class="ttname"><a href="class_t_m_pro_1_1_shader_utilities.html#af03786ed7c4f179a5d4764cfc7489ea4">TMPro.ShaderUtilities.ID_MainTex</a></div><div class="ttdeci">static int ID_MainTex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___shader_utilities_8cs_source.html#l00011">TMP_ShaderUtilities.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a606dd23e1463ec7eb3214a75167cc323"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a606dd23e1463ec7eb3214a75167cc323">TMPro.TMP_SpriteAsset.SearchForSpriteByUnicode</a></div><div class="ttdeci">static TMP_SpriteAsset SearchForSpriteByUnicode(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex)</div><div class="ttdoc">Search through the given sprite asset and its fallbacks for the specified sprite matching the given u...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00240">TMP_SpriteAsset.cs:240</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a417cdcac52c66835dcdb3ef8fdf15b3c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417cdcac52c66835dcdb3ef8fdf15b3c">TMPro.TMP_SpriteAsset.fallbackSpriteAssets</a></div><div class="ttdeci">List&lt; TMP_SpriteAsset &gt; fallbackSpriteAssets</div><div class="ttdoc">Dictionary used to lookup the index of a given sprite based on a Unicode value. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00067">TMP_SpriteAsset.cs:67</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___settings_html_af8adcb47c6fb911f0899f7c5a483cda7"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___settings.html#af8adcb47c6fb911f0899f7c5a483cda7">TMPro.TMP_Settings.defaultSpriteAsset</a></div><div class="ttdeci">static TMP_SpriteAsset defaultSpriteAsset</div><div class="ttdoc">The Default Sprite Asset to be used by default. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_8cs_source.html#l00218">TMP_Settings.cs:218</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html_ac12a75abda3c4e38c4df03a3a7269168"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html#ac12a75abda3c4e38c4df03a3a7269168">TMPro.TMP_Sprite.sprite</a></div><div class="ttdeci">Sprite sprite</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00029">TMP_Sprite.cs:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:33 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

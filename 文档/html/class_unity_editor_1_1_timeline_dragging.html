@@ -1,0 +1,1599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.TimelineDragging类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html">TimelineDragging</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_dragging-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.TimelineDragging类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.TimelineDragging 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_dragging_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.TimelineDragging 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_dragging_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_dragging_coll__map" id="_unity_editor_8_timeline_dragging_coll__map">
+<area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html" title="A PlayableAsset that represents a timeline. " alt="" coords="1899,361,2095,402"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html" title="UnityEditor.Timeline.Timeline\lWindow" alt="" coords="2338,857,2529,898"/><area shape="rect" id="node9" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="601,353,781,394"/><area shape="rect" id="node18" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="1307,436,1395,463"/><area shape="rect" id="node11" href="struct_unity_engine_1_1_timeline_1_1_marker_list.html" title="UnityEngine.Timeline.MarkerList" alt="" coords="257,345,466,372"/><area shape="rect" id="node14" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html" title="Represents a clip on the timeline. " alt="" coords="927,443,1145,469"/><area shape="rect" id="node6" href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html" title="Implement this interface to support advanced features of timeline clips. " alt="" coords="1563,241,1693,268"/><area shape="rect" id="node7" href="interface_unity_engine_1_1_timeline_1_1_i_property_preview.html" title="Implement this interface in a PlayableAsset to specify which properties will be modified when Timelin..." alt="" coords="302,697,421,724"/><area shape="rect" id="node8" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html" title="Properties of the timeline that are used by the editor " alt="" coords="1530,361,1726,402"/><area shape="rect" id="node10" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="311,541,412,568"/><area shape="rect" id="node12" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html" title="UnityEngine.Timeline.DiscreteTime" alt="" coords="249,128,473,155"/><area shape="rect" id="node16" href="struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html" title="UnityEngine.Timeline.Track\lAsset.TransientBuildData" alt="" coords="271,458,451,499"/><area shape="rect" id="node17" href="class_unity_engine_1_1_timeline_1_1_marker_track.html" title="Use this track to add Markers bound to a GameObject. " alt="" coords="1534,427,1722,469"/><area shape="rect" id="node35" href="class_unity_editor_1_1_timeline_1_1_window_state.html" title="UnityEditor.Timeline.Window\lState" alt="" coords="2713,995,2901,1037"/><area shape="rect" id="node42" href="class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html" title="UnityEditor.Timeline.Time\lAreaAutoPanner" alt="" coords="3100,786,3271,827"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI" alt="" coords="1902,966,2093,1007"/><area shape="rect" id="node23" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html" title="IRowGUI" alt="" coords="1592,1028,1664,1055"/><area shape="rect" id="node24" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html" title="ILayerable" alt="" coords="1587,860,1669,887"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_markers_layer.html" title="UnityEditor.Timeline.Markers\lLayer" alt="" coords="1533,911,1723,953"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_items_layer.html" title="ItemsLayer" alt="" coords="1308,924,1395,951"/><area shape="rect" id="node27" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html" title="UnityEditor.Timeline.Layer\lZOrder" alt="" coords="949,941,1123,982"/><area shape="rect" id="node29" href="class_unity_editor_1_1_timeline_1_1_time_area_item.html" title="UnityEditor.Timeline.Time\lAreaItem" alt="" coords="1912,1071,2083,1113"/><area shape="rect" id="node30" href="class_unity_editor_1_1_timeline_1_1_control.html" title="Control" alt="" coords="1597,1129,1659,1156"/><area shape="rect" id="node31" href="class_unity_editor_1_1_timeline_1_1_tooltip.html" title="UnityEditor.Timeline.Tooltip" alt="" coords="1538,1079,1718,1105"/><area shape="rect" id="node32" href="class_unity_editor_1_1_timeline_1_1_rectangle_select.html" title="UnityEditor.Timeline.Rectangle\lSelect" alt="" coords="3648,794,3848,835"/><area shape="rect" id="node33" href="class_unity_editor_1_1_timeline_1_1_rectangle_tool.html" title="RectangleTool" alt="" coords="3479,832,3583,859"/><area shape="rect" id="node44" href="class_unity_editor_1_1_timeline_1_1_rectangle_zoom.html" title="UnityEditor.Timeline.RectangleZoom" alt="" coords="3632,864,3864,891"/><area shape="rect" id="node34" href="struct_unity_editor_1_1_timeline_1_1_rectangle_tool_1_1_timeline_point.html" title="UnityEditor.Timeline.Rectangle\lTool.TimelinePoint" alt="" coords="3085,851,3285,893"/><area shape="rect" id="node39" href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html" title="UnityEditor.Timeline.Sequence\lHierarchy" alt="" coords="3085,1110,3285,1151"/><area shape="rect" id="node46" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_time_area.html" title="UnityEditor.Timeline.Timeline\lWindow.TimelineTimeArea" alt="" coords="3090,721,3281,762"/><area shape="rect" id="node36" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html" title="UnityEditor.Timeline.ISequence\lState" alt="" coords="2332,1098,2535,1139"/><area shape="rect" id="node37" href="class_unity_editor_1_1_timeline_1_1_property_collector.html" title="UnityEditor.Timeline.Property\lCollector" alt="" coords="2338,1163,2529,1205"/><area shape="rect" id="node38" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html" title="UnityEditor.Timeline.Space\lPartitioner" alt="" coords="2344,995,2523,1037"/><area shape="rect" id="node41" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html" title="UnityEditor.Timeline.SequencePath" alt="" coords="1884,1209,2111,1236"/><area shape="rect" id="node43" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html" title="UnityEditor.Timeline.TimelineMode" alt="" coords="1886,1140,2109,1167"/><area shape="rect" id="node45" href="class_unity_editor_1_1_timeline_1_1_control.html" title="UnityEditor.Timeline.Control" alt="" coords="1906,681,2089,708"/><area shape="rect" id="node48" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_playable_lookup.html" title="UnityEditor.Timeline.Timeline\lWindow.PlayableLookup" alt="" coords="1902,733,2093,774"/><area shape="rect" id="node49" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html" title="UnityEditor.Timeline.Timeline\lWindow.TimelineWindowPreferences" alt="" coords="1880,798,2115,839"/><area shape="rect" id="node50" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html" title="UnityEditor.Timeline.EditMode" alt="" coords="1529,809,1727,836"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging_1_1_timeline_drag_data.html">TimelineDragData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a26891e76fe659669b06318ec633472cf"><td class="memItemLeft" align="right" valign="top">delegate bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a> (IEnumerable&lt; Type &gt; types, Action&lt; Type &gt; onComplete, string format)</td></tr>
+<tr class="separator:a26891e76fe659669b06318ec633472cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49aa8453019d09bab2eb96ba1cc2d748"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a49aa8453019d09bab2eb96ba1cc2d748">TimelineDragging</a> (TreeViewController treeView, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a> window, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> data)</td></tr>
+<tr class="separator:a49aa8453019d09bab2eb96ba1cc2d748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc34f8ecac13a7e9bcaa03abccd6a05e"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#afc34f8ecac13a7e9bcaa03abccd6a05e">CanStartDrag</a> (TreeViewItem targetItem, List&lt; int &gt; draggedItemIDs, Vector2 mouseDownPosition)</td></tr>
+<tr class="separator:afc34f8ecac13a7e9bcaa03abccd6a05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700b56cf3ab296134e03ecb65fe52548"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a700b56cf3ab296134e03ecb65fe52548">StartDrag</a> (TreeViewItem draggedNode, List&lt; int &gt; draggedItemIDs)</td></tr>
+<tr class="separator:a700b56cf3ab296134e03ecb65fe52548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfe75f5ed0c9312c7faceb63c34fcef"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#accfe75f5ed0c9312c7faceb63c34fcef">DragElement</a> (TreeViewItem targetItem, Rect targetItemRect, int row)</td></tr>
+<tr class="separator:accfe75f5ed0c9312c7faceb63c34fcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4553779d4ca17b6903d161bccec38193"><td class="memItemLeft" align="right" valign="top">override DragAndDropVisualMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193">DoDrag</a> (TreeViewItem parentItem, TreeViewItem targetItem, bool perform, DropPosition dropPos)</td></tr>
+<tr class="separator:a4553779d4ca17b6903d161bccec38193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171a4bff35b807a16cd43d20030e907c"><td class="memItemLeft" align="right" valign="top">DragAndDropVisualMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a171a4bff35b807a16cd43d20030e907c">HandleTrackDrop</a> (TreeViewItem parentItem, TreeViewItem targetItem, bool perform, DropPosition dropPos)</td></tr>
+<tr class="separator:a171a4bff35b807a16cd43d20030e907c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a77e029ffa8fa05d41819cbebe0a3173a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a77e029ffa8fa05d41819cbebe0a3173a">IsDraggingEvent</a> ()</td></tr>
+<tr class="separator:a77e029ffa8fa05d41819cbebe0a3173a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fa06925d28c9026db00e39bb9bf5cb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a70fa06925d28c9026db00e39bb9bf5cb">ResolveType</a> (IEnumerable&lt; System.Type &gt; types, Action&lt; Type &gt; onComplete, string formatString)</td></tr>
+<tr class="separator:a70fa06925d28c9026db00e39bb9bf5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687c347694a64d20d8211ae692d0f18e"><td class="memItemLeft" align="right" valign="top">static DragAndDropVisualMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a687c347694a64d20d8211ae692d0f18e">HandleHierarchyPaneDragAndDrop</a> (IEnumerable&lt; <a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> &gt; objectsBeingDropped, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> targetTrack, bool perform, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline, PlayableDirector director, <a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a> typeResolver, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> insertBefore=null)</td></tr>
+<tr class="separator:a687c347694a64d20d8211ae692d0f18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b8c0988cdfedd8d75c509d2dd2e75ea"><td class="memItemLeft" align="right" valign="top">static DragAndDropVisualMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea">HandleClipPaneObjectDragAndDrop</a> (IEnumerable&lt; <a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> &gt; objectsBeingDropped, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> targetTrack, bool perform, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, PlayableDirector director, double candidateTime, <a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a> typeResolver, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> insertBefore=null)</td></tr>
+<tr class="separator:a1b8c0988cdfedd8d75c509d2dd2e75ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77ca13bf7a8e96a13d3c6c5c188fc47"><td class="memItemLeft" align="right" valign="top">static DragAndDropVisualMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#ab77ca13bf7a8e96a13d3c6c5c188fc47">HandleClipPaneMonoScriptDragAndDrop</a> (IEnumerable&lt; MonoScript &gt; scriptsBeingDropped, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> targetTrack, bool perform, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, PlayableDirector director, double candidateTime)</td></tr>
+<tr class="memdesc:ab77ca13bf7a8e96a13d3c6c5c188fc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles drag and drop of a mono script.  <a href="#ab77ca13bf7a8e96a13d3c6c5c188fc47">更多...</a><br /></td></tr>
+<tr class="separator:ab77ca13bf7a8e96a13d3c6c5c188fc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8832c7ce70e10bbf74df506b4c216b"><td class="memItemLeft" align="right" valign="top">static DragAndDropVisualMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a5b8832c7ce70e10bbf74df506b4c216b">HandleClipPanePlayableAssetDragAndDrop</a> (IEnumerable&lt; IPlayableAsset &gt; assetsBeingDropped, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> targetTrack, bool perform, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, PlayableDirector director, double candidateTime, <a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a> typeResolver)</td></tr>
+<tr class="separator:a5b8832c7ce70e10bbf74df506b4c216b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a315db81594cb6fbdadd2f653a7d01251"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a315db81594cb6fbdadd2f653a7d01251">HandleBindingDragAndDrop</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> dropTarget, Type requiredBindingType)</td></tr>
+<tr class="separator:a315db81594cb6fbdadd2f653a7d01251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a756e207a3d2004bbaf9daa2c3a560c3b"><td class="memItemLeft" align="right" valign="top">TreeViewItem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a756e207a3d2004bbaf9daa2c3a560c3b">GetNextItem</a> (TreeViewItem item)</td></tr>
+<tr class="separator:a756e207a3d2004bbaf9daa2c3a560c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b2cfe81de07f37added900464c9ddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a88b2cfe81de07f37added900464c9ddc">HandleNestedItemGUI</a> (ref TreeViewItem parentItem, ref TreeViewItem targetItem, ref TreeViewItem insertBefore)</td></tr>
+<tr class="separator:a88b2cfe81de07f37added900464c9ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0dc44199e795de68425843e9dba2133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#ac0dc44199e795de68425843e9dba2133">ClearInsertionMarkers</a> (TreeViewItem item)</td></tr>
+<tr class="separator:ac0dc44199e795de68425843e9dba2133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52df0624666448a6721a511ba6c53c0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a52df0624666448a6721a511ba6c53c0e">ShouldUseHierarchyDragAndDrop</a> ()</td></tr>
+<tr class="separator:a52df0624666448a6721a511ba6c53c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a626fd42e1715f78b57ebcddd7f2f3ac5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a626fd42e1715f78b57ebcddd7f2f3ac5">GetTrack</a> (TreeViewItem item)</td></tr>
+<tr class="separator:a626fd42e1715f78b57ebcddd7f2f3ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3be3d0b134c386d4fea562b2fab240c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#ab3be3d0b134c386d4fea562b2fab240c">HandleTrackAndItemCreation</a> (IEnumerable&lt; <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> &gt; objectsBeingDropped, double candidateTime, <a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a> typeResolver, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, IEnumerable&lt; Type &gt; validTrackTypes, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> insertBefore=null)</td></tr>
+<tr class="separator:ab3be3d0b134c386d4fea562b2fab240c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b0149f3bf991b5182abb860b71d4fb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#ad9b0149f3bf991b5182abb860b71d4fb">HandleItemCreation</a> (IEnumerable&lt; <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> &gt; objectsBeingDropped, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> targetTrack, double candidateTime, <a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a> typeResolver, bool allowMenu)</td></tr>
+<tr class="separator:ad9b0149f3bf991b5182abb860b71d4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87641372eadc7ad4a6eafc229c81def3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a87641372eadc7ad4a6eafc229c81def3">ValidateObjectDrop</a> (<a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> obj)</td></tr>
+<tr class="separator:a87641372eadc7ad4a6eafc229c81def3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a1634677562ec0b64a09c76d5e84c4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a57a1634677562ec0b64a09c76d5e84c4">ValidDrag</a> (TreeViewItem target, List&lt; TreeViewItem &gt; draggedItems)</td></tr>
+<tr class="separator:a57a1634677562ec0b64a09c76d5e84c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5afcc3053730da6880bb11ed820c89b4"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a5afcc3053730da6880bb11ed820c89b4">k_GenericDragId</a> = &quot;TimelineDragging&quot;</td></tr>
+<tr class="separator:a5afcc3053730da6880bb11ed820c89b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b427377a802257b10ea94f5fbf8adb9"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a3b427377a802257b10ea94f5fbf8adb9">kDragSensitivity</a> = 2</td></tr>
+<tr class="separator:a3b427377a802257b10ea94f5fbf8adb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d48e0dfa8185fbf1ecc5a9cedc2f8e"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a12d48e0dfa8185fbf1ecc5a9cedc2f8e">m_Timeline</a></td></tr>
+<tr class="separator:a12d48e0dfa8185fbf1ecc5a9cedc2f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98aa4723bbf4e0d6f5f9181e20b0f4fa"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a98aa4723bbf4e0d6f5f9181e20b0f4fa">m_Window</a></td></tr>
+<tr class="separator:a98aa4723bbf4e0d6f5f9181e20b0f4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a5350f77fc8fd96a5640f8e186314d988"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a5350f77fc8fd96a5640f8e186314d988">k_SelectTrackWithBinding</a> = LocalizationDatabase.GetLocalizedString(&quot;Add {0}&quot;)</td></tr>
+<tr class="separator:a5350f77fc8fd96a5640f8e186314d988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8bef6e679204afd880c23cda0baf5b"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a0b8bef6e679204afd880c23cda0baf5b">k_SelectTrackWithClip</a> = LocalizationDatabase.GetLocalizedString(&quot;Add Clip With {0}&quot;)</td></tr>
+<tr class="separator:a0b8bef6e679204afd880c23cda0baf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e29c5f921b7d352e6980f672c9179f"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#ab5e29c5f921b7d352e6980f672c9179f">k_SelectClip</a> = LocalizationDatabase.GetLocalizedString(&quot;Add {0}&quot;)</td></tr>
+<tr class="separator:ab5e29c5f921b7d352e6980f672c9179f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00013">13</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a49aa8453019d09bab2eb96ba1cc2d748"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEditor.TimelineDragging.TimelineDragging </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewController&#160;</td>
+          <td class="paramname"><em>treeView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="afc34f8ecac13a7e9bcaa03abccd6a05e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool UnityEditor.TimelineDragging.CanStartDrag </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>targetItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>draggedItemIDs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>mouseDownPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00044">44</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e_cgraph" id="class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a587eb1360aef383023f0eb0c7fe0d3a9" title="UnityEditor.Timeline.Selection\lManager.Clear" alt="" coords="247,5,443,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b" title="UnityEditor.Timeline.Selection\lManager.Add" alt="" coords="247,71,443,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0dc44199e795de68425843e9dba2133"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.TimelineDragging.ClearInsertionMarkers </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00280">280</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_ac0dc44199e795de68425843e9dba2133_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_ac0dc44199e795de68425843e9dba2133_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_ac0dc44199e795de68425843e9dba2133_icgraph" id="class_unity_editor_1_1_timeline_dragging_ac0dc44199e795de68425843e9dba2133_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="247,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4553779d4ca17b6903d161bccec38193"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override DragAndDropVisualMode UnityEditor.TimelineDragging.DoDrag </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>parentItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>targetItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>perform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DropPosition&#160;</td>
+          <td class="paramname"><em>dropPos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00219">219</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193_cgraph" id="class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a171a4bff35b807a16cd43d20030e907c" title="UnityEditor.TimelineDragging.\lHandleTrackDrop" alt="" coords="265,64,458,105"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_dragging.html#a52df0624666448a6721a511ba6c53c0e" title="UnityEditor.TimelineDragging.\lShouldUseHierarchyDragAndDrop" alt="" coords="553,1052,770,1093"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_dragging.html#a88b2cfe81de07f37added900464c9ddc" title="UnityEditor.TimelineDragging.\lHandleNestedItemGUI" alt="" coords="265,1052,458,1093"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_dragging.html#a626fd42e1715f78b57ebcddd7f2f3ac5" title="UnityEditor.TimelineDragging.\lGetTrack" alt="" coords="265,1117,458,1159"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_dragging.html#a687c347694a64d20d8211ae692d0f18e" title="UnityEditor.TimelineDragging.\lHandleHierarchyPaneDragAndDrop" alt="" coords="549,283,773,324"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_dragging.html#a70fa06925d28c9026db00e39bb9bf5cb" title="UnityEditor.TimelineDragging.\lResolveType" alt="" coords="265,1183,458,1224"/><area shape="rect" id="node24" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea" title="UnityEditor.TimelineDragging.\lHandleClipPaneObjectDragAndDrop" alt="" coords="247,819,476,860"/><area shape="rect" id="node45" href="class_unity_editor_1_1_timeline_dragging.html#ac0dc44199e795de68425843e9dba2133" title="UnityEditor.TimelineDragging.\lClearInsertionMarkers" alt="" coords="265,1248,458,1289"/><area shape="rect" id="node46" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#afb2b0c51dda1a3bc18a0605fd745f687" title="UnityEditor.Timeline.Timeline\lHelpers.GetCandidateTime" alt="" coords="266,1313,457,1355"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a57a1634677562ec0b64a09c76d5e84c4" title="UnityEditor.TimelineDragging.\lValidDrag" alt="" coords="565,5,758,47"/><area shape="rect" id="node4" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7" title="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack" alt="" coords="1489,111,1713,152"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_dragging.html#a756e207a3d2004bbaf9daa2c3a560c3b" title="UnityEditor.TimelineDragging.\lGetNextItem" alt="" coords="565,1117,758,1159"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a0d49b4fa8c3e9f6cf4eeac13f584c37a" title="Given an object, get the list of track that are creatable from it. Takes binding flags into account ..." alt="" coords="891,239,1095,295"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a886bb0796974eaee7a9c866c4388310c" title="Given a trackType and an object, does the binding type match Takes into account whether creating a mi..." alt="" coords="881,320,1105,361"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a38380f338eea38b6497d3ab761acfdb1" title="UnityEditor.Timeline.Timeline\lHelpers.CreateTrack" alt="" coords="898,451,1089,492"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="1209,251,1399,292"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a33b9035672eb830325afcc60d098168f" title="UnityEditor.Timeline.Timeline\lHelpers.Bind" alt="" coords="898,123,1089,164"/><area shape="rect" id="node13" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266" title="Allows you to create a track and add it to the Timeline. " alt="" coords="1206,451,1402,492"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aae5081f889dccc72e79757a88c2948aa" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetTrackEditor" alt="" coords="1188,320,1420,361"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a6d49935006780094f55cf8adf37c6826" title="Callback for when a track is created. " alt="" coords="1217,385,1391,427"/><area shape="rect" id="node14" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="1503,253,1699,295"/><area shape="rect" id="node15" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82" title="UnityEngine.Timeline.Timeline\lCreateUtilities.GenerateUniqueActorName" alt="" coords="1468,419,1733,460"/><area shape="rect" id="node16" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2" title="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject" alt="" coords="1487,484,1715,525"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a9d4e3f35e73fae7e3f3a38f1d92a95c0" title="Returns the binding attribute attrached to the track " alt="" coords="1202,123,1406,164"/><area shape="rect" id="node23" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#ae94f025cd19c27462c1f6d92bf0f8e84" title="Returns whether the given type resides in the timeline assembly " alt="" coords="576,1183,747,1224"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_dragging.html#ab77ca13bf7a8e96a13d3c6c5c188fc47" title="Handles drag and drop of a mono script. " alt="" coords="533,509,790,551"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a1a31c4549931594f3338c7ec6d5ade09" title="UnityEditor.Timeline.Type\lUtility.IsConcretePlayableAsset" alt="" coords="1201,713,1407,755"/><area shape="rect" id="node29" href="class_unity_editor_1_1_timeline_dragging.html#a87641372eadc7ad4a6eafc229c81def3" title="UnityEditor.TimelineDragging.\lValidateObjectDrop" alt="" coords="565,819,758,860"/><area shape="rect" id="node30" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a2027c58e239820cc8586965bd900f6bf" title="Get the list of tracks that can handle this object as clips " alt="" coords="559,884,763,925"/><area shape="rect" id="node31" href="class_unity_editor_1_1_timeline_dragging.html#a5b8832c7ce70e10bbf74df506b4c216b" title="UnityEditor.TimelineDragging.\lHandleClipPanePlayableAssetDragAndDrop" alt="" coords="524,636,799,677"/><area shape="rect" id="node34" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aaabc6413053f54b6ca13d5f4ebaa9987" title="Get the list of markers that have fields for the object " alt="" coords="1200,986,1408,1042"/><area shape="rect" id="node36" href="class_unity_editor_1_1_timeline_dragging.html#ab3be3d0b134c386d4fea562b2fab240c" title="UnityEditor.TimelineDragging.\lHandleTrackAndItemCreation" alt="" coords="565,753,758,795"/><area shape="rect" id="node37" href="class_unity_editor_1_1_timeline_dragging.html#ad9b0149f3bf991b5182abb860b71d4fb" title="UnityEditor.TimelineDragging.\lHandleItemCreation" alt="" coords="897,888,1090,929"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aab0f06073db81937c2603dd4c90fa56c" title="UnityEditor.Timeline.Type\lUtility.GetPlayableAssetsHandled\lByTrack" alt="" coords="884,567,1103,623"/><area shape="rect" id="node28" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a615e1b99d9f3105ffe7ba4c6e1db7a39" title="UnityEditor.Timeline.Timeline\lHelpers.CreateClipsFromTypes" alt="" coords="892,385,1095,427"/><area shape="rect" id="node32" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aad624ca01cd8412c4135822e9b68c114" title="UnityEditor.Timeline.Type\lUtility.AllTrackTypes" alt="" coords="908,648,1079,689"/><area shape="rect" id="node33" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a259368744ff699bdda28cd191a8d1084" title="Create a clip on track from an existing PlayableAsset " alt="" coords="847,713,1140,755"/><area shape="rect" id="node35" href="struct_unity_editor_1_1_timeline_1_1_object_reference_field.html#aa71dd9e07a25b3cf54b68e12550e98a9" title="UnityEditor.Timeline.Object\lReferenceField.FindObjectReferences" alt="" coords="1481,887,1721,928"/><area shape="rect" id="node38" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a4cee1ebf9c76087da2c94abb1e88adb8" title="Get the list of playable assets that can handle an object for a particular track " alt="" coords="1201,855,1407,896"/><area shape="rect" id="node39" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#ac74dc3b536f8a3286feec54e4931e630" title="UnityEditor.Timeline.Timeline\lHelpers.CreateClipsFromObjects" alt="" coords="1198,920,1410,961"/><area shape="rect" id="node40" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#acf39d025db90f41ac43b5b2137d59f61" title="UnityEditor.Timeline.Timeline\lHelpers.CreateMarkersFromObjects" alt="" coords="1189,789,1419,831"/><area shape="rect" id="node41" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2c08d4f36cfd96222f8be54f5fbb807d" title="UnityEditor.Timeline.Items\lUtils.TimeGapBetweenItems" alt="" coords="1507,789,1694,831"/><area shape="rect" id="node42" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d" title="UnityEditor.Timeline.Window\lState.PixelDeltaToDeltaTime" alt="" coords="1781,756,1969,797"/><area shape="rect" id="node43" href="class_unity_editor_1_1_timeline_1_1_style_manager.html#aa4c918b40e52f649c650fbf4392c3696" title="UnityEditor.Timeline.Style\lManager.UssStyleForType" alt="" coords="1787,821,1963,863"/><area shape="rect" id="node44" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a5d06f3ba51299cb44424869a8f523735" title="UnityEditor.Timeline.Director\lStyles.GetGUIStyle" alt="" coords="2017,821,2204,863"/><area shape="rect" id="node47" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af811297ac2af917cba3b9c2cb1a15cd0" title="UnityEditor.Timeline.Window\lState.GetSnappedTimeAtMousePosition" alt="" coords="533,1280,789,1321"/><area shape="rect" id="node48" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a593ea4f713fdc3298c3fe686e822cbad" title="UnityEditor.Timeline.Window\lState.SnapToFrameIfRequired" alt="" coords="564,1345,759,1387"/><area shape="rect" id="node49" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#a5dd3151a2e6f26956ba7290034c1c47d" title="UnityEditor.Timeline.Time\lReferenceUtility.SnapToFrame" alt="" coords="894,1345,1093,1387"/><area shape="rect" id="node50" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#ad48a823919b02af48ca5f6d97dab773b" title="UnityEngine.Timeline.Time\lUtility.RoundToFrame" alt="" coords="1216,1345,1392,1387"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="accfe75f5ed0c9312c7faceb63c34fcef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool UnityEditor.TimelineDragging.DragElement </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>targetItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>targetItemRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00131">131</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a756e207a3d2004bbaf9daa2c3a560c3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TreeViewItem UnityEditor.TimelineDragging.GetNextItem </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00144">144</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a756e207a3d2004bbaf9daa2c3a560c3b_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a756e207a3d2004bbaf9daa2c3a560c3b_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a756e207a3d2004bbaf9daa2c3a560c3b_icgraph" id="class_unity_editor_1_1_timeline_dragging_a756e207a3d2004bbaf9daa2c3a560c3b_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a88b2cfe81de07f37added900464c9ddc" title="UnityEditor.TimelineDragging.\lHandleNestedItemGUI" alt="" coords="247,5,440,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="488,5,681,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a626fd42e1715f78b57ebcddd7f2f3ac5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> UnityEditor.TimelineDragging.GetTrack </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00170">170</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a626fd42e1715f78b57ebcddd7f2f3ac5_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a626fd42e1715f78b57ebcddd7f2f3ac5_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a626fd42e1715f78b57ebcddd7f2f3ac5_icgraph" id="class_unity_editor_1_1_timeline_dragging_a626fd42e1715f78b57ebcddd7f2f3ac5_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="247,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a315db81594cb6fbdadd2f653a7d01251"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.TimelineDragging.HandleBindingDragAndDrop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>dropTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>requiredBindingType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00610">610</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_cgraph" id="class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_binding_utility.html#a0abb54251f5ee291a894dfd358b8f11e" title="UnityEditor.Timeline.Binding\lUtility.GetBindingAction" alt="" coords="247,5,432,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_binding_utility.html#a94060dc27749140ec3cc9a0832507393" title="UnityEditor.Timeline.Binding\lUtility.Bind" alt="" coords="247,71,432,112"/><area shape="rect" id="node4" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="480,71,676,112"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_icgraph" id="class_unity_editor_1_1_timeline_dragging_a315db81594cb6fbdadd2f653a7d01251_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a100e7584fd0ddc149b251fc735a37971" title="UnityEditor.Timeline.Timeline\lTrackGUI.DoTrackBindingGUI" alt="" coords="247,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab77ca13bf7a8e96a13d3c6c5c188fc47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DragAndDropVisualMode UnityEditor.TimelineDragging.HandleClipPaneMonoScriptDragAndDrop </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; MonoScript &gt;&#160;</td>
+          <td class="paramname"><em>scriptsBeingDropped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>targetTrack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>perform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td>
+          <td class="paramname"><em>timeline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableDirector&#160;</td>
+          <td class="paramname"><em>director</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>candidateTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles drag and drop of a mono script. </p>
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00469">469</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_cgraph" id="class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a1a31c4549931594f3338c7ec6d5ade09" title="UnityEditor.Timeline.Type\lUtility.IsConcretePlayableAsset" alt="" coords="317,55,523,96"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aab0f06073db81937c2603dd4c90fa56c" title="UnityEditor.Timeline.Type\lUtility.GetPlayableAssetsHandled\lByTrack" alt="" coords="311,121,529,177"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a38380f338eea38b6497d3ab761acfdb1" title="UnityEditor.Timeline.Timeline\lHelpers.CreateTrack" alt="" coords="325,201,515,243"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a615e1b99d9f3105ffe7ba4c6e1db7a39" title="UnityEditor.Timeline.Timeline\lHelpers.CreateClipsFromTypes" alt="" coords="319,267,521,308"/><area shape="rect" id="node5" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266" title="Allows you to create a track and add it to the Timeline. " alt="" coords="595,103,791,144"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aae5081f889dccc72e79757a88c2948aa" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetTrackEditor" alt="" coords="577,168,809,209"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a6d49935006780094f55cf8adf37c6826" title="Callback for when a track is created. " alt="" coords="606,233,781,275"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="598,299,789,340"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7" title="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack" alt="" coords="878,5,1102,47"/><area shape="rect" id="node7" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="892,71,1088,112"/><area shape="rect" id="node8" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82" title="UnityEngine.Timeline.Timeline\lCreateUtilities.GenerateUniqueActorName" alt="" coords="857,136,1123,177"/><area shape="rect" id="node9" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2" title="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject" alt="" coords="876,201,1104,243"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_icgraph" id="class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea" title="UnityEditor.TimelineDragging.\lHandleClipPaneObjectDragAndDrop" alt="" coords="311,39,540,80"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="615,5,808,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="588,71,835,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b8c0988cdfedd8d75c509d2dd2e75ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DragAndDropVisualMode UnityEditor.TimelineDragging.HandleClipPaneObjectDragAndDrop </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> &gt;&#160;</td>
+          <td class="paramname"><em>objectsBeingDropped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>targetTrack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>perform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td>
+          <td class="paramname"><em>timeline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableDirector&#160;</td>
+          <td class="paramname"><em>director</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>candidateTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a>&#160;</td>
+          <td class="paramname"><em>typeResolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>insertBefore</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00340">340</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_cgraph" id="class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#ab77ca13bf7a8e96a13d3c6c5c188fc47" title="Handles drag and drop of a mono script. " alt="" coords="291,160,549,201"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a1a31c4549931594f3338c7ec6d5ade09" title="UnityEditor.Timeline.Type\lUtility.IsConcretePlayableAsset" alt="" coords="960,65,1165,107"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_dragging.html#a87641372eadc7ad4a6eafc229c81def3" title="UnityEditor.TimelineDragging.\lValidateObjectDrop" alt="" coords="323,547,517,588"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a2027c58e239820cc8586965bd900f6bf" title="Get the list of tracks that can handle this object as clips " alt="" coords="318,612,522,653"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_dragging.html#a5b8832c7ce70e10bbf74df506b4c216b" title="UnityEditor.TimelineDragging.\lHandleClipPanePlayableAssetDragAndDrop" alt="" coords="283,299,557,340"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aaabc6413053f54b6ca13d5f4ebaa9987" title="Get the list of markers that have fields for the object " alt="" coords="959,589,1167,645"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_dragging.html#ab3be3d0b134c386d4fea562b2fab240c" title="UnityEditor.TimelineDragging.\lHandleTrackAndItemCreation" alt="" coords="323,371,517,412"/><area shape="rect" id="node23" href="class_unity_editor_1_1_timeline_dragging.html#ad9b0149f3bf991b5182abb860b71d4fb" title="UnityEditor.TimelineDragging.\lHandleItemCreation" alt="" coords="655,429,849,471"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aab0f06073db81937c2603dd4c90fa56c" title="UnityEditor.Timeline.Type\lUtility.GetPlayableAssetsHandled\lByTrack" alt="" coords="643,153,861,209"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a38380f338eea38b6497d3ab761acfdb1" title="UnityEditor.Timeline.Timeline\lHelpers.CreateTrack" alt="" coords="657,299,847,340"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a615e1b99d9f3105ffe7ba4c6e1db7a39" title="UnityEditor.Timeline.Timeline\lHelpers.CreateClipsFromTypes" alt="" coords="651,36,853,77"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266" title="Allows you to create a track and add it to the Timeline. " alt="" coords="965,327,1161,368"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aae5081f889dccc72e79757a88c2948aa" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetTrackEditor" alt="" coords="947,131,1179,172"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a6d49935006780094f55cf8adf37c6826" title="Callback for when a track is created. " alt="" coords="975,196,1150,237"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="967,261,1158,303"/><area shape="rect" id="node7" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7" title="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack" alt="" coords="1247,327,1471,368"/><area shape="rect" id="node8" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="1261,392,1457,433"/><area shape="rect" id="node9" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82" title="UnityEngine.Timeline.Timeline\lCreateUtilities.GenerateUniqueActorName" alt="" coords="1227,196,1492,237"/><area shape="rect" id="node10" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2" title="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject" alt="" coords="1245,261,1473,303"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aad624ca01cd8412c4135822e9b68c114" title="UnityEditor.Timeline.Type\lUtility.AllTrackTypes" alt="" coords="667,364,837,405"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a259368744ff699bdda28cd191a8d1084" title="Create a clip on track from an existing PlayableAsset " alt="" coords="605,233,899,275"/><area shape="rect" id="node21" href="struct_unity_editor_1_1_timeline_1_1_object_reference_field.html#aa71dd9e07a25b3cf54b68e12550e98a9" title="UnityEditor.Timeline.Object\lReferenceField.FindObjectReferences" alt="" coords="1239,457,1479,499"/><area shape="rect" id="node24" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a4cee1ebf9c76087da2c94abb1e88adb8" title="Get the list of playable assets that can handle an object for a particular track " alt="" coords="959,392,1166,433"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#ac74dc3b536f8a3286feec54e4931e630" title="UnityEditor.Timeline.Timeline\lHelpers.CreateClipsFromObjects" alt="" coords="957,457,1169,499"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#acf39d025db90f41ac43b5b2137d59f61" title="UnityEditor.Timeline.Timeline\lHelpers.CreateMarkersFromObjects" alt="" coords="947,523,1178,564"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2c08d4f36cfd96222f8be54f5fbb807d" title="UnityEditor.Timeline.Items\lUtils.TimeGapBetweenItems" alt="" coords="1266,523,1453,564"/><area shape="rect" id="node28" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d" title="UnityEditor.Timeline.Window\lState.PixelDeltaToDeltaTime" alt="" coords="1540,489,1728,531"/><area shape="rect" id="node29" href="class_unity_editor_1_1_timeline_1_1_style_manager.html#aa4c918b40e52f649c650fbf4392c3696" title="UnityEditor.Timeline.Style\lManager.UssStyleForType" alt="" coords="1546,555,1722,596"/><area shape="rect" id="node30" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a5d06f3ba51299cb44424869a8f523735" title="UnityEditor.Timeline.Director\lStyles.GetGUIStyle" alt="" coords="1776,555,1963,596"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_icgraph" id="class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="309,5,503,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="283,71,529,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b8832c7ce70e10bbf74df506b4c216b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DragAndDropVisualMode UnityEditor.TimelineDragging.HandleClipPanePlayableAssetDragAndDrop </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; IPlayableAsset &gt;&#160;</td>
+          <td class="paramname"><em>assetsBeingDropped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>targetTrack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>perform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td>
+          <td class="paramname"><em>timeline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableDirector&#160;</td>
+          <td class="paramname"><em>director</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>candidateTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a>&#160;</td>
+          <td class="paramname"><em>typeResolver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00494">494</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_cgraph" id="class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aad624ca01cd8412c4135822e9b68c114" title="UnityEditor.Timeline.Type\lUtility.AllTrackTypes" alt="" coords="389,87,560,128"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aab0f06073db81937c2603dd4c90fa56c" title="UnityEditor.Timeline.Type\lUtility.GetPlayableAssetsHandled\lByTrack" alt="" coords="365,153,584,209"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a38380f338eea38b6497d3ab761acfdb1" title="UnityEditor.Timeline.Timeline\lHelpers.CreateTrack" alt="" coords="379,233,570,275"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a259368744ff699bdda28cd191a8d1084" title="Create a clip on track from an existing PlayableAsset " alt="" coords="328,331,621,372"/><area shape="rect" id="node5" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266" title="Allows you to create a track and add it to the Timeline. " alt="" coords="687,103,883,144"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aae5081f889dccc72e79757a88c2948aa" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetTrackEditor" alt="" coords="669,168,901,209"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a6d49935006780094f55cf8adf37c6826" title="Callback for when a track is created. " alt="" coords="698,233,873,275"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="690,299,881,340"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7" title="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack" alt="" coords="970,5,1194,47"/><area shape="rect" id="node7" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="984,71,1180,112"/><area shape="rect" id="node8" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82" title="UnityEngine.Timeline.Timeline\lCreateUtilities.GenerateUniqueActorName" alt="" coords="949,136,1215,177"/><area shape="rect" id="node9" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2" title="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject" alt="" coords="968,201,1196,243"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a1a31c4549931594f3338c7ec6d5ade09" title="UnityEditor.Timeline.Type\lUtility.IsConcretePlayableAsset" alt="" coords="683,364,888,405"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_icgraph" id="class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea" title="UnityEditor.TimelineDragging.\lHandleClipPaneObjectDragAndDrop" alt="" coords="328,39,557,80"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="632,5,825,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="605,71,852,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a687c347694a64d20d8211ae692d0f18e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DragAndDropVisualMode UnityEditor.TimelineDragging.HandleHierarchyPaneDragAndDrop </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> &gt;&#160;</td>
+          <td class="paramname"><em>objectsBeingDropped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>targetTrack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>perform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td>
+          <td class="paramname"><em>timeline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableDirector&#160;</td>
+          <td class="paramname"><em>director</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a>&#160;</td>
+          <td class="paramname"><em>typeResolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>insertBefore</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00296">296</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_cgraph" id="class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a0d49b4fa8c3e9f6cf4eeac13f584c37a" title="Given an object, get the list of track that are creatable from it. Takes binding flags into account ..." alt="" coords="287,58,491,114"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a886bb0796974eaee7a9c866c4388310c" title="Given a trackType and an object, does the binding type match Takes into account whether creating a mi..." alt="" coords="277,139,501,180"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a38380f338eea38b6497d3ab761acfdb1" title="UnityEditor.Timeline.Timeline\lHelpers.CreateTrack" alt="" coords="294,204,485,245"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="570,267,761,308"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a33b9035672eb830325afcc60d098168f" title="UnityEditor.Timeline.Timeline\lHelpers.Bind" alt="" coords="294,325,485,367"/><area shape="rect" id="node5" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266" title="Allows you to create a track and add it to the Timeline. " alt="" coords="567,71,763,112"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aae5081f889dccc72e79757a88c2948aa" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetTrackEditor" alt="" coords="549,136,781,177"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a6d49935006780094f55cf8adf37c6826" title="Callback for when a track is created. " alt="" coords="578,201,753,243"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7" title="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack" alt="" coords="850,5,1074,47"/><area shape="rect" id="node7" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="864,263,1060,304"/><area shape="rect" id="node8" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82" title="UnityEngine.Timeline.Timeline\lCreateUtilities.GenerateUniqueActorName" alt="" coords="829,71,1095,112"/><area shape="rect" id="node9" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2" title="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject" alt="" coords="848,136,1076,177"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a9d4e3f35e73fae7e3f3a38f1d92a95c0" title="Returns the binding attribute attrached to the track " alt="" coords="563,384,767,425"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_icgraph" id="class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="277,5,471,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9b0149f3bf991b5182abb860b71d4fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.TimelineDragging.HandleItemCreation </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> &gt;&#160;</td>
+          <td class="paramname"><em>objectsBeingDropped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>targetTrack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>candidateTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a>&#160;</td>
+          <td class="paramname"><em>typeResolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowMenu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00430">430</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_cgraph" id="class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a4cee1ebf9c76087da2c94abb1e88adb8" title="Get the list of playable assets that can handle an object for a particular track " alt="" coords="259,5,465,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aaabc6413053f54b6ca13d5f4ebaa9987" title="Get the list of markers that have fields for the object " alt="" coords="258,71,466,127"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#ac74dc3b536f8a3286feec54e4931e630" title="UnityEditor.Timeline.Timeline\lHelpers.CreateClipsFromObjects" alt="" coords="256,152,468,193"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#acf39d025db90f41ac43b5b2137d59f61" title="UnityEditor.Timeline.Timeline\lHelpers.CreateMarkersFromObjects" alt="" coords="247,217,477,259"/><area shape="rect" id="node3" href="struct_unity_editor_1_1_timeline_1_1_object_reference_field.html#aa71dd9e07a25b3cf54b68e12550e98a9" title="UnityEditor.Timeline.Object\lReferenceField.FindObjectReferences" alt="" coords="525,116,765,157"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2c08d4f36cfd96222f8be54f5fbb807d" title="UnityEditor.Timeline.Items\lUtils.TimeGapBetweenItems" alt="" coords="552,217,739,259"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d" title="UnityEditor.Timeline.Window\lState.PixelDeltaToDeltaTime" alt="" coords="813,184,1001,225"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_style_manager.html#aa4c918b40e52f649c650fbf4392c3696" title="UnityEditor.Timeline.Style\lManager.UssStyleForType" alt="" coords="819,249,995,291"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a5d06f3ba51299cb44424869a8f523735" title="UnityEditor.Timeline.Director\lStyles.GetGUIStyle" alt="" coords="1049,249,1236,291"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_icgraph" id="class_unity_editor_1_1_timeline_dragging_ad9b0149f3bf991b5182abb860b71d4fb_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea" title="UnityEditor.TimelineDragging.\lHandleClipPaneObjectDragAndDrop" alt="" coords="488,39,717,80"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_dragging.html#ab3be3d0b134c386d4fea562b2fab240c" title="UnityEditor.TimelineDragging.\lHandleTrackAndItemCreation" alt="" coords="247,68,440,109"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="792,5,985,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="765,71,1012,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a88b2cfe81de07f37added900464c9ddc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.TimelineDragging.HandleNestedItemGUI </td>
+          <td>(</td>
+          <td class="paramtype">ref TreeViewItem&#160;</td>
+          <td class="paramname"><em>parentItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref TreeViewItem&#160;</td>
+          <td class="paramname"><em>targetItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref TreeViewItem&#160;</td>
+          <td class="paramname"><em>insertBefore</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00179">179</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_cgraph" id="class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a52df0624666448a6721a511ba6c53c0e" title="UnityEditor.TimelineDragging.\lShouldUseHierarchyDragAndDrop" alt="" coords="247,5,464,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a756e207a3d2004bbaf9daa2c3a560c3b" title="UnityEditor.TimelineDragging.\lGetNextItem" alt="" coords="259,71,452,112"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_icgraph" id="class_unity_editor_1_1_timeline_dragging_a88b2cfe81de07f37added900464c9ddc_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="247,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3be3d0b134c386d4fea562b2fab240c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.TimelineDragging.HandleTrackAndItemCreation </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="_timeline_window_time_control_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">UnityEngine.Object</a> &gt;&#160;</td>
+          <td class="paramname"><em>objectsBeingDropped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>candidateTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_dragging.html#a26891e76fe659669b06318ec633472cf">TypeResolver</a>&#160;</td>
+          <td class="paramname"><em>typeResolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td>
+          <td class="paramname"><em>timeline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; Type &gt;&#160;</td>
+          <td class="paramname"><em>validTrackTypes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>insertBefore</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00413">413</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_cgraph" id="class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a38380f338eea38b6497d3ab761acfdb1" title="UnityEditor.Timeline.Timeline\lHelpers.CreateTrack" alt="" coords="248,233,439,275"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_dragging.html#ad9b0149f3bf991b5182abb860b71d4fb" title="UnityEditor.TimelineDragging.\lHandleItemCreation" alt="" coords="247,437,440,479"/><area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266" title="Allows you to create a track and add it to the Timeline. " alt="" coords="506,103,702,144"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aae5081f889dccc72e79757a88c2948aa" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetTrackEditor" alt="" coords="488,168,720,209"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a6d49935006780094f55cf8adf37c6826" title="Callback for when a track is created. " alt="" coords="517,233,691,275"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="509,299,699,340"/><area shape="rect" id="node4" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7" title="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack" alt="" coords="789,5,1013,47"/><area shape="rect" id="node5" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="803,71,999,112"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82" title="UnityEngine.Timeline.Timeline\lCreateUtilities.GenerateUniqueActorName" alt="" coords="768,136,1033,177"/><area shape="rect" id="node7" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2" title="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject" alt="" coords="787,201,1015,243"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#a4cee1ebf9c76087da2c94abb1e88adb8" title="Get the list of playable assets that can handle an object for a particular track " alt="" coords="501,364,707,405"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#aaabc6413053f54b6ca13d5f4ebaa9987" title="Get the list of markers that have fields for the object " alt="" coords="500,430,708,486"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#ac74dc3b536f8a3286feec54e4931e630" title="UnityEditor.Timeline.Timeline\lHelpers.CreateClipsFromObjects" alt="" coords="498,511,710,552"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#acf39d025db90f41ac43b5b2137d59f61" title="UnityEditor.Timeline.Timeline\lHelpers.CreateMarkersFromObjects" alt="" coords="489,576,719,617"/><area shape="rect" id="node13" href="struct_unity_editor_1_1_timeline_1_1_object_reference_field.html#aa71dd9e07a25b3cf54b68e12550e98a9" title="UnityEditor.Timeline.Object\lReferenceField.FindObjectReferences" alt="" coords="781,473,1021,515"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_items_utils.html#a2c08d4f36cfd96222f8be54f5fbb807d" title="UnityEditor.Timeline.Items\lUtils.TimeGapBetweenItems" alt="" coords="807,576,994,617"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d" title="UnityEditor.Timeline.Window\lState.PixelDeltaToDeltaTime" alt="" coords="1081,543,1269,584"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_style_manager.html#aa4c918b40e52f649c650fbf4392c3696" title="UnityEditor.Timeline.Style\lManager.UssStyleForType" alt="" coords="1087,608,1263,649"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a5d06f3ba51299cb44424869a8f523735" title="UnityEditor.Timeline.Director\lStyles.GetGUIStyle" alt="" coords="1317,608,1504,649"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_icgraph" id="class_unity_editor_1_1_timeline_dragging_ab3be3d0b134c386d4fea562b2fab240c_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea" title="UnityEditor.TimelineDragging.\lHandleClipPaneObjectDragAndDrop" alt="" coords="247,39,476,80"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="551,5,744,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="524,71,771,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a171a4bff35b807a16cd43d20030e907c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DragAndDropVisualMode UnityEditor.TimelineDragging.HandleTrackDrop </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>parentItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>targetItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>perform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DropPosition&#160;</td>
+          <td class="paramname"><em>dropPos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00546">546</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_cgraph" id="class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a57a1634677562ec0b64a09c76d5e84c4" title="UnityEditor.TimelineDragging.\lValidDrag" alt="" coords="262,5,455,47"/><area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7" title="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack" alt="" coords="247,71,471,112"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_icgraph" id="class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="247,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a77e029ffa8fa05d41819cbebe0a3173a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.TimelineDragging.IsDraggingEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00091">91</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a77e029ffa8fa05d41819cbebe0a3173a_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a77e029ffa8fa05d41819cbebe0a3173a_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a77e029ffa8fa05d41819cbebe0a3173a_icgraph" id="class_unity_editor_1_1_timeline_dragging_a77e029ffa8fa05d41819cbebe0a3173a_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a100e7584fd0ddc149b251fc735a37971" title="UnityEditor.Timeline.Timeline\lTrackGUI.DoTrackBindingGUI" alt="" coords="247,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a70fa06925d28c9026db00e39bb9bf5cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.TimelineDragging.ResolveType </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; System.Type &gt;&#160;</td>
+          <td class="paramname"><em>types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; Type &gt;&#160;</td>
+          <td class="paramname"><em>onComplete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>formatString</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00098">98</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_cgraph" id="class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_type_utility.html#ae94f025cd19c27462c1f6d92bf0f8e84" title="Returns whether the given type resides in the timeline assembly " alt="" coords="247,5,417,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_icgraph" id="class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="273,5,467,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="247,71,493,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a52df0624666448a6721a511ba6c53c0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.TimelineDragging.ShouldUseHierarchyDragAndDrop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00291">291</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a52df0624666448a6721a511ba6c53c0e_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a52df0624666448a6721a511ba6c53c0e_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a52df0624666448a6721a511ba6c53c0e_icgraph" id="class_unity_editor_1_1_timeline_dragging_a52df0624666448a6721a511ba6c53c0e_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a88b2cfe81de07f37added900464c9ddc" title="UnityEditor.TimelineDragging.\lHandleNestedItemGUI" alt="" coords="271,5,464,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="512,35,705,76"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a700b56cf3ab296134e03ecb65fe52548"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEditor.TimelineDragging.StartDrag </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>draggedNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>draggedItemIDs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00074">74</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548_cgraph" id="class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a82d710467590a93afb99d7a53d3987b1" title="UnityEditor.Timeline.Selection\lManager.SelectedTrackGUI" alt="" coords="247,5,443,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a26891e76fe659669b06318ec633472cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate bool UnityEditor.TimelineDragging.TypeResolver </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; Type &gt;&#160;</td>
+          <td class="paramname"><em>types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; Type &gt;&#160;</td>
+          <td class="paramname"><em>onComplete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a87641372eadc7ad4a6eafc229c81def3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.TimelineDragging.ValidateObjectDrop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00536">536</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a87641372eadc7ad4a6eafc229c81def3_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a87641372eadc7ad4a6eafc229c81def3_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a87641372eadc7ad4a6eafc229c81def3_icgraph" id="class_unity_editor_1_1_timeline_dragging_a87641372eadc7ad4a6eafc229c81def3_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a1b8c0988cdfedd8d75c509d2dd2e75ea" title="UnityEditor.TimelineDragging.\lHandleClipPaneObjectDragAndDrop" alt="" coords="247,39,476,80"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="551,5,744,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a120c18845dad230eb51841c8090cbc28" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.HandleDragAndDrop" alt="" coords="524,71,771,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a57a1634677562ec0b64a09c76d5e84c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.TimelineDragging.ValidDrag </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; TreeViewItem &gt;&#160;</td>
+          <td class="paramname"><em>draggedItems</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00669">669</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_dragging_a57a1634677562ec0b64a09c76d5e84c4_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_dragging_a57a1634677562ec0b64a09c76d5e84c4_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_dragging_a57a1634677562ec0b64a09c76d5e84c4_icgraph" id="class_unity_editor_1_1_timeline_dragging_a57a1634677562ec0b64a09c76d5e84c4_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_dragging.html#a171a4bff35b807a16cd43d20030e907c" title="UnityEditor.TimelineDragging.\lHandleTrackDrop" alt="" coords="247,5,440,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a4553779d4ca17b6903d161bccec38193" title="UnityEditor.TimelineDragging.\lDoDrag" alt="" coords="488,5,681,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a5afcc3053730da6880bb11ed820c89b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string UnityEditor.TimelineDragging.k_GenericDragId = &quot;TimelineDragging&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5e29c5f921b7d352e6980f672c9179f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.TimelineDragging.k_SelectClip = LocalizationDatabase.GetLocalizedString(&quot;Add {0}&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5350f77fc8fd96a5640f8e186314d988"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.TimelineDragging.k_SelectTrackWithBinding = LocalizationDatabase.GetLocalizedString(&quot;Add {0}&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b8bef6e679204afd880c23cda0baf5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.TimelineDragging.k_SelectTrackWithClip = LocalizationDatabase.GetLocalizedString(&quot;Add Clip With {0}&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b427377a802257b10ea94f5fbf8adb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int UnityEditor.TimelineDragging.kDragSensitivity = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12d48e0dfa8185fbf1ecc5a9cedc2f8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> UnityEditor.TimelineDragging.m_Timeline</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98aa4723bbf4e0d6f5f9181e20b0f4fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a> UnityEditor.TimelineDragging.m_Window</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a> 第 <a class="el" href="_timeline_dragging_8cs_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/<a class="el" href="_timeline_dragging_8cs_source.html">TimelineDragging.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:46 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

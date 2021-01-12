@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/Drawers/TrackDrawer.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_8d0d6b838e6896df5d8de1eafe8aaa93.html">treeview</a></li><li class="navelem"><a class="el" href="dir_6b9e6a1ce516d3d4ad8b163e3cce5c64.html">Drawers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TrackDrawer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_track_drawer_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a> : GUIDrawer</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">internal</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> sequencerState { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a56183d54a71e44ae03b195a0a2bb0257">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a56183d54a71e44ae03b195a0a2bb0257">CreateInstance</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> trackAsset)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (trackAsset == null)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keywordflow">return</span> Activator.<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a56183d54a71e44ae03b195a0a2bb0257">CreateInstance</a>&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a>&gt;();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a> drawer;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                drawer = (<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a>)Activator.<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a56183d54a71e44ae03b195a0a2bb0257">CreateInstance</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a1ec44eb1bb6de56f6241e2c67fb70c04">GetCustomDrawer</a>(trackAsset.GetType()));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">catch</span> (Exception)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                drawer = Activator.<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a56183d54a71e44ae03b195a0a2bb0257">CreateInstance</a>&lt;<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a>&gt;();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            drawer.<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a97c29523d181e7935d7b7da11d9354ea">track</a> = trackAsset;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> drawer;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a97c29523d181e7935d7b7da11d9354ea">   34</a></span>&#160;        <span class="keyword">protected</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a6b8aa2b69279efde0802ddf696e261a6">   36</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a6b8aa2b69279efde0802ddf696e261a6">DrawTrackHeaderButton</a>(Rect rect, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a861e8102d3578f83519bf559ae5546ed">   41</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a861e8102d3578f83519bf559ae5546ed">DrawTrack</a>(Rect trackRect, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> trackAsset, Vector2 visibleTime, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a0e84bc797567fe247c330b6887407eba">   46</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a0e84bc797567fe247c330b6887407eba">DrawRecordingBackground</a>(Rect trackRect, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> trackAsset, Vector2 visibleTime, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            EditorGUI.DrawRect(trackRect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">customSkin</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ad3c5477ade5835351fb2c44480cd942f">colorTrackBackgroundRecording</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html_a1ec44eb1bb6de56f6241e2c67fb70c04"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a1ec44eb1bb6de56f6241e2c67fb70c04">UnityEditor.Timeline.TimelineHelpers.GetCustomDrawer</a></div><div class="ttdeci">static Type GetCustomDrawer(Type trackType)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00348">TimelineHelpers.cs:348</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_drawer_html_a56183d54a71e44ae03b195a0a2bb0257"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a56183d54a71e44ae03b195a0a2bb0257">UnityEditor.Timeline.TrackDrawer.CreateInstance</a></div><div class="ttdeci">static TrackDrawer CreateInstance(TrackAsset trackAsset)</div><div class="ttdef"><b>Definition:</b> <a href="_track_drawer_8cs_source.html#l00014">TrackDrawer.cs:14</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a04488ba3eee7c6d9dda98d4998bd7b93"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">UnityEditor.Timeline.DirectorStyles.customSkin</a></div><div class="ttdeci">DirectorNamedColor customSkin</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00148">DirectorStyles.cs:148</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_drawer_html_a97c29523d181e7935d7b7da11d9354ea"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a97c29523d181e7935d7b7da11d9354ea">UnityEditor.Timeline.TrackDrawer.track</a></div><div class="ttdeci">TrackAsset track</div><div class="ttdef"><b>Definition:</b> <a href="_track_drawer_8cs_source.html#l00034">TrackDrawer.cs:34</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_drawer_html_a861e8102d3578f83519bf559ae5546ed"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a861e8102d3578f83519bf559ae5546ed">UnityEditor.Timeline.TrackDrawer.DrawTrack</a></div><div class="ttdeci">virtual bool DrawTrack(Rect trackRect, TrackAsset trackAsset, Vector2 visibleTime, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_track_drawer_8cs_source.html#l00041">TrackDrawer.cs:41</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_drawer_html_a0e84bc797567fe247c330b6887407eba"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a0e84bc797567fe247c330b6887407eba">UnityEditor.Timeline.TrackDrawer.DrawRecordingBackground</a></div><div class="ttdeci">virtual void DrawRecordingBackground(Rect trackRect, TrackAsset trackAsset, Vector2 visibleTime, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_track_drawer_8cs_source.html#l00046">TrackDrawer.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">UnityEditor.Timeline.TimelineHelpers</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00014">TimelineHelpers.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_director_named_color_html_ad3c5477ade5835351fb2c44480cd942f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_director_named_color.html#ad3c5477ade5835351fb2c44480cd942f">UnityEngine.Timeline.DirectorNamedColor.colorTrackBackgroundRecording</a></div><div class="ttdeci">Color colorTrackBackgroundRecording</div><div class="ttdef"><b>Definition:</b> <a href="_director_named_color_8cs_source.html#l00063">DirectorNamedColor.cs:63</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a15e95e53dca9e97cb48ed6e7b8f98cbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">UnityEditor.Timeline.DirectorStyles.Instance</a></div><div class="ttdeci">static DirectorStyles Instance</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00124">DirectorStyles.cs:124</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_drawer_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">UnityEditor.Timeline.TrackDrawer</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_drawer_8cs_source.html#l00009">TrackDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_drawer_html_a6b8aa2b69279efde0802ddf696e261a6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_drawer.html#a6b8aa2b69279efde0802ddf696e261a6">UnityEditor.Timeline.TrackDrawer.DrawTrackHeaderButton</a></div><div class="ttdeci">virtual bool DrawTrackHeaderButton(Rect rect, TrackAsset track, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_track_drawer_8cs_source.html#l00036">TrackDrawer.cs:36</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

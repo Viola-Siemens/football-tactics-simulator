@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/TimelineAsset_CreateRemove.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineAsset_CreateRemove.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_asset___create_remove_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine_internal.html">UnityEngineInternal</a>; <span class="comment">// for metro type extensions</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266">   22</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266">CreateTrack</a>(Type type, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, <span class="keywordtype">string</span> name)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span> (parent != null &amp;&amp; parent.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a> != <span class="keyword">this</span>)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Addtrack cannot parent to a track not in the Timeline&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (!typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>).IsAssignableFrom(type))</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Supplied type must be a track asset&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (parent != null)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">TimelineCreateUtilities</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7">ValidateParentTrack</a>(parent, type))</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Cannot assign a child of type &quot;</span> + type.Name + <span class="stringliteral">&quot; to a parent of type &quot;</span> + parent.GetType().Name);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            var actualParent = parent != null ? parent as PlayableAsset : <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(actualParent, <span class="stringliteral">&quot;Create Track&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            var baseName = name;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(baseName))</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                baseName = type.Name;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                baseName = <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.ObjectNames.NicifyVariableName(baseName);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            var trackName = baseName;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> (parent != null)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                trackName = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">TimelineCreateUtilities</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82">GenerateUniqueActorName</a>(parent.subTracksObjects, baseName);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                trackName = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">TimelineCreateUtilities</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82">GenerateUniqueActorName</a>(trackObjects, baseName);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> newTrack = AllocateTrack(parent, trackName, type);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span> (newTrack != null)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                newTrack.name = trackName;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">TimelineCreateUtilities</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2">SaveAssetIntoObject</a>(newTrack, actualParent);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> newTrack;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#af7f63eee1fa03dc03d9cbfe0c6d2fb01">   74</a></span>&#160;        <span class="keyword">public</span> T CreateTrack&lt;T&gt;(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, <span class="keywordtype">string</span> trackName) where T : <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, <span class="keyword">new</span>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> (T)CreateTrack(typeof(T), parent, trackName);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae0a2d7ab08cea4b8dde0e296b6a18535">   85</a></span>&#160;        <span class="keyword">public</span> T CreateTrack&lt;T&gt;(<span class="keywordtype">string</span> trackName) where T : TrackAsset, <span class="keyword">new</span>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> (T)CreateTrack(typeof(T), null, trackName);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ab040fa73a8448641a0c12b98e8c7e435">   95</a></span>&#160;        <span class="keyword">public</span> T CreateTrack&lt;T&gt;() where T : TrackAsset, <span class="keyword">new</span>()</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> (T)CreateTrack(typeof(T), null, null);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aa5356a1260ee2e86a9df796a15496c95">  108</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aa5356a1260ee2e86a9df796a15496c95">DeleteClip</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">if</span> (clip == null || clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a> == null)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">this</span> != clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a>)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <a class="code" href="namespace_debug.html">Debug</a>.LogError(<span class="stringliteral">&quot;Cannot delete a clip from this timeline&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>, <span class="stringliteral">&quot;Delete Clip&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">if</span> (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7c4922742bb044dbd4270829393d1b14">curves</a> != null)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<span class="keyword">this</span>, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7c4922742bb044dbd4270829393d1b14">curves</a>, <span class="stringliteral">&quot;Delete Curves&quot;</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="comment">// handle wrapped assets</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">if</span> (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> != null)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                DeleteRecordedAnimation(clip);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="comment">// TODO -- we should flag assets and owned, instead of this check...</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordtype">string</span> path = <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.AssetDatabase.GetAssetPath(clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">if</span> (path == <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.AssetDatabase.GetAssetPath(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;#endif</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<span class="keyword">this</span>, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a>, <span class="stringliteral">&quot;Delete Clip Asset&quot;</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            var clipParentTrack = clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            clipParentTrack.RemoveClip(clip);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            clipParentTrack.CalculateExtrapolationTimes();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae811f0b439c896f971ae476c7997d4a0">  153</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae811f0b439c896f971ae476c7997d4a0">DeleteTrack</a>(TrackAsset track)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a> != <span class="keyword">this</span>)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="comment">// push before we modify properties</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(track, <span class="stringliteral">&quot;Delete Track&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(<span class="keyword">this</span>, <span class="stringliteral">&quot;Delete Track&quot;</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            TrackAsset parent = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">parent</a> as TrackAsset;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">if</span> (parent != null)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(parent, <span class="stringliteral">&quot;Delete Track&quot;</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            var children = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#aa2031fe30133f8c28e14483768ce8e29">GetChildTracks</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">foreach</span> (var child <span class="keywordflow">in</span> children)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                DeleteTrack(child);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            DeleteRecordedAnimation(track);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            var clipsToDelete = <span class="keyword">new</span> List&lt;TimelineClip&gt;(track.clips);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">foreach</span> (var clip <span class="keywordflow">in</span> clipsToDelete)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                DeleteClip(clip);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            RemoveTrack(track);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<span class="keyword">this</span>, <span class="keyword">this</span>, track, <span class="stringliteral">&quot;Delete Track&quot;</span>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> MoveLastTrackBefore(TrackAsset asset)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">if</span> (m_Tracks == null || m_Tracks.Count &lt; 2 || asset == null)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            var lastTrack = m_Tracks[m_Tracks.Count - 1];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">if</span> (lastTrack == asset)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_Tracks.Count - 1; i++)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="keywordflow">if</span> (m_Tracks[i] == asset)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = m_Tracks.Count - 1; j &gt; i; j--)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                        m_Tracks[j] = m_Tracks[j - 1];</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    m_Tracks[i] = lastTrack;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    Invalidate();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keyword">internal</span> TrackAsset AllocateTrack(TrackAsset trackAssetParent, <span class="keywordtype">string</span> trackName, Type trackType)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">if</span> (trackAssetParent != null &amp;&amp; trackAssetParent.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a> != <span class="keyword">this</span>)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Addtrack cannot parent to a track not in the Timeline&quot;</span>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">if</span> (!typeof(TrackAsset).IsAssignableFrom(trackType))</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Supplied type must be a track asset&quot;</span>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            var asset = (TrackAsset)CreateInstance(trackType);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            asset.name = trackName;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">if</span> (trackAssetParent != null)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                trackAssetParent.AddChild(asset);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                AddTrackInternal(asset);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">return</span> asset;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#afa1e49ec97fecfacf930b5b50260bf2e">  227</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#afa1e49ec97fecfacf930b5b50260bf2e">DeleteRecordedAnimation</a>(TrackAsset track)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            var animTrack = track as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">if</span> (animTrack != null &amp;&amp; animTrack.infiniteClip != null)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<span class="keyword">this</span>, track, animTrack.infiniteClip, <span class="stringliteral">&quot;Delete Track&quot;</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#af89a57d8bfdefc984d0cb1bc15c14d2f">curves</a> != null)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<span class="keyword">this</span>, track, track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#af89a57d8bfdefc984d0cb1bc15c14d2f">curves</a>, <span class="stringliteral">&quot;Delete Track Parameters&quot;</span>);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a39f7a7617eb8ae55784fb611ccce25b2">  237</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a39f7a7617eb8ae55784fb611ccce25b2">DeleteRecordedAnimation</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">if</span> (clip == null)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">if</span> (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7c4922742bb044dbd4270829393d1b14">curves</a> != null)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<span class="keyword">this</span>, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">parentTrack</a>, clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7c4922742bb044dbd4270829393d1b14">curves</a>, <span class="stringliteral">&quot;Delete Clip Parameters&quot;</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">if</span> (!clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac0e7fe2586994c2fcd88155fd96c2832">recordable</a>)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a> asset = clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">if</span> (asset == null || asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8db52ada6e34ac04e62c415b0ec6deba">clip</a> == null)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(<span class="keyword">this</span>, asset, asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8db52ada6e34ac04e62c415b0ec6deba">clip</a>, <span class="stringliteral">&quot;Delete Recording&quot;</span>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities_html_a14a12e8449f26a9645fd6c6a71a3cd82"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82">UnityEngine.Timeline.TimelineCreateUtilities.GenerateUniqueActorName</a></div><div class="ttdeci">static string GenerateUniqueActorName(List&lt; ScriptableObject &gt; tracks, string name)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_create_utilities_8cs_source.html#l00012">TimelineCreateUtilities.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_internal_html"><div class="ttname"><a href="namespace_unity_engine_internal.html">UnityEngineInternal</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_af89a57d8bfdefc984d0cb1bc15c14d2f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#af89a57d8bfdefc984d0cb1bc15c14d2f">UnityEngine.Timeline.TrackAsset.curves</a></div><div class="ttdeci">AnimationClip curves</div><div class="ttdoc">An animation clip storing animated properties of the attached PlayableAsset </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00308">TrackAsset.cs:308</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">UnityEngine.Timeline.AnimationPlayableAsset</a></div><div class="ttdoc">A Playable Asset that represents a single AnimationClip clip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00011">AnimationPlayableAsset.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2c0e553887357327987faff3f3b06dac"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">UnityEngine.Timeline.TimelineClip.asset</a></div><div class="ttdeci">Object asset</div><div class="ttdoc">The PlayableAsset attached to the clip. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00275">TimelineClip.cs:275</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a195c45502177dc1679aba3ba09bf7f41"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">UnityEngine.Timeline.TimelineUndo.PushDestroyUndo</a></div><div class="ttdeci">static void PushDestroyUndo(TimelineAsset timeline, Object thingToDirty, Object objectToDestroy, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00014">TimelineUndo.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html">UnityEngine.Timeline.AnimationTrack</a></div><div class="ttdoc">A Timeline track used for playing back animations on an Animator. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00124">AnimationTrack.cs:124</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_a39f7a7617eb8ae55784fb611ccce25b2"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a39f7a7617eb8ae55784fb611ccce25b2">UnityEngine.Timeline.TimelineAsset.DeleteRecordedAnimation</a></div><div class="ttdeci">void DeleteRecordedAnimation(TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset___create_remove_8cs_source.html#l00237">TimelineAsset_CreateRemove.cs:237</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a7c4922742bb044dbd4270829393d1b14"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7c4922742bb044dbd4270829393d1b14">UnityEngine.Timeline.TimelineClip.curves</a></div><div class="ttdeci">AnimationClip curves</div><div class="ttdoc">An animation clip containing animated properties of the attached PlayableAsset </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00250">TimelineClip.cs:250</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_add8b82ba55c370c655d380de9fe7c266"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266">UnityEngine.Timeline.TimelineAsset.CreateTrack</a></div><div class="ttdeci">TrackAsset CreateTrack(Type type, TrackAsset parent, string name)</div><div class="ttdoc">Allows you to create a track and add it to the Timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset___create_remove_8cs_source.html#l00022">TimelineAsset_CreateRemove.cs:22</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">UnityEngine.Timeline.TimelineCreateUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_create_utilities_8cs_source.html#l00009">TimelineCreateUtilities.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities_html_a35c6f3e2617f0c453032bd54858d8ba7"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7">UnityEngine.Timeline.TimelineCreateUtilities.ValidateParentTrack</a></div><div class="ttdeci">static bool ValidateParentTrack(TrackAsset parent, Type childType)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_create_utilities_8cs_source.html#l00093">TimelineCreateUtilities.cs:93</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities_html_a300b80877333ea7d68623ae21361fba2"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2">UnityEngine.Timeline.TimelineCreateUtilities.SaveAssetIntoObject</a></div><div class="ttdeci">static void SaveAssetIntoObject(Object childAsset, Object masterAsset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_create_utilities_8cs_source.html#l00050">TimelineCreateUtilities.cs:50</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_afa1e49ec97fecfacf930b5b50260bf2e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#afa1e49ec97fecfacf930b5b50260bf2e">UnityEngine.Timeline.TimelineAsset.DeleteRecordedAnimation</a></div><div class="ttdeci">void DeleteRecordedAnimation(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset___create_remove_8cs_source.html#l00227">TimelineAsset_CreateRemove.cs:227</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a2b63a1f2dc8b3a07e537aa60c12ba5f8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">UnityEngine.Timeline.TrackAsset.timelineAsset</a></div><div class="ttdeci">TimelineAsset timelineAsset</div><div class="ttdoc">The TimelineAsset that this track belongs to. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00163">TrackAsset.cs:163</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">UnityEngine.Timeline.TimelineUndo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00012">TimelineUndo.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_ae811f0b439c896f971ae476c7997d4a0"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae811f0b439c896f971ae476c7997d4a0">UnityEngine.Timeline.TimelineAsset.DeleteTrack</a></div><div class="ttdeci">bool DeleteTrack(TrackAsset track)</div><div class="ttdoc">Deletes a track from a timeline, including all clips and subtracks. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset___create_remove_8cs_source.html#l00153">TimelineAsset_CreateRemove.cs:153</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a2c45dda5e68a6de6f481aee4888b352c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">UnityEngine.Timeline.TimelineUndo.PushUndo</a></div><div class="ttdeci">static void PushUndo(Object thingToDirty, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00034">TimelineUndo.cs:34</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_a8db52ada6e34ac04e62c415b0ec6deba"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8db52ada6e34ac04e62c415b0ec6deba">UnityEngine.Timeline.AnimationPlayableAsset.clip</a></div><div class="ttdeci">AnimationClip clip</div><div class="ttdoc">The source animation clip </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00170">AnimationPlayableAsset.cs:170</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2a489fc03b313f4b5a9134620e94bbaf"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2a489fc03b313f4b5a9134620e94bbaf">UnityEngine.Timeline.TimelineClip.parentTrack</a></div><div class="ttdeci">TrackAsset parentTrack</div><div class="ttdoc">Returns the TrackAsset to which this clip is attached. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00301">TimelineClip.cs:301</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_aa5356a1260ee2e86a9df796a15496c95"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aa5356a1260ee2e86a9df796a15496c95">UnityEngine.Timeline.TimelineAsset.DeleteClip</a></div><div class="ttdeci">bool DeleteClip(TimelineClip clip)</div><div class="ttdoc">Delete a clip from this timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset___create_remove_8cs_source.html#l00108">TimelineAsset_CreateRemove.cs:108</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_ac0e7fe2586994c2fcd88155fd96c2832"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac0e7fe2586994c2fcd88155fd96c2832">UnityEngine.Timeline.TimelineClip.recordable</a></div><div class="ttdeci">bool recordable</div><div class="ttdoc">Returns whether this clip is recordable in editor </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00470">TimelineClip.cs:470</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a63e9de6371c7710f650bed037ea97aec"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a63e9de6371c7710f650bed037ea97aec">UnityEngine.Timeline.TrackAsset.parent</a></div><div class="ttdeci">PlayableAsset parent</div><div class="ttdoc">The owner of this track. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00189">TrackAsset.cs:189</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_aa2031fe30133f8c28e14483768ce8e29"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#aa2031fe30133f8c28e14483768ce8e29">UnityEngine.Timeline.TrackAsset.GetChildTracks</a></div><div class="ttdeci">IEnumerable&lt; TrackAsset &gt; GetChildTracks()</div><div class="ttdoc">The list of subtracks or child tracks attached to this track. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00292">TrackAsset.cs:292</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

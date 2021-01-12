@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Recording/TimelineRecording_Monobehaviour.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_860a75e850329372b4ee0d27da5490c4.html">Recording</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineRecording_Monobehaviour.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_recording___monobehaviour_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor_internal.html">UnityEditorInternal</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Globalization;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">// Methods and data for handling recording to monobehaviours</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">static</span> <span class="keyword">partial class </span>TimelineRecording</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">internal</span> <span class="keyword">class </span>RecordingState : IAnimationRecordingState</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> activeGameObject { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> activeRootGameObject { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">public</span> AnimationClip activeAnimationClip { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> SaveCurve(AnimationWindowCurve curve)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                Undo.RegisterCompleteObjectUndo(activeAnimationClip, <span class="stringliteral">&quot;Edit Curve&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                AnimationWindowUtility.SaveCurve(activeAnimationClip, curve);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> AddPropertyModification(EditorCurveBinding binding, PropertyModification propertyModification, <span class="keywordtype">bool</span> keepPrefabOverride)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                AnimationMode.AddPropertyModification(binding, propertyModification, keepPrefabOverride);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> addZeroFrame</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">int</span> currentFrame { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> DiscardModification(PropertyModification modification)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a25c181c2e7d641652b58e8b6df5ae783">   43</a></span>&#160;        <span class="keyword">static</span> readonly RecordingState s_RecordState = <span class="keyword">new</span> RecordingState();</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#af416552a2e190475a36ca6386e882b3a">   44</a></span>&#160;        <span class="keyword">static</span> readonly <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html">AnimationTrackRecorder</a> s_TrackRecorder = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html">AnimationTrackRecorder</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a09ade2e1253b22d171ed46bea6c18861">   45</a></span>&#160;        <span class="keyword">static</span> readonly List&lt;UndoPropertyModification&gt; s_UnprocessedMods = <span class="keyword">new</span> List&lt;UndoPropertyModification&gt;();</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#ad5f83849bec39063e5ba45ec4755374c">   46</a></span>&#160;        <span class="keyword">static</span> readonly List&lt;UndoPropertyModification&gt; s_ModsToProcess = <span class="keyword">new</span> List&lt;UndoPropertyModification&gt;();</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a02f30061e4ea4c38a5f2d750d0f565e8">   47</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a02f30061e4ea4c38a5f2d750d0f565e8">s_LastTrackWarning</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a17f5881b23a60d4f9d8a7884fcacfb1a">   49</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> kLocalPosition = <span class="stringliteral">&quot;m_LocalPosition&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a7f5dd261d2cc0e12a4954681f03a5e35">   50</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> kLocalRotation = <span class="stringliteral">&quot;m_LocalRotation&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a21163522a2ebda2c65e7e29521548af7">   51</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> kLocalEulerHint = <span class="stringliteral">&quot;m_LocalEulerAnglesHint&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a30c2c1f342cf2308200c04776f9ba4cd">   52</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> kRotationWarning = <span class="stringliteral">&quot;You are recording with an initial rotation offset. This may result in a misrepresentation of euler angles. When recording transform properties, it is recommended to reset rotation prior to recording&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a2fc835fdd129f1d11f8a97b203a42a4a">   55</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsRecordingAnimationTrack { <span class="keyword">get</span>; <span class="keyword">private</span> set; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> UndoPropertyModification[] ProcessMonoBehaviourModification(UndoPropertyModification[] modifications, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span> (state == null || state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">editSequence</a>.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a> == null)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">return</span> modifications;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            s_UnprocessedMods.Clear();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            s_TrackRecorder.PrepareForRecord(state);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            s_ModsToProcess.Clear();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            s_ModsToProcess.AddRange(modifications.Reverse());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">while</span> (s_ModsToProcess.Count &gt; 0)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                var modification = s_ModsToProcess[s_ModsToProcess.Count - 1];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                s_ModsToProcess.RemoveAt(s_ModsToProcess.Count - 1);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="comment">// grab the clip we need to apply to</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                var modifiedGO = GetGameObjectFromModification(modification);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                var track = GetTrackForGameObject(modifiedGO, state);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">if</span> (track != null)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    IsRecordingAnimationTrack = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keywordtype">double</span> startTime = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    var clip = s_TrackRecorder.PrepareTrack(track, state, modifiedGO, out startTime);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    <span class="keywordflow">if</span> (clip == null)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        s_ModsToProcess.Reverse();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        <span class="keywordflow">return</span> s_ModsToProcess.ToArray();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    s_RecordState.activeAnimationClip = clip;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    s_RecordState.activeRootGameObject = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a3c034ec5c009f56975135e6b7815193f">GetSceneReference</a>(track);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    s_RecordState.activeGameObject = modifiedGO;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    s_RecordState.currentFrame = Mathf.RoundToInt((<span class="keywordtype">float</span>)startTime);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    EditorUtility.SetDirty(clip);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    var toProcess = GatherRelatedModifications(modification, s_ModsToProcess);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    var animator = s_RecordState.activeRootGameObject.GetComponent&lt;Animator&gt;();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    var animTrack = track as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    <span class="comment">// update preview mode before recording so the correct values get placed (in case we modify offsets)</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="comment">// Case 900624</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    UpdatePreviewMode(toProcess, modifiedGO);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    <span class="comment">// if this is the first position/rotation recording, copy the current position / rotation to the track offset</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    AddTrackOffset(animTrack, toProcess, clip, animator);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <span class="comment">// same for clip mod clips being created</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    AddClipOffset(animTrack, toProcess, s_TrackRecorder.recordClip, animator);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    <span class="comment">// Check if we need to handle position/rotation offsets</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    var handleOffsets = animator != null &amp;&amp; modification.currentValue != null &amp;&amp;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        modification.currentValue.target == s_RecordState.activeRootGameObject.transform &amp;&amp;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        HasOffsets(animTrack, s_TrackRecorder.recordClip);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordflow">if</span> (handleOffsets)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        toProcess = HandleEulerModifications(animTrack, s_TrackRecorder.recordClip, clip, s_RecordState.currentFrame * clip.frameRate, toProcess);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                        RemoveOffsets(modification, animTrack, s_TrackRecorder.recordClip, toProcess);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    var remaining = AnimationRecording.Process(s_RecordState, toProcess);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <span class="keywordflow">if</span> (remaining != null &amp;&amp; remaining.Length != 0)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        s_UnprocessedMods.AddRange(remaining);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    <span class="keywordflow">if</span> (handleOffsets)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        ReapplyOffsets(modification, animTrack, s_TrackRecorder.recordClip, toProcess);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    s_TrackRecorder.FinializeTrack(track, state);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    IsRecordingAnimationTrack = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    s_UnprocessedMods.Add(modification);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            s_TrackRecorder.FinalizeRecording(state);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">return</span> s_UnprocessedMods.ToArray();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsPosition(UndoPropertyModification modification)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">if</span> (modification.currentValue != null)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">return</span> modification.currentValue.propertyPath.StartsWith(kLocalPosition);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (modification.previousValue != null)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">return</span> modification.previousValue.propertyPath.StartsWith(kLocalPosition);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsRotation(UndoPropertyModification modification)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (modification.currentValue != null)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">return</span> modification.currentValue.propertyPath.StartsWith(kLocalRotation) ||</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    modification.currentValue.propertyPath.StartsWith(kLocalEulerHint);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">if</span> (modification.previousValue != null)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="keywordflow">return</span> modification.previousValue.propertyPath.StartsWith(kLocalRotation) ||</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    modification.previousValue.propertyPath.StartsWith(kLocalEulerHint);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">// Test if this modification position or rotation</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsPositionOrRotation(UndoPropertyModification modification)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">return</span> IsPosition(modification) || IsRotation(modification);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> UpdatePreviewMode(UndoPropertyModification[] mods, GameObject go)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">if</span> (mods.Any(x =&gt; IsPositionOrRotation(x) &amp;&amp; IsRootModification(x)))</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <span class="keywordtype">bool</span> hasPosition = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordtype">bool</span> hasRotation = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">foreach</span> (var mod <span class="keywordflow">in</span> mods)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                    EditorCurveBinding binding = <span class="keyword">new</span> EditorCurveBinding();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    <span class="keywordflow">if</span> (AnimationUtility.PropertyModificationToEditorCurveBinding(mod.previousValue, go, out binding) != null)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        hasPosition |= IsPosition(mod);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                        hasRotation |= IsRotation(mod);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                        AnimationMode.AddPropertyModification(binding, mod.previousValue, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="comment">// case 931859 - if we are only changing one field, all fields must be registered before</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="comment">// any recording modifications</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                var driver = WindowState.previewDriver;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <span class="keywordflow">if</span> (driver != null &amp;&amp; AnimationMode.InAnimationMode(driver))</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    <span class="keywordflow">if</span> (hasPosition)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                        DrivenPropertyManager.RegisterProperty(driver, go.transform, kLocalPosition + <span class="stringliteral">&quot;.x&quot;</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                        DrivenPropertyManager.RegisterProperty(driver, go.transform, kLocalPosition + <span class="stringliteral">&quot;.y&quot;</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                        DrivenPropertyManager.RegisterProperty(driver, go.transform, kLocalPosition + <span class="stringliteral">&quot;.z&quot;</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hasRotation)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        DrivenPropertyManager.RegisterProperty(driver, go.transform, kLocalRotation + <span class="stringliteral">&quot;.x&quot;</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        DrivenPropertyManager.RegisterProperty(driver, go.transform, kLocalRotation + <span class="stringliteral">&quot;.y&quot;</span>);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        DrivenPropertyManager.RegisterProperty(driver, go.transform, kLocalRotation + <span class="stringliteral">&quot;.z&quot;</span>);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        DrivenPropertyManager.RegisterProperty(driver, go.transform, kLocalRotation + <span class="stringliteral">&quot;.w&quot;</span>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsRootModification(UndoPropertyModification modification)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordtype">string</span> path = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">if</span> (modification.currentValue != null)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                path = modification.currentValue.propertyPath;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (modification.previousValue != null)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                path = modification.previousValue.propertyPath;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">return</span> !path.Contains(<span class="charliteral">&#39;/&#39;</span>) &amp;&amp; !path.Contains(<span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="comment">// test if the clip has any position or rotation bindings</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ClipHasPositionOrRotation(AnimationClip clip)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">if</span> (clip == null || clip.empty)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            var info = AnimationClipCurveCache.Instance.GetCurveInfo(clip);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; info.bindings.Length; i++)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                <span class="keywordtype">bool</span> isPositionOrRotation =</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    info.bindings[i].type != null &amp;&amp;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    typeof(Transform).IsAssignableFrom(info.bindings[i].type) &amp;&amp;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    (</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        info.bindings[i].propertyName.StartsWith(kLocalPosition) ||</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                        info.bindings[i].propertyName.StartsWith(kLocalRotation) ||</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        info.bindings[i].propertyName.StartsWith(<span class="stringliteral">&quot;localEuler&quot;</span>)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                    );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                <span class="keywordflow">if</span> (isPositionOrRotation)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> TimelineAnimationUtilities.RigidTransform ComputeInitialClipOffsets(AnimationTrack track, UndoPropertyModification[] mods, Animator animator)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="comment">// take into account the track transform</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            var target = GetInitialTransform(mods, animator);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            var trackToClip = TimelineAnimationUtilities.RigidTransform.identity;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa32145aa4a1e469702ead7789b5c4b68">trackOffset</a> == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplyTransformOffsets)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                trackToClip = TimelineAnimationUtilities.RigidTransform.Compose(track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a4f3ade808e26546f80a57f2cf02cbdf5">position</a>, track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a">rotation</a>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa32145aa4a1e469702ead7789b5c4b68">trackOffset</a> == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplySceneOffsets)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                trackToClip = TimelineAnimationUtilities.RigidTransform.Compose(track.sceneOffsetPosition, Quaternion.Euler(track.sceneOffsetRotation));</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            target = TimelineAnimationUtilities.RigidTransform.Mul(TimelineAnimationUtilities.RigidTransform.Inverse(trackToClip), target);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="comment">// set the previous position in case the animation system adds a default key</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            SetPreviousPositionAndRotation(mods, animator, trackToClip.position, trackToClip.rotation);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">return</span> target;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> TimelineAnimationUtilities.RigidTransform GetInitialTransform(UndoPropertyModification[] mods, Animator animator)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            var pos = Vector3.zero;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            var rot = Quaternion.identity;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="comment">// if we are operating on the root, grab the transform from the undo</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordflow">if</span> (mods[0].previousValue.target == animator.transform)</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                GetPreviousPositionAndRotation(mods, ref pos, ref rot);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="comment">// otherwise we need to grab it from the root object, which is the one with the actual animator</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                pos = animator.transform.localPosition;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                rot = animator.transform.localRotation;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="comment">// take into account the track transform</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">return</span> TimelineAnimationUtilities.RigidTransform.Compose(pos, rot);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetPreviousPositionAndRotation(UndoPropertyModification[] mods, Animator animator, Vector3 pos, Quaternion rot)</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">if</span> (mods[0].previousValue.target == animator.transform)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                SetPreviousPositionAndRotation(mods, pos, rot);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="comment">// If we are adding to an infinite clip, strip the objects position and rotation and set it as the clip offset</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> AddTrackOffset(AnimationTrack track, UndoPropertyModification[] mods, AnimationClip clip, Animator animator)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            var copyTrackOffset = !track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">inClipMode</a> &amp;&amp;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                !ClipHasPositionOrRotation(clip) &amp;&amp;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                mods.Any(x =&gt; IsPositionOrRotation(x) &amp;&amp; IsRootModification(x)) &amp;&amp;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                animator != null;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">if</span> (copyTrackOffset)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <span class="comment">// in scene offset mode, makes sure we have the correct initial transform set</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa32145aa4a1e469702ead7789b5c4b68">trackOffset</a> == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplySceneOffsets)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    var rigidTransform = GetInitialTransform(mods, animator);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    track.sceneOffsetPosition = rigidTransform.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a4f3ade808e26546f80a57f2cf02cbdf5">position</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    track.sceneOffsetRotation = rigidTransform.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a">rotation</a>.eulerAngles;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    SetPreviousPositionAndRotation(mods, animator, rigidTransform.position, rigidTransform.rotation);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    var rigidTransform = ComputeInitialClipOffsets(track, mods, animator);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">infiniteClipOffsetPosition</a> = rigidTransform.position;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac05e7162bee5bc6f939065f8b71d9bd3">infiniteClipOffsetEulerAngles</a> = rigidTransform.rotation.eulerAngles;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> AddClipOffset(AnimationTrack track, UndoPropertyModification[] mods, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, Animator animator)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">if</span> (clip == null || clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> == null)</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            var clipAsset = clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            var copyClipOffset = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">inClipMode</a> &amp;&amp;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                clipAsset != null &amp;&amp; !ClipHasPositionOrRotation(clipAsset.clip) &amp;&amp;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                mods.Any(x =&gt; IsPositionOrRotation(x) &amp;&amp; IsRootModification(x)) &amp;&amp;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                animator != null;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">if</span> (copyClipOffset)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                var rigidTransform = ComputeInitialClipOffsets(track, mods, animator);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                clipAsset.position = rigidTransform.position;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                clipAsset.rotation = rigidTransform.rotation;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> TimelineAnimationUtilities.RigidTransform GetLocalToTrack(AnimationTrack track, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                <span class="keywordflow">return</span> TimelineAnimationUtilities.RigidTransform.Compose(Vector3.zero, Quaternion.identity);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            var trackPos = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a4f3ade808e26546f80a57f2cf02cbdf5">position</a>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            var trackRot = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a">rotation</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa32145aa4a1e469702ead7789b5c4b68">trackOffset</a> == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplySceneOffsets)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                trackPos = track.sceneOffsetPosition;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                trackRot = Quaternion.Euler(track.sceneOffsetRotation);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            var clipWrapper = clip == null ? null : clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as AnimationPlayableAsset;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            var clipTransform = TimelineAnimationUtilities.RigidTransform.Compose(Vector3.zero, Quaternion.identity);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">if</span> (clipWrapper != null)</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                clipTransform = TimelineAnimationUtilities.RigidTransform.Compose(clipWrapper.position, clipWrapper.rotation);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                clipTransform = TimelineAnimationUtilities.RigidTransform.Compose(track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">infiniteClipOffsetPosition</a>, track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a89b5763872cff5d0c665c3e4e5618c63">infiniteClipOffsetRotation</a>);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            var trackTransform = TimelineAnimationUtilities.RigidTransform.Compose(trackPos, trackRot);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            <span class="keywordflow">return</span> TimelineAnimationUtilities.RigidTransform.Mul(trackTransform, clipTransform);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="comment">// Checks whether there are any offsets applied to a clip</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> HasOffsets(AnimationTrack track, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordtype">bool</span> hasClipOffsets = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            <span class="keywordtype">bool</span> hasTrackOffsets = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            var clipWrapper = clip == null ? null : clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as AnimationPlayableAsset;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            <span class="keywordflow">if</span> (clipWrapper != null)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                hasClipOffsets |= clipWrapper.position != Vector3.zero || clipWrapper.rotation != Quaternion.identity;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa32145aa4a1e469702ead7789b5c4b68">trackOffset</a> == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplySceneOffsets)</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                hasTrackOffsets = track.sceneOffsetPosition != Vector3.zero || track.sceneOffsetRotation != Vector3.zero;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            {</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                hasTrackOffsets = (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a4f3ade808e26546f80a57f2cf02cbdf5">position</a> != Vector3.zero || track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a">rotation</a> != Quaternion.identity);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                <span class="keywordflow">if</span> (!track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">inClipMode</a>)</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                    hasClipOffsets |= track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">infiniteClipOffsetPosition</a> != Vector3.zero || track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a89b5763872cff5d0c665c3e4e5618c63">infiniteClipOffsetRotation</a> != Quaternion.identity;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="keywordflow">return</span> hasTrackOffsets || hasClipOffsets;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RemoveOffsets(UndoPropertyModification modification, AnimationTrack track, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, UndoPropertyModification[] mods)</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            <span class="keywordflow">if</span> (IsPositionOrRotation(modification))</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                var modifiedGO = GetGameObjectFromModification(modification);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                var target = TimelineAnimationUtilities.RigidTransform.Compose(modifiedGO.transform.localPosition, modifiedGO.transform.localRotation);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                var localToTrack = GetLocalToTrack(track, clip);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                var trackToLocal = TimelineAnimationUtilities.RigidTransform.Inverse(localToTrack);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                var localSpace = TimelineAnimationUtilities.RigidTransform.Mul(trackToLocal, target);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                <span class="comment">// Update the undo call values</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                var prevPos = modifiedGO.transform.localPosition;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                var prevRot = modifiedGO.transform.localRotation;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                GetPreviousPositionAndRotation(mods, ref prevPos, ref prevRot);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                var previousRigidTransform = TimelineAnimationUtilities.RigidTransform.Mul(trackToLocal, TimelineAnimationUtilities.RigidTransform.Compose(prevPos, prevRot));</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                SetPreviousPositionAndRotation(mods, previousRigidTransform.position, previousRigidTransform.rotation);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                var currentPos = modifiedGO.transform.localPosition;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                var currentRot = modifiedGO.transform.localRotation;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                GetCurrentPositionAndRotation(mods, ref currentPos, ref currentRot);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                var currentRigidTransform = TimelineAnimationUtilities.RigidTransform.Mul(trackToLocal, TimelineAnimationUtilities.RigidTransform.Compose(currentPos, currentRot));</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                SetCurrentPositionAndRotation(mods, currentRigidTransform.position, currentRigidTransform.rotation);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                modifiedGO.transform.localPosition = localSpace.position;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                modifiedGO.transform.localRotation = localSpace.rotation;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> ReapplyOffsets(UndoPropertyModification modification, AnimationTrack track, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, UndoPropertyModification[] mods)</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            <span class="keywordflow">if</span> (IsPositionOrRotation(modification))</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                var modifiedGO = GetGameObjectFromModification(modification);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                var target = TimelineAnimationUtilities.RigidTransform.Compose(modifiedGO.transform.localPosition, modifiedGO.transform.localRotation);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                var localToTrack = GetLocalToTrack(track, clip);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                var trackSpace = TimelineAnimationUtilities.RigidTransform.Mul(localToTrack, target);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                <span class="comment">// Update the undo call values</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                var prevPos = modifiedGO.transform.localPosition;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                var prevRot = modifiedGO.transform.localRotation;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                GetPreviousPositionAndRotation(mods, ref prevPos, ref prevRot);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                var previousRigidTransform = TimelineAnimationUtilities.RigidTransform.Mul(localToTrack, TimelineAnimationUtilities.RigidTransform.Compose(prevPos, prevRot));</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                SetPreviousPositionAndRotation(mods, previousRigidTransform.position, previousRigidTransform.rotation);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                var currentPos = modifiedGO.transform.localPosition;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                var currentRot = modifiedGO.transform.localRotation;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                GetCurrentPositionAndRotation(mods, ref currentPos, ref currentRot);</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                var currentRigidTransform = TimelineAnimationUtilities.RigidTransform.Mul(localToTrack, TimelineAnimationUtilities.RigidTransform.Compose(currentPos, currentRot));</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                SetCurrentPositionAndRotation(mods, currentRigidTransform.position, currentRigidTransform.rotation);</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                modifiedGO.transform.localPosition = trackSpace.position;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                modifiedGO.transform.localRotation = trackSpace.rotation;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            }</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="comment">// This will gather the modifications that modify the same property on the same object (rgba of a color, xyzw of a vector)</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <span class="comment">//  Note: This will modify the list, removing any elements that match</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a0751144c9505a919d94c3fcf6000ef01">  454</a></span>&#160;        <span class="keyword">static</span> UndoPropertyModification[] <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a0751144c9505a919d94c3fcf6000ef01">GatherRelatedModifications</a>(UndoPropertyModification toMatch, List&lt;UndoPropertyModification&gt; list)</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            var matching = <span class="keyword">new</span> List&lt;UndoPropertyModification&gt; {toMatch};</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;            <span class="keywordflow">for</span> (var i = list.Count - 1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            {</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                var undo = list[i];</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                <span class="keywordflow">if</span> (undo.previousValue.target == toMatch.previousValue.target &amp;&amp;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                    DoesPropertyPathMatch(undo.previousValue.propertyPath, toMatch.previousValue.propertyPath))</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                    matching.Add(undo);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                    list.RemoveAt(i);</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            <span class="keywordflow">return</span> matching.ToArray();</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        }</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="comment">// Grab the game object out of the modification object</span></div>
+<div class="line"><a name="l00473"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a3518ba62b1acdbbc08f2256dd0d98308">  473</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a3518ba62b1acdbbc08f2256dd0d98308">GetGameObjectFromModification</a>(UndoPropertyModification mod)</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        {</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            <span class="comment">// grab the GO this is modifying</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> modifiedGO = null;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            <span class="keywordflow">if</span> (mod.previousValue.target is <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>)</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                modifiedGO = mod.previousValue.target as GameObject;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mod.previousValue.target is <a class="code" href="namespace_component.html">Component</a>)</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                modifiedGO = (mod.previousValue.target as <a class="code" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>).gameObject;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            <span class="keywordflow">return</span> modifiedGO;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        }</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        <span class="comment">// returns the level of the child in the hierarchy relative to the parent,</span></div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        <span class="comment">//  or -1 if the child is not the parent or a descendent of it</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a15953f6f7721660d9a8a33ff5e29a9e5">  487</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a15953f6f7721660d9a8a33ff5e29a9e5">GetChildLevel</a>(GameObject parent, GameObject child)</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        {</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            var level = 0;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            <span class="keywordflow">while</span> (child != null)</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            {</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                <span class="keywordflow">if</span> (parent == child)</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                <span class="keywordflow">if</span> (child.transform.parent == null)</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                child = child.transform.parent.gameObject;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                level++;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            }</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;            <span class="keywordflow">if</span> (child != null)</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                <span class="keywordflow">return</span> level;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div>
+<div class="line"><a name="l00505"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a67a09ccf0124ec3add2ee7e1ee09cded">  505</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a67a09ccf0124ec3add2ee7e1ee09cded">DoesPropertyPathMatch</a>(<span class="keywordtype">string</span> a, <span class="keywordtype">string</span> b)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keywordflow">return</span> AnimationWindowUtility.GetPropertyGroupName(a).Equals(AnimationWindowUtility.GetPropertyGroupName(a));</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        }</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> GetPreviousPositionAndRotation(UndoPropertyModification[] mods, ref Vector3 position, ref Quaternion rotation)</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        {</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            var t = mods[0].previousValue.target as Transform;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            <span class="keywordflow">if</span> (t == null)</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                t = (Transform)mods[0].currentValue.target;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            position = t.localPosition;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;            rotation = t.localRotation;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            foreach (var mod in mods)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            {</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                <span class="keywordflow">switch</span> (mod.previousValue.propertyPath)</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                {</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                        position.x = ParseFloat(mod.previousValue.value, position.x);</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                        position.y = ParseFloat(mod.previousValue.value, position.y);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                        position.z = ParseFloat(mod.previousValue.value, position.z);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                        rotation.x = ParseFloat(mod.previousValue.value, rotation.x);</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                        rotation.y = ParseFloat(mod.previousValue.value, rotation.y);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                        rotation.z = ParseFloat(mod.previousValue.value, rotation.z);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.w&quot;</span>:</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                        rotation.w = ParseFloat(mod.previousValue.value, rotation.w);</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                }</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            }</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        }</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> GetCurrentPositionAndRotation(UndoPropertyModification[] mods, ref Vector3 position, ref Quaternion rotation)</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        {</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;            var t = (Transform)mods[0].currentValue.target;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;            position = t.localPosition;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;            rotation = t.localRotation;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            foreach (var mod in mods)</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            {</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                <span class="keywordflow">switch</span> (mod.currentValue.propertyPath)</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;                {</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                        position.x = ParseFloat(mod.currentValue.value, position.x);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                        position.y = ParseFloat(mod.currentValue.value, position.y);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                        position.z = ParseFloat(mod.currentValue.value, position.z);</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                        rotation.x = ParseFloat(mod.currentValue.value, rotation.x);</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                        rotation.y = ParseFloat(mod.currentValue.value, rotation.y);</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                        rotation.z = ParseFloat(mod.currentValue.value, rotation.z);</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.w&quot;</span>:</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                        rotation.w = ParseFloat(mod.currentValue.value, rotation.w);</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                }</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;            }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;        }</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        <span class="comment">// when making the previous position and rotation</span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetPreviousPositionAndRotation(UndoPropertyModification[] mods, Vector3 pos, Quaternion rot)</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        {</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="keywordflow">foreach</span> (var mod <span class="keywordflow">in</span> mods)</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;            {</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                <span class="keywordflow">switch</span> (mod.previousValue.propertyPath)</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                {</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                        mod.previousValue.value = pos.x.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                        mod.previousValue.value = pos.y.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                        mod.previousValue.value = pos.z.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                        mod.previousValue.value = rot.x.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                        mod.previousValue.value = rot.y.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                        mod.previousValue.value = rot.z.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.w&quot;</span>:</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;                        mod.previousValue.value = rot.w.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                }</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            }</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        }</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetCurrentPositionAndRotation(UndoPropertyModification[] mods, Vector3 pos, Quaternion rot)</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        {</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;            <span class="keywordflow">foreach</span> (var mod <span class="keywordflow">in</span> mods)</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;            {</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                <span class="keywordflow">switch</span> (mod.previousValue.propertyPath)</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                {</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                        mod.currentValue.value = pos.x.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                        mod.currentValue.value = pos.y.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;                    <span class="keywordflow">case</span> kLocalPosition + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                        mod.currentValue.value = pos.z.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.x&quot;</span>:</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                        mod.currentValue.value = rot.x.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.y&quot;</span>:</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                        mod.currentValue.value = rot.y.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.z&quot;</span>:</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;                        mod.currentValue.value = rot.z.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                    <span class="keywordflow">case</span> kLocalRotation + <span class="stringliteral">&quot;.w&quot;</span>:</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                        mod.currentValue.value = rot.w.ToString(EditorGUI.kFloatFieldFormatString);</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                }</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;            }</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        }</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">float</span> ParseFloat(<span class="keywordtype">string</span> str, <span class="keywordtype">float</span> defaultVal)</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        {</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            <span class="keywordtype">float</span> temp = 0.0f;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            <span class="keywordflow">if</span> (<span class="keywordtype">float</span>.TryParse(str, NumberStyles.Float, CultureInfo.InvariantCulture.NumberFormat, out temp))</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;            <span class="keywordflow">return</span> defaultVal;</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        }</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> UndoPropertyModification[] HandleEulerModifications(AnimationTrack track, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, AnimationClip animClip, <span class="keywordtype">float</span> time, UndoPropertyModification[] mods)</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        {</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;            <span class="keywordflow">if</span> (mods.Any(x =&gt; x.currentValue.propertyPath.StartsWith(kLocalEulerHint) || x.currentValue.propertyPath.StartsWith(kLocalRotation)))</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;            {</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;                <span class="comment">// if there is a rotational offsets, we need to strip the euler hints, since they are used by the animation recording system</span></div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                <span class="comment">//  over the quaternion.</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                var localToTrack = GetLocalToTrack(track, clip);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                <span class="keywordflow">if</span> (localToTrack.rotation != Quaternion.identity)</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                {</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                    <span class="keywordflow">if</span> (s_LastTrackWarning != track)</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                    {</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                        s_LastTrackWarning = track;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;                        <a class="code" href="namespace_debug.html">Debug</a>.LogWarning(kRotationWarning);</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;                    }</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;                    Transform transform = mods[0].currentValue.target as Transform;</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                    <span class="keywordflow">if</span> (transform != null)</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                    {</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                        var trackToLocal = TimelineAnimationUtilities.RigidTransform.Inverse(localToTrack);</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                        <span class="comment">// since the euler angles are going to be transformed, we do a best guess at a euler that gives the shortest path</span></div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                        var quatMods = mods.Where(x =&gt; !x.currentValue.propertyPath.StartsWith(kLocalEulerHint));</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                        var eulerMods = FindBestEulerHint(trackToLocal.rotation * transform.localRotation, animClip, time, transform);</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                        <span class="keywordflow">return</span> quatMods.Union(eulerMods).ToArray();</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                    }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                    <span class="keywordflow">return</span> mods.Where(x =&gt; !x.currentValue.propertyPath.StartsWith(kLocalEulerHint)).ToArray();</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                }</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            }</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            <span class="keywordflow">return</span> mods;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        }</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> IEnumerable&lt;UndoPropertyModification&gt; FindBestEulerHint(Quaternion rotation, AnimationClip clip, <span class="keywordtype">float</span> time, Transform transform)</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        {</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;            Vector3 euler = rotation.eulerAngles;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;            var xCurve = AnimationUtility.GetEditorCurve(clip, EditorCurveBinding.FloatCurve(<span class="keywordtype">string</span>.Empty, typeof(Transform), <span class="stringliteral">&quot;localEulerAnglesRaw.x&quot;</span>));</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;            var yCurve = AnimationUtility.GetEditorCurve(clip, EditorCurveBinding.FloatCurve(<span class="keywordtype">string</span>.Empty, typeof(Transform), <span class="stringliteral">&quot;localEulerAnglesRaw.y&quot;</span>));</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;            var zCurve = AnimationUtility.GetEditorCurve(clip, EditorCurveBinding.FloatCurve(<span class="keywordtype">string</span>.Empty, typeof(Transform), <span class="stringliteral">&quot;localEulerAnglesRaw.z&quot;</span>));</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;            <span class="keywordflow">if</span> (xCurve != null)</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;                euler.x = xCurve.Evaluate(time);</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;            <span class="keywordflow">if</span> (yCurve != null)</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                euler.y = yCurve.Evaluate(time);</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <span class="keywordflow">if</span> (zCurve != null)</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;                euler.z = zCurve.Evaluate(time);</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;            euler = QuaternionCurveTangentCalculation.GetEulerFromQuaternion(rotation, euler);</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span>[]</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;            {</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                PropertyModificationToUndoPropertyModification(<span class="keyword">new</span> PropertyModification {target = transform, propertyPath = kLocalEulerHint + <span class="stringliteral">&quot;.x&quot;</span>, value = euler.x.ToString() }),</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                PropertyModificationToUndoPropertyModification(<span class="keyword">new</span> PropertyModification {target = transform, propertyPath = kLocalEulerHint + <span class="stringliteral">&quot;.y&quot;</span>, value = euler.y.ToString() }),</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                PropertyModificationToUndoPropertyModification(<span class="keyword">new</span> PropertyModification {target = transform, propertyPath = kLocalEulerHint + <span class="stringliteral">&quot;.z&quot;</span>, value = euler.z.ToString() })</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            };</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        }</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    }</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">UnityEngine.Timeline.AnimationPlayableAsset</a></div><div class="ttdoc">A Playable Asset that represents a single AnimationClip clip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00011">AnimationPlayableAsset.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2c0e553887357327987faff3f3b06dac"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">UnityEngine.Timeline.TimelineClip.asset</a></div><div class="ttdeci">Object asset</div><div class="ttdoc">The PlayableAsset attached to the clip. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00275">TimelineClip.cs:275</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a4f3ade808e26546f80a57f2cf02cbdf5"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a4f3ade808e26546f80a57f2cf02cbdf5">UnityEngine.Timeline.AnimationTrack.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdoc">The translation offset of the entire track. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00185">AnimationTrack.cs:185</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a89b5763872cff5d0c665c3e4e5618c63"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a89b5763872cff5d0c665c3e4e5618c63">UnityEngine.Timeline.AnimationTrack.infiniteClipOffsetRotation</a></div><div class="ttdeci">Quaternion infiniteClipOffsetRotation</div><div class="ttdoc">The rotation offset of a track in infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00317">AnimationTrack.cs:317</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html">UnityEngine.Timeline.AnimationTrack</a></div><div class="ttdoc">A Timeline track used for playing back animations on an Animator. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00124">AnimationTrack.cs:124</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aa1135c27853312d233b0b711e4b849c3"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">UnityEngine.Timeline.AnimationTrack.inClipMode</a></div><div class="ttdeci">bool inClipMode</div><div class="ttdoc">Specifies whether the Animation Track has clips, or is in infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00300">AnimationTrack.cs:300</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_html_a3518ba62b1acdbbc08f2256dd0d98308"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a3518ba62b1acdbbc08f2256dd0d98308">UnityEditor.Timeline.TimelineRecording.GetGameObjectFromModification</a></div><div class="ttdeci">static GameObject GetGameObjectFromModification(UndoPropertyModification mod)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_recording___monobehaviour_8cs_source.html#l00473">TimelineRecording_Monobehaviour.cs:473</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aeaa0662d02f0e22e9d243a3829b47e5a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a">UnityEngine.Timeline.AnimationTrack.rotation</a></div><div class="ttdeci">Quaternion rotation</div><div class="ttdoc">The rotation offset of the entire track, expressed as a quaternion. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00194">AnimationTrack.cs:194</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">UnityEditor.Timeline.GameObject</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a7b9155ea6faa7fbeccc09dea7a347417"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">UnityEngine.Timeline.TrackOffset</a></div><div class="ttdeci">TrackOffset</div><div class="ttdoc">Describes what is used to set the starting position and orientation of each Animation Track...</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00053">AnimationTrack.cs:53</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a006919b74b71f9f6511d64b138264d4c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">UnityEditor.Timeline.WindowState.editSequence</a></div><div class="ttdeci">ISequenceState editSequence</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00090">WindowState.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_html_a0751144c9505a919d94c3fcf6000ef01"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a0751144c9505a919d94c3fcf6000ef01">UnityEditor.Timeline.TimelineRecording.GatherRelatedModifications</a></div><div class="ttdeci">static UndoPropertyModification[] GatherRelatedModifications(UndoPropertyModification toMatch, List&lt; UndoPropertyModification &gt; list)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_recording___monobehaviour_8cs_source.html#l00454">TimelineRecording_Monobehaviour.cs:454</a></div></div>
+<div class="ttc" id="namespace_component_html"><div class="ttname"><a href="namespace_component.html">Component</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aa32145aa4a1e469702ead7789b5c4b68"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa32145aa4a1e469702ead7789b5c4b68">UnityEngine.Timeline.AnimationTrack.trackOffset</a></div><div class="ttdeci">TrackOffset trackOffset</div><div class="ttdoc">Specifies what is used to set the starting position and orientation of an Animation Track...</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00228">AnimationTrack.cs:228</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_track_recorder_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html">UnityEditor.Timeline.AnimationTrackRecorder</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_recorder_8cs_source.html#l00008">AnimationTrackRecorder.cs:8</a></div></div>
+<div class="ttc" id="_type_utility_8cs_html_a554ba7da72478fc0e507fb6fd77f6476"><div class="ttname"><a href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a></div><div class="ttdeci">UnityEngine.Component Component</div><div class="ttdef"><b>Definition:</b> <a href="_type_utility_8cs_source.html#l00009">TypeUtility.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_html_a67a09ccf0124ec3add2ee7e1ee09cded"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a67a09ccf0124ec3add2ee7e1ee09cded">UnityEditor.Timeline.TimelineRecording.DoesPropertyPathMatch</a></div><div class="ttdeci">static bool DoesPropertyPathMatch(string a, string b)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_recording___monobehaviour_8cs_source.html#l00505">TimelineRecording_Monobehaviour.cs:505</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_html_a15953f6f7721660d9a8a33ff5e29a9e5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a15953f6f7721660d9a8a33ff5e29a9e5">UnityEditor.Timeline.TimelineRecording.GetChildLevel</a></div><div class="ttdeci">static int GetChildLevel(GameObject parent, GameObject child)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_recording___monobehaviour_8cs_source.html#l00487">TimelineRecording_Monobehaviour.cs:487</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ae709cd4c19441b453964cf3a58ac44a3"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">UnityEngine.Timeline.AnimationTrack.infiniteClipOffsetPosition</a></div><div class="ttdeci">Vector3 infiniteClipOffsetPosition</div><div class="ttdoc">The translation offset of a track in infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00308">AnimationTrack.cs:308</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a3c034ec5c009f56975135e6b7815193f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a3c034ec5c009f56975135e6b7815193f">UnityEditor.Timeline.WindowState.GetSceneReference</a></div><div class="ttdeci">GameObject GetSceneReference(TrackAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00848">WindowState.cs:848</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a08ce693fcd3a6acc64b0b9bf36d1c29f"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">UnityEditor.Timeline.ISequenceState.director</a></div><div class="ttdeci">PlayableDirector director</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00010">ISequenceState.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="namespace_unity_editor_internal_html"><div class="ttname"><a href="namespace_unity_editor_internal.html">UnityEditorInternal</a></div><div class="ttdef"><b>Definition:</b> <a href="_binding_tree_view_data_source_8cs_source.html#l00008">BindingTreeViewDataSource.cs:8</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ac05e7162bee5bc6f939065f8b71d9bd3"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac05e7162bee5bc6f939065f8b71d9bd3">UnityEngine.Timeline.AnimationTrack.infiniteClipOffsetEulerAngles</a></div><div class="ttdeci">Vector3 infiniteClipOffsetEulerAngles</div><div class="ttdoc">The euler angle representation of the rotation offset of the track when in infinite mode...</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00326">AnimationTrack.cs:326</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_recording_html_a02f30061e4ea4c38a5f2d750d0f565e8"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_recording.html#a02f30061e4ea4c38a5f2d750d0f565e8">UnityEditor.Timeline.TimelineRecording.s_LastTrackWarning</a></div><div class="ttdeci">static AnimationTrack s_LastTrackWarning</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_recording___monobehaviour_8cs_source.html#l00047">TimelineRecording_Monobehaviour.cs:47</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.CurvesProxy类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html">CurvesProxy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_curves_proxy-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.CurvesProxy类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.CurvesProxy 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curves_proxy__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_curves_proxy_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_curves_proxy_inherit__map" id="_unity_editor_8_timeline_8_curves_proxy_inherit__map">
+<area shape="rect" id="node2" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="45,5,147,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.CurvesProxy 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curves_proxy__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_curves_proxy_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_curves_proxy_coll__map" id="_unity_editor_8_timeline_8_curves_proxy_coll__map">
+<area shape="rect" id="node2" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="5,13,107,39"/><area shape="rect" id="node3" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="UnityEngine.Timeline.ICurves\lOwner" alt="" coords="131,5,322,47"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_curves_proxy_1_1_rebuild_guard.html">RebuildGuard</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1a7f613e6528ce9bf34e4f66ff8f50d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a1a7f613e6528ce9bf34e4f66ff8f50d2">CurvesProxy</a> ([NotNull] <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">ICurvesOwner</a> originalOwner)</td></tr>
+<tr class="separator:a1a7f613e6528ce9bf34e4f66ff8f50d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48317fdc2fcdb145c114d33c3fab7b2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a48317fdc2fcdb145c114d33c3fab7b2c">CreateCurves</a> (string curvesClipName)</td></tr>
+<tr class="separator:a48317fdc2fcdb145c114d33c3fab7b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a323d00986b5a71a84f00ee426c510b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a4a323d00986b5a71a84f00ee426c510b">ConfigureCurveWrapper</a> (CurveWrapper wrapper)</td></tr>
+<tr class="separator:a4a323d00986b5a71a84f00ee426c510b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936b5815275e0ff266990ff4b4dfec32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a936b5815275e0ff266990ff4b4dfec32">RebuildCurves</a> ()</td></tr>
+<tr class="separator:a936b5815275e0ff266990ff4b4dfec32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3015a5dc01e8921c7661a9ff11010a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#ac3015a5dc01e8921c7661a9ff11010a2">UpdateCurves</a> (List&lt; CurveWrapper &gt; updatedCurves)</td></tr>
+<tr class="separator:ac3015a5dc01e8921c7661a9ff11010a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a28eb19a6dea746fe4852bd8bdf1d8a32"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a28eb19a6dea746fe4852bd8bdf1d8a32">curves</a><code> [get]</code></td></tr>
+<tr class="separator:a28eb19a6dea746fe4852bd8bdf1d8a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be253187456811fe02d9aecedd44eee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a0be253187456811fe02d9aecedd44eee">hasCurves</a><code> [get]</code></td></tr>
+<tr class="separator:a0be253187456811fe02d9aecedd44eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7549f869038fd2587dce3ac486b83dc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#ae7549f869038fd2587dce3ac486b83dc">duration</a><code> [get]</code></td></tr>
+<tr class="separator:ae7549f869038fd2587dce3ac486b83dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93461c2bbb3ae952547d79ae6adaab6d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a93461c2bbb3ae952547d79ae6adaab6d">defaultCurvesName</a><code> [get]</code></td></tr>
+<tr class="separator:a93461c2bbb3ae952547d79ae6adaab6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007d0f88a370fb023f7fc61370a7ce4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a007d0f88a370fb023f7fc61370a7ce4c">asset</a><code> [get]</code></td></tr>
+<tr class="separator:a007d0f88a370fb023f7fc61370a7ce4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01577ceab4f0684a3d57469423c8059"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#aa01577ceab4f0684a3d57469423c8059">assetOwner</a><code> [get]</code></td></tr>
+<tr class="separator:aa01577ceab4f0684a3d57469423c8059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a1d1138d5a489de40f2e0440d7c4d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#ac3a1d1138d5a489de40f2e0440d7c4d1">targetTrack</a><code> [get]</code></td></tr>
+<tr class="separator:ac3a1d1138d5a489de40f2e0440d7c4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54380b891b1ffedd7987d5ee83f2ae24"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a54380b891b1ffedd7987d5ee83f2ae24">proxyCurves</a><code> [get]</code></td></tr>
+<tr class="separator:a54380b891b1ffedd7987d5ee83f2ae24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316910fde881583a6bb9eb80b04d0671"><td class="memItemLeft" align="right" valign="top">List&lt; SerializedProperty &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a316910fde881583a6bb9eb80b04d0671">allAnimatableParameters</a><code> [get]</code></td></tr>
+<tr class="separator:a316910fde881583a6bb9eb80b04d0671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">UnityEngine.Timeline.ICurvesOwner</a></td></tr>
+<tr class="memitem:aa0282b62272d7604ec32d7435e3df8ac inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#aa0282b62272d7604ec32d7435e3df8ac">curves</a><code> [get]</code></td></tr>
+<tr class="separator:aa0282b62272d7604ec32d7435e3df8ac inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd12bebb33bcbf6dcd4e22d84218b706 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#acd12bebb33bcbf6dcd4e22d84218b706">hasCurves</a><code> [get]</code></td></tr>
+<tr class="separator:acd12bebb33bcbf6dcd4e22d84218b706 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f34dff9986f3b059e248a91791d23cd inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a5f34dff9986f3b059e248a91791d23cd">duration</a><code> [get]</code></td></tr>
+<tr class="separator:a5f34dff9986f3b059e248a91791d23cd inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0f9bb14f3fee221cd7d4b09461df86 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a5b0f9bb14f3fee221cd7d4b09461df86">defaultCurvesName</a><code> [get]</code></td></tr>
+<tr class="separator:a5b0f9bb14f3fee221cd7d4b09461df86 inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c50dbccf04b0ec111bb3f392a5a63f inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a93c50dbccf04b0ec111bb3f392a5a63f">asset</a><code> [get]</code></td></tr>
+<tr class="separator:a93c50dbccf04b0ec111bb3f392a5a63f inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5edd301660496564d0d6a79ebe928ef inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#ab5edd301660496564d0d6a79ebe928ef">assetOwner</a><code> [get]</code></td></tr>
+<tr class="separator:ab5edd301660496564d0d6a79ebe928ef inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a160ff95c0f43676673d86d64ca8a8e inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#a2a160ff95c0f43676673d86d64ca8a8e">targetTrack</a><code> [get]</code></td></tr>
+<tr class="separator:a2a160ff95c0f43676673d86d64ca8a8e inherit properties_interface_unity_engine_1_1_timeline_1_1_i_curves_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a59a664033f537694bd70408c50b3fa0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a59a664033f537694bd70408c50b3fa0e">UpdateCurve</a> (EditorCurveBinding binding, AnimationCurve curve)</td></tr>
+<tr class="separator:a59a664033f537694bd70408c50b3fa0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e51089b1b3de0217367394f7f0ed65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a24e51089b1b3de0217367394f7f0ed65">ApplyConstraints</a> (EditorCurveBinding binding, AnimationCurve curve)</td></tr>
+<tr class="separator:a24e51089b1b3de0217367394f7f0ed65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25fe5654c8a3d9583180248eb6f60b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#ad25fe5654c8a3d9583180248eb6f60b4">HandleCurveUpdated</a> (EditorCurveBinding binding, AnimationCurve updatedCurve)</td></tr>
+<tr class="separator:ad25fe5654c8a3d9583180248eb6f60b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f5ac9e092ebbef200d5ce256d423a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#ac6f5ac9e092ebbef200d5ce256d423a7">HandleConstantCurveValueChanged</a> (EditorCurveBinding binding, AnimationCurve updatedCurve)</td></tr>
+<tr class="separator:ac6f5ac9e092ebbef200d5ce256d423a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74691cbd576ded11a838bd535596d46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#ae74691cbd576ded11a838bd535596d46">HandleAllKeysDeleted</a> (EditorCurveBinding binding)</td></tr>
+<tr class="separator:ae74691cbd576ded11a838bd535596d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f6ce652694a760ca56b118ec46b801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#af1f6ce652694a760ca56b118ec46b801">RebuildProxyCurves</a> ()</td></tr>
+<tr class="separator:af1f6ce652694a760ca56b118ec46b801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc83fe2123f2d555659d43ef5505b148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#abc83fe2123f2d555659d43ef5505b148">CreateProxyCurve</a> (SerializedProperty prop, AnimationClip clip, <a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> owner, string propertyName)</td></tr>
+<tr class="separator:abc83fe2123f2d555659d43ef5505b148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7993f6cc381f1dc4baae8966a3621147"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">ICurvesOwner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a7993f6cc381f1dc4baae8966a3621147">m_OriginalOwner</a></td></tr>
+<tr class="separator:a7993f6cc381f1dc4baae8966a3621147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3053e43de05827e02e36b9b8716d0cdf"><td class="memItemLeft" align="right" valign="top">readonly bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a3053e43de05827e02e36b9b8716d0cdf">m_IsAnimatable</a></td></tr>
+<tr class="separator:a3053e43de05827e02e36b9b8716d0cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a77733eb8d55282d9f7d28e55219ecb"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; EditorCurveBinding, SerializedProperty &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a3a77733eb8d55282d9f7d28e55219ecb">m_PropertiesMap</a> = new Dictionary&lt;EditorCurveBinding, SerializedProperty&gt;()</td></tr>
+<tr class="separator:a3a77733eb8d55282d9f7d28e55219ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ae5ba255b26ff9c083bba5a5e76077"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a19ae5ba255b26ff9c083bba5a5e76077">m_ProxyIsRebuilding</a> = 0</td></tr>
+<tr class="separator:a19ae5ba255b26ff9c083bba5a5e76077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b4e7b1003e07cd98a44cba730c10b9"><td class="memItemLeft" align="right" valign="top">AnimationClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#aa2b4e7b1003e07cd98a44cba730c10b9">m_ProxyCurves</a></td></tr>
+<tr class="separator:aa2b4e7b1003e07cd98a44cba730c10b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf41a4e57550e1c17f88292428cec03"><td class="memItemLeft" align="right" valign="top">List&lt; SerializedProperty &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_curves_proxy.html#a5cf41a4e57550e1c17f88292428cec03">m_AllAnimatableParameters</a></td></tr>
+<tr class="separator:a5cf41a4e57550e1c17f88292428cec03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00011">11</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a1a7f613e6528ce9bf34e4f66ff8f50d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEditor.Timeline.CurvesProxy.CurvesProxy </td>
+          <td>(</td>
+          <td class="paramtype">[NotNull] <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">ICurvesOwner</a>&#160;</td>
+          <td class="paramname"><em>originalOwner</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00085">85</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a24e51089b1b3de0217367394f7f0ed65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.ApplyConstraints </td>
+          <td>(</td>
+          <td class="paramtype">EditorCurveBinding&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationCurve&#160;</td>
+          <td class="paramname"><em>curve</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00156">156</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curves_proxy_a24e51089b1b3de0217367394f7f0ed65_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curves_proxy_a24e51089b1b3de0217367394f7f0ed65_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curves_proxy_a24e51089b1b3de0217367394f7f0ed65_cgraph" id="class_unity_editor_1_1_timeline_1_1_curves_proxy_a24e51089b1b3de0217367394f7f0ed65_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a188139898e7b424fbc239b44278ab634" title="UnityEditor.Timeline.Timeline\lAnimationUtilities.ConstrainCurve\lToBooleanValues" alt="" coords="235,5,449,61"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a11eaf3e5d6d35e39fb30e5202ed2540b" title="UnityEditor.Timeline.Timeline\lAnimationUtilities.ConstrainCurve\lToRange" alt="" coords="235,85,449,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a323d00986b5a71a84f00ee426c510b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.ConfigureCurveWrapper </td>
+          <td>(</td>
+          <td class="paramtype">CurveWrapper&#160;</td>
+          <td class="paramname"><em>wrapper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48317fdc2fcdb145c114d33c3fab7b2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.CreateCurves </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>curvesClipName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html#ab52a5e233698ceda9cb60b5ebbcdf528">UnityEngine.Timeline.ICurvesOwner</a>.</p>
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00093">93</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc83fe2123f2d555659d43ef5505b148"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.CreateProxyCurve </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>prop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a>&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>propertyName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00255">255</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curves_proxy_abc83fe2123f2d555659d43ef5505b148_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curves_proxy_abc83fe2123f2d555659d43ef5505b148_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curves_proxy_abc83fe2123f2d555659d43ef5505b148_cgraph" id="class_unity_editor_1_1_timeline_1_1_curves_proxy_abc83fe2123f2d555659d43ef5505b148_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#a7c7243a7ceee7b4df7b5d5bd1d94a555" title="UnityEditor.Timeline.Animated\lParameterUtility.GetCurveBinding" alt="" coords="235,5,449,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_curve_edit_utility.html#a6a472a9ca45c75e7215e43ff8a696241" title="UnityEditor.Timeline.Curve\lEditUtility.AddKeyFrameToCurve" alt="" coords="237,71,447,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_curve_edit_utility.html#aefec6dbcf066f912bf13d9fb2ade6515" title="UnityEditor.Timeline.Curve\lEditUtility.GetKeyValue" alt="" coords="255,136,429,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae74691cbd576ded11a838bd535596d46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.HandleAllKeysDeleted </td>
+          <td>(</td>
+          <td class="paramtype">EditorCurveBinding&#160;</td>
+          <td class="paramname"><em>binding</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00208">208</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6f5ac9e092ebbef200d5ce256d423a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.HandleConstantCurveValueChanged </td>
+          <td>(</td>
+          <td class="paramtype">EditorCurveBinding&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationCurve&#160;</td>
+          <td class="paramname"><em>updatedCurve</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00196">196</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curves_proxy_ac6f5ac9e092ebbef200d5ce256d423a7_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curves_proxy_ac6f5ac9e092ebbef200d5ce256d423a7_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curves_proxy_ac6f5ac9e092ebbef200d5ce256d423a7_cgraph" id="class_unity_editor_1_1_timeline_1_1_curves_proxy_ac6f5ac9e092ebbef200d5ce256d423a7_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_curve_edit_utility.html#a4f80cacd9584afc8237ed840ced75694" title="UnityEditor.Timeline.Curve\lEditUtility.SetFromKeyValue" alt="" coords="321,5,509,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad25fe5654c8a3d9583180248eb6f60b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.HandleCurveUpdated </td>
+          <td>(</td>
+          <td class="paramtype">EditorCurveBinding&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationCurve&#160;</td>
+          <td class="paramname"><em>updatedCurve</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00188">188</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a936b5815275e0ff266990ff4b4dfec32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.RebuildCurves </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00115">115</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1f6ce652694a760ca56b118ec46b801"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.RebuildProxyCurves </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00221">221</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curves_proxy_af1f6ce652694a760ca56b118ec46b801_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curves_proxy_af1f6ce652694a760ca56b118ec46b801_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curves_proxy_af1f6ce652694a760ca56b118ec46b801_cgraph" id="class_unity_editor_1_1_timeline_1_1_curves_proxy_af1f6ce652694a760ca56b118ec46b801_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#ab56f12386b7d2d6070636fcf12179a1d" title="UnityEditor.Timeline.Animated\lParameterUtility.UpdateSerialized\lPlayableAsset" alt="" coords="235,5,452,61"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85" title="UnityEditor.Timeline.Animation\lClipCurveCache.GetCurveInfo" alt="" coords="243,86,443,127"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a59a664033f537694bd70408c50b3fa0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.UpdateCurve </td>
+          <td>(</td>
+          <td class="paramtype">EditorCurveBinding&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationCurve&#160;</td>
+          <td class="paramname"><em>curve</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00138">138</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3015a5dc01e8921c7661a9ff11010a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.CurvesProxy.UpdateCurves </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; CurveWrapper &gt;&#160;</td>
+          <td class="paramname"><em>updatedCurves</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00120">120</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_curves_proxy_ac3015a5dc01e8921c7661a9ff11010a2_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_curves_proxy_ac3015a5dc01e8921c7661a9ff11010a2_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_curves_proxy_ac3015a5dc01e8921c7661a9ff11010a2_cgraph" id="class_unity_editor_1_1_timeline_1_1_curves_proxy_ac3015a5dc01e8921c7661a9ff11010a2_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#ab56f12386b7d2d6070636fcf12179a1d" title="UnityEditor.Timeline.Animated\lParameterUtility.UpdateSerialized\lPlayableAsset" alt="" coords="235,5,452,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a5cf41a4e57550e1c17f88292428cec03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;SerializedProperty&gt; UnityEditor.Timeline.CurvesProxy.m_AllAnimatableParameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00067">67</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3053e43de05827e02e36b9b8716d0cdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly bool UnityEditor.Timeline.CurvesProxy.m_IsAnimatable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7993f6cc381f1dc4baae8966a3621147"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html">ICurvesOwner</a> UnityEditor.Timeline.CurvesProxy.m_OriginalOwner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a77733eb8d55282d9f7d28e55219ecb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;EditorCurveBinding, SerializedProperty&gt; UnityEditor.Timeline.CurvesProxy.m_PropertiesMap = new Dictionary&lt;EditorCurveBinding, SerializedProperty&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2b4e7b1003e07cd98a44cba730c10b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationClip UnityEditor.Timeline.CurvesProxy.m_ProxyCurves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19ae5ba255b26ff9c083bba5a5e76077"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.CurvesProxy.m_ProxyIsRebuilding = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00051">51</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a316910fde881583a6bb9eb80b04d0671"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;SerializedProperty&gt; UnityEditor.Timeline.CurvesProxy.allAnimatableParameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00069">69</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a007d0f88a370fb023f7fc61370a7ce4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> UnityEditor.Timeline.CurvesProxy.asset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa01577ceab4f0684a3d57469423c8059"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_curves_proxy_8cs.html#a324f8dae84ead9019a250b472ca1b436">UnityObject</a> UnityEditor.Timeline.CurvesProxy.assetOwner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28eb19a6dea746fe4852bd8bdf1d8a32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationClip UnityEditor.Timeline.CurvesProxy.curves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93461c2bbb3ae952547d79ae6adaab6d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.Timeline.CurvesProxy.defaultCurvesName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7549f869038fd2587dce3ac486b83dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.CurvesProxy.duration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0be253187456811fe02d9aecedd44eee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.CurvesProxy.hasCurves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54380b891b1ffedd7987d5ee83f2ae24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationClip UnityEditor.Timeline.CurvesProxy.proxyCurves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00055">55</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3a1d1138d5a489de40f2e0440d7c4d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> UnityEditor.Timeline.CurvesProxy.targetTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a> 第 <a class="el" href="_curves_proxy_8cs_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Animation/<a class="el" href="_curves_proxy_8cs_source.html">CurvesProxy.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:47 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

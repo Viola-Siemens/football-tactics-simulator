@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.SpacePartitioner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html">SpacePartitioner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_space_partitioner-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.SpacePartitioner类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+UnityEditor.Timeline.SpacePartitioner 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_space_partitioner_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_space_partitioner_coll__map" id="_unity_editor_8_timeline_8_space_partitioner_coll__map">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html" title="UnityEngine.Timeline.Interval\lTree\&lt; UnityEditor.Timeline.Space\lPartitioner.Entry \&gt;" alt="" coords="5,5,221,61"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>CachedList</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a28db13deca2d4efaa65d47aac98c9fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a28db13deca2d4efaa65d47aac98c9fac">Clear</a> ()</td></tr>
+<tr class="separator:a28db13deca2d4efaa65d47aac98c9fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d8effbff6e987e54683254d4e17680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a85d8effbff6e987e54683254d4e17680">AddBounds</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_bounds.html">IBounds</a> bounds)</td></tr>
+<tr class="separator:a85d8effbff6e987e54683254d4e17680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cdc0700e74458c055f6f7bfbe5e665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a88cdc0700e74458c055f6f7bfbe5e665">AddBounds</a> (object item, Rect rect)</td></tr>
+<tr class="separator:a88cdc0700e74458c055f6f7bfbe5e665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9c9981b3e73a9459535971070f2714"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a3b9c9981b3e73a9459535971070f2714">GetItemsAtPosition&lt; T &gt;</a> (Vector2 position)</td></tr>
+<tr class="memdesc:a3b9c9981b3e73a9459535971070f2714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get items of type T at a given position  <a href="#a3b9c9981b3e73a9459535971070f2714">更多...</a><br /></td></tr>
+<tr class="separator:a3b9c9981b3e73a9459535971070f2714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f7c8bcbe953aec545e4bc1066cb1ed"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a07f7c8bcbe953aec545e4bc1066cb1ed">GetItemsInArea&lt; T &gt;</a> (Rect area)</td></tr>
+<tr class="separator:a07f7c8bcbe953aec545e4bc1066cb1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37156a92a8b51b1b189f16cb7079f047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a37156a92a8b51b1b189f16cb7079f047">DebugDraw</a> ()</td></tr>
+<tr class="separator:a37156a92a8b51b1b189f16cb7079f047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aa04785679389ee7620ff082829539636"><td class="memItemLeft" align="right" valign="top">const EventType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#aa04785679389ee7620ff082829539636">k_GuiEventLock</a> = EventType.Repaint</td></tr>
+<tr class="separator:aa04785679389ee7620ff082829539636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b73c277c4d51a5c178fc7edd8cee687"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a2b73c277c4d51a5c178fc7edd8cee687">m_Tree</a> = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td></tr>
+<tr class="separator:a2b73c277c4d51a5c178fc7edd8cee687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82c32f06e3467c902ef9567dd93a832"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#aa82c32f06e3467c902ef9567dd93a832">m_CacheList</a> = new List&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td></tr>
+<tr class="separator:aa82c32f06e3467c902ef9567dd93a832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00013">13</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a85d8effbff6e987e54683254d4e17680"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SpacePartitioner.AddBounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_bounds.html">IBounds</a>&#160;</td>
+          <td class="paramname"><em>bounds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00054">54</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a85d8effbff6e987e54683254d4e17680_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_space_partitioner_a85d8effbff6e987e54683254d4e17680_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_space_partitioner_a85d8effbff6e987e54683254d4e17680_icgraph" id="class_unity_editor_1_1_timeline_1_1_space_partitioner_a85d8effbff6e987e54683254d4e17680_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html#a870e9f23b54442aa97fe93ea2f82aeaa" title="UnityEditor.Timeline.Inline\lCurveResizeHandle.Draw" alt="" coords="248,5,420,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#a9ff42cdd3346e917053dbe1a6af1684c" title="UnityEditor.Timeline.Inline\lCurveEditor.Draw" alt="" coords="248,71,420,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a6d4cde3bca8dfb29070ed3122e075493" title="UnityEditor.Timeline.Timeline\lClipGUI.AddToSpacePartitioner" alt="" coords="233,136,435,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#a67ae627de262b528a3b009f166e90848" title="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.RegisterRect" alt="" coords="232,201,436,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#af1a7dbb45ab73a42770f5c17c27a1776" title="UnityEditor.Timeline.Timeline\lMarkerGUI.Draw" alt="" coords="239,267,429,308"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#abaa5eedef1a65c08214c9d5dcff270fc" title="UnityEditor.Timeline.Timeline\lClipHandle.Draw" alt="" coords="239,332,429,373"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html#a4022d171772644b993a12fdad1b42c8c" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI.Draw" alt="" coords="239,397,429,439"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#ad67b7bf104ce44ad188f33667bf69177" title="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.Draw" alt="" coords="484,267,675,308"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aa37429b1422423c222d2af72db2b4f22" title="UnityEditor.Timeline.Timeline\lWindow.MarkerHeaderGUI" alt="" coords="484,397,675,439"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a88cdc0700e74458c055f6f7bfbe5e665"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SpacePartitioner.AddBounds </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00059">59</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a88cdc0700e74458c055f6f7bfbe5e665_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_space_partitioner_a88cdc0700e74458c055f6f7bfbe5e665_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_space_partitioner_a88cdc0700e74458c055f6f7bfbe5e665_cgraph" id="class_unity_editor_1_1_timeline_1_1_space_partitioner_a88cdc0700e74458c055f6f7bfbe5e665_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a12421db591e21123842a8a9b960da0f9" title="Add an IInterval to the tree " alt="" coords="232,5,420,47"/><area shape="rect" id="node3" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html#ad37e5465f3cba90b73b02b4f1fe0c7cd" title="UnityEditor.Timeline.Space\lPartitioner.Entry.FromFloat" alt="" coords="237,71,415,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a28db13deca2d4efaa65d47aac98c9fac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SpacePartitioner.Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00049">49</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_cgraph" id="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a7b53dd9d1311000c641a8a58101d8497" title="UnityEngine.Timeline.Interval\lTree.Clear" alt="" coords="232,5,420,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_icgraph" id="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ad11b3efd8dd31626ee3ef7d6461432b8" title="UnityEditor.Timeline.Timeline\lWindow.TracksGUI" alt="" coords="232,5,423,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a37156a92a8b51b1b189f16cb7079f047"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SpacePartitioner.DebugDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00112">112</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_cgraph" id="class_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#aae40d9e2e77a75c1cfefcb9032a4ffe8" title="Query the tree at a particular range of time " alt="" coords="232,5,420,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b9c9981b3e73a9459535971070f2714"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;T&gt; UnityEditor.Timeline.SpacePartitioner.GetItemsAtPosition&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get items of type T at a given position </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td></td></tr>
+    <tr><td class="paramname">inClipSpace</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Uses a (1,1) sized box Use .ToList() or .ToArray() when not enumerating the result immediately </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00085">85</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a07f7c8bcbe953aec545e4bc1066cb1ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;T&gt; UnityEditor.Timeline.SpacePartitioner.GetItemsInArea&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>area</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">area</td><td></td></tr>
+    <tr><td class="paramname">inClipSpace</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00097">97</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_cgraph" id="class_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_cgraph">
+<area shape="rect" id="node2" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#aae40d9e2e77a75c1cfefcb9032a4ffe8" title="Query the tree at a particular range of time " alt="" coords="260,5,448,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aa04785679389ee7620ff082829539636"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EventType UnityEditor.Timeline.SpacePartitioner.k_GuiEventLock = EventType.Repaint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa82c32f06e3467c902ef9567dd93a832"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt; UnityEditor.Timeline.SpacePartitioner.m_CacheList = new List&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b73c277c4d51a5c178fc7edd8cee687"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt; UnityEditor.Timeline.SpacePartitioner.m_Tree = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a> 第 <a class="el" href="_space_partitioner_8cs_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/<a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:50 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

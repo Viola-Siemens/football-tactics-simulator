@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/TMP_InputFieldEditor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_InputFieldEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___input_field_editor_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.UI;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.UI;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.AnimatedValues;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a>.EditorUtilities</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [CanEditMultipleObjects]</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [CustomEditor(typeof(TMP_InputField), <span class="keyword">true</span>)]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html">TMP_InputFieldEditor</a> : SelectableEditor</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html">   14</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">struct </span><a class="code" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html">m_foldout</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        { <span class="comment">// Track Inspector foldout panel states, globally.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html#a73f4b7fb631722ed1ea17b1600326bcb">   16</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> textInput = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html#ae298bf5f9f81627d5498f5db1bacb8b5">   17</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> fontSettings = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html#a39a1a912104b7b62ad900d5cd8380338">   18</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> extraSettings = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="comment">//public static bool shadowSetting = false;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="comment">//public static bool materialEditor = true;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8f8e183d9fde271af851bedcb426bd88">   23</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8f8e183d9fde271af851bedcb426bd88">m_TextViewport</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8e0f92159884ed36629358fc23e87007">   24</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8e0f92159884ed36629358fc23e87007">m_TextComponent</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a127c90303dc898238a6e3b5831004b9f">   25</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a127c90303dc898238a6e3b5831004b9f">m_Text</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a0868559075e18ca923a510602e1dfd50">   26</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a0868559075e18ca923a510602e1dfd50">m_ContentType</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a9661c27f93e5f1e9e970312511fd1542">   27</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a9661c27f93e5f1e9e970312511fd1542">m_LineType</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#acefc3b548664d2b96da8251d7d324182">   28</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#acefc3b548664d2b96da8251d7d324182">m_LineLimit</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#ae05f6dfe0d32862f3cee8c280973d0db">   29</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#ae05f6dfe0d32862f3cee8c280973d0db">m_InputType</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a9977ab194ebdc286a104c3708490f63f">   30</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a9977ab194ebdc286a104c3708490f63f">m_CharacterValidation</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a114820ff6300134424646c5c2f82ed09">   31</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a114820ff6300134424646c5c2f82ed09">m_InputValidator</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a36b300943e96ec2900b5c78b9085e8d9">   32</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a36b300943e96ec2900b5c78b9085e8d9">m_RegexValue</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#af815727876da3a4a2497ca047bf0db6f">   33</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#af815727876da3a4a2497ca047bf0db6f">m_KeyboardType</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a14ed21fae94db02755b18055edd0181c">   34</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a14ed21fae94db02755b18055edd0181c">m_CharacterLimit</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aa8dbbf0191624dff5e35fa71c8a7205d">   35</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aa8dbbf0191624dff5e35fa71c8a7205d">m_CaretBlinkRate</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a630a1c1b4399631efa98f0c9ba33a105">   36</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a630a1c1b4399631efa98f0c9ba33a105">m_CaretWidth</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aad3c3607e64bba596970f79cf0df2ad7">   37</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aad3c3607e64bba596970f79cf0df2ad7">m_CaretColor</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a4952c3da49beaa577cd4cf2528d97bca">   38</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a4952c3da49beaa577cd4cf2528d97bca">m_CustomCaretColor</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#ad7208dbf5ee9108480a2fd33fb95934b">   39</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#ad7208dbf5ee9108480a2fd33fb95934b">m_SelectionColor</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#acac5ee5b382ca2bc329847f935538847">   40</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#acac5ee5b382ca2bc329847f935538847">m_HideMobileKeyboard</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a19e4535f0bee17ec7e53c67da75164e7">   41</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a19e4535f0bee17ec7e53c67da75164e7">m_HideMobileInput</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a18ec8f35ce35ae42e640b806e09cb3e4">   42</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a18ec8f35ce35ae42e640b806e09cb3e4">m_Placeholder</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a0b7e74218c12b310a57360ce7f2ef6f2">   43</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a0b7e74218c12b310a57360ce7f2ef6f2">m_VerticalScrollbar</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aa57a4b2609636a3797b7a353d750d80b">   44</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aa57a4b2609636a3797b7a353d750d80b">m_ScrollbarScrollSensitivity</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a3e0114d90059e49c33251b76748136ff">   45</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a3e0114d90059e49c33251b76748136ff">m_OnValueChanged</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#af87f470d2df5dab138a78ef8e58cc286">   46</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#af87f470d2df5dab138a78ef8e58cc286">m_OnEndEdit</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a06b3dc819c253e9781d043fae1251e83">   47</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a06b3dc819c253e9781d043fae1251e83">m_OnSelect</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a73721705a984c90c7fd30b628f205c53">   48</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a73721705a984c90c7fd30b628f205c53">m_OnDeselect</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a12dea6a5a40589ef386ea92dd3bb06ac">   49</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a12dea6a5a40589ef386ea92dd3bb06ac">m_ReadOnly</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a41d625b1317522174e1ff9f8f04d8910">   50</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a41d625b1317522174e1ff9f8f04d8910">m_RichText</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8c1965f37b60a5c5fdbd0c3eb69d2405">   51</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8c1965f37b60a5c5fdbd0c3eb69d2405">m_RichTextEditingAllowed</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8e6bcda7c8068137f36da7ddbd63894f">   52</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8e6bcda7c8068137f36da7ddbd63894f">m_ResetOnDeActivation</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#addd59427b14ef90a7cf053948d3d2e19">   53</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#addd59427b14ef90a7cf053948d3d2e19">m_RestoreOriginalTextOnEscape</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a4de0e7dd6576eb116f60796685897d70">   55</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a4de0e7dd6576eb116f60796685897d70">m_OnFocusSelectAll</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a94d0e2667d5199734453ea562f1c59d5">   56</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a94d0e2667d5199734453ea562f1c59d5">m_GlobalPointSize</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a506ded8d93cc81823114a5770d0ce60f">   57</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a506ded8d93cc81823114a5770d0ce60f">m_GlobalFontAsset</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aae883ab7f950ab8798b7440bcc71a51f">   59</a></span>&#160;        AnimBool <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aae883ab7f950ab8798b7440bcc71a51f">m_CustomColor</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//TMP_InputValidator m_ValidationScript;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a13a786fd7318702adc91f2d3a4e5f240">   63</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a13a786fd7318702adc91f2d3a4e5f240">OnEnable</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            base.OnEnable();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            m_TextViewport = serializedObject.FindProperty(<span class="stringliteral">&quot;m_TextViewport&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            m_TextComponent = serializedObject.FindProperty(<span class="stringliteral">&quot;m_TextComponent&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            m_Text = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Text&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            m_ContentType = serializedObject.FindProperty(<span class="stringliteral">&quot;m_ContentType&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            m_LineType = serializedObject.FindProperty(<span class="stringliteral">&quot;m_LineType&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            m_LineLimit = serializedObject.FindProperty(<span class="stringliteral">&quot;m_LineLimit&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            m_InputType = serializedObject.FindProperty(<span class="stringliteral">&quot;m_InputType&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            m_CharacterValidation = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CharacterValidation&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            m_InputValidator = serializedObject.FindProperty(<span class="stringliteral">&quot;m_InputValidator&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            m_RegexValue = serializedObject.FindProperty(<span class="stringliteral">&quot;m_RegexValue&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            m_KeyboardType = serializedObject.FindProperty(<span class="stringliteral">&quot;m_KeyboardType&quot;</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            m_CharacterLimit = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CharacterLimit&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            m_CaretBlinkRate = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CaretBlinkRate&quot;</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            m_CaretWidth = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CaretWidth&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            m_CaretColor = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CaretColor&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            m_CustomCaretColor = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CustomCaretColor&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            m_SelectionColor = serializedObject.FindProperty(<span class="stringliteral">&quot;m_SelectionColor&quot;</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            m_HideMobileKeyboard = serializedObject.FindProperty(<span class="stringliteral">&quot;m_HideSoftKeyboard&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            m_HideMobileInput = serializedObject.FindProperty(<span class="stringliteral">&quot;m_HideMobileInput&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            m_Placeholder = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Placeholder&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            m_VerticalScrollbar = serializedObject.FindProperty(<span class="stringliteral">&quot;m_VerticalScrollbar&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            m_ScrollbarScrollSensitivity = serializedObject.FindProperty(<span class="stringliteral">&quot;m_ScrollSensitivity&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            m_OnValueChanged = serializedObject.FindProperty(<span class="stringliteral">&quot;m_OnValueChanged&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            m_OnEndEdit = serializedObject.FindProperty(<span class="stringliteral">&quot;m_OnEndEdit&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            m_OnSelect = serializedObject.FindProperty(<span class="stringliteral">&quot;m_OnSelect&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            m_OnDeselect = serializedObject.FindProperty(<span class="stringliteral">&quot;m_OnDeselect&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            m_ReadOnly = serializedObject.FindProperty(<span class="stringliteral">&quot;m_ReadOnly&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            m_RichText = serializedObject.FindProperty(<span class="stringliteral">&quot;m_RichText&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            m_RichTextEditingAllowed = serializedObject.FindProperty(<span class="stringliteral">&quot;m_isRichTextEditingAllowed&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            m_ResetOnDeActivation = serializedObject.FindProperty(<span class="stringliteral">&quot;m_ResetOnDeActivation&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            m_RestoreOriginalTextOnEscape = serializedObject.FindProperty(<span class="stringliteral">&quot;m_RestoreOriginalTextOnEscape&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            m_OnFocusSelectAll = serializedObject.FindProperty(<span class="stringliteral">&quot;m_OnFocusSelectAll&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            m_GlobalPointSize = serializedObject.FindProperty(<span class="stringliteral">&quot;m_GlobalPointSize&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            m_GlobalFontAsset = serializedObject.FindProperty(<span class="stringliteral">&quot;m_GlobalFontAsset&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            m_CustomColor = <span class="keyword">new</span> AnimBool(m_CustomCaretColor.boolValue);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            m_CustomColor.valueChanged.AddListener(Repaint);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a3a6a4623990bf29d8bd5c3016b6b8509">  110</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a3a6a4623990bf29d8bd5c3016b6b8509">OnDisable</a>()</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            base.OnDisable();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            m_CustomColor.valueChanged.RemoveListener(Repaint);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a59b111f8284526795f6dcc32a3db65f6">  116</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a59b111f8284526795f6dcc32a3db65f6">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            serializedObject.Update();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            base.OnInspectorGUI();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            EditorGUILayout.PropertyField(m_TextViewport);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            EditorGUILayout.PropertyField(m_TextComponent);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html">TextMeshProUGUI</a> text = null;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">if</span> (m_TextComponent != null &amp;&amp; m_TextComponent.objectReferenceValue != null)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                text = m_TextComponent.objectReferenceValue as <a class="code" href="class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html">TextMeshProUGUI</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="comment">//if (text.supportRichText)</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="comment">//{</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="comment">//    EditorGUILayout.HelpBox(&quot;Using Rich Text with input is unsupported.&quot;, MessageType.Warning);</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="comment">//}</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            EditorGUI.BeginDisabledGroup(m_TextComponent == null || m_TextComponent.objectReferenceValue == null);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="comment">// TEXT INPUT BOX</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            EditorGUILayout.PropertyField(m_Text);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="comment">// INPUT FIELD SETTINGS</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">            #region INPUT FIELD SETTINGS</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <a class="code" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html">m_foldout</a>.<a class="code" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html#ae298bf5f9f81627d5498f5db1bacb8b5">fontSettings</a> = EditorGUILayout.Foldout(<a class="code" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html">m_foldout</a>.<a class="code" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html#ae298bf5f9f81627d5498f5db1bacb8b5">fontSettings</a>, <span class="stringliteral">&quot;Input Field Settings&quot;</span>, <span class="keyword">true</span>, <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acaa3da4e16b2759bdeae5252c9cb1d1d">boldFoldout</a>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html">m_foldout</a>.<a class="code" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html#ae298bf5f9f81627d5498f5db1bacb8b5">fontSettings</a>)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                EditorGUI.indentLevel++;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                EditorGUILayout.PropertyField(m_GlobalFontAsset, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Font Asset&quot;</span>, <span class="stringliteral">&quot;Set the Font Asset for both Placeholder and Input Field text object.&quot;</span>));</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    <a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a> inputField = target as <a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    inputField.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a2ed20e5b12507b1ff2e108dd99d4091f">SetGlobalFontAsset</a>(m_GlobalFontAsset.objectReferenceValue as <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                EditorGUILayout.PropertyField(m_GlobalPointSize, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Point Size&quot;</span>, <span class="stringliteral">&quot;Set the point size of both Placeholder and Input Field text object.&quot;</span>));</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                    <a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a> inputField = target as <a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    inputField.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#aba2ab9700cbd18d64736530a34d91068">SetGlobalPointSize</a>(m_GlobalPointSize.floatValue);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                EditorGUILayout.PropertyField(m_CharacterLimit);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                EditorGUILayout.Space();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                EditorGUILayout.PropertyField(m_ContentType);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">if</span> (!m_ContentType.hasMultipleDifferentValues)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    EditorGUI.indentLevel++;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    <span class="keywordflow">if</span> (m_ContentType.enumValueIndex == (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a30e2af425a58881d8b71361e70ddbe27">ContentType</a>.Standard ||</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        m_ContentType.enumValueIndex == (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a30e2af425a58881d8b71361e70ddbe27">ContentType</a>.Autocorrected ||</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                        m_ContentType.enumValueIndex == (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a30e2af425a58881d8b71361e70ddbe27">ContentType</a>.Custom)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                        EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                        EditorGUILayout.PropertyField(m_LineType);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                        <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                            <span class="keywordflow">if</span> (text != null)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                            {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                                <span class="keywordflow">if</span> (m_LineType.enumValueIndex == (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a0da8af0aef5faef7c405ac72d28bd214">LineType</a>.SingleLine)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                                    text.<a class="code" href="class_t_m_pro_1_1_t_m_p___text.html#a9add0d44e7faabf1070b2ace2ac89378">enableWordWrapping</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                    text.<a class="code" href="class_t_m_pro_1_1_t_m_p___text.html#a9add0d44e7faabf1070b2ace2ac89378">enableWordWrapping</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                                }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        <span class="keywordflow">if</span> (m_LineType.enumValueIndex != (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a0da8af0aef5faef7c405ac72d28bd214">LineType</a>.SingleLine)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                        {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                            EditorGUILayout.PropertyField(m_LineLimit);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    <span class="keywordflow">if</span> (m_ContentType.enumValueIndex == (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a30e2af425a58881d8b71361e70ddbe27">ContentType</a>.Custom)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        EditorGUILayout.PropertyField(m_InputType);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        EditorGUILayout.PropertyField(m_KeyboardType);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        EditorGUILayout.PropertyField(m_CharacterValidation);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        <span class="keywordflow">if</span> (m_CharacterValidation.enumValueIndex == (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a96ac8b8cc04492aadbf24839b8d6376e">CharacterValidation</a>.Regex)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                            EditorGUILayout.PropertyField(m_RegexValue);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                        }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_CharacterValidation.enumValueIndex == (<span class="keywordtype">int</span>)<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html">TMP_InputField</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___input_field.html#a96ac8b8cc04492aadbf24839b8d6376e">CharacterValidation</a>.CustomValidator)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                        {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                            EditorGUILayout.PropertyField(m_InputValidator);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    EditorGUI.indentLevel--;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                EditorGUILayout.Space();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                EditorGUILayout.PropertyField(m_Placeholder);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                EditorGUILayout.PropertyField(m_VerticalScrollbar);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                <span class="keywordflow">if</span> (m_VerticalScrollbar.objectReferenceValue != null)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    EditorGUILayout.PropertyField(m_ScrollbarScrollSensitivity);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                EditorGUILayout.PropertyField(m_CaretBlinkRate);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                EditorGUILayout.PropertyField(m_CaretWidth);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                EditorGUILayout.PropertyField(m_CustomCaretColor);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                m_CustomColor.target = m_CustomCaretColor.boolValue;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <span class="keywordflow">if</span> (EditorGUILayout.BeginFadeGroup(m_CustomColor.faded))</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    EditorGUILayout.PropertyField(m_CaretColor);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                EditorGUILayout.EndFadeGroup();</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                EditorGUILayout.PropertyField(m_SelectionColor);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                EditorGUI.indentLevel--;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">            #endregion</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="comment">// CONTROL SETTINGS</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">            #region CONTROL SETTINGS</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            m_foldout.extraSettings = EditorGUILayout.Foldout(m_foldout.extraSettings, <span class="stringliteral">&quot;Control Settings&quot;</span>, <span class="keyword">true</span>, <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acaa3da4e16b2759bdeae5252c9cb1d1d">boldFoldout</a>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">if</span> (m_foldout.extraSettings)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                EditorGUI.indentLevel++;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                EditorGUILayout.PropertyField(m_OnFocusSelectAll, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;OnFocus - Select All&quot;</span>, <span class="stringliteral">&quot;Should all the text be selected when the Input Field is selected.&quot;</span>));</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                EditorGUILayout.PropertyField(m_ResetOnDeActivation, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Reset On DeActivation&quot;</span>, <span class="stringliteral">&quot;Should the Text and Caret position be reset when Input Field is DeActivated.&quot;</span>));</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                EditorGUILayout.PropertyField(m_RestoreOriginalTextOnEscape, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Restore On ESC Key&quot;</span>, <span class="stringliteral">&quot;Should the original text be restored when pressing ESC.&quot;</span>));</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                EditorGUILayout.PropertyField(m_HideMobileKeyboard, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Hide Soft Keyboard&quot;</span>, <span class="stringliteral">&quot;Controls the visibility of the mobile virtual keyboard.&quot;</span>));</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                EditorGUILayout.PropertyField(m_HideMobileInput, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Hide Mobile Input&quot;</span>, <span class="stringliteral">&quot;Controls the visibility of the editable text field above the mobile virtual keyboard. Not supported on all mobile platforms.&quot;</span>));</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                EditorGUILayout.PropertyField(m_ReadOnly);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                EditorGUILayout.PropertyField(m_RichText);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                EditorGUILayout.PropertyField(m_RichTextEditingAllowed, <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Allow Rich Text Editing&quot;</span>));</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                EditorGUI.indentLevel--;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">            #endregion</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            EditorGUILayout.PropertyField(m_OnValueChanged);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            EditorGUILayout.PropertyField(m_OnEndEdit);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            EditorGUILayout.PropertyField(m_OnSelect);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            EditorGUILayout.PropertyField(m_OnDeselect);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            EditorGUI.EndDisabledGroup();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_aae883ab7f950ab8798b7440bcc71a51f"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aae883ab7f950ab8798b7440bcc71a51f">TMPro.EditorUtilities.TMP_InputFieldEditor.m_CustomColor</a></div><div class="ttdeci">AnimBool m_CustomColor</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00059">TMP_InputFieldEditor.cs:59</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_acac5ee5b382ca2bc329847f935538847"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#acac5ee5b382ca2bc329847f935538847">TMPro.EditorUtilities.TMP_InputFieldEditor.m_HideMobileKeyboard</a></div><div class="ttdeci">SerializedProperty m_HideMobileKeyboard</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00040">TMP_InputFieldEditor.cs:40</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a8c1965f37b60a5c5fdbd0c3eb69d2405"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8c1965f37b60a5c5fdbd0c3eb69d2405">TMPro.EditorUtilities.TMP_InputFieldEditor.m_RichTextEditingAllowed</a></div><div class="ttdeci">SerializedProperty m_RichTextEditingAllowed</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00051">TMP_InputFieldEditor.cs:51</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a94d0e2667d5199734453ea562f1c59d5"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a94d0e2667d5199734453ea562f1c59d5">TMPro.EditorUtilities.TMP_InputFieldEditor.m_GlobalPointSize</a></div><div class="ttdeci">SerializedProperty m_GlobalPointSize</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00056">TMP_InputFieldEditor.cs:56</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a9977ab194ebdc286a104c3708490f63f"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a9977ab194ebdc286a104c3708490f63f">TMPro.EditorUtilities.TMP_InputFieldEditor.m_CharacterValidation</a></div><div class="ttdeci">SerializedProperty m_CharacterValidation</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00030">TMP_InputFieldEditor.cs:30</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a0b7e74218c12b310a57360ce7f2ef6f2"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a0b7e74218c12b310a57360ce7f2ef6f2">TMPro.EditorUtilities.TMP_InputFieldEditor.m_VerticalScrollbar</a></div><div class="ttdeci">SerializedProperty m_VerticalScrollbar</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00043">TMP_InputFieldEditor.cs:43</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a0868559075e18ca923a510602e1dfd50"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a0868559075e18ca923a510602e1dfd50">TMPro.EditorUtilities.TMP_InputFieldEditor.m_ContentType</a></div><div class="ttdeci">SerializedProperty m_ContentType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00026">TMP_InputFieldEditor.cs:26</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a3a6a4623990bf29d8bd5c3016b6b8509"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a3a6a4623990bf29d8bd5c3016b6b8509">TMPro.EditorUtilities.TMP_InputFieldEditor.OnDisable</a></div><div class="ttdeci">override void OnDisable()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00110">TMP_InputFieldEditor.cs:110</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_ae05f6dfe0d32862f3cee8c280973d0db"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#ae05f6dfe0d32862f3cee8c280973d0db">TMPro.EditorUtilities.TMP_InputFieldEditor.m_InputType</a></div><div class="ttdeci">SerializedProperty m_InputType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00029">TMP_InputFieldEditor.cs:29</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a4de0e7dd6576eb116f60796685897d70"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a4de0e7dd6576eb116f60796685897d70">TMPro.EditorUtilities.TMP_InputFieldEditor.m_OnFocusSelectAll</a></div><div class="ttdeci">SerializedProperty m_OnFocusSelectAll</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00055">TMP_InputFieldEditor.cs:55</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_aad3c3607e64bba596970f79cf0df2ad7"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aad3c3607e64bba596970f79cf0df2ad7">TMPro.EditorUtilities.TMP_InputFieldEditor.m_CaretColor</a></div><div class="ttdeci">SerializedProperty m_CaretColor</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00037">TMP_InputFieldEditor.cs:37</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_af815727876da3a4a2497ca047bf0db6f"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#af815727876da3a4a2497ca047bf0db6f">TMPro.EditorUtilities.TMP_InputFieldEditor.m_KeyboardType</a></div><div class="ttdeci">SerializedProperty m_KeyboardType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00033">TMP_InputFieldEditor.cs:33</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_html"><div class="ttname"><a href="class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html">TMPro.TextMeshProUGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_text_mesh_pro_u_g_u_i_8cs_source.html#l00021">TextMeshProUGUI.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a127c90303dc898238a6e3b5831004b9f"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a127c90303dc898238a6e3b5831004b9f">TMPro.EditorUtilities.TMP_InputFieldEditor.m_Text</a></div><div class="ttdeci">SerializedProperty m_Text</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00025">TMP_InputFieldEditor.cs:25</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout_html_ae298bf5f9f81627d5498f5db1bacb8b5"><div class="ttname"><a href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html#ae298bf5f9f81627d5498f5db1bacb8b5">TMPro.EditorUtilities.TMP_InputFieldEditor.m_foldout.fontSettings</a></div><div class="ttdeci">static bool fontSettings</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00017">TMP_InputFieldEditor.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a59b111f8284526795f6dcc32a3db65f6"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a59b111f8284526795f6dcc32a3db65f6">TMPro.EditorUtilities.TMP_InputFieldEditor.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00116">TMP_InputFieldEditor.cs:116</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a3e0114d90059e49c33251b76748136ff"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a3e0114d90059e49c33251b76748136ff">TMPro.EditorUtilities.TMP_InputFieldEditor.m_OnValueChanged</a></div><div class="ttdeci">SerializedProperty m_OnValueChanged</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00045">TMP_InputFieldEditor.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_acefc3b548664d2b96da8251d7d324182"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#acefc3b548664d2b96da8251d7d324182">TMPro.EditorUtilities.TMP_InputFieldEditor.m_LineLimit</a></div><div class="ttdeci">SerializedProperty m_LineLimit</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00028">TMP_InputFieldEditor.cs:28</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_addd59427b14ef90a7cf053948d3d2e19"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#addd59427b14ef90a7cf053948d3d2e19">TMPro.EditorUtilities.TMP_InputFieldEditor.m_RestoreOriginalTextOnEscape</a></div><div class="ttdeci">SerializedProperty m_RestoreOriginalTextOnEscape</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00053">TMP_InputFieldEditor.cs:53</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_aa8dbbf0191624dff5e35fa71c8a7205d"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aa8dbbf0191624dff5e35fa71c8a7205d">TMPro.EditorUtilities.TMP_InputFieldEditor.m_CaretBlinkRate</a></div><div class="ttdeci">SerializedProperty m_CaretBlinkRate</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00035">TMP_InputFieldEditor.cs:35</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___input_field_html_a0da8af0aef5faef7c405ac72d28bd214"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___input_field.html#a0da8af0aef5faef7c405ac72d28bd214">TMPro.TMP_InputField.LineType</a></div><div class="ttdeci">LineType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_8cs_source.html#l00068">TMP_InputField.cs:68</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html">TMPro.EditorUtilities.TMP_InputFieldEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00012">TMP_InputFieldEditor.cs:12</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_af87f470d2df5dab138a78ef8e58cc286"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#af87f470d2df5dab138a78ef8e58cc286">TMPro.EditorUtilities.TMP_InputFieldEditor.m_OnEndEdit</a></div><div class="ttdeci">SerializedProperty m_OnEndEdit</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00046">TMP_InputFieldEditor.cs:46</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMPro.EditorUtilities.TMP_UIStyleManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00009">TMP_UIStyleManager.cs:9</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a13a786fd7318702adc91f2d3a4e5f240"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a13a786fd7318702adc91f2d3a4e5f240">TMPro.EditorUtilities.TMP_InputFieldEditor.OnEnable</a></div><div class="ttdeci">override void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00063">TMP_InputFieldEditor.cs:63</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a8e6bcda7c8068137f36da7ddbd63894f"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8e6bcda7c8068137f36da7ddbd63894f">TMPro.EditorUtilities.TMP_InputFieldEditor.m_ResetOnDeActivation</a></div><div class="ttdeci">SerializedProperty m_ResetOnDeActivation</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00052">TMP_InputFieldEditor.cs:52</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___input_field_html_a96ac8b8cc04492aadbf24839b8d6376e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___input_field.html#a96ac8b8cc04492aadbf24839b8d6376e">TMPro.TMP_InputField.CharacterValidation</a></div><div class="ttdeci">CharacterValidation</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_8cs_source.html#l00055">TMP_InputField.cs:55</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a41d625b1317522174e1ff9f8f04d8910"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a41d625b1317522174e1ff9f8f04d8910">TMPro.EditorUtilities.TMP_InputFieldEditor.m_RichText</a></div><div class="ttdeci">SerializedProperty m_RichText</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00050">TMP_InputFieldEditor.cs:50</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a8e0f92159884ed36629358fc23e87007"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8e0f92159884ed36629358fc23e87007">TMPro.EditorUtilities.TMP_InputFieldEditor.m_TextComponent</a></div><div class="ttdeci">SerializedProperty m_TextComponent</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00024">TMP_InputFieldEditor.cs:24</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a73721705a984c90c7fd30b628f205c53"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a73721705a984c90c7fd30b628f205c53">TMPro.EditorUtilities.TMP_InputFieldEditor.m_OnDeselect</a></div><div class="ttdeci">SerializedProperty m_OnDeselect</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00048">TMP_InputFieldEditor.cs:48</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a114820ff6300134424646c5c2f82ed09"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a114820ff6300134424646c5c2f82ed09">TMPro.EditorUtilities.TMP_InputFieldEditor.m_InputValidator</a></div><div class="ttdeci">SerializedProperty m_InputValidator</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00031">TMP_InputFieldEditor.cs:31</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a8f8e183d9fde271af851bedcb426bd88"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a8f8e183d9fde271af851bedcb426bd88">TMPro.EditorUtilities.TMP_InputFieldEditor.m_TextViewport</a></div><div class="ttdeci">SerializedProperty m_TextViewport</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00023">TMP_InputFieldEditor.cs:23</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___input_field_html_aba2ab9700cbd18d64736530a34d91068"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___input_field.html#aba2ab9700cbd18d64736530a34d91068">TMPro.TMP_InputField.SetGlobalPointSize</a></div><div class="ttdeci">void SetGlobalPointSize(float pointSize)</div><div class="ttdoc">Function to conveniently set the point size of both Placeholder and Input Field text object...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_8cs_source.html#l04087">TMP_InputField.cs:4087</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a18ec8f35ce35ae42e640b806e09cb3e4"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a18ec8f35ce35ae42e640b806e09cb3e4">TMPro.EditorUtilities.TMP_InputFieldEditor.m_Placeholder</a></div><div class="ttdeci">SerializedProperty m_Placeholder</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00042">TMP_InputFieldEditor.cs:42</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_aa57a4b2609636a3797b7a353d750d80b"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#aa57a4b2609636a3797b7a353d750d80b">TMPro.EditorUtilities.TMP_InputFieldEditor.m_ScrollbarScrollSensitivity</a></div><div class="ttdeci">SerializedProperty m_ScrollbarScrollSensitivity</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00044">TMP_InputFieldEditor.cs:44</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout_html"><div class="ttname"><a href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_1_1m__foldout.html">TMPro.EditorUtilities.TMP_InputFieldEditor.m_foldout</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00014">TMP_InputFieldEditor.cs:14</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_ad7208dbf5ee9108480a2fd33fb95934b"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#ad7208dbf5ee9108480a2fd33fb95934b">TMPro.EditorUtilities.TMP_InputFieldEditor.m_SelectionColor</a></div><div class="ttdeci">SerializedProperty m_SelectionColor</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00039">TMP_InputFieldEditor.cs:39</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a4952c3da49beaa577cd4cf2528d97bca"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a4952c3da49beaa577cd4cf2528d97bca">TMPro.EditorUtilities.TMP_InputFieldEditor.m_CustomCaretColor</a></div><div class="ttdeci">SerializedProperty m_CustomCaretColor</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00038">TMP_InputFieldEditor.cs:38</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_html_a9add0d44e7faabf1070b2ace2ac89378"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text.html#a9add0d44e7faabf1070b2ace2ac89378">TMPro.TMP_Text.enableWordWrapping</a></div><div class="ttdeci">bool enableWordWrapping</div><div class="ttdoc">Controls whether or not word wrapping is applied. When disabled, the text will be displayed on a sing...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l00607">TMP_Text.cs:607</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a12dea6a5a40589ef386ea92dd3bb06ac"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a12dea6a5a40589ef386ea92dd3bb06ac">TMPro.EditorUtilities.TMP_InputFieldEditor.m_ReadOnly</a></div><div class="ttdeci">SerializedProperty m_ReadOnly</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00049">TMP_InputFieldEditor.cs:49</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___input_field_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___input_field.html">TMPro.TMP_InputField</a></div><div class="ttdoc">Editable text input field. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_8cs_source.html#l00021">TMP_InputField.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a36b300943e96ec2900b5c78b9085e8d9"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a36b300943e96ec2900b5c78b9085e8d9">TMPro.EditorUtilities.TMP_InputFieldEditor.m_RegexValue</a></div><div class="ttdeci">SerializedProperty m_RegexValue</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00032">TMP_InputFieldEditor.cs:32</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMPro.TMP_FontAsset</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00022">TMP_FontAsset.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a06b3dc819c253e9781d043fae1251e83"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a06b3dc819c253e9781d043fae1251e83">TMPro.EditorUtilities.TMP_InputFieldEditor.m_OnSelect</a></div><div class="ttdeci">SerializedProperty m_OnSelect</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00047">TMP_InputFieldEditor.cs:47</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a14ed21fae94db02755b18055edd0181c"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a14ed21fae94db02755b18055edd0181c">TMPro.EditorUtilities.TMP_InputFieldEditor.m_CharacterLimit</a></div><div class="ttdeci">SerializedProperty m_CharacterLimit</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00034">TMP_InputFieldEditor.cs:34</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___input_field_html_a30e2af425a58881d8b71361e70ddbe27"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___input_field.html#a30e2af425a58881d8b71361e70ddbe27">TMPro.TMP_InputField.ContentType</a></div><div class="ttdeci">ContentType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_8cs_source.html#l00034">TMP_InputField.cs:34</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a9661c27f93e5f1e9e970312511fd1542"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a9661c27f93e5f1e9e970312511fd1542">TMPro.EditorUtilities.TMP_InputFieldEditor.m_LineType</a></div><div class="ttdeci">SerializedProperty m_LineType</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00027">TMP_InputFieldEditor.cs:27</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_acaa3da4e16b2759bdeae5252c9cb1d1d"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acaa3da4e16b2759bdeae5252c9cb1d1d">TMPro.EditorUtilities.TMP_UIStyleManager.boldFoldout</a></div><div class="ttdeci">static GUIStyle boldFoldout</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00013">TMP_UIStyleManager.cs:13</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___input_field_html_a2ed20e5b12507b1ff2e108dd99d4091f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___input_field.html#a2ed20e5b12507b1ff2e108dd99d4091f">TMPro.TMP_InputField.SetGlobalFontAsset</a></div><div class="ttdeci">void SetGlobalFontAsset(TMP_FontAsset fontAsset)</div><div class="ttdoc">Function to conveniently set the Font Asset of both Placeholder and Input Field text object...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_8cs_source.html#l04099">TMP_InputField.cs:4099</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a506ded8d93cc81823114a5770d0ce60f"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a506ded8d93cc81823114a5770d0ce60f">TMPro.EditorUtilities.TMP_InputFieldEditor.m_GlobalFontAsset</a></div><div class="ttdeci">SerializedProperty m_GlobalFontAsset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00057">TMP_InputFieldEditor.cs:57</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a19e4535f0bee17ec7e53c67da75164e7"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a19e4535f0bee17ec7e53c67da75164e7">TMPro.EditorUtilities.TMP_InputFieldEditor.m_HideMobileInput</a></div><div class="ttdeci">SerializedProperty m_HideMobileInput</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00041">TMP_InputFieldEditor.cs:41</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor_html_a630a1c1b4399631efa98f0c9ba33a105"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___input_field_editor.html#a630a1c1b4399631efa98f0c9ba33a105">TMPro.EditorUtilities.TMP_InputFieldEditor.m_CaretWidth</a></div><div class="ttdeci">SerializedProperty m_CaretWidth</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___input_field_editor_8cs_source.html#l00036">TMP_InputFieldEditor.cs:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

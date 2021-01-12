@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/TimeReferenceUtility.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_0724e84c20f94a0e0cb26eb6bc9f3803.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimeReferenceUtility.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_time_reference_utility_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html">    5</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html">TimeReferenceUtility</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#a0f6b8d2f1235ee502d447eeebfcfaf89">    7</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">state</a>; } }</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#a5dd3151a2e6f26956ba7290034c1c47d">    9</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#a5dd3151a2e6f26956ba7290034c1c47d">SnapToFrame</a>(<span class="keywordtype">double</span> time)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keywordflow">if</span> (state.timeReferenceMode == <a class="code" href="namespace_unity_editor_1_1_timeline.html#ae7c0c91099bc8a27bc46341422688d61">TimeReferenceMode</a>.Global)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                time = state.editSequence.ToGlobalTime(time);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                time = <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#ad48a823919b02af48ca5f6d97dab773b">RoundToFrame</a>(time, state.referenceSequence.frameRate);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                <span class="keywordflow">return</span> state.editSequence.ToLocalTime(time);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#ad48a823919b02af48ca5f6d97dab773b">RoundToFrame</a>(time, state.referenceSequence.frameRate);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#acf073990e60cdbd11ec9daca8c8d63ce">   21</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#acf073990e60cdbd11ec9daca8c8d63ce">ToTimeString</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">string</span> format = <span class="stringliteral">&quot;F2&quot;</span>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (state.timeReferenceMode == <a class="code" href="namespace_unity_editor_1_1_timeline.html#ae7c0c91099bc8a27bc46341422688d61">TimeReferenceMode</a>.Global)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                time = state.editSequence.ToGlobalTime(time);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> state.editSequence.viewModel.timeInFrames ?</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a931c5abc92e3204e7a0a60fc7a13b831">TimeAsFrames</a>(time, state.referenceSequence.frameRate, format) :</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a499f07f788790c9bc41439054972d828">TimeAsTimeCode</a>(time, state.referenceSequence.frameRate, format);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#ae665c30a62ff601d178c4026c864f76d">   31</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#ae665c30a62ff601d178c4026c864f76d">FromTimeString</a>(<span class="keywordtype">string</span> timeString)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordtype">double</span> newTime;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> (state.timeInFrames)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordtype">double</span> newFrameDouble;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span> (<span class="keywordtype">double</span>.TryParse(timeString, out newFrameDouble))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    newTime = <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a90ebe652781edd1acc55b7887244e44a">FromFrames</a>(newFrameDouble, state.referenceSequence.frameRate);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    newTime = state.editSequence.time;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                newTime = <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html">TimeUtility</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#abcfa26c5778995ff6884556d50991b1b">ParseTimeCode</a>(timeString, state.referenceSequence.frameRate, -1);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (newTime &gt;= 0.0)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">return</span> state.timeReferenceMode == <a class="code" href="namespace_unity_editor_1_1_timeline.html#ae7c0c91099bc8a27bc46341422688d61">TimeReferenceMode</a>.Global ?</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    state.editSequence.ToLocalTime(newTime) : newTime;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> state.editSequence.time;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_reference_utility_html_ae665c30a62ff601d178c4026c864f76d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#ae665c30a62ff601d178c4026c864f76d">UnityEditor.Timeline.TimeReferenceUtility.FromTimeString</a></div><div class="ttdeci">static double FromTimeString(string timeString)</div><div class="ttdef"><b>Definition:</b> <a href="_time_reference_utility_8cs_source.html#l00031">TimeReferenceUtility.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_reference_utility_html_acf073990e60cdbd11ec9daca8c8d63ce"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#acf073990e60cdbd11ec9daca8c8d63ce">UnityEditor.Timeline.TimeReferenceUtility.ToTimeString</a></div><div class="ttdeci">static string ToTimeString(double time, string format=&quot;F2&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_time_reference_utility_8cs_source.html#l00021">TimeReferenceUtility.cs:21</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html">UnityEngine.Timeline.TimeUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00007">TimeUtility.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_a350f3db7ab1c08de30a609f4c66c8775"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a350f3db7ab1c08de30a609f4c66c8775">UnityEditor.Timeline.TimelineWindow.state</a></div><div class="ttdeci">WindowState state</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00057">TimelineWindow.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html_ac00fac3b6de42db10813e9ae7401808b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#ac00fac3b6de42db10813e9ae7401808b">UnityEditor.Timeline.TimelineWindow.instance</a></div><div class="ttdeci">static TimelineWindow instance</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00045">TimelineWindow.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html_ad48a823919b02af48ca5f6d97dab773b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html#ad48a823919b02af48ca5f6d97dab773b">UnityEngine.Timeline.TimeUtility.RoundToFrame</a></div><div class="ttdeci">static double RoundToFrame(double time, double frameRate)</div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00071">TimeUtility.cs:71</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html_a90ebe652781edd1acc55b7887244e44a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a90ebe652781edd1acc55b7887244e44a">UnityEngine.Timeline.TimeUtility.FromFrames</a></div><div class="ttdeci">static double FromFrames(int frames, double frameRate)</div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00039">TimeUtility.cs:39</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_ae7c0c91099bc8a27bc46341422688d61"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#ae7c0c91099bc8a27bc46341422688d61">UnityEditor.Timeline.TimeReferenceMode</a></div><div class="ttdeci">TimeReferenceMode</div><div class="ttdef"><b>Definition:</b> <a href="_time_reference_mode_8cs_source.html#l00003">TimeReferenceMode.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html_abcfa26c5778995ff6884556d50991b1b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html#abcfa26c5778995ff6884556d50991b1b">UnityEngine.Timeline.TimeUtility.ParseTimeCode</a></div><div class="ttdeci">static double ParseTimeCode(string timeCode, double frameRate, double defaultValue)</div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00130">TimeUtility.cs:130</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_reference_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html">UnityEditor.Timeline.TimeReferenceUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_reference_utility_8cs_source.html#l00005">TimeReferenceUtility.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_time_reference_utility_html_a5dd3151a2e6f26956ba7290034c1c47d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#a5dd3151a2e6f26956ba7290034c1c47d">UnityEditor.Timeline.TimeReferenceUtility.SnapToFrame</a></div><div class="ttdeci">static double SnapToFrame(double time)</div><div class="ttdef"><b>Definition:</b> <a href="_time_reference_utility_8cs_source.html#l00009">TimeReferenceUtility.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html_a499f07f788790c9bc41439054972d828"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a499f07f788790c9bc41439054972d828">UnityEngine.Timeline.TimeUtility.TimeAsTimeCode</a></div><div class="ttdeci">static string TimeAsTimeCode(double timeValue, double frameRate, string format=&quot;F2&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00088">TimeUtility.cs:88</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_utility_html_a931c5abc92e3204e7a0a60fc7a13b831"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_utility.html#a931c5abc92e3204e7a0a60fc7a13b831">UnityEngine.Timeline.TimeUtility.TimeAsFrames</a></div><div class="ttdeci">static string TimeAsFrames(double timeValue, double frameRate, string format=&quot;F2&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_time_utility_8cs_source.html#l00081">TimeUtility.cs:81</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

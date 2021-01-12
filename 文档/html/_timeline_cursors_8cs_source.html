@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Manipulators/Cursors/TimelineCursors.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6a547c3745f8ad2865def9ffaf3eba83.html">Manipulators</a></li><li class="navelem"><a class="el" href="dir_147a7ca0034a22825a925849a6ada3e6.html">Cursors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineCursors.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_cursors_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">TimelineCursors</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">    8</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            MixBoth,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            MixLeft,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            MixRight,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            Replace,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            Ripple,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782">Pan</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">   19</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">CursorInfo</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#ad3610bacb154e848bcaa2b74fe8e9cbd">   21</a></span>&#160;            <span class="keyword">public</span> readonly <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#ad3610bacb154e848bcaa2b74fe8e9cbd">assetPath</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#aa1f6bec184bd10efd5204a42cbb50b89">   22</a></span>&#160;            <span class="keyword">public</span> readonly Vector2 <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#aa1f6bec184bd10efd5204a42cbb50b89">hotSpot</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#a23e4a3ead4343d2c889f9e807d5bdce6">   23</a></span>&#160;            <span class="keyword">public</span> readonly MouseCursor <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#a23e4a3ead4343d2c889f9e807d5bdce6">mouseCursorType</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#a8d1e287a41e0c0758f492b0971fac6a2">   25</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#a8d1e287a41e0c0758f492b0971fac6a2">CursorInfo</a>(<span class="keywordtype">string</span> assetPath, Vector2 hotSpot, MouseCursor mouseCursorType)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                this.assetPath = assetPath;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                this.hotSpot = hotSpot;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                this.mouseCursorType = mouseCursorType;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9194265230631c582d979b8cae62821f">   33</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_CursorAssetRoot         = <span class="stringliteral">&quot;Cursors/&quot;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a46d16fd72ff0dc79c43c3058e6b8a249">   34</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_CursorAssetsNamespace   = <span class="stringliteral">&quot;Timeline.&quot;</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a95dfd0a8aa74e1d587b54516a8501f9a">   35</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_CursorAssetExtension    = <span class="stringliteral">&quot;.png&quot;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9f3455737cb7d3b6319b7971b533275f">   37</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_MixBothCursorAssetName  = k_CursorAssetsNamespace + <span class="stringliteral">&quot;MixBoth&quot;</span>  + k_CursorAssetExtension;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#aab3ab21d2fc1ecab2acaf3342029f49f">   38</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_MixLeftCursorAssetName  = k_CursorAssetsNamespace + <span class="stringliteral">&quot;MixLeft&quot;</span>  + k_CursorAssetExtension;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9dbad2acb8e4f86671391a1135f6d03f">   39</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_MixRightCursorAssetName = k_CursorAssetsNamespace + <span class="stringliteral">&quot;MixRight&quot;</span> + k_CursorAssetExtension;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a74b16d3819633d6fbd9388562cf4023e">   40</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_ReplaceCursorAssetName  = k_CursorAssetsNamespace + <span class="stringliteral">&quot;Replace&quot;</span>  + k_CursorAssetExtension;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#ab96135ac58da15d560f522f520391999">   41</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_RippleCursorAssetName   = k_CursorAssetsNamespace + <span class="stringliteral">&quot;Ripple&quot;</span>   + k_CursorAssetExtension;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#aacae2d6f1a4dfdcd51806200c8b8961d">   43</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">string</span> s_PlatformPath = (Application.platform == RuntimePlatform.WindowsEditor) ? <span class="stringliteral">&quot;Windows/&quot;</span> : <span class="stringliteral">&quot;macOS/&quot;</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#af1308f49a7d57efe638188ef6c56e288">   44</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">string</span> s_CursorAssetDirectory = k_CursorAssetRoot + s_PlatformPath;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a0df302dfe41b6caae93fbf04b89f6a7b">   46</a></span>&#160;        <span class="keyword">static</span> readonly Dictionary&lt;CursorType, CursorInfo&gt; s_CursorInfoLookup = <span class="keyword">new</span> Dictionary&lt;CursorType, CursorInfo&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>.MixBoth,  <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">CursorInfo</a>(s_CursorAssetDirectory + k_MixBothCursorAssetName,  <span class="keyword">new</span> Vector2(16, 18), MouseCursor.CustomCursor)},</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>.MixLeft,  <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">CursorInfo</a>(s_CursorAssetDirectory + k_MixLeftCursorAssetName,  <span class="keyword">new</span> Vector2(7, 18), MouseCursor.CustomCursor)},</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>.MixRight, <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">CursorInfo</a>(s_CursorAssetDirectory + k_MixRightCursorAssetName, <span class="keyword">new</span> Vector2(25, 18), MouseCursor.CustomCursor)},</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>.Replace,  <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">CursorInfo</a>(s_CursorAssetDirectory + k_ReplaceCursorAssetName,  <span class="keyword">new</span> Vector2(16, 28), MouseCursor.CustomCursor)},</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>.Ripple,   <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">CursorInfo</a>(s_CursorAssetDirectory + k_RippleCursorAssetName,   <span class="keyword">new</span> Vector2(26, 19), MouseCursor.CustomCursor)},</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            {<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>.Pan,      <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">CursorInfo</a>(null, Vector2.zero, MouseCursor.Pan)}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#aef1621528542f1c2a46d08009a91bc08">   56</a></span>&#160;        <span class="keyword">static</span> readonly Dictionary&lt;string, Texture2D&gt; s_CursorAssetCache = <span class="keyword">new</span> Dictionary&lt;string, Texture2D&gt;();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#ad6df31e777f4e37d16e9bc022296e7d5">   58</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a>? <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#ad6df31e777f4e37d16e9bc022296e7d5">s_CurrentCursor</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#af3aaa89dd70528922d3b286f8d18bed7">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#af3aaa89dd70528922d3b286f8d18bed7">SetCursor</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">CursorType</a> cursorType)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span> (s_CurrentCursor.HasValue &amp;&amp; s_CurrentCursor.Value == cursorType) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            s_CurrentCursor = cursorType;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            var cursorInfo = s_CursorInfoLookup[cursorType];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            Texture2D cursorAsset = null;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (cursorInfo.mouseCursorType == MouseCursor.CustomCursor)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                cursorAsset = LoadCursorAsset(cursorInfo.assetPath);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            EditorGUIUtility.SetCurrentViewCursor(cursorAsset, cursorInfo.hotSpot, cursorInfo.mouseCursorType);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">   77</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">ClearCursor</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (!s_CurrentCursor.HasValue) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            EditorGUIUtility.ClearCurrentViewCursor();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            s_CurrentCursor = null;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#aa1e23a019377f476a106eaeb0ee07e67">   85</a></span>&#160;        <span class="keyword">static</span> Texture2D <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#aa1e23a019377f476a106eaeb0ee07e67">LoadCursorAsset</a>(<span class="keywordtype">string</span> assetPath)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">if</span> (!s_CursorAssetCache.ContainsKey(assetPath))</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                s_CursorAssetCache.Add(assetPath, (Texture2D)EditorGUIUtility.Load(assetPath));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> s_CursorAssetCache[assetPath];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_a9c9000df81375a63d52b05a7c890c473"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473">UnityEditor.Timeline.TimelineCursors.ClearCursor</a></div><div class="ttdeci">static void ClearCursor()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00077">TimelineCursors.cs:77</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info_html_ad3610bacb154e848bcaa2b74fe8e9cbd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#ad3610bacb154e848bcaa2b74fe8e9cbd">UnityEditor.Timeline.TimelineCursors.CursorInfo.assetPath</a></div><div class="ttdeci">readonly string assetPath</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00021">TimelineCursors.cs:21</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_ad6df31e777f4e37d16e9bc022296e7d5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#ad6df31e777f4e37d16e9bc022296e7d5">UnityEditor.Timeline.TimelineCursors.s_CurrentCursor</a></div><div class="ttdeci">static CursorType s_CurrentCursor</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00058">TimelineCursors.cs:58</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info_html_a8d1e287a41e0c0758f492b0971fac6a2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#a8d1e287a41e0c0758f492b0971fac6a2">UnityEditor.Timeline.TimelineCursors.CursorInfo.CursorInfo</a></div><div class="ttdeci">CursorInfo(string assetPath, Vector2 hotSpot, MouseCursor mouseCursorType)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00025">TimelineCursors.cs:25</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782">UnityEditor.Timeline.Pan</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info_html_a23e4a3ead4343d2c889f9e807d5bdce6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#a23e4a3ead4343d2c889f9e807d5bdce6">UnityEditor.Timeline.TimelineCursors.CursorInfo.mouseCursorType</a></div><div class="ttdeci">readonly MouseCursor mouseCursorType</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00023">TimelineCursors.cs:23</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_af3aaa89dd70528922d3b286f8d18bed7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#af3aaa89dd70528922d3b286f8d18bed7">UnityEditor.Timeline.TimelineCursors.SetCursor</a></div><div class="ttdeci">static void SetCursor(CursorType cursorType)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00060">TimelineCursors.cs:60</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html">UnityEditor.Timeline.TimelineCursors</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00006">TimelineCursors.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_aa1e23a019377f476a106eaeb0ee07e67"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#aa1e23a019377f476a106eaeb0ee07e67">UnityEditor.Timeline.TimelineCursors.LoadCursorAsset</a></div><div class="ttdeci">static Texture2D LoadCursorAsset(string assetPath)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00085">TimelineCursors.cs:85</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info_html_aa1f6bec184bd10efd5204a42cbb50b89"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html#aa1f6bec184bd10efd5204a42cbb50b89">UnityEditor.Timeline.TimelineCursors.CursorInfo.hotSpot</a></div><div class="ttdeci">readonly Vector2 hotSpot</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00022">TimelineCursors.cs:22</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_html_adbdb48f56cb46544be558a24d7801358"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#adbdb48f56cb46544be558a24d7801358">UnityEditor.Timeline.TimelineCursors.CursorType</a></div><div class="ttdeci">CursorType</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00008">TimelineCursors.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_cursors_1_1_cursor_info.html">UnityEditor.Timeline.TimelineCursors.CursorInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_cursors_8cs_source.html#l00019">TimelineCursors.cs:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

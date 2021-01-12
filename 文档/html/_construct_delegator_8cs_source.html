@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.test-framework@1.1.14/UnityEngine.TestRunner/NUnitExtensions/ConstructDelegator.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_f5068e10fe4d08e1b67d6386819b0c8e.html">com.unity.test-framework@1.1.14</a></li><li class="navelem"><a class="el" href="dir_cc5d69438734f111df7d549b2ad57ded.html">UnityEngine.TestRunner</a></li><li class="navelem"><a class="el" href="dir_0ffb96f3c3d577f86642355dcffb87f1.html">NUnitExtensions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ConstructDelegator.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_construct_delegator_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_n_unit.html">NUnit</a>.Framework.Internal;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_test_runner.html">TestRunner</a>.<a class="code" href="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions.html">NUnitExtensions</a>.<a class="code" href="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner.html">Runner</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_test_tools.html">TestTools</a>.<a class="code" href="namespace_unity_engine_1_1_test_tools_1_1_logging.html">Logging</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_test_tools.html">TestTools</a>.<a class="code" href="namespace_unity_engine_1_1_test_tools_1_1_test_runner.html">TestRunner</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TestTools.NUnitExtensions</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">internal</span> <span class="keyword">class </span>ConstructDelegator</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">private</span> Type m_RequestedType;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">object</span>[] m_Arguments;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span> ScriptableObject m_CurrentRunningTest;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> readonly IStateSerializer m_StateSerializer;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">protected</span> Exception m_Exception;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">object</span> m_Result;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">protected</span> ITestExecutionContext m_Context;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">public</span> ConstructDelegator(IStateSerializer stateSerializer)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            m_StateSerializer = stateSerializer;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">object</span> HandleResult()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            SetCurrentTestContext();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (m_Exception != null)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                var temp = m_Exception;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                m_Exception = null;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">throw</span> temp;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            var tempResult = m_Result;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            m_Result = null;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> tempResult;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> SetCurrentTestContext()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            var prop = typeof(UnityTestExecutionContext).GetProperty(<span class="stringliteral">&quot;CurrentContext&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (prop != null)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                prop.SetValue(null, m_Context, null);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">object</span> Delegate(Type type, <span class="keywordtype">object</span>[] arguments)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            AssertState();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            m_Context = UnityTestExecutionContext.CurrentContext;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            m_RequestedType = type;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            m_Arguments = arguments;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">using</span> (var logScope = <span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>())</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                Execute(logScope);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> HandleResult();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> AssertState()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (m_RequestedType != null)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Constructor not executed yet&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> HasAction()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> m_RequestedType != null;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Execute(<a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a> logScope)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">if</span> (typeof(ScriptableObject).IsAssignableFrom(m_RequestedType))</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keywordflow">if</span> (m_CurrentRunningTest != null &amp;&amp; m_RequestedType != m_CurrentRunningTest.GetType())</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        DestroyCurrentTestObjectIfExists();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">if</span> (m_CurrentRunningTest == null)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        <span class="keywordflow">if</span> (m_StateSerializer.CanRestoreFromScriptableObject(m_RequestedType))</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                            m_CurrentRunningTest = m_StateSerializer.RestoreScriptableObjectInstance();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                            m_CurrentRunningTest = ScriptableObject.CreateInstance(m_RequestedType);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    m_Result = m_CurrentRunningTest;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    DestroyCurrentTestObjectIfExists();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    m_Result = Activator.CreateInstance(m_RequestedType, m_Arguments);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    <span class="keywordflow">if</span> (m_StateSerializer.CanRestoreFromJson(m_RequestedType))</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        m_StateSerializer.RestoreClassFromJson(ref m_Result);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keywordflow">if</span> (logScope.<a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a54f3f911329608ab448c2145ddae51bb">AnyFailingLogs</a>())</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    var failingLog = logScope.<a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a29362b05459b92d6511170bdf7d3a078">FailingLogs</a>.First();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    <span class="keywordflow">throw</span> <span class="keyword">new</span> UnhandledLogMessageException(failingLog);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">if</span> (logScope.<a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a0edd3277db8450ec2f683bda4f3525c3">ExpectedLogs</a>.Any())</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <span class="keywordflow">throw</span> <span class="keyword">new</span> UnexpectedLogMessageException(<a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">LogScope</a>.<a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ad85c26f65b99666d125ec65ceabe25a2">Current</a>.<a class="code" href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a0edd3277db8450ec2f683bda4f3525c3">ExpectedLogs</a>.Peek());</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">catch</span> (Exception e)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                m_Exception = e;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                m_RequestedType = null;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                m_Arguments = null;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> DestroyCurrentTestObjectIfExists()</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">if</span> (m_CurrentRunningTest == null)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="namespace_object.html">Object</a>.DestroyImmediate(m_CurrentRunningTest);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_tools_1_1_test_runner_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_tools_1_1_test_runner.html">UnityEngine.TestTools.TestRunner</a></div><div class="ttdef"><b>Definition:</b> <a href="_invalid_signature_exception_8cs_source.html#l00004">InvalidSignatureException.cs:4</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner.html">UnityEngine.TestRunner.NUnitExtensions.Runner</a></div><div class="ttdef"><b>Definition:</b> <a href="_composite_work_item_8cs_source.html#l00014">CompositeWorkItem.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_html_a54f3f911329608ab448c2145ddae51bb"><div class="ttname"><a href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a54f3f911329608ab448c2145ddae51bb">UnityEngine.TestTools.Logging.LogScope.AnyFailingLogs</a></div><div class="ttdeci">bool AnyFailingLogs()</div><div class="ttdef"><b>Definition:</b> <a href="_log_scope_8cs_source.html#l00172">LogScope.cs:172</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_n_unit_html"><div class="ttname"><a href="namespace_n_unit.html">NUnit</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions.html">UnityEngine.TestRunner.NUnitExtensions</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_runner_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner.html">UnityEngine.TestRunner</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_html_a29362b05459b92d6511170bdf7d3a078"><div class="ttname"><a href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a29362b05459b92d6511170bdf7d3a078">UnityEngine.TestTools.Logging.LogScope.FailingLogs</a></div><div class="ttdeci">List&lt; LogEvent &gt; FailingLogs</div><div class="ttdef"><b>Definition:</b> <a href="_log_scope_8cs_source.html#l00018">LogScope.cs:18</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_html_ad85c26f65b99666d125ec65ceabe25a2"><div class="ttname"><a href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#ad85c26f65b99666d125ec65ceabe25a2">UnityEngine.TestTools.Logging.LogScope.Current</a></div><div class="ttdeci">static LogScope Current</div><div class="ttdef"><b>Definition:</b> <a href="_log_scope_8cs_source.html#l00027">LogScope.cs:27</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_html"><div class="ttname"><a href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html">UnityEngine.TestTools.Logging.LogScope</a></div><div class="ttdef"><b>Definition:</b> <a href="_log_scope_8cs_source.html#l00008">LogScope.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_tools_1_1_logging_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_tools_1_1_logging.html">UnityEngine.TestTools.Logging</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_log_scope_8cs_source.html#l00004">ILogScope.cs:4</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_html_a0edd3277db8450ec2f683bda4f3525c3"><div class="ttname"><a href="class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#a0edd3277db8450ec2f683bda4f3525c3">UnityEngine.TestTools.Logging.LogScope.ExpectedLogs</a></div><div class="ttdeci">Queue&lt; LogMatch &gt; ExpectedLogs</div><div class="ttdef"><b>Definition:</b> <a href="_log_scope_8cs_source.html#l00016">LogScope.cs:16</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_tools_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_tools.html">UnityEngine.TestTools</a></div><div class="ttdef"><b>Definition:</b> <a href="_enter_play_mode_8cs_source.html#l00005">EnterPlayMode.cs:5</a></div></div>
+<div class="ttc" id="namespace_object_html"><div class="ttname"><a href="namespace_object.html">Object</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

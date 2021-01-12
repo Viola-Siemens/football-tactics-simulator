@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Items/ITimelineItem.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_d14888b20ff61d1b2f4cb3c64318078e.html">Items</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ITimelineItem.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_timeline_item_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">    6</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> : IEquatable&lt;ITimelineItem&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a4694088d0315d924289d8cb6f0cba19c">    8</a></span>&#160;        <span class="keywordtype">double</span> start { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2360a302ec3e02a47f638654ed1c81fb">    9</a></span>&#160;        <span class="keywordtype">double</span> end { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#aedb7985b559b1a7f7e32c8c912ced93d">   10</a></span>&#160;        <span class="keywordtype">double</span> duration { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a2511e28018fb64596b5b6ff038309c3b">   12</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parentTrack { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">bool</span> IsCompatibleWithTrack(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">void</span> Delete();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> CloneTo(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> parent, <span class="keywordtype">double</span> time);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">void</span> PushUndo(<span class="keywordtype">string</span> operation);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html#a92081b07a6a9ecc7e9b958f4e74227d8">   19</a></span>&#160;        <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">TimelineItemGUI</a> gui { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">   22</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a> : <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> SetStart(<span class="keywordtype">double</span> time);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> SetEnd(<span class="keywordtype">double</span> time, <span class="keywordtype">bool</span> affectTimeScale);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_trim_start.html">TrimStart</a>(<span class="keywordtype">double</span> time);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_trim_end.html">TrimEnd</a>(<span class="keywordtype">double</span> time);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html">   30</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html">IBlendable</a> : <a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#a8508396539eba0a047f06fcaabdf92a0">   32</a></span>&#160;        <span class="keywordtype">bool</span> supportsBlending { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#a7b3b028ca781fe76e0ee6dde5253f5b3">   33</a></span>&#160;        <span class="keywordtype">bool</span> hasLeftBlend { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#aa2df6df94974f11f8560c845fe49cb40">   34</a></span>&#160;        <span class="keywordtype">bool</span> hasRightBlend { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#a14cc4c6dfcb544cc7504baccac547ae6">   36</a></span>&#160;        <span class="keywordtype">double</span> leftBlendDuration { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html#af03df3d2e92f66577cbad316d7f85a45">   37</a></span>&#160;        <span class="keywordtype">double</span> rightBlendDuration { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_item_g_u_i_8cs_source.html#l00044">TimelineItemGUI.cs:44</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_trim_start_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_trim_start.html">UnityEditor.Timeline.TrimStart</a></div><div class="ttdef"><b>Definition:</b> <a href="_clips_actions_8cs_source.html#l00122">ClipsActions.cs:122</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_timeline_item_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">UnityEditor.Timeline.ITimelineItem</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00006">ITimelineItem.cs:6</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_trim_end_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_trim_end.html">UnityEditor.Timeline.TrimEnd</a></div><div class="ttdef"><b>Definition:</b> <a href="_clips_actions_8cs_source.html#l00138">ClipsActions.cs:138</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_blendable_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_blendable.html">UnityEditor.Timeline.IBlendable</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00030">ITimelineItem.cs:30</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_trimmable_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">UnityEditor.Timeline.ITrimmable</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_timeline_item_8cs_source.html#l00022">ITimelineItem.cs:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

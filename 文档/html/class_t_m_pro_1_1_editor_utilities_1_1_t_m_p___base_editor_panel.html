@@ -1,0 +1,3410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: TMPro.EditorUtilities.TMP_BaseEditorPanel类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_t_m_pro.html">TMPro</a></li><li class="navelem"><a class="el" href="namespace_t_m_pro_1_1_editor_utilities.html">EditorUtilities</a></li><li class="navelem"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html">TMP_BaseEditorPanel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#pro-static-attribs">静态 Protected 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">TMPro.EditorUtilities.TMP_BaseEditorPanel类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 TMPro.EditorUtilities.TMP_BaseEditorPanel 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel__inherit__graph.png" border="0" usemap="#_t_m_pro_8_editor_utilities_8_t_m_p___base_editor_panel_inherit__map" alt="Inheritance graph"/></div>
+<map name="_t_m_pro_8_editor_utilities_8_t_m_p___base_editor_panel_inherit__map" id="_t_m_pro_8_editor_utilities_8_t_m_p___base_editor_panel_inherit__map">
+<area shape="rect" id="node3" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_panel.html" title="TMPro.EditorUtilities.TMP\l_EditorPanel" alt="" coords="5,169,177,211"/><area shape="rect" id="node4" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___ui_editor_panel.html" title="TMPro.EditorUtilities.TMP\l_UiEditorPanel" alt="" coords="201,169,373,211"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+TMPro.EditorUtilities.TMP_BaseEditorPanel 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel__coll__graph.png" border="0" usemap="#_t_m_pro_8_editor_utilities_8_t_m_p___base_editor_panel_coll__map" alt="Collaboration graph"/></div>
+<map name="_t_m_pro_8_editor_utilities_8_t_m_p___base_editor_panel_coll__map" id="_t_m_pro_8_editor_utilities_8_t_m_p___base_editor_panel_coll__map">
+<area shape="rect" id="node3" href="class_t_m_pro_1_1_t_m_p___text.html" title="Base class which contains common properties and functions shared between the TextMeshPro and TextMesh..." alt="" coords="1412,757,1535,784"/><area shape="rect" id="node18" href="class_t_m_pro_1_1_t_m_p___text_info.html" title="Class which contains information about every element contained within the text object. " alt="" coords="2079,775,2221,801"/><area shape="rect" id="node19" href="struct_t_m_pro_1_1_t_m_p___link_info.html" title="Structure containing information about individual links contained in the text object. " alt="" coords="1717,899,1859,925"/><area shape="rect" id="node24" href="struct_t_m_pro_1_1_t_m_p___word_info.html" title="Structure containing information about the individual words contained in the text object..." alt="" coords="1713,949,1863,976"/><area shape="rect" id="node34" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html" title="TMPro.TMP_SpriteAnimator" alt="" coords="1696,656,1880,683"/><area shape="rect" id="node5" href="struct_t_m_pro_1_1_t_m_p___font_style_stack.html" title="Structure used to track basic XML tags which are binary (on / off) " alt="" coords="1007,236,1195,263"/><area shape="rect" id="node37" href="struct_t_m_pro_1_1_word_wrap_state.html" title="TMPro.WordWrapState" alt="" coords="2316,1039,2473,1065"/><area shape="rect" id="node6" href="struct_t_m_pro_1_1_t_m_p___text_1_1_unicode_char.html" title="TMPro.TMP_Text.UnicodeChar" alt="" coords="1000,967,1201,993"/><area shape="rect" id="node7" href="struct_t_m_pro_1_1_t_m_p___rich_text_tag_stack.html" title="TMPro.TMP_RichTextTagStack\l\&lt; TextAlignmentOptions \&gt;" alt="" coords="999,314,1203,355"/><area shape="rect" id="node8" href="struct_t_m_pro_1_1_material_reference.html" title="TMPro.MaterialReference" alt="" coords="1017,815,1185,841"/><area shape="rect" id="node9" href="class_t_m_pro_1_1_t_m_p___font_asset.html" title="TMPro.TMP_FontAsset" alt="" coords="625,796,783,823"/><area shape="rect" id="node14" href="struct_t_m_pro_1_1_t_m_p___font_weight_pair.html" title="Contains the font assets for the regular and italic styles associated with a given font weight..." alt="" coords="1007,764,1195,791"/><area shape="rect" id="node25" href="struct_t_m_pro_1_1_t_m_p___character_info.html" title="Structure containing information about individual text elements (character or sprites). " alt="" coords="1013,636,1188,663"/><area shape="rect" id="node10" href="class_t_m_pro_1_1_t_m_p___asset.html" title="TMP_Asset" alt="" coords="238,897,329,924"/><area shape="rect" id="node17" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html" title="TMPro.TMP_SpriteAsset" alt="" coords="621,976,787,1003"/><area shape="rect" id="node31" href="class_t_m_pro_1_1_t_m_p___color_gradient.html" title="TMPro.TMP_ColorGradient" alt="" coords="417,545,595,572"/><area shape="rect" id="node12" href="struct_t_m_pro_1_1_font_asset_creation_settings.html" title="TMPro.FontAssetCreationSettings" alt="" coords="173,695,393,721"/><area shape="rect" id="node13" href="class_t_m_pro_1_1_kerning_table.html" title="TMPro.KerningTable" alt="" coords="214,745,353,772"/><area shape="rect" id="node15" href="class_t_m_pro_1_1_t_m_p___font_feature_table.html" title="Table that contains the various font features available for the given font asset. ..." alt="" coords="184,796,383,823"/><area shape="rect" id="node16" href="class_t_m_pro_1_1_face_info___legacy.html" title="Class that contains the basic information about the font. " alt="" coords="202,847,365,873"/><area shape="rect" id="node20" href="struct_t_m_pro_1_1_t_m_p___page_info.html" title="TMPro.TMP_PageInfo" alt="" coords="1714,555,1862,581"/><area shape="rect" id="node21" href="struct_t_m_pro_1_1_t_m_p___line_info.html" title="Structure which contains information about the individual lines of text. " alt="" coords="1717,68,1859,95"/><area shape="rect" id="node22" href="struct_t_m_pro_1_1_extents.html" title="TMPro.Extents" alt="" coords="1046,68,1155,95"/><area shape="rect" id="node23" href="struct_t_m_pro_1_1_t_m_p___mesh_info.html" title="Structure which contains the vertex attributes (geometry) of the text object. " alt="" coords="1713,605,1863,632"/><area shape="rect" id="node26" href="struct_t_m_pro_1_1_t_m_p___vertex.html" title="TMPro.TMP_Vertex" alt="" coords="636,641,772,668"/><area shape="rect" id="node27" href="class_t_m_pro_1_1_t_m_p___text_element.html" title="Base class for all text elements like Character and SpriteCharacter. " alt="" coords="619,456,789,483"/><area shape="rect" id="node28" href="struct_t_m_pro_1_1_t_m_p___rich_text_tag_stack.html" title="TMPro.TMP_RichTextTagStack\l\&lt; float \&gt;" alt="" coords="999,155,1203,197"/><area shape="rect" id="node29" href="struct_t_m_pro_1_1_vertex_gradient.html" title="TMP custom data type to represent 32 bit characters. " alt="" coords="1025,865,1176,892"/><area shape="rect" id="node30" href="struct_t_m_pro_1_1_t_m_p___rich_text_tag_stack.html" title="TMPro.TMP_RichTextTagStack\l\&lt; TMPro.TMP_ColorGradient \&gt;" alt="" coords="999,1110,1203,1151"/><area shape="rect" id="node32" href="struct_t_m_pro_1_1_t_m_p___rich_text_tag_stack.html" title="TMPro.TMP_RichTextTagStack\l\&lt; TMPro.MaterialReference \&gt;" alt="" coords="999,1175,1203,1217"/><area shape="rect" id="node33" href="struct_t_m_pro_1_1_t_m_p___rich_text_tag_stack.html" title="TMPro.TMP_RichTextTagStack\l\&lt; int \&gt;" alt="" coords="999,1241,1203,1282"/><area shape="rect" id="node36" href="struct_t_m_pro_1_1_t_m_p___rich_text_tag_stack.html" title="TMPro.TMP_RichTextTagStack\l\&lt; Color32 \&gt;" alt="" coords="999,1306,1203,1347"/><area shape="rect" id="node38" href="struct_t_m_pro_1_1_t_m_p___rich_text_tag_stack.html" title="TMPro.TMP_RichTextTagStack\l\&lt; FontWeight \&gt;" alt="" coords="999,1371,1203,1413"/><area shape="rect" id="node39" href="struct_t_m_pro_1_1_rich_text_tag_attribute.html" title="TMPro.RichTextTagAttribute" alt="" coords="1008,472,1193,499"/><area shape="rect" id="node40" href="class_t_m_pro_1_1_t_m_p___character.html" title="A basic element of text. " alt="" coords="1023,411,1178,437"/><area shape="rect" id="node41" href="class_t_m_pro_1_1_t_m_p___text_element.html" title="Base class for all text elements like Character and SpriteCharacter. " alt="" coords="639,405,769,432"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_1_1_foldout.html">Foldout</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7ff0cf356660eaff8f0280fb6b0aaffd"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a7ff0cf356660eaff8f0280fb6b0aaffd">OnInspectorGUI</a> ()</td></tr>
+<tr class="separator:a7ff0cf356660eaff8f0280fb6b0aaffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6360d66e05b77ee4d9dd46b00f4dad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a0f6360d66e05b77ee4d9dd46b00f4dad">OnSceneGUI</a> ()</td></tr>
+<tr class="separator:a0f6360d66e05b77ee4d9dd46b00f4dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a7289d43625492e91e63d4508c85fd9e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a7289d43625492e91e63d4508c85fd9e1">selAlignGridA</a></td></tr>
+<tr class="separator:a7289d43625492e91e63d4508c85fd9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fca9e81bd8b99788677739aba2e17ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4fca9e81bd8b99788677739aba2e17ce">selAlignGridB</a></td></tr>
+<tr class="separator:a4fca9e81bd8b99788677739aba2e17ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a3a60309b317f09709852e0c8013e6849"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3a60309b317f09709852e0c8013e6849">OnEnable</a> ()</td></tr>
+<tr class="separator:a3a60309b317f09709852e0c8013e6849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef86582a22c23f9a5dd2236eb704aac7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aef86582a22c23f9a5dd2236eb704aac7">OnDisable</a> ()</td></tr>
+<tr class="separator:aef86582a22c23f9a5dd2236eb704aac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5601a4296e177f9aa0cc74b3556fee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#acf5601a4296e177f9aa0cc74b3556fee">DrawTextInput</a> ()</td></tr>
+<tr class="separator:acf5601a4296e177f9aa0cc74b3556fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8d796ceaf88f408b52ef25e81cb117"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4c8d796ceaf88f408b52ef25e81cb117">DrawMainSettings</a> ()</td></tr>
+<tr class="separator:a4c8d796ceaf88f408b52ef25e81cb117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48733f64d72c29f30e9533061f0c962"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aa48733f64d72c29f30e9533061f0c962">DrawExtraSettings</a> ()</td></tr>
+<tr class="separator:aa48733f64d72c29f30e9533061f0c962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf85a27920dd905ebe05c05c8bc0af8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#abbf85a27920dd905ebe05c05c8bc0af8">DrawMargins</a> ()</td></tr>
+<tr class="separator:abbf85a27920dd905ebe05c05c8bc0af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585170858dbbb92e0e09828c06798fc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a585170858dbbb92e0e09828c06798fc0">DrawGeometrySorting</a> ()</td></tr>
+<tr class="separator:a585170858dbbb92e0e09828c06798fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c714c3b42cc58446443353f51f54c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab0c714c3b42cc58446443353f51f54c5">DrawRichText</a> ()</td></tr>
+<tr class="separator:ab0c714c3b42cc58446443353f51f54c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fbb356584983194be6c3251088d033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a26fbb356584983194be6c3251088d033">DrawParsing</a> ()</td></tr>
+<tr class="separator:a26fbb356584983194be6c3251088d033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaaa184b10796d9ad95d43b80b1ca614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#abaaa184b10796d9ad95d43b80b1ca614">DrawTextureMapping</a> ()</td></tr>
+<tr class="separator:abaaa184b10796d9ad95d43b80b1ca614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a801b12cf3a9d08b0a2c19e450b3713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a7a801b12cf3a9d08b0a2c19e450b3713">DrawKerning</a> ()</td></tr>
+<tr class="separator:a7a801b12cf3a9d08b0a2c19e450b3713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66e725c1c635a3c2c301bc3f741f8b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ac66e725c1c635a3c2c301bc3f741f8b8">DrawPadding</a> ()</td></tr>
+<tr class="separator:ac66e725c1c635a3c2c301bc3f741f8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd05f0804830e2188e5666bdfc2eef0"><td class="memItemLeft" align="right" valign="top">GUIContent[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a5bd05f0804830e2188e5666bdfc2eef0">GetMaterialPresets</a> ()</td></tr>
+<tr class="memdesc:a5bd05f0804830e2188e5666bdfc2eef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to retrieve the material presets that match the currently selected font asset.  <a href="#a5bd05f0804830e2188e5666bdfc2eef0">更多...</a><br /></td></tr>
+<tr class="separator:a5bd05f0804830e2188e5666bdfc2eef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44c33a23c1dc0d7821d96be352c8d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#af44c33a23c1dc0d7821d96be352c8d56">DrawMarginProperty</a> (SerializedProperty property, GUIContent label)</td></tr>
+<tr class="separator:af44c33a23c1dc0d7821d96be352c8d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af335a8544934d98010f47fafc0b5e5b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#af335a8544934d98010f47fafc0b5e5b3">DrawPropertySlider</a> (GUIContent label, SerializedProperty property)</td></tr>
+<tr class="separator:af335a8544934d98010f47fafc0b5e5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d01dae660062e1028c4b28f40689aa9"><td class="memItemLeft" align="right" valign="top">abstract bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a2d01dae660062e1028c4b28f40689aa9">IsMixSelectionTypes</a> ()</td></tr>
+<tr class="separator:a2d01dae660062e1028c4b28f40689aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f1303365c95a93f4fae9cb11af7df7"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a03f1303365c95a93f4fae9cb11af7df7">OnUndoRedo</a> ()</td></tr>
+<tr class="separator:a03f1303365c95a93f4fae9cb11af7df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a991c4a491416d364765a0a86b807347d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a991c4a491416d364765a0a86b807347d">m_TextProp</a></td></tr>
+<tr class="separator:a991c4a491416d364765a0a86b807347d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262fa817da942aee16591a55570ee03d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a262fa817da942aee16591a55570ee03d">m_IsRightToLeftProp</a></td></tr>
+<tr class="separator:a262fa817da942aee16591a55570ee03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c8c19f6120043cc0b5a49ba48a64f7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a34c8c19f6120043cc0b5a49ba48a64f7">m_RtlText</a></td></tr>
+<tr class="separator:a34c8c19f6120043cc0b5a49ba48a64f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976912bc614e51841557ec130b9439a3"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a976912bc614e51841557ec130b9439a3">m_FontAssetProp</a></td></tr>
+<tr class="separator:a976912bc614e51841557ec130b9439a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978d88300f0df1ee1bfdaa7774d1cf75"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a978d88300f0df1ee1bfdaa7774d1cf75">m_FontSharedMaterialProp</a></td></tr>
+<tr class="separator:a978d88300f0df1ee1bfdaa7774d1cf75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bcdddccc59dfae51926d2cd5253ee4a"><td class="memItemLeft" align="right" valign="top">Material[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4bcdddccc59dfae51926d2cd5253ee4a">m_MaterialPresets</a></td></tr>
+<tr class="separator:a4bcdddccc59dfae51926d2cd5253ee4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb56a2db6642231920c33c46e7e23db"><td class="memItemLeft" align="right" valign="top">GUIContent[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a8fb56a2db6642231920c33c46e7e23db">m_MaterialPresetNames</a></td></tr>
+<tr class="separator:a8fb56a2db6642231920c33c46e7e23db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c27cda56ff99eb5d2c579dc2c89dd9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a1c27cda56ff99eb5d2c579dc2c89dd9f">m_MaterialPresetSelectionIndex</a></td></tr>
+<tr class="separator:a1c27cda56ff99eb5d2c579dc2c89dd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15bf87616246d6dedbfb2f78167bcbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aa15bf87616246d6dedbfb2f78167bcbb">m_IsPresetListDirty</a></td></tr>
+<tr class="separator:aa15bf87616246d6dedbfb2f78167bcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d8ba8e6d97f28d66c3cdd5cc3ebdbe"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ae1d8ba8e6d97f28d66c3cdd5cc3ebdbe">m_FontStyleProp</a></td></tr>
+<tr class="separator:ae1d8ba8e6d97f28d66c3cdd5cc3ebdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fe2a359e1d6dd321692942bf640713"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a34fe2a359e1d6dd321692942bf640713">m_FontColorProp</a></td></tr>
+<tr class="separator:a34fe2a359e1d6dd321692942bf640713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf6ab0503f8bc889c375fe4be5e7afa"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4bf6ab0503f8bc889c375fe4be5e7afa">m_EnableVertexGradientProp</a></td></tr>
+<tr class="separator:a4bf6ab0503f8bc889c375fe4be5e7afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48df9bda1abce6e13fc4df0a378a399c"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a48df9bda1abce6e13fc4df0a378a399c">m_FontColorGradientProp</a></td></tr>
+<tr class="separator:a48df9bda1abce6e13fc4df0a378a399c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6214bd691c4dbd95696a6043b9cfa343"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a6214bd691c4dbd95696a6043b9cfa343">m_FontColorGradientPresetProp</a></td></tr>
+<tr class="separator:a6214bd691c4dbd95696a6043b9cfa343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870b282429c9c48f5a8896f50c80e74d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a870b282429c9c48f5a8896f50c80e74d">m_OverrideHtmlColorProp</a></td></tr>
+<tr class="separator:a870b282429c9c48f5a8896f50c80e74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a14254b218038849d1636674ef08bd"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a91a14254b218038849d1636674ef08bd">m_FontSizeProp</a></td></tr>
+<tr class="separator:a91a14254b218038849d1636674ef08bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecda0ca14c77370317190bd66a76ba84"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aecda0ca14c77370317190bd66a76ba84">m_FontSizeBaseProp</a></td></tr>
+<tr class="separator:aecda0ca14c77370317190bd66a76ba84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73b2f77bf48e54594e3a18501abd1c0"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aa73b2f77bf48e54594e3a18501abd1c0">m_AutoSizingProp</a></td></tr>
+<tr class="separator:aa73b2f77bf48e54594e3a18501abd1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c7a7b8d94fa689d624aa91095cd6cc"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a99c7a7b8d94fa689d624aa91095cd6cc">m_FontSizeMinProp</a></td></tr>
+<tr class="separator:a99c7a7b8d94fa689d624aa91095cd6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba910b0091e45b29b82f274f7a469ba3"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aba910b0091e45b29b82f274f7a469ba3">m_FontSizeMaxProp</a></td></tr>
+<tr class="separator:aba910b0091e45b29b82f274f7a469ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0ebb17cc51b8ce10410e279f69b524"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a2a0ebb17cc51b8ce10410e279f69b524">m_LineSpacingMaxProp</a></td></tr>
+<tr class="separator:a2a0ebb17cc51b8ce10410e279f69b524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3356e390ce3396ce4f45413793c2801f"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3356e390ce3396ce4f45413793c2801f">m_CharWidthMaxAdjProp</a></td></tr>
+<tr class="separator:a3356e390ce3396ce4f45413793c2801f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4cd5844e7dbdcb3dd25dbf4878fe97d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab4cd5844e7dbdcb3dd25dbf4878fe97d">m_CharacterSpacingProp</a></td></tr>
+<tr class="separator:ab4cd5844e7dbdcb3dd25dbf4878fe97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d8f6c601287972e3f3830cbd63a23a"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a15d8f6c601287972e3f3830cbd63a23a">m_WordSpacingProp</a></td></tr>
+<tr class="separator:a15d8f6c601287972e3f3830cbd63a23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d0808bad545be2c3bf762f489d475d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a55d0808bad545be2c3bf762f489d475d">m_LineSpacingProp</a></td></tr>
+<tr class="separator:a55d0808bad545be2c3bf762f489d475d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b46399f8c1a4f09173822a8cc67971"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aa4b46399f8c1a4f09173822a8cc67971">m_ParagraphSpacingProp</a></td></tr>
+<tr class="separator:aa4b46399f8c1a4f09173822a8cc67971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b79e0d4d8b4adc00bb4fa9f4fbc03c"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ae3b79e0d4d8b4adc00bb4fa9f4fbc03c">m_TextAlignmentProp</a></td></tr>
+<tr class="separator:ae3b79e0d4d8b4adc00bb4fa9f4fbc03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec82653be31e8f08bfdf965d64a79cd"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a9ec82653be31e8f08bfdf965d64a79cd">m_HorizontalMappingProp</a></td></tr>
+<tr class="separator:a9ec82653be31e8f08bfdf965d64a79cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c4276ba6fedc0f646c5b4e6022daa1"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a98c4276ba6fedc0f646c5b4e6022daa1">m_VerticalMappingProp</a></td></tr>
+<tr class="separator:a98c4276ba6fedc0f646c5b4e6022daa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab043c50b5c668b92b163b3ef5ad6b09e"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab043c50b5c668b92b163b3ef5ad6b09e">m_UvLineOffsetProp</a></td></tr>
+<tr class="separator:ab043c50b5c668b92b163b3ef5ad6b09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da763451f243427dc1c3d224ab96b4d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3da763451f243427dc1c3d224ab96b4d">m_EnableWordWrappingProp</a></td></tr>
+<tr class="separator:a3da763451f243427dc1c3d224ab96b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99dafe311151e21a8061a38cd7a6992"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ad99dafe311151e21a8061a38cd7a6992">m_WordWrappingRatiosProp</a></td></tr>
+<tr class="separator:ad99dafe311151e21a8061a38cd7a6992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d34c4e05948f74f1f0fc53ac89c20bb"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a0d34c4e05948f74f1f0fc53ac89c20bb">m_TextOverflowModeProp</a></td></tr>
+<tr class="separator:a0d34c4e05948f74f1f0fc53ac89c20bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c9e4b08b9e98a24382060e7b93c163"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a81c9e4b08b9e98a24382060e7b93c163">m_PageToDisplayProp</a></td></tr>
+<tr class="separator:a81c9e4b08b9e98a24382060e7b93c163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12e503a44feb01cc9f5bb0bf49ad4d8"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#af12e503a44feb01cc9f5bb0bf49ad4d8">m_LinkedTextComponentProp</a></td></tr>
+<tr class="separator:af12e503a44feb01cc9f5bb0bf49ad4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a900bd0386264af2c45536ac4afa1962c"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a900bd0386264af2c45536ac4afa1962c">m_IsLinkedTextComponentProp</a></td></tr>
+<tr class="separator:a900bd0386264af2c45536ac4afa1962c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76731ba9285eafde60f3c2159282b58f"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a76731ba9285eafde60f3c2159282b58f">m_EnableKerningProp</a></td></tr>
+<tr class="separator:a76731ba9285eafde60f3c2159282b58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c489231295b98f56d186af75d55966"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ac5c489231295b98f56d186af75d55966">m_IsRichTextProp</a></td></tr>
+<tr class="separator:ac5c489231295b98f56d186af75d55966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6df6cfff8ac4c92ab427166d94e3eb"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a9a6df6cfff8ac4c92ab427166d94e3eb">m_HasFontAssetChangedProp</a></td></tr>
+<tr class="separator:a9a6df6cfff8ac4c92ab427166d94e3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf41c32435fd580b17d4821d7578c68"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a2cf41c32435fd580b17d4821d7578c68">m_EnableExtraPaddingProp</a></td></tr>
+<tr class="separator:a2cf41c32435fd580b17d4821d7578c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b00d196a10d6e01638990a1cde9c8b"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aa1b00d196a10d6e01638990a1cde9c8b">m_CheckPaddingRequiredProp</a></td></tr>
+<tr class="separator:aa1b00d196a10d6e01638990a1cde9c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21c49aaac5fe9c64537f1ea263abd14"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ae21c49aaac5fe9c64537f1ea263abd14">m_EnableEscapeCharacterParsingProp</a></td></tr>
+<tr class="separator:ae21c49aaac5fe9c64537f1ea263abd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c95b91b57e32bb1bf7ddb768d9619da"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a0c95b91b57e32bb1bf7ddb768d9619da">m_UseMaxVisibleDescenderProp</a></td></tr>
+<tr class="separator:a0c95b91b57e32bb1bf7ddb768d9619da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814f634e9080977ec1ad2014375b1410"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a814f634e9080977ec1ad2014375b1410">m_GeometrySortingOrderProp</a></td></tr>
+<tr class="separator:a814f634e9080977ec1ad2014375b1410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4151a0308bd63e2ad819d528673013e3"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4151a0308bd63e2ad819d528673013e3">m_SpriteAssetProp</a></td></tr>
+<tr class="separator:a4151a0308bd63e2ad819d528673013e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d160f33776dcb1253bf4def28c8a0a"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a60d160f33776dcb1253bf4def28c8a0a">m_MarginProp</a></td></tr>
+<tr class="separator:a60d160f33776dcb1253bf4def28c8a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2d5d90679b96671985213c253f4cca"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a2d2d5d90679b96671985213c253f4cca">m_ColorModeProp</a></td></tr>
+<tr class="separator:a2d2d5d90679b96671985213c253f4cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd15aa0e10736b4a9e47dfaa0df9c73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#abbd15aa0e10736b4a9e47dfaa0df9c73">m_HavePropertiesChanged</a></td></tr>
+<tr class="separator:abbd15aa0e10736b4a9e47dfaa0df9c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2eb5a3fd11e8afb676258b7e6907cad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_t_m_p___text.html">TMP_Text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ae2eb5a3fd11e8afb676258b7e6907cad">m_TextComponent</a></td></tr>
+<tr class="separator:ae2eb5a3fd11e8afb676258b7e6907cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264301b690ec1bf59740cb33d3e30b63"><td class="memItemLeft" align="right" valign="top">RectTransform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a264301b690ec1bf59740cb33d3e30b63">m_RectTransform</a></td></tr>
+<tr class="separator:a264301b690ec1bf59740cb33d3e30b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ba4fbdb3f5bc17081161984840bcc7"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ad6ba4fbdb3f5bc17081161984840bcc7">m_TargetMaterial</a></td></tr>
+<tr class="separator:ad6ba4fbdb3f5bc17081161984840bcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d322bc4c1e4492c84e00befd71c34e"><td class="memItemLeft" align="right" valign="top">Vector3[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab5d322bc4c1e4492c84e00befd71c34e">m_RectCorners</a> = new Vector3[4]</td></tr>
+<tr class="separator:ab5d322bc4c1e4492c84e00befd71c34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ee2a7777950138e4c4484d3b4b8b1a"><td class="memItemLeft" align="right" valign="top">Vector3[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a95ee2a7777950138e4c4484d3b4b8b1a">m_HandlePoints</a> = new Vector3[4]</td></tr>
+<tr class="separator:a95ee2a7777950138e4c4484d3b4b8b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+静态 Protected 属性</h2></td></tr>
+<tr class="memitem:a578f5582bd20131144ec9ccc6abbce3a"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a578f5582bd20131144ec9ccc6abbce3a">k_ExtraSettingsLabel</a> = new GUIContent(&quot;Extra Settings&quot;)</td></tr>
+<tr class="separator:a578f5582bd20131144ec9ccc6abbce3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4526b6887383493c626fa6810560fe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a0e4526b6887383493c626fa6810560fe">s_EventId</a></td></tr>
+<tr class="separator:a0e4526b6887383493c626fa6810560fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a309804d36b15c296067e56e945958414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a309804d36b15c296067e56e945958414">DrawFont</a> ()</td></tr>
+<tr class="separator:a309804d36b15c296067e56e945958414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9473ed7ba1ff572b4088efe99f639e75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a9473ed7ba1ff572b4088efe99f639e75">DrawColor</a> ()</td></tr>
+<tr class="separator:a9473ed7ba1ff572b4088efe99f639e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6475c7ada003e7b6a2eda47faa89b7ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a6475c7ada003e7b6a2eda47faa89b7ca">DrawSpacing</a> ()</td></tr>
+<tr class="separator:a6475c7ada003e7b6a2eda47faa89b7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7778f8173e5c536cd5d1c5e333fb5a86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a7778f8173e5c536cd5d1c5e333fb5a86">DrawAlignment</a> ()</td></tr>
+<tr class="separator:a7778f8173e5c536cd5d1c5e333fb5a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7cdd184e7afd6572988705e56c76ed2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab7cdd184e7afd6572988705e56c76ed2">DrawWrappingOverflow</a> ()</td></tr>
+<tr class="separator:ab7cdd184e7afd6572988705e56c76ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a8c61addb8e0766ff5133159e256db004"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a8c61addb8e0766ff5133159e256db004">k_RtlToggleLabel</a> = new GUIContent(&quot;Enable RTL Editor&quot;, &quot;Reverses text direction and allows right to left editing.&quot;)</td></tr>
+<tr class="separator:a8c61addb8e0766ff5133159e256db004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c608b0e65cc595aedd74bb7f2255928"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a2c608b0e65cc595aedd74bb7f2255928">k_MainSettingsLabel</a> = new GUIContent(&quot;Main Settings&quot;)</td></tr>
+<tr class="separator:a2c608b0e65cc595aedd74bb7f2255928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff0ee51ed99aa6bbd883287606e38af"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a5ff0ee51ed99aa6bbd883287606e38af">k_FontAssetLabel</a> = new GUIContent(&quot;Font Asset&quot;, &quot;The Font Asset containing the glyphs that can be rendered for this text.&quot;)</td></tr>
+<tr class="separator:a5ff0ee51ed99aa6bbd883287606e38af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773fffeeac66862e0bb4af4fb8a05877"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a773fffeeac66862e0bb4af4fb8a05877">k_MaterialPresetLabel</a> = new GUIContent(&quot;Material Preset&quot;, &quot;The material used for rendering. Only materials created from the Font Asset can be used.&quot;)</td></tr>
+<tr class="separator:a773fffeeac66862e0bb4af4fb8a05877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa3adccd966b951c790eded43cf3588"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a9aa3adccd966b951c790eded43cf3588">k_AutoSizeLabel</a> = new GUIContent(&quot;Auto Size&quot;, &quot;Auto sizes the text to fit the available space.&quot;)</td></tr>
+<tr class="separator:a9aa3adccd966b951c790eded43cf3588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78e0fc5973d38dc4884f1c46d291cb2"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ad78e0fc5973d38dc4884f1c46d291cb2">k_FontSizeLabel</a> = new GUIContent(&quot;Font Size&quot;, &quot;The size the text will be rendered at in points.&quot;)</td></tr>
+<tr class="separator:ad78e0fc5973d38dc4884f1c46d291cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d26363f4b6efe5de79e1c8671c399c6"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a8d26363f4b6efe5de79e1c8671c399c6">k_AutoSizeOptionsLabel</a> = new GUIContent(&quot;Auto Size Options&quot;)</td></tr>
+<tr class="separator:a8d26363f4b6efe5de79e1c8671c399c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8cc38a69f8255c1e7112e505ebbf6c"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a1f8cc38a69f8255c1e7112e505ebbf6c">k_MinLabel</a> = new GUIContent(&quot;Min&quot;, &quot;The minimum font size.&quot;)</td></tr>
+<tr class="separator:a1f8cc38a69f8255c1e7112e505ebbf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4ae376a3be34c62e2610ccc7891dbb"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aeb4ae376a3be34c62e2610ccc7891dbb">k_MaxLabel</a> = new GUIContent(&quot;Max&quot;, &quot;The maximum font size.&quot;)</td></tr>
+<tr class="separator:aeb4ae376a3be34c62e2610ccc7891dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c27fc4d761670e523664bc774488ffa"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3c27fc4d761670e523664bc774488ffa">k_WdLabel</a> = new GUIContent(&quot;WD%&quot;, &quot;Compresses character width up to this value before reducing font size.&quot;)</td></tr>
+<tr class="separator:a3c27fc4d761670e523664bc774488ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc8d8c78d664b46188c1f2ed0874ae2"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a5bc8d8c78d664b46188c1f2ed0874ae2">k_LineLabel</a> = new GUIContent(&quot;Line&quot;, &quot;Negative value only. Compresses line height down to this value before reducing font size.&quot;)</td></tr>
+<tr class="separator:a5bc8d8c78d664b46188c1f2ed0874ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85f572e1cdc10e70f6f4893732d05f1"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab85f572e1cdc10e70f6f4893732d05f1">k_FontStyleLabel</a> = new GUIContent(&quot;Font Style&quot;, &quot;Styles to apply to the text such as <a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca114c3050111d8b8ddd830b99ccebd246">Bold</a> or Italic.&quot;)</td></tr>
+<tr class="separator:ab85f572e1cdc10e70f6f4893732d05f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2659f1857bbc887519c502df6bb4108f"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a2659f1857bbc887519c502df6bb4108f">k_BoldLabel</a> = new GUIContent(&quot;B&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca114c3050111d8b8ddd830b99ccebd246">Bold</a>&quot;)</td></tr>
+<tr class="separator:a2659f1857bbc887519c502df6bb4108f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac046396517c2295eaf590eada4c533"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#afac046396517c2295eaf590eada4c533">k_ItalicLabel</a> = new GUIContent(&quot;I&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca1d874710ccdcd46b95397049d2e7500c">Italic</a>&quot;)</td></tr>
+<tr class="separator:afac046396517c2295eaf590eada4c533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e80480789918ede98c889619547d979"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3e80480789918ede98c889619547d979">k_UnderlineLabel</a> = new GUIContent(&quot;U&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca852721aa5fc738dfedff2945d71da439">Underline</a>&quot;)</td></tr>
+<tr class="separator:a3e80480789918ede98c889619547d979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2de8462c449f1819efe3d7cb408264e"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ad2de8462c449f1819efe3d7cb408264e">k_StrikethroughLabel</a> = new GUIContent(&quot;S&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca926a51baad949d12035107e5d06e2fdb">Strikethrough</a>&quot;)</td></tr>
+<tr class="separator:ad2de8462c449f1819efe3d7cb408264e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3df1a91f50b802d97ddb5aae62c1b07"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab3df1a91f50b802d97ddb5aae62c1b07">k_LowercaseLabel</a> = new GUIContent(&quot;ab&quot;, &quot;Lowercase&quot;)</td></tr>
+<tr class="separator:ab3df1a91f50b802d97ddb5aae62c1b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af585a1b78510a268d92894003192a3cb"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#af585a1b78510a268d92894003192a3cb">k_UppercaseLabel</a> = new GUIContent(&quot;AB&quot;, &quot;Uppercase&quot;)</td></tr>
+<tr class="separator:af585a1b78510a268d92894003192a3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc58a1a3d05a9087e59fd7607517a4a9"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#adc58a1a3d05a9087e59fd7607517a4a9">k_SmallcapsLabel</a> = new GUIContent(&quot;SC&quot;, &quot;Smallcaps&quot;)</td></tr>
+<tr class="separator:adc58a1a3d05a9087e59fd7607517a4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260362e6457ef4c2c99cdc73f3dea217"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a260362e6457ef4c2c99cdc73f3dea217">k_ColorModeLabel</a> = new GUIContent(&quot;Color Mode&quot;, &quot;The type of gradient to use.&quot;)</td></tr>
+<tr class="separator:a260362e6457ef4c2c99cdc73f3dea217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bd220a825c8b1df2c9d4eb56550040"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a21bd220a825c8b1df2c9d4eb56550040">k_BaseColorLabel</a> = new GUIContent(&quot;Vertex Color&quot;, &quot;The base color of the text vertices.&quot;)</td></tr>
+<tr class="separator:a21bd220a825c8b1df2c9d4eb56550040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0fa5d9abc0ee6f471d8b5da4dbc6b1"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aec0fa5d9abc0ee6f471d8b5da4dbc6b1">k_ColorPresetLabel</a> = new GUIContent(&quot;Color Preset&quot;, &quot;A Color Preset which override the local color settings.&quot;)</td></tr>
+<tr class="separator:aec0fa5d9abc0ee6f471d8b5da4dbc6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab354bb8dd4e239b3944762eb20433473"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ab354bb8dd4e239b3944762eb20433473">k_ColorGradientLabel</a> = new GUIContent(&quot;Color Gradient&quot;, &quot;The gradient color applied over the Vertex Color. Can be locally set or driven by a Gradient Asset.&quot;)</td></tr>
+<tr class="separator:ab354bb8dd4e239b3944762eb20433473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae399e948b0a391834beaa71bbe5b8f58"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ae399e948b0a391834beaa71bbe5b8f58">k_CorenerColorsLabel</a> = new GUIContent(&quot;Colors&quot;, &quot;The color composition of the gradient.&quot;)</td></tr>
+<tr class="separator:ae399e948b0a391834beaa71bbe5b8f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ca2d25516657cb525342cbcaf3b040"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a33ca2d25516657cb525342cbcaf3b040">k_OverrideTagsLabel</a> = new GUIContent(&quot;Override Tags&quot;, &quot;Whether the color settings override the &lt;color&gt; tag.&quot;)</td></tr>
+<tr class="separator:a33ca2d25516657cb525342cbcaf3b040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0ceb19e590237d0c40c56348eac626"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a8f0ceb19e590237d0c40c56348eac626">k_SpacingOptionsLabel</a> = new GUIContent(&quot;Spacing Options&quot;, &quot;Spacing adjustments between different elements of the text.&quot;)</td></tr>
+<tr class="separator:a8f0ceb19e590237d0c40c56348eac626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd3f76954a04a3cfbc7a7d9d5df0fdc9"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#afd3f76954a04a3cfbc7a7d9d5df0fdc9">k_CharacterSpacingLabel</a> = new GUIContent(&quot;Character&quot;)</td></tr>
+<tr class="separator:afd3f76954a04a3cfbc7a7d9d5df0fdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade06486014a8e3b666c37eff922b202a"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ade06486014a8e3b666c37eff922b202a">k_WordSpacingLabel</a> = new GUIContent(&quot;Word&quot;)</td></tr>
+<tr class="separator:ade06486014a8e3b666c37eff922b202a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591743bd7f656e51720c83fe7f2c8578"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a591743bd7f656e51720c83fe7f2c8578">k_LineSpacingLabel</a> = new GUIContent(&quot;Line&quot;)</td></tr>
+<tr class="separator:a591743bd7f656e51720c83fe7f2c8578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675d767514e2cb7687009115337ab8a7"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a675d767514e2cb7687009115337ab8a7">k_ParagraphSpacingLabel</a> = new GUIContent(&quot;Paragraph&quot;)</td></tr>
+<tr class="separator:a675d767514e2cb7687009115337ab8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde17ed9aec0cbc6dd35a124f29a3073"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#adde17ed9aec0cbc6dd35a124f29a3073">k_AlignmentLabel</a> = new GUIContent(&quot;Alignment&quot;, &quot;Horizontal and vertical aligment of the text within its container.&quot;)</td></tr>
+<tr class="separator:adde17ed9aec0cbc6dd35a124f29a3073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a531bc64d98c446bf06c7393607ea9e17"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a531bc64d98c446bf06c7393607ea9e17">k_WrapMixLabel</a> = new GUIContent(&quot;Wrap Mix (W &lt;-&gt; C)&quot;, &quot;How much to favor words versus characters when distributing the text.&quot;)</td></tr>
+<tr class="separator:a531bc64d98c446bf06c7393607ea9e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac65da36f2dd269d8f072fbe5315f178a"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ac65da36f2dd269d8f072fbe5315f178a">k_WrappingLabel</a> = new GUIContent(&quot;Wrapping&quot;, &quot;Wraps text to the next line when reaching the edge of the container.&quot;)</td></tr>
+<tr class="separator:ac65da36f2dd269d8f072fbe5315f178a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a63f42e700de62a6c060175866a882e"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4a63f42e700de62a6c060175866a882e">k_WrappingOptions</a> = { new GUIContent(&quot;Disabled&quot;), new GUIContent(&quot;Enabled&quot;) }</td></tr>
+<tr class="separator:a4a63f42e700de62a6c060175866a882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907c7180356793212ed29dc0f4142154"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a907c7180356793212ed29dc0f4142154">k_OverflowLabel</a> = new GUIContent(&quot;Overflow&quot;, &quot;How to display text which goes past the edge of the container.&quot;)</td></tr>
+<tr class="separator:a907c7180356793212ed29dc0f4142154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8a30e300ff468dd02799553cd6bdc0"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#adb8a30e300ff468dd02799553cd6bdc0">k_MarginsLabel</a> = new GUIContent(&quot;Margins&quot;, &quot;The space between the text and the edge of its container.&quot;)</td></tr>
+<tr class="separator:adb8a30e300ff468dd02799553cd6bdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e76297bc20bc742f5d63daee938f10"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#af6e76297bc20bc742f5d63daee938f10">k_GeometrySortingLabel</a> = new GUIContent(&quot;Geometry Sorting&quot;, &quot;The order in which text geometry is sorted. Used to adjust the way overlapping characters are displayed.&quot;)</td></tr>
+<tr class="separator:af6e76297bc20bc742f5d63daee938f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6501e593667be9f2f5d4b2968f6b75"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4c6501e593667be9f2f5d4b2968f6b75">k_RichTextLabel</a> = new GUIContent(&quot;Rich Text&quot;, &quot;Enables the use of rich text tags such as &lt;color&gt; and &lt;font&gt;.&quot;)</td></tr>
+<tr class="separator:a4c6501e593667be9f2f5d4b2968f6b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff068e90da4d490830d51138d1ef820"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aaff068e90da4d490830d51138d1ef820">k_EscapeCharactersLabel</a> = new GUIContent(&quot;Parse Escape Characters&quot;, &quot;Whether to display strings such as \&quot;\\n\&quot; as is or replace them by the character they represent.&quot;)</td></tr>
+<tr class="separator:aaff068e90da4d490830d51138d1ef820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127cb76e5f478bde07d8c4020552a47f"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a127cb76e5f478bde07d8c4020552a47f">k_VisibleDescenderLabel</a> = new GUIContent(&quot;Visible Descender&quot;, &quot;Compute descender values from visible characters only. Used to adjust layout behavior when hiding and revealing characters dynamically.&quot;)</td></tr>
+<tr class="separator:a127cb76e5f478bde07d8c4020552a47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bac923ac991d24b9e8f78b1418f1e0d"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a9bac923ac991d24b9e8f78b1418f1e0d">k_SpriteAssetLabel</a> = new GUIContent(&quot;Sprite Asset&quot;, &quot;The <a class="el" href="namespace_t_m_pro.html#ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd">Sprite</a> Asset used when NOT specifically referencing one using &lt;sprite=\&quot;Sprite Asset Name\&quot;&gt;.&quot;)</td></tr>
+<tr class="separator:a9bac923ac991d24b9e8f78b1418f1e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3480d98d4742008688117a647f72ed1c"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3480d98d4742008688117a647f72ed1c">k_HorizontalMappingLabel</a> = new GUIContent(&quot;Horizontal Mapping&quot;, &quot;Horizontal UV mapping when using a shader with a texture face option.&quot;)</td></tr>
+<tr class="separator:a3480d98d4742008688117a647f72ed1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e9a505bbade0e5a936c1a63ecc21bc"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aa0e9a505bbade0e5a936c1a63ecc21bc">k_VerticalMappingLabel</a> = new GUIContent(&quot;Vertical Mapping&quot;, &quot;Vertical UV mapping when using a shader with a texture face option.&quot;)</td></tr>
+<tr class="separator:aa0e9a505bbade0e5a936c1a63ecc21bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84166a87143806699af3c406b09ffcdf"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a84166a87143806699af3c406b09ffcdf">k_LineOffsetLabel</a> = new GUIContent(&quot;Line Offset&quot;, &quot;Adds an horizontal offset to each successive line. Used for slanted texturing.&quot;)</td></tr>
+<tr class="separator:a84166a87143806699af3c406b09ffcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec7028298312e35e835a522e7b510d7"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4ec7028298312e35e835a522e7b510d7">k_KerningLabel</a> = new GUIContent(&quot;Kerning&quot;, &quot;Enables character specific spacing between pairs of characters.&quot;)</td></tr>
+<tr class="separator:a4ec7028298312e35e835a522e7b510d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3aaa259b1b2c0bde5fd7e47001cf63"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aab3aaa259b1b2c0bde5fd7e47001cf63">k_PaddingLabel</a> = new GUIContent(&quot;Extra Padding&quot;, &quot;Adds some padding between the characters and the edge of the text mesh. Can reduce graphical errors when displaying small text.&quot;)</td></tr>
+<tr class="separator:aab3aaa259b1b2c0bde5fd7e47001cf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44bd047387b269a05f52cde387f1ff5"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#af44bd047387b269a05f52cde387f1ff5">k_LeftLabel</a> = new GUIContent(&quot;Left&quot;)</td></tr>
+<tr class="separator:af44bd047387b269a05f52cde387f1ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa82bb3a7079533fbf3d16faf53ffc7a"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aaa82bb3a7079533fbf3d16faf53ffc7a">k_TopLabel</a> = new GUIContent(&quot;Top&quot;)</td></tr>
+<tr class="separator:aaa82bb3a7079533fbf3d16faf53ffc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581be6ee42dc4febf8af22a12832ddd3"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a581be6ee42dc4febf8af22a12832ddd3">k_RightLabel</a> = new GUIContent(&quot;Right&quot;)</td></tr>
+<tr class="separator:a581be6ee42dc4febf8af22a12832ddd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c3767aa4fe39fc127ef728da77a95c"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aa3c3767aa4fe39fc127ef728da77a95c">k_BottomLabel</a> = new GUIContent(&quot;Bottom&quot;)</td></tr>
+<tr class="separator:aa3c3767aa4fe39fc127ef728da77a95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00006">6</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a7778f8173e5c536cd5d1c5e333fb5a86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawAlignment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00848">848</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9473ed7ba1ff572b4088efe99f639e75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00679">679</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a9473ed7ba1ff572b4088efe99f639e75_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a9473ed7ba1ff572b4088efe99f639e75_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a9473ed7ba1ff572b4088efe99f639e75_cgraph" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a9473ed7ba1ff572b4088efe99f639e75_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#a23d9205092aeda965110c803c1f36975" title="TMPro.EditorUtilities.TMP\l_EditorUtility.DrawColorProperty" alt="" coords="260,5,468,47"/><area shape="rect" id="node3" href="class_t_m_pro_1_1_t_m_pro___event_manager.html#ac38742c8916831504932f3ea97d989b1" title="TMPro.TMPro_EventManager.\lON_COLOR_GRAIDENT_PROPERTY\l_CHANGED" alt="" coords="243,71,485,127"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa48733f64d72c29f30e9533061f0c962"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawExtraSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_panel.html#a1327e18c85ce07f1459cf271359a6048">TMPro.EditorUtilities.TMP_EditorPanel</a> , 以及 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___ui_editor_panel.html#afa90d67bac7a60cd53401d2c8ed35de9">TMPro.EditorUtilities.TMP_UiEditorPanel</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="a309804d36b15c296067e56e945958414"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawFont </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00426">426</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a309804d36b15c296067e56e945958414_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a309804d36b15c296067e56e945958414_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a309804d36b15c296067e56e945958414_cgraph" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a309804d36b15c296067e56e945958414_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aee9d8d84e90e724694a0425528ab1b0b" title="TMPro.EditorUtilities.TMP\l_EditorUtility.EditorToggle" alt="" coords="239,5,411,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a585170858dbbb92e0e09828c06798fc0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawGeometrySorting </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00942">942</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a801b12cf3a9d08b0a2c19e450b3713"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawKerning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l01004">1004</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c8d796ceaf88f408b52ef25e81cb117"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawMainSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00404">404</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af44c33a23c1dc0d7821d96be352c8d56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawMarginProperty </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIContent&#160;</td>
+          <td class="paramname"><em>label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l01052">1052</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abbf85a27920dd905ebe05c05c8bc0af8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawMargins </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00930">930</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac66e725c1c635a3c2c301bc3f741f8b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawPadding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l01015">1015</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26fbb356584983194be6c3251088d033"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawParsing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00963">963</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af335a8544934d98010f47fafc0b5e5b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawPropertySlider </td>
+          <td>(</td>
+          <td class="paramtype">GUIContent&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>property</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l01102">1102</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0c714c3b42cc58446443353f51f54c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawRichText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00954">954</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6475c7ada003e7b6a2eda47faa89b7ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawSpacing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00808">808</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf5601a4296e177f9aa0cc74b3556fee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawTextInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00346">346</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abaaa184b10796d9ad95d43b80b1ca614"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawTextureMapping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00979">979</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7cdd184e7afd6572988705e56c76ed2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawWrappingOverflow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00865">865</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5bd05f0804830e2188e5666bdfc2eef0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIContent [] TMPro.EditorUtilities.TMP_BaseEditorPanel.GetMaterialPresets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to retrieve the material presets that match the currently selected font asset. </p>
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l01030">1030</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a5bd05f0804830e2188e5666bdfc2eef0_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a5bd05f0804830e2188e5666bdfc2eef0_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a5bd05f0804830e2188e5666bdfc2eef0_cgraph" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a5bd05f0804830e2188e5666bdfc2eef0_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aedb608c58cdd10131bfd773a3fcbadcb" title="TMPro.EditorUtilities.TMP\l_EditorUtility.FindMaterialReferences" alt="" coords="296,5,532,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d01dae660062e1028c4b28f40689aa9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract bool TMPro.EditorUtilities.TMP_BaseEditorPanel.IsMixSelectionTypes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_panel.html#afd65387972f0d704f001c4563850e610">TMPro.EditorUtilities.TMP_EditorPanel</a> , 以及 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___ui_editor_panel.html#abfd7483420d93f260bd25c932613f6db">TMPro.EditorUtilities.TMP_UiEditorPanel</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef86582a22c23f9a5dd2236eb704aac7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TMPro.EditorUtilities.TMP_BaseEditorPanel.OnDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00239">239</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a60309b317f09709852e0c8013e6849"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TMPro.EditorUtilities.TMP_BaseEditorPanel.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_panel.html#a5c6c52a7543455d4968fb1c438f73c18">TMPro.EditorUtilities.TMP_EditorPanel</a> , 以及 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___ui_editor_panel.html#a24f0d3266f3db540b638e349e29793d9">TMPro.EditorUtilities.TMP_UiEditorPanel</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00160">160</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ff0cf356660eaff8f0280fb6b0aaffd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void TMPro.EditorUtilities.TMP_BaseEditorPanel.OnInspectorGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00249">249</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a7ff0cf356660eaff8f0280fb6b0aaffd_cgraph.png" border="0" usemap="#class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a7ff0cf356660eaff8f0280fb6b0aaffd_cgraph" alt=""/></div>
+<map name="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a7ff0cf356660eaff8f0280fb6b0aaffd_cgraph" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_a7ff0cf356660eaff8f0280fb6b0aaffd_cgraph">
+<area shape="rect" id="node2" href="class_t_m_pro_1_1_t_m_p___text.html#a9e380bad2a5506d96b7c1d3b0b12d013" title="Function to force an update of the margin size. " alt="" coords="276,13,520,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f6360d66e05b77ee4d9dd46b00f4dad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_BaseEditorPanel.OnSceneGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00275">275</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03f1303365c95a93f4fae9cb11af7df7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void TMPro.EditorUtilities.TMP_BaseEditorPanel.OnUndoRedo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_panel.html#a30162b44fb34ae79fc36af4984f49062">TMPro.EditorUtilities.TMP_EditorPanel</a> , 以及 <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___ui_editor_panel.html#ae144f22de63b6a77615fde93e9b047a7">TMPro.EditorUtilities.TMP_UiEditorPanel</a> 内被实现.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="adde17ed9aec0cbc6dd35a124f29a3073"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_AlignmentLabel = new GUIContent(&quot;Alignment&quot;, &quot;Horizontal and vertical aligment of the text within its container.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9aa3adccd966b951c790eded43cf3588"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_AutoSizeLabel = new GUIContent(&quot;Auto Size&quot;, &quot;Auto sizes the text to fit the available space.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d26363f4b6efe5de79e1c8671c399c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_AutoSizeOptionsLabel = new GUIContent(&quot;Auto Size Options&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21bd220a825c8b1df2c9d4eb56550040"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_BaseColorLabel = new GUIContent(&quot;Vertex Color&quot;, &quot;The base color of the text vertices.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2659f1857bbc887519c502df6bb4108f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_BoldLabel = new GUIContent(&quot;B&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca114c3050111d8b8ddd830b99ccebd246">Bold</a>&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3c3767aa4fe39fc127ef728da77a95c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_BottomLabel = new GUIContent(&quot;Bottom&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00067">67</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd3f76954a04a3cfbc7a7d9d5df0fdc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_CharacterSpacingLabel = new GUIContent(&quot;Character&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab354bb8dd4e239b3944762eb20433473"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_ColorGradientLabel = new GUIContent(&quot;Color Gradient&quot;, &quot;The gradient color applied over the Vertex Color. Can be locally set or driven by a Gradient Asset.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a260362e6457ef4c2c99cdc73f3dea217"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_ColorModeLabel = new GUIContent(&quot;Color Mode&quot;, &quot;The type of gradient to use.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec0fa5d9abc0ee6f471d8b5da4dbc6b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_ColorPresetLabel = new GUIContent(&quot;Color Preset&quot;, &quot;A Color Preset which override the local color settings.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae399e948b0a391834beaa71bbe5b8f58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_CorenerColorsLabel = new GUIContent(&quot;Colors&quot;, &quot;The color composition of the gradient.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaff068e90da4d490830d51138d1ef820"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_EscapeCharactersLabel = new GUIContent(&quot;Parse Escape Characters&quot;, &quot;Whether to display strings such as \&quot;\\n\&quot; as is or replace them by the character they represent.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a578f5582bd20131144ec9ccc6abbce3a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_ExtraSettingsLabel = new GUIContent(&quot;Extra Settings&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00069">69</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ff0ee51ed99aa6bbd883287606e38af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_FontAssetLabel = new GUIContent(&quot;Font Asset&quot;, &quot;The Font Asset containing the glyphs that can be rendered for this text.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad78e0fc5973d38dc4884f1c46d291cb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_FontSizeLabel = new GUIContent(&quot;Font Size&quot;, &quot;The size the text will be rendered at in points.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab85f572e1cdc10e70f6f4893732d05f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_FontStyleLabel = new GUIContent(&quot;Font Style&quot;, &quot;Styles to apply to the text such as <a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca114c3050111d8b8ddd830b99ccebd246">Bold</a> or Italic.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af6e76297bc20bc742f5d63daee938f10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_GeometrySortingLabel = new GUIContent(&quot;Geometry Sorting&quot;, &quot;The order in which text geometry is sorted. Used to adjust the way overlapping characters are displayed.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00051">51</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3480d98d4742008688117a647f72ed1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_HorizontalMappingLabel = new GUIContent(&quot;Horizontal Mapping&quot;, &quot;Horizontal UV mapping when using a shader with a texture face option.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00057">57</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="afac046396517c2295eaf590eada4c533"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_ItalicLabel = new GUIContent(&quot;I&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca1d874710ccdcd46b95397049d2e7500c">Italic</a>&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ec7028298312e35e835a522e7b510d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_KerningLabel = new GUIContent(&quot;Kerning&quot;, &quot;Enables character specific spacing between pairs of characters.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00061">61</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af44bd047387b269a05f52cde387f1ff5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_LeftLabel = new GUIContent(&quot;Left&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00064">64</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5bc8d8c78d664b46188c1f2ed0874ae2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_LineLabel = new GUIContent(&quot;Line&quot;, &quot;Negative value only. Compresses line height down to this value before reducing font size.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84166a87143806699af3c406b09ffcdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_LineOffsetLabel = new GUIContent(&quot;Line Offset&quot;, &quot;Adds an horizontal offset to each successive line. Used for slanted texturing.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00059">59</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a591743bd7f656e51720c83fe7f2c8578"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_LineSpacingLabel = new GUIContent(&quot;Line&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3df1a91f50b802d97ddb5aae62c1b07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_LowercaseLabel = new GUIContent(&quot;ab&quot;, &quot;Lowercase&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c608b0e65cc595aedd74bb7f2255928"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_MainSettingsLabel = new GUIContent(&quot;Main Settings&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb8a30e300ff468dd02799553cd6bdc0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_MarginsLabel = new GUIContent(&quot;Margins&quot;, &quot;The space between the text and the edge of its container.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a773fffeeac66862e0bb4af4fb8a05877"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_MaterialPresetLabel = new GUIContent(&quot;Material Preset&quot;, &quot;The material used for rendering. Only materials created from the Font Asset can be used.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb4ae376a3be34c62e2610ccc7891dbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_MaxLabel = new GUIContent(&quot;Max&quot;, &quot;The maximum font size.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f8cc38a69f8255c1e7112e505ebbf6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_MinLabel = new GUIContent(&quot;Min&quot;, &quot;The minimum font size.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a907c7180356793212ed29dc0f4142154"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_OverflowLabel = new GUIContent(&quot;Overflow&quot;, &quot;How to display text which goes past the edge of the container.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33ca2d25516657cb525342cbcaf3b040"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_OverrideTagsLabel = new GUIContent(&quot;Override Tags&quot;, &quot;Whether the color settings override the &lt;color&gt; tag.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab3aaa259b1b2c0bde5fd7e47001cf63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_PaddingLabel = new GUIContent(&quot;Extra Padding&quot;, &quot;Adds some padding between the characters and the edge of the text mesh. Can reduce graphical errors when displaying small text.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00062">62</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a675d767514e2cb7687009115337ab8a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_ParagraphSpacingLabel = new GUIContent(&quot;Paragraph&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c6501e593667be9f2f5d4b2968f6b75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_RichTextLabel = new GUIContent(&quot;Rich Text&quot;, &quot;Enables the use of rich text tags such as &lt;color&gt; and &lt;font&gt;.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a581be6ee42dc4febf8af22a12832ddd3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_RightLabel = new GUIContent(&quot;Right&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00066">66</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c61addb8e0766ff5133159e256db004"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_RtlToggleLabel = new GUIContent(&quot;Enable RTL Editor&quot;, &quot;Reverses text direction and allows right to left editing.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc58a1a3d05a9087e59fd7607517a4a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_SmallcapsLabel = new GUIContent(&quot;SC&quot;, &quot;Smallcaps&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f0ceb19e590237d0c40c56348eac626"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_SpacingOptionsLabel = new GUIContent(&quot;Spacing Options&quot;, &quot;Spacing adjustments between different elements of the text.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9bac923ac991d24b9e8f78b1418f1e0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_SpriteAssetLabel = new GUIContent(&quot;Sprite Asset&quot;, &quot;The <a class="el" href="namespace_t_m_pro.html#ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd">Sprite</a> Asset used when NOT specifically referencing one using &lt;sprite=\&quot;Sprite Asset Name\&quot;&gt;.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00055">55</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2de8462c449f1819efe3d7cb408264e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_StrikethroughLabel = new GUIContent(&quot;S&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca926a51baad949d12035107e5d06e2fdb">Strikethrough</a>&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa82bb3a7079533fbf3d16faf53ffc7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_TopLabel = new GUIContent(&quot;Top&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00065">65</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e80480789918ede98c889619547d979"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_UnderlineLabel = new GUIContent(&quot;U&quot;, &quot;<a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7ca852721aa5fc738dfedff2945d71da439">Underline</a>&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af585a1b78510a268d92894003192a3cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_UppercaseLabel = new GUIContent(&quot;AB&quot;, &quot;Uppercase&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0e9a505bbade0e5a936c1a63ecc21bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_VerticalMappingLabel = new GUIContent(&quot;Vertical Mapping&quot;, &quot;Vertical UV mapping when using a shader with a texture face option.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00058">58</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a127cb76e5f478bde07d8c4020552a47f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_VisibleDescenderLabel = new GUIContent(&quot;Visible Descender&quot;, &quot;Compute descender values from visible characters only. Used to adjust layout behavior when hiding and revealing characters dynamically.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00054">54</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c27fc4d761670e523664bc774488ffa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_WdLabel = new GUIContent(&quot;WD%&quot;, &quot;Compresses character width up to this value before reducing font size.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade06486014a8e3b666c37eff922b202a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_WordSpacingLabel = new GUIContent(&quot;Word&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a531bc64d98c446bf06c7393607ea9e17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_WrapMixLabel = new GUIContent(&quot;Wrap Mix (W &lt;-&gt; C)&quot;, &quot;How much to favor words versus characters when distributing the text.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac65da36f2dd269d8f072fbe5315f178a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent TMPro.EditorUtilities.TMP_BaseEditorPanel.k_WrappingLabel = new GUIContent(&quot;Wrapping&quot;, &quot;Wraps text to the next line when reaching the edge of the container.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a63f42e700de62a6c060175866a882e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent [] TMPro.EditorUtilities.TMP_BaseEditorPanel.k_WrappingOptions = { new GUIContent(&quot;Disabled&quot;), new GUIContent(&quot;Enabled&quot;) }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa73b2f77bf48e54594e3a18501abd1c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_AutoSizingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00107">107</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4cd5844e7dbdcb3dd25dbf4878fe97d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_CharacterSpacingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00114">114</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3356e390ce3396ce4f45413793c2801f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_CharWidthMaxAdjProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00112">112</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1b00d196a10d6e01638990a1cde9c8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_CheckPaddingRequiredProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00139">139</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d2d5d90679b96671985213c253f4cca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_ColorModeProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00148">148</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae21c49aaac5fe9c64537f1ea263abd14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_EnableEscapeCharacterParsingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00140">140</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cf41c32435fd580b17d4821d7578c68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_EnableExtraPaddingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00138">138</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76731ba9285eafde60f3c2159282b58f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_EnableKerningProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00132">132</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bf6ab0503f8bc889c375fe4be5e7afa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_EnableVertexGradientProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00099">99</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3da763451f243427dc1c3d224ab96b4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_EnableWordWrappingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00125">125</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a976912bc614e51841557ec130b9439a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontAssetProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00088">88</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6214bd691c4dbd95696a6043b9cfa343"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontColorGradientPresetProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00101">101</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48df9bda1abce6e13fc4df0a378a399c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontColorGradientProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00100">100</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34fe2a359e1d6dd321692942bf640713"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontColorProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a978d88300f0df1ee1bfdaa7774d1cf75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontSharedMaterialProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00090">90</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aecda0ca14c77370317190bd66a76ba84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontSizeBaseProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00105">105</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba910b0091e45b29b82f274f7a469ba3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontSizeMaxProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00109">109</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a99c7a7b8d94fa689d624aa91095cd6cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontSizeMinProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00108">108</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91a14254b218038849d1636674ef08bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontSizeProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00104">104</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1d8ba8e6d97f28d66c3cdd5cc3ebdbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_FontStyleProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00096">96</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a814f634e9080977ec1ad2014375b1410"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_GeometrySortingOrderProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00142">142</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95ee2a7777950138e4c4484d3b4b8b1a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 [] TMPro.EditorUtilities.TMP_BaseEditorPanel.m_HandlePoints = new Vector3[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00158">158</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a6df6cfff8ac4c92ab427166d94e3eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_HasFontAssetChangedProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00136">136</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abbd15aa0e10736b4a9e47dfaa0df9c73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_BaseEditorPanel.m_HavePropertiesChanged</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00150">150</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ec82653be31e8f08bfdf965d64a79cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_HorizontalMappingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00121">121</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a900bd0386264af2c45536ac4afa1962c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_IsLinkedTextComponentProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00130">130</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa15bf87616246d6dedbfb2f78167bcbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_BaseEditorPanel.m_IsPresetListDirty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00094">94</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5c489231295b98f56d186af75d55966"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_IsRichTextProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00134">134</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a262fa817da942aee16591a55570ee03d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_IsRightToLeftProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00085">85</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2a0ebb17cc51b8ce10410e279f69b524"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_LineSpacingMaxProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00111">111</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55d0808bad545be2c3bf762f489d475d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_LineSpacingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00116">116</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af12e503a44feb01cc9f5bb0bf49ad4d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_LinkedTextComponentProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00129">129</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a60d160f33776dcb1253bf4def28c8a0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_MarginProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00146">146</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8fb56a2db6642231920c33c46e7e23db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIContent [] TMPro.EditorUtilities.TMP_BaseEditorPanel.m_MaterialPresetNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00092">92</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bcdddccc59dfae51926d2cd5253ee4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material [] TMPro.EditorUtilities.TMP_BaseEditorPanel.m_MaterialPresets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00091">91</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c27cda56ff99eb5d2c579dc2c89dd9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_BaseEditorPanel.m_MaterialPresetSelectionIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00093">93</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a870b282429c9c48f5a8896f50c80e74d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_OverrideHtmlColorProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00102">102</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81c9e4b08b9e98a24382060e7b93c163"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_PageToDisplayProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00128">128</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4b46399f8c1a4f09173822a8cc67971"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_ParagraphSpacingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00117">117</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5d322bc4c1e4492c84e00befd71c34e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 [] TMPro.EditorUtilities.TMP_BaseEditorPanel.m_RectCorners = new Vector3[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00157">157</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a264301b690ec1bf59740cb33d3e30b63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RectTransform TMPro.EditorUtilities.TMP_BaseEditorPanel.m_RectTransform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00153">153</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34c8c19f6120043cc0b5a49ba48a64f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMP_BaseEditorPanel.m_RtlText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00086">86</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4151a0308bd63e2ad819d528673013e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_SpriteAssetProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00144">144</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6ba4fbdb3f5bc17081161984840bcc7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material TMPro.EditorUtilities.TMP_BaseEditorPanel.m_TargetMaterial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00155">155</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3b79e0d4d8b4adc00bb4fa9f4fbc03c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_TextAlignmentProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00119">119</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2eb5a3fd11e8afb676258b7e6907cad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___text.html">TMP_Text</a> TMPro.EditorUtilities.TMP_BaseEditorPanel.m_TextComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00152">152</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d34c4e05948f74f1f0fc53ac89c20bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_TextOverflowModeProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00127">127</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a991c4a491416d364765a0a86b807347d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_TextProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00083">83</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c95b91b57e32bb1bf7ddb768d9619da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_UseMaxVisibleDescenderProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab043c50b5c668b92b163b3ef5ad6b09e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_UvLineOffsetProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00123">123</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98c4276ba6fedc0f646c5b4e6022daa1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_VerticalMappingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00122">122</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15d8f6c601287972e3f3830cbd63a23a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_WordSpacingProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00115">115</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad99dafe311151e21a8061a38cd7a6992"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_BaseEditorPanel.m_WordWrappingRatiosProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e4526b6887383493c626fa6810560fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_BaseEditorPanel.s_EventId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00078">78</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7289d43625492e91e63d4508c85fd9e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_BaseEditorPanel.selAlignGridA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00080">80</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4fca9e81bd8b99788677739aba2e17ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_BaseEditorPanel.selAlignGridB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a> 第 <a class="el" href="_t_m_p___base_editor_panel_8cs_source.html#l00081">81</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/<a class="el" href="_t_m_p___base_editor_panel_8cs_source.html">TMP_BaseEditorPanel.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:43 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

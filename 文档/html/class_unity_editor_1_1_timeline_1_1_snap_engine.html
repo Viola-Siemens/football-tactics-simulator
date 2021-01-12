@@ -1,0 +1,776 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.SnapEngine类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html">SnapEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_snap_engine-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.SnapEngine类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+UnityEditor.Timeline.SnapEngine 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_snap_engine__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_snap_engine_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_snap_engine_coll__map" id="_unity_editor_8_timeline_8_snap_engine_coll__map">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html" title="UnityEditor.Timeline.IAttractable" alt="" coords="1005,5,1213,32"/><area shape="rect" id="node3" href="struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html" title="UnityEditor.Timeline.Snap\lEngine.TimeBoundaries" alt="" coords="1023,57,1195,98"/><area shape="rect" id="node4" href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html" title="UnityEditor.Timeline.IAttraction\lHandler" alt="" coords="1009,122,1210,163"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_window_state.html" title="UnityEditor.Timeline.Window\lState" alt="" coords="1015,237,1203,278"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html" title="UnityEditor.Timeline.Sequence\lHierarchy" alt="" coords="1425,317,1625,358"/><area shape="rect" id="node46" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_time_area.html" title="UnityEditor.Timeline.Timeline\lWindow.TimelineTimeArea" alt="" coords="1430,382,1621,423"/><area shape="rect" id="node6" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html" title="UnityEditor.Timeline.ISequence\lState" alt="" coords="605,171,808,213"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_property_collector.html" title="UnityEditor.Timeline.Property\lCollector" alt="" coords="611,237,802,278"/><area shape="rect" id="node9" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html" title="Interface used to inform the Timeline Editor about potential property modifications that may occur wh..." alt="" coords="289,244,415,271"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html" title="UnityEditor.Timeline.Space\lPartitioner" alt="" coords="617,302,796,343"/><area shape="rect" id="node11" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html" title="UnityEngine.Timeline.Interval\lTree\&lt; UnityEditor.Timeline.Space\lPartitioner.Entry \&gt;" alt="" coords="244,295,460,351"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html" title="UnityEditor.Timeline.Timeline\lWindow" alt="" coords="1860,734,2051,775"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html" title="UnityEditor.Timeline.SequencePath" alt="" coords="996,409,1223,436"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI" alt="" coords="1430,613,1621,654"/><area shape="rect" id="node19" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html" title="IRowGUI" alt="" coords="1073,511,1145,537"/><area shape="rect" id="node20" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html" title="ILayerable" alt="" coords="1069,561,1150,588"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_markers_layer.html" title="UnityEditor.Timeline.Markers\lLayer" alt="" coords="1015,663,1204,705"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_items_layer.html" title="ItemsLayer" alt="" coords="663,667,750,693"/><area shape="rect" id="node23" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html" title="UnityEditor.Timeline.Layer\lZOrder" alt="" coords="265,622,439,663"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_time_area_item.html" title="UnityEditor.Timeline.Time\lAreaItem" alt="" coords="1440,734,1611,775"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_control.html" title="Control" alt="" coords="1078,780,1141,807"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_tooltip.html" title="UnityEditor.Timeline.Tooltip" alt="" coords="1019,729,1199,756"/><area shape="rect" id="node28" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html" title="A PlayableAsset that represents a timeline. " alt="" coords="1427,874,1623,915"/><area shape="rect" id="node34" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="1019,1307,1199,1349"/><area shape="rect" id="node36" href="struct_unity_engine_1_1_timeline_1_1_marker_list.html" title="UnityEngine.Timeline.MarkerList" alt="" coords="602,1013,811,1040"/><area shape="rect" id="node38" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html" title="Represents a clip on the timeline. " alt="" coords="1416,1361,1635,1388"/><area shape="rect" id="node31" href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html" title="Implement this interface to support advanced features of timeline clips. " alt="" coords="1045,881,1174,908"/><area shape="rect" id="node32" href="interface_unity_engine_1_1_timeline_1_1_i_property_preview.html" title="Implement this interface in a PlayableAsset to specify which properties will be modified when Timelin..." alt="" coords="647,1081,766,1108"/><area shape="rect" id="node33" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html" title="Properties of the timeline that are used by the editor " alt="" coords="1011,983,1207,1025"/><area shape="rect" id="node35" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="656,1375,757,1401"/><area shape="rect" id="node37" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html" title="UnityEngine.Timeline.DiscreteTime" alt="" coords="595,1248,819,1275"/><area shape="rect" id="node39" href="struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html" title="UnityEngine.Timeline.Track\lAsset.TransientBuildData" alt="" coords="617,1299,797,1341"/><area shape="rect" id="node40" href="class_unity_engine_1_1_timeline_1_1_marker_track.html" title="Use this track to add Markers bound to a GameObject. " alt="" coords="1015,1101,1203,1142"/><area shape="rect" id="node41" href="class_unity_editor_1_1_timeline_1_1_rectangle_select.html" title="UnityEditor.Timeline.Rectangle\lSelect" alt="" coords="1425,991,1625,1033"/><area shape="rect" id="node42" href="class_unity_editor_1_1_timeline_1_1_rectangle_tool.html" title="RectangleTool" alt="" coords="1057,1167,1161,1193"/><area shape="rect" id="node44" href="class_unity_editor_1_1_timeline_1_1_rectangle_zoom.html" title="UnityEditor.Timeline.RectangleZoom" alt="" coords="1409,1108,1641,1135"/><area shape="rect" id="node43" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html" title="UnityEditor.Timeline.TimelineMode" alt="" coords="1414,940,1637,967"/><area shape="rect" id="node45" href="class_unity_editor_1_1_timeline_1_1_control.html" title="UnityEditor.Timeline.Control" alt="" coords="1434,1057,1617,1084"/><area shape="rect" id="node48" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_playable_lookup.html" title="UnityEditor.Timeline.Timeline\lWindow.PlayableLookup" alt="" coords="1430,1159,1621,1201"/><area shape="rect" id="node49" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html" title="UnityEditor.Timeline.Timeline\lWindow.TimelineWindowPreferences" alt="" coords="1408,1230,1643,1271"/><area shape="rect" id="node50" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html" title="UnityEditor.Timeline.EditMode" alt="" coords="1011,1217,1208,1244"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html">TimeBoundaries</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa5c72037d69353962ed19e52e4be582f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aa5c72037d69353962ed19e52e4be582f">SnapEngine</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a> attractable, <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html">IAttractionHandler</a> attractionHandler, <a class="el" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a> manipulateEdges, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Vector2 mousePosition, IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">ISnappable</a> &gt; snappables=null)</td></tr>
+<tr class="separator:aa5c72037d69353962ed19e52e4be582f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3e3807454a0740cc09637fb9bd18cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a1c3e3807454a0740cc09637fb9bd18cf">Snap</a> (Vector2 currentMousePosition, EventModifiers modifiers)</td></tr>
+<tr class="separator:a1c3e3807454a0740cc09637fb9bd18cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4e629de9386458110f14f4c5037f1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aee4e629de9386458110f14f4c5037f1a">OnGUI</a> (bool showLeft=true, bool showRight=true)</td></tr>
+<tr class="separator:aee4e629de9386458110f14f4c5037f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:acf44a9b1d116ffdebf5f954a7708e54a"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">ISnappable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#acf44a9b1d116ffdebf5f954a7708e54a">GetVisibleSnappables</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:acf44a9b1d116ffdebf5f954a7708e54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:aae93ebbbbf5ce8a48a21413332d3048c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aae93ebbbbf5ce8a48a21413332d3048c">displayDebugLayout</a></td></tr>
+<tr class="separator:aae93ebbbbf5ce8a48a21413332d3048c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a4ed2c5a17d04c4f6d6917ed1de5a4103"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4ed2c5a17d04c4f6d6917ed1de5a4103">AddMagnet</a> (double magnetTime, bool showSnapHint, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a4ed2c5a17d04c4f6d6917ed1de5a4103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd2ce9433d84dca5f01710b2704bf59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a9bd2ce9433d84dca5f01710b2704bf59">GetMagnetAt</a> (double time)</td></tr>
+<tr class="separator:a9bd2ce9433d84dca5f01710b2704bf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f5c379084ea39f7afda2d9470ebf4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#ae8f5c379084ea39f7afda2d9470ebf4f">ClosestMagnet</a> (double time)</td></tr>
+<tr class="separator:ae8f5c379084ea39f7afda2d9470ebf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ffa8c115f8cb170af815b3c440ba33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a38ffa8c115f8cb170af815b3c440ba33">DrawMagnetLineAt</a> (double time)</td></tr>
+<tr class="separator:a38ffa8c115f8cb170af815b3c440ba33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a4f78c1fc9a7dde564cef1839cbf6ff71"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4f78c1fc9a7dde564cef1839cbf6ff71">IsMagnetInShownArea</a> (double time, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a4f78c1fc9a7dde564cef1839cbf6ff71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9fd771b15ea9a2a61e0f8296eef23010"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a9fd771b15ea9a2a61e0f8296eef23010">m_Attractable</a></td></tr>
+<tr class="separator:a9fd771b15ea9a2a61e0f8296eef23010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91260cbcbf259ad5fff3eac9fe6cbc84"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html">IAttractionHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a91260cbcbf259ad5fff3eac9fe6cbc84">m_AttractionHandler</a></td></tr>
+<tr class="separator:a91260cbcbf259ad5fff3eac9fe6cbc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad00db995cf2a6d288f67a7678654203"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aad00db995cf2a6d288f67a7678654203">m_ManipulateEdges</a></td></tr>
+<tr class="separator:aad00db995cf2a6d288f67a7678654203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca072ddd0ee0e9a151fc3f24d43805f1"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aca072ddd0ee0e9a151fc3f24d43805f1">m_State</a></td></tr>
+<tr class="separator:aca072ddd0ee0e9a151fc3f24d43805f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9f7582f6745029176696b1a68dedcc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#aca9f7582f6745029176696b1a68dedcc">m_GrabbedTime</a></td></tr>
+<tr class="separator:aca9f7582f6745029176696b1a68dedcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7717b00102f55b984847d30a8afa0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html">TimeBoundaries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a9e7717b00102f55b984847d30a8afa0c">m_GrabbedTimes</a></td></tr>
+<tr class="separator:a9e7717b00102f55b984847d30a8afa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c0788b7ff4116e98640fd4a3e9a9cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html">TimeBoundaries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a00c0788b7ff4116e98640fd4a3e9a9cb">m_CurrentTimes</a></td></tr>
+<tr class="separator:a00c0788b7ff4116e98640fd4a3e9a9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdee0b0962e953f339224145f691480"><td class="memItemLeft" align="right" valign="top">readonly List&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a8bdee0b0962e953f339224145f691480">m_Magnets</a> = new List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a>&gt;()</td></tr>
+<tr class="separator:a8bdee0b0962e953f339224145f691480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4daabb9bbced4eec2215d689b4145eb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4daabb9bbced4eec2215d689b4145eb4">m_SnapEnabled</a></td></tr>
+<tr class="separator:a4daabb9bbced4eec2215d689b4145eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a4301878973b9b1ad70030d8495efe44d"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4301878973b9b1ad70030d8495efe44d">k_MagnetInfluenceInPixels</a> = 10.0f</td></tr>
+<tr class="separator:a4301878973b9b1ad70030d8495efe44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00016">16</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aa5c72037d69353962ed19e52e4be582f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEditor.Timeline.SnapEngine.SnapEngine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a>&#160;</td>
+          <td class="paramname"><em>attractable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html">IAttractionHandler</a>&#160;</td>
+          <td class="paramname"><em>attractionHandler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a>&#160;</td>
+          <td class="paramname"><em>manipulateEdges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>mousePosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">ISnappable</a> &gt;&#160;</td>
+          <td class="paramname"><em>snappables</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00069">69</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_snap_engine_aa5c72037d69353962ed19e52e4be582f_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_snap_engine_aa5c72037d69353962ed19e52e4be582f_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_snap_engine_aa5c72037d69353962ed19e52e4be582f_cgraph" id="class_unity_editor_1_1_timeline_1_1_snap_engine_aa5c72037d69353962ed19e52e4be582f_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a5b964bcb7af0789509dfd39b5f759842" title="UnityEditor.Timeline.Timeline\lMode.ShouldShowTimeCursor" alt="" coords="229,5,425,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ae086aef433dbe7bc582a5e174ee6ed32" title="UnityEditor.Timeline.Window\lState.IsEditingASubTimeline" alt="" coords="233,71,421,112"/><area shape="rect" id="node4" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ae4c6b2b44fde0f1f5f57be982f573107" title="UnityEditor.Timeline.ISequence\lState.GetEvaluableRange" alt="" coords="225,136,428,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a4ed2c5a17d04c4f6d6917ed1de5a4103"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SnapEngine.AddMagnet </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>magnetTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>showSnapHint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00125">125</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8f5c379084ea39f7afda2d9470ebf4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a> UnityEditor.Timeline.SnapEngine.ClosestMagnet </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00150">150</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38ffa8c115f8cb170af815b3c440ba33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SnapEngine.DrawMagnetLineAt </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00280">280</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_snap_engine_a38ffa8c115f8cb170af815b3c440ba33_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_snap_engine_a38ffa8c115f8cb170af815b3c440ba33_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_snap_engine_a38ffa8c115f8cb170af815b3c440ba33_cgraph" id="class_unity_editor_1_1_timeline_1_1_snap_engine_a38ffa8c115f8cb170af815b3c440ba33_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a20c8ea67f61b490bad5bc981a67bf9e3" title="UnityEditor.Timeline.Graphics.\lDrawLineAtTime" alt="" coords="228,5,427,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aaf2cb4fe0dedfd91a65ec94d1c3001b3" title="UnityEditor.Timeline.Window\lState.TimeToPixel" alt="" coords="475,5,663,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9bd2ce9433d84dca5f01710b2704bf59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a> UnityEditor.Timeline.SnapEngine.GetMagnetAt </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00145">145</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf44a9b1d116ffdebf5f954a7708e54a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">ISnappable</a>&gt; UnityEditor.Timeline.SnapEngine.GetVisibleSnappables </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00118">118</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f78c1fc9a7dde564cef1839cbf6ff71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SnapEngine.IsMagnetInShownArea </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00139">139</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee4e629de9386458110f14f4c5037f1a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SnapEngine.OnGUI </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>showLeft</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>showRight</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00239">239</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_snap_engine_aee4e629de9386458110f14f4c5037f1a_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_snap_engine_aee4e629de9386458110f14f4c5037f1a_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_snap_engine_aee4e629de9386458110f14f4c5037f1a_icgraph" id="class_unity_editor_1_1_timeline_1_1_snap_engine_aee4e629de9386458110f14f4c5037f1a_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad5d4f7cc6db5e644894ab1bc095b2dfc" title="UnityEditor.Timeline.Select\lAndMoveItem.Overlay" alt="" coords="225,5,404,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a16c4d7b4822b4f5add14d10b52ac9e9b" title="UnityEditor.Timeline.Trim\lClip.Overlay" alt="" coords="231,71,398,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c3e3807454a0740cc09637fb9bd18cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.SnapEngine.Snap </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>currentMousePosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventModifiers&#160;</td>
+          <td class="paramname"><em>modifiers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00170">170</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_cgraph" id="class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_cgraph">
+<area shape="rect" id="node2" href="struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html#a7f6b1e41a0698027bf2bb88b27fd88ea" title="UnityEditor.Timeline.Snap\lEngine.TimeBoundaries.Translate" alt="" coords="225,5,441,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_icgraph" id="class_unity_editor_1_1_timeline_1_1_snap_engine_a1c3e3807454a0740cc09637fb9bd18cf_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a584bdd0d566071b66460cdbf2c518833" title="UnityEditor.Timeline.Select\lAndMoveItem.MouseDrag" alt="" coords="225,5,404,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a802106133f522cd66c514fb41971e1a1" title="UnityEditor.Timeline.Trim\lClip.MouseDrag" alt="" coords="231,71,398,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aae93ebbbbf5ce8a48a21413332d3048c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.SnapEngine.displayDebugLayout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4301878973b9b1ad70030d8495efe44d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.SnapEngine.k_MagnetInfluenceInPixels = 10.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9fd771b15ea9a2a61e0f8296eef23010"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a> UnityEditor.Timeline.SnapEngine.m_Attractable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00054">54</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91260cbcbf259ad5fff3eac9fe6cbc84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html">IAttractionHandler</a> UnityEditor.Timeline.SnapEngine.m_AttractionHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00055">55</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00c0788b7ff4116e98640fd4a3e9a9cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html">TimeBoundaries</a> UnityEditor.Timeline.SnapEngine.m_CurrentTimes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00063">63</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca9f7582f6745029176696b1a68dedcc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.SnapEngine.m_GrabbedTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00060">60</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e7717b00102f55b984847d30a8afa0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html">TimeBoundaries</a> UnityEditor.Timeline.SnapEngine.m_GrabbedTimes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00061">61</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bdee0b0962e953f339224145f691480"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a>&gt; UnityEditor.Timeline.SnapEngine.m_Magnets = new List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html">SnapInfo</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00065">65</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad00db995cf2a6d288f67a7678654203"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a> UnityEditor.Timeline.SnapEngine.m_ManipulateEdges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00056">56</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4daabb9bbced4eec2215d689b4145eb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.SnapEngine.m_SnapEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00067">67</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca072ddd0ee0e9a151fc3f24d43805f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> UnityEditor.Timeline.SnapEngine.m_State</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a> 第 <a class="el" href="_snap_engine_8cs_source.html#l00058">58</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/Snapping/<a class="el" href="_snap_engine_8cs_source.html">SnapEngine.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:50 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/State/SequencePath.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_4407639198f330bfb7cc89188cb08b0c.html">State</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SequencePath.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sequence_path_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Text;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html">SequencePath</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a169cfa5c31f21c8cdabc33323d53d4ad">   13</a></span>&#160;        [SerializeField] <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a169cfa5c31f21c8cdabc33323d53d4ad">m_SelectionRoot</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> selectionRoot</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a1175442f08f180cef259c201b1a01913">   16</a></span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_SelectionRoot; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#ae13bc96195409c04fd087b2ad988c8c7">   20</a></span>&#160;        [SerializeField] List&lt;SequencePathSubElement&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#ae13bc96195409c04fd087b2ad988c8c7">m_SubElements</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span> List&lt;SequencePathSubElement&gt; subElements</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0f9d5ef08fd36941a6d161aec463b58b">   23</a></span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_SubElements ?? (m_SubElements = <span class="keyword">new</span> List&lt;SequencePathSubElement&gt;()); }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a58207707ee38a6b0d7bf16a9a266977f">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a58207707ee38a6b0d7bf16a9a266977f">SetSelectionRoot</a>(<span class="keywordtype">int</span> instanceID)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            m_SelectionRoot = instanceID;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            subElements.Clear();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#ae761ff71b61224656ad9a820e439434c">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#ae761ff71b61224656ad9a820e439434c">AddSubSequence</a>(<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">ISequenceState</a> state, IExposedPropertyTable resolver)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            subElements.Add(<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">SequencePathSubElement</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#aa3a4f6c3432d394fda83711ef18e45ea">Create</a>(state, resolver));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a05ab039aa53aac6af773896a9e36eab0">   38</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a05ab039aa53aac6af773896a9e36eab0">Clear</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            m_SelectionRoot = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            subElements.Clear();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a482e42169a8a3e419bd4e8ebb55f1d52">   44</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a482e42169a8a3e419bd4e8ebb55f1d52">AreEqual</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html">SequencePath</a> lhs, <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html">SequencePath</a> rhs)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span> (ReferenceEquals(lhs, null) &amp;&amp; ReferenceEquals(rhs, null)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (ReferenceEquals(lhs, rhs)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            var result = lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a1175442f08f180cef259c201b1a01913">selectionRoot</a> == rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a1175442f08f180cef259c201b1a01913">selectionRoot</a> &amp;&amp;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0f9d5ef08fd36941a6d161aec463b58b">subElements</a>.Count == rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0f9d5ef08fd36941a6d161aec463b58b">subElements</a>.Count;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (!result)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0f9d5ef08fd36941a6d161aec463b58b">subElements</a>.Count; i &lt; n; ++i)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                result = result &amp;&amp; <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">SequencePathSubElement</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1bf15ed6db05e54843a225a718cde149">AreEqual</a>(lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0f9d5ef08fd36941a6d161aec463b58b">subElements</a>[i], rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0f9d5ef08fd36941a6d161aec463b58b">subElements</a>[i]);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0da006b3c80026862c8c52ae751b13de">   62</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0da006b3c80026862c8c52ae751b13de">ToString</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            var sb = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            sb.AppendFormat(<span class="stringliteral">&quot;[{0}]&quot;</span>, m_SelectionRoot.ToString());</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (m_SubElements != null &amp;&amp; m_SubElements.Count &gt; 0)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">foreach</span> (var element <span class="keywordflow">in</span> m_SubElements)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    sb.Append(<span class="stringliteral">&quot; &gt; &quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    sb.Append(element.ToString());</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> sb.ToString();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">   82</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">SequencePathSubElement</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#ad61010c7abeddd23d6aa0de6456b4abb">   84</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#ad61010c7abeddd23d6aa0de6456b4abb">trackInstanceID</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1183819679921b6dc1879298ddbe69a6">   85</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1183819679921b6dc1879298ddbe69a6">trackHash</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a518c27654de3cb88fa11cd2529561ee7">   86</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a518c27654de3cb88fa11cd2529561ee7">clipIndex</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a214f4e6fad64f88801706e67e3b88352">   87</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a214f4e6fad64f88801706e67e3b88352">clipHash</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#af4c12414af39b96fc501265f967de74c">   88</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#af4c12414af39b96fc501265f967de74c">subDirectorIndex</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#aa3a4f6c3432d394fda83711ef18e45ea">   90</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">SequencePathSubElement</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#aa3a4f6c3432d394fda83711ef18e45ea">Create</a>(<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">ISequenceState</a> state, IExposedPropertyTable resolver)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            var clip = state.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a4af4b247a259dd8669e4cc39eb275c9a">hostClip</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="namespace_debug.html">Debug</a>.Assert(clip != null);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            var track = clip.parentTrack;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="namespace_debug.html">Debug</a>.Assert(track != null);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            var asset = track.timelineAsset;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="namespace_debug.html">Debug</a>.Assert(asset != null);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            var directors = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html">TimelineUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#a8ad8aaa27b1eddd6510cb615cb66e0ee">GetSubTimelines</a>(clip, resolver as PlayableDirector);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">SequencePathSubElement</a></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                trackInstanceID = track.GetInstanceID(),</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                trackHash = track.Hash(),</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                clipIndex = Array.IndexOf(track.clips, clip),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                clipHash = clip.Hash(),</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                subDirectorIndex = directors.IndexOf(state.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">director</a>)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            };</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1bf15ed6db05e54843a225a718cde149">  110</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1bf15ed6db05e54843a225a718cde149">AreEqual</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">SequencePathSubElement</a> lhs, <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">SequencePathSubElement</a> rhs)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">if</span> (ReferenceEquals(lhs, null) &amp;&amp; ReferenceEquals(rhs, null)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">if</span> (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (ReferenceEquals(lhs, rhs)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">return</span> lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#ad61010c7abeddd23d6aa0de6456b4abb">trackInstanceID</a>  == rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#ad61010c7abeddd23d6aa0de6456b4abb">trackInstanceID</a> &amp;&amp;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1183819679921b6dc1879298ddbe69a6">trackHash</a>        == rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1183819679921b6dc1879298ddbe69a6">trackHash</a> &amp;&amp;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a518c27654de3cb88fa11cd2529561ee7">clipIndex</a>        == rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a518c27654de3cb88fa11cd2529561ee7">clipIndex</a> &amp;&amp;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a214f4e6fad64f88801706e67e3b88352">clipHash</a>         == rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a214f4e6fad64f88801706e67e3b88352">clipHash</a> &amp;&amp;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                lhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#af4c12414af39b96fc501265f967de74c">subDirectorIndex</a> == rhs.<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#af4c12414af39b96fc501265f967de74c">subDirectorIndex</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a69db737c0c463a62d273d8aa32b00424">  123</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a69db737c0c463a62d273d8aa32b00424">ToString</a>()</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Format(</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="stringliteral">&quot;[track[{0}] ({1}) &gt; clip[{2}] ({3})]&quot;</span>,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                trackInstanceID.ToString(), trackHash.ToString(),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                clipIndex.ToString(), clipHash.ToString());</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_ad61010c7abeddd23d6aa0de6456b4abb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#ad61010c7abeddd23d6aa0de6456b4abb">UnityEditor.Timeline.SequencePathSubElement.trackInstanceID</a></div><div class="ttdeci">int trackInstanceID</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00084">SequencePath.cs:84</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_aa3a4f6c3432d394fda83711ef18e45ea"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#aa3a4f6c3432d394fda83711ef18e45ea">UnityEditor.Timeline.SequencePathSubElement.Create</a></div><div class="ttdeci">static SequencePathSubElement Create(ISequenceState state, IExposedPropertyTable resolver)</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00090">SequencePath.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_a1175442f08f180cef259c201b1a01913"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a1175442f08f180cef259c201b1a01913">UnityEditor.Timeline.SequencePath.selectionRoot</a></div><div class="ttdeci">int selectionRoot</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00016">SequencePath.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_a1bf15ed6db05e54843a225a718cde149"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1bf15ed6db05e54843a225a718cde149">UnityEditor.Timeline.SequencePathSubElement.AreEqual</a></div><div class="ttdeci">static bool AreEqual(SequencePathSubElement lhs, SequencePathSubElement rhs)</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00110">SequencePath.cs:110</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_af4c12414af39b96fc501265f967de74c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#af4c12414af39b96fc501265f967de74c">UnityEditor.Timeline.SequencePathSubElement.subDirectorIndex</a></div><div class="ttdeci">int subDirectorIndex</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00088">SequencePath.cs:88</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_a69db737c0c463a62d273d8aa32b00424"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a69db737c0c463a62d273d8aa32b00424">UnityEditor.Timeline.SequencePathSubElement.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00123">SequencePath.cs:123</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_a1183819679921b6dc1879298ddbe69a6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a1183819679921b6dc1879298ddbe69a6">UnityEditor.Timeline.SequencePathSubElement.trackHash</a></div><div class="ttdeci">int trackHash</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00085">SequencePath.cs:85</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html">UnityEditor.Timeline.SequencePathSubElement</a></div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00082">SequencePath.cs:82</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_utility_html_a8ad8aaa27b1eddd6510cb615cb66e0ee"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html#a8ad8aaa27b1eddd6510cb615cb66e0ee">UnityEditor.Timeline.TimelineUtility.GetSubTimelines</a></div><div class="ttdeci">static IList&lt; PlayableDirector &gt; GetSubTimelines(TimelineClip clip, IExposedPropertyTable director)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_utility_8cs_source.html#l00215">TimelineUtility.cs:215</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_utility.html">UnityEditor.Timeline.TimelineUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_utility_8cs_source.html#l00012">TimelineUtility.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_a0da006b3c80026862c8c52ae751b13de"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0da006b3c80026862c8c52ae751b13de">UnityEditor.Timeline.SequencePath.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00062">SequencePath.cs:62</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_a58207707ee38a6b0d7bf16a9a266977f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a58207707ee38a6b0d7bf16a9a266977f">UnityEditor.Timeline.SequencePath.SetSelectionRoot</a></div><div class="ttdeci">void SetSelectionRoot(int instanceID)</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00027">SequencePath.cs:27</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_a05ab039aa53aac6af773896a9e36eab0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a05ab039aa53aac6af773896a9e36eab0">UnityEditor.Timeline.SequencePath.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00038">SequencePath.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_a214f4e6fad64f88801706e67e3b88352"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a214f4e6fad64f88801706e67e3b88352">UnityEditor.Timeline.SequencePathSubElement.clipHash</a></div><div class="ttdeci">int clipHash</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00087">SequencePath.cs:87</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_a482e42169a8a3e419bd4e8ebb55f1d52"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a482e42169a8a3e419bd4e8ebb55f1d52">UnityEditor.Timeline.SequencePath.AreEqual</a></div><div class="ttdeci">static bool AreEqual(SequencePath lhs, SequencePath rhs)</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00044">SequencePath.cs:44</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_a0f9d5ef08fd36941a6d161aec463b58b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a0f9d5ef08fd36941a6d161aec463b58b">UnityEditor.Timeline.SequencePath.subElements</a></div><div class="ttdeci">List&lt; SequencePathSubElement &gt; subElements</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00023">SequencePath.cs:23</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a4af4b247a259dd8669e4cc39eb275c9a"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a4af4b247a259dd8669e4cc39eb275c9a">UnityEditor.Timeline.ISequenceState.hostClip</a></div><div class="ttdeci">TimelineClip hostClip</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00011">ISequenceState.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_a169cfa5c31f21c8cdabc33323d53d4ad"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#a169cfa5c31f21c8cdabc33323d53d4ad">UnityEditor.Timeline.SequencePath.m_SelectionRoot</a></div><div class="ttdeci">int m_SelectionRoot</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00013">SequencePath.cs:13</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html">UnityEditor.Timeline.SequencePath</a></div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00011">SequencePath.cs:11</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">UnityEditor.Timeline.ISequenceState</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00007">ISequenceState.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_ae13bc96195409c04fd087b2ad988c8c7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#ae13bc96195409c04fd087b2ad988c8c7">UnityEditor.Timeline.SequencePath.m_SubElements</a></div><div class="ttdeci">List&lt; SequencePathSubElement &gt; m_SubElements</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00020">SequencePath.cs:20</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element_html_a518c27654de3cb88fa11cd2529561ee7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path_sub_element.html#a518c27654de3cb88fa11cd2529561ee7">UnityEditor.Timeline.SequencePathSubElement.clipIndex</a></div><div class="ttdeci">int clipIndex</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00086">SequencePath.cs:86</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a08ce693fcd3a6acc64b0b9bf36d1c29f"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a08ce693fcd3a6acc64b0b9bf36d1c29f">UnityEditor.Timeline.ISequenceState.director</a></div><div class="ttdeci">PlayableDirector director</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00010">ISequenceState.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_sequence_path_html_ae761ff71b61224656ad9a820e439434c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_path.html#ae761ff71b61224656ad9a820e439434c">UnityEditor.Timeline.SequencePath.AddSubSequence</a></div><div class="ttdeci">void AddSubSequence(ISequenceState state, IExposedPropertyTable resolver)</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_path_8cs_source.html#l00033">SequencePath.cs:33</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: GoalDetector类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="class_goal_detector-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">GoalDetector类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>进球检测类  
+ <a href="class_goal_detector.html#details">更多...</a></p>
+<div class="dynheader">
+类 GoalDetector 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_goal_detector__inherit__graph.png" border="0" usemap="#_goal_detector_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+GoalDetector 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_goal_detector__coll__graph.png" border="0" usemap="#_goal_detector_coll__map" alt="Collaboration graph"/></div>
+<map name="_goal_detector_coll__map" id="_goal_detector_coll__map">
+<area shape="rect" id="node3" href="class_team.html" title="球队类 " alt="" coords="487,95,542,121"/><area shape="rect" id="node5" href="class_player.html" title="球员类（含预测模型） " alt="" coords="244,199,303,225"/><area shape="rect" id="node8" href="class_ball.html" title="足球信息与控制类 " alt="" coords="503,303,547,329"/><area shape="rect" id="node4" href="class_team_1_1_member.html" title="Team.Member" alt="" coords="279,303,385,329"/><area shape="rect" id="node6" href="class_position_score.html" title="球员各位置得分类 " alt="" coords="133,95,235,121"/><area shape="rect" id="node7" href="class_ability.html" title="球员各方面能力 " alt="" coords="260,95,319,121"/><area shape="rect" id="node9" href="class_tactics.html" title="战术 " alt="" coords="5,5,69,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ab4cb1e0fabcd97f5ecba98df3d673f40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_team.html">Team</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_goal_detector.html#ab4cb1e0fabcd97f5ecba98df3d673f40">team</a></td></tr>
+<tr class="memdesc:ab4cb1e0fabcd97f5ecba98df3d673f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">被进球的一方  <a href="#ab4cb1e0fabcd97f5ecba98df3d673f40">更多...</a><br /></td></tr>
+<tr class="separator:ab4cb1e0fabcd97f5ecba98df3d673f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd9e0a44f441f98188e1bf3c08c6203"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_goal_detector.html#addd9e0a44f441f98188e1bf3c08c6203">goalButton</a></td></tr>
+<tr class="memdesc:addd9e0a44f441f98188e1bf3c08c6203"><td class="mdescLeft">&#160;</td><td class="mdescRight">被进球一方的进球有效按钮  <a href="#addd9e0a44f441f98188e1bf3c08c6203">更多...</a><br /></td></tr>
+<tr class="separator:addd9e0a44f441f98188e1bf3c08c6203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ae068e01179c6208d2ca28953385232cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_goal_detector.html#ae068e01179c6208d2ca28953385232cd">OnTriggerEnter</a> (Collider other)</td></tr>
+<tr class="memdesc:ae068e01179c6208d2ca28953385232cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">被触发时调用  <a href="#ae068e01179c6208d2ca28953385232cd">更多...</a><br /></td></tr>
+<tr class="separator:ae068e01179c6208d2ca28953385232cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>进球检测类 </p>
+<p>判断足球是否进入门线以内。 </p>
+
+<p>在文件 <a class="el" href="_goal_detector_8cs_source.html">GoalDetector.cs</a> 第 <a class="el" href="_goal_detector_8cs_source.html#l00015">15</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ae068e01179c6208d2ca28953385232cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GoalDetector.OnTriggerEnter </td>
+          <td>(</td>
+          <td class="paramtype">Collider&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被触发时调用 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>碰撞体触发者 对象作为触发器且被碰撞体other触发时，判断是否为足球，若是则说明进球。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_goal_detector_8cs_source.html">GoalDetector.cs</a> 第 <a class="el" href="_goal_detector_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="addd9e0a44f441f98188e1bf3c08c6203"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Button GoalDetector.goalButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>被进球一方的进球有效按钮 </p>
+
+<p>在文件 <a class="el" href="_goal_detector_8cs_source.html">GoalDetector.cs</a> 第 <a class="el" href="_goal_detector_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4cb1e0fabcd97f5ecba98df3d673f40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_team.html">Team</a> GoalDetector.team</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>被进球的一方 </p>
+
+<p>在文件 <a class="el" href="_goal_detector_8cs_source.html">GoalDetector.cs</a> 第 <a class="el" href="_goal_detector_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/Ground/<a class="el" href="_goal_detector_8cs_source.html">GoalDetector.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:38 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

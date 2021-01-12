@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.test-framework@1.1.14/UnityEngine.TestRunner/Utils/TestRunCallbackAttribute.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_f5068e10fe4d08e1b67d6386819b0c8e.html">com.unity.test-framework@1.1.14</a></li><li class="navelem"><a class="el" href="dir_cc5d69438734f111df7d549b2ad57ded.html">UnityEngine.TestRunner</a></li><li class="navelem"><a class="el" href="dir_b33a940dba3e5036b8914da740ba9d4f.html">Utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TestRunCallbackAttribute.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_test_run_callback_attribute_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_test_runner.html">TestRunner</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    [AttributeUsage(AttributeTargets.Assembly)]</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html">    6</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html">TestRunCallbackAttribute</a> : Attribute</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html#ae5fdf9515ba200326008b3d88e09aeec">    8</a></span>&#160;        <span class="keyword">private</span> Type <a class="code" href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html#ae5fdf9515ba200326008b3d88e09aeec">m_Type</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html#afab948bc65457160dba55bacdfed182e">    9</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html#afab948bc65457160dba55bacdfed182e">TestRunCallbackAttribute</a>(Type type)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            var interfaceType = typeof(<a class="code" href="interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback.html">ITestRunCallback</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordflow">if</span> (!interfaceType.IsAssignableFrom(type))</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;Type provided to {0} does not implement {1}&quot;</span>, this.GetType().<a class="code" href="namespace_name.html">Name</a>, interfaceType.<a class="code" href="class_name_1_1_name.html">Name</a>));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            m_Type = type;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">internal</span> <a class="code" href="interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback.html">ITestRunCallback</a> ConstructCallback()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span> Activator.CreateInstance(m_Type) as <a class="code" href="interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback.html">ITestRunCallback</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute_html_ae5fdf9515ba200326008b3d88e09aeec"><div class="ttname"><a href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html#ae5fdf9515ba200326008b3d88e09aeec">UnityEngine.TestRunner.TestRunCallbackAttribute.m_Type</a></div><div class="ttdeci">Type m_Type</div><div class="ttdef"><b>Definition:</b> <a href="_test_run_callback_attribute_8cs_source.html#l00008">TestRunCallbackAttribute.cs:8</a></div></div>
+<div class="ttc" id="class_name_1_1_name_html"><div class="ttname"><a href="class_name_1_1_name.html">Name.Name</a></div><div class="ttdef"><b>Definition:</b> <a href="_name_8cs_source.html#l00018">Name.cs:18</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_html"><div class="ttname"><a href="interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback.html">UnityEngine.TestRunner.ITestRunCallback</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_test_run_callback_8cs_source.html#l00005">ITestRunCallback.cs:5</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute_html"><div class="ttname"><a href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html">UnityEngine.TestRunner.TestRunCallbackAttribute</a></div><div class="ttdef"><b>Definition:</b> <a href="_test_run_callback_attribute_8cs_source.html#l00006">TestRunCallbackAttribute.cs:6</a></div></div>
+<div class="ttc" id="namespace_test_runner_html"><div class="ttname"><a href="namespace_test_runner.html">TestRunner</a></div></div>
+<div class="ttc" id="namespace_name_html"><div class="ttname"><a href="namespace_name.html">Name</a></div><div class="ttdoc">包含了球员起名类 </div></div>
+<div class="ttc" id="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute_html_afab948bc65457160dba55bacdfed182e"><div class="ttname"><a href="class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html#afab948bc65457160dba55bacdfed182e">UnityEngine.TestRunner.TestRunCallbackAttribute.TestRunCallbackAttribute</a></div><div class="ttdeci">TestRunCallbackAttribute(Type type)</div><div class="ttdef"><b>Definition:</b> <a href="_test_run_callback_attribute_8cs_source.html#l00009">TestRunCallbackAttribute.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/TMP_DropdownEditor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_DropdownEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___dropdown_editor_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.UI;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.UI;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a>.EditorUtilities</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [CustomEditor(typeof(TMP_Dropdown), <span class="keyword">true</span>)]</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [CanEditMultipleObjects]</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html">DropdownEditor</a> : SelectableEditor</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#ad5ecf935909d61934a6d41df7f5b19ac">   12</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#ad5ecf935909d61934a6d41df7f5b19ac">m_Template</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a0674c98253f82b5a755ab705237712b3">   13</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a0674c98253f82b5a755ab705237712b3">m_CaptionText</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#ae812124cdb104de7d3a5325311fbddfe">   14</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#ae812124cdb104de7d3a5325311fbddfe">m_CaptionImage</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a3a4646abdff7c9ba5d2ba87dbbf77589">   15</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a3a4646abdff7c9ba5d2ba87dbbf77589">m_ItemText</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a0fc8b1ddaa141f44c59aae4d143684aa">   16</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a0fc8b1ddaa141f44c59aae4d143684aa">m_ItemImage</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a5dfb229b6af1380cfa80199002233080">   17</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a5dfb229b6af1380cfa80199002233080">m_OnSelectionChanged</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#aa54cabc031a1e25ea08a10cad88aff25">   18</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#aa54cabc031a1e25ea08a10cad88aff25">m_Value</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#adcf5afaedabf51589cad65b52ab86eb1">   19</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#adcf5afaedabf51589cad65b52ab86eb1">m_Options</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a367aa2bcb4b5686af9b5cf9b26528573">   21</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a367aa2bcb4b5686af9b5cf9b26528573">OnEnable</a>()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            base.OnEnable();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            m_Template = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Template&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            m_CaptionText = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CaptionText&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            m_CaptionImage = serializedObject.FindProperty(<span class="stringliteral">&quot;m_CaptionImage&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            m_ItemText = serializedObject.FindProperty(<span class="stringliteral">&quot;m_ItemText&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            m_ItemImage = serializedObject.FindProperty(<span class="stringliteral">&quot;m_ItemImage&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            m_OnSelectionChanged = serializedObject.FindProperty(<span class="stringliteral">&quot;m_OnValueChanged&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            m_Value = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Value&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            m_Options = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Options&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a1f54d782eb4d6a0bb713f54636d6138e">   34</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a1f54d782eb4d6a0bb713f54636d6138e">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            base.OnInspectorGUI();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            serializedObject.Update();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            EditorGUILayout.PropertyField(m_Template);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            EditorGUILayout.PropertyField(m_CaptionText);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            EditorGUILayout.PropertyField(m_CaptionImage);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            EditorGUILayout.PropertyField(m_ItemText);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            EditorGUILayout.PropertyField(m_ItemImage);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            EditorGUILayout.PropertyField(m_Value);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            EditorGUILayout.PropertyField(m_Options);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            EditorGUILayout.PropertyField(m_OnSelectionChanged);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_adcf5afaedabf51589cad65b52ab86eb1"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#adcf5afaedabf51589cad65b52ab86eb1">TMPro.EditorUtilities.DropdownEditor.m_Options</a></div><div class="ttdeci">SerializedProperty m_Options</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00019">TMP_DropdownEditor.cs:19</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_aa54cabc031a1e25ea08a10cad88aff25"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#aa54cabc031a1e25ea08a10cad88aff25">TMPro.EditorUtilities.DropdownEditor.m_Value</a></div><div class="ttdeci">SerializedProperty m_Value</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00018">TMP_DropdownEditor.cs:18</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_a5dfb229b6af1380cfa80199002233080"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a5dfb229b6af1380cfa80199002233080">TMPro.EditorUtilities.DropdownEditor.m_OnSelectionChanged</a></div><div class="ttdeci">SerializedProperty m_OnSelectionChanged</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00017">TMP_DropdownEditor.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_a3a4646abdff7c9ba5d2ba87dbbf77589"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a3a4646abdff7c9ba5d2ba87dbbf77589">TMPro.EditorUtilities.DropdownEditor.m_ItemText</a></div><div class="ttdeci">SerializedProperty m_ItemText</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00015">TMP_DropdownEditor.cs:15</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_a0674c98253f82b5a755ab705237712b3"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a0674c98253f82b5a755ab705237712b3">TMPro.EditorUtilities.DropdownEditor.m_CaptionText</a></div><div class="ttdeci">SerializedProperty m_CaptionText</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00013">TMP_DropdownEditor.cs:13</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_a0fc8b1ddaa141f44c59aae4d143684aa"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a0fc8b1ddaa141f44c59aae4d143684aa">TMPro.EditorUtilities.DropdownEditor.m_ItemImage</a></div><div class="ttdeci">SerializedProperty m_ItemImage</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00016">TMP_DropdownEditor.cs:16</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_ad5ecf935909d61934a6d41df7f5b19ac"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#ad5ecf935909d61934a6d41df7f5b19ac">TMPro.EditorUtilities.DropdownEditor.m_Template</a></div><div class="ttdeci">SerializedProperty m_Template</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00012">TMP_DropdownEditor.cs:12</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_a1f54d782eb4d6a0bb713f54636d6138e"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a1f54d782eb4d6a0bb713f54636d6138e">TMPro.EditorUtilities.DropdownEditor.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00034">TMP_DropdownEditor.cs:34</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_a367aa2bcb4b5686af9b5cf9b26528573"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#a367aa2bcb4b5686af9b5cf9b26528573">TMPro.EditorUtilities.DropdownEditor.OnEnable</a></div><div class="ttdeci">override void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00021">TMP_DropdownEditor.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html_ae812124cdb104de7d3a5325311fbddfe"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html#ae812124cdb104de7d3a5325311fbddfe">TMPro.EditorUtilities.DropdownEditor.m_CaptionImage</a></div><div class="ttdeci">SerializedProperty m_CaptionImage</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00014">TMP_DropdownEditor.cs:14</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_dropdown_editor.html">TMPro.EditorUtilities.DropdownEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___dropdown_editor_8cs_source.html#l00010">TMP_DropdownEditor.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

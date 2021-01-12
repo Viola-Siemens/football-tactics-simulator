@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Audio/AudioTrackInspector.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6b8158bebe2339091a8e16b6313df9dc.html">Audio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AudioTrackInspector.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_audio_track_inspector_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Globalization;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Text;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_jet_brains.html">JetBrains</a>.Annotations;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [CustomEditor(typeof(AudioTrack))]</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    [CanEditMultipleObjects]</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html">AudioTrackInspector</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_asset_inspector.html">TrackAssetInspector</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [UsedImplicitly] <span class="comment">// Also used by tests</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keyword">class </span>Styles</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> VolumeControl = <span class="stringliteral">&quot;AudioTrackInspector.volume&quot;</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> StereoPanControl = <span class="stringliteral">&quot;AudioTrackInspector.stereoPan&quot;</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> SpatialBlendControl = <span class="stringliteral">&quot;AudioTrackInspector.spatialBlend&quot;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">string</span> k_Indent = <span class="stringliteral">&quot;    &quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> valuesFormatter = <span class="stringliteral">&quot;0.###&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> mixInfoSectionSeparator = <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> mixedPropertiesInfo = L10n.Tr(<span class="stringliteral">&quot;The final {3} is {0}\n&quot;</span> +</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="stringliteral">&quot;Calculated from:\n&quot;</span> +</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                k_Indent + <span class="stringliteral">&quot;Track: {1}\n&quot;</span> +</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                k_Indent + <span class="stringliteral">&quot;AudioSource: {2}&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#aaeaa054c5a0676a1f69738a888969ecb">   32</a></span>&#160;        <span class="keyword">static</span> StringBuilder s_MixInfoBuilder = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a431b89dc3a01348ba339d0597f4a464e">   34</a></span>&#160;        SerializedProperty <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a431b89dc3a01348ba339d0597f4a464e">m_VolumeProperty</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a7dfd84f250156f5c5d553415ea7f8135">   35</a></span>&#160;        SerializedProperty <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a7dfd84f250156f5c5d553415ea7f8135">m_StereoPanProperty</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#ab244b2cd602f2b45b6047d860493b71e">   36</a></span>&#160;        SerializedProperty <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#ab244b2cd602f2b45b6047d860493b71e">m_SpatialBlendProperty</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#abc0dbcc7b4c8fc6962c755be7940b120">   37</a></span>&#160;        PlayableDirector <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#abc0dbcc7b4c8fc6962c755be7940b120">m_Director</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a9a3a2c971c8edf9e050614e3fec68ee8">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a9a3a2c971c8edf9e050614e3fec68ee8">OnEnable</a>()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            base.OnEnable();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (((<a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track.html">AudioTrack</a>)target).timelineAsset == <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aca43ad0a8433e031d73c6c697fda3ab1">inspectedAsset</a>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                m_Director = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            m_VolumeProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_TrackProperties.volume&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            m_StereoPanProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_TrackProperties.stereoPan&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            m_SpatialBlendProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_TrackProperties.spatialBlend&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#acf43d6a29c4c8cdbb59eeb1b4e0d70ee">   51</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#acf43d6a29c4c8cdbb59eeb1b4e0d70ee">DrawTrackProperties</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="comment">// Volume</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            GUI.SetNextControlName(Styles.VolumeControl);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            EditorGUILayout.Slider(m_VolumeProperty, 0.0f, 1.0f, AudioSourceInspector.Styles.volumeLabel);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">// Stereo Pan</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            GUI.SetNextControlName(Styles.StereoPanControl);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            EditorGUIUtility.sliderLabels.SetLabels(AudioSourceInspector.Styles.panLeftLabel, AudioSourceInspector.Styles.panRightLabel);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            EditorGUILayout.Slider(m_StereoPanProperty, -1.0f, 1.0f, AudioSourceInspector.Styles.panStereoLabel);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            EditorGUIUtility.sliderLabels.SetLabels(null, null);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// Spatial Blend</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> EditorGUI.DisabledScope(ShouldDisableSpatialBlend()))</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                GUI.SetNextControlName(Styles.SpatialBlendControl);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                EditorGUIUtility.sliderLabels.SetLabels(AudioSourceInspector.Styles.spatialLeftLabel, AudioSourceInspector.Styles.spatialRightLabel);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                EditorGUILayout.Slider(m_SpatialBlendProperty, 0.0f, 1.0f, AudioSourceInspector.Styles.spatialBlendLabel);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                EditorGUIUtility.sliderLabels.SetLabels(null, null);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            DrawMixInfoSection();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a2ddda0fea6b22e8a610014acb02ebe56">   77</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a2ddda0fea6b22e8a610014acb02ebe56">DrawMixInfoSection</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (m_Director == null || targets.Length &gt; 1)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            var binding = m_Director.GetGenericBinding(target) as AudioSource;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span> (binding == null)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            var audioSourceVolume = binding.volume;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            var audioSourcePan = binding.panStereo;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            var audioSourceBlend = binding.spatialBlend;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            var trackVolume = m_VolumeProperty.floatValue;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            var trackPan = m_StereoPanProperty.floatValue;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            var trackBlend = m_SpatialBlendProperty.floatValue;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">// Skip sections when result is obvious</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            var skipVolumeInfo = Math.Abs(audioSourceVolume) &lt; <span class="keywordtype">float</span>.Epsilon &amp;&amp; Math.Abs(trackVolume) &lt; <span class="keywordtype">float</span>.Epsilon ||            <span class="comment">// All muted</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                Math.Abs(audioSourceVolume - 1) &lt; <span class="keywordtype">float</span>.Epsilon &amp;&amp; Math.Abs(trackVolume - 1) &lt; <span class="keywordtype">float</span>.Epsilon;                       <span class="comment">// All max volume</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            var skipPanInfo = Math.Abs(audioSourcePan) &lt; <span class="keywordtype">float</span>.Epsilon &amp;&amp; Math.Abs(trackPan) &lt; <span class="keywordtype">float</span>.Epsilon ||                     <span class="comment">// All centered</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                Math.Abs(audioSourcePan - 1) &lt; <span class="keywordtype">float</span>.Epsilon &amp;&amp; Math.Abs(trackPan - 1) &lt; <span class="keywordtype">float</span>.Epsilon ||                           <span class="comment">// All right</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                Math.Abs(audioSourcePan - (-1.0f)) &lt; <span class="keywordtype">float</span>.Epsilon &amp;&amp; Math.Abs(trackPan - (-1.0f)) &lt; <span class="keywordtype">float</span>.Epsilon;                 <span class="comment">// All left</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            var skipBlendInfo = Math.Abs(audioSourceBlend) &lt; <span class="keywordtype">float</span>.Epsilon &amp;&amp; Math.Abs(trackBlend) &lt; <span class="keywordtype">float</span>.Epsilon ||               <span class="comment">// All 2D</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                Math.Abs(audioSourceBlend - 1) &lt; <span class="keywordtype">float</span>.Epsilon &amp;&amp; Math.Abs(trackBlend - 1) &lt; <span class="keywordtype">float</span>.Epsilon;                         <span class="comment">// All 3D</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (skipVolumeInfo &amp;&amp; skipPanInfo &amp;&amp; skipBlendInfo)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            s_MixInfoBuilder.Length = 0;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (!skipVolumeInfo)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                s_MixInfoBuilder.AppendFormat(</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    Styles.mixedPropertiesInfo,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    (audioSourceVolume * trackVolume).ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    trackVolume.ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    audioSourceVolume.ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    AudioSourceInspector.Styles.volumeLabel.text);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span> (!skipVolumeInfo &amp;&amp; !skipPanInfo)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                s_MixInfoBuilder.Append(Styles.mixInfoSectionSeparator);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">if</span> (!skipPanInfo)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                s_MixInfoBuilder.AppendFormat(</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    Styles.mixedPropertiesInfo,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    Mathf.Clamp(audioSourcePan + trackPan, -1.0f, 1.0f).ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    trackPan.ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    audioSourcePan.ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    AudioSourceInspector.Styles.panStereoLabel.text);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span> ((!skipVolumeInfo || !skipPanInfo) &amp;&amp; !skipBlendInfo)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                s_MixInfoBuilder.Append(Styles.mixInfoSectionSeparator);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">if</span> (!skipBlendInfo)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                s_MixInfoBuilder.AppendFormat(</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    Styles.mixedPropertiesInfo,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    Mathf.Clamp01(audioSourceBlend + trackBlend).ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    trackBlend.ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    audioSourceBlend.ToString(Styles.valuesFormatter, CultureInfo.InvariantCulture),</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                    AudioSourceInspector.Styles.spatialBlendLabel.text);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            EditorGUILayout.HelpBox(<span class="keyword">new</span> GUIContent(s_MixInfoBuilder.ToString()));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#af1569daf2f13f4c6c53966771bf55d5a">  145</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#af1569daf2f13f4c6c53966771bf55d5a">ApplyChanges</a>()</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            var track = (<a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track.html">AudioTrack</a>)target;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aca43ad0a8433e031d73c6c697fda3ab1">inspectedAsset</a> != track.timelineAsset || <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a> == null)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>.state == PlayState.Playing)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                track.LiveLink();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d">Refresh</a>(<a class="code" href="namespace_unity_editor_1_1_timeline.html#a7bdf137d4baf48380ce479caf024ef50">RefreshReason</a>.ContentsModified);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#aa9b7406d7c3a9953724795a801b03473">  158</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#aa9b7406d7c3a9953724795a801b03473">ShouldDisableSpatialBlend</a>()</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">return</span> m_Director == null ||</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                targets.Any(selectedTrack =&gt; m_Director.GetGenericBinding(selectedTrack) == null);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html_a3b3feaeaadd4bc298b30c5b835a91501"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">UnityEditor.Timeline.TimelineEditor.inspectedDirector</a></div><div class="ttdeci">static PlayableDirector inspectedDirector</div><div class="ttdoc">The PlayableDirector associated with the timeline currently being shown in the Timeline window...</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00017">TimelineEditor.cs:17</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_a9a3a2c971c8edf9e050614e3fec68ee8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a9a3a2c971c8edf9e050614e3fec68ee8">UnityEngine.Timeline.AudioTrackInspector.OnEnable</a></div><div class="ttdeci">override void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00039">AudioTrackInspector.cs:39</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_a431b89dc3a01348ba339d0597f4a464e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a431b89dc3a01348ba339d0597f4a464e">UnityEngine.Timeline.AudioTrackInspector.m_VolumeProperty</a></div><div class="ttdeci">SerializedProperty m_VolumeProperty</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00034">AudioTrackInspector.cs:34</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a7bdf137d4baf48380ce479caf024ef50"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a7bdf137d4baf48380ce479caf024ef50">UnityEditor.Timeline.RefreshReason</a></div><div class="ttdeci">RefreshReason</div><div class="ttdoc">TimelineEditor.Refresh uses these flags to determine what needs to be refreshed or updated...</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00151">TimelineEditor.cs:151</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_af1569daf2f13f4c6c53966771bf55d5a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#af1569daf2f13f4c6c53966771bf55d5a">UnityEngine.Timeline.AudioTrackInspector.ApplyChanges</a></div><div class="ttdeci">override void ApplyChanges()</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00145">AudioTrackInspector.cs:145</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_abc0dbcc7b4c8fc6962c755be7940b120"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#abc0dbcc7b4c8fc6962c755be7940b120">UnityEngine.Timeline.AudioTrackInspector.m_Director</a></div><div class="ttdeci">PlayableDirector m_Director</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00037">AudioTrackInspector.cs:37</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_a2ddda0fea6b22e8a610014acb02ebe56"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a2ddda0fea6b22e8a610014acb02ebe56">UnityEngine.Timeline.AudioTrackInspector.DrawMixInfoSection</a></div><div class="ttdeci">void DrawMixInfoSection()</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00077">AudioTrackInspector.cs:77</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html_aca43ad0a8433e031d73c6c697fda3ab1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aca43ad0a8433e031d73c6c697fda3ab1">UnityEditor.Timeline.TimelineEditor.inspectedAsset</a></div><div class="ttdeci">static TimelineAsset inspectedAsset</div><div class="ttdoc">The TimelineAsset currently being shown in the Timeline window. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00027">TimelineEditor.cs:27</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_asset_inspector_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_asset_inspector.html">UnityEditor.Timeline.TrackAssetInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_inspector_8cs_source.html#l00012">TrackAssetInspector.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track.html">UnityEngine.Timeline.AudioTrack</a></div><div class="ttdoc">A Timeline track that can play AudioClips. </div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_8cs_source.html#l00015">AudioTrack.cs:15</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_aa9b7406d7c3a9953724795a801b03473"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#aa9b7406d7c3a9953724795a801b03473">UnityEngine.Timeline.AudioTrackInspector.ShouldDisableSpatialBlend</a></div><div class="ttdeci">bool ShouldDisableSpatialBlend()</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00158">AudioTrackInspector.cs:158</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_clips_actions_8cs_source.html#l00010">ClipsActions.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_a7dfd84f250156f5c5d553415ea7f8135"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#a7dfd84f250156f5c5d553415ea7f8135">UnityEngine.Timeline.AudioTrackInspector.m_StereoPanProperty</a></div><div class="ttdeci">SerializedProperty m_StereoPanProperty</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00035">AudioTrackInspector.cs:35</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_acf43d6a29c4c8cdbb59eeb1b4e0d70ee"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#acf43d6a29c4c8cdbb59eeb1b4e0d70ee">UnityEngine.Timeline.AudioTrackInspector.DrawTrackProperties</a></div><div class="ttdeci">override void DrawTrackProperties()</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00051">AudioTrackInspector.cs:51</a></div></div>
+<div class="ttc" id="namespace_jet_brains_html"><div class="ttname"><a href="namespace_jet_brains.html">JetBrains</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html">UnityEngine.Timeline.AudioTrackInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00014">AudioTrackInspector.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_audio_track_inspector_html_ab244b2cd602f2b45b6047d860493b71e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_audio_track_inspector.html#ab244b2cd602f2b45b6047d860493b71e">UnityEngine.Timeline.AudioTrackInspector.m_SpatialBlendProperty</a></div><div class="ttdeci">SerializedProperty m_SpatialBlendProperty</div><div class="ttdef"><b>Definition:</b> <a href="_audio_track_inspector_8cs_source.html#l00036">AudioTrackInspector.cs:36</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">UnityEditor.Timeline.TimelineEditor</a></div><div class="ttdoc">Information currently being edited in the Timeline Editor Window. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00012">TimelineEditor.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html_aac9130b771a4f65a484abe4ec3df471d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d">UnityEditor.Timeline.TimelineEditor.Refresh</a></div><div class="ttdeci">static void Refresh(RefreshReason reason)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00061">TimelineEditor.cs:61</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

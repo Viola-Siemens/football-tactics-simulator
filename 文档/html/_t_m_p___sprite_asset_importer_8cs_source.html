@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/TMP_SpriteAssetImporter.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_SpriteAssetImporter.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___sprite_asset_importer_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.IO;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_t_m_pro.html">TMPro</a>.<a class="code" href="namespace_t_m_pro_1_1_editor_utilities.html">EditorUtilities</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_t_m_pro.html">TMPro</a>.<a class="code" href="namespace_t_m_pro_1_1_sprite_asset_utilities.html">SpriteAssetUtilities</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html">TMP_SpriteAssetImporter</a> : EditorWindow</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">// Create Sprite Asset Editor Window</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        [MenuItem(<span class="stringliteral">&quot;Window/TextMeshPro/Sprite Importer&quot;</span>, <span class="keyword">false</span>, 2026)]</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a3df4961b68f84eaa434f9204c4919963">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a3df4961b68f84eaa434f9204c4919963">ShowFontAtlasCreatorWindow</a>()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            var window = GetWindow&lt;TMP_SpriteAssetImporter&gt;();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            window.titleContent = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Sprite Importer&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            window.Focus();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a9013e85056c7bbb257ae1f206684bef7">   21</a></span>&#160;        Texture2D <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a9013e85056c7bbb257ae1f206684bef7">m_SpriteAtlas</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a8dc61ea12f997affb929f3ab2e3f5bec">   22</a></span>&#160;        <a class="code" href="namespace_t_m_pro_1_1_sprite_asset_utilities.html#ae6645ac68f8728971cdb947d693945b3">SpriteAssetImportFormats</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a8dc61ea12f997affb929f3ab2e3f5bec">m_SpriteDataFormat</a> = <a class="code" href="namespace_t_m_pro_1_1_sprite_asset_utilities.html#ae6645ac68f8728971cdb947d693945b3">SpriteAssetImportFormats</a>.TexturePacker;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a6e4730f191759ede28581effdb76f4db">   23</a></span>&#160;        TextAsset <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a6e4730f191759ede28581effdb76f4db">m_JsonFile</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af0e3b6c340e7168f7a20b7d509166f1b">   25</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af0e3b6c340e7168f7a20b7d509166f1b">m_CreationFeedback</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#ac6715fc87012402436e7305dbcfb18ed">   27</a></span>&#160;        <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#ac6715fc87012402436e7305dbcfb18ed">m_SpriteAsset</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a55f4f7ef2be60c5cfe2e81c9db2ba6ca">   28</a></span>&#160;        List&lt;TMP_Sprite&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a55f4f7ef2be60c5cfe2e81c9db2ba6ca">m_SpriteInfoList</a> = <span class="keyword">new</span> List&lt;TMP_Sprite&gt;();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a1ddbe0cc55cc8533fcc86313b42cd06d">   31</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a1ddbe0cc55cc8533fcc86313b42cd06d">OnEnable</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">// Set Editor Window Size</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af52b6c3e3ba763e64dc9e1a7afb0fe0e">SetEditorWindowSize</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a5a2c0ed3a6a4fbea87bd74188fa967ef">   37</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a5a2c0ed3a6a4fbea87bd74188fa967ef">OnGUI</a>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a54084ec1409b1502bca47a032984f9dc">DrawEditorPanel</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a54084ec1409b1502bca47a032984f9dc">   43</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a54084ec1409b1502bca47a032984f9dc">DrawEditorPanel</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">// label</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            GUILayout.Label(<span class="stringliteral">&quot;Import Settings&quot;</span>, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// Sprite Texture Selection</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            m_JsonFile = EditorGUILayout.ObjectField(<span class="stringliteral">&quot;Sprite Data Source&quot;</span>, m_JsonFile, typeof(TextAsset), <span class="keyword">false</span>) as TextAsset;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            m_SpriteDataFormat = (<a class="code" href="namespace_t_m_pro_1_1_sprite_asset_utilities.html#ae6645ac68f8728971cdb947d693945b3">SpriteAssetImportFormats</a>)EditorGUILayout.EnumPopup(<span class="stringliteral">&quot;Import Format&quot;</span>, m_SpriteDataFormat);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">// Sprite Texture Selection</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            m_SpriteAtlas = EditorGUILayout.ObjectField(<span class="stringliteral">&quot;Sprite Texture Atlas&quot;</span>, m_SpriteAtlas, typeof(Texture2D), <span class="keyword">false</span>) as Texture2D;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                m_CreationFeedback = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            GUILayout.Space(10);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            GUI.enabled = m_JsonFile != null &amp;&amp; m_SpriteAtlas != null &amp;&amp; m_SpriteDataFormat == <a class="code" href="namespace_t_m_pro_1_1_sprite_asset_utilities.html#ae6645ac68f8728971cdb947d693945b3">SpriteAssetImportFormats</a>.TexturePacker;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">// Create Sprite Asset</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Create Sprite Asset&quot;</span>))</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                m_CreationFeedback = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="comment">// Read json data file</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span> (m_JsonFile != null &amp;&amp; m_SpriteDataFormat == <a class="code" href="namespace_t_m_pro_1_1_sprite_asset_utilities.html#ae6645ac68f8728971cdb947d693945b3">SpriteAssetImportFormats</a>.TexturePacker)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer.html">TexturePacker</a>.<a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object.html">SpriteDataObject</a> sprites = JsonUtility.FromJson&lt;<a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer.html">TexturePacker</a>.<a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object.html">SpriteDataObject</a>&gt;(m_JsonFile.text);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">if</span> (sprites != null &amp;&amp; sprites.frames != null &amp;&amp; sprites.frames.Count &gt; 0)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        <span class="keywordtype">int</span> spriteCount = sprites.<a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object.html#a6d29bb4e6fe078b4e4a23b98fefd6cce">frames</a>.Count;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        <span class="comment">// Update import results</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                        m_CreationFeedback = <span class="stringliteral">&quot;&lt;b&gt;Import Results&lt;/b&gt;\n--------------------\n&quot;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        m_CreationFeedback += <span class="stringliteral">&quot;&lt;color=#C0ffff&gt;&lt;b&gt;&quot;</span> + spriteCount + <span class="stringliteral">&quot;&lt;/b&gt;&lt;/color&gt; Sprites were imported from file.&quot;</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        <span class="comment">// Create sprite info list</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        m_SpriteInfoList = <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#ac9742860f652085ec263cf69cad6f88b">CreateSpriteInfoList</a>(sprites);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            GUI.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">// Creation Feedback</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            GUILayout.Space(5);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            GUILayout.BeginVertical(EditorStyles.helpBox, GUILayout.Height(60));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                EditorGUILayout.LabelField(m_CreationFeedback, <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a84356ea1186f80cb25a29a5346dd84a3">label</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            GUILayout.EndVertical();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            GUILayout.Space(5);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            GUI.enabled = m_JsonFile != null &amp;&amp; m_SpriteAtlas &amp;&amp; m_SpriteInfoList != null &amp;&amp; m_SpriteInfoList.Count &gt; 0;    <span class="comment">// Enable Save Button if font_Atlas is not Null.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Save Sprite Asset&quot;</span>) &amp;&amp; m_JsonFile != null)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordtype">string</span> filePath = EditorUtility.SaveFilePanel(<span class="stringliteral">&quot;Save Sprite Asset File&quot;</span>, <span class="keyword">new</span> FileInfo(AssetDatabase.GetAssetPath(m_JsonFile)).DirectoryName, m_JsonFile.name, <span class="stringliteral">&quot;asset&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">if</span> (filePath.Length == 0)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af6f9d7fcb6868691c882b6858a716472">SaveSpriteAsset</a>(filePath);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            GUI.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#ac9742860f652085ec263cf69cad6f88b">  120</a></span>&#160;        List&lt;TMP_Sprite&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#ac9742860f652085ec263cf69cad6f88b">CreateSpriteInfoList</a>(<a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer.html">TexturePacker</a>.<a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object.html">SpriteDataObject</a> spriteDataObject)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            List&lt;<a class="code" href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer.html">TexturePacker</a>.<a class="code" href="struct_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data.html">SpriteData</a>&gt; importedSprites = spriteDataObject.frames;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            List&lt;TMP_Sprite&gt; spriteInfoList = <span class="keyword">new</span> List&lt;TMP_Sprite&gt;();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; importedSprites.Count; i++)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html">TMP_Sprite</a> sprite = <span class="keyword">new</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html">TMP_Sprite</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4d8b41e1999a5ba77761a861a759cbdd">id</a> = i;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">name</a> = Path.GetFileNameWithoutExtension(importedSprites[i].filename) ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#a8206db44a70cc5ea85f088ee7f23842b">hashCode</a> = <a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMP_TextUtilities</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html#a84e924d9b433452d0742b2efc6a532b7">GetSimpleHashCode</a>(sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">name</a>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="comment">// Attempt to extract Unicode value from name</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordtype">int</span> unicode;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordtype">int</span> indexOfSeperator = sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">name</a>.IndexOf(<span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="keywordflow">if</span> (indexOfSeperator != -1)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    unicode = <a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMP_TextUtilities</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html#ad5a9161e825c2e1a7717dd16ebff7410">StringHexToInt</a>(sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">name</a>.Substring(indexOfSeperator + 1));</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    unicode = <a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMP_TextUtilities</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html#ad5a9161e825c2e1a7717dd16ebff7410">StringHexToInt</a>(sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">name</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#ae3dfeb6d8025927bc22bb5aa9a71df4e">unicode</a> = unicode;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4b96e1773a8f6240d312ea67c5c23724">x</a> = importedSprites[i].frame.x;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a64f866b5d5dd2676de3a43fe928123d5">y</a> = m_SpriteAtlas.height - (importedSprites[i].frame.y + importedSprites[i].frame.h);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2">width</a> = importedSprites[i].frame.w;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#afbdc44814f873c325c597108c751103c">height</a> = importedSprites[i].frame.h;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="comment">//Calculate sprite pivot position</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#a809fb162ee886b2ea9025590e3aa09ec">pivot</a> = importedSprites[i].pivot;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="comment">// Properties the can be modified</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a09b35711f9a319a4fb0bc3e0020c19d5">xAdvance</a> = sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2">width</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a426a5cdcd073e94014033802b4e8dbfe">scale</a> = 1.0f;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4066f69305c1b24dd6256bb2329946cf">xOffset</a> = 0 - (sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2">width</a> * sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#a809fb162ee886b2ea9025590e3aa09ec">pivot</a>.x);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#ae153c7c39a1e894c2d41865beaac40f6">yOffset</a> = sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#afbdc44814f873c325c597108c751103c">height</a> - (sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#afbdc44814f873c325c597108c751103c">height</a> * sprite.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite.html#a809fb162ee886b2ea9025590e3aa09ec">pivot</a>.y);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                spriteInfoList.Add(sprite);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">return</span> spriteInfoList;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af6f9d7fcb6868691c882b6858a716472">  169</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af6f9d7fcb6868691c882b6858a716472">SaveSpriteAsset</a>(<span class="keywordtype">string</span> filePath)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            filePath = filePath.Substring(0, filePath.Length - 6); <span class="comment">// Trim file extension from filePath.</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordtype">string</span> dataPath = Application.dataPath;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">if</span> (filePath.IndexOf(dataPath, <a class="code" href="namespace_system.html">System</a>.StringComparison.InvariantCultureIgnoreCase) == -1)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <a class="code" href="namespace_debug.html">Debug</a>.LogError(<span class="stringliteral">&quot;You&#39;re saving the font asset in a directory outside of this project folder. This is not supported. Please select a directory under \&quot;&quot;</span> + dataPath + <span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordtype">string</span> relativeAssetPath = filePath.Substring(dataPath.Length - 6);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">string</span> dirName = Path.GetDirectoryName(relativeAssetPath);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordtype">string</span> fileName = Path.GetFileNameWithoutExtension(relativeAssetPath);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordtype">string</span> pathNoExt = dirName + <span class="stringliteral">&quot;/&quot;</span> + fileName;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="comment">// Create new Sprite Asset using this texture</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            m_SpriteAsset = CreateInstance&lt;TMP_SpriteAsset&gt;();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            AssetDatabase.CreateAsset(m_SpriteAsset, pathNoExt + <span class="stringliteral">&quot;.asset&quot;</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="comment">// Compute the hash code for the sprite asset.</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            m_SpriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">hashCode</a> = <a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMP_TextUtilities</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___text_utilities.html#a84e924d9b433452d0742b2efc6a532b7">GetSimpleHashCode</a>(m_SpriteAsset.name);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="comment">// Assign new Sprite Sheet texture to the Sprite Asset.</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            m_SpriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">spriteSheet</a> = <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a9013e85056c7bbb257ae1f206684bef7">m_SpriteAtlas</a>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            m_SpriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6770844be35fbf6d455eadbc9a528372">spriteInfoList</a> = <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a55f4f7ef2be60c5cfe2e81c9db2ba6ca">m_SpriteInfoList</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="comment">// Add new default material for sprite asset.</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a4b3de37eb0833ba95bb1e8c0114cb1b6">AddDefaultMaterial</a>(m_SpriteAsset);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a4b3de37eb0833ba95bb1e8c0114cb1b6">  207</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a4b3de37eb0833ba95bb1e8c0114cb1b6">AddDefaultMaterial</a>(<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            Shader shader = Shader.Find(<span class="stringliteral">&quot;TextMeshPro/Sprite&quot;</span>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            Material material = <span class="keyword">new</span> Material(shader);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            material.SetTexture(<a class="code" href="class_t_m_pro_1_1_shader_utilities.html">ShaderUtilities</a>.<a class="code" href="class_t_m_pro_1_1_shader_utilities.html#af03786ed7c4f179a5d4764cfc7489ea4">ID_MainTex</a>, spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">spriteSheet</a>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            spriteAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">material</a> = material;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            material.hideFlags = HideFlags.HideInHierarchy;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            AssetDatabase.AddObjectToAsset(material, spriteAsset);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af52b6c3e3ba763e64dc9e1a7afb0fe0e">  222</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af52b6c3e3ba763e64dc9e1a7afb0fe0e">SetEditorWindowSize</a>()</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            EditorWindow editorWindow = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            Vector2 currentWindowSize = editorWindow.minSize;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            editorWindow.minSize = <span class="keyword">new</span> Vector2(Mathf.Max(230, currentWindowSize.x), Mathf.Max(300, currentWindowSize.y));</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a4066f69305c1b24dd6256bb2329946cf"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4066f69305c1b24dd6256bb2329946cf">TMPro.TMP_TextElement_Legacy.xOffset</a></div><div class="ttdeci">float xOffset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00020">TMP_TextElement_Legacy.cs:20</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___asset_html_a63f177ff7028859d2b431789737d8ccc"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___asset.html#a63f177ff7028859d2b431789737d8ccc">TMPro.TMP_Asset.hashCode</a></div><div class="ttdeci">int hashCode</div><div class="ttdoc">HashCode based on the name of the asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___asset_8cs_source.html#l00013">TMP_Asset.cs:13</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a4d8b41e1999a5ba77761a861a759cbdd"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4d8b41e1999a5ba77761a861a759cbdd">TMPro.TMP_TextElement_Legacy.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00015">TMP_TextElement_Legacy.cs:15</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html">TMPro.TMP_SpriteAssetImporter</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00010">TMP_SpriteAssetImporter.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a3df4961b68f84eaa434f9204c4919963"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a3df4961b68f84eaa434f9204c4919963">TMPro.TMP_SpriteAssetImporter.ShowFontAtlasCreatorWindow</a></div><div class="ttdeci">static void ShowFontAtlasCreatorWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00014">TMP_SpriteAssetImporter.cs:14</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_shader_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_shader_utilities.html">TMPro.ShaderUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___shader_utilities_8cs_source.html#l00008">TMP_ShaderUtilities.cs:8</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMPro.TMP_SpriteAsset</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00010">TMP_SpriteAsset.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_af52b6c3e3ba763e64dc9e1a7afb0fe0e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af52b6c3e3ba763e64dc9e1a7afb0fe0e">TMPro.TMP_SpriteAssetImporter.SetEditorWindowSize</a></div><div class="ttdeci">void SetEditorWindowSize()</div><div class="ttdoc">Limits the minimum size of the editor window. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00222">TMP_SpriteAssetImporter.cs:222</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_utilities_html_ad5a9161e825c2e1a7717dd16ebff7410"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_utilities.html#ad5a9161e825c2e1a7717dd16ebff7410">TMPro.TMP_TextUtilities.StringHexToInt</a></div><div class="ttdeci">static int StringHexToInt(string s)</div><div class="ttdoc">Function to convert a properly formatted string which contains an hex value to its decimal value...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_utilities_8cs_source.html#l02266">TMP_TextUtilities.cs:2266</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_a6770844be35fbf6d455eadbc9a528372"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#a6770844be35fbf6d455eadbc9a528372">TMPro.TMP_SpriteAsset.spriteInfoList</a></div><div class="ttdeci">List&lt; TMP_Sprite &gt; spriteInfoList</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00055">TMP_SpriteAsset.cs:55</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_ae153c7c39a1e894c2d41865beaac40f6"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#ae153c7c39a1e894c2d41865beaac40f6">TMPro.TMP_TextElement_Legacy.yOffset</a></div><div class="ttdeci">float yOffset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00021">TMP_TextElement_Legacy.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a54084ec1409b1502bca47a032984f9dc"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a54084ec1409b1502bca47a032984f9dc">TMPro.TMP_SpriteAssetImporter.DrawEditorPanel</a></div><div class="ttdeci">void DrawEditorPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00043">TMP_SpriteAssetImporter.cs:43</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_html"><div class="ttname"><a href="struct_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data.html">TMPro.SpriteAssetUtilities.TexturePacker.SpriteData</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_import_formats_8cs_source.html#l00041">TMP_SpriteAssetImportFormats.cs:41</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a8dc61ea12f997affb929f3ab2e3f5bec"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a8dc61ea12f997affb929f3ab2e3f5bec">TMPro.TMP_SpriteAssetImporter.m_SpriteDataFormat</a></div><div class="ttdeci">SpriteAssetImportFormats m_SpriteDataFormat</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00022">TMP_SpriteAssetImporter.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html_ae3dfeb6d8025927bc22bb5aa9a71df4e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html#ae3dfeb6d8025927bc22bb5aa9a71df4e">TMPro.TMP_Sprite.unicode</a></div><div class="ttdeci">int unicode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00018">TMP_Sprite.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html_a8206db44a70cc5ea85f088ee7f23842b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html#a8206db44a70cc5ea85f088ee7f23842b">TMPro.TMP_Sprite.hashCode</a></div><div class="ttdeci">int hashCode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00017">TMP_Sprite.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a4b96e1773a8f6240d312ea67c5c23724"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a4b96e1773a8f6240d312ea67c5c23724">TMPro.TMP_TextElement_Legacy.x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00016">TMP_TextElement_Legacy.cs:16</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_af0e3b6c340e7168f7a20b7d509166f1b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af0e3b6c340e7168f7a20b7d509166f1b">TMPro.TMP_SpriteAssetImporter.m_CreationFeedback</a></div><div class="ttdeci">string m_CreationFeedback</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00025">TMP_SpriteAssetImporter.cs:25</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a55f4f7ef2be60c5cfe2e81c9db2ba6ca"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a55f4f7ef2be60c5cfe2e81c9db2ba6ca">TMPro.TMP_SpriteAssetImporter.m_SpriteInfoList</a></div><div class="ttdeci">List&lt; TMP_Sprite &gt; m_SpriteInfoList</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00028">TMP_SpriteAssetImporter.cs:28</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object_html_a6d29bb4e6fe078b4e4a23b98fefd6cce"><div class="ttname"><a href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object.html#a6d29bb4e6fe078b4e4a23b98fefd6cce">TMPro.SpriteAssetUtilities.TexturePacker.SpriteDataObject.frames</a></div><div class="ttdeci">List&lt; SpriteData &gt; frames</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_import_formats_8cs_source.html#l00056">TMP_SpriteAssetImportFormats.cs:56</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html">TMPro.TMP_Sprite</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00012">TMP_Sprite.cs:12</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a09b35711f9a319a4fb0bc3e0020c19d5"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a09b35711f9a319a4fb0bc3e0020c19d5">TMPro.TMP_TextElement_Legacy.xAdvance</a></div><div class="ttdeci">float xAdvance</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00022">TMP_TextElement_Legacy.cs:22</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_1_1_sprite_asset_utilities_html_ae6645ac68f8728971cdb947d693945b3"><div class="ttname"><a href="namespace_t_m_pro_1_1_sprite_asset_utilities.html#ae6645ac68f8728971cdb947d693945b3">TMPro.SpriteAssetUtilities.SpriteAssetImportFormats</a></div><div class="ttdeci">SpriteAssetImportFormats</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_import_formats_8cs_source.html#l00008">TMP_SpriteAssetImportFormats.cs:8</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a426a5cdcd073e94014033802b4e8dbfe"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a426a5cdcd073e94014033802b4e8dbfe">TMPro.TMP_TextElement_Legacy.scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00023">TMP_TextElement_Legacy.cs:23</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_html_ad58008ac004e19c361192d6159f34367"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset.html#ad58008ac004e19c361192d6159f34367">TMPro.TMP_SpriteAsset.spriteSheet</a></div><div class="ttdeci">Texture spriteSheet</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_8cs_source.html#l00029">TMP_SpriteAsset.cs:29</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a9013e85056c7bbb257ae1f206684bef7"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a9013e85056c7bbb257ae1f206684bef7">TMPro.TMP_SpriteAssetImporter.m_SpriteAtlas</a></div><div class="ttdeci">Texture2D m_SpriteAtlas</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00021">TMP_SpriteAssetImporter.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a4b3de37eb0833ba95bb1e8c0114cb1b6"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a4b3de37eb0833ba95bb1e8c0114cb1b6">TMPro.TMP_SpriteAssetImporter.AddDefaultMaterial</a></div><div class="ttdeci">static void AddDefaultMaterial(TMP_SpriteAsset spriteAsset)</div><div class="ttdoc">Create and add new default material to sprite asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00207">TMP_SpriteAssetImporter.cs:207</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMPro.EditorUtilities.TMP_UIStyleManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00009">TMP_UIStyleManager.cs:9</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_af6f9d7fcb6868691c882b6858a716472"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#af6f9d7fcb6868691c882b6858a716472">TMPro.TMP_SpriteAssetImporter.SaveSpriteAsset</a></div><div class="ttdeci">void SaveSpriteAsset(string filePath)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00169">TMP_SpriteAssetImporter.cs:169</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_utilities_html_a84e924d9b433452d0742b2efc6a532b7"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_utilities.html#a84e924d9b433452d0742b2efc6a532b7">TMPro.TMP_TextUtilities.GetSimpleHashCode</a></div><div class="ttdeci">static int GetSimpleHashCode(string s)</div><div class="ttdoc">Function which returns a simple hashcode from a string. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_utilities_8cs_source.html#l02200">TMP_TextUtilities.cs:2200</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_html"><div class="ttname"><a href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer.html">TMPro.SpriteAssetUtilities.TexturePacker</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_import_formats_8cs_source.html#l00010">TMP_SpriteAssetImportFormats.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object_html"><div class="ttname"><a href="class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer_1_1_sprite_data_object.html">TMPro.SpriteAssetUtilities.TexturePacker.SpriteDataObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_import_formats_8cs_source.html#l00054">TMP_SpriteAssetImportFormats.cs:54</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a5a2c0ed3a6a4fbea87bd74188fa967ef"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a5a2c0ed3a6a4fbea87bd74188fa967ef">TMPro.TMP_SpriteAssetImporter.OnGUI</a></div><div class="ttdeci">void OnGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00037">TMP_SpriteAssetImporter.cs:37</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html_ae78cacfca5d783a5515ce93bc9a6582f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html#ae78cacfca5d783a5515ce93bc9a6582f">TMPro.TMP_Sprite.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00016">TMP_Sprite.cs:16</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_utilities.html">TMPro.TMP_TextUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_utilities_8cs_source.html#l00024">TMP_TextUtilities.cs:24</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_afbdc44814f873c325c597108c751103c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#afbdc44814f873c325c597108c751103c">TMPro.TMP_TextElement_Legacy.height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00019">TMP_TextElement_Legacy.cs:19</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a84356ea1186f80cb25a29a5346dd84a3"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a84356ea1186f80cb25a29a5346dd84a3">TMPro.EditorUtilities.TMP_UIStyleManager.label</a></div><div class="ttdeci">static GUIStyle label</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00011">TMP_UIStyleManager.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___asset_html_a8dcd405969e8c3aaa441c0fe3b0b6eaa"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___asset.html#a8dcd405969e8c3aaa441c0fe3b0b6eaa">TMPro.TMP_Asset.material</a></div><div class="ttdeci">Material material</div><div class="ttdoc">The material used by this asset. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___asset_8cs_source.html#l00018">TMP_Asset.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a64f866b5d5dd2676de3a43fe928123d5"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a64f866b5d5dd2676de3a43fe928123d5">TMPro.TMP_TextElement_Legacy.y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00017">TMP_TextElement_Legacy.cs:17</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_element___legacy_html_a24fb115bccca4a6c83ae92bf31bbd5e2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2">TMPro.TMP_TextElement_Legacy.width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_element___legacy_8cs_source.html#l00018">TMP_TextElement_Legacy.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_ac9742860f652085ec263cf69cad6f88b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#ac9742860f652085ec263cf69cad6f88b">TMPro.TMP_SpriteAssetImporter.CreateSpriteInfoList</a></div><div class="ttdeci">List&lt; TMP_Sprite &gt; CreateSpriteInfoList(TexturePacker.SpriteDataObject spriteDataObject)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00120">TMP_SpriteAssetImporter.cs:120</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a6e4730f191759ede28581effdb76f4db"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a6e4730f191759ede28581effdb76f4db">TMPro.TMP_SpriteAssetImporter.m_JsonFile</a></div><div class="ttdeci">TextAsset m_JsonFile</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00023">TMP_SpriteAssetImporter.cs:23</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_1_1_sprite_asset_utilities_html"><div class="ttname"><a href="namespace_t_m_pro_1_1_sprite_asset_utilities.html">TMPro.SpriteAssetUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_import_formats_8cs_source.html#l00006">TMP_SpriteAssetImportFormats.cs:6</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_ac6715fc87012402436e7305dbcfb18ed"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#ac6715fc87012402436e7305dbcfb18ed">TMPro.TMP_SpriteAssetImporter.m_SpriteAsset</a></div><div class="ttdeci">TMP_SpriteAsset m_SpriteAsset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00027">TMP_SpriteAssetImporter.cs:27</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_1_1_editor_utilities_html"><div class="ttname"><a href="namespace_t_m_pro_1_1_editor_utilities.html">TMPro.EditorUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_dropdown_option_list_drawer_8cs_source.html#l00006">DropdownOptionListDrawer.cs:6</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_asset_importer_html_a1ddbe0cc55cc8533fcc86313b42cd06d"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html#a1ddbe0cc55cc8533fcc86313b42cd06d">TMPro.TMP_SpriteAssetImporter.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_asset_importer_8cs_source.html#l00031">TMP_SpriteAssetImporter.cs:31</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___sprite_html_a809fb162ee886b2ea9025590e3aa09ec"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___sprite.html#a809fb162ee886b2ea9025590e3aa09ec">TMPro.TMP_Sprite.pivot</a></div><div class="ttdeci">Vector2 pivot</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___sprite_8cs_source.html#l00023">TMP_Sprite.cs:23</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_shader_utilities_html_af03786ed7c4f179a5d4764cfc7489ea4"><div class="ttname"><a href="class_t_m_pro_1_1_shader_utilities.html#af03786ed7c4f179a5d4764cfc7489ea4">TMPro.ShaderUtilities.ID_MainTex</a></div><div class="ttdeci">static int ID_MainTex</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___shader_utilities_8cs_source.html#l00011">TMP_ShaderUtilities.cs:11</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

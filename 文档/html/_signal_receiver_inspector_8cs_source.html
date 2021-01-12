@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Signals/SignalReceiverInspector.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_2c300a7ab6bcbaf4a24a50e447574c73.html">Signals</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SignalReceiverInspector.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_signal_receiver_inspector_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="_signal_receiver_inspector_8cs.html#a324f8dae84ead9019a250b472ca1b436">    2</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_object.html">UnityObject</a> = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.IMGUI.Controls;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Events;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline.Signals</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [CustomEditor(typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html">SignalReceiver</a>))]</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html">SignalReceiverInspector</a> : Editor</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a1ff647690df9ad1a97529da58c7486df">   12</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html">SignalReceiver</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a1ff647690df9ad1a97529da58c7486df">m_Target</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a5f5c44ca34f9af153259e6968c6a8e2b">   14</a></span>&#160;        [SerializeField] TreeViewState <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a5f5c44ca34f9af153259e6968c6a8e2b">m_TreeState</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#afc762cbfe5e27db5d081ea751b96ab5e">   15</a></span>&#160;        [SerializeField] MultiColumnHeaderState <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#afc762cbfe5e27db5d081ea751b96ab5e">m_MultiColumnHeaderState</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">internal</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html">SignalReceiverTreeView</a> m_TreeView;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">SignalEmitter</a> signalEmitterContext</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#add57b5df7730a0f2f05f7ca1835f51c5">   19</a></span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Context as <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">SignalEmitter</a>;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a765da2e018ba01dc5321a87a9365b69c">   23</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a765da2e018ba01dc5321a87a9365b69c">OnEnable</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            m_Target = target as <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html">SignalReceiver</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            InitTreeView(serializedObject);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            Undo.undoRedoPerformed += OnUndoRedo;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#adda7a1d2b378b3c86a9847d06089a016">   31</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#adda7a1d2b378b3c86a9847d06089a016">OnDisable</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            Undo.undoRedoPerformed -= OnUndoRedo;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a7dd5db0325a3ae16ccd02910d53f2f7f">   36</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a7dd5db0325a3ae16ccd02910d53f2f7f">OnUndoRedo</a>()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            m_TreeView.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a0c9d5b8d29a13a7e4a50385821afb935">dirty</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a58084148a7a77b7456ed52d2e916dbc2">   41</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a58084148a7a77b7456ed52d2e916dbc2">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            serializedObject.Update();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">using</span> (var changeCheck = <span class="keyword">new</span> EditorGUI.ChangeCheckScope())</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                m_TreeView.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#aa4ab4eb04b99ba64d3e1a020ea55c4c9">RefreshIfDirty</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                DrawEmitterControls(); <span class="comment">// Draws buttons coming from the Context (SignalEmitter)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                EditorGUILayout.Space();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                m_TreeView.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a80d91af8b228cf0df25351661823261a">Draw</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">if</span> (signalEmitterContext == null)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    DrawAddRemoveButtons();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">if</span> (changeCheck.changed)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    m_TreeView.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a0c9d5b8d29a13a7e4a50385821afb935">dirty</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a53932026a70653055ecfd04794ba5e19">   64</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a53932026a70653055ecfd04794ba5e19">DrawEmitterControls</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            var context = signalEmitterContext;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (context != null)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                var currentSignal = context.asset;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">if</span> (currentSignal != null &amp;&amp; !m_Target.IsSignalAssetHandled(currentSignal))</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    EditorGUILayout.Separator();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    var message = <span class="keywordtype">string</span>.Format(<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#a133b6d7fbdbb8b541603d064220d76f4">NoReaction</a>, currentSignal.name);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html">SignalUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#ac78643addefb5d72ceee836f03db453e">DrawCenteredMessage</a>(message);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html">SignalUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#acaab023f8cfec29556403e3ad4066d41">DrawCenteredButton</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#a69cad7c88311ed1cd59cca9d91d0cb28">AddReactionButton</a>))</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        m_Target.AddNewReaction(currentSignal); <span class="comment">// Add reaction on the first</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    EditorGUILayout.Separator();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> SetAssetContext(<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> asset)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            m_TreeView.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a01074582cb9126f1c137ca91df2bfc08">SetSignalContext</a>(asset);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a3f9fb60f8ab566c5f5fdfec5b71faf85">   87</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a3f9fb60f8ab566c5f5fdfec5b71faf85">DrawAddRemoveButtons</a>()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> GUILayout.HorizontalScope())</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                GUILayout.FlexibleSpace();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">if</span> (GUILayout.Button(<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#a69cad7c88311ed1cd59cca9d91d0cb28">AddReactionButton</a>))</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    Undo.RecordObject(m_Target, <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html">Styles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#aa051169aec935b1ab104ebbd2d4f926f">UndoAddReaction</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    m_Target.<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html#abb432062d379652308282ce4bdb85458">AddEmptyReaction</a>(<span class="keyword">new</span> UnityEvent());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    PrefabUtility.RecordPrefabInstancePropertyModifications(m_Target);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                GUILayout.Space(18.0f);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a488855a27888796798725d7080c6b387">  102</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a488855a27888796798725d7080c6b387">InitTreeView</a>(SerializedObject so)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            m_TreeState = <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html">SignalListFactory</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a379285a4bb2f3eb07ad0ccef44fcc640">CreateViewState</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            m_MultiColumnHeaderState = <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html">SignalListFactory</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a8f760f7bb38243cd90778b2bdc1991e7">CreateHeaderState</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            var header = <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html">SignalListFactory</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a2c0dd63d692fc442d734105cb2596767">CreateHeader</a>(m_MultiColumnHeaderState, <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_utility.html">SignalReceiverUtility</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_utility.html#a3241cbe2960d975fa2e5fbf9c495e73f">headerHeight</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            var context = signalEmitterContext;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            m_TreeView = <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html">SignalListFactory</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a9ff9fcd5846d098f371849bb1ac48d3c">CreateSignalInspectorList</a>(m_TreeState, header, m_Target, so);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            m_TreeView.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a27f74eaa1892d5a83d03729968927477">readonlySignals</a> = context != null;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">if</span> (context != null)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                m_TreeView.<a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a01074582cb9126f1c137ca91df2bfc08">SetSignalContext</a>(context.asset);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html">UnityEditor.Timeline.Signals.SignalUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_utility_8cs_source.html#l00017">SignalUtility.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles_html_a69cad7c88311ed1cd59cca9d91d0cb28"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#a69cad7c88311ed1cd59cca9d91d0cb28">UnityEditor.Timeline.Signals.Styles.AddReactionButton</a></div><div class="ttdeci">static readonly GUIContent AddReactionButton</div><div class="ttdef"><b>Definition:</b> <a href="_styles_8cs_source.html#l00015">Styles.cs:15</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a765da2e018ba01dc5321a87a9365b69c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a765da2e018ba01dc5321a87a9365b69c">UnityEditor.Timeline.Signals.SignalReceiverInspector.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00023">SignalReceiverInspector.cs:23</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_afc762cbfe5e27db5d081ea751b96ab5e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#afc762cbfe5e27db5d081ea751b96ab5e">UnityEditor.Timeline.Signals.SignalReceiverInspector.m_MultiColumnHeaderState</a></div><div class="ttdeci">MultiColumnHeaderState m_MultiColumnHeaderState</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00015">SignalReceiverInspector.cs:15</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html">UnityEditor.Timeline.Signals.Styles</a></div><div class="ttdef"><b>Definition:</b> <a href="_styles_8cs_source.html#l00005">Styles.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_html_a80d91af8b228cf0df25351661823261a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a80d91af8b228cf0df25351661823261a">UnityEditor.Timeline.Signals.SignalReceiverTreeView.Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_tree_view_8cs_source.html#l00046">SignalReceiverTreeView.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a5f5c44ca34f9af153259e6968c6a8e2b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a5f5c44ca34f9af153259e6968c6a8e2b">UnityEditor.Timeline.Signals.SignalReceiverInspector.m_TreeState</a></div><div class="ttdeci">TreeViewState m_TreeState</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00014">SignalReceiverInspector.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_signal_receiver_html_abb432062d379652308282ce4bdb85458"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html#abb432062d379652308282ce4bdb85458">UnityEngine.Timeline.SignalReceiver.AddEmptyReaction</a></div><div class="ttdeci">int AddEmptyReaction(UnityEvent reaction)</div><div class="ttdoc">Appends a null SignalAsset with a reaction specified by the UnityEvent. </div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_8cs_source.html#l00060">SignalReceiver.cs:60</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_signal_emitter_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">UnityEngine.Timeline.SignalEmitter</a></div><div class="ttdoc">Marker that emits a signal to a SignalReceiver. </div><div class="ttdef"><b>Definition:</b> <a href="_signal_emitter_8cs_source.html#l00017">SignalEmitter.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_html_aa4ab4eb04b99ba64d3e1a020ea55c4c9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#aa4ab4eb04b99ba64d3e1a020ea55c4c9">UnityEditor.Timeline.Signals.SignalReceiverTreeView.RefreshIfDirty</a></div><div class="ttdeci">void RefreshIfDirty()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_tree_view_8cs_source.html#l00052">SignalReceiverTreeView.cs:52</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_signal_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">UnityEngine.Timeline.SignalAsset</a></div><div class="ttdoc">An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver...</div><div class="ttdef"><b>Definition:</b> <a href="_signal_asset_8cs_source.html#l00012">SignalAsset.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a53932026a70653055ecfd04794ba5e19"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a53932026a70653055ecfd04794ba5e19">UnityEditor.Timeline.Signals.SignalReceiverInspector.DrawEmitterControls</a></div><div class="ttdeci">void DrawEmitterControls()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00064">SignalReceiverInspector.cs:64</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory_html_a2c0dd63d692fc442d734105cb2596767"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a2c0dd63d692fc442d734105cb2596767">UnityEditor.Timeline.Signals.SignalListFactory.CreateHeader</a></div><div class="ttdeci">static SignalReceiverHeader CreateHeader(MultiColumnHeaderState state, int columnHeight)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_list_factory_8cs_source.html#l00014">SignalListFactory.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_adda7a1d2b378b3c86a9847d06089a016"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#adda7a1d2b378b3c86a9847d06089a016">UnityEditor.Timeline.Signals.SignalReceiverInspector.OnDisable</a></div><div class="ttdeci">void OnDisable()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00031">SignalReceiverInspector.cs:31</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_html_a0c9d5b8d29a13a7e4a50385821afb935"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a0c9d5b8d29a13a7e4a50385821afb935">UnityEditor.Timeline.Signals.SignalReceiverTreeView.dirty</a></div><div class="ttdeci">bool dirty</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_tree_view_8cs_source.html#l00011">SignalReceiverTreeView.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory_html_a8f760f7bb38243cd90778b2bdc1991e7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a8f760f7bb38243cd90778b2bdc1991e7">UnityEditor.Timeline.Signals.SignalListFactory.CreateHeaderState</a></div><div class="ttdeci">static MultiColumnHeaderState CreateHeaderState()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_list_factory_8cs_source.html#l00021">SignalListFactory.cs:21</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory_html_a9ff9fcd5846d098f371849bb1ac48d3c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a9ff9fcd5846d098f371849bb1ac48d3c">UnityEditor.Timeline.Signals.SignalListFactory.CreateSignalInspectorList</a></div><div class="ttdeci">static SignalReceiverTreeView CreateSignalInspectorList(TreeViewState state, SignalReceiverHeader header, SignalReceiver target, SerializedObject so)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_list_factory_8cs_source.html#l00009">SignalListFactory.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a488855a27888796798725d7080c6b387"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a488855a27888796798725d7080c6b387">UnityEditor.Timeline.Signals.SignalReceiverInspector.InitTreeView</a></div><div class="ttdeci">void InitTreeView(SerializedObject so)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00102">SignalReceiverInspector.cs:102</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles_html_aa051169aec935b1ab104ebbd2d4f926f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#aa051169aec935b1ab104ebbd2d4f926f">UnityEditor.Timeline.Signals.Styles.UndoAddReaction</a></div><div class="ttdeci">static readonly string UndoAddReaction</div><div class="ttdef"><b>Definition:</b> <a href="_styles_8cs_source.html#l00030">Styles.cs:30</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html">UnityEditor.Timeline.Signals.SignalReceiverInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00010">SignalReceiverInspector.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_signal_receiver_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html">UnityEngine.Timeline.SignalReceiver</a></div><div class="ttdoc">Listens for emitted signals and reacts depending on its defined reactions. </div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_8cs_source.html#l00016">SignalReceiver.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility_html_ac78643addefb5d72ceee836f03db453e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#ac78643addefb5d72ceee836f03db453e">UnityEditor.Timeline.Signals.SignalUtility.DrawCenteredMessage</a></div><div class="ttdeci">static void DrawCenteredMessage(string message)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_utility_8cs_source.html#l00083">SignalUtility.cs:83</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_utility_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_utility.html">UnityEditor.Timeline.Signals.SignalReceiverUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_utility_8cs_source.html#l00106">SignalUtility.cs:106</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a58084148a7a77b7456ed52d2e916dbc2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a58084148a7a77b7456ed52d2e916dbc2">UnityEditor.Timeline.Signals.SignalReceiverInspector.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00041">SignalReceiverInspector.cs:41</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html">UnityEditor.Timeline.Signals.SignalReceiverTreeView</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_tree_view_8cs_source.html#l00009">SignalReceiverTreeView.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a3f9fb60f8ab566c5f5fdfec5b71faf85"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a3f9fb60f8ab566c5f5fdfec5b71faf85">UnityEditor.Timeline.Signals.SignalReceiverInspector.DrawAddRemoveButtons</a></div><div class="ttdeci">void DrawAddRemoveButtons()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00087">SignalReceiverInspector.cs:87</a></div></div>
+<div class="ttc" id="namespace_unity_object_html"><div class="ttname"><a href="namespace_unity_object.html">UnityObject</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html">UnityEditor.Timeline.Signals.SignalListFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_list_factory_8cs_source.html#l00007">SignalListFactory.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility_html_acaab023f8cfec29556403e3ad4066d41"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#acaab023f8cfec29556403e3ad4066d41">UnityEditor.Timeline.Signals.SignalUtility.DrawCenteredButton</a></div><div class="ttdeci">static bool DrawCenteredButton(GUIContent buttonLabel)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_utility_8cs_source.html#l00093">SignalUtility.cs:93</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_utility_html_a3241cbe2960d975fa2e5fbf9c495e73f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_utility.html#a3241cbe2960d975fa2e5fbf9c495e73f">UnityEditor.Timeline.Signals.SignalReceiverUtility.headerHeight</a></div><div class="ttdeci">static int headerHeight</div><div class="ttdef"><b>Definition:</b> <a href="_signal_utility_8cs_source.html#l00111">SignalUtility.cs:111</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a1ff647690df9ad1a97529da58c7486df"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a1ff647690df9ad1a97529da58c7486df">UnityEditor.Timeline.Signals.SignalReceiverInspector.m_Target</a></div><div class="ttdeci">SignalReceiver m_Target</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00012">SignalReceiverInspector.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles_html_a133b6d7fbdbb8b541603d064220d76f4"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_styles.html#a133b6d7fbdbb8b541603d064220d76f4">UnityEditor.Timeline.Signals.Styles.NoReaction</a></div><div class="ttdeci">static readonly string NoReaction</div><div class="ttdef"><b>Definition:</b> <a href="_styles_8cs_source.html#l00031">Styles.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory_html_a379285a4bb2f3eb07ad0ccef44fcc640"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_list_factory.html#a379285a4bb2f3eb07ad0ccef44fcc640">UnityEditor.Timeline.Signals.SignalListFactory.CreateViewState</a></div><div class="ttdeci">static TreeViewState CreateViewState()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_list_factory_8cs_source.html#l00026">SignalListFactory.cs:26</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector_html_a7dd5db0325a3ae16ccd02910d53f2f7f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a7dd5db0325a3ae16ccd02910d53f2f7f">UnityEditor.Timeline.Signals.SignalReceiverInspector.OnUndoRedo</a></div><div class="ttdeci">void OnUndoRedo()</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_inspector_8cs_source.html#l00036">SignalReceiverInspector.cs:36</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_html_a27f74eaa1892d5a83d03729968927477"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a27f74eaa1892d5a83d03729968927477">UnityEditor.Timeline.Signals.SignalReceiverTreeView.readonlySignals</a></div><div class="ttdeci">bool readonlySignals</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_tree_view_8cs_source.html#l00031">SignalReceiverTreeView.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_html_a01074582cb9126f1c137ca91df2bfc08"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a01074582cb9126f1c137ca91df2bfc08">UnityEditor.Timeline.Signals.SignalReceiverTreeView.SetSignalContext</a></div><div class="ttdeci">void SetSignalContext(SignalAsset assetContext=null)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_receiver_tree_view_8cs_source.html#l00033">SignalReceiverTreeView.cs:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

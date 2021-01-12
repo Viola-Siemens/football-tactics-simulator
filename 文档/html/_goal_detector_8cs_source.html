@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Assets/Ground/GoalDetector.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7ab79e34423b4813ae06b29f761e99f3.html">Assets</a></li><li class="navelem"><a class="el" href="dir_7f2e45a981032843bb437f75e5cdd14b.html">Ground</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GoalDetector.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_goal_detector_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.UI;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_goal_detector.html">   15</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_goal_detector.html">GoalDetector</a> : MonoBehaviour {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_goal_detector.html#ab4cb1e0fabcd97f5ecba98df3d673f40">   16</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_team.html">Team</a> <a class="code" href="class_goal_detector.html#ab4cb1e0fabcd97f5ecba98df3d673f40">team</a>;           </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_goal_detector.html#addd9e0a44f441f98188e1bf3c08c6203">   17</a></span>&#160;    <span class="keyword">public</span> Button <a class="code" href="class_goal_detector.html#addd9e0a44f441f98188e1bf3c08c6203">goalButton</a>;   </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_goal_detector.html#ae068e01179c6208d2ca28953385232cd">   24</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_goal_detector.html#ae068e01179c6208d2ca28953385232cd">OnTriggerEnter</a>(Collider other) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (other.gameObject.CompareTag(<span class="stringliteral">&quot;Ball&quot;</span>)) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="comment">//print(team.TeamName);</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            goalButton.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="ttc" id="class_team_html"><div class="ttname"><a href="class_team.html">Team</a></div><div class="ttdoc">球队类 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00122">Team.cs:122</a></div></div>
+<div class="ttc" id="class_goal_detector_html_addd9e0a44f441f98188e1bf3c08c6203"><div class="ttname"><a href="class_goal_detector.html#addd9e0a44f441f98188e1bf3c08c6203">GoalDetector.goalButton</a></div><div class="ttdeci">Button goalButton</div><div class="ttdoc">被进球一方的进球有效按钮 </div><div class="ttdef"><b>Definition:</b> <a href="_goal_detector_8cs_source.html#l00017">GoalDetector.cs:17</a></div></div>
+<div class="ttc" id="class_goal_detector_html"><div class="ttname"><a href="class_goal_detector.html">GoalDetector</a></div><div class="ttdoc">进球检测类 </div><div class="ttdef"><b>Definition:</b> <a href="_goal_detector_8cs_source.html#l00015">GoalDetector.cs:15</a></div></div>
+<div class="ttc" id="class_goal_detector_html_ab4cb1e0fabcd97f5ecba98df3d673f40"><div class="ttname"><a href="class_goal_detector.html#ab4cb1e0fabcd97f5ecba98df3d673f40">GoalDetector.team</a></div><div class="ttdeci">Team team</div><div class="ttdoc">被进球的一方 </div><div class="ttdef"><b>Definition:</b> <a href="_goal_detector_8cs_source.html#l00016">GoalDetector.cs:16</a></div></div>
+<div class="ttc" id="class_goal_detector_html_ae068e01179c6208d2ca28953385232cd"><div class="ttname"><a href="class_goal_detector.html#ae068e01179c6208d2ca28953385232cd">GoalDetector.OnTriggerEnter</a></div><div class="ttdeci">void OnTriggerEnter(Collider other)</div><div class="ttdoc">被触发时调用 </div><div class="ttdef"><b>Definition:</b> <a href="_goal_detector_8cs_source.html#l00024">GoalDetector.cs:24</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

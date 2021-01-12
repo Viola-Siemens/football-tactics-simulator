@@ -1,0 +1,985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Animation/AnimationTrack.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_04b4dee3f8cea0dae91c71cb6617ca83.html">Animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AnimationTrack.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_track_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Animations;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Experimental.Animations;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Serialization;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    [Flags]</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">   18</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a03cf6e1d32a9fcfa922a3008d3cd3571">PositionX</a> = 1 &lt;&lt; 0,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a2d23f44b7dcf04a2f6aa724532350e48">PositionY</a> = 1 &lt;&lt; 1,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a8b0e4369558d10325622cad511bfa721">PositionZ</a> = 1 &lt;&lt; 2,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a14dcec09ce1f4dfaac5955bc70825ebc">RotationX</a> = 1 &lt;&lt; 3,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a7527ced5a5153f3b21e31c4b177c2ea7">RotationY</a> = 1 &lt;&lt; 4,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2ae967cae1a9d601b4335123e013328d34">RotationZ</a> = 1 &lt;&lt; 5</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">   53</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417a3fcc2ef4c3955af6de82dbf66f988af8">ApplyTransformOffsets</a>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417aa358044b7d82a40d11e487dc01e4a455">ApplySceneOffsets</a>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417a06b9281e396db002010bde1de57262eb">Auto</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// offset mode</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">   78</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a4a6b484b456ffb984ef9e43f2613b126">NoRootTransform</a>,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3ac7d615c69a04e692b7c58639978b5493">TransformOffset</a>,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a2a6da1e09c3a2e3fff78e22c417c2ddc">SceneOffset</a>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a66021d701c495e1d6b8935fc6a517c39">TransformOffsetLegacy</a>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a32c37f244a7e7575e9e92e92e59b0751">SceneOffsetLegacy</a>,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a20f94391871d73cf5369bd910110408d">SceneOffsetEditor</a>, <span class="comment">// scene offset mode in editor</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3ae57518ba3813ed4ce1b0310a59eebef7">SceneOffsetLegacyEditor</a>,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// separate from the enum to hide them from UI elements</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html">   91</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html">MatchTargetFieldConstants</a></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a531ccf1b9b570aa11c88503538383081">   93</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> All = <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.PositionX | <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.PositionY |</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.PositionZ | <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.RotationX |</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.RotationY | <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.RotationZ;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a628d4bb9e1e1662f0811304db5479cbc">   97</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> None = 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a3d04511c6fd3c1f392dd74613e4c0f55">   99</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> <a class="code" href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83">Position</a> = <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.PositionX | <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.PositionY |</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.PositionZ;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a466048624610449495796fcf268d220e">  102</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> Rotation = <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.RotationX | <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.RotationY |</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a>.RotationZ;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a501a58e442ae069b97f8a15c53fe3605">  105</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a501a58e442ae069b97f8a15c53fe3605">HasAny</a>(<span class="keyword">this</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> me, <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> fields)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span> (me &amp; fields) != None;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a8e78bc13cfa3462b2b900d4117b6595c">  110</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a8e78bc13cfa3462b2b900d4117b6595c">Toggle</a>(<span class="keyword">this</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> me, <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> flag)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">return</span> me ^ flag;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    [TrackClipType(typeof(AnimationPlayableAsset), <span class="keyword">false</span>)]</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    [TrackBindingType(typeof(Animator))]</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    [ExcludeFromPreset]</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">  124</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> : <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_layerable.html">ILayerable</a></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a10bc8bd1c7bba0911f705725f76e1df5">  126</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_DefaultInfiniteClipName = <span class="stringliteral">&quot;Recorded&quot;</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae64776321da110dd9c152734bb1b9117">  127</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">string</span> k_DefaultRecordableClipName = <span class="stringliteral">&quot;Recorded&quot;</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        [SerializeField, FormerlySerializedAs(<span class="stringliteral">&quot;m_OpenClipPreExtrapolation&quot;</span>)]</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a813bbb381e7a49ac33156f0646d86c6f">  130</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> m_InfiniteClipPreExtrapolation = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>.None;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        [SerializeField, FormerlySerializedAs(<span class="stringliteral">&quot;m_OpenClipPostExtrapolation&quot;</span>)]</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a41c9284d232dc53f5e4498b6d7735b64">  133</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> m_InfiniteClipPostExtrapolation = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>.None;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        [SerializeField, FormerlySerializedAs(<span class="stringliteral">&quot;m_OpenClipOffsetPosition&quot;</span>)]</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a8f7ca5339a2c72c73d458c9baf9d1c95">  136</a></span>&#160;        Vector3 m_InfiniteClipOffsetPosition = Vector3.zero;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        [SerializeField, FormerlySerializedAs(<span class="stringliteral">&quot;m_OpenClipOffsetEulerAngles&quot;</span>)]</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a71439c4e4acc44a58be8e088b2fde84f">  139</a></span>&#160;        Vector3 m_InfiniteClipOffsetEulerAngles = Vector3.zero;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        [SerializeField, FormerlySerializedAs(<span class="stringliteral">&quot;m_OpenClipTimeOffset&quot;</span>)]</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae23cbe75f510dedd932550304a6d1a79">  142</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae23cbe75f510dedd932550304a6d1a79">m_InfiniteClipTimeOffset</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        [SerializeField, FormerlySerializedAs(<span class="stringliteral">&quot;m_OpenClipRemoveOffset&quot;</span>)]</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a0164af2979061d0820f75edddf9df0e8">  145</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a0164af2979061d0820f75edddf9df0e8">m_InfiniteClipRemoveOffset</a>; <span class="comment">// cached value for remove offset</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a16d7a1351f8c7299a0014b65bbf25cd7">  148</a></span>&#160;        <span class="keywordtype">bool</span> m_InfiniteClipApplyFootIK = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        [SerializeField, HideInInspector]</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac044b9aaf66dd6d3077c4a19c28845ce">  151</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834e">LoopMode</a> mInfiniteClipLoop = <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834e">LoopMode</a>.UseSourceAsset;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a9d532c4d4f6f894eb1314ef9c1a4998a">  154</a></span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> m_MatchTargetFields = <a class="code" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html">MatchTargetFieldConstants</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a531ccf1b9b570aa11c88503538383081">All</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a0e1394990446fac288b226010bc4d6d1">  156</a></span>&#160;        Vector3 m_Position = Vector3.zero;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a1dc4d63a2401d0eb0020faadb182a5a3">  158</a></span>&#160;        Vector3 m_EulerAngles = Vector3.zero;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a09ad65f00b4c59e1709cdd7fb90a3540">  161</a></span>&#160;        [SerializeField] AvatarMask <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a09ad65f00b4c59e1709cdd7fb90a3540">m_AvatarMask</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a8759a45719b029dda698679fee598228">  162</a></span>&#160;        [SerializeField] <span class="keywordtype">bool</span>       m_ApplyAvatarMask  = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a00ca645cde44bde46005147b7c9d2428">  164</a></span>&#160;        [SerializeField] <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a> m_TrackOffset = <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplyTransformOffsets;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a58ea9485f7bd3af5cfad59cd90805d3b">  166</a></span>&#160;        [SerializeField, HideInInspector] AnimationClip <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a58ea9485f7bd3af5cfad59cd90805d3b">m_InfiniteClip</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">private</span> AnimationClip m_DefaultPoseClip;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keyword">private</span> AnimationClip m_CachedPropertiesClip;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        AnimationOffsetPlayable m_ClipOffset;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">private</span> Vector3 m_SceneOffsetPosition = Vector3.zero;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keyword">private</span> Vector3 m_SceneOffsetRotation = Vector3.zero;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> m_HasPreviewComponents = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keyword">public</span> Vector3 position</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a4f3ade808e26546f80a57f2cf02cbdf5">  185</a></span>&#160;        {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Position; }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            set { m_Position = value; }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keyword">public</span> Quaternion rotation</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeaa0662d02f0e22e9d243a3829b47e5a">  194</a></span>&#160;        {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Quaternion.Euler(m_EulerAngles); }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            set { m_EulerAngles = value.eulerAngles; }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keyword">public</span> Vector3 eulerAngles</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a4be9f618d2c98303f18f9fe876cf3110">  203</a></span>&#160;        {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_EulerAngles; }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            set { m_EulerAngles = value; }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        [Obsolete(<span class="stringliteral">&quot;applyOffset is deprecated. Use trackOffset instead&quot;</span>, <span class="keyword">true</span>)]</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> applyOffsets</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a70be96dffce37ce4e57cede910e07d57">  216</a></span>&#160;        {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            set {}</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a> trackOffset</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa32145aa4a1e469702ead7789b5c4b68">  228</a></span>&#160;        {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_TrackOffset; }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            set { m_TrackOffset = value; }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">MatchTargetFields</a> matchTargetFields</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac81ca262ae72ec7be4447da185b4c954">  237</a></span>&#160;        {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_MatchTargetFields; }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            set { m_MatchTargetFields = value &amp; <a class="code" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html">MatchTargetFieldConstants</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a531ccf1b9b570aa11c88503538383081">All</a>; }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">public</span> AnimationClip infiniteClip</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">  249</a></span>&#160;        {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClip; }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keyword">internal</span> set { m_InfiniteClip = value; }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">// saved value for converting to/from infinite mode</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">bool</span> infiniteClipRemoveOffset</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClipRemoveOffset; }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            set { m_InfiniteClipRemoveOffset = value; }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keyword">public</span> AvatarMask avatarMask</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa8c0000996d418c0da273bab36ed16c2">  268</a></span>&#160;        {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_AvatarMask; }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            set { m_AvatarMask = value; }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> applyAvatarMask</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ab0f1a5784fae6d7a12b0030403665d8b">  277</a></span>&#160;        {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_ApplyAvatarMask; }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            set { m_ApplyAvatarMask = value; }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="comment">// is this track compilable</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> CanCompileClips()</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">return</span> !muted &amp;&amp; (m_Clips.Count &gt; 0 || (m_InfiniteClip != null &amp;&amp; !m_InfiniteClip.empty));</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> IEnumerable&lt;PlayableBinding&gt; outputs</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#acf8d75c165e37fc02a7cc06f6ab8b7b0">  291</a></span>&#160;        {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keyword">get</span> { yield <span class="keywordflow">return</span> AnimationPlayableBinding.Create(name, <span class="keyword">this</span>); }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> inClipMode</div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">  300</a></span>&#160;        {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> clips != null &amp;&amp; clips.Length != 0; }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keyword">public</span> Vector3 infiniteClipOffsetPosition</div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">  308</a></span>&#160;        {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClipOffsetPosition; }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            set { m_InfiniteClipOffsetPosition = value; }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keyword">public</span> Quaternion infiniteClipOffsetRotation</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a89b5763872cff5d0c665c3e4e5618c63">  317</a></span>&#160;        {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Quaternion.Euler(m_InfiniteClipOffsetEulerAngles); }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            set { m_InfiniteClipOffsetEulerAngles = value.eulerAngles; }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keyword">public</span> Vector3 infiniteClipOffsetEulerAngles</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac05e7162bee5bc6f939065f8b71d9bd3">  326</a></span>&#160;        {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClipOffsetEulerAngles; }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            set { m_InfiniteClipOffsetEulerAngles = value; }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">bool</span> infiniteClipApplyFootIK</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClipApplyFootIK;  }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            set { m_InfiniteClipApplyFootIK = value; }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">double</span> infiniteClipTimeOffset</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClipTimeOffset; }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            set { m_InfiniteClipTimeOffset = value; }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keyword">public</span> TimelineClip.ClipExtrapolation infiniteClipPreExtrapolation</div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a6206942c4435256d269089f0268114dc">  347</a></span>&#160;        {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClipPreExtrapolation; }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            set { m_InfiniteClipPreExtrapolation = value; }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a> infiniteClipPostExtrapolation</div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a43c4611c32dd6e5e012644ae4fbba3f0">  356</a></span>&#160;        {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_InfiniteClipPostExtrapolation; }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            set { m_InfiniteClipPostExtrapolation = value; }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keyword">internal</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834e">LoopMode</a> infiniteClipLoop</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> mInfiniteClipLoop; }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            set { mInfiniteClipLoop = value; }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        [ContextMenu(<span class="stringliteral">&quot;Reset Offsets&quot;</span>)]</div>
+<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a76bf8295223802f24e361eff5a46f072">  371</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a76bf8295223802f24e361eff5a46f072">ResetOffsets</a>()</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            m_Position = Vector3.zero;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            m_EulerAngles = Vector3.zero;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            UpdateClipOffsets();</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aefc9321cfccc75e488a4ea6cc7a8a9ae">  383</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aefc9321cfccc75e488a4ea6cc7a8a9ae">CreateClip</a>(AnimationClip clip)</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordflow">if</span> (clip == null)</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            var newClip = CreateClip&lt;AnimationPlayableAsset&gt;();</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            AssignAnimationClip(newClip, clip);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">return</span> newClip;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ab0cee20b6007ee72fb34310e7fcaf4b0">  414</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ab0cee20b6007ee72fb34310e7fcaf4b0">CreateInfiniteClip</a>(<span class="keywordtype">string</span> infiniteClipName)</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="keywordflow">if</span> (inClipMode)</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                <a class="code" href="namespace_debug.html">Debug</a>.LogWarning(<span class="stringliteral">&quot;CreateInfiniteClip cannot create an infinite clip for an AnimationTrack that contains one or more Timeline Clips.&quot;</span>);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">if</span> (m_InfiniteClip != null)</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            m_InfiniteClip = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">TimelineCreateUtilities</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a26d5ea9930b97e5a37098ff809adc52b">CreateAnimationClipForTrack</a>(<span class="keywordtype">string</span>.IsNullOrEmpty(infiniteClipName) ? k_DefaultInfiniteClipName : infiniteClipName, <span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad32f07442ffee64b07211ee7936ad149">  444</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad32f07442ffee64b07211ee7936ad149">CreateRecordableClip</a>(<span class="keywordtype">string</span> animClipName)</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            var clip = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">TimelineCreateUtilities</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a26d5ea9930b97e5a37098ff809adc52b">CreateAnimationClipForTrack</a>(<span class="keywordtype">string</span>.IsNullOrEmpty(animClipName) ? k_DefaultRecordableClipName : animClipName, <span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            var timelineClip = CreateClip(clip);</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            timelineClip.displayName = animClipName;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            timelineClip.recordable = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            timelineClip.start = 0;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            timelineClip.duration = 1;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;            var apa = timelineClip.asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            <span class="keywordflow">if</span> (apa != null)</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                apa.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#ad7db32c9655bc4bd6fe4c7e4e0e16ead">removeStartOffset</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;            <span class="keywordflow">return</span> timelineClip;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        }</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keyword">internal</span> Vector3 sceneOffsetPosition</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_SceneOffsetPosition; }</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;            set { m_SceneOffsetPosition = value; }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keyword">internal</span> Vector3 sceneOffsetRotation</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        {</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_SceneOffsetRotation; }</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            set { m_SceneOffsetRotation = value; }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">bool</span> hasPreviewComponents</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            {</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                <span class="keywordflow">if</span> (m_HasPreviewComponents)</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                var parentTrack = parent as AnimationTrack;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                <span class="keywordflow">if</span> (parentTrack != null)</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                {</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                    <span class="keywordflow">return</span> parentTrack.hasPreviewComponents;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                }</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;            }</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        }</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;</div>
+<div class="line"><a name="l00496"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a086773479f57629d14b6204084b6a880">  496</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a086773479f57629d14b6204084b6a880">OnCreateClip</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        {</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            var extrapolation = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>.None;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;            <span class="keywordflow">if</span> (!isSubTrack)</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;                extrapolation = <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">ClipExtrapolation</a>.Hold;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;            clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7fa523b5cfd49bce31cadf33695cc644">preExtrapolationMode</a> = extrapolation;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aca2e36aa15f071d4e96640c7cfc1f9ff">postExtrapolationMode</a> = extrapolation;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keyword">protected</span> <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">int</span> CalculateItemsHash()</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keywordflow">return</span> GetAnimationClipHash(m_InfiniteClip).CombineHash(base.CalculateItemsHash());</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        }</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> UpdateClipOffsets()</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        {</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            <span class="keywordflow">if</span> (m_ClipOffset.IsValid())</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;            {</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                m_ClipOffset.SetPosition(position);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                m_ClipOffset.SetRotation(rotation);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;            }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad8e21a8c6d61a3e6c01cb4d7da7d2d4b">  521</a></span>&#160;        Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad8e21a8c6d61a3e6c01cb4d7da7d2d4b">CompileTrackPlayable</a>(PlayableGraph graph, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, GameObject go, <a class="code" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree&lt;RuntimeElement&gt;</a> tree, <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a> mode)</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        {</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            var mixer = AnimationMixerPlayable.Create(graph, track.clips.Length);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; track.clips.Length; i++)</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;            {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                var c = track.clips[i];</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                var asset = c.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as PlayableAsset;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                <span class="keywordflow">if</span> (asset == null)</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                var animationAsset = asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                <span class="keywordflow">if</span> (animationAsset != null)</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                    animationAsset.appliedOffsetMode = mode;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                var source = asset.CreatePlayable(graph, go);</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                <span class="keywordflow">if</span> (source.IsValid())</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                    var clip = <span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html">RuntimeClip</a>(c, source, mixer);</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                    tree.<a class="code" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a12421db591e21123842a8a9b960da0f9">Add</a>(clip);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                    graph.Connect(source, 0, mixer, i);</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                    mixer.SetInputWeight(i, 0.0f);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                }</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;            }</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            <span class="keywordflow">return</span> ApplyTrackOffset(graph, mixer, go, mode);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        }</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
+<div class="line"><a name="l00548"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a76eddfdaab2aa765dbcd052aa6285d79">  548</a></span>&#160;        Playable <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_layerable.html">ILayerable</a>.<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_layerable.html#acf8b4b40e1294ad06091d6d3c766f5d5">CreateLayerMixer</a>(PlayableGraph graph, GameObject go, <span class="keywordtype">int</span> inputCount)</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        {</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;            <span class="keywordflow">return</span> Playable.Null;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> Playable OnCreateClipPlayableGraph(PlayableGraph graph, GameObject go, <a class="code" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree&lt;RuntimeElement&gt;</a> tree)</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        {</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            <span class="keywordflow">if</span> (isSubTrack)</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Nested animation tracks should never be asked to create a graph directly&quot;</span>);</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;            List&lt;AnimationTrack&gt; flattenTracks = <span class="keyword">new</span> List&lt;AnimationTrack&gt;();</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            <span class="keywordflow">if</span> (CanCompileClips())</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                flattenTracks.Add(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            <span class="keywordtype">bool</span> animatesRootTransform = AnimatesRootTransform();</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;            <span class="keywordflow">foreach</span> (var subTrack <span class="keywordflow">in</span> GetChildTracks())</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;            {</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                var child = subTrack as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                <span class="keywordflow">if</span> (child != null &amp;&amp; child.CanCompileClips())</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                {</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                    animatesRootTransform |= child.AnimatesRootTransform();</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                    flattenTracks.Add(child);</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                }</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;            }</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            <span class="comment">// figure out which mode to apply</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a> mode = GetOffsetMode(go, animatesRootTransform);</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            var layerMixer = CreateGroupMixer(graph, go, flattenTracks.Count);</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; flattenTracks.Count; c++)</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            {</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                var compiledTrackPlayable = flattenTracks[c].inClipMode ?</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                    CompileTrackPlayable(graph, flattenTracks[c], go, tree, mode) :</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                    flattenTracks[c].CreateInfiniteTrackPlayable(graph, go, tree, mode);</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                graph.Connect(compiledTrackPlayable, 0, layerMixer, c);</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                layerMixer.SetInputWeight(c, flattenTracks[c].inClipMode ? 0 : 1);</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                <span class="keywordflow">if</span> (flattenTracks[c].applyAvatarMask &amp;&amp; flattenTracks[c].avatarMask != null)</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                {</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                    layerMixer.SetLayerMaskFromAvatarMask((uint)c, flattenTracks[c].avatarMask);</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                }</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            }</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;            <span class="keywordtype">bool</span> requiresMotionXPlayable = RequiresMotionXPlayable(mode, go);</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;            Playable mixer = layerMixer;</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            mixer = CreateDefaultBlend(graph, go, mixer, requiresMotionXPlayable);</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            <span class="comment">// motionX playable not required in scene offset mode, or root transform mode</span></div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            <span class="keywordflow">if</span> (requiresMotionXPlayable)</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            {</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                <span class="comment">// If we are animating a root transform, add the motionX to delta playable as the root node</span></div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                var motionXToDelta = AnimationMotionXToDeltaPlayable.Create(graph);</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                graph.Connect(mixer, 0, motionXToDelta, 0);</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                motionXToDelta.SetInputWeight(0, 1.0f);</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                motionXToDelta.SetAbsoluteMotion(UsesAbsoluteMotion(mode));</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                mixer = (Playable)motionXToDelta;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;            }</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            <span class="keywordflow">if</span> (!Application.isPlaying)</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            {</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                var animator = GetBinding(go != null ? go.GetComponent&lt;PlayableDirector&gt;() : null);</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                <span class="keywordflow">if</span> (animator != null)</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                {</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                    <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> targetGO = animator.gameObject;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;                    IAnimationWindowPreview[] previewComponents = targetGO.GetComponents&lt;IAnimationWindowPreview&gt;();</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                    m_HasPreviewComponents = previewComponents.Length &gt; 0;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                    <span class="keywordflow">if</span> (m_HasPreviewComponents)</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                    {</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                        <span class="keywordflow">foreach</span> (var component <span class="keywordflow">in</span> previewComponents)</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                        {</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;                            mixer = component.BuildPreviewGraph(graph, mixer);</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                        }</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                    }</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                }</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            }</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            <span class="keywordflow">return</span> mixer;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="comment">// Creates a layer mixer containing default blends</span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        <span class="comment">// the base layer is a default clip of all driven properties</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <span class="comment">// the next layer is optionally the desired default pose (in the case of humanoid, the tpose</span></div>
+<div class="line"><a name="l00634"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a39ecf146b562f92f2ce5e12b008283ec">  634</a></span>&#160;        <span class="keyword">private</span> Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a39ecf146b562f92f2ce5e12b008283ec">CreateDefaultBlend</a>(PlayableGraph graph, GameObject go, Playable mixer, <span class="keywordtype">bool</span> requireOffset)</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        {</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="preprocessor">#if  UNITY_EDITOR</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;            <span class="keywordflow">if</span> (Application.isPlaying)</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                <span class="keywordflow">return</span> mixer;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            <span class="keywordtype">int</span> inputs = 1 + ((m_CachedPropertiesClip != null) ? 1 : 0) + ((m_DefaultPoseClip != null) ? 1 : 0);</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;            <span class="keywordflow">if</span> (inputs == 1)</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                <span class="keywordflow">return</span> mixer;</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;            var defaultPoseMixer = AnimationLayerMixerPlayable.Create(graph, inputs);</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;            <span class="keywordtype">int</span> mixerInput = 0;</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="keywordflow">if</span> (m_CachedPropertiesClip)</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            {</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                var cachedPropertiesClip = AnimationClipPlayable.Create(graph, m_CachedPropertiesClip);</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                cachedPropertiesClip.SetApplyFootIK(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                var defaults = (Playable) cachedPropertiesClip;</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                <span class="keywordflow">if</span> (requireOffset)</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                    defaults = AttachOffsetPlayable(graph, defaults, m_SceneOffsetPosition, Quaternion.Euler(m_SceneOffsetRotation));</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                graph.Connect(defaults, 0, defaultPoseMixer, mixerInput);</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                defaultPoseMixer.SetInputWeight(mixerInput, 1.0f);</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;                mixerInput++;</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;            }</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;            <span class="keywordflow">if</span> (m_DefaultPoseClip)</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;            {</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                var defaultPose = AnimationClipPlayable.Create(graph, m_DefaultPoseClip);</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                defaultPose.SetApplyFootIK(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                var blendDefault = (Playable) defaultPose;</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                <span class="keywordflow">if</span> (requireOffset)</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                    blendDefault = AttachOffsetPlayable(graph, blendDefault, m_SceneOffsetPosition, Quaternion.Euler(m_SceneOffsetRotation));</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;                graph.Connect(blendDefault, 0, defaultPoseMixer, mixerInput);</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;                defaultPoseMixer.SetInputWeight(mixerInput, 1.0f);</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;                mixerInput++;</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;            }</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            graph.Connect(mixer, 0, defaultPoseMixer, mixerInput);</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;            defaultPoseMixer.SetInputWeight(mixerInput, 1.0f);</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            <span class="keywordflow">return</span> defaultPoseMixer;</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;            <span class="keywordflow">return</span> mixer;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        }</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;</div>
+<div class="line"><a name="l00682"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a81d00505a46e4484be2573efc7d1a1b2">  682</a></span>&#160;        <span class="keyword">private</span> Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a81d00505a46e4484be2573efc7d1a1b2">AttachOffsetPlayable</a>(PlayableGraph graph, Playable playable, Vector3 pos, Quaternion rot)</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        {</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;            var offsetPlayable = AnimationOffsetPlayable.Create(graph, pos, rot, 1);</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;            offsetPlayable.SetInputWeight(0, 1.0f);</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;            graph.Connect(playable, 0, offsetPlayable, 0);</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;            <span class="keywordflow">return</span> offsetPlayable;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        }</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> k_DefaultHumanoidClipPath = <span class="stringliteral">&quot;Packages/com.unity.timeline/Editor/StyleSheets/res/HumanoidDefault.anim&quot;</span>;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> AnimationClip s_DefaultHumanoidClip = null;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        AnimationClip GetDefaultHumanoidClip()</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        {</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <span class="keywordflow">if</span> (s_DefaultHumanoidClip == null)</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            {</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                s_DefaultHumanoidClip = EditorGUIUtility.LoadRequired(k_DefaultHumanoidClipPath) as AnimationClip;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;                <span class="keywordflow">if</span> (s_DefaultHumanoidClip == null)</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;                    <a class="code" href="namespace_debug.html">Debug</a>.LogError(<span class="stringliteral">&quot;Could not load default humanoid animation clip for Timeline&quot;</span>);</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;            }</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            <span class="keywordflow">return</span> s_DefaultHumanoidClip;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        }</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;</div>
+<div class="line"><a name="l00708"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a97b2fccca67f080631f7f4b8150a33d0">  708</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a97b2fccca67f080631f7f4b8150a33d0">RequiresMotionXPlayable</a>(<a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a> mode, GameObject gameObject)</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        {</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.NoRootTransform)</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffsetLegacy)</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            {</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                var animator = GetBinding(gameObject != null ? gameObject.GetComponent&lt;PlayableDirector&gt;() : null);</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;                <span class="keywordflow">return</span> animator != null &amp;&amp; animator.hasRootMotion;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            }</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        }</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;</div>
+<div class="line"><a name="l00720"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a6efe3b0b62c8419b6c10d3c1591f5eda">  720</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a6efe3b0b62c8419b6c10d3c1591f5eda">UsesAbsoluteMotion</a>(<a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a> mode)</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        {</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;            <span class="comment">// in editor, previewing is always done in absolute motion</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            <span class="keywordflow">if</span> (!Application.isPlaying)</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;            <span class="keywordflow">return</span> mode != <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffset &amp;&amp;</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                mode != <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffsetLegacy;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        }</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
+<div class="line"><a name="l00731"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a956f08a5bf7a1c8d687087612a62c657">  731</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a956f08a5bf7a1c8d687087612a62c657">HasController</a>(GameObject gameObject)</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            var animator = GetBinding(gameObject != null ? gameObject.GetComponent&lt;PlayableDirector&gt;() : null);</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;            <span class="keywordflow">return</span> animator != null &amp;&amp; animator.runtimeAnimatorController != null;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        }</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="keyword">internal</span> Animator GetBinding(PlayableDirector director)</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        {</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;            <span class="keywordflow">if</span> (director == null)</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;                <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object key = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            <span class="keywordflow">if</span> (isSubTrack)</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                key = parent;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;            <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object binding = null;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;            <span class="keywordflow">if</span> (director != null)</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                binding = director.GetGenericBinding(key);</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            Animator animator = null;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;            <span class="keywordflow">if</span> (binding != null) <span class="comment">// the binding can be an animator or game object</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;            {</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                animator = binding as Animator;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                var gameObject = binding as GameObject;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                <span class="keywordflow">if</span> (animator == null &amp;&amp; gameObject != null)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                    animator = gameObject.GetComponent&lt;Animator&gt;();</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;            }</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            <span class="keywordflow">return</span> animator;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;        }</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;</div>
+<div class="line"><a name="l00763"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeef2fc717c2c52ea13d883b58a0c921b">  763</a></span>&#160;        <span class="keyword">static</span> AnimationLayerMixerPlayable <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeef2fc717c2c52ea13d883b58a0c921b">CreateGroupMixer</a>(PlayableGraph graph, GameObject go, <span class="keywordtype">int</span> inputCount)</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        {</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;            <span class="keywordflow">return</span> AnimationLayerMixerPlayable.Create(graph, inputCount);</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        }</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;</div>
+<div class="line"><a name="l00768"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a604e7c258952966e5bcb6dcae31a026d">  768</a></span>&#160;        Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a604e7c258952966e5bcb6dcae31a026d">CreateInfiniteTrackPlayable</a>(PlayableGraph graph, GameObject go, <a class="code" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree&lt;RuntimeElement&gt;</a> tree, <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a> mode)</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        {</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;            <span class="keywordflow">if</span> (m_InfiniteClip == null)</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                <span class="keywordflow">return</span> Playable.Null;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            var mixer = AnimationMixerPlayable.Create(graph, 1);</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            <span class="comment">// In infinite mode, we always force the loop mode of the clip off because the clip keys are offset in infinite mode</span></div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;            <span class="comment">//  which causes loop to behave different.</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;            <span class="comment">// The inline curve editor never shows loops in infinite mode.</span></div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;            var playable = <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8a5b07dd9ee2448159dbf70462633384">CreatePlayable</a>(graph, m_InfiniteClip, m_InfiniteClipOffsetPosition, m_InfiniteClipOffsetEulerAngles, <span class="keyword">false</span>, mode, infiniteClipApplyFootIK, <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834e">LoopMode</a>.Off);</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;            <span class="keywordflow">if</span> (playable.IsValid())</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;            {</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                tree.<a class="code" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a12421db591e21123842a8a9b960da0f9">Add</a>(<span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html">InfiniteRuntimeClip</a>(playable));</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                graph.Connect(playable, 0, mixer, 0);</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                mixer.SetInputWeight(0, 1.0f);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            }</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;            <span class="keywordflow">return</span> ApplyTrackOffset(graph, mixer, go, mode);</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        }</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;</div>
+<div class="line"><a name="l00789"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ab8f939ab0640c44dfacd03f44d802443">  789</a></span>&#160;        Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ab8f939ab0640c44dfacd03f44d802443">ApplyTrackOffset</a>(PlayableGraph graph, Playable root, GameObject go, <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a> mode)</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        {</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            m_ClipOffset = AnimationOffsetPlayable.Null;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            <span class="comment">// offsets don&#39;t apply in scene offset, or if there is no root transform (globally or on this track)</span></div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffsetLegacy ||</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                mode == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffset     ||</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                mode == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.NoRootTransform ||</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                !AnimatesRootTransform()</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            )</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                <span class="keywordflow">return</span> root;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;            var pos = position;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;            var rot = rotation;</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;            <span class="comment">// in the editor use the preview position to playback from if available</span></div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffsetEditor)</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            {</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;                pos = m_SceneOffsetPosition;</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                rot = Quaternion.Euler(m_SceneOffsetRotation);</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            }</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            var offsetPlayable = AnimationOffsetPlayable.Create(graph, pos, rot, 1);</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            m_ClipOffset = offsetPlayable;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;            graph.Connect(root, 0, offsetPlayable, 0);</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            offsetPlayable.SetInputWeight(0, 1);</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            <span class="keywordflow">return</span> offsetPlayable;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        }</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        <span class="comment">// the evaluation time is large so that the properties always get evaluated</span></div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">void</span> GetEvaluationTime(out <span class="keywordtype">double</span> outStart, out <span class="keywordtype">double</span> outDuration)</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;        {</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;            <span class="keywordflow">if</span> (inClipMode)</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            {</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;                base.GetEvaluationTime(out outStart, out outDuration);</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;            }</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            {</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                outStart = 0;</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                outDuration = TimelineClip.kMaxTimeValue;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;            }</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        }</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keyword">internal</span> <span class="keyword">override</span> <span class="keywordtype">void</span> GetSequenceTime(out <span class="keywordtype">double</span> outStart, out <span class="keywordtype">double</span> outDuration)</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        {</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            <span class="keywordflow">if</span> (inClipMode)</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            {</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;                base.GetSequenceTime(out outStart, out outDuration);</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            }</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            {</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                outStart = 0;</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;                outDuration = Math.Max(GetNotificationDuration(), TimeUtility.GetAnimationClipLength(m_InfiniteClip));</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            }</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        }</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;</div>
+<div class="line"><a name="l00853"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a2d9b4e5233b462910ce1b6c235128716">  853</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a2d9b4e5233b462910ce1b6c235128716">AssignAnimationClip</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, AnimationClip animClip)</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        {</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;            <span class="keywordflow">if</span> (clip == null || animClip == null)</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            <span class="keywordflow">if</span> (animClip.legacy)</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;Legacy Animation Clips are not supported&quot;</span>);</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a> asset = clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            <span class="keywordflow">if</span> (asset != null)</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;            {</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8db52ada6e34ac04e62c415b0ec6deba">clip</a> = animClip;</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;                asset.name = animClip.name;</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;                var duration = asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aee549ced94599ed4ba926943601590dc">duration</a>;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;                <span class="keywordflow">if</span> (!<span class="keywordtype">double</span>.IsInfinity(duration) &amp;&amp; duration &gt;= <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.kMinDuration &amp;&amp; duration &lt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.kMaxTimeValue)</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                    clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9438ddf54af828cacfc0f16fcc87e7ce">duration</a> = duration;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;            }</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;            clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2868e2d17cc2c3cb3ae3afad8f8712d8">displayName</a> = animClip.name;</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        }</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;</div>
+<div class="line"><a name="l00878"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#af5d148f0deb6794f31b1079582446c09">  878</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#af5d148f0deb6794f31b1079582446c09">GatherProperties</a>(PlayableDirector director, <a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html">IPropertyCollector</a> driver)</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        {</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            m_SceneOffsetPosition = Vector3.zero;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;            m_SceneOffsetRotation = Vector3.zero;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;            var animator = GetBinding(director);</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            <span class="keywordflow">if</span> (animator == null)</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;            var animClips = <span class="keyword">new</span> List&lt;AnimationClip&gt;(this.clips.Length + 2);</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;            GetAnimationClips(animClips);</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            var hasHumanMotion = animClips.Exists(clip =&gt; clip.humanMotion);</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;            m_SceneOffsetPosition = animator.transform.localPosition;</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;            m_SceneOffsetRotation = animator.transform.localEulerAngles;</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            <span class="comment">// Create default pose clip from collected properties</span></div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;            <span class="keywordflow">if</span> (hasHumanMotion)</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;                animClips.Add(GetDefaultHumanoidClip());</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;            var bindings = AnimationPreviewUtilities.GetBindings(animator.gameObject, animClips);</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;            m_CachedPropertiesClip = AnimationPreviewUtilities.CreateDefaultClip(animator.gameObject, bindings);</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;            AnimationPreviewUtilities.PreviewFromCurves(animator.gameObject, bindings); <span class="comment">// faster to preview from curves then an animation clip</span></div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;            m_DefaultPoseClip = hasHumanMotion ? GetDefaultHumanoidClip() : null;</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        }</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;</div>
+<div class="line"><a name="l00912"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a43b619f039860b20dd39a970e6814b20">  912</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a43b619f039860b20dd39a970e6814b20">GetAnimationClips</a>(List&lt;AnimationClip&gt; animClips)</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        {</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;            <span class="keywordflow">foreach</span> (var c <span class="keywordflow">in</span> clips)</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;            {</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;                var a = c.asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;                <span class="keywordflow">if</span> (a != null &amp;&amp; a.clip != null)</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;                    animClips.Add(a.clip);</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;            }</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;            <span class="keywordflow">if</span> (m_InfiniteClip != null)</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;                animClips.Add(m_InfiniteClip);</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;            <span class="keywordflow">foreach</span> (var childTrack <span class="keywordflow">in</span> GetChildTracks())</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;            {</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;                var animChildTrack = childTrack as AnimationTrack;</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;                <span class="keywordflow">if</span> (animChildTrack != null)</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;                    animChildTrack.GetAnimationClips(animClips);</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;            }</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        }</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="comment">// calculate which offset mode to apply</span></div>
+<div class="line"><a name="l00933"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad890e11c6250f42c5682d9b281eed708">  933</a></span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad890e11c6250f42c5682d9b281eed708">GetOffsetMode</a>(GameObject go, <span class="keywordtype">bool</span> animatesRootTransform)</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        {</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;            <span class="keywordflow">if</span> (!animatesRootTransform)</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.NoRootTransform;</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;            <span class="keywordflow">if</span> (m_TrackOffset == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplyTransformOffsets)</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.TransformOffset;</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;            <span class="keywordflow">if</span> (m_TrackOffset == <a class="code" href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">TrackOffset</a>.ApplySceneOffsets)</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                <span class="keywordflow">return</span> (Application.isPlaying) ? <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffset : <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffsetEditor;</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;            <span class="keywordflow">if</span> (HasController(go))</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;            {</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                <span class="keywordflow">if</span> (!Application.isPlaying)</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffsetLegacyEditor;</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.SceneOffsetLegacy;</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;            }</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">AppliedOffsetMode</a>.TransformOffsetLegacy;</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        }</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">bool</span> AnimatesRootTransform()</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;        {</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;            <span class="comment">// infinite mode</span></div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>.HasRootTransforms(m_InfiniteClip))</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;            <span class="comment">// clip mode</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;            <span class="keywordflow">foreach</span> (var c <span class="keywordflow">in</span> GetClips())</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;            {</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;                var apa = c.asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;                <span class="keywordflow">if</span> (apa != null &amp;&amp; apa.hasRootTransforms)</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;            }</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;        }</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    }</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;}</div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3a2a6da1e09c3a2e3fff78e22c417c2ddc"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a2a6da1e09c3a2e3fff78e22c417c2ddc">UnityEngine.Timeline.SceneOffset</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_ad421deff44f1eab281f5f2a41665e2b2a8b0e4369558d10325622cad511bfa721"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a8b0e4369558d10325622cad511bfa721">UnityEngine.Timeline.PositionZ</a></div><div class="ttdoc">Translation Z value </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ad32f07442ffee64b07211ee7936ad149"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad32f07442ffee64b07211ee7936ad149">UnityEngine.Timeline.AnimationTrack.CreateRecordableClip</a></div><div class="ttdeci">TimelineClip CreateRecordableClip(string animClipName)</div><div class="ttdoc">Creates a TimelineClip, AnimationPlayableAsset and an AnimationClip. Use this clip to record in a tim...</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00444">AnimationTrack.cs:444</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3a4a6b484b456ffb984ef9e43f2613b126"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a4a6b484b456ffb984ef9e43f2613b126">UnityEngine.Timeline.NoRootTransform</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_a8a5b07dd9ee2448159dbf70462633384"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8a5b07dd9ee2448159dbf70462633384">UnityEngine.Timeline.AnimationPlayableAsset.CreatePlayable</a></div><div class="ttdeci">override Playable CreatePlayable(PlayableGraph graph, GameObject go)</div><div class="ttdoc">Creates the root of a Playable subgraph to play the animation clip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00208">AnimationPlayableAsset.cs:208</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a086773479f57629d14b6204084b6a880"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a086773479f57629d14b6204084b6a880">UnityEngine.Timeline.AnimationTrack.OnCreateClip</a></div><div class="ttdeci">override void OnCreateClip(TimelineClip clip)</div><div class="ttdoc">Used to initialize default values on a newly created clip </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00496">AnimationTrack.cs:496</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3a32c37f244a7e7575e9e92e92e59b0751"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a32c37f244a7e7575e9e92e92e59b0751">UnityEngine.Timeline.SceneOffsetLegacy</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_interval_tree_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_interval_tree_8cs_source.html#l00021">IntervalTree.cs:21</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ae23cbe75f510dedd932550304a6d1a79"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae23cbe75f510dedd932550304a6d1a79">UnityEngine.Timeline.AnimationTrack.m_InfiniteClipTimeOffset</a></div><div class="ttdeci">double m_InfiniteClipTimeOffset</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00142">AnimationTrack.cs:142</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_ad421deff44f1eab281f5f2a41665e2b2a14dcec09ce1f4dfaac5955bc70825ebc"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a14dcec09ce1f4dfaac5955bc70825ebc">UnityEngine.Timeline.RotationX</a></div><div class="ttdoc">Rotation Euler Angle X value </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">UnityEngine.Timeline.AnimationPlayableAsset</a></div><div class="ttdoc">A Playable Asset that represents a single AnimationClip clip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00011">AnimationPlayableAsset.cs:11</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_ad421deff44f1eab281f5f2a41665e2b2a03cf6e1d32a9fcfa922a3008d3cd3571"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a03cf6e1d32a9fcfa922a3008d3cd3571">UnityEngine.Timeline.PositionX</a></div><div class="ttdoc">Translation X value </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2c0e553887357327987faff3f3b06dac"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">UnityEngine.Timeline.TimelineClip.asset</a></div><div class="ttdeci">Object asset</div><div class="ttdoc">The PlayableAsset attached to the clip. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00275">TimelineClip.cs:275</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ab8f939ab0640c44dfacd03f44d802443"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ab8f939ab0640c44dfacd03f44d802443">UnityEngine.Timeline.AnimationTrack.ApplyTrackOffset</a></div><div class="ttdeci">Playable ApplyTrackOffset(PlayableGraph graph, Playable root, GameObject go, AppliedOffsetMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00789">AnimationTrack.cs:789</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_layerable_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_layerable.html">UnityEngine.Timeline.ILayerable</a></div><div class="ttdoc">Implement this interface on a TrackAsset derived class to support layers </div><div class="ttdef"><b>Definition:</b> <a href="_i_layerable_8cs_source.html#l00009">ILayerable.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a6efe3b0b62c8419b6c10d3c1591f5eda"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a6efe3b0b62c8419b6c10d3c1591f5eda">UnityEngine.Timeline.AnimationTrack.UsesAbsoluteMotion</a></div><div class="ttdeci">static bool UsesAbsoluteMotion(AppliedOffsetMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00720">AnimationTrack.cs:720</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_match_target_field_constants_html_a501a58e442ae069b97f8a15c53fe3605"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a501a58e442ae069b97f8a15c53fe3605">UnityEngine.Timeline.MatchTargetFieldConstants.HasAny</a></div><div class="ttdeci">static bool HasAny(this MatchTargetFields me, MatchTargetFields fields)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00105">AnimationTrack.cs:105</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a81d00505a46e4484be2573efc7d1a1b2"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a81d00505a46e4484be2573efc7d1a1b2">UnityEngine.Timeline.AnimationTrack.AttachOffsetPlayable</a></div><div class="ttdeci">Playable AttachOffsetPlayable(PlayableGraph graph, Playable playable, Vector3 pos, Quaternion rot)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00682">AnimationTrack.cs:682</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ad890e11c6250f42c5682d9b281eed708"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad890e11c6250f42c5682d9b281eed708">UnityEngine.Timeline.AnimationTrack.GetOffsetMode</a></div><div class="ttdeci">AppliedOffsetMode GetOffsetMode(GameObject go, bool animatesRootTransform)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00933">AnimationTrack.cs:933</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html">UnityEngine.Timeline.AnimationTrack</a></div><div class="ttdoc">A Timeline track used for playing back animations on an Animator. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00124">AnimationTrack.cs:124</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3">UnityEngine.Timeline.AppliedOffsetMode</a></div><div class="ttdeci">AppliedOffsetMode</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00078">AnimationTrack.cs:78</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_interval_tree_html_a12421db591e21123842a8a9b960da0f9"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a12421db591e21123842a8a9b960da0f9">UnityEngine.Timeline.IntervalTree.Add</a></div><div class="ttdeci">void Add(T item)</div><div class="ttdoc">Add an IInterval to the tree </div><div class="ttdef"><b>Definition:</b> <a href="_interval_tree_8cs_source.html#l00045">IntervalTree.cs:45</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_match_target_field_constants_html_a8e78bc13cfa3462b2b900d4117b6595c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a8e78bc13cfa3462b2b900d4117b6595c">UnityEngine.Timeline.MatchTargetFieldConstants.Toggle</a></div><div class="ttdeci">static MatchTargetFields Toggle(this MatchTargetFields me, MatchTargetFields flag)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00110">AnimationTrack.cs:110</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html">UnityEngine.Timeline.InfiniteRuntimeClip</a></div><div class="ttdoc">Runtime clip customized for &#39;infinite&#39; tracks playables. Used for clips whose time needs to match the...</div><div class="ttdef"><b>Definition:</b> <a href="_infinite_runtime_clip_8cs_source.html#l00010">InfiniteRuntimeClip.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3a66021d701c495e1d6b8935fc6a517c39"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a66021d701c495e1d6b8935fc6a517c39">UnityEngine.Timeline.TransformOffsetLegacy</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_ad421deff44f1eab281f5f2a41665e2b2a7527ced5a5153f3b21e31c4b177c2ea7"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a7527ced5a5153f3b21e31c4b177c2ea7">UnityEngine.Timeline.RotationY</a></div><div class="ttdoc">Rotation Euler Angle Y value </div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3a20f94391871d73cf5369bd910110408d"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3a20f94391871d73cf5369bd910110408d">UnityEngine.Timeline.SceneOffsetEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a956f08a5bf7a1c8d687087612a62c657"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a956f08a5bf7a1c8d687087612a62c657">UnityEngine.Timeline.AnimationTrack.HasController</a></div><div class="ttdeci">bool HasController(GameObject gameObject)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00731">AnimationTrack.cs:731</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ad8e21a8c6d61a3e6c01cb4d7da7d2d4b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ad8e21a8c6d61a3e6c01cb4d7da7d2d4b">UnityEngine.Timeline.AnimationTrack.CompileTrackPlayable</a></div><div class="ttdeci">Playable CompileTrackPlayable(PlayableGraph graph, TrackAsset track, GameObject go, IntervalTree&lt; RuntimeElement &gt; tree, AppliedOffsetMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00521">AnimationTrack.cs:521</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_ad421deff44f1eab281f5f2a41665e2b2"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2">UnityEngine.Timeline.MatchTargetFields</a></div><div class="ttdeci">MatchTargetFields</div><div class="ttdoc">Flags specifying which offset fields to match </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00018">AnimationTrack.cs:18</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a39ecf146b562f92f2ce5e12b008283ec"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a39ecf146b562f92f2ce5e12b008283ec">UnityEngine.Timeline.AnimationTrack.CreateDefaultBlend</a></div><div class="ttdeci">Playable CreateDefaultBlend(PlayableGraph graph, GameObject go, Playable mixer, bool requireOffset)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00634">AnimationTrack.cs:634</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html">UnityEngine.Timeline.TimelineCreateUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_create_utilities_8cs_source.html#l00009">TimelineCreateUtilities.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">UnityEditor.Timeline.GameObject</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a2d9b4e5233b462910ce1b6c235128716"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a2d9b4e5233b462910ce1b6c235128716">UnityEngine.Timeline.AnimationTrack.AssignAnimationClip</a></div><div class="ttdeci">void AssignAnimationClip(TimelineClip clip, AnimationClip animClip)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00853">AnimationTrack.cs:853</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_aee549ced94599ed4ba926943601590dc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aee549ced94599ed4ba926943601590dc">UnityEngine.Timeline.AnimationPlayableAsset.duration</a></div><div class="ttdeci">override double duration</div><div class="ttdoc">Returns the duration required to play the animation clip exactly once </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00184">AnimationPlayableAsset.cs:184</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a9438ddf54af828cacfc0f16fcc87e7ce"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9438ddf54af828cacfc0f16fcc87e7ce">UnityEngine.Timeline.TimelineClip.duration</a></div><div class="ttdeci">double duration</div><div class="ttdoc">The length, in seconds, of the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00191">TimelineClip.cs:191</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aeef2fc717c2c52ea13d883b58a0c921b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aeef2fc717c2c52ea13d883b58a0c921b">UnityEngine.Timeline.AnimationTrack.CreateGroupMixer</a></div><div class="ttdeci">static AnimationLayerMixerPlayable CreateGroupMixer(PlayableGraph graph, GameObject go, int inputCount)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00763">AnimationTrack.cs:763</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a604e7c258952966e5bcb6dcae31a026d"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a604e7c258952966e5bcb6dcae31a026d">UnityEngine.Timeline.AnimationTrack.CreateInfiniteTrackPlayable</a></div><div class="ttdeci">Playable CreateInfiniteTrackPlayable(PlayableGraph graph, GameObject go, IntervalTree&lt; RuntimeElement &gt; tree, AppliedOffsetMode mode)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00768">AnimationTrack.cs:768</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a7b9155ea6faa7fbeccc09dea7a347417"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417">UnityEngine.Timeline.TrackOffset</a></div><div class="ttdeci">TrackOffset</div><div class="ttdoc">Describes what is used to set the starting position and orientation of each Animation Track...</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00053">AnimationTrack.cs:53</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2868e2d17cc2c3cb3ae3afad8f8712d8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2868e2d17cc2c3cb3ae3afad8f8712d8">UnityEngine.Timeline.TimelineClip.displayName</a></div><div class="ttdeci">string displayName</div><div class="ttdoc">The name displayed on the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00225">TimelineClip.cs:225</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a0164af2979061d0820f75edddf9df0e8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a0164af2979061d0820f75edddf9df0e8">UnityEngine.Timeline.AnimationTrack.m_InfiniteClipRemoveOffset</a></div><div class="ttdeci">bool m_InfiniteClipRemoveOffset</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00145">AnimationTrack.cs:145</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_ad421deff44f1eab281f5f2a41665e2b2ae967cae1a9d601b4335123e013328d34"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2ae967cae1a9d601b4335123e013328d34">UnityEngine.Timeline.RotationZ</a></div><div class="ttdoc">Rotation Euler Angle Z value </div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_property_collector_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html">UnityEngine.Timeline.IPropertyCollector</a></div><div class="ttdoc">Interface used to inform the Timeline Editor about potential property modifications that may occur wh...</div><div class="ttdef"><b>Definition:</b> <a href="_i_property_collector_8cs_source.html#l00008">IPropertyCollector.cs:8</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_a8db52ada6e34ac04e62c415b0ec6deba"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8db52ada6e34ac04e62c415b0ec6deba">UnityEngine.Timeline.AnimationPlayableAsset.clip</a></div><div class="ttdeci">AnimationClip clip</div><div class="ttdoc">The source animation clip </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00170">AnimationPlayableAsset.cs:170</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a7b9155ea6faa7fbeccc09dea7a347417a3fcc2ef4c3955af6de82dbf66f988af8"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417a3fcc2ef4c3955af6de82dbf66f988af8">UnityEngine.Timeline.ApplyTransformOffsets</a></div><div class="ttdoc">Use this setting to offset each Animation Track based on a set position and orientation. </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_match_target_field_constants_html_a531ccf1b9b570aa11c88503538383081"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html#a531ccf1b9b570aa11c88503538383081">UnityEngine.Timeline.MatchTargetFieldConstants.All</a></div><div class="ttdeci">static MatchTargetFields All</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00093">AnimationTrack.cs:93</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_aa01707fe3f113b2e01fc742ee390834e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834e">UnityEngine.Timeline.AnimationPlayableAsset.LoopMode</a></div><div class="ttdeci">LoopMode</div><div class="ttdoc">Whether the source AnimationClip loops during playback. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00016">AnimationPlayableAsset.cs:16</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_ad421deff44f1eab281f5f2a41665e2b2a2d23f44b7dcf04a2f6aa724532350e48"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#ad421deff44f1eab281f5f2a41665e2b2a2d23f44b7dcf04a2f6aa724532350e48">UnityEngine.Timeline.PositionY</a></div><div class="ttdoc">Translation Y value </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_af5d148f0deb6794f31b1079582446c09"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#af5d148f0deb6794f31b1079582446c09">UnityEngine.Timeline.AnimationTrack.GatherProperties</a></div><div class="ttdeci">override void GatherProperties(PlayableDirector director, IPropertyCollector driver)</div><div class="ttdoc">Called by the Timeline Editor to gather properties requiring preview. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00878">AnimationTrack.cs:878</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3ae57518ba3813ed4ce1b0310a59eebef7"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3ae57518ba3813ed4ce1b0310a59eebef7">UnityEngine.Timeline.SceneOffsetLegacyEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a76bf8295223802f24e361eff5a46f072"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a76bf8295223802f24e361eff5a46f072">UnityEngine.Timeline.AnimationTrack.ResetOffsets</a></div><div class="ttdeci">void ResetOffsets()</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00371">AnimationTrack.cs:371</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_layerable_html_acf8b4b40e1294ad06091d6d3c766f5d5"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_layerable.html#acf8b4b40e1294ad06091d6d3c766f5d5">UnityEngine.Timeline.ILayerable.CreateLayerMixer</a></div><div class="ttdeci">Playable CreateLayerMixer(PlayableGraph graph, GameObject go, int inputCount)</div><div class="ttdoc">Creates a mixer that blends track mixers. </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_runtime_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html">UnityEngine.Timeline.RuntimeClip</a></div><div class="ttdef"><b>Definition:</b> <a href="_runtime_clip_8cs_source.html#l00009">RuntimeClip.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a54ae9314c0572ffde0c52930cd7fa7a7"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">UnityEngine.Timeline.TimelineClip.ClipExtrapolation</a></div><div class="ttdeci">ClipExtrapolation</div><div class="ttdoc">How the clip handles time outside its start and end range. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00055">TimelineClip.cs:55</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a58ea9485f7bd3af5cfad59cd90805d3b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a58ea9485f7bd3af5cfad59cd90805d3b">UnityEngine.Timeline.AnimationTrack.m_InfiniteClip</a></div><div class="ttdeci">AnimationClip m_InfiniteClip</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00166">AnimationTrack.cs:166</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_match_target_field_constants_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_match_target_field_constants.html">UnityEngine.Timeline.MatchTargetFieldConstants</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00091">AnimationTrack.cs:91</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aefc9321cfccc75e488a4ea6cc7a8a9ae"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aefc9321cfccc75e488a4ea6cc7a8a9ae">UnityEngine.Timeline.AnimationTrack.CreateClip</a></div><div class="ttdeci">TimelineClip CreateClip(AnimationClip clip)</div><div class="ttdoc">Creates a TimelineClip on this track that uses an AnimationClip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00383">AnimationTrack.cs:383</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a7b9155ea6faa7fbeccc09dea7a347417aa358044b7d82a40d11e487dc01e4a455"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417aa358044b7d82a40d11e487dc01e4a455">UnityEngine.Timeline.ApplySceneOffsets</a></div><div class="ttdoc">Use this setting to offset each Animation Track based on the current position and orientation in the ...</div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a7b9155ea6faa7fbeccc09dea7a347417a06b9281e396db002010bde1de57262eb"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a7b9155ea6faa7fbeccc09dea7a347417a06b9281e396db002010bde1de57262eb">UnityEngine.Timeline.Auto</a></div><div class="ttdoc">Use this setting to offset root transforms based on the state of the animator. </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_ad7db32c9655bc4bd6fe4c7e4e0e16ead"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#ad7db32c9655bc4bd6fe4c7e4e0e16ead">UnityEngine.Timeline.AnimationPlayableAsset.removeStartOffset</a></div><div class="ttdeci">bool removeStartOffset</div><div class="ttdoc">Whether to make the animation clip play relative to its first keyframe. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00132">AnimationPlayableAsset.cs:132</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a43b619f039860b20dd39a970e6814b20"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a43b619f039860b20dd39a970e6814b20">UnityEngine.Timeline.AnimationTrack.GetAnimationClips</a></div><div class="ttdeci">void GetAnimationClips(List&lt; AnimationClip &gt; animClips)</div><div class="ttdoc">Gather all the animation clips for this track </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00912">AnimationTrack.cs:912</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a7fa523b5cfd49bce31cadf33695cc644"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7fa523b5cfd49bce31cadf33695cc644">UnityEngine.Timeline.TimelineClip.preExtrapolationMode</a></div><div class="ttdeci">ClipExtrapolation preExtrapolationMode</div><div class="ttdoc">Returns whether the clip is being extrapolated before the start time. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00637">TimelineClip.cs:637</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_aca2e36aa15f071d4e96640c7cfc1f9ff"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aca2e36aa15f071d4e96640c7cfc1f9ff">UnityEngine.Timeline.TimelineClip.postExtrapolationMode</a></div><div class="ttdeci">ClipExtrapolation postExtrapolationMode</div><div class="ttdoc">Returns whether the clip is being extrapolated past the end time. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00628">TimelineClip.cs:628</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities_html_a26d5ea9930b97e5a37098ff809adc52b"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a26d5ea9930b97e5a37098ff809adc52b">UnityEngine.Timeline.TimelineCreateUtilities.CreateAnimationClipForTrack</a></div><div class="ttdeci">static AnimationClip CreateAnimationClipForTrack(string name, TrackAsset track, bool isLegacy)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_create_utilities_8cs_source.html#l00069">TimelineCreateUtilities.cs:69</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a09ad65f00b4c59e1709cdd7fb90a3540"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a09ad65f00b4c59e1709cdd7fb90a3540">UnityEngine.Timeline.AnimationTrack.m_AvatarMask</a></div><div class="ttdeci">AvatarMask m_AvatarMask</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00161">AnimationTrack.cs:161</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a97b2fccca67f080631f7f4b8150a33d0"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a97b2fccca67f080631f7f4b8150a33d0">UnityEngine.Timeline.AnimationTrack.RequiresMotionXPlayable</a></div><div class="ttdeci">bool RequiresMotionXPlayable(AppliedOffsetMode mode, GameObject gameObject)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00708">AnimationTrack.cs:708</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ab0cee20b6007ee72fb34310e7fcaf4b0"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ab0cee20b6007ee72fb34310e7fcaf4b0">UnityEngine.Timeline.AnimationTrack.CreateInfiniteClip</a></div><div class="ttdeci">void CreateInfiniteClip(string infiniteClipName)</div><div class="ttdoc">Creates an AnimationClip that stores the data for an infinite track. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00414">AnimationTrack.cs:414</a></div></div>
+<div class="ttc" id="_team_8cs_html_ab91b34ae619fcdfcba4522b4f335bf83"><div class="ttname"><a href="_team_8cs.html#ab91b34ae619fcdfcba4522b4f335bf83">Position</a></div><div class="ttdeci">Position</div><div class="ttdoc">球员位置枚举 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00019">Team.cs:19</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a5ce54b742b096f4cffe98acf3d280db3ac7d615c69a04e692b7c58639978b5493"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a5ce54b742b096f4cffe98acf3d280db3ac7d615c69a04e692b7c58639978b5493">UnityEngine.Timeline.TransformOffset</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

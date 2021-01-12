@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Window/ViewModel/TimelineAssetViewModel.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_08b42967959711a942dabf507b118564.html">Window</a></li><li class="navelem"><a class="el" href="dir_b1b9d06f0d12ecf2d351a9a9664f1375.html">ViewModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineAssetViewModel.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_asset_view_model_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.IMGUI.Controls;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_timeline_asset_view_model_8cs.html#a324f8dae84ead9019a250b472ca1b436">    6</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_object.html">UnityObject</a> = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a> : ISerializationCallbackReceiver</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a017bdcfee3cba849dd2f26c7df24616b">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> readonly <span class="keywordtype">float</span> DefaultinlineAnimationCurveHeight = 100.0f;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a614c794770dea3338ad2e3932cb2a2ec">   15</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> collapsed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a4d6db5d5c4f5a01a3694f2eddb3cf9e8">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> showMarkers = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#aa904247301257e18f15d15e29aad48f2">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> showInlineCurves = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#afac3e770474f30468d2a6353676be9d7">   19</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> inlineAnimationCurveHeight = DefaultinlineAnimationCurveHeight;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a60daaa6e4322ea47c2f04cb5e9e380af">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> lastInlineCurveDataID = -1;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a62906d58e677fc50dff138feefab6b9c">   21</a></span>&#160;        <span class="keyword">public</span> TreeViewState inlineCurvesState = null;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#af77926cce26538e2346993a02dfd9061">   22</a></span>&#160;        <span class="keyword">public</span> Rect inlineCurvesShownAreaInsideMargins = <span class="keyword">new</span> Rect(1, 1, 1, 1);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#abf87108f8a960564a48cecf5bbed3cd6">   24</a></span>&#160;        <span class="keyword">public</span> Dictionary&lt;int, long&gt; markerTimeStamps = <span class="keyword">new</span> Dictionary&lt;int, long&gt;();</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a3aaa3833a3e552f1393b4725ef601156">   25</a></span>&#160;        [SerializeField] List&lt;int&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a3aaa3833a3e552f1393b4725ef601156">m_MarkerTimeStampsKeys</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#af4b0b27dc6b586af7cf70e2c7c1cc07a">   26</a></span>&#160;        [SerializeField] List&lt;long&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#af4b0b27dc6b586af7cf70e2c7c1cc07a">m_MarkerTimeStampsValues</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a387fcf78911f551311c71c218b502a56">   28</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a387fcf78911f551311c71c218b502a56">OnBeforeSerialize</a>()</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (markerTimeStamps == null)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            m_MarkerTimeStampsKeys = <span class="keyword">new</span> List&lt;int&gt;(markerTimeStamps.Count);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            m_MarkerTimeStampsValues = <span class="keyword">new</span> List&lt;long&gt;(markerTimeStamps.Count);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">foreach</span> (var kvp <span class="keywordflow">in</span> markerTimeStamps)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                m_MarkerTimeStampsKeys.Add(kvp.Key);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                m_MarkerTimeStampsValues.Add(kvp.Value);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a74f7bad9b74504183c1d9c1b6a220c2f">   43</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a74f7bad9b74504183c1d9c1b6a220c2f">OnAfterDeserialize</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            markerTimeStamps = <span class="keyword">new</span> Dictionary&lt;int, long&gt;();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (m_MarkerTimeStampsKeys == null || m_MarkerTimeStampsValues == null ||</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                m_MarkerTimeStampsKeys.Count != m_MarkerTimeStampsValues.Count)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_MarkerTimeStampsKeys.Count; ++i)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                markerTimeStamps.Add(m_MarkerTimeStampsKeys[i], m_MarkerTimeStampsValues[i]);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">   57</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a> : ScriptableObject, ISerializationCallbackReceiver</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a61f2d8e00547a62d0f9b05bcd15ec2b0">   59</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">float</span> DefaultTrackScale = 1.0f;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ac7b3fcf1cf76ecb23b69693967eb9580">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">float</span> DefaultVerticalScroll = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2d44213cf9d3aa59f24d365d3205bea3">   62</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> readonly Vector2 TimeAreaDefaultRange = <span class="keyword">new</span> Vector2(-<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html">WindowConstants</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a46824a60cb2f9fd4223a6e738b1b3d14">timeAreaShownRangePadding</a>, 5.0f); <span class="comment">// in seconds. Hack: using negative value to force the UI to have a left margin at 0.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aa9d493d2b94e8620a0e48526f035c88f">   63</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> readonly Vector2 NoPlayRangeSet = <span class="keyword">new</span> Vector2(<span class="keywordtype">float</span>.MaxValue, <span class="keywordtype">float</span>.MaxValue);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a5d16bf988831456f5842ecf18499a60a">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> timeInFrames = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ad3b467dd605600c8df2af3be0a1926ef">   66</a></span>&#160;        <span class="keyword">public</span> Vector2 timeAreaShownRange = TimeAreaDefaultRange;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2684c209ec40a5c89df7c42bca28c0cc">   67</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> showAudioWaveform = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#af4aa4ac02546e52dc58cfe3f18479d49">   68</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> trackScale = DefaultTrackScale;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ab14a17bd2bf67feacc43fff0457ce5b6">   69</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ab14a17bd2bf67feacc43fff0457ce5b6">playRangeEnabled</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a37173f96de2db4013c7926b63794743d">   70</a></span>&#160;        <span class="keyword">public</span> Vector2 timeAreaPlayRange = NoPlayRangeSet;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a96ab8726a49fe2b5f1bd357ec3ab9152">   71</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a96ab8726a49fe2b5f1bd357ec3ab9152">windowTime</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a1e736b70e57c3916767d69d3d1bc79aa">   72</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> verticalScroll = DefaultVerticalScroll;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a02d2a50afeaa9b66eb2fc0716d694804">   73</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a02d2a50afeaa9b66eb2fc0716d694804">showMarkerHeader</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a41a2f3942df83995e8a680953722fe21">   75</a></span>&#160;        <span class="keyword">public</span> Dictionary&lt;TrackAsset, TrackViewModelData&gt; tracksViewModelData = <span class="keyword">new</span> Dictionary&lt;TrackAsset, TrackViewModelData&gt;();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// Used only for serialization of the dictionary</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ab83ab48d7b5c02f843418277660238d1">   78</a></span>&#160;        [SerializeField] List&lt;TrackAsset&gt; m_Keys = <span class="keyword">new</span> List&lt;TrackAsset&gt;();</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aec34cdf8078f5cff6eeb82e0d7637b28">   79</a></span>&#160;        [SerializeField] List&lt;TrackViewModelData&gt; m_Vals = <span class="keyword">new</span> List&lt;TrackViewModelData&gt;();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ae65e351cc82bc57bfc59c9798badc57a">   81</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ae65e351cc82bc57bfc59c9798badc57a">OnBeforeSerialize</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            m_Keys.Clear();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            m_Vals.Clear();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">foreach</span> (var data <span class="keywordflow">in</span> tracksViewModelData)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="comment">// Assets that don&#39;t save, will create nulls when deserializeds</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">if</span> (data.Key != null &amp;&amp; data.Value != null &amp;&amp; (data.Key.hideFlags &amp; HideFlags.DontSave) == 0)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    m_Keys.Add(data.Key);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    m_Vals.Add(data.Value);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a22d98291a098df9ba1482612a84bdc61">   96</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a22d98291a098df9ba1482612a84bdc61">OnAfterDeserialize</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a64f16eab058d53959482ac7a483581df">  100</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a64f16eab058d53959482ac7a483581df">OnEnable</a>()</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (m_Keys.Count == m_Vals.Count)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                tracksViewModelData.Clear();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_Keys.Count; i++)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <span class="keywordflow">if</span> (m_Keys[i] != null) <span class="comment">// if the asset is overwritten the tracks can be null</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        tracksViewModelData[m_Keys[i]] = m_Vals[i];</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            m_Keys.Clear();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            m_Vals.Clear();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html_a46824a60cb2f9fd4223a6e738b1b3d14"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a46824a60cb2f9fd4223a6e738b1b3d14">UnityEditor.Timeline.WindowConstants.timeAreaShownRangePadding</a></div><div class="ttdeci">const float timeAreaShownRangePadding</div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00008">WindowConstants.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html_ae65e351cc82bc57bfc59c9798badc57a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ae65e351cc82bc57bfc59c9798badc57a">UnityEditor.Timeline.TimelineAssetViewModel.OnBeforeSerialize</a></div><div class="ttdeci">void OnBeforeSerialize()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00081">TimelineAssetViewModel.cs:81</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html_a96ab8726a49fe2b5f1bd357ec3ab9152"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a96ab8726a49fe2b5f1bd357ec3ab9152">UnityEditor.Timeline.TimelineAssetViewModel.windowTime</a></div><div class="ttdeci">double windowTime</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00071">TimelineAssetViewModel.cs:71</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html">UnityEditor.Timeline.WindowConstants</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00003">WindowConstants.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_view_model_data_html_a387fcf78911f551311c71c218b502a56"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a387fcf78911f551311c71c218b502a56">UnityEditor.Timeline.TrackViewModelData.OnBeforeSerialize</a></div><div class="ttdeci">void OnBeforeSerialize()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00028">TimelineAssetViewModel.cs:28</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_view_model_data_html_a74f7bad9b74504183c1d9c1b6a220c2f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a74f7bad9b74504183c1d9c1b6a220c2f">UnityEditor.Timeline.TrackViewModelData.OnAfterDeserialize</a></div><div class="ttdeci">void OnAfterDeserialize()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00043">TimelineAssetViewModel.cs:43</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_view_model_data_html_af4b0b27dc6b586af7cf70e2c7c1cc07a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#af4b0b27dc6b586af7cf70e2c7c1cc07a">UnityEditor.Timeline.TrackViewModelData.m_MarkerTimeStampsValues</a></div><div class="ttdeci">List&lt; long &gt; m_MarkerTimeStampsValues</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00026">TimelineAssetViewModel.cs:26</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html_a02d2a50afeaa9b66eb2fc0716d694804"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a02d2a50afeaa9b66eb2fc0716d694804">UnityEditor.Timeline.TimelineAssetViewModel.showMarkerHeader</a></div><div class="ttdeci">bool showMarkerHeader</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00073">TimelineAssetViewModel.cs:73</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_view_model_data_html_a3aaa3833a3e552f1393b4725ef601156"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a3aaa3833a3e552f1393b4725ef601156">UnityEditor.Timeline.TrackViewModelData.m_MarkerTimeStampsKeys</a></div><div class="ttdeci">List&lt; int &gt; m_MarkerTimeStampsKeys</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00025">TimelineAssetViewModel.cs:25</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html_a64f16eab058d53959482ac7a483581df"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a64f16eab058d53959482ac7a483581df">UnityEditor.Timeline.TimelineAssetViewModel.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00100">TimelineAssetViewModel.cs:100</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">UnityEditor.Timeline.TimelineAssetViewModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00057">TimelineAssetViewModel.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html_a22d98291a098df9ba1482612a84bdc61"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a22d98291a098df9ba1482612a84bdc61">UnityEditor.Timeline.TimelineAssetViewModel.OnAfterDeserialize</a></div><div class="ttdeci">void OnAfterDeserialize()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00096">TimelineAssetViewModel.cs:96</a></div></div>
+<div class="ttc" id="namespace_unity_object_html"><div class="ttname"><a href="namespace_unity_object.html">UnityObject</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html_ab14a17bd2bf67feacc43fff0457ce5b6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ab14a17bd2bf67feacc43fff0457ce5b6">UnityEditor.Timeline.TimelineAssetViewModel.playRangeEnabled</a></div><div class="ttdeci">bool playRangeEnabled</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00069">TimelineAssetViewModel.cs:69</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_view_model_data_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">UnityEditor.Timeline.TrackViewModelData</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00011">TimelineAssetViewModel.cs:11</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

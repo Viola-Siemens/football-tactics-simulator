@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/UnitTesting/RiderTestRunner.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_32686730bbc6d3167bfde4cfe0a50c15.html">com.unity.ide.rider@1.1.4</a></li><li class="navelem"><a class="el" href="dir_758adcb6e05a214d4705ebd2d4e574e8.html">Rider</a></li><li class="navelem"><a class="el" href="dir_0a30d460110a22d34d2a947efc5146a0.html">Editor</a></li><li class="navelem"><a class="el" href="dir_9395dfaa115fbc6bc35ddc928328db48.html">UnitTesting</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RiderTestRunner.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_rider_test_runner_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_jet_brains.html">JetBrains</a>.Annotations;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#if TEST_FRAMEWORK</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools.html">TestTools</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner.html">TestRunner</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html">Api</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_packages.html">Packages</a>.Rider.Editor.UnitTesting</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner.html">RiderTestRunner</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#if TEST_FRAMEWORK</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> readonly TestsCallback Callback = ScriptableObject.CreateInstance&lt;TestsCallback&gt;();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    [UsedImplicitly]</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner.html#aca0ad1142343b80192425edad38822a5">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner.html#aca0ad1142343b80192425edad38822a5">RunTests</a>(<span class="keywordtype">int</span> testMode, <span class="keywordtype">string</span>[] assemblyNames, <span class="keywordtype">string</span>[] testNames, <span class="keywordtype">string</span>[] categoryNames, <span class="keywordtype">string</span>[] groupNames, <span class="keywordtype">int</span>? buildTarget)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#if !TEST_FRAMEWORK</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <a class="code" href="namespace_debug.html">Debug</a>.LogError(<span class="stringliteral">&quot;Update Test Framework package to v.1.1.1+ to run tests from Rider.&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_callback_data.html">CallbackData</a>.instance.<a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_callback_data.html#a2a10108f898035bd7072ef182de1be56">isRider</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      var api = ScriptableObject.CreateInstance&lt;TestRunnerApi&gt;();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      var settings = <span class="keyword">new</span> ExecutionSettings();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      var filter = <span class="keyword">new</span> Filter</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        assemblyNames = assemblyNames,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        testNames = testNames,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        categoryNames = categoryNames,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        groupNames = groupNames,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        targetPlatform = (BuildTarget?) buildTarget</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keywordflow">if</span> (testMode &gt; 0) <span class="comment">// for future use - test-framework would allow running both Edit and Play test at once</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        filter.testMode = (<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a>) testMode;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      settings.filters = <span class="keyword">new</span> []{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        filter</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      api.Execute(settings);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      api.UnregisterCallbacks(Callback); <span class="comment">// avoid multiple registrations</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      api.RegisterCallbacks(Callback); <span class="comment">// This can be used to receive information about when the test suite and individual tests starts and stops. Provide this with a scriptable object implementing ICallbacks</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_html"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html">UnityEditor.TestTools.TestRunner.Api</a></div><div class="ttdef"><b>Definition:</b> <a href="_callbacks_delegator_8cs_source.html#l00009">CallbacksDelegator.cs:9</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_html"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools.html">UnityEditor.TestTools</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner.html">Packages.Rider.Editor.UnitTesting.RiderTestRunner</a></div><div class="ttdef"><b>Definition:</b> <a href="_rider_test_runner_8cs_source.html#l00010">RiderTestRunner.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_html_af169988e2317e7edb0f1b09d920412e9"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">UnityEditor.TestTools.TestRunner.Api.TestMode</a></div><div class="ttdeci">TestMode</div><div class="ttdef"><b>Definition:</b> <a href="_test_mode_8cs_source.html#l00006">TestMode.cs:6</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner_html_aca0ad1142343b80192425edad38822a5"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_rider_test_runner.html#aca0ad1142343b80192425edad38822a5">Packages.Rider.Editor.UnitTesting.RiderTestRunner.RunTests</a></div><div class="ttdeci">static void RunTests(int testMode, string[] assemblyNames, string[] testNames, string[] categoryNames, string[] groupNames, int?buildTarget)</div><div class="ttdef"><b>Definition:</b> <a href="_rider_test_runner_8cs_source.html#l00016">RiderTestRunner.cs:16</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_callback_data_html_a2a10108f898035bd7072ef182de1be56"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_callback_data.html#a2a10108f898035bd7072ef182de1be56">Packages.Rider.Editor.UnitTesting.CallbackData.isRider</a></div><div class="ttdeci">bool isRider</div><div class="ttdef"><b>Definition:</b> <a href="_callback_data_8cs_source.html#l00010">CallbackData.cs:10</a></div></div>
+<div class="ttc" id="namespace_jet_brains_html"><div class="ttname"><a href="namespace_jet_brains.html">JetBrains</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="namespace_packages_html"><div class="ttname"><a href="namespace_packages.html">Packages</a></div></div>
+<div class="ttc" id="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_callback_data_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_callback_data.html">Packages.Rider.Editor.UnitTesting.CallbackData</a></div><div class="ttdef"><b>Definition:</b> <a href="_callback_data_8cs_source.html#l00008">CallbackData.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_html"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner.html">UnityEditor.TestTools.TestRunner</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/TMP_SettingsEditor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_SettingsEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___settings_editor_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor_internal.html">UnityEditorInternal</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma warning disable 0414 // Disabled a few warnings for not yet implemented features.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a>.EditorUtilities</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [CustomEditor(typeof(TMP_Settings))]</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html">TMP_SettingsEditor</a> : Editor</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">internal</span> <span class="keyword">class </span>Styles</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent defaultFontAssetLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Default Font Asset&quot;</span>, <span class="stringliteral">&quot;The Font Asset that will be assigned by default to newly created text objects when no Font Asset is specified.&quot;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent defaultFontAssetPathLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Path:        Resources/&quot;</span>, <span class="stringliteral">&quot;The relative path to a Resources folder where the Font Assets and Material Presets are located.\nExample \&quot;Fonts &amp; Materials/\&quot;&quot;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent fallbackFontAssetsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Fallback Font Assets&quot;</span>, <span class="stringliteral">&quot;The Font Assets that will be searched to locate and replace missing characters from a given Font Asset.&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent fallbackFontAssetsListLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Fallback Font Assets List&quot;</span>, <span class="stringliteral">&quot;The Font Assets that will be searched to locate and replace missing characters from a given Font Asset.&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent fallbackMaterialSettingsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Fallback Material Settings&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent matchMaterialPresetLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Match Material Presets&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent containerDefaultSettingsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Text Container Default Settings&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent textMeshProLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;TextMeshPro&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent textMeshProUiLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;TextMeshPro UI&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent enableRaycastTarget = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Enable Raycast Target&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent autoSizeContainerLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Auto Size Text Container&quot;</span>, <span class="stringliteral">&quot;Set the size of the text container to match the text.&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent textComponentDefaultSettingsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Text Component Default Settings&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent defaultFontSize = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Default Font Size&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent autoSizeRatioLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Text Auto Size Ratios&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent minLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Min&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent maxLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Max&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent wordWrappingLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Word Wrapping&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent kerningLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Kerning&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent extraPaddingLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Extra Padding&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent tintAllSpritesLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Tint All Sprites&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent parseEscapeCharactersLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Parse Escape Sequence&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent dynamicFontSystemSettingsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Dynamic Font System Settings&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent getFontFeaturesAtRuntime = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Get Font Features at Runtime&quot;</span>, <span class="stringliteral">&quot;Determines if Glyph Adjustment Data will be retrieved from font files at runtime when new characters and glyphs are added to font assets.&quot;</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent missingGlyphLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Replacement Character&quot;</span>, <span class="stringliteral">&quot;The character to be displayed when the requested character is not found in any font asset or fallbacks.&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent disableWarningsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Disable warnings&quot;</span>, <span class="stringliteral">&quot;Disable warning messages in the Console.&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent defaultSpriteAssetLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Default Sprite Asset&quot;</span>, <span class="stringliteral">&quot;The Sprite Asset that will be assigned by default when using the &lt;sprite&gt; tag when no Sprite Asset is specified.&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent enableEmojiSupportLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;iOS Emoji Support&quot;</span>, <span class="stringliteral">&quot;Enables Emoji support for Touch Screen Keyboards on target devices.&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent spriteAssetsPathLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Path:        Resources/&quot;</span>, <span class="stringliteral">&quot;The relative path to a Resources folder where the Sprite Assets are located.\nExample \&quot;Sprite Assets/\&quot;&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent defaultStyleSheetLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Default Style Sheet&quot;</span>, <span class="stringliteral">&quot;The Style Sheet that will be used for all text objects in this project.&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent colorGradientPresetsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Color Gradient Presets&quot;</span>, <span class="stringliteral">&quot;The relative path to a Resources folder where the Color Gradient Presets are located.\nExample \&quot;Color Gradient Presets/\&quot;&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent colorGradientsPathLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Path:        Resources/&quot;</span>, <span class="stringliteral">&quot;The relative path to a Resources folder where the Color Gradient Presets are located.\nExample \&quot;Color Gradient Presets/\&quot;&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent lineBreakingLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Line Breaking for Asian languages&quot;</span>, <span class="stringliteral">&quot;The text assets that contain the Leading and Following characters which define the rules for line breaking with Asian languages.&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a106cd2b149c3c8bbb145884d593cfa5b">   61</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a106cd2b149c3c8bbb145884d593cfa5b">m_PropFontAsset</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad99b3b10e708248b73c12b3b87828e2e">   62</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad99b3b10e708248b73c12b3b87828e2e">m_PropDefaultFontAssetPath</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ae67684b82cda52ab75c9dda3fb497f3e">   63</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ae67684b82cda52ab75c9dda3fb497f3e">m_PropDefaultFontSize</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a9d62cc2a01542c5e0af797cf510e540a">   64</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a9d62cc2a01542c5e0af797cf510e540a">m_PropDefaultAutoSizeMinRatio</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a8300569f0be64a9edc8614a6eb8f44a8">   65</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a8300569f0be64a9edc8614a6eb8f44a8">m_PropDefaultAutoSizeMaxRatio</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#af4933a3a5452f5b7db89b31fd52561b8">   66</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#af4933a3a5452f5b7db89b31fd52561b8">m_PropDefaultTextMeshProTextContainerSize</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a54f720a21136af63acbcf8b6d161e561">   67</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a54f720a21136af63acbcf8b6d161e561">m_PropDefaultTextMeshProUITextContainerSize</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa83718727656b6937b8a2b4078eb60bd">   68</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa83718727656b6937b8a2b4078eb60bd">m_PropAutoSizeTextContainer</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ab38093e40ec4e7ff2556ffe1f605ccf9">   69</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ab38093e40ec4e7ff2556ffe1f605ccf9">m_PropEnableRaycastTarget</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a07684d634f63dc91000d0ad55553f8a0">   71</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a07684d634f63dc91000d0ad55553f8a0">m_PropSpriteAsset</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a9d4821efa0c281d688e200b62a5e17cd">   72</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a9d4821efa0c281d688e200b62a5e17cd">m_PropSpriteAssetPath</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa43da709137c8200723875d098cbfaa0">   73</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa43da709137c8200723875d098cbfaa0">m_PropEnableEmojiSupport</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3cd2075819c31fcbcd07107bddc6b227">   74</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3cd2075819c31fcbcd07107bddc6b227">m_PropStyleSheet</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a827da68c2e75c40bfe739765a4da812d">   75</a></span>&#160;        ReorderableList <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a827da68c2e75c40bfe739765a4da812d">m_List</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad527c5867e1eac6b29ef20d405c680ce">   77</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad527c5867e1eac6b29ef20d405c680ce">m_PropColorGradientPresetsPath</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a68b35b0631c1a9b334a399ab0cc51ac8">   79</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a68b35b0631c1a9b334a399ab0cc51ac8">m_PropMatchMaterialPreset</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3e3f0f817ef1bcd86cddb1d2224eecc1">   80</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3e3f0f817ef1bcd86cddb1d2224eecc1">m_PropWordWrapping</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a7072665c774b47868c8988652e549b44">   81</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a7072665c774b47868c8988652e549b44">m_PropKerning</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a7717a7baf3b12e4e6045f49d8686b9b1">   82</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a7717a7baf3b12e4e6045f49d8686b9b1">m_PropExtraPadding</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a8724f4cb1a7727836ff8b8ff54877fed">   83</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a8724f4cb1a7727836ff8b8ff54877fed">m_PropTintAllSprites</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad39baf155b4598e227ff32c83ccd907e">   84</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad39baf155b4598e227ff32c83ccd907e">m_PropParseEscapeCharacters</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3253b4b201503205671d5ed0741325aa">   85</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3253b4b201503205671d5ed0741325aa">m_PropMissingGlyphCharacter</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a635b39aa921d9be5d5f8cf302fcdf4f1">   87</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a635b39aa921d9be5d5f8cf302fcdf4f1">m_GetFontFeaturesAtRuntime</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a42e9fe1f22fd22775433b5e59db67506">   89</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a42e9fe1f22fd22775433b5e59db67506">m_PropWarningsDisabled</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a61c886479f4e7de3cc3207c5b671a8d0">   91</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a61c886479f4e7de3cc3207c5b671a8d0">m_PropLeadingCharacters</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ae9e76d719c3dadba59bc67e1c205643e">   92</a></span>&#160;        SerializedProperty <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ae9e76d719c3dadba59bc67e1c205643e">m_PropFollowingCharacters</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa1e2d9326a325078d8bd7ad9cc186078">   94</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa1e2d9326a325078d8bd7ad9cc186078">OnEnable</a>()</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">if</span> (target == null)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            m_PropFontAsset = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultFontAsset&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            m_PropDefaultFontAssetPath = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultFontAssetPath&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            m_PropDefaultFontSize = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultFontSize&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            m_PropDefaultAutoSizeMinRatio = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultAutoSizeMinRatio&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            m_PropDefaultAutoSizeMaxRatio = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultAutoSizeMaxRatio&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            m_PropDefaultTextMeshProTextContainerSize = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultTextMeshProTextContainerSize&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            m_PropDefaultTextMeshProUITextContainerSize = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultTextMeshProUITextContainerSize&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            m_PropAutoSizeTextContainer = serializedObject.FindProperty(<span class="stringliteral">&quot;m_autoSizeTextContainer&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            m_PropEnableRaycastTarget = serializedObject.FindProperty(<span class="stringliteral">&quot;m_EnableRaycastTarget&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            m_PropSpriteAsset = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultSpriteAsset&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            m_PropSpriteAssetPath = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultSpriteAssetPath&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            m_PropEnableEmojiSupport = serializedObject.FindProperty(<span class="stringliteral">&quot;m_enableEmojiSupport&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            m_PropStyleSheet = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultStyleSheet&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            m_PropColorGradientPresetsPath = serializedObject.FindProperty(<span class="stringliteral">&quot;m_defaultColorGradientPresetsPath&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            m_List = <span class="keyword">new</span> ReorderableList(serializedObject, serializedObject.FindProperty(<span class="stringliteral">&quot;m_fallbackFontAssets&quot;</span>), <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            m_List.drawElementCallback = (rect, index, isActive, isFocused) =&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                var element = m_List.serializedProperty.GetArrayElementAtIndex(index);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                rect.y += 2;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                EditorGUI.PropertyField(<span class="keyword">new</span> Rect(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight), element, GUIContent.none);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            };</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            m_List.drawHeaderCallback = rect =&gt;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                EditorGUI.LabelField(rect, Styles.fallbackFontAssetsListLabel);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            };</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            m_PropMatchMaterialPreset = serializedObject.FindProperty(<span class="stringliteral">&quot;m_matchMaterialPreset&quot;</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            m_PropWordWrapping = serializedObject.FindProperty(<span class="stringliteral">&quot;m_enableWordWrapping&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            m_PropKerning = serializedObject.FindProperty(<span class="stringliteral">&quot;m_enableKerning&quot;</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            m_PropExtraPadding = serializedObject.FindProperty(<span class="stringliteral">&quot;m_enableExtraPadding&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            m_PropTintAllSprites = serializedObject.FindProperty(<span class="stringliteral">&quot;m_enableTintAllSprites&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            m_PropParseEscapeCharacters = serializedObject.FindProperty(<span class="stringliteral">&quot;m_enableParseEscapeCharacters&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            m_PropMissingGlyphCharacter = serializedObject.FindProperty(<span class="stringliteral">&quot;m_missingGlyphCharacter&quot;</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            m_PropWarningsDisabled = serializedObject.FindProperty(<span class="stringliteral">&quot;m_warningsDisabled&quot;</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            m_GetFontFeaturesAtRuntime = serializedObject.FindProperty(<span class="stringliteral">&quot;m_GetFontFeaturesAtRuntime&quot;</span>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            m_PropLeadingCharacters = serializedObject.FindProperty(<span class="stringliteral">&quot;m_leadingCharacters&quot;</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            m_PropFollowingCharacters = serializedObject.FindProperty(<span class="stringliteral">&quot;m_followingCharacters&quot;</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a11891e45e7299c16ee2cf20b420d09b1">  146</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a11891e45e7299c16ee2cf20b420d09b1">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            serializedObject.Update();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordtype">float</span> labelWidth = EditorGUIUtility.labelWidth;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordtype">float</span> fieldWidth = EditorGUIUtility.fieldWidth;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// TextMeshPro Font Info Panel</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">// FONT ASSET</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            GUILayout.Label(Styles.defaultFontAssetLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            EditorGUILayout.PropertyField(m_PropFontAsset, Styles.defaultFontAssetLabel);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            EditorGUILayout.PropertyField(m_PropDefaultFontAssetPath, Styles.defaultFontAssetPathLabel);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">// FALLBACK FONT ASSETs</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            GUILayout.Label(Styles.fallbackFontAssetsLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            m_List.DoLayoutList();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            GUILayout.Label(Styles.fallbackMaterialSettingsLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            EditorGUILayout.PropertyField(m_PropMatchMaterialPreset, Styles.matchMaterialPresetLabel);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="comment">// MISSING GLYPHS</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            GUILayout.Label(Styles.dynamicFontSystemSettingsLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            EditorGUILayout.PropertyField(m_GetFontFeaturesAtRuntime, Styles.getFontFeaturesAtRuntime);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            EditorGUILayout.PropertyField(m_PropMissingGlyphCharacter, Styles.missingGlyphLabel);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            EditorGUILayout.PropertyField(m_PropWarningsDisabled, Styles.disableWarningsLabel);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="comment">// TEXT OBJECT DEFAULT PROPERTIES</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            GUILayout.Label(Styles.containerDefaultSettingsLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            EditorGUILayout.PropertyField(m_PropDefaultTextMeshProTextContainerSize, Styles.textMeshProLabel);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            EditorGUILayout.PropertyField(m_PropDefaultTextMeshProUITextContainerSize, Styles.textMeshProUiLabel);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            EditorGUILayout.PropertyField(m_PropEnableRaycastTarget, Styles.enableRaycastTarget);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            EditorGUILayout.PropertyField(m_PropAutoSizeTextContainer, Styles.autoSizeContainerLabel);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            GUILayout.Label(Styles.textComponentDefaultSettingsLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            EditorGUILayout.PropertyField(m_PropDefaultFontSize, Styles.defaultFontSize);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            EditorGUILayout.BeginHorizontal();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                EditorGUILayout.PrefixLabel(Styles.autoSizeRatioLabel);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                EditorGUIUtility.labelWidth = 32;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                EditorGUIUtility.fieldWidth = 10;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                EditorGUILayout.PropertyField(m_PropDefaultAutoSizeMinRatio, Styles.minLabel);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                EditorGUILayout.PropertyField(m_PropDefaultAutoSizeMaxRatio, Styles.maxLabel);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            EditorGUILayout.EndHorizontal();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            EditorGUIUtility.labelWidth = labelWidth;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            EditorGUIUtility.fieldWidth = fieldWidth;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            EditorGUILayout.PropertyField(m_PropWordWrapping, Styles.wordWrappingLabel);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            EditorGUILayout.PropertyField(m_PropKerning, Styles.kerningLabel);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            EditorGUILayout.PropertyField(m_PropExtraPadding, Styles.extraPaddingLabel);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            EditorGUILayout.PropertyField(m_PropTintAllSprites, Styles.tintAllSpritesLabel);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            EditorGUILayout.PropertyField(m_PropParseEscapeCharacters, Styles.parseEscapeCharactersLabel);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="comment">// SPRITE ASSET</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            GUILayout.Label(Styles.defaultSpriteAssetLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            EditorGUILayout.PropertyField(m_PropSpriteAsset, Styles.defaultSpriteAssetLabel);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            EditorGUILayout.PropertyField(m_PropEnableEmojiSupport, Styles.enableEmojiSupportLabel);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            EditorGUILayout.PropertyField(m_PropSpriteAssetPath, Styles.spriteAssetsPathLabel);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="comment">// STYLE SHEET</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            GUILayout.Label(Styles.defaultStyleSheetLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            EditorGUILayout.PropertyField(m_PropStyleSheet, Styles.defaultStyleSheetLabel);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___style_sheet.html">TMP_StyleSheet</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___style_sheet.html#a4bab3ca47934d537b41ae066eabac404">UpdateStyleSheet</a>();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="comment">// COLOR GRADIENT PRESETS</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            GUILayout.Label(Styles.colorGradientPresetsLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            EditorGUILayout.PropertyField(m_PropColorGradientPresetsPath, Styles.colorGradientsPathLabel);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="comment">// LINE BREAKING RULE</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            EditorGUILayout.BeginVertical(EditorStyles.helpBox);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            GUILayout.Label(Styles.lineBreakingLabel, EditorStyles.boldLabel);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            EditorGUI.indentLevel = 1;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            EditorGUILayout.PropertyField(m_PropLeadingCharacters);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            EditorGUILayout.PropertyField(m_PropFollowingCharacters);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            EditorGUI.indentLevel = 0;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            EditorGUILayout.EndVertical();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">if</span> (serializedObject.ApplyModifiedProperties())</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                EditorUtility.SetDirty(target);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_pro___event_manager.html">TMPro_EventManager</a>.<a class="code" href="class_t_m_pro_1_1_t_m_pro___event_manager.html#a133e91349eb697033cec3353e958481e">ON_TMP_SETTINGS_CHANGED</a>();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#if UNITY_2018_3_OR_NEWER</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keyword">class </span>TMP_ResourceImporterProvider : SettingsProvider</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        TMP_PackageResourceImporter m_ResourceImporter;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keyword">public</span> TMP_ResourceImporterProvider()</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            : base(<span class="stringliteral">&quot;Project/TextMesh Pro&quot;</span>, SettingsScope.Project)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnGUI(<span class="keywordtype">string</span> searchContext)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="comment">// Lazy creation that supports domain reload</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">if</span> (m_ResourceImporter == null)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                m_ResourceImporter = <span class="keyword">new</span> TMP_PackageResourceImporter();</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            m_ResourceImporter.OnGUI();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnDeactivate()</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> (m_ResourceImporter != null)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                m_ResourceImporter.OnDestroy();</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object GetTMPSettings()</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">return</span> Resources.Load&lt;TMP_Settings&gt;(<span class="stringliteral">&quot;TMP Settings&quot;</span>);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        [SettingsProviderGroup]</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keyword">static</span> SettingsProvider[] CreateTMPSettingsProvider()</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            var providers = <span class="keyword">new</span> List&lt;SettingsProvider&gt; { <span class="keyword">new</span> TMP_ResourceImporterProvider() };</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordflow">if</span> (GetTMPSettings() != null)</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                var provider = <span class="keyword">new</span> AssetSettingsProvider(<span class="stringliteral">&quot;Project/TextMesh Pro/Settings&quot;</span>, GetTMPSettings);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                provider.PopulateSearchKeywordsFromGUIContentProperties&lt;TMP_SettingsEditor.Styles&gt;();</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                providers.Add(provider);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordflow">return</span> providers.ToArray();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a8300569f0be64a9edc8614a6eb8f44a8"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a8300569f0be64a9edc8614a6eb8f44a8">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropDefaultAutoSizeMaxRatio</a></div><div class="ttdeci">SerializedProperty m_PropDefaultAutoSizeMaxRatio</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00065">TMP_SettingsEditor.cs:65</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a42e9fe1f22fd22775433b5e59db67506"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a42e9fe1f22fd22775433b5e59db67506">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropWarningsDisabled</a></div><div class="ttdeci">SerializedProperty m_PropWarningsDisabled</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00089">TMP_SettingsEditor.cs:89</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_ab38093e40ec4e7ff2556ffe1f605ccf9"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ab38093e40ec4e7ff2556ffe1f605ccf9">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropEnableRaycastTarget</a></div><div class="ttdeci">SerializedProperty m_PropEnableRaycastTarget</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00069">TMP_SettingsEditor.cs:69</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___style_sheet_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___style_sheet.html">TMPro.TMP_StyleSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___style_sheet_8cs_source.html#l00010">TMP_StyleSheet.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a9d62cc2a01542c5e0af797cf510e540a"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a9d62cc2a01542c5e0af797cf510e540a">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropDefaultAutoSizeMinRatio</a></div><div class="ttdeci">SerializedProperty m_PropDefaultAutoSizeMinRatio</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00064">TMP_SettingsEditor.cs:64</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a106cd2b149c3c8bbb145884d593cfa5b"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a106cd2b149c3c8bbb145884d593cfa5b">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropFontAsset</a></div><div class="ttdeci">SerializedProperty m_PropFontAsset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00061">TMP_SettingsEditor.cs:61</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_aa43da709137c8200723875d098cbfaa0"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa43da709137c8200723875d098cbfaa0">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropEnableEmojiSupport</a></div><div class="ttdeci">SerializedProperty m_PropEnableEmojiSupport</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00073">TMP_SettingsEditor.cs:73</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a827da68c2e75c40bfe739765a4da812d"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a827da68c2e75c40bfe739765a4da812d">TMPro.EditorUtilities.TMP_SettingsEditor.m_List</a></div><div class="ttdeci">ReorderableList m_List</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00075">TMP_SettingsEditor.cs:75</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a61c886479f4e7de3cc3207c5b671a8d0"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a61c886479f4e7de3cc3207c5b671a8d0">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropLeadingCharacters</a></div><div class="ttdeci">SerializedProperty m_PropLeadingCharacters</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00091">TMP_SettingsEditor.cs:91</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_aa1e2d9326a325078d8bd7ad9cc186078"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa1e2d9326a325078d8bd7ad9cc186078">TMPro.EditorUtilities.TMP_SettingsEditor.OnEnable</a></div><div class="ttdeci">void OnEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00094">TMP_SettingsEditor.cs:94</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_aa83718727656b6937b8a2b4078eb60bd"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#aa83718727656b6937b8a2b4078eb60bd">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropAutoSizeTextContainer</a></div><div class="ttdeci">SerializedProperty m_PropAutoSizeTextContainer</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00068">TMP_SettingsEditor.cs:68</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_ad39baf155b4598e227ff32c83ccd907e"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad39baf155b4598e227ff32c83ccd907e">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropParseEscapeCharacters</a></div><div class="ttdeci">SerializedProperty m_PropParseEscapeCharacters</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00084">TMP_SettingsEditor.cs:84</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a54f720a21136af63acbcf8b6d161e561"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a54f720a21136af63acbcf8b6d161e561">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropDefaultTextMeshProUITextContainerSize</a></div><div class="ttdeci">SerializedProperty m_PropDefaultTextMeshProUITextContainerSize</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00067">TMP_SettingsEditor.cs:67</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a07684d634f63dc91000d0ad55553f8a0"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a07684d634f63dc91000d0ad55553f8a0">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropSpriteAsset</a></div><div class="ttdeci">SerializedProperty m_PropSpriteAsset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00071">TMP_SettingsEditor.cs:71</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_ad99b3b10e708248b73c12b3b87828e2e"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad99b3b10e708248b73c12b3b87828e2e">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropDefaultFontAssetPath</a></div><div class="ttdeci">SerializedProperty m_PropDefaultFontAssetPath</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00062">TMP_SettingsEditor.cs:62</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_ad527c5867e1eac6b29ef20d405c680ce"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ad527c5867e1eac6b29ef20d405c680ce">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropColorGradientPresetsPath</a></div><div class="ttdeci">SerializedProperty m_PropColorGradientPresetsPath</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00077">TMP_SettingsEditor.cs:77</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a635b39aa921d9be5d5f8cf302fcdf4f1"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a635b39aa921d9be5d5f8cf302fcdf4f1">TMPro.EditorUtilities.TMP_SettingsEditor.m_GetFontFeaturesAtRuntime</a></div><div class="ttdeci">SerializedProperty m_GetFontFeaturesAtRuntime</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00087">TMP_SettingsEditor.cs:87</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a3e3f0f817ef1bcd86cddb1d2224eecc1"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3e3f0f817ef1bcd86cddb1d2224eecc1">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropWordWrapping</a></div><div class="ttdeci">SerializedProperty m_PropWordWrapping</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00080">TMP_SettingsEditor.cs:80</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_af4933a3a5452f5b7db89b31fd52561b8"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#af4933a3a5452f5b7db89b31fd52561b8">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropDefaultTextMeshProTextContainerSize</a></div><div class="ttdeci">SerializedProperty m_PropDefaultTextMeshProTextContainerSize</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00066">TMP_SettingsEditor.cs:66</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a3cd2075819c31fcbcd07107bddc6b227"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3cd2075819c31fcbcd07107bddc6b227">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropStyleSheet</a></div><div class="ttdeci">SerializedProperty m_PropStyleSheet</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00074">TMP_SettingsEditor.cs:74</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_ae9e76d719c3dadba59bc67e1c205643e"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ae9e76d719c3dadba59bc67e1c205643e">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropFollowingCharacters</a></div><div class="ttdeci">SerializedProperty m_PropFollowingCharacters</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00092">TMP_SettingsEditor.cs:92</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a7717a7baf3b12e4e6045f49d8686b9b1"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a7717a7baf3b12e4e6045f49d8686b9b1">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropExtraPadding</a></div><div class="ttdeci">SerializedProperty m_PropExtraPadding</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00082">TMP_SettingsEditor.cs:82</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html">TMPro.EditorUtilities.TMP_SettingsEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00011">TMP_SettingsEditor.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a68b35b0631c1a9b334a399ab0cc51ac8"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a68b35b0631c1a9b334a399ab0cc51ac8">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropMatchMaterialPreset</a></div><div class="ttdeci">SerializedProperty m_PropMatchMaterialPreset</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00079">TMP_SettingsEditor.cs:79</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a11891e45e7299c16ee2cf20b420d09b1"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a11891e45e7299c16ee2cf20b420d09b1">TMPro.EditorUtilities.TMP_SettingsEditor.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00146">TMP_SettingsEditor.cs:146</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___style_sheet_html_a4bab3ca47934d537b41ae066eabac404"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___style_sheet.html#a4bab3ca47934d537b41ae066eabac404">TMPro.TMP_StyleSheet.UpdateStyleSheet</a></div><div class="ttdeci">static void UpdateStyleSheet()</div><div class="ttdoc">Function to update the internal reference to a newly assigned style sheet in the TMP Settings...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___style_sheet_8cs_source.html#l00095">TMP_StyleSheet.cs:95</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_pro___event_manager_html_a133e91349eb697033cec3353e958481e"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_pro___event_manager.html#a133e91349eb697033cec3353e958481e">TMPro.TMPro_EventManager.ON_TMP_SETTINGS_CHANGED</a></div><div class="ttdeci">static void ON_TMP_SETTINGS_CHANGED()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_pro___event_manager_8cs_source.html#l00096">TMPro_EventManager.cs:96</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a7072665c774b47868c8988652e549b44"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a7072665c774b47868c8988652e549b44">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropKerning</a></div><div class="ttdeci">SerializedProperty m_PropKerning</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00081">TMP_SettingsEditor.cs:81</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a9d4821efa0c281d688e200b62a5e17cd"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a9d4821efa0c281d688e200b62a5e17cd">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropSpriteAssetPath</a></div><div class="ttdeci">SerializedProperty m_PropSpriteAssetPath</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00072">TMP_SettingsEditor.cs:72</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a8724f4cb1a7727836ff8b8ff54877fed"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a8724f4cb1a7727836ff8b8ff54877fed">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropTintAllSprites</a></div><div class="ttdeci">SerializedProperty m_PropTintAllSprites</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00083">TMP_SettingsEditor.cs:83</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_pro___event_manager_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_pro___event_manager.html">TMPro.TMPro_EventManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_pro___event_manager_8cs_source.html#l00010">TMPro_EventManager.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_ae67684b82cda52ab75c9dda3fb497f3e"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#ae67684b82cda52ab75c9dda3fb497f3e">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropDefaultFontSize</a></div><div class="ttdeci">SerializedProperty m_PropDefaultFontSize</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00063">TMP_SettingsEditor.cs:63</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="namespace_unity_editor_internal_html"><div class="ttname"><a href="namespace_unity_editor_internal.html">UnityEditorInternal</a></div><div class="ttdef"><b>Definition:</b> <a href="_binding_tree_view_data_source_8cs_source.html#l00008">BindingTreeViewDataSource.cs:8</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor_html_a3253b4b201503205671d5ed0741325aa"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___settings_editor.html#a3253b4b201503205671d5ed0741325aa">TMPro.EditorUtilities.TMP_SettingsEditor.m_PropMissingGlyphCharacter</a></div><div class="ttdeci">SerializedProperty m_PropMissingGlyphCharacter</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_editor_8cs_source.html#l00085">TMP_SettingsEditor.cs:85</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

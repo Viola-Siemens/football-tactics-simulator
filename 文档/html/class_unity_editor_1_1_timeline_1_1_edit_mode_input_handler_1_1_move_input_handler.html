@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler.html">EditModeInputHandler</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html">MoveInputHandler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_edit_mode_input_handler_8_move_input_handler_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_edit_mode_input_handler_8_move_input_handler_inherit__map" id="_unity_editor_8_timeline_8_edit_mode_input_handler_8_move_input_handler_inherit__map">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html" title="IInputHandler" alt="" coords="73,5,170,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_edit_mode_input_handler_8_move_input_handler_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_edit_mode_input_handler_8_move_input_handler_coll__map" id="_unity_editor_8_timeline_8_edit_mode_input_handler_8_move_input_handler_coll__map">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html" title="IInputHandler" alt="" coords="2273,109,2370,136"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html" title="UnityEditor.Timeline.Move\lItemHandler" alt="" coords="2235,161,2407,202"/><area shape="rect" id="node4" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html" title="IAttractable" alt="" coords="1882,125,1970,152"/><area shape="rect" id="node5" href="interface_unity_editor_1_1_timeline_1_1_i_attraction_handler.html" title="IAttractionHandler" alt="" coords="1863,176,1989,203"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_items_group.html" title="UnityEditor.Timeline.Items\lGroup" alt="" coords="1030,67,1205,109"/><area shape="rect" id="node50" href="class_unity_editor_1_1_timeline_1_1_items_per_track.html" title="ItemsPerTrack" alt="" coords="1500,311,1607,337"/><area shape="rect" id="node7" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html" title="UnityEditor.Timeline.ITimelineItem" alt="" coords="596,75,815,101"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_window_state.html" title="UnityEditor.Timeline.Window\lState" alt="" coords="1832,234,2020,275"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_sequence_hierarchy.html" title="UnityEditor.Timeline.Sequence\lHierarchy" alt="" coords="2221,482,2421,523"/><area shape="rect" id="node46" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_time_area.html" title="UnityEditor.Timeline.Timeline\lWindow.TimelineTimeArea" alt="" coords="2226,322,2417,363"/><area shape="rect" id="node10" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html" title="UnityEditor.Timeline.ISequence\lState" alt="" coords="1452,9,1655,50"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_property_collector.html" title="UnityEditor.Timeline.Property\lCollector" alt="" coords="1458,134,1649,175"/><area shape="rect" id="node13" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html" title="Interface used to inform the Timeline Editor about potential property modifications that may occur wh..." alt="" coords="1055,133,1180,160"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html" title="UnityEditor.Timeline.Space\lPartitioner" alt="" coords="1464,215,1643,257"/><area shape="rect" id="node15" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html" title="UnityEngine.Timeline.Interval\lTree\&lt; UnityEditor.Timeline.Space\lPartitioner.Entry \&gt;" alt="" coords="1009,184,1225,240"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html" title="UnityEditor.Timeline.Timeline\lWindow" alt="" coords="1458,549,1649,590"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_sequence_path.html" title="UnityEditor.Timeline.SequencePath" alt="" coords="1004,863,1231,889"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_g_u_i.html" title="UnityEditor.Timeline.Timeline\lMarkerHeaderGUI" alt="" coords="1022,382,1213,423"/><area shape="rect" id="node23" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html" title="IRowGUI" alt="" coords="669,344,741,371"/><area shape="rect" id="node24" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html" title="ILayerable" alt="" coords="665,395,746,421"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_markers_layer.html" title="UnityEditor.Timeline.Markers\lLayer" alt="" coords="611,446,800,487"/><area shape="rect" id="node26" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html" title="UnityEditor.Timeline.Layer\lZOrder" alt="" coords="618,278,793,319"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_time_area_item.html" title="UnityEditor.Timeline.Time\lAreaItem" alt="" coords="1032,265,1203,306"/><area shape="rect" id="node28" href="class_unity_editor_1_1_timeline_1_1_control.html" title="Control" alt="" coords="674,176,737,203"/><area shape="rect" id="node29" href="class_unity_editor_1_1_timeline_1_1_tooltip.html" title="UnityEditor.Timeline.Tooltip" alt="" coords="615,227,795,253"/><area shape="rect" id="node30" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html" title="A PlayableAsset that represents a timeline. " alt="" coords="1019,513,1215,554"/><area shape="rect" id="node36" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="615,890,795,931"/><area shape="rect" id="node38" href="struct_unity_engine_1_1_timeline_1_1_marker_list.html" title="UnityEngine.Timeline.MarkerList" alt="" coords="257,897,466,924"/><area shape="rect" id="node40" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html" title="Represents a clip on the timeline. " alt="" coords="1008,993,1227,1020"/><area shape="rect" id="node33" href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html" title="Implement this interface to support advanced features of timeline clips. " alt="" coords="641,731,770,757"/><area shape="rect" id="node34" href="interface_unity_engine_1_1_timeline_1_1_i_property_preview.html" title="Implement this interface in a PlayableAsset to specify which properties will be modified when Timelin..." alt="" coords="302,643,421,669"/><area shape="rect" id="node35" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html" title="Properties of the timeline that are used by the editor " alt="" coords="607,563,803,605"/><area shape="rect" id="node49" href="class_unity_editor_1_1_timeline_1_1_moving_items.html" title="UnityEditor.Timeline.Moving\lItems" alt="" coords="1835,343,2017,385"/><area shape="rect" id="node37" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="311,1037,412,1064"/><area shape="rect" id="node39" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html" title="UnityEngine.Timeline.DiscreteTime" alt="" coords="249,987,473,1013"/><area shape="rect" id="node41" href="struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html" title="UnityEngine.Timeline.Track\lAsset.TransientBuildData" alt="" coords="271,831,451,873"/><area shape="rect" id="node42" href="class_unity_editor_1_1_timeline_1_1_rectangle_select.html" title="UnityEditor.Timeline.Rectangle\lSelect" alt="" coords="1017,447,1217,489"/><area shape="rect" id="node43" href="class_unity_editor_1_1_timeline_1_1_timeline_mode.html" title="UnityEditor.Timeline.TimelineMode" alt="" coords="1006,579,1229,605"/><area shape="rect" id="node44" href="class_unity_editor_1_1_timeline_1_1_rectangle_zoom.html" title="UnityEditor.Timeline.RectangleZoom" alt="" coords="1001,629,1233,656"/><area shape="rect" id="node45" href="class_unity_editor_1_1_timeline_1_1_control.html" title="UnityEditor.Timeline.Control" alt="" coords="1026,1044,1209,1071"/><area shape="rect" id="node47" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_playable_lookup.html" title="UnityEditor.Timeline.Timeline\lWindow.PlayableLookup" alt="" coords="1022,681,1213,722"/><area shape="rect" id="node48" href="class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html" title="UnityEditor.Timeline.Timeline\lWindow.TimelineWindowPreferences" alt="" coords="1000,746,1235,787"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a87da202b332d4098d39e5d59dc4f90a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html#a87da202b332d4098d39e5d59dc4f90a9">OnEnterDrag</a> (IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> &gt; items, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a87da202b332d4098d39e5d59dc4f90a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7c48b031ebacd070b5bb5e4b8200c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html#a9d7c48b031ebacd070b5bb5e4b8200c3">OnDrag</a> (double value, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a9d7c48b031ebacd070b5bb5e4b8200c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32fbcfd0217b0c56aff95fe9982f45de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html#a32fbcfd0217b0c56aff95fe9982f45de">OnExitDrag</a> ()</td></tr>
+<tr class="separator:a32fbcfd0217b0c56aff95fe9982f45de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2961feea5bfd6fbe261b6219eb2a5939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html#a2961feea5bfd6fbe261b6219eb2a5939">OnSetValue</a> (IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> &gt; items, double value, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a2961feea5bfd6fbe261b6219eb2a5939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a3bcd948982bd9cd8b0d2c047130b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html#a35a3bcd948982bd9cd8b0d2c047130b9">OnGUI</a> (Event evt)</td></tr>
+<tr class="separator:a35a3bcd948982bd9cd8b0d2c047130b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a0dfb1eca70a70549ed475d9de67dc9ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html#a0dfb1eca70a70549ed475d9de67dc9ee">SetValueForEdge</a> (IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> &gt; items, <a class="el" href="namespace_unity_editor_1_1_timeline.html#a3272c43adbb9fe36c7552d4c05e21183">AttractedEdge</a> edge, double value, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a0dfb1eca70a70549ed475d9de67dc9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a559732fabc27d2aa22d1a4ea065501f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">MoveItemHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler.html#a559732fabc27d2aa22d1a4ea065501f0">m_MoveItemHandler</a></td></tr>
+<tr class="separator:a559732fabc27d2aa22d1a4ea065501f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00139">139</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a9d7c48b031ebacd070b5bb5e4b8200c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler.OnDrag </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#a193a335540300e6037a554bacc352123">UnityEditor.Timeline.EditModeInputHandler.IInputHandler</a>.</p>
+
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00152">152</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a9d7c48b031ebacd070b5bb5e4b8200c3_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a9d7c48b031ebacd070b5bb5e4b8200c3_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a9d7c48b031ebacd070b5bb5e4b8200c3_cgraph" id="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a9d7c48b031ebacd070b5bb5e4b8200c3_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a593ea4f713fdc3298c3fe686e822cbad" title="UnityEditor.Timeline.Window\lState.SnapToFrameIfRequired" alt="" coords="289,5,484,47"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a544e7f85d72a7ad51bf348973c40ff12" title="UnityEditor.Timeline.Move\lItemHandler.OnAttractedEdge" alt="" coords="289,71,484,112"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#a5dd3151a2e6f26956ba7290034c1c47d" title="UnityEditor.Timeline.Time\lReferenceUtility.SnapToFrame" alt="" coords="532,5,731,47"/><area shape="rect" id="node4" href="class_unity_engine_1_1_timeline_1_1_time_utility.html#ad48a823919b02af48ca5f6d97dab773b" title="UnityEngine.Timeline.Time\lUtility.RoundToFrame" alt="" coords="779,5,955,47"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a410c5325a1f334bbe03e4e568b7c45e1" title="UnityEditor.Timeline.Edit\lMode.AdjustStartTime" alt="" coords="549,71,714,112"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a0a5de2f13697b390854d9d1c95bbe534" title="UnityEditor.Timeline.Edit\lMode.UpdateMove" alt="" coords="549,136,714,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a87da202b332d4098d39e5d59dc4f90a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler.OnEnterDrag </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> &gt;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#a7c97930011eeadc4660515987cd021fc">UnityEditor.Timeline.EditModeInputHandler.IInputHandler</a>.</p>
+
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00143">143</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a87da202b332d4098d39e5d59dc4f90a9_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a87da202b332d4098d39e5d59dc4f90a9_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a87da202b332d4098d39e5d59dc4f90a9_cgraph" id="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a87da202b332d4098d39e5d59dc4f90a9_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a41063e72fac96982c4279b18b3d31933" title="UnityEditor.Timeline.Move\lItemHandler.Grab" alt="" coords="289,13,461,54"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a32fbcfd0217b0c56aff95fe9982f45de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler.OnExitDrag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#a7b4594d3d0cee072bb2ca7c9b17a033f">UnityEditor.Timeline.EditModeInputHandler.IInputHandler</a>.</p>
+
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00161">161</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a32fbcfd0217b0c56aff95fe9982f45de_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a32fbcfd0217b0c56aff95fe9982f45de_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a32fbcfd0217b0c56aff95fe9982f45de_cgraph" id="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a32fbcfd0217b0c56aff95fe9982f45de_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3569772e77425ba2b50916cf2710c721" title="UnityEditor.Timeline.Move\lItemHandler.Drop" alt="" coords="289,104,461,145"/><area shape="rect" id="node3" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="509,5,705,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#aea3795bb46ce99d0e6754e0afef2e908" title="UnityEditor.Timeline.Edit\lModeUtils.IsInfiniteTrack" alt="" coords="525,71,690,112"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a65a01ef5fa96430145d99d00470f9578" title="UnityEditor.Timeline.Edit\lMode.FinishMove" alt="" coords="525,136,690,177"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a76a7fee252506a941372c8c55381fcf4" title="UnityEditor.Timeline.Edit\lMode.ClearEditMode" alt="" coords="525,201,690,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473" title="UnityEditor.Timeline.Timeline\lCursors.ClearCursor" alt="" coords="753,104,944,145"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="753,169,944,211"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a35a3bcd948982bd9cd8b0d2c047130b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler.OnGUI </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00181">181</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a35a3bcd948982bd9cd8b0d2c047130b9_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a35a3bcd948982bd9cd8b0d2c047130b9_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a35a3bcd948982bd9cd8b0d2c047130b9_cgraph" id="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a35a3bcd948982bd9cd8b0d2c047130b9_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ad8bec61d6764d51dc980d8b33f261329" title="UnityEditor.Timeline.Move\lItemHandler.OnGUI" alt="" coords="328,39,500,80"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a788ec0ccf1a753ec95101b738c59aca0" title="UnityEditor.Timeline.Edit\lMode.DrawMoveGUI" alt="" coords="561,5,726,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473" title="UnityEditor.Timeline.Timeline\lCursors.ClearCursor" alt="" coords="548,71,739,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2961feea5bfd6fbe261b6219eb2a5939"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler.OnSetValue </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> &gt;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#ac3e7660bfb37eff5434d1bc804b62db0">UnityEditor.Timeline.EditModeInputHandler.IInputHandler</a>.</p>
+
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00170">170</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a2961feea5bfd6fbe261b6219eb2a5939_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a2961feea5bfd6fbe261b6219eb2a5939_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a2961feea5bfd6fbe261b6219eb2a5939_cgraph" id="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a2961feea5bfd6fbe261b6219eb2a5939_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a41063e72fac96982c4279b18b3d31933" title="UnityEditor.Timeline.Move\lItemHandler.Grab" alt="" coords="301,5,473,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a544e7f85d72a7ad51bf348973c40ff12" title="UnityEditor.Timeline.Move\lItemHandler.OnAttractedEdge" alt="" coords="289,71,484,112"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a3569772e77425ba2b50916cf2710c721" title="UnityEditor.Timeline.Move\lItemHandler.Drop" alt="" coords="301,201,473,243"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a410c5325a1f334bbe03e4e568b7c45e1" title="UnityEditor.Timeline.Edit\lMode.AdjustStartTime" alt="" coords="547,5,713,47"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a0a5de2f13697b390854d9d1c95bbe534" title="UnityEditor.Timeline.Edit\lMode.UpdateMove" alt="" coords="547,71,713,112"/><area shape="rect" id="node7" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c" title="UnityEngine.Timeline.Timeline\lUndo.PushUndo" alt="" coords="532,136,728,177"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_edit_mode_utils.html#aea3795bb46ce99d0e6754e0afef2e908" title="UnityEditor.Timeline.Edit\lModeUtils.IsInfiniteTrack" alt="" coords="547,201,713,243"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a65a01ef5fa96430145d99d00470f9578" title="UnityEditor.Timeline.Edit\lMode.FinishMove" alt="" coords="547,267,713,308"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_edit_mode.html#a76a7fee252506a941372c8c55381fcf4" title="UnityEditor.Timeline.Edit\lMode.ClearEditMode" alt="" coords="547,332,713,373"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#a9c9000df81375a63d52b05a7c890c473" title="UnityEditor.Timeline.Timeline\lCursors.ClearCursor" alt="" coords="776,235,967,276"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#aac9130b771a4f65a484abe4ec3df471d" title="UnityEditor.Timeline.Timeline\lEditor.Refresh" alt="" coords="776,300,967,341"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dfb1eca70a70549ed475d9de67dc9ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler.SetValueForEdge </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> &gt;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a3272c43adbb9fe36c7552d4c05e21183">AttractedEdge</a>&#160;</td>
+          <td class="paramname"><em>edge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00187">187</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a0dfb1eca70a70549ed475d9de67dc9ee_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a0dfb1eca70a70549ed475d9de67dc9ee_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a0dfb1eca70a70549ed475d9de67dc9ee_icgraph" id="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_move_input_handler_a0dfb1eca70a70549ed475d9de67dc9ee_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler.html#adc57fb967659bc2be3991785ed1ecbac" title="UnityEditor.Timeline.Edit\lModeInputHandler.SetValueForEdge" alt="" coords="289,39,521,80"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_clip_inspector.html#ae4bb36818e2bcdea34e227b71767e969" title="UnityEditor.Timeline.Clip\lInspector.DrawStartTimeField" alt="" coords="569,5,761,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_clip_inspector.html#a0e8da306b426ed18126b0c009a269f6c" title="UnityEditor.Timeline.Clip\lInspector.DrawEndTimeField" alt="" coords="572,71,759,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a559732fabc27d2aa22d1a4ea065501f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html">MoveItemHandler</a> UnityEditor.Timeline.EditModeInputHandler.MoveInputHandler.m_MoveItemHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a> 第 <a class="el" href="_edit_mode_input_handler_8cs_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Manipulators/<a class="el" href="_edit_mode_input_handler_8cs_source.html">EditModeInputHandler.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:48 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

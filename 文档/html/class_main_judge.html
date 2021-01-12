@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: MainJudge类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_main_judge-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">MainJudge类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>主裁判行为类（需手动操控）  
+ <a href="class_main_judge.html#details">更多...</a></p>
+<div class="dynheader">
+类 MainJudge 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_judge__inherit__graph.png" border="0" usemap="#_main_judge_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+MainJudge 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_judge__coll__graph.png" border="0" usemap="#_main_judge_coll__map" alt="Collaboration graph"/></div>
+<map name="_main_judge_coll__map" id="_main_judge_coll__map">
+<area shape="rect" id="node4" href="class_team.html" title="球队类 " alt="" coords="573,95,628,121"/><area shape="rect" id="node6" href="class_player.html" title="球员类（含预测模型） " alt="" coords="303,199,362,225"/><area shape="rect" id="node9" href="class_ball.html" title="足球信息与控制类 " alt="" coords="292,304,336,331"/><area shape="rect" id="node11" href="class_timer.html" title="计时器类 " alt="" coords="243,396,297,423"/><area shape="rect" id="node5" href="class_team_1_1_member.html" title="Team.Member" alt="" coords="419,304,524,331"/><area shape="rect" id="node7" href="class_position_score.html" title="球员各位置得分类 " alt="" coords="327,95,429,121"/><area shape="rect" id="node8" href="class_ability.html" title="球员各方面能力 " alt="" coords="193,95,251,121"/><area shape="rect" id="node10" href="class_tactics.html" title="战术 " alt="" coords="819,5,883,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a72630d0aff948da2c698c96d8e87c5de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a72630d0aff948da2c698c96d8e87c5de">BlueThrowIn</a> ()</td></tr>
+<tr class="memdesc:a72630d0aff948da2c698c96d8e87c5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队界外球 若红方球员将球碰出边线以外，应判罚由蓝队球员在出界位置手抛球掷入界内。  <a href="#a72630d0aff948da2c698c96d8e87c5de">更多...</a><br /></td></tr>
+<tr class="separator:a72630d0aff948da2c698c96d8e87c5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95931ce72d2ac3280164c32dab8099c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a95931ce72d2ac3280164c32dab8099c0">RedThrowIn</a> ()</td></tr>
+<tr class="memdesc:a95931ce72d2ac3280164c32dab8099c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队界外球 若蓝方球员将球碰出边线以外，应判罚由红队球员在出界位置手抛球掷入界内。  <a href="#a95931ce72d2ac3280164c32dab8099c0">更多...</a><br /></td></tr>
+<tr class="separator:a95931ce72d2ac3280164c32dab8099c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4191fb2f87ae7de3af579d92842936c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a4191fb2f87ae7de3af579d92842936c6">BlueFreeKick</a> ()</td></tr>
+<tr class="memdesc:a4191fb2f87ae7de3af579d92842936c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队任意球 在正常比赛时间内，红队球员在本方禁区外犯规，应判罚蓝队任意球开球。  <a href="#a4191fb2f87ae7de3af579d92842936c6">更多...</a><br /></td></tr>
+<tr class="separator:a4191fb2f87ae7de3af579d92842936c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b2f85be11c418ac266d4dc4613b1ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a93b2f85be11c418ac266d4dc4613b1ab">RedFreeKick</a> ()</td></tr>
+<tr class="memdesc:a93b2f85be11c418ac266d4dc4613b1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队任意球 在正常比赛时间内，蓝队球员在本方禁区外犯规，应判罚红队任意球开球。  <a href="#a93b2f85be11c418ac266d4dc4613b1ab">更多...</a><br /></td></tr>
+<tr class="separator:a93b2f85be11c418ac266d4dc4613b1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e5810d94fa45ed11fd1b439e117920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a85e5810d94fa45ed11fd1b439e117920">BlueGoalKick</a> ()</td></tr>
+<tr class="memdesc:a85e5810d94fa45ed11fd1b439e117920"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队球门球 若红方球员将球碰出蓝方底线外，或红队间接任意球、界外球直接发入蓝方门线以内，应判罚由蓝队球门球开球。  <a href="#a85e5810d94fa45ed11fd1b439e117920">更多...</a><br /></td></tr>
+<tr class="separator:a85e5810d94fa45ed11fd1b439e117920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51fb4e016794c3b5c9a5105e91d5d855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a51fb4e016794c3b5c9a5105e91d5d855">RedGoalKick</a> ()</td></tr>
+<tr class="memdesc:a51fb4e016794c3b5c9a5105e91d5d855"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队球门球 若蓝方球员将球碰出红方底线外，或蓝队间接任意球、界外球直接发入红方门线以内，应判罚由红队球门球开球。  <a href="#a51fb4e016794c3b5c9a5105e91d5d855">更多...</a><br /></td></tr>
+<tr class="separator:a51fb4e016794c3b5c9a5105e91d5d855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bbfbb7e7eaed388d61220292fee1642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a2bbfbb7e7eaed388d61220292fee1642">BlueCornerKick</a> ()</td></tr>
+<tr class="memdesc:a2bbfbb7e7eaed388d61220292fee1642"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队角球 若红方球员将球碰出红方底线外，或红队间接任意球、界外球直接发入红方门线以内，应判罚蓝队角球开球。  <a href="#a2bbfbb7e7eaed388d61220292fee1642">更多...</a><br /></td></tr>
+<tr class="separator:a2bbfbb7e7eaed388d61220292fee1642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac272e78742915788adb97d2db4f3a50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#ac272e78742915788adb97d2db4f3a50d">RedCornerKick</a> ()</td></tr>
+<tr class="memdesc:ac272e78742915788adb97d2db4f3a50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队角球 若蓝方球员将球碰出蓝方底线外，或蓝队间接任意球、界外球直接发入蓝方门线以内，应判罚红队角球开球。  <a href="#ac272e78742915788adb97d2db4f3a50d">更多...</a><br /></td></tr>
+<tr class="separator:ac272e78742915788adb97d2db4f3a50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d22dfb145c59b9740f61e0b4d098b6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a8d22dfb145c59b9740f61e0b4d098b6d">BluePenaltyKick</a> ()</td></tr>
+<tr class="memdesc:a8d22dfb145c59b9740f61e0b4d098b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队点球 在正常比赛时间内，红方球员在本方禁区内犯规，应判罚蓝队点球。  <a href="#a8d22dfb145c59b9740f61e0b4d098b6d">更多...</a><br /></td></tr>
+<tr class="separator:a8d22dfb145c59b9740f61e0b4d098b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e400c0eb2f966c96eacef5ed2011b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a82e400c0eb2f966c96eacef5ed2011b0">RedPenaltyKick</a> ()</td></tr>
+<tr class="memdesc:a82e400c0eb2f966c96eacef5ed2011b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队点球 在正常比赛时间内，蓝方球员在本方禁区内犯规，应判罚红队点球。  <a href="#a82e400c0eb2f966c96eacef5ed2011b0">更多...</a><br /></td></tr>
+<tr class="separator:a82e400c0eb2f966c96eacef5ed2011b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e2a9c622b9991bba966a6d468fd06b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#af0e2a9c622b9991bba966a6d468fd06b">Pause</a> ()</td></tr>
+<tr class="memdesc:af0e2a9c622b9991bba966a6d468fd06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">比赛暂停 主裁判可在任意比赛时间内暂时终止比赛，由任意一方开球继续比赛。  <a href="#af0e2a9c622b9991bba966a6d468fd06b">更多...</a><br /></td></tr>
+<tr class="separator:af0e2a9c622b9991bba966a6d468fd06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0184904131d885785118506cce10452"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#af0184904131d885785118506cce10452">End</a> ()</td></tr>
+<tr class="memdesc:af0184904131d885785118506cce10452"><td class="mdescLeft">&#160;</td><td class="mdescRight">比赛结束 在常规时间和补时结束后，主裁判可以终止比赛，比赛的记录数据随之存储。  <a href="#af0184904131d885785118506cce10452">更多...</a><br /></td></tr>
+<tr class="separator:af0184904131d885785118506cce10452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4459f3bc52fc183f0bc48e77ba742495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a4459f3bc52fc183f0bc48e77ba742495">PlaceBall</a> ()</td></tr>
+<tr class="memdesc:a4459f3bc52fc183f0bc48e77ba742495"><td class="mdescLeft">&#160;</td><td class="mdescRight">放置球 暂停比赛时，裁判可以根据判罚将足球放置在身边并指定球队开球。  <a href="#a4459f3bc52fc183f0bc48e77ba742495">更多...</a><br /></td></tr>
+<tr class="separator:a4459f3bc52fc183f0bc48e77ba742495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad866307def711a9562b072945640625b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#ad866307def711a9562b072945640625b">Go</a> ()</td></tr>
+<tr class="memdesc:ad866307def711a9562b072945640625b"><td class="mdescLeft">&#160;</td><td class="mdescRight">开球 判罚任意球、点球、球门球、角球、界外球等后，由裁判发出开球信号开球。  <a href="#ad866307def711a9562b072945640625b">更多...</a><br /></td></tr>
+<tr class="separator:ad866307def711a9562b072945640625b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c62ed59d2554d6350737a69b4eb162b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a7c62ed59d2554d6350737a69b4eb162b">BlueGoal</a> ()</td></tr>
+<tr class="memdesc:a7c62ed59d2554d6350737a69b4eb162b"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队进球有效 足球进入红队门线以内后，裁判可判定蓝队进球有效。  <a href="#a7c62ed59d2554d6350737a69b4eb162b">更多...</a><br /></td></tr>
+<tr class="separator:a7c62ed59d2554d6350737a69b4eb162b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf747c0424d733381346bbfcd92af06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a5bf747c0424d733381346bbfcd92af06">RedGoal</a> ()</td></tr>
+<tr class="memdesc:a5bf747c0424d733381346bbfcd92af06"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队进球有效 足球进入蓝队门线以内后，裁判可判定红队进球有效。  <a href="#a5bf747c0424d733381346bbfcd92af06">更多...</a><br /></td></tr>
+<tr class="separator:a5bf747c0424d733381346bbfcd92af06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:aa2514639e33681209a3d39fa42d32021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_team.html">Team</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#aa2514639e33681209a3d39fa42d32021">blueTeam</a></td></tr>
+<tr class="memdesc:aa2514639e33681209a3d39fa42d32021"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队引用  <a href="#aa2514639e33681209a3d39fa42d32021">更多...</a><br /></td></tr>
+<tr class="separator:aa2514639e33681209a3d39fa42d32021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8142ff12c578a36464e1fa4c263ce97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_team.html">Team</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#ae8142ff12c578a36464e1fa4c263ce97">redTeam</a></td></tr>
+<tr class="memdesc:ae8142ff12c578a36464e1fa4c263ce97"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队引用  <a href="#ae8142ff12c578a36464e1fa4c263ce97">更多...</a><br /></td></tr>
+<tr class="separator:ae8142ff12c578a36464e1fa4c263ce97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6d4ee28eb16f3af0d44e78ec060a3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ball.html">Ball</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#acf6d4ee28eb16f3af0d44e78ec060a3b">ball</a></td></tr>
+<tr class="memdesc:acf6d4ee28eb16f3af0d44e78ec060a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">球引用  <a href="#acf6d4ee28eb16f3af0d44e78ec060a3b">更多...</a><br /></td></tr>
+<tr class="separator:acf6d4ee28eb16f3af0d44e78ec060a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7dbac4b3787e7217fe435edac4a6329"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#aa7dbac4b3787e7217fe435edac4a6329">redScoreText</a></td></tr>
+<tr class="memdesc:aa7dbac4b3787e7217fe435edac4a6329"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队得分板  <a href="#aa7dbac4b3787e7217fe435edac4a6329">更多...</a><br /></td></tr>
+<tr class="separator:aa7dbac4b3787e7217fe435edac4a6329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636f19fb1fb0548f0e251a49312668fc"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a636f19fb1fb0548f0e251a49312668fc">blueScoreText</a></td></tr>
+<tr class="memdesc:a636f19fb1fb0548f0e251a49312668fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队得分板  <a href="#a636f19fb1fb0548f0e251a49312668fc">更多...</a><br /></td></tr>
+<tr class="separator:a636f19fb1fb0548f0e251a49312668fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8d05c454841c592d2d9ecc79265e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_timer.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a0a8d05c454841c592d2d9ecc79265e41">judgeTimer</a></td></tr>
+<tr class="memdesc:a0a8d05c454841c592d2d9ecc79265e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">计时器  <a href="#a0a8d05c454841c592d2d9ecc79265e41">更多...</a><br /></td></tr>
+<tr class="separator:a0a8d05c454841c592d2d9ecc79265e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd058b3e3e0d2cb98352d252178af4e"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#acdd058b3e3e0d2cb98352d252178af4e">blueGoalButton</a></td></tr>
+<tr class="memdesc:acdd058b3e3e0d2cb98352d252178af4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队进球按钮  <a href="#acdd058b3e3e0d2cb98352d252178af4e">更多...</a><br /></td></tr>
+<tr class="separator:acdd058b3e3e0d2cb98352d252178af4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021586c7d7d7f5a77fd4b51d3ba2b1bf"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a021586c7d7d7f5a77fd4b51d3ba2b1bf">redGoalButton</a></td></tr>
+<tr class="memdesc:a021586c7d7d7f5a77fd4b51d3ba2b1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队进球按钮  <a href="#a021586c7d7d7f5a77fd4b51d3ba2b1bf">更多...</a><br /></td></tr>
+<tr class="separator:a021586c7d7d7f5a77fd4b51d3ba2b1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a781f2055cfe196f262fc73211a61220d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d">resetPlayers</a> ()</td></tr>
+<tr class="memdesc:a781f2055cfe196f262fc73211a61220d"><td class="mdescLeft">&#160;</td><td class="mdescRight">进球有效后球员归位 裁判判定进球有效后，球员回到自己的半场并准备开球。  <a href="#a781f2055cfe196f262fc73211a61220d">更多...</a><br /></td></tr>
+<tr class="separator:a781f2055cfe196f262fc73211a61220d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac40cf0ed2db7815de95b748b0dfd0904"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#ac40cf0ed2db7815de95b748b0dfd0904">redScore</a> = 0</td></tr>
+<tr class="memdesc:ac40cf0ed2db7815de95b748b0dfd0904"><td class="mdescLeft">&#160;</td><td class="mdescRight">红队得分  <a href="#ac40cf0ed2db7815de95b748b0dfd0904">更多...</a><br /></td></tr>
+<tr class="separator:ac40cf0ed2db7815de95b748b0dfd0904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f8df03803e065bd5c9f6806b8fa3906"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_judge.html#a3f8df03803e065bd5c9f6806b8fa3906">blueScore</a> = 0</td></tr>
+<tr class="memdesc:a3f8df03803e065bd5c9f6806b8fa3906"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝队得分  <a href="#a3f8df03803e065bd5c9f6806b8fa3906">更多...</a><br /></td></tr>
+<tr class="separator:a3f8df03803e065bd5c9f6806b8fa3906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>主裁判行为类（需手动操控） </p>
+<p>包含了主裁判的判罚函数，如暂停比赛、终止比赛、任意球、界外球、进球有效等。 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00031">31</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a2bbfbb7e7eaed388d61220292fee1642"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.BlueCornerKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队角球 若红方球员将球碰出红方底线外，或红队间接任意球、界外球直接发入红方门线以内，应判罚蓝队角球开球。 </p>
+<p>寻找最靠近角旗区的球员来发角球</p>
+<p>将球放置在对应一侧的角旗区</p>
+<p>寻找蓝队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00253">253</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4191fb2f87ae7de3af579d92842936c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.BlueFreeKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队任意球 在正常比赛时间内，红队球员在本方禁区外犯规，应判罚蓝队任意球开球。 </p>
+<p>寻找最靠近犯规位置的球员来发任意球</p>
+<p>将球放置在犯规位置</p>
+<p>寻找蓝队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c62ed59d2554d6350737a69b4eb162b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.BlueGoal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队进球有效 足球进入红队门线以内后，裁判可判定蓝队进球有效。 </p>
+<p>得分并更新得分板 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00477">477</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_judge_a7c62ed59d2554d6350737a69b4eb162b_cgraph.png" border="0" usemap="#class_main_judge_a7c62ed59d2554d6350737a69b4eb162b_cgraph" alt=""/></div>
+<map name="class_main_judge_a7c62ed59d2554d6350737a69b4eb162b_cgraph" id="class_main_judge_a7c62ed59d2554d6350737a69b4eb162b_cgraph">
+<area shape="rect" id="node2" href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d" title="进球有效后球员归位 裁判判定进球有效后，球员回到自己的半场并准备开球。 " alt="" coords="195,5,356,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a85e5810d94fa45ed11fd1b439e117920"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.BlueGoalKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队球门球 若红方球员将球碰出蓝方底线外，或红队间接任意球、界外球直接发入蓝方门线以内，应判罚由蓝队球门球开球。 </p>
+<p>将球放置在蓝方小禁区内</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00211">211</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d22dfb145c59b9740f61e0b4d098b6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.BluePenaltyKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队点球 在正常比赛时间内，红方球员在本方禁区内犯规，应判罚蓝队点球。 </p>
+<p>寻找最靠近点球点的球员来发点球</p>
+<p>将球放置在点球点</p>
+<p>寻找蓝队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00325">325</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72630d0aff948da2c698c96d8e87c5de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.BlueThrowIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队界外球 若红方球员将球碰出边线以外，应判罚由蓝队球员在出界位置手抛球掷入界内。 </p>
+<p>寻找最靠近出界位置的球员来投掷界外球</p>
+<p>出界位置不能在底线以外</p>
+<p>将球放置在界外出界位置处</p>
+<p>寻找蓝队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0184904131d885785118506cce10452"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.End </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比赛结束 在常规时间和补时结束后，主裁判可以终止比赛，比赛的记录数据随之存储。 </p>
+<p>存储比赛记录数据 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00409">409</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_judge_af0184904131d885785118506cce10452_cgraph.png" border="0" usemap="#class_main_judge_af0184904131d885785118506cce10452_cgraph" alt=""/></div>
+<map name="class_main_judge_af0184904131d885785118506cce10452_cgraph" id="class_main_judge_af0184904131d885785118506cce10452_cgraph">
+<area shape="rect" id="node2" href="class_main_judge.html#af0e2a9c622b9991bba966a6d468fd06b" title="比赛暂停 主裁判可在任意比赛时间内暂时终止比赛，由任意一方开球继续比赛。 " alt="" coords="164,5,289,32"/><area shape="rect" id="node3" href="class_timer.html#afbc48a54721f552f5625e914a76e96d3" title="记录落盘 比赛结束时，将记录存盘。 " alt="" coords="186,56,267,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad866307def711a9562b072945640625b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.Go </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开球 判罚任意球、点球、球门球、角球、界外球等后，由裁判发出开球信号开球。 </p>
+<p>解除球的固定状态</p>
+<p>重设球员拿到球的时间 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00431">431</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0e2a9c622b9991bba966a6d468fd06b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.Pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比赛暂停 主裁判可在任意比赛时间内暂时终止比赛，由任意一方开球继续比赛。 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00395">395</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_judge_af0e2a9c622b9991bba966a6d468fd06b_icgraph.png" border="0" usemap="#class_main_judge_af0e2a9c622b9991bba966a6d468fd06b_icgraph" alt=""/></div>
+<map name="class_main_judge_af0e2a9c622b9991bba966a6d468fd06b_icgraph" id="class_main_judge_af0e2a9c622b9991bba966a6d468fd06b_icgraph">
+<area shape="rect" id="node2" href="class_main_judge.html#af0184904131d885785118506cce10452" title="比赛结束 在常规时间和补时结束后，主裁判可以终止比赛，比赛的记录数据随之存储。 " alt="" coords="179,5,289,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4459f3bc52fc183f0bc48e77ba742495"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.PlaceBall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>放置球 暂停比赛时，裁判可以根据判罚将足球放置在身边并指定球队开球。 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00420">420</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac272e78742915788adb97d2db4f3a50d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.RedCornerKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队角球 若蓝方球员将球碰出蓝方底线外，或蓝队间接任意球、界外球直接发入蓝方门线以内，应判罚红队角球开球。 </p>
+<p>寻找最靠近角旗区的球员来发角球</p>
+<p>将球放置在对应一侧的角旗区</p>
+<p>寻找红队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00289">289</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93b2f85be11c418ac266d4dc4613b1ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.RedFreeKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队任意球 在正常比赛时间内，蓝队球员在本方禁区外犯规，应判罚红队任意球开球。 </p>
+<p>寻找最靠近犯规位置的球员来发任意球</p>
+<p>将球放置在犯规位置</p>
+<p>寻找红队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00176">176</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5bf747c0424d733381346bbfcd92af06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.RedGoal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队进球有效 足球进入蓝队门线以内后，裁判可判定红队进球有效。 </p>
+<p>得分并更新得分板 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00493">493</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_judge_a5bf747c0424d733381346bbfcd92af06_cgraph.png" border="0" usemap="#class_main_judge_a5bf747c0424d733381346bbfcd92af06_cgraph" alt=""/></div>
+<map name="class_main_judge_a5bf747c0424d733381346bbfcd92af06_cgraph" id="class_main_judge_a5bf747c0424d733381346bbfcd92af06_cgraph">
+<area shape="rect" id="node2" href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d" title="进球有效后球员归位 裁判判定进球有效后，球员回到自己的半场并准备开球。 " alt="" coords="192,5,353,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a51fb4e016794c3b5c9a5105e91d5d855"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.RedGoalKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队球门球 若蓝方球员将球碰出红方底线外，或蓝队间接任意球、界外球直接发入红方门线以内，应判罚由红队球门球开球。 </p>
+<p>将球放置在红方小禁区内</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00232">232</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82e400c0eb2f966c96eacef5ed2011b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.RedPenaltyKick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队点球 在正常比赛时间内，蓝方球员在本方禁区内犯规，应判罚红队点球。 </p>
+<p>寻找最靠近点球点的球员来发点球</p>
+<p>将球放置在点球点</p>
+<p>寻找红队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00360">360</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95931ce72d2ac3280164c32dab8099c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.RedThrowIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队界外球 若蓝方球员将球碰出边线以外，应判罚由红队球员在出界位置手抛球掷入界内。 </p>
+<p>寻找最靠近出界位置的球员来投掷界外球</p>
+<p>出界位置不能在底线以外</p>
+<p>将球放置在界外出界位置处</p>
+<p>寻找红队中与足球距离最小的球员</p>
+<p>球员member和足球的距离</p>
+<p>设置持球者并固定球 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00095">95</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a781f2055cfe196f262fc73211a61220d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainJudge.resetPlayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>进球有效后球员归位 裁判判定进球有效后，球员回到自己的半场并准备开球。 </p>
+<p>重设蓝队重心与持球时间</p>
+<p>重设红队重心与持球时间</p>
+<p>将球放置在中圈并固定 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00455">455</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_judge_a781f2055cfe196f262fc73211a61220d_icgraph.png" border="0" usemap="#class_main_judge_a781f2055cfe196f262fc73211a61220d_icgraph" alt=""/></div>
+<map name="class_main_judge_a781f2055cfe196f262fc73211a61220d_icgraph" id="class_main_judge_a781f2055cfe196f262fc73211a61220d_icgraph">
+<area shape="rect" id="node2" href="class_main_judge.html#a7c62ed59d2554d6350737a69b4eb162b" title="蓝队进球有效 足球进入红队门线以内后，裁判可判定蓝队进球有效。 " alt="" coords="215,5,356,32"/><area shape="rect" id="node3" href="class_main_judge.html#a5bf747c0424d733381346bbfcd92af06" title="红队进球有效 足球进入蓝队门线以内后，裁判可判定红队进球有效。 " alt="" coords="216,56,355,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acf6d4ee28eb16f3af0d44e78ec060a3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ball.html">Ball</a> MainJudge.ball</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>球引用 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="acdd058b3e3e0d2cb98352d252178af4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Button MainJudge.blueGoalButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队进球按钮 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f8df03803e065bd5c9f6806b8fa3906"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MainJudge.blueScore = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>蓝队得分 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a636f19fb1fb0548f0e251a49312668fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Text MainJudge.blueScoreText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队得分板 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2514639e33681209a3d39fa42d32021"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_team.html">Team</a> MainJudge.blueTeam</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝队引用 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a8d05c454841c592d2d9ecc79265e41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_timer.html">Timer</a> MainJudge.judgeTimer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计时器 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a021586c7d7d7f5a77fd4b51d3ba2b1bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Button MainJudge.redGoalButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队进球按钮 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac40cf0ed2db7815de95b748b0dfd0904"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MainJudge.redScore = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>红队得分 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7dbac4b3787e7217fe435edac4a6329"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Text MainJudge.redScoreText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队得分板 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8142ff12c578a36464e1fa4c263ce97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_team.html">Team</a> MainJudge.redTeam</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>红队引用 </p>
+
+<p>在文件 <a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a> 第 <a class="el" href="_main_judge_8cs_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/<a class="el" href="_main_judge_8cs_source.html">MainJudge.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:38 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

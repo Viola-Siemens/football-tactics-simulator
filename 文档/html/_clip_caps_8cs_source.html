@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/ClipCaps.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ClipCaps.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_clip_caps_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [Flags]</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        None            = 0 ,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03aa56d66d7acdce18b9861f4c84bf8f777">Looping</a>         = 1 &lt;&lt; 0,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_extrapolation.html">Extrapolation</a>   = 1 &lt;&lt; 1,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03a44995b2700d04cdf2ff124856f8d9828">ClipIn</a>          = 1 &lt;&lt; 2,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03ac0dbf29e03c234eb356bef3fbc35c42c">SpeedMultiplier</a> = 1 &lt;&lt; 3,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03a84e358c0cfad27b29c41c888167828f3">Blending</a>        = 1 &lt;&lt; 4,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        All = ~None</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html">   48</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html">TimelineClipCapsExtensions</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#ae779058fdad582cc60606f327a336de9">   50</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#ae779058fdad582cc60606f327a336de9">SupportsLooping</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> clip != null &amp;&amp; (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aabbb0474ab15817016cf04e09b2f18b5">clipCaps</a> &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.Looping) != <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.None;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a5579444254128b0dfc79c04ebae377f5">   55</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a5579444254128b0dfc79c04ebae377f5">SupportsExtrapolation</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> clip != null &amp;&amp; (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aabbb0474ab15817016cf04e09b2f18b5">clipCaps</a> &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.Extrapolation) != <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.None;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#ab89b9e87d944de7dbd9c12f1cd6d5f0a">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#ab89b9e87d944de7dbd9c12f1cd6d5f0a">SupportsClipIn</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> clip != null &amp;&amp; (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aabbb0474ab15817016cf04e09b2f18b5">clipCaps</a> &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.ClipIn) != <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.None;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a1943ea18412cabab34af0c771816a000">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a1943ea18412cabab34af0c771816a000">SupportsSpeedMultiplier</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> clip != null &amp;&amp; (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aabbb0474ab15817016cf04e09b2f18b5">clipCaps</a> &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.SpeedMultiplier) != <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.None;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a2112be8d4fccca8873956263ee76d957">   70</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a2112be8d4fccca8873956263ee76d957">SupportsBlending</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> clip != null &amp;&amp; (clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aabbb0474ab15817016cf04e09b2f18b5">clipCaps</a> &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.Blending) != <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>.None;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#aa0685834f0de4456f53b8aeb2c3e8ccf">   75</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#aa0685834f0de4456f53b8aeb2c3e8ccf">HasAll</a>(<span class="keyword">this</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a> caps, <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a> flags)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> (caps &amp; flags) == flags;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a0035e15ed9b1e3be837db66e2afd2122">   80</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a0035e15ed9b1e3be837db66e2afd2122">HasAny</a>(<span class="keyword">this</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a> caps, <a class="code" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a> flags)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> (caps &amp; flags) != 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html_ab89b9e87d944de7dbd9c12f1cd6d5f0a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#ab89b9e87d944de7dbd9c12f1cd6d5f0a">UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsClipIn</a></div><div class="ttdeci">static bool SupportsClipIn(this TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00060">ClipCaps.cs:60</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html_a0035e15ed9b1e3be837db66e2afd2122"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a0035e15ed9b1e3be837db66e2afd2122">UnityEngine.Timeline.TimelineClipCapsExtensions.HasAny</a></div><div class="ttdeci">static bool HasAny(this ClipCaps caps, ClipCaps flags)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00080">ClipCaps.cs:80</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html_a2112be8d4fccca8873956263ee76d957"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a2112be8d4fccca8873956263ee76d957">UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsBlending</a></div><div class="ttdeci">static bool SupportsBlending(this TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00070">ClipCaps.cs:70</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_aabbb0474ab15817016cf04e09b2f18b5"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aabbb0474ab15817016cf04e09b2f18b5">UnityEngine.Timeline.TimelineClip.clipCaps</a></div><div class="ttdeci">ClipCaps clipCaps</div><div class="ttdoc">Returns the capabilities supported by this clip. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00485">TimelineClip.cs:485</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html_a1943ea18412cabab34af0c771816a000"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a1943ea18412cabab34af0c771816a000">UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsSpeedMultiplier</a></div><div class="ttdeci">static bool SupportsSpeedMultiplier(this TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00065">ClipCaps.cs:65</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html">UnityEngine.Timeline.TimelineClipCapsExtensions</a></div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00048">ClipCaps.cs:48</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html_ae779058fdad582cc60606f327a336de9"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#ae779058fdad582cc60606f327a336de9">UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsLooping</a></div><div class="ttdeci">static bool SupportsLooping(this TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00050">ClipCaps.cs:50</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_af0b68b9529bda08f212a5aefa79e7e03a84e358c0cfad27b29c41c888167828f3"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03a84e358c0cfad27b29c41c888167828f3">UnityEngine.Timeline.Blending</a></div><div class="ttdoc">The clip supports blending between clips. </div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_af0b68b9529bda08f212a5aefa79e7e03a44995b2700d04cdf2ff124856f8d9828"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03a44995b2700d04cdf2ff124856f8d9828">UnityEngine.Timeline.ClipIn</a></div><div class="ttdoc">The clip supports initial local times greater than zero. </div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html_a5579444254128b0dfc79c04ebae377f5"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#a5579444254128b0dfc79c04ebae377f5">UnityEngine.Timeline.TimelineClipCapsExtensions.SupportsExtrapolation</a></div><div class="ttdeci">static bool SupportsExtrapolation(this TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00055">ClipCaps.cs:55</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_af0b68b9529bda08f212a5aefa79e7e03aa56d66d7acdce18b9861f4c84bf8f777"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03aa56d66d7acdce18b9861f4c84bf8f777">UnityEngine.Timeline.Looping</a></div><div class="ttdoc">The clip supports loops. </div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_af0b68b9529bda08f212a5aefa79e7e03"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">UnityEngine.Timeline.ClipCaps</a></div><div class="ttdeci">ClipCaps</div><div class="ttdoc">Describes the timeline features supported by a clip </div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00010">ClipCaps.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions_html_aa0685834f0de4456f53b8aeb2c3e8ccf"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html#aa0685834f0de4456f53b8aeb2c3e8ccf">UnityEngine.Timeline.TimelineClipCapsExtensions.HasAll</a></div><div class="ttdeci">static bool HasAll(this ClipCaps caps, ClipCaps flags)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_caps_8cs_source.html#l00075">ClipCaps.cs:75</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_af0b68b9529bda08f212a5aefa79e7e03ac0dbf29e03c234eb356bef3fbc35c42c"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03ac0dbf29e03c234eb356bef3fbc35c42c">UnityEngine.Timeline.SpeedMultiplier</a></div><div class="ttdoc">The clip supports time scaling. </div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_extrapolation_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_extrapolation.html">UnityEngine.Timeline.Extrapolation</a></div><div class="ttdef"><b>Definition:</b> <a href="_extrapolation_8cs_source.html#l00007">Extrapolation.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

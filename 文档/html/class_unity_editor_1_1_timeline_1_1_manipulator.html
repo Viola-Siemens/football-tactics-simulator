@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.Manipulator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html">Manipulator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_manipulator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.Manipulator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.Manipulator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_manipulator__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_manipulator_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_manipulator_inherit__map" id="_unity_editor_8_timeline_8_manipulator_inherit__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clear_selection.html" title="UnityEditor.Timeline.Clear\lSelection" alt="" coords="280,5,452,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_context_menu_manipulator.html" title="UnityEditor.Timeline.Context\lMenuManipulator" alt="" coords="273,71,459,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_drill_into_clip.html" title="UnityEditor.Timeline.Drill\lIntoClip" alt="" coords="284,136,448,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_ease_clip.html" title="UnityEditor.Timeline.EaseClip" alt="" coords="269,202,463,229"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html" title="UnityEditor.Timeline.Inline\lCurveResize" alt="" coords="280,253,452,295"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html" title="UnityEditor.Timeline.Inline\lCurvesShortcutManipulator" alt="" coords="277,319,455,360"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_item_action_shortcut_manipulator.html" title="UnityEditor.Timeline.Item\lActionShortcutManipulator" alt="" coords="279,384,453,425"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_jog.html" title="UnityEditor.Timeline.Jog" alt="" coords="285,450,447,477"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html" title="UnityEditor.Timeline.Playhead\lContextMenu" alt="" coords="268,501,464,543"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_scrub.html" title="UnityEditor.Timeline.Scrub" alt="" coords="278,567,454,594"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html" title="UnityEditor.Timeline.Select\lAndMoveItem" alt="" coords="277,619,455,660"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_time_area_context_menu.html" title="UnityEditor.Timeline.Time\lAreaContextMenu" alt="" coords="281,684,451,725"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_context_menu.html" title="UnityEditor.Timeline.Timeline\lMarkerHeaderContextMenu" alt="" coords="271,749,461,791"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html" title="UnityEditor.Timeline.Timeline\lPanManipulator" alt="" coords="271,815,461,856"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html" title="UnityEditor.Timeline.Timeline\lShortcutManipulator" alt="" coords="271,880,461,921"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html" title="UnityEditor.Timeline.Timeline\lZoomManipulator" alt="" coords="271,945,461,987"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_track_double_click.html" title="UnityEditor.Timeline.Track\lDoubleClick" alt="" coords="279,1011,453,1052"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html" title="UnityEditor.Timeline.Track\lShortcutManipulator" alt="" coords="279,1076,453,1117"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_track_zoom.html" title="UnityEditor.Timeline.TrackZoom" alt="" coords="263,1142,469,1169"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html" title="UnityEditor.Timeline.TrimClip" alt="" coords="271,1193,461,1219"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae9c99cac4b65a9eddae47948daf8a47d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ae9c99cac4b65a9eddae47948daf8a47d">Overlay</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:ae9c99cac4b65a9eddae47948daf8a47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af52da00330a83b17c0397ac8d430fbf0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#af52da00330a83b17c0397ac8d430fbf0">HandleEvent</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:af52da00330a83b17c0397ac8d430fbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a0ad7657a50771c55e1952b9d692c4f78"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a0ad7657a50771c55e1952b9d692c4f78">MouseDown</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a0ad7657a50771c55e1952b9d692c4f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5cb52df91e4ef59637fa149875deb50"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab5cb52df91e4ef59637fa149875deb50">MouseDrag</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:ab5cb52df91e4ef59637fa149875deb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd679235960e80eb7498397ca9081f94"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#abd679235960e80eb7498397ca9081f94">MouseWheel</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:abd679235960e80eb7498397ca9081f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07304a4edbfb45f3e6e75c04b78ef30"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab07304a4edbfb45f3e6e75c04b78ef30">MouseUp</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:ab07304a4edbfb45f3e6e75c04b78ef30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52348cecff079a6427ee7d100cfaf96b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a52348cecff079a6427ee7d100cfaf96b">DoubleClick</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a52348cecff079a6427ee7d100cfaf96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41bf63d4b1c14f70d0153f1ec321d329"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a41bf63d4b1c14f70d0153f1ec321d329">KeyDown</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a41bf63d4b1c14f70d0153f1ec321d329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabad1c805ea0d067d49ac42e93ca0909"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aabad1c805ea0d067d49ac42e93ca0909">KeyUp</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:aabad1c805ea0d067d49ac42e93ca0909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f91209f2b95af263a33b9ad604abf6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a04f91209f2b95af263a33b9ad604abf6">ContextClick</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a04f91209f2b95af263a33b9ad604abf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef99a81de039bff010ddef27640f1281"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#aef99a81de039bff010ddef27640f1281">ValidateCommand</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:aef99a81de039bff010ddef27640f1281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d791e0587e4c31b4279f597d36d07aa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">ExecuteCommand</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a9d791e0587e4c31b4279f597d36d07aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a4212202b247ad855cfcae33c4629c32c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a4212202b247ad855cfcae33c4629c32c">m_Id</a></td></tr>
+<tr class="separator:a4212202b247ad855cfcae33c4629c32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00005">5</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a04f91209f2b95af263a33b9ad604abf6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.ContextClick </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_time_area_context_menu.html#a5407d92e29f009cd9995870f4d2c724a">UnityEditor.Timeline.TimeAreaContextMenu</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_context_menu_manipulator.html#a6849fe489abf6859475f7170988174d5">UnityEditor.Timeline.ContextMenuManipulator</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html#a763afce86972d1981795b9022102c720">UnityEditor.Timeline.PlayheadContextMenu</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_header_context_menu.html#a9164dbcac97d6526e8dfce974ce3afb0">UnityEditor.Timeline.TimelineMarkerHeaderContextMenu</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52348cecff079a6427ee7d100cfaf96b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.DoubleClick </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#acc43f51dc81e97926496cbcd5f3d0056">UnityEditor.Timeline.SelectAndMoveItem</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_double_click.html#acc6f5d23205de0f1056cba2c0edfb325">UnityEditor.Timeline.TrackDoubleClick</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_drill_into_clip.html#a97758ca3d43e76be9cc85116ee8e31e2">UnityEditor.Timeline.DrillIntoClip</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d791e0587e4c31b4279f597d36d07aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.ExecuteCommand </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a6039d0296bdcef54ef9eb35bdd277b6c">UnityEditor.Timeline.InlineCurvesShortcutManipulator</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#acb444591cf652e50a0a43953a463fb2d">UnityEditor.Timeline.TimelineShortcutManipulator</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483">UnityEditor.Timeline.TrackShortcutManipulator</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_item_action_shortcut_manipulator.html#abaf577d380179cb9e3104eb48362aca0">UnityEditor.Timeline.ItemActionShortcutManipulator</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af52da00330a83b17c0397ac8d430fbf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.Manipulator.HandleEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41bf63d4b1c14f70d0153f1ec321d329"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.KeyDown </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a43bada0377ad58e1b5443c47a2f47395">UnityEditor.Timeline.InlineCurvesShortcutManipulator</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aabad1c805ea0d067d49ac42e93ca0909"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.KeyUp </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ad7657a50771c55e1952b9d692c4f78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.MouseDown </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_scrub.html#a064e5f840915f4fba75eb1b85c14c678">UnityEditor.Timeline.Scrub</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#ae000b074a1093c89215db745abd9603f">UnityEditor.Timeline.TimelineZoomManipulator</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad4020ba581b92bfb5b9f7b2cb4f31b08">UnityEditor.Timeline.SelectAndMoveItem</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_context_menu_manipulator.html#a3af32a2571754ce38b232d7aeffb35ab">UnityEditor.Timeline.ContextMenuManipulator</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a6823212fccab2ebd50d1e87c1464bfc1">UnityEditor.Timeline.TrimClip</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_ease_clip.html#a011b63cff1afb49c9613d3596987ef6a">UnityEditor.Timeline.EaseClip</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_jog.html#a18573f6b94bdde4ba7cc8f76b6b10ade">UnityEditor.Timeline.Jog</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a7790a1a38d7a879cfc49dcdf936c8836">UnityEditor.Timeline.InlineCurveResize</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#aabc72a3e2033e02d23f8634f20997e70">UnityEditor.Timeline.TimelinePanManipulator</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_clear_selection.html#ab5032714fa1e7a8a9a601db3f39ff5a7">UnityEditor.Timeline.ClearSelection</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5cb52df91e4ef59637fa149875deb50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.MouseDrag </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_scrub.html#aad3c271560f26d9a01e285bc69527cf9">UnityEditor.Timeline.Scrub</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a584bdd0d566071b66460cdbf2c518833">UnityEditor.Timeline.SelectAndMoveItem</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a83d751d1b59664d3b385c6a5d79898f1">UnityEditor.Timeline.TimelineZoomManipulator</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a802106133f522cd66c514fb41971e1a1">UnityEditor.Timeline.TrimClip</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_ease_clip.html#abc041c1f6de46e2fbe806eedebff895b">UnityEditor.Timeline.EaseClip</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_jog.html#a8df7b7bdccd8eb71df9d6597eb80c06f">UnityEditor.Timeline.Jog</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#ad1078becb4a1d74d9989b32ceee77e99">UnityEditor.Timeline.TimelinePanManipulator</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a0d59d348cd58770a63026dbb5822bbf4">UnityEditor.Timeline.InlineCurveResize</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab07304a4edbfb45f3e6e75c04b78ef30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.MouseUp </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_scrub.html#a77e7edd1a0c8d74727e59f6a65dd5629">UnityEditor.Timeline.Scrub</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#aecb8a0d92c548adb53b2ccc269fac49b">UnityEditor.Timeline.SelectAndMoveItem</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#adb57ef83f30b05cf17f63c8ad3866df5">UnityEditor.Timeline.TrimClip</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_ease_clip.html#af3bd03bd3eef85b9bd1b4230816a1807">UnityEditor.Timeline.EaseClip</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#adad32165528301b602928bfd332d0f0f">UnityEditor.Timeline.InlineCurveResize</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_jog.html#a48a34985aca7b9c9ac37eb2abf202ceb">UnityEditor.Timeline.Jog</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a583be58ebaab178c375f587050241efa">UnityEditor.Timeline.TimelinePanManipulator</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd679235960e80eb7498397ca9081f94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.MouseWheel </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_zoom_manipulator.html#a4214baeb3bcbf2f5df40a632d3bd9d76">UnityEditor.Timeline.TimelineZoomManipulator</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_pan_manipulator.html#a769327792783375dc782b0418962b3ca">UnityEditor.Timeline.TimelinePanManipulator</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_zoom.html#a41aa1a3052459ddc8e164ba4fb545818">UnityEditor.Timeline.TrackZoom</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9c99cac4b65a9eddae47948daf8a47d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEditor.Timeline.Manipulator.Overlay </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#ad5d4f7cc6db5e644894ab1bc095b2dfc">UnityEditor.Timeline.SelectAndMoveItem</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a16c4d7b4822b4f5add14d10b52ac9e9b">UnityEditor.Timeline.TrimClip</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_ease_clip.html#afbbced24668d411456f06aed15d3c37e">UnityEditor.Timeline.EaseClip</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef99a81de039bff010ddef27640f1281"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.Manipulator.ValidateCommand </td>
+          <td>(</td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#a96007fa573663150901cc834c5dff9cb">UnityEditor.Timeline.TimelineShortcutManipulator</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a4212202b247ad855cfcae33c4629c32c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.Manipulator.m_Id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a> 第 <a class="el" href="_manipulator_8cs_source.html#l00007">7</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/<a class="el" href="_manipulator_8cs_source.html">Manipulator.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:49 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

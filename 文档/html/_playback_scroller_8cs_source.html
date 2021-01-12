@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Window/PlaybackScroller.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_08b42967959711a942dabf507b118564.html">Window</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PlaybackScroller.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_playback_scroller_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74f">    5</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74f">PlaybackScrollMode</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        None,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782">Pan</a>,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74fae510cdf33cd497134b47b9316314d4b4">Smooth</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html">   12</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html">PlaybackScroller</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#aaa021cddc6523b23558da7b2146d2ca9">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#aaa021cddc6523b23558da7b2146d2ca9">AutoScroll</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (Event.current.type != <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Layout)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">switch</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a6e9f9c09c975d5a7fcf606e52e98da8c">autoScrollMode</a>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74f">PlaybackScrollMode</a>.Pan:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    DoPanScroll(state);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74f">PlaybackScrollMode</a>.Smooth:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    DoSmoothScroll(state);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#ab4867e58135afe6043a66b10732544c9">   30</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#ab4867e58135afe6043a66b10732544c9">DoSmoothScroll</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ae5f7a7a1d82104095574a6b63ea106e1">playing</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a63e22e0de474b9cbaf150f24694bd004">SetPlayHeadToMiddle</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            state.UpdateLastFrameTime();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#a0737301fb838c08d172c3149b948f587">   38</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#a0737301fb838c08d172c3149b948f587">DoPanScroll</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (!state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ae5f7a7a1d82104095574a6b63ea106e1">playing</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            var paddingDeltaTime = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d">PixelDeltaToDeltaTime</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html">WindowConstants</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a8bd21904d6908558b157dcfa7291c6fe">autoPanPaddingInPixels</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            var showRange = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">timeAreaShownRange</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            var rightBoundForPan = showRange.y - paddingDeltaTime;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">editSequence</a>.<a class="code" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a1b008874fa5e6f943c0a168fd2829156">time</a> &gt; rightBoundForPan)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                var leftBoundForPan = showRange.x + paddingDeltaTime;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                var delta = rightBoundForPan - leftBoundForPan;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a94a4eb656945f98c6c57c6801b507b29">SetTimeAreaShownRange</a>(showRange.x + delta, showRange.y + delta);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_playback_scroller_html_a0737301fb838c08d172c3149b948f587"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#a0737301fb838c08d172c3149b948f587">UnityEditor.Timeline.PlaybackScroller.DoPanScroll</a></div><div class="ttdeci">static void DoPanScroll(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00038">PlaybackScroller.cs:38</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html_a8bd21904d6908558b157dcfa7291c6fe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a8bd21904d6908558b157dcfa7291c6fe">UnityEditor.Timeline.WindowConstants.autoPanPaddingInPixels</a></div><div class="ttdeci">const int autoPanPaddingInPixels</div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00043">WindowConstants.cs:43</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html">UnityEditor.Timeline.WindowConstants</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00003">WindowConstants.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a63e22e0de474b9cbaf150f24694bd004"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a63e22e0de474b9cbaf150f24694bd004">UnityEditor.Timeline.WindowState.SetPlayHeadToMiddle</a></div><div class="ttdeci">void SetPlayHeadToMiddle()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00536">WindowState.cs:536</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_playback_scroller_html_aaa021cddc6523b23558da7b2146d2ca9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#aaa021cddc6523b23558da7b2146d2ca9">UnityEditor.Timeline.PlaybackScroller.AutoScroll</a></div><div class="ttdeci">static void AutoScroll(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00014">PlaybackScroller.cs:14</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74faf6d4a17b27da35c2d90ce13801f36782">UnityEditor.Timeline.Pan</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ae5f7a7a1d82104095574a6b63ea106e1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ae5f7a7a1d82104095574a6b63ea106e1">UnityEditor.Timeline.WindowState.playing</a></div><div class="ttdeci">bool playing</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00257">WindowState.cs:257</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a006919b74b71f9f6511d64b138264d4c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a006919b74b71f9f6511d64b138264d4c">UnityEditor.Timeline.WindowState.editSequence</a></div><div class="ttdeci">ISequenceState editSequence</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00090">WindowState.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a94a4eb656945f98c6c57c6801b507b29"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a94a4eb656945f98c6c57c6801b507b29">UnityEditor.Timeline.WindowState.SetTimeAreaShownRange</a></div><div class="ttdeci">void SetTimeAreaShownRange(float min, float max)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00482">WindowState.cs:482</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_ad7cc22049de06731087eef3858dddbc2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#ad7cc22049de06731087eef3858dddbc2">UnityEditor.Timeline.WindowState.timeAreaShownRange</a></div><div class="ttdeci">Vector2 timeAreaShownRange</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00576">WindowState.cs:576</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a91c84eececcade75bec4fb407dc1e74fae510cdf33cd497134b47b9316314d4b4"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74fae510cdf33cd497134b47b9316314d4b4">UnityEditor.Timeline.Smooth</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_playback_scroller_html_ab4867e58135afe6043a66b10732544c9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html#ab4867e58135afe6043a66b10732544c9">UnityEditor.Timeline.PlaybackScroller.DoSmoothScroll</a></div><div class="ttdeci">static void DoSmoothScroll(WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00030">PlaybackScroller.cs:30</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a6e9f9c09c975d5a7fcf606e52e98da8c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a6e9f9c09c975d5a7fcf606e52e98da8c">UnityEditor.Timeline.WindowState.autoScrollMode</a></div><div class="ttdeci">PlaybackScrollMode autoScrollMode</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00342">WindowState.cs:342</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_timeline_1_1_i_sequence_state_html_a1b008874fa5e6f943c0a168fd2829156"><div class="ttname"><a href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a1b008874fa5e6f943c0a168fd2829156">UnityEditor.Timeline.ISequenceState.time</a></div><div class="ttdeci">double time</div><div class="ttdef"><b>Definition:</b> <a href="_i_sequence_state_8cs_source.html#l00017">ISequenceState.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a931c9a7c353584119fd61853d88f561d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d">UnityEditor.Timeline.WindowState.PixelDeltaToDeltaTime</a></div><div class="ttdeci">float PixelDeltaToDeltaTime(float p)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00814">WindowState.cs:814</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a91c84eececcade75bec4fb407dc1e74f"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a91c84eececcade75bec4fb407dc1e74f">UnityEditor.Timeline.PlaybackScrollMode</a></div><div class="ttdeci">PlaybackScrollMode</div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00005">PlaybackScroller.cs:5</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_playback_scroller_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_playback_scroller.html">UnityEditor.Timeline.PlaybackScroller</a></div><div class="ttdef"><b>Definition:</b> <a href="_playback_scroller_8cs_source.html#l00012">PlaybackScroller.cs:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

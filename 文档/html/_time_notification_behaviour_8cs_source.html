@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Playables/TimeNotificationBehaviour.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_73158b3449abf32b74af6545480b215e.html">Playables</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimeNotificationBehaviour.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_time_notification_behaviour_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">TimeNotificationBehaviour</a> : PlayableBehaviour</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">   13</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a19ce8ad09981d07d988417ad004c1d54">   15</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a19ce8ad09981d07d988417ad004c1d54">time</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a4f756f0f69031ecacb198cd76aa21e93">   16</a></span>&#160;            <span class="keyword">public</span> INotification <a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a4f756f0f69031ecacb198cd76aa21e93">payload</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#ae12cf224e618b85d8242f382f29332ea">   17</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#ae12cf224e618b85d8242f382f29332ea">notificationFired</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#aed46f15702d71d502c3cbd1f0775f7c0">   18</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a> <a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#aed46f15702d71d502c3cbd1f0775f7c0">flags</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> triggerInEditor</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#acab8228b41ea5dd99b1200135e7be488">   21</a></span>&#160;            {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keyword">get</span> { <span class="keywordflow">return</span> (flags &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a>.TriggerInEditMode) != 0; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> prewarm</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a7a7954f1ee894e458a2f431cb3ea0643">   25</a></span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keyword">get</span> { <span class="keywordflow">return</span> (flags &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a>.Retroactive) != 0; }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> triggerOnce</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a39a897ed7cf88240bd25f18056cc2228">   29</a></span>&#160;            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keyword">get</span> { <span class="keywordflow">return</span> (flags &amp; <a class="code" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a>.TriggerOnce) != 0; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a41ad56c9b313c48295dcb6efe83df7cd">   34</a></span>&#160;        readonly List&lt;NotificationEntry&gt; m_Notifications = <span class="keyword">new</span> List&lt;NotificationEntry&gt;();</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ab006d91a9ceb9efd630ba163b2fb17b4">   35</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ab006d91a9ceb9efd630ba163b2fb17b4">m_PreviousTime</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a303a5e2ac8789d22b950fb0704e22288">   36</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a303a5e2ac8789d22b950fb0704e22288">m_NeedSortNotifications</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a4b08faad538604b122ad8f3cf2c5342c">   38</a></span>&#160;        Playable <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a4b08faad538604b122ad8f3cf2c5342c">m_TimeSource</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span> Playable timeSource</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a66137895677979bf7017aa853b61bd96">   47</a></span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            set { m_TimeSource = value; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#abba726150be9160b8285515789e9723f">   58</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> ScriptPlayable&lt;TimeNotificationBehaviour&gt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#abba726150be9160b8285515789e9723f">Create</a>(PlayableGraph graph, <span class="keywordtype">double</span> duration, DirectorWrapMode loopMode)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            var notificationsPlayable = ScriptPlayable&lt;TimeNotificationBehaviour&gt;.Create(graph);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            notificationsPlayable.SetDuration(duration);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            notificationsPlayable.SetTimeWrapMode(loopMode);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            notificationsPlayable.SetPropagateSetTime(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> notificationsPlayable;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a70798078c052162d622c7fa1f4ea80eb">   74</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a70798078c052162d622c7fa1f4ea80eb">AddNotification</a>(<span class="keywordtype">double</span> time, INotification payload, <a class="code" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a> flags = <a class="code" href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">NotificationFlags</a>.Retroactive)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            m_Notifications.Add(<span class="keyword">new</span> <a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                time = time,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                payload = payload,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                flags = flags</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            });</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            m_NeedSortNotifications = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a9a7a533c6baec1d03403a7974a85da8a">   89</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a9a7a533c6baec1d03403a7974a85da8a">OnGraphStart</a>(Playable playable)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            SortNotifications();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; m_Notifications.Count; i++)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                var notification = m_Notifications[i];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                notification.notificationFired = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                m_Notifications[i] = notification;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            m_PreviousTime = playable.GetTime();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a2c97f08062fba7190308d972f3e3b82e">  107</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a2c97f08062fba7190308d972f3e3b82e">OnBehaviourPause</a>(Playable playable, FrameData info)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">if</span> (playable.IsDone())</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                SortNotifications();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">for</span> (var i = 0; i &lt; m_Notifications.Count; i++)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    var e = m_Notifications[i];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="keywordflow">if</span> (!e.notificationFired)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                        var duration = playable.GetDuration();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                        var canTrigger = m_PreviousTime &lt;= e.time &amp;&amp; e.time &lt;= duration;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                        <span class="keywordflow">if</span> (canTrigger)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                            Trigger_internal(playable, info.output, ref e);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                            m_Notifications[i] = e;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac1a03a6dc9d74c476aff5f753be19008">  137</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac1a03a6dc9d74c476aff5f753be19008">PrepareFrame</a>(Playable playable, FrameData info)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="comment">// Never trigger on scrub</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">if</span> (info.evaluationType == FrameData.EvaluationType.Evaluate)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            SyncDurationWithExternalSource(playable);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            SortNotifications();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            var currentTime = playable.GetTime();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="comment">// Fire notifications from previousTime till the end</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (info.timeLooped)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                var duration = playable.GetDuration();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                TriggerNotificationsInRange(m_PreviousTime, duration, info, playable, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                var dx = playable.GetDuration() - m_PreviousTime;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                var nFullTimelines = (int)((info.deltaTime * info.effectiveSpeed - dx) / playable.GetDuration());</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">for</span> (var i = 0; i &lt; nFullTimelines; i++)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                    TriggerNotificationsInRange(0, duration, info, playable, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                TriggerNotificationsInRange(0, currentTime, info, playable, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                var pt = playable.GetTime();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                TriggerNotificationsInRange(m_PreviousTime, pt, info,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    playable, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; m_Notifications.Count; ++i)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                var e = m_Notifications[i];</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keywordflow">if</span> (e.notificationFired &amp;&amp; CanRestoreNotification(e, info, currentTime, m_PreviousTime))</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    Restore_internal(ref e);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    m_Notifications[i] = e;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            m_PreviousTime = playable.GetTime();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aec69f29c6b315cc4a6f0f650d3f032dc">  182</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aec69f29c6b315cc4a6f0f650d3f032dc">SortNotifications</a>()</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordflow">if</span> (m_NeedSortNotifications)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                m_Notifications.Sort((x, y) =&gt; x.time.CompareTo(y.time));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                m_NeedSortNotifications = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aaff33e7ff0e729903e135bb2bf5b309c">  191</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aaff33e7ff0e729903e135bb2bf5b309c">CanRestoreNotification</a>(<a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a> e, FrameData info, <span class="keywordtype">double</span> currentTime, <span class="keywordtype">double</span> previousTime)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">if</span> (e.<a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a39a897ed7cf88240bd25f18056cc2228">triggerOnce</a>)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">if</span> (info.timeLooped)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="comment">//case 1111595: restore the notification if the time is manually set before it</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span> previousTime &gt; currentTime &amp;&amp; currentTime &lt;= e.<a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a19ce8ad09981d07d988417ad004c1d54">time</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac3a34dfd17e01a9dc86c8addb4be19ef">  202</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac3a34dfd17e01a9dc86c8addb4be19ef">TriggerNotificationsInRange</a>(<span class="keywordtype">double</span> start, <span class="keywordtype">double</span> end, FrameData info, Playable playable, <span class="keywordtype">bool</span> checkState)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">if</span> (start &lt;= end)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                var playMode = Application.isPlaying;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordflow">for</span> (var i = 0; i &lt; m_Notifications.Count; i++)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    var e = m_Notifications[i];</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    <span class="keywordflow">if</span> (e.notificationFired &amp;&amp; (checkState || e.triggerOnce))</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    var notificationTime = e.time;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    <span class="keywordflow">if</span> (e.prewarm &amp;&amp; notificationTime &lt; end &amp;&amp; (e.triggerInEditor || playMode))</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                        Trigger_internal(playable, info.output, ref e);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                        m_Notifications[i] = e;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                        <span class="keywordflow">if</span> (notificationTime &lt; start || notificationTime &gt; end)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                        <span class="keywordflow">if</span> (e.triggerInEditor || playMode)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                        {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                            Trigger_internal(playable, info.output, ref e);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                            m_Notifications[i] = e;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a196357085fd9eca1c5814f6b997f7673">  234</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a196357085fd9eca1c5814f6b997f7673">SyncDurationWithExternalSource</a>(Playable playable)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">if</span> (m_TimeSource.IsValid())</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                playable.SetDuration(m_TimeSource.GetDuration());</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                playable.SetTimeWrapMode(m_TimeSource.GetTimeWrapMode());</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a97f1df7a45bdbebe054afefe62b40a06">  243</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a97f1df7a45bdbebe054afefe62b40a06">Trigger_internal</a>(Playable playable, PlayableOutput output,  ref <a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a> e)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            output.PushNotification(playable, e.payload);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            e.notificationFired = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a22e24f02826430b43c5c1d70419269ef">  249</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a22e24f02826430b43c5c1d70419269ef">Restore_internal</a>(ref <a class="code" href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">NotificationEntry</a> e)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            e.notificationFired = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a9a7a533c6baec1d03403a7974a85da8a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a9a7a533c6baec1d03403a7974a85da8a">UnityEngine.Timeline.TimeNotificationBehaviour.OnGraphStart</a></div><div class="ttdeci">override void OnGraphStart(Playable playable)</div><div class="ttdoc">This method is called when the PlayableGraph that owns this PlayableBehaviour starts. </div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00089">TimeNotificationBehaviour.cs:89</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a70798078c052162d622c7fa1f4ea80eb"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a70798078c052162d622c7fa1f4ea80eb">UnityEngine.Timeline.TimeNotificationBehaviour.AddNotification</a></div><div class="ttdeci">void AddNotification(double time, INotification payload, NotificationFlags flags=NotificationFlags.Retroactive)</div><div class="ttdoc">Adds a notification to be sent with flags, at a specific time. </div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00074">TimeNotificationBehaviour.cs:74</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_abba726150be9160b8285515789e9723f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#abba726150be9160b8285515789e9723f">UnityEngine.Timeline.TimeNotificationBehaviour.Create</a></div><div class="ttdeci">static ScriptPlayable&lt; TimeNotificationBehaviour &gt; Create(PlayableGraph graph, double duration, DirectorWrapMode loopMode)</div><div class="ttdoc">Creates and initializes a ScriptPlayable with a TimeNotificationBehaviour. </div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00058">TimeNotificationBehaviour.cs:58</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry_html_ae12cf224e618b85d8242f382f29332ea"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#ae12cf224e618b85d8242f382f29332ea">UnityEngine.Timeline.TimeNotificationBehaviour.NotificationEntry.notificationFired</a></div><div class="ttdeci">bool notificationFired</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00017">TimeNotificationBehaviour.cs:17</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry_html_a39a897ed7cf88240bd25f18056cc2228"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a39a897ed7cf88240bd25f18056cc2228">UnityEngine.Timeline.TimeNotificationBehaviour.NotificationEntry.triggerOnce</a></div><div class="ttdeci">bool triggerOnce</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00029">TimeNotificationBehaviour.cs:29</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_aec69f29c6b315cc4a6f0f650d3f032dc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aec69f29c6b315cc4a6f0f650d3f032dc">UnityEngine.Timeline.TimeNotificationBehaviour.SortNotifications</a></div><div class="ttdeci">void SortNotifications()</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00182">TimeNotificationBehaviour.cs:182</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry_html_a19ce8ad09981d07d988417ad004c1d54"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a19ce8ad09981d07d988417ad004c1d54">UnityEngine.Timeline.TimeNotificationBehaviour.NotificationEntry.time</a></div><div class="ttdeci">double time</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00015">TimeNotificationBehaviour.cs:15</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html">UnityEngine.Timeline.TimeNotificationBehaviour</a></div><div class="ttdoc">Use this PlayableBehaviour to send notifications at a given time. </div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00011">TimeNotificationBehaviour.cs:11</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry_html"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html">UnityEngine.Timeline.TimeNotificationBehaviour.NotificationEntry</a></div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00013">TimeNotificationBehaviour.cs:13</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry_html_aed46f15702d71d502c3cbd1f0775f7c0"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#aed46f15702d71d502c3cbd1f0775f7c0">UnityEngine.Timeline.TimeNotificationBehaviour.NotificationEntry.flags</a></div><div class="ttdeci">NotificationFlags flags</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00018">TimeNotificationBehaviour.cs:18</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_ac3a34dfd17e01a9dc86c8addb4be19ef"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac3a34dfd17e01a9dc86c8addb4be19ef">UnityEngine.Timeline.TimeNotificationBehaviour.TriggerNotificationsInRange</a></div><div class="ttdeci">void TriggerNotificationsInRange(double start, double end, FrameData info, Playable playable, bool checkState)</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00202">TimeNotificationBehaviour.cs:202</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_aaff33e7ff0e729903e135bb2bf5b309c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#aaff33e7ff0e729903e135bb2bf5b309c">UnityEngine.Timeline.TimeNotificationBehaviour.CanRestoreNotification</a></div><div class="ttdeci">static bool CanRestoreNotification(NotificationEntry e, FrameData info, double currentTime, double previousTime)</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00191">TimeNotificationBehaviour.cs:191</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_ab006d91a9ceb9efd630ba163b2fb17b4"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ab006d91a9ceb9efd630ba163b2fb17b4">UnityEngine.Timeline.TimeNotificationBehaviour.m_PreviousTime</a></div><div class="ttdeci">double m_PreviousTime</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00035">TimeNotificationBehaviour.cs:35</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_ac1a03a6dc9d74c476aff5f753be19008"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#ac1a03a6dc9d74c476aff5f753be19008">UnityEngine.Timeline.TimeNotificationBehaviour.PrepareFrame</a></div><div class="ttdeci">override void PrepareFrame(Playable playable, FrameData info)</div><div class="ttdoc">This method is called during the PrepareFrame phase of the PlayableGraph. </div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00137">TimeNotificationBehaviour.cs:137</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html_a6ffec03980068c41a328fb2480de321f"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html#a6ffec03980068c41a328fb2480de321f">UnityEngine.Timeline.NotificationFlags</a></div><div class="ttdeci">NotificationFlags</div><div class="ttdoc">Use these flags to specify the notification behaviour. </div><div class="ttdef"><b>Definition:</b> <a href="_notification_flags_8cs_source.html#l00011">NotificationFlags.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a303a5e2ac8789d22b950fb0704e22288"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a303a5e2ac8789d22b950fb0704e22288">UnityEngine.Timeline.TimeNotificationBehaviour.m_NeedSortNotifications</a></div><div class="ttdeci">bool m_NeedSortNotifications</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00036">TimeNotificationBehaviour.cs:36</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a97f1df7a45bdbebe054afefe62b40a06"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a97f1df7a45bdbebe054afefe62b40a06">UnityEngine.Timeline.TimeNotificationBehaviour.Trigger_internal</a></div><div class="ttdeci">static void Trigger_internal(Playable playable, PlayableOutput output, ref NotificationEntry e)</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00243">TimeNotificationBehaviour.cs:243</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a4b08faad538604b122ad8f3cf2c5342c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a4b08faad538604b122ad8f3cf2c5342c">UnityEngine.Timeline.TimeNotificationBehaviour.m_TimeSource</a></div><div class="ttdeci">Playable m_TimeSource</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00038">TimeNotificationBehaviour.cs:38</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a196357085fd9eca1c5814f6b997f7673"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a196357085fd9eca1c5814f6b997f7673">UnityEngine.Timeline.TimeNotificationBehaviour.SyncDurationWithExternalSource</a></div><div class="ttdeci">void SyncDurationWithExternalSource(Playable playable)</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00234">TimeNotificationBehaviour.cs:234</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a22e24f02826430b43c5c1d70419269ef"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a22e24f02826430b43c5c1d70419269ef">UnityEngine.Timeline.TimeNotificationBehaviour.Restore_internal</a></div><div class="ttdeci">static void Restore_internal(ref NotificationEntry e)</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00249">TimeNotificationBehaviour.cs:249</a></div></div>
+<div class="ttc" id="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry_html_a4f756f0f69031ecacb198cd76aa21e93"><div class="ttname"><a href="struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html#a4f756f0f69031ecacb198cd76aa21e93">UnityEngine.Timeline.TimeNotificationBehaviour.NotificationEntry.payload</a></div><div class="ttdeci">INotification payload</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00016">TimeNotificationBehaviour.cs:16</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour_html_a2c97f08062fba7190308d972f3e3b82e"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html#a2c97f08062fba7190308d972f3e3b82e">UnityEngine.Timeline.TimeNotificationBehaviour.OnBehaviourPause</a></div><div class="ttdeci">override void OnBehaviourPause(Playable playable, FrameData info)</div><div class="ttdoc">This method is called when the Playable play state is changed to PlayState.Paused ...</div><div class="ttdef"><b>Definition:</b> <a href="_time_notification_behaviour_8cs_source.html#l00107">TimeNotificationBehaviour.cs:107</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:36 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

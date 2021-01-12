@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/TimelineClipUnion.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_8d0d6b838e6896df5d8de1eafe8aaa93.html">treeview</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineClipUnion.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_clip_union_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor_internal.html">UnityEditorInternal</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html">TimelineClipUnion</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#aa251924964cefc910a876a27d2862ba2">   10</a></span>&#160;        List&lt;TimelineClipGUI&gt; m_Members = <span class="keyword">new</span> List&lt;TimelineClipGUI&gt;();</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#ab3ca7d8b724882a3f3540f5361667c8a">   11</a></span>&#160;        Rect <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#ab3ca7d8b724882a3f3540f5361667c8a">m_BoundingRect</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a9bf2a7e4f5c3dc186a6f3a63386cac8c">   12</a></span>&#160;        Rect <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a9bf2a7e4f5c3dc186a6f3a63386cac8c">m_Union</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a5383eedb310ca43474c68dac429f9449">   13</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a5383eedb310ca43474c68dac429f9449">m_Start</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a6ce7d52666963a73ed46300a078ffa41">   14</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a6ce7d52666963a73ed46300a078ffa41">m_Duration</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#aeebbe2103f0a1c2eef82144f8949d702">   15</a></span>&#160;        <span class="keywordtype">bool</span> m_InitUnionRect = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#af390618d2fe0ce36ace47537ba51c980">   17</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#af390618d2fe0ce36ace47537ba51c980">Add</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> clip)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            m_Members.Add(clip);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (m_Members.Count == 1)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                m_BoundingRect = clip.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a16b1dac51d15d08c5eed6e18c032c3ae">clippedRect</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                m_BoundingRect = Encompass(m_BoundingRect, clip.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3a673d30e1636ba3306220babfdb7cff">rect</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#aa0624c5714189eb72c170208e64a99f7">   30</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#aa0624c5714189eb72c170208e64a99f7">Draw</a>(Rect parentRect, <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (m_InitUnionRect)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                m_Start = m_Members.OrderBy(c =&gt; c.clip.start).First().clip.start;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                m_Duration = m_Members.Sum(c =&gt; c.clip.duration);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                m_InitUnionRect = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            m_Union = <span class="keyword">new</span> Rect((<span class="keywordtype">float</span>)(m_Start) * state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aa233d4c4bbf2972c9f6b0536470722c9">timeAreaScale</a>.x, 0, (<span class="keywordtype">float</span>)m_Duration * state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aa233d4c4bbf2972c9f6b0536470722c9">timeAreaScale</a>.x, 0);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">// transform clipRect into pixel-space</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            m_Union.xMin += state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aaf29cc494fee2ed3d42a1ebd2ca46133">timeAreaTranslation</a>.x + parentRect.x;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            m_Union.xMax += state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aaf29cc494fee2ed3d42a1ebd2ca46133">timeAreaTranslation</a>.x + parentRect.x;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            m_Union.y = parentRect.y + 4.0f;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            m_Union.height = parentRect.height - 8.0f;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="comment">// calculate clipped rect</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (m_Union.x &lt; parentRect.xMin)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                var overflow = parentRect.xMin - m_Union.x;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                m_Union.x = parentRect.xMin;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                m_Union.width -= overflow;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">// bail out if completely clipped</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span> (m_Union.xMax &lt; parentRect.xMin)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (m_Union.xMin &gt; parentRect.xMax)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            EditorGUI.DrawRect(m_Union, <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">customSkin</a>.colorClipUnion);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a42bfdea2b388845806ecf0735a47391b">   64</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> List&lt;TimelineClipUnion&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a42bfdea2b388845806ecf0735a47391b">Build</a>(List&lt;TimelineClipGUI&gt; clips)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            var unions = <span class="keyword">new</span> List&lt;TimelineClipUnion&gt;();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (clips == null)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">return</span> unions;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html">TimelineClipUnion</a> currentUnion = null;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">foreach</span> (var c <span class="keywordflow">in</span> clips)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span> (currentUnion == null)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    currentUnion = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html">TimelineClipUnion</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    currentUnion.Add(c);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    unions.Add(currentUnion);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    Rect result;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keywordflow">if</span> (Intersection(c.rect, currentUnion.m_BoundingRect, out result))</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        currentUnion.Add(c);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        currentUnion = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html">TimelineClipUnion</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        currentUnion.Add(c);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        unions.Add(currentUnion);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">return</span> unions;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#af1b18e2e42ed097620d8f02ccc8efe9a">   98</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Rect <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#af1b18e2e42ed097620d8f02ccc8efe9a">Encompass</a>(Rect a, Rect b)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            Rect newRect = a;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            newRect.xMin = Mathf.Min(a.xMin, b.xMin);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            newRect.yMin = Mathf.Min(a.yMin, b.yMin);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            newRect.xMax = Mathf.Max(a.xMax, b.xMax);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            newRect.yMax = Mathf.Max(a.yMax, b.yMax);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> newRect;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a7f8f4ceb911b66b0e23a6b2a7dac1557">  108</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a7f8f4ceb911b66b0e23a6b2a7dac1557">Intersection</a>(Rect r1, Rect r2, out Rect intersection)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">if</span> (!r1.Overlaps(r2) &amp;&amp; !r2.Overlaps(r1))</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                intersection = <span class="keyword">new</span> Rect(0, 0, 0, 0);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordtype">float</span> left = Mathf.Max(r1.xMin, r2.xMin);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordtype">float</span> top = Mathf.Max(r1.yMin, r2.yMin);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordtype">float</span> right = Mathf.Min(r1.xMax, r2.xMax);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordtype">float</span> bottom = Mathf.Min(r1.yMax, r2.yMax);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            intersection = <span class="keyword">new</span> Rect(left, top, right - left, bottom - top);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a04488ba3eee7c6d9dda98d4998bd7b93"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">UnityEditor.Timeline.DirectorStyles.customSkin</a></div><div class="ttdeci">DirectorNamedColor customSkin</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00148">DirectorStyles.cs:148</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_aa0624c5714189eb72c170208e64a99f7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#aa0624c5714189eb72c170208e64a99f7">UnityEditor.Timeline.TimelineClipUnion.Draw</a></div><div class="ttdeci">void Draw(Rect parentRect, WindowState state)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00030">TimelineClipUnion.cs:30</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_a6ce7d52666963a73ed46300a078ffa41"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a6ce7d52666963a73ed46300a078ffa41">UnityEditor.Timeline.TimelineClipUnion.m_Duration</a></div><div class="ttdeci">double m_Duration</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00014">TimelineClipUnion.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_ab3ca7d8b724882a3f3540f5361667c8a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#ab3ca7d8b724882a3f3540f5361667c8a">UnityEditor.Timeline.TimelineClipUnion.m_BoundingRect</a></div><div class="ttdeci">Rect m_BoundingRect</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00011">TimelineClipUnion.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_a7f8f4ceb911b66b0e23a6b2a7dac1557"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a7f8f4ceb911b66b0e23a6b2a7dac1557">UnityEditor.Timeline.TimelineClipUnion.Intersection</a></div><div class="ttdeci">static bool Intersection(Rect r1, Rect r2, out Rect intersection)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00108">TimelineClipUnion.cs:108</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_html_a16b1dac51d15d08c5eed6e18c032c3ae"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a16b1dac51d15d08c5eed6e18c032c3ae">UnityEditor.Timeline.TimelineClipGUI.clippedRect</a></div><div class="ttdeci">Rect clippedRect</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_g_u_i_8cs_source.html#l00149">TimelineClipGUI.cs:149</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_a9bf2a7e4f5c3dc186a6f3a63386cac8c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a9bf2a7e4f5c3dc186a6f3a63386cac8c">UnityEditor.Timeline.TimelineClipUnion.m_Union</a></div><div class="ttdeci">Rect m_Union</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00012">TimelineClipUnion.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_af1b18e2e42ed097620d8f02ccc8efe9a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#af1b18e2e42ed097620d8f02ccc8efe9a">UnityEditor.Timeline.TimelineClipUnion.Encompass</a></div><div class="ttdeci">static Rect Encompass(Rect a, Rect b)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00098">TimelineClipUnion.cs:98</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_aa233d4c4bbf2972c9f6b0536470722c9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#aa233d4c4bbf2972c9f6b0536470722c9">UnityEditor.Timeline.WindowState.timeAreaScale</a></div><div class="ttdeci">Vector2 timeAreaScale</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00592">WindowState.cs:592</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a15e95e53dca9e97cb48ed6e7b8f98cbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">UnityEditor.Timeline.DirectorStyles.Instance</a></div><div class="ttdeci">static DirectorStyles Instance</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00124">DirectorStyles.cs:124</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_a42bfdea2b388845806ecf0735a47391b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a42bfdea2b388845806ecf0735a47391b">UnityEditor.Timeline.TimelineClipUnion.Build</a></div><div class="ttdeci">static List&lt; TimelineClipUnion &gt; Build(List&lt; TimelineClipGUI &gt; clips)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00064">TimelineClipUnion.cs:64</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_aaf29cc494fee2ed3d42a1ebd2ca46133"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#aaf29cc494fee2ed3d42a1ebd2ca46133">UnityEditor.Timeline.WindowState.timeAreaTranslation</a></div><div class="ttdeci">Vector2 timeAreaTranslation</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00587">WindowState.cs:587</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html">UnityEditor.Timeline.TimelineClipUnion</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00008">TimelineClipUnion.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_html_a3a673d30e1636ba3306220babfdb7cff"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3a673d30e1636ba3306220babfdb7cff">UnityEditor.Timeline.TimelineItemGUI.rect</a></div><div class="ttdeci">Rect rect</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_item_g_u_i_8cs_source.html#l00069">TimelineItemGUI.cs:69</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">UnityEditor.Timeline.TimelineClipGUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_g_u_i_8cs_source.html#l00010">TimelineClipGUI.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_af390618d2fe0ce36ace47537ba51c980"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#af390618d2fe0ce36ace47537ba51c980">UnityEditor.Timeline.TimelineClipUnion.Add</a></div><div class="ttdeci">void Add(TimelineClipGUI clip)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00017">TimelineClipUnion.cs:17</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="namespace_unity_editor_internal_html"><div class="ttname"><a href="namespace_unity_editor_internal.html">UnityEditorInternal</a></div><div class="ttdef"><b>Definition:</b> <a href="_binding_tree_view_data_source_8cs_source.html#l00008">BindingTreeViewDataSource.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_union_html_a5383eedb310ca43474c68dac429f9449"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a5383eedb310ca43474c68dac429f9449">UnityEditor.Timeline.TimelineClipUnion.m_Start</a></div><div class="ttdeci">double m_Start</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_union_8cs_source.html#l00013">TimelineClipUnion.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

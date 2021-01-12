@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.PropertyCollector类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html">PropertyCollector</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_property_collector-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.PropertyCollector类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.PropertyCollector 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_property_collector__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_property_collector_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_property_collector_inherit__map" id="_unity_editor_8_timeline_8_property_collector_inherit__map">
+<area shape="rect" id="node2" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html" title="Interface used to inform the Timeline Editor about potential property modifications that may occur wh..." alt="" coords="38,5,163,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.PropertyCollector 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_property_collector__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_property_collector_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_property_collector_coll__map" id="_unity_editor_8_timeline_8_property_collector_coll__map">
+<area shape="rect" id="node2" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html" title="Interface used to inform the Timeline Editor about potential property modifications that may occur wh..." alt="" coords="38,5,163,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a71b18b03f8b8bd036a73a9c56ca7210e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a71b18b03f8b8bd036a73a9c56ca7210e">Reset</a> ()</td></tr>
+<tr class="separator:a71b18b03f8b8bd036a73a9c56ca7210e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0835886f6882e33744472b2847bbde2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#ab0835886f6882e33744472b2847bbde2">Clear</a> ()</td></tr>
+<tr class="separator:ab0835886f6882e33744472b2847bbde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b227238401338388b6f4459dd5f27a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#ab5b227238401338388b6f4459dd5f27a">PushActiveGameObject</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> gameObject)</td></tr>
+<tr class="memdesc:ab5b227238401338388b6f4459dd5f27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active game object for subsequent property modifications.  <a href="#ab5b227238401338388b6f4459dd5f27a">更多...</a><br /></td></tr>
+<tr class="separator:ab5b227238401338388b6f4459dd5f27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f656fe19fecf5488f971ece019e7b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#ac4f656fe19fecf5488f971ece019e7b2">PopActiveGameObject</a> ()</td></tr>
+<tr class="memdesc:ac4f656fe19fecf5488f971ece019e7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the active GameObject from the modification stack, restoring the previous value.  <a href="#ac4f656fe19fecf5488f971ece019e7b2">更多...</a><br /></td></tr>
+<tr class="separator:ac4f656fe19fecf5488f971ece019e7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02e02f16034470896787ad399ea7672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#aa02e02f16034470896787ad399ea7672">AddFromClip</a> (AnimationClip clip)</td></tr>
+<tr class="memdesc:aa02e02f16034470896787ad399ea7672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add properties modified by an animation clip.  <a href="#aa02e02f16034470896787ad399ea7672">更多...</a><br /></td></tr>
+<tr class="separator:aa02e02f16034470896787ad399ea7672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f592406628dc1894a1ccd344b921ce9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a8f592406628dc1894a1ccd344b921ce9">AddFromClips</a> (IEnumerable&lt; AnimationClip &gt; clips)</td></tr>
+<tr class="memdesc:a8f592406628dc1894a1ccd344b921ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications specified by a list of animation clips.  <a href="#a8f592406628dc1894a1ccd344b921ce9">更多...</a><br /></td></tr>
+<tr class="separator:a8f592406628dc1894a1ccd344b921ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9cf1dad78c32d30799e3a535bd1866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a0a9cf1dad78c32d30799e3a535bd1866">AddFromName&lt; T &gt;</a> (string name)</td></tr>
+<tr class="memdesc:a0a9cf1dad78c32d30799e3a535bd1866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications using the serialized property name.  <a href="#a0a9cf1dad78c32d30799e3a535bd1866">更多...</a><br /></td></tr>
+<tr class="separator:a0a9cf1dad78c32d30799e3a535bd1866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85672151510d273d663d55f03a35cc31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a85672151510d273d663d55f03a35cc31">AddFromName</a> (string name)</td></tr>
+<tr class="memdesc:a85672151510d273d663d55f03a35cc31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications using the serialized property name.  <a href="#a85672151510d273d663d55f03a35cc31">更多...</a><br /></td></tr>
+<tr class="separator:a85672151510d273d663d55f03a35cc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61775f9d575f3559945dfc39d8625f03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a61775f9d575f3559945dfc39d8625f03">AddFromClip</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> obj, AnimationClip clip)</td></tr>
+<tr class="memdesc:a61775f9d575f3559945dfc39d8625f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications modified by an animation clip.  <a href="#a61775f9d575f3559945dfc39d8625f03">更多...</a><br /></td></tr>
+<tr class="separator:a61775f9d575f3559945dfc39d8625f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8744e95c363a831ad2a79c7f1d4941a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#ae8744e95c363a831ad2a79c7f1d4941a">AddFromClips</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> animatorRoot, IEnumerable&lt; AnimationClip &gt; clips)</td></tr>
+<tr class="memdesc:ae8744e95c363a831ad2a79c7f1d4941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications specified by a list of animation clips.  <a href="#ae8744e95c363a831ad2a79c7f1d4941a">更多...</a><br /></td></tr>
+<tr class="separator:ae8744e95c363a831ad2a79c7f1d4941a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9960f60c432ed087b8e69c1197ad02d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a9960f60c432ed087b8e69c1197ad02d4">AddFromName&lt; T &gt;</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> obj, string name)</td></tr>
+<tr class="memdesc:a9960f60c432ed087b8e69c1197ad02d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications using the serialized property name.  <a href="#a9960f60c432ed087b8e69c1197ad02d4">更多...</a><br /></td></tr>
+<tr class="separator:a9960f60c432ed087b8e69c1197ad02d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb66a74937c7e700e52c3fda30b86234"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#aeb66a74937c7e700e52c3fda30b86234">AddFromName</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> obj, string name)</td></tr>
+<tr class="memdesc:aeb66a74937c7e700e52c3fda30b86234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications using the serialized property name.  <a href="#aeb66a74937c7e700e52c3fda30b86234">更多...</a><br /></td></tr>
+<tr class="separator:aeb66a74937c7e700e52c3fda30b86234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ac8c444e273aba5b05cdb20aa68b37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a24ac8c444e273aba5b05cdb20aa68b37">AddFromName</a> (<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a> component, string name)</td></tr>
+<tr class="memdesc:a24ac8c444e273aba5b05cdb20aa68b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications using the serialized property name.  <a href="#a24ac8c444e273aba5b05cdb20aa68b37">更多...</a><br /></td></tr>
+<tr class="separator:a24ac8c444e273aba5b05cdb20aa68b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64331449441b675cb293ea62be699760"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a64331449441b675cb293ea62be699760">AddFromComponent</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> obj, <a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a> component)</td></tr>
+<tr class="memdesc:a64331449441b675cb293ea62be699760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all serializable properties on a component to be under preview control.  <a href="#a64331449441b675cb293ea62be699760">更多...</a><br /></td></tr>
+<tr class="separator:a64331449441b675cb293ea62be699760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba331321c880c041592211be5219ed62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#aba331321c880c041592211be5219ed62">AddObjectProperties</a> (<a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> obj, AnimationClip clip)</td></tr>
+<tr class="memdesc:aba331321c880c041592211be5219ed62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add property modifications modified by an animation clip.  <a href="#aba331321c880c041592211be5219ed62">更多...</a><br /></td></tr>
+<tr class="separator:aba331321c880c041592211be5219ed62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a93c0124d93ab9319be3ef8440b4aa5c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a93c0124d93ab9319be3ef8440b4aa5c1">AddPropertiesFromClip</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> go, AnimationClip clip)</td></tr>
+<tr class="separator:a93c0124d93ab9319be3ef8440b4aa5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4f11e7322ce5d2930c1979d0e9741b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a2d4f11e7322ce5d2930c1979d0e9741b">AddSerializedPlayableModifications</a> (IPlayableAsset asset, AnimationClip clip)</td></tr>
+<tr class="separator:a2d4f11e7322ce5d2930c1979d0e9741b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a18e45e20e44e398eaa9477678e62b4d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a18e45e20e44e398eaa9477678e62b4d4">AddPropertiesFromName</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> go, string property)</td></tr>
+<tr class="separator:a18e45e20e44e398eaa9477678e62b4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44785b894e49d58732a6ac50e40d225b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a44785b894e49d58732a6ac50e40d225b">AddPropertiesFromName</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> go, Type compType, string property)</td></tr>
+<tr class="separator:a44785b894e49d58732a6ac50e40d225b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f9cc352dc6f922d32a3317fede2077"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#ad4f9cc352dc6f922d32a3317fede2077">AddPropertyModification</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> obj, string propertyName)</td></tr>
+<tr class="separator:ad4f9cc352dc6f922d32a3317fede2077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174a3ea8aceb2d1f4623a6dc736bdab1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a174a3ea8aceb2d1f4623a6dc736bdab1">AddPropertyModification</a> (<a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a> comp, string name)</td></tr>
+<tr class="separator:a174a3ea8aceb2d1f4623a6dc736bdab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8c448b47860f7fd7123981b83196eece"><td class="memItemLeft" align="right" valign="top">readonly Stack&lt; <a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a8c448b47860f7fd7123981b83196eece">m_ObjectStack</a> = new Stack&lt;<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&gt;()</td></tr>
+<tr class="separator:a8c448b47860f7fd7123981b83196eece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00011">11</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aa02e02f16034470896787ad399ea7672"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromClip </td>
+          <td>(</td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add properties modified by an animation clip. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clip</td><td>The animation clip that contains the properties</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a27aea0bc726093b14a609f2a1d20a0a3">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61775f9d575f3559945dfc39d8625f03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromClip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications modified by an animation clip. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The GameObject where the properties exist</td></tr>
+    <tr><td class="paramname">clip</td><td>The animation clip that contains the properties</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a68f2e3d857a921a31b6e49ac5c8f3dab">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00066">66</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f592406628dc1894a1ccd344b921ce9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromClips </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; AnimationClip &gt;&#160;</td>
+          <td class="paramname"><em>clips</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications specified by a list of animation clips. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clips</td><td>The list of animation clips used to determine which property modifications to apply.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a23107e40e97f13ac0a24baf86eca8a8a">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8744e95c363a831ad2a79c7f1d4941a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromClips </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; AnimationClip &gt;&#160;</td>
+          <td class="paramname"><em>clips</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications specified by a list of animation clips. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The gameObject that will be animated</td></tr>
+    <tr><td class="paramname">clips</td><td>The list of animation clips used to determine which property modifications to apply.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#ae92589fa2e362e03a91275f3d34e3eaa">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00072">72</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64331449441b675cb293ea62be699760"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&#160;</td>
+          <td class="paramname"><em>component</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set all serializable properties on a component to be under preview control. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The gameObject where the properties exist</td></tr>
+    <tr><td class="paramname">component</td><td>The component to set in preview mode</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a5fbcb39769ff4e16d392fd7e0389cf2a">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00098">98</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_property_collector_a64331449441b675cb293ea62be699760_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_property_collector_a64331449441b675cb293ea62be699760_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_property_collector_a64331449441b675cb293ea62be699760_cgraph" id="class_unity_editor_1_1_timeline_1_1_property_collector_a64331449441b675cb293ea62be699760_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#ab0b2466f13dc6634d4a4475df5054587" title="UnityEditor.Timeline.Animated\lParameterUtility.IsTypeAnimatable" alt="" coords="249,5,472,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a85672151510d273d663d55f03a35cc31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications using the serialized property name. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the serialized property</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method uses the most recent gameObject from PushActiveGameObject </p>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a16d43ced11cef5522db23c48166837c3">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00059">59</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb66a74937c7e700e52c3fda30b86234"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications using the serialized property name. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The gameObject where the properties exist</td></tr>
+    <tr><td class="paramname">name</td><td>The name of the serialized property</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#ad78b57e1cdf1b2edaafe8fe975051678">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00086">86</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a24ac8c444e273aba5b05cdb20aa68b37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddFromName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications using the serialized property name. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the serialized property</td></tr>
+    <tr><td class="paramname">component</td><td>The component where the properties exist</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a74ec1fa576fa4af3508f7f00065ee83e">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00092">92</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a9cf1dad78c32d30799e3a535bd1866"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a85672151510d273d663d55f03a35cc31">UnityEditor.Timeline.PropertyCollector.AddFromName</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications using the serialized property name. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the serialized property</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the component the property exists on</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method uses the most recent gameObject from PushActiveGameObject </p>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a3841715e89b209970003ebef780046a3">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a></em></td><td>&#160;</td></tr>
+</table>
+</dl>
+</div>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9960f60c432ed087b8e69c1197ad02d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_unity_editor_1_1_timeline_1_1_property_collector.html#a85672151510d273d663d55f03a35cc31">UnityEditor.Timeline.PropertyCollector.AddFromName</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications using the serialized property name. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the serialized property</td></tr>
+    <tr><td class="paramname">obj</td><td>The gameObject where the properties exist</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the component the property exists on</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&gt; </p>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#ad62d73f334a6e8bd349e30f7acf06f7b">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a></em></td><td>&#160;</td></tr>
+</table>
+</dl>
+</div>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00080">80</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba331321c880c041592211be5219ed62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddObjectProperties </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add property modifications modified by an animation clip. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The Object where the properties exist</td></tr>
+    <tr><td class="paramname">clip</td><td>The animation clip that contains the properties</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a050dad3b15c3415e073ab43a377f86af">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00145">145</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93c0124d93ab9319be3ef8440b4aa5c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddPropertiesFromClip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00118">118</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18e45e20e44e398eaa9477678e62b4d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.PropertyCollector.AddPropertiesFromName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>property</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44785b894e49d58732a6ac50e40d225b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.PropertyCollector.AddPropertiesFromName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>compType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>property</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00134">134</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4f9cc352dc6f922d32a3317fede2077"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.PropertyCollector.AddPropertyModification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>propertyName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00199">199</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a174a3ea8aceb2d1f4623a6dc736bdab1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.PropertyCollector.AddPropertyModification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>&#160;</td>
+          <td class="paramname"><em>comp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00208">208</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d4f11e7322ce5d2930c1979d0e9741b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.AddSerializedPlayableModifications </td>
+          <td>(</td>
+          <td class="paramtype">IPlayableAsset&#160;</td>
+          <td class="paramname"><em>asset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00169">169</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_property_collector_a2d4f11e7322ce5d2930c1979d0e9741b_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_property_collector_a2d4f11e7322ce5d2930c1979d0e9741b_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_property_collector_a2d4f11e7322ce5d2930c1979d0e9741b_cgraph" id="class_unity_editor_1_1_timeline_1_1_property_collector_a2d4f11e7322ce5d2930c1979d0e9741b_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85" title="UnityEditor.Timeline.Animation\lClipCurveCache.GetCurveInfo" alt="" coords="348,5,548,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_utility.html#a323c5b861c6895d3e25eec87900d8c44" title="UnityEditor.Timeline.Animated\lParameterUtility.GetScriptPlayable\lFields" alt="" coords="336,71,560,127"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_cache.html#afe5467b6cf45a4cadf5354af77a86831" title="UnityEditor.Timeline.Animated\lParameterCache.TryGetScriptPlayable\lFields" alt="" coords="608,31,855,87"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_animated_parameter_cache.html#ab5c9857189f349828a8a1f8c8050b074" title="UnityEditor.Timeline.Animated\lParameterCache.SetScriptPlayable\lFields" alt="" coords="618,111,845,167"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0835886f6882e33744472b2847bbde2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4f656fe19fecf5488f971ece019e7b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.PopActiveGameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the active GameObject from the modification stack, restoring the previous value. </p>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a415a7fc99a620aab7ff232d2c82d7c41">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5b227238401338388b6f4459dd5f27a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.PushActiveGameObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&#160;</td>
+          <td class="paramname"><em>gameObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the active game object for subsequent property modifications. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameObject</td><td>The GameObject to push.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_property_collector.html#a5e5d568dd663e3e30d6a7588ffbf1828">UnityEngine.Timeline.IPropertyCollector</a>.</p>
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71b18b03f8b8bd036a73a9c56ca7210e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.PropertyCollector.Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a8c448b47860f7fd7123981b83196eece"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Stack&lt;<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&gt; UnityEditor.Timeline.PropertyCollector.m_ObjectStack = new Stack&lt;<a class="el" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a> 第 <a class="el" href="_property_collector_8cs_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/<a class="el" href="_property_collector_8cs_source.html">PropertyCollector.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:50 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

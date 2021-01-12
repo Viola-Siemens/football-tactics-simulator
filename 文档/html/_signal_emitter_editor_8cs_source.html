@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Signals/SignalEmitterEditor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_2c300a7ab6bcbaf4a24a50e447574c73.html">Signals</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SignalEmitterEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_signal_emitter_editor_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline.Signals</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    [CustomTimelineEditor(typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">SignalEmitter</a>))]</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor.html">SignalEmitterEditor</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_marker_editor.html">MarkerEditor</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor.html#a0da5ee601a8cd157eef82ac76c77ec32">    9</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">string</span> MissingAssetError = LocalizationDatabase.GetLocalizedString(<span class="stringliteral">&quot;No signal assigned&quot;</span>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor.html#aef9949489c99c7a3afd42ba535433b87">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor.html#aef9949489c99c7a3afd42ba535433b87">GetMarkerOptions</a>(<a class="code" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            var options = base.GetMarkerOptions(marker);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">SignalEmitter</a> emitter = (<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">SignalEmitter</a>)marker;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">if</span> (emitter.<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html#ad9d9fe892c82da506b947ac7b39401d6">asset</a> != null)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                options.tooltip = emitter.<a class="code" href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html#ad9d9fe892c82da506b947ac7b39401d6">asset</a>.name;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                options.errorText = MissingAssetError;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> options;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_signal_emitter_html_ad9d9fe892c82da506b947ac7b39401d6"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html#ad9d9fe892c82da506b947ac7b39401d6">UnityEngine.Timeline.SignalEmitter.asset</a></div><div class="ttdeci">SignalAsset asset</div><div class="ttdoc">Asset representing the signal being emitted. </div><div class="ttdef"><b>Definition:</b> <a href="_signal_emitter_8cs_source.html#l00045">SignalEmitter.cs:45</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_signal_emitter_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_signal_emitter.html">UnityEngine.Timeline.SignalEmitter</a></div><div class="ttdoc">Marker that emits a signal to a SignalReceiver. </div><div class="ttdef"><b>Definition:</b> <a href="_signal_emitter_8cs_source.html#l00017">SignalEmitter.cs:17</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor_html_aef9949489c99c7a3afd42ba535433b87"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor.html#aef9949489c99c7a3afd42ba535433b87">UnityEditor.Timeline.Signals.SignalEmitterEditor.GetMarkerOptions</a></div><div class="ttdeci">override MarkerDrawOptions GetMarkerOptions(IMarker marker)</div><div class="ttdoc">Implement this method to override the default options for drawing a marker. </div><div class="ttdef"><b>Definition:</b> <a href="_signal_emitter_editor_8cs_source.html#l00011">SignalEmitterEditor.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_emitter_editor.html">UnityEditor.Timeline.Signals.SignalEmitterEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_signal_emitter_editor_8cs_source.html#l00007">SignalEmitterEditor.cs:7</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_marker_draw_options_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">UnityEditor.Timeline.MarkerDrawOptions</a></div><div class="ttdoc">The user-defined options for drawing a marker. </div><div class="ttdef"><b>Definition:</b> <a href="_marker_editor_8cs_source.html#l00033">MarkerEditor.cs:33</a></div></div>
+<div class="ttc" id="interface_unity_engine_1_1_timeline_1_1_i_marker_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">UnityEngine.Timeline.IMarker</a></div><div class="ttdoc">Interface implemented by markers. </div><div class="ttdef"><b>Definition:</b> <a href="_i_marker_8cs_source.html#l00010">IMarker.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_marker_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_marker_editor.html">UnityEditor.Timeline.MarkerEditor</a></div><div class="ttdoc">Use this class to customize marker types in the TimelineEditor. </div><div class="ttdef"><b>Definition:</b> <a href="_marker_editor_8cs_source.html#l00156">MarkerEditor.cs:156</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

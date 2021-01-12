@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/KeyTraverser.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_0724e84c20f94a0e0cb26eb6bc9f3803.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">KeyTraverser.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_key_traverser_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespace_unity_editor_1_1_timeline_1_1_utilities.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline.Utilities</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html">KeyTraverser</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a6b78e8cea37429f6c453709a24fe4483">   11</a></span>&#160;        <span class="keywordtype">float</span>[] <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a6b78e8cea37429f6c453709a24fe4483">m_KeyCache</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#acd5255b7c27f6436b07a36b3355cd900">   12</a></span>&#160;        <span class="keywordtype">int</span> m_DirtyStamp = -1;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a3763056ded5cbe73daee8ff3114636b7">   13</a></span>&#160;        <span class="keywordtype">int</span> m_LastHash = -1;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#af92de63df3fcbb7c642a12396b93b626">   14</a></span>&#160;        readonly <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#af92de63df3fcbb7c642a12396b93b626">m_Asset</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a931679a948eb45e67c85327e49b8e0f9">   15</a></span>&#160;        readonly <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a931679a948eb45e67c85327e49b8e0f9">m_Epsilon</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a03ff29adabf8c0d9ceafa2fb1536f77f">   16</a></span>&#160;        <span class="keywordtype">int</span> m_LastIndex = -1;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> lastIndex</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a74f7fe8dad5d7c698b33e2e7b4336f4b">   19</a></span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_LastIndex; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#abf9c2b7a498fe4fe224a01bbef3f0a4d">   23</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;float&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#abf9c2b7a498fe4fe224a01bbef3f0a4d">GetClipKeyTimes</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">if</span> (clip == null || clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a06f2a996dccd69d4babddd9eaac27153">animationClip</a> == null || clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a06f2a996dccd69d4babddd9eaac27153">animationClip</a>.empty)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">float</span>[0];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85">GetCurveInfo</a>(clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a06f2a996dccd69d4babddd9eaac27153">animationClip</a>).<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a94960a3321dea1ebb3f277e62cf6a6dd">keyTimes</a>.</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                Select(k =&gt; (<span class="keywordtype">float</span>)clip.FromLocalTimeUnbound(k)).    <span class="comment">// convert to sequence time</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                Where(k =&gt; k &gt;= clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a> &amp;&amp; k &lt;= clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a397cab8b8496d8ffbb62feafad8ce720">end</a>);    <span class="comment">// remove non visible keys</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aec9e5e48fb6911300201dfc6dacb6670">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;float&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aec9e5e48fb6911300201dfc6dacb6670">GetTrackKeyTimes</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> track)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> (track != null)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">inClipMode</a>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">return</span> track.clips.Where(c =&gt; c.recordable).</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        SelectMany(x =&gt; GetClipKeyTimes(x));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a> != null &amp;&amp; !track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a>.empty)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85">GetCurveInfo</a>(track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a>).<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a94960a3321dea1ebb3f277e62cf6a6dd">keyTimes</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">float</span>[0];</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aadd0b8d3db231677adcb113db573016a">   46</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aadd0b8d3db231677adcb113db573016a">CalcAnimClipHash</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordtype">int</span> hash = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span> (asset != null)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> animTrack = asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span> (animTrack != null)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordflow">for</span> (var i = 0; i != animTrack.clips.Length; ++i)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        hash ^= (animTrack.clips[i]).Hash();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">foreach</span> (var subTrack <span class="keywordflow">in</span> asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#aa2031fe30133f8c28e14483768ce8e29">GetChildTracks</a>())</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <span class="keywordflow">if</span> (subTrack != null)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        hash ^= CalcAnimClipHash(subTrack);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">int</span> CalcAnimClipHash(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> asset)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">int</span> hash = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">foreach</span> (var t <span class="keywordflow">in</span> asset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a0fc27a36491f7c52a91c791665b83809">GetRootTracks</a>())</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span> (t != null)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    hash ^= CalcAnimClipHash(t);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#ad63c887a682316e36372f4085209111f">   79</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#ad63c887a682316e36372f4085209111f">RebuildKeyCache</a>()</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            m_KeyCache = m_Asset.flattenedTracks.Where(x =&gt; (x as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a>) != null)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                .Cast&lt;AnimationTrack&gt;()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                .SelectMany(t =&gt; GetTrackKeyTimes(t)).</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                OrderBy(x =&gt; x).ToArray();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (m_KeyCache.Length &gt; 0)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordtype">float</span>[] unique = <span class="keyword">new</span> <span class="keywordtype">float</span>[m_KeyCache.Length];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                unique[0] = m_KeyCache[0];</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; m_KeyCache.Length; i++)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">if</span> (m_KeyCache[i] - unique[index] &gt; m_Epsilon)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        index++;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        unique[index] = m_KeyCache[i];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                m_KeyCache = unique;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                Array.Resize(ref m_KeyCache, index + 1);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#ab7e169bad67e8c85a8829614e6378b23">  104</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#ab7e169bad67e8c85a8829614e6378b23">KeyTraverser</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline, <span class="keywordtype">float</span> epsilon)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            m_Asset = timeline;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            m_Epsilon = epsilon;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a54a317621bf193525a34048b914fdeb8">  110</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a54a317621bf193525a34048b914fdeb8">CheckCache</a>(<span class="keywordtype">int</span> dirtyStamp)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordtype">int</span> hash = CalcAnimClipHash(m_Asset);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">if</span> (dirtyStamp != m_DirtyStamp || hash != m_LastHash)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                RebuildKeyCache();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                m_DirtyStamp = dirtyStamp;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                m_LastHash = hash;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a821b05c198f595cfc667783cb28b2385">  121</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a821b05c198f595cfc667783cb28b2385">GetNextKey</a>(<span class="keywordtype">float</span> key, <span class="keywordtype">int</span> dirtyStamp)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            CheckCache(dirtyStamp);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">if</span> (m_KeyCache.Length &gt; 0)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordflow">if</span> (key &lt; m_KeyCache.Last() - m_Epsilon)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    <span class="keywordflow">if</span> (key &gt; m_KeyCache[0] - m_Epsilon)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                        <span class="keywordtype">float</span> t = key + m_Epsilon;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                        <span class="comment">// binary search</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                        <span class="keywordtype">int</span> max = m_KeyCache.Length - 1;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                        <span class="keywordtype">int</span> min = 0;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                        <span class="keywordflow">while</span> (max - min &gt; 1)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                            <span class="keywordtype">int</span> imid = (min + max) / 2;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                            <span class="keywordflow">if</span> (t &gt; m_KeyCache[imid])</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                min = imid;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                max = imid;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                        m_LastIndex = max;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                        <span class="keywordflow">return</span> m_KeyCache[max];</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    m_LastIndex = 0;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    <span class="keywordflow">return</span> m_KeyCache[0];</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="keywordflow">if</span> (key &lt; m_KeyCache.Last() + m_Epsilon)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    m_LastIndex = m_KeyCache.Length - 1;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    <span class="keywordflow">return</span> Mathf.Max(key, m_KeyCache.Last());</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            m_LastIndex = -1;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">return</span> key;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aefd986808b9e312759b88eec4ec3e810">  159</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aefd986808b9e312759b88eec4ec3e810">GetPrevKey</a>(<span class="keywordtype">float</span> key, <span class="keywordtype">int</span> dirtyStamp)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            CheckCache(dirtyStamp);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">if</span> (m_KeyCache.Length &gt; 0)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">if</span> (key &gt; m_KeyCache[0] + m_Epsilon)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    <span class="keywordflow">if</span> (key &lt; m_KeyCache.Last() + m_Epsilon)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                        <span class="keywordtype">float</span> t = key - m_Epsilon;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        <span class="comment">// binary search</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                        <span class="keywordtype">int</span> max = m_KeyCache.Length - 1;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        <span class="keywordtype">int</span> min = 0;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                        <span class="keywordflow">while</span> (max - min &gt; 1)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                            <span class="keywordtype">int</span> imid = (min + max) / 2;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                            <span class="keywordflow">if</span> (t &lt; m_KeyCache[imid])</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                max = imid;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                min = imid;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                        m_LastIndex = min;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                        <span class="keywordflow">return</span> m_KeyCache[min];</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    m_LastIndex = m_KeyCache.Length - 1;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    <span class="keywordflow">return</span> m_KeyCache.Last();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span> (key &gt;= m_KeyCache[0] - m_Epsilon)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    m_LastIndex = 0;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    <span class="keywordflow">return</span> Mathf.Min(key, m_KeyCache[0]);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            m_LastIndex = -1;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">return</span> key;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aece4845a29c3fe38e2be2d42228b5316">  197</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aece4845a29c3fe38e2be2d42228b5316">GetKeyCount</a>(<span class="keywordtype">int</span> dirtyStamp)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            CheckCache(dirtyStamp);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">return</span> m_KeyCache.Length;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_aadd0b8d3db231677adcb113db573016a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aadd0b8d3db231677adcb113db573016a">UnityEditor.Timeline.Utilities.KeyTraverser.CalcAnimClipHash</a></div><div class="ttdeci">static int CalcAnimClipHash(TrackAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00046">KeyTraverser.cs:46</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_abf9c2b7a498fe4fe224a01bbef3f0a4d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#abf9c2b7a498fe4fe224a01bbef3f0a4d">UnityEditor.Timeline.Utilities.KeyTraverser.GetClipKeyTimes</a></div><div class="ttdeci">static IEnumerable&lt; float &gt; GetClipKeyTimes(TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00023">KeyTraverser.cs:23</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_ab7e169bad67e8c85a8829614e6378b23"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#ab7e169bad67e8c85a8829614e6378b23">UnityEditor.Timeline.Utilities.KeyTraverser.KeyTraverser</a></div><div class="ttdeci">KeyTraverser(TimelineAsset timeline, float epsilon)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00104">KeyTraverser.cs:104</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_a54a317621bf193525a34048b914fdeb8"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a54a317621bf193525a34048b914fdeb8">UnityEditor.Timeline.Utilities.KeyTraverser.CheckCache</a></div><div class="ttdeci">void CheckCache(int dirtyStamp)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00110">KeyTraverser.cs:110</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html">UnityEngine.Timeline.AnimationTrack</a></div><div class="ttdoc">A Timeline track used for playing back animations on an Animator. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00124">AnimationTrack.cs:124</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aa1135c27853312d233b0b711e4b849c3"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">UnityEngine.Timeline.AnimationTrack.inClipMode</a></div><div class="ttdeci">bool inClipMode</div><div class="ttdoc">Specifies whether the Animation Track has clips, or is in infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00300">AnimationTrack.cs:300</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a06f2a996dccd69d4babddd9eaac27153"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a06f2a996dccd69d4babddd9eaac27153">UnityEngine.Timeline.TimelineClip.animationClip</a></div><div class="ttdeci">AnimationClip animationClip</div><div class="ttdoc">If this contains an animation asset, returns the animation clip attached. Otherwise returns null...</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00602">TimelineClip.cs:602</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_aefd986808b9e312759b88eec4ec3e810"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aefd986808b9e312759b88eec4ec3e810">UnityEditor.Timeline.Utilities.KeyTraverser.GetPrevKey</a></div><div class="ttdeci">float GetPrevKey(float key, int dirtyStamp)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00159">KeyTraverser.cs:159</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_aece4845a29c3fe38e2be2d42228b5316"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aece4845a29c3fe38e2be2d42228b5316">UnityEditor.Timeline.Utilities.KeyTraverser.GetKeyCount</a></div><div class="ttdeci">int GetKeyCount(int dirtyStamp)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00197">KeyTraverser.cs:197</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_a821b05c198f595cfc667783cb28b2385"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a821b05c198f595cfc667783cb28b2385">UnityEditor.Timeline.Utilities.KeyTraverser.GetNextKey</a></div><div class="ttdeci">float GetNextKey(float key, int dirtyStamp)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00121">KeyTraverser.cs:121</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_a931679a948eb45e67c85327e49b8e0f9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a931679a948eb45e67c85327e49b8e0f9">UnityEditor.Timeline.Utilities.KeyTraverser.m_Epsilon</a></div><div class="ttdeci">readonly float m_Epsilon</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00015">KeyTraverser.cs:15</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_a19f259b1ca5d2bed08eddcfcd356be85"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85">UnityEditor.Timeline.AnimationClipCurveCache.GetCurveInfo</a></div><div class="ttdeci">AnimationClipCurveInfo GetCurveInfo(AnimationClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00324">AnimationClipCurveCache.cs:324</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_af92de63df3fcbb7c642a12396b93b626"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#af92de63df3fcbb7c642a12396b93b626">UnityEditor.Timeline.Utilities.KeyTraverser.m_Asset</a></div><div class="ttdeci">readonly TimelineAsset m_Asset</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00014">KeyTraverser.cs:14</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info_html_a94960a3321dea1ebb3f277e62cf6a6dd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a94960a3321dea1ebb3f277e62cf6a6dd">UnityEditor.Timeline.AnimationClipCurveInfo.keyTimes</a></div><div class="ttdeci">float[] keyTimes</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00087">AnimationClipCurveCache.cs:87</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_ac847d1affde0438d85a8fdc5af4f644f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">UnityEngine.Timeline.TimelineClip.start</a></div><div class="ttdeci">double start</div><div class="ttdoc">The start time, in seconds, of the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00173">TimelineClip.cs:173</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_a79d05c439c5628c4f5ffa5a49d793e4e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">UnityEditor.Timeline.AnimationClipCurveCache.Instance</a></div><div class="ttdeci">static AnimationClipCurveCache Instance</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00277">AnimationClipCurveCache.cs:277</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a509c42d901a0823adde4c587fc18978c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">UnityEngine.Timeline.AnimationTrack.infiniteClip</a></div><div class="ttdeci">AnimationClip infiniteClip</div><div class="ttdoc">An AnimationClip storing the data for an infinite track. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00249">AnimationTrack.cs:249</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_a6b78e8cea37429f6c453709a24fe4483"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a6b78e8cea37429f6c453709a24fe4483">UnityEditor.Timeline.Utilities.KeyTraverser.m_KeyCache</a></div><div class="ttdeci">float[] m_KeyCache</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00011">KeyTraverser.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html">UnityEditor.Timeline.Utilities.KeyTraverser</a></div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00009">KeyTraverser.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_a0fc27a36491f7c52a91c791665b83809"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a0fc27a36491f7c52a91c791665b83809">UnityEngine.Timeline.TimelineAsset.GetRootTracks</a></div><div class="ttdeci">IEnumerable&lt; TrackAsset &gt; GetRootTracks()</div><div class="ttdoc">Get an enumerable list of all root tracks. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_8cs_source.html#l00203">TimelineAsset.cs:203</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a397cab8b8496d8ffbb62feafad8ce720"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a397cab8b8496d8ffbb62feafad8ce720">UnityEngine.Timeline.TimelineClip.end</a></div><div class="ttdeci">double end</div><div class="ttdoc">The end time, in seconds of the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00204">TimelineClip.cs:204</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_aa2031fe30133f8c28e14483768ce8e29"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#aa2031fe30133f8c28e14483768ce8e29">UnityEngine.Timeline.TrackAsset.GetChildTracks</a></div><div class="ttdeci">IEnumerable&lt; TrackAsset &gt; GetChildTracks()</div><div class="ttdoc">The list of subtracks or child tracks attached to this track. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00292">TrackAsset.cs:292</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_ad63c887a682316e36372f4085209111f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#ad63c887a682316e36372f4085209111f">UnityEditor.Timeline.Utilities.KeyTraverser.RebuildKeyCache</a></div><div class="ttdeci">void RebuildKeyCache()</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00079">KeyTraverser.cs:79</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_html_aec9e5e48fb6911300201dfc6dacb6670"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aec9e5e48fb6911300201dfc6dacb6670">UnityEditor.Timeline.Utilities.KeyTraverser.GetTrackKeyTimes</a></div><div class="ttdeci">static IEnumerable&lt; float &gt; GetTrackKeyTimes(AnimationTrack track)</div><div class="ttdef"><b>Definition:</b> <a href="_key_traverser_8cs_source.html#l00033">KeyTraverser.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">UnityEditor.Timeline.AnimationClipCurveCache</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00269">AnimationClipCurveCache.cs:269</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

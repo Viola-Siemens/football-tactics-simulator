@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Assets/Ball/Ball.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7ab79e34423b4813ae06b29f761e99f3.html">Assets</a></li><li class="navelem"><a class="el" href="dir_10baf983486c0c5e4c3d9baf2c9ecf2e.html">Ball</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Ball.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_ball_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_ball.html">   14</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_ball.html">Ball</a> : MonoBehaviour {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    [HideInInspector]</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">   16</a></span>&#160;    <span class="keyword">public</span> Rigidbody <a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>;           </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    [HideInInspector]</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_ball.html#abd237a48f850192d316a07913016b606">   19</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_player.html">Player</a> <a class="code" href="class_ball.html#abd237a48f850192d316a07913016b606">preTouch</a> = null;  </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    [HideInInspector]</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_ball.html#a7fed8e49f01e122dfa765f2efffe014f">   21</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_player.html">Player</a> <a class="code" href="class_ball.html#a7fed8e49f01e122dfa765f2efffe014f">curTouch</a> = null;  </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    [HideInInspector]</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_ball.html#acca0df907cc2fcf0bc84a3cccc4f55e5">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_ball.html#acca0df907cc2fcf0bc84a3cccc4f55e5">isKick</a>;             </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    [HideInInspector]</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_ball.html#aaaf5a162009600f159ce4ebf29e3fd71">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_ball.html#aaaf5a162009600f159ce4ebf29e3fd71">kickBallTime</a>;      </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//  public Vector3 debugForce;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">   30</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a>;               </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_ball.html#a94a8fb7b593a419523a48d198214e323">   31</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_ball.html#a94a8fb7b593a419523a48d198214e323">hasGo</a>;              </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">   32</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">GoalReset</a>;          </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_ball.html#a8c01669ff303c1de83ef95db96dd555f">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ball.html#a8c01669ff303c1de83ef95db96dd555f">Awake</a>() {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        rig = GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//  rig.AddForce(debugForce);</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        isGo = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        hasGo = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        GoalReset = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_ball.html#a416edd5ceab970ca26f787363e7ccb22">   52</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ball.html#a416edd5ceab970ca26f787363e7ccb22">Update</a>() {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        rig.AddForce(Vector3.Cross(rig.angularVelocity, rig.velocity) * 0.0001f);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        rig.velocity *= 0.9996f;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        rig.angularVelocity *= 0.9995f;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="class_ball_html_a8c01669ff303c1de83ef95db96dd555f"><div class="ttname"><a href="class_ball.html#a8c01669ff303c1de83ef95db96dd555f">Ball.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdoc">唤醒时调用 插件被唤醒时，重设发球信号，并获取足球刚体的引用。 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00038">Ball.cs:38</a></div></div>
+<div class="ttc" id="class_ball_html_abd237a48f850192d316a07913016b606"><div class="ttname"><a href="class_ball.html#abd237a48f850192d316a07913016b606">Ball.preTouch</a></div><div class="ttdeci">Player preTouch</div><div class="ttdoc">上一个接触者 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00019">Ball.cs:19</a></div></div>
+<div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdoc">足球信息与控制类 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00014">Ball.cs:14</a></div></div>
+<div class="ttc" id="class_ball_html_aaaf5a162009600f159ce4ebf29e3fd71"><div class="ttname"><a href="class_ball.html#aaaf5a162009600f159ce4ebf29e3fd71">Ball.kickBallTime</a></div><div class="ttdeci">float kickBallTime</div><div class="ttdoc">最后一次被踢出的时间 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00026">Ball.cs:26</a></div></div>
+<div class="ttc" id="class_ball_html_a7fed8e49f01e122dfa765f2efffe014f"><div class="ttname"><a href="class_ball.html#a7fed8e49f01e122dfa765f2efffe014f">Ball.curTouch</a></div><div class="ttdeci">Player curTouch</div><div class="ttdoc">最后一个接触者 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00021">Ball.cs:21</a></div></div>
+<div class="ttc" id="class_ball_html_a94a8fb7b593a419523a48d198214e323"><div class="ttname"><a href="class_ball.html#a94a8fb7b593a419523a48d198214e323">Ball.hasGo</a></div><div class="ttdeci">bool hasGo</div><div class="ttdoc">已经发球 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00031">Ball.cs:31</a></div></div>
+<div class="ttc" id="class_ball_html_a5f57adca854d97c66f9029d64974480d"><div class="ttname"><a href="class_ball.html#a5f57adca854d97c66f9029d64974480d">Ball.isGo</a></div><div class="ttdeci">bool isGo</div><div class="ttdoc">发球指令 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00030">Ball.cs:30</a></div></div>
+<div class="ttc" id="class_ball_html_a9bd849d2cb2974671bea8ccab6a6d5b8"><div class="ttname"><a href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">Ball.rig</a></div><div class="ttdeci">Rigidbody rig</div><div class="ttdoc">足球刚体引用 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00016">Ball.cs:16</a></div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">球员类（含预测模型） </div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00143">Player.cs:143</a></div></div>
+<div class="ttc" id="class_ball_html_a0e6bbdd093263e193f2d0b30d9e7b1d6"><div class="ttname"><a href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">Ball.GoalReset</a></div><div class="ttdeci">bool GoalReset</div><div class="ttdoc">中圈开球 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00032">Ball.cs:32</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_ball_html_acca0df907cc2fcf0bc84a3cccc4f55e5"><div class="ttname"><a href="class_ball.html#acca0df907cc2fcf0bc84a3cccc4f55e5">Ball.isKick</a></div><div class="ttdeci">bool isKick</div><div class="ttdoc">攻方门将是否无法用手接球 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00023">Ball.cs:23</a></div></div>
+<div class="ttc" id="class_ball_html_a416edd5ceab970ca26f787363e7ccb22"><div class="ttname"><a href="class_ball.html#a416edd5ceab970ca26f787363e7ccb22">Ball.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">每帧调用 程序运行时的每一帧根据足球旋转更新足球运动。 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00052">Ball.cs:52</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Runtime/Activation/ActivationMixerPlayable.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_3bd52762fe1b3e21363469eb7abd1149.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_32953ca09b6b6e02451a6853d5de8ea4.html">Activation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ActivationMixerPlayable.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_activation_mixer_playable_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html">    5</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html">ActivationMixerPlayable</a> : PlayableBehaviour</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a0b53d44c193564fdccb5e5abf47aa075">    7</a></span>&#160;        <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a0b53d44c193564fdccb5e5abf47aa075">m_PostPlaybackState</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#ad98bcca18aec8804e86c516c347677be">    8</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#ad98bcca18aec8804e86c516c347677be">m_BoundGameObjectInitialStateIsActive</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#ab9dc440a6f6dced801f68aa6bb3123b8">   10</a></span>&#160;        <span class="keyword">private</span> GameObject <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#ab9dc440a6f6dced801f68aa6bb3123b8">m_BoundGameObject</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#adaf1e16b22ebbffe4855d4e218e272cc">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> ScriptPlayable&lt;ActivationMixerPlayable&gt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#adaf1e16b22ebbffe4855d4e218e272cc">Create</a>(PlayableGraph graph, <span class="keywordtype">int</span> inputCount)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> ScriptPlayable&lt;ActivationMixerPlayable&gt;.Create(graph, inputCount);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a> postPlaybackState</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a15c21182dbf09d4c5d630da014a79dcf">   19</a></span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_PostPlaybackState; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            set { m_PostPlaybackState = value; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a71dce47e2c4a94df9452dad65a0067af">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a71dce47e2c4a94df9452dad65a0067af">OnPlayableDestroy</a>(Playable playable)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (m_BoundGameObject == null)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">switch</span> (m_PostPlaybackState)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a>.Active:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    m_BoundGameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a>.Inactive:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    m_BoundGameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a>.Revert:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    m_BoundGameObject.SetActive(m_BoundGameObjectInitialStateIsActive);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">PostPlaybackState</a>.LeaveAsIs:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a134c73ba31b625bd01de490d81e9ee87">   46</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a134c73ba31b625bd01de490d81e9ee87">ProcessFrame</a>(Playable playable, FrameData info, <span class="keywordtype">object</span> playerData)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (m_BoundGameObject == null)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                m_BoundGameObject = playerData as GameObject;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                m_BoundGameObjectInitialStateIsActive = m_BoundGameObject != null &amp;&amp; m_BoundGameObject.activeSelf;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (m_BoundGameObject == null)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordtype">int</span> inputCount = playable.GetInputCount();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordtype">bool</span> hasInput = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; inputCount; i++)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">if</span> (playable.GetInputWeight(i) &gt; 0)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    hasInput = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            m_BoundGameObject.SetActive(hasInput);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html">UnityEngine.Timeline.ActivationMixerPlayable</a></div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00005">ActivationMixerPlayable.cs:5</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_a71dce47e2c4a94df9452dad65a0067af"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a71dce47e2c4a94df9452dad65a0067af">UnityEngine.Timeline.ActivationMixerPlayable.OnPlayableDestroy</a></div><div class="ttdeci">override void OnPlayableDestroy(Playable playable)</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00024">ActivationMixerPlayable.cs:24</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html_a94c69bfc06c3d82628b16a29d189672f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html#a94c69bfc06c3d82628b16a29d189672f">UnityEngine.Timeline.ActivationTrack.PostPlaybackState</a></div><div class="ttdeci">PostPlaybackState</div><div class="ttdoc">Specify what state to leave the GameObject in after the Timeline has finished playing. </div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00022">ActivationTrack.cs:22</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_a0b53d44c193564fdccb5e5abf47aa075"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a0b53d44c193564fdccb5e5abf47aa075">UnityEngine.Timeline.ActivationMixerPlayable.m_PostPlaybackState</a></div><div class="ttdeci">ActivationTrack.PostPlaybackState m_PostPlaybackState</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00007">ActivationMixerPlayable.cs:7</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_adaf1e16b22ebbffe4855d4e218e272cc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#adaf1e16b22ebbffe4855d4e218e272cc">UnityEngine.Timeline.ActivationMixerPlayable.Create</a></div><div class="ttdeci">static ScriptPlayable&lt; ActivationMixerPlayable &gt; Create(PlayableGraph graph, int inputCount)</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00013">ActivationMixerPlayable.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_a134c73ba31b625bd01de490d81e9ee87"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#a134c73ba31b625bd01de490d81e9ee87">UnityEngine.Timeline.ActivationMixerPlayable.ProcessFrame</a></div><div class="ttdeci">override void ProcessFrame(Playable playable, FrameData info, object playerData)</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00046">ActivationMixerPlayable.cs:46</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html">UnityEngine.Timeline.ActivationTrack</a></div><div class="ttdoc">Track that can be used to control the active state of a GameObject. </div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00013">ActivationTrack.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_ab9dc440a6f6dced801f68aa6bb3123b8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#ab9dc440a6f6dced801f68aa6bb3123b8">UnityEngine.Timeline.ActivationMixerPlayable.m_BoundGameObject</a></div><div class="ttdeci">GameObject m_BoundGameObject</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00010">ActivationMixerPlayable.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable_html_ad98bcca18aec8804e86c516c347677be"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_mixer_playable.html#ad98bcca18aec8804e86c516c347677be">UnityEngine.Timeline.ActivationMixerPlayable.m_BoundGameObjectInitialStateIsActive</a></div><div class="ttdeci">bool m_BoundGameObjectInitialStateIsActive</div><div class="ttdef"><b>Definition:</b> <a href="_activation_mixer_playable_8cs_source.html#l00008">ActivationMixerPlayable.cs:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

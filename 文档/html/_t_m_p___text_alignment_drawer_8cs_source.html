@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/TMP_TextAlignmentDrawer.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_TextAlignmentDrawer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___text_alignment_drawer_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a>.EditorUtilities</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    [CustomPropertyDrawer(typeof(<a class="code" href="namespace_t_m_pro.html#a1dd743b58b1fd4057c00e4b98ab86301">TextAlignmentOptions</a>))]</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html">TMP_TextAlignmentDrawer</a> : PropertyDrawer</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a3fe746460fd17bf9cfc29d00da788c08">   10</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_AlignmentButtonWidth = 24;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a83c5d8656dfca7f46265751f3d0bcc1e">   11</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_AlignmentButtonHeight = 20;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a088f05095c99bfb605d0dc5faf511e96">   12</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_WideViewWidth = 504;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a78331bb6e942bfa8a2c00466f927425f">   13</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_ControlsSpacing = 6;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#abdd87d6abe9c73b729aef61f2fe4bc09">   14</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_GroupWidth = k_AlignmentButtonWidth * 6;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#ae8df102ef4b711b60c6c0b9fb4078779">   15</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">int</span> k_TextAlignmentHash = <span class="stringliteral">&quot;DoTextAligmentControl&quot;</span>.GetHashCode();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#acd1c836254135b1b0f9ea94990d4af13">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">float</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#acd1c836254135b1b0f9ea94990d4af13">GetPropertyHeight</a>(SerializedProperty property, GUIContent label)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">return</span> EditorGUIUtility.currentViewWidth &gt; k_WideViewWidth ? k_AlignmentButtonHeight : k_AlignmentButtonHeight * 2 + 3;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#acfd35e3ae82b2bfc1804c30a76a353cb">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#acfd35e3ae82b2bfc1804c30a76a353cb">OnGUI</a>(Rect position, SerializedProperty property, GUIContent label)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            var <span class="keywordtype">id</span> = GUIUtility.GetControlID(k_TextAlignmentHash, FocusType.Keyboard, position);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            EditorGUI.BeginProperty(position, label, property);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                var controlArea = EditorGUI.PrefixLabel(position, <span class="keywordtype">id</span>, label);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                var horizontalAligment = <span class="keyword">new</span> Rect(controlArea.x, controlArea.y, k_GroupWidth, k_AlignmentButtonHeight);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                var verticalAligment = <span class="keyword">new</span> Rect(!(EditorGUIUtility.currentViewWidth &gt; k_WideViewWidth) ? controlArea.x : horizontalAligment.xMax + k_ControlsSpacing, !(EditorGUIUtility.currentViewWidth &gt; k_WideViewWidth) ? controlArea.y + k_AlignmentButtonHeight + 3 : controlArea.y, k_GroupWidth, k_AlignmentButtonHeight);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                var selectedHorizontal = DoHorizontalAligmentControl(horizontalAligment, property);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                var selectedVertical = DoVerticalAligmentControl(verticalAligment, property);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    var value = (0x1 &lt;&lt; selectedHorizontal) | (0x100 &lt;&lt; selectedVertical);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    <span class="keyword">property</span>.intValue = value;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            EditorGUI.EndProperty();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a0d6d64bdd9b6dad6ac669d9e20ae0df1">   47</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a0d6d64bdd9b6dad6ac669d9e20ae0df1">DoHorizontalAligmentControl</a>(Rect position, SerializedProperty alignment)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            var selected = <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMP_EditorUtility</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#ac5acda9e853186a873ff2e4318bdd1f5">GetHorizontalAlignmentGridValue</a>(alignment.intValue);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            var values = <span class="keyword">new</span> <span class="keywordtype">bool</span>[6];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            values[selected] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">if</span> (alignment.hasMultipleDifferentValues)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">foreach</span> (var obj <span class="keywordflow">in</span> alignment.serializedObject.targetObjects)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    var text = obj as <a class="code" href="class_t_m_pro_1_1_t_m_p___text.html">TMP_Text</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keywordflow">if</span> (text != null)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        values[<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMP_EditorUtility</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#ac5acda9e853186a873ff2e4318bdd1f5">GetHorizontalAlignmentGridValue</a>((<span class="keywordtype">int</span>)text.alignment)] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            position.width = k_AlignmentButtonWidth;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; values.Length; i++)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                var oldValue = values[i];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                var newValue = <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMP_EditorUtility</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aee9d8d84e90e724694a0425528ab1b0b">EditorToggle</a>(position, oldValue, <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a11df8c2ace02deb885e2752ddbc9247b">alignContentA</a>[i], i == 0 ? <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a6d29e8ff15aa2c64dd4fce3bd2a76a80">alignmentButtonLeft</a> : (i == 5 ? <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab06648d57d308e5a527e62fba134b8fd">alignmentButtonRight</a> : <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ad4fe472b8e1d723233cb86fdabb531ac">alignmentButtonMid</a>));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span> (newValue != oldValue)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    selected = i;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                position.x += position.width;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> selected;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a8a64bd0936ffc81ec4a44f9aab1828fe">   83</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a8a64bd0936ffc81ec4a44f9aab1828fe">DoVerticalAligmentControl</a>(Rect position, SerializedProperty alignment)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            var selected = <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMP_EditorUtility</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#a3cfb013b51c081f148fb0e6254801c79">GetVerticalAlignmentGridValue</a>(alignment.intValue);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            var values = <span class="keyword">new</span> <span class="keywordtype">bool</span>[6];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            values[selected] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (alignment.hasMultipleDifferentValues)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">foreach</span> (var obj <span class="keywordflow">in</span> alignment.serializedObject.targetObjects)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    var text = obj as <a class="code" href="class_t_m_pro_1_1_t_m_p___text.html">TMP_Text</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    <span class="keywordflow">if</span> (text != null)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        values[<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMP_EditorUtility</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#a3cfb013b51c081f148fb0e6254801c79">GetVerticalAlignmentGridValue</a>((<span class="keywordtype">int</span>)text.alignment)] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            position.width = k_AlignmentButtonWidth;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; values.Length; i++)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                var oldValue = values[i];</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                var newValue = <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMP_EditorUtility</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aee9d8d84e90e724694a0425528ab1b0b">EditorToggle</a>(position, oldValue, <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac965c23db1492f9e6d3b784663510d0c">alignContentB</a>[i], i == 0 ? <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a6d29e8ff15aa2c64dd4fce3bd2a76a80">alignmentButtonLeft</a> : (i == 5 ? <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab06648d57d308e5a527e62fba134b8fd">alignmentButtonRight</a> : <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ad4fe472b8e1d723233cb86fdabb531ac">alignmentButtonMid</a>));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordflow">if</span> (newValue != oldValue)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    selected = i;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                position.x += position.width;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">return</span> selected;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer_html_acd1c836254135b1b0f9ea94990d4af13"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#acd1c836254135b1b0f9ea94990d4af13">TMPro.EditorUtilities.TMP_TextAlignmentDrawer.GetPropertyHeight</a></div><div class="ttdeci">override float GetPropertyHeight(SerializedProperty property, GUIContent label)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_alignment_drawer_8cs_source.html#l00017">TMP_TextAlignmentDrawer.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ac965c23db1492f9e6d3b784663510d0c"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac965c23db1492f9e6d3b784663510d0c">TMPro.EditorUtilities.TMP_UIStyleManager.alignContentB</a></div><div class="ttdeci">static GUIContent[] alignContentB</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00040">TMP_UIStyleManager.cs:40</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ad4fe472b8e1d723233cb86fdabb531ac"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ad4fe472b8e1d723233cb86fdabb531ac">TMPro.EditorUtilities.TMP_UIStyleManager.alignmentButtonMid</a></div><div class="ttdeci">static GUIStyle alignmentButtonMid</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00021">TMP_UIStyleManager.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ab06648d57d308e5a527e62fba134b8fd"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab06648d57d308e5a527e62fba134b8fd">TMPro.EditorUtilities.TMP_UIStyleManager.alignmentButtonRight</a></div><div class="ttdeci">static GUIStyle alignmentButtonRight</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00022">TMP_UIStyleManager.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___text_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___text.html">TMPro.TMP_Text</a></div><div class="ttdoc">Base class which contains common properties and functions shared between the TextMeshPro and TextMesh...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l00107">TMP_Text.cs:107</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer_html_a0d6d64bdd9b6dad6ac669d9e20ae0df1"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a0d6d64bdd9b6dad6ac669d9e20ae0df1">TMPro.EditorUtilities.TMP_TextAlignmentDrawer.DoHorizontalAligmentControl</a></div><div class="ttdeci">static int DoHorizontalAligmentControl(Rect position, SerializedProperty alignment)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_alignment_drawer_8cs_source.html#l00047">TMP_TextAlignmentDrawer.cs:47</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility_html_a3cfb013b51c081f148fb0e6254801c79"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#a3cfb013b51c081f148fb0e6254801c79">TMPro.EditorUtilities.TMP_EditorUtility.GetVerticalAlignmentGridValue</a></div><div class="ttdeci">static int GetVerticalAlignmentGridValue(int value)</div><div class="ttdoc">Function to return the vertical alignment grid value. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___editor_utility_8cs_source.html#l00378">TMP_EditorUtility.cs:378</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility_html_ac5acda9e853186a873ff2e4318bdd1f5"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#ac5acda9e853186a873ff2e4318bdd1f5">TMPro.EditorUtilities.TMP_EditorUtility.GetHorizontalAlignmentGridValue</a></div><div class="ttdeci">static int GetHorizontalAlignmentGridValue(int value)</div><div class="ttdoc">Function to return the horizontal alignment grid value. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___editor_utility_8cs_source.html#l00355">TMP_EditorUtility.cs:355</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMPro.EditorUtilities.TMP_UIStyleManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00009">TMP_UIStyleManager.cs:9</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a11df8c2ace02deb885e2752ddbc9247b"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a11df8c2ace02deb885e2752ddbc9247b">TMPro.EditorUtilities.TMP_UIStyleManager.alignContentA</a></div><div class="ttdeci">static GUIContent[] alignContentA</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00039">TMP_UIStyleManager.cs:39</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility_html_aee9d8d84e90e724694a0425528ab1b0b"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aee9d8d84e90e724694a0425528ab1b0b">TMPro.EditorUtilities.TMP_EditorUtility.EditorToggle</a></div><div class="ttdeci">static bool EditorToggle(Rect position, bool value, GUIContent content, GUIStyle style)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___editor_utility_8cs_source.html#l00426">TMP_EditorUtility.cs:426</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer_html_acfd35e3ae82b2bfc1804c30a76a353cb"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#acfd35e3ae82b2bfc1804c30a76a353cb">TMPro.EditorUtilities.TMP_TextAlignmentDrawer.OnGUI</a></div><div class="ttdeci">override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_alignment_drawer_8cs_source.html#l00022">TMP_TextAlignmentDrawer.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer_html_a8a64bd0936ffc81ec4a44f9aab1828fe"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html#a8a64bd0936ffc81ec4a44f9aab1828fe">TMPro.EditorUtilities.TMP_TextAlignmentDrawer.DoVerticalAligmentControl</a></div><div class="ttdeci">static int DoVerticalAligmentControl(Rect position, SerializedProperty alignment)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_alignment_drawer_8cs_source.html#l00083">TMP_TextAlignmentDrawer.cs:83</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a6d29e8ff15aa2c64dd4fce3bd2a76a80"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a6d29e8ff15aa2c64dd4fce3bd2a76a80">TMPro.EditorUtilities.TMP_UIStyleManager.alignmentButtonLeft</a></div><div class="ttdeci">static GUIStyle alignmentButtonLeft</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00020">TMP_UIStyleManager.cs:20</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a1dd743b58b1fd4057c00e4b98ab86301"><div class="ttname"><a href="namespace_t_m_pro.html#a1dd743b58b1fd4057c00e4b98ab86301">TMPro.TextAlignmentOptions</a></div><div class="ttdeci">TextAlignmentOptions</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l00024">TMP_Text.cs:24</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html">TMPro.EditorUtilities.TMP_TextAlignmentDrawer</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_alignment_drawer_8cs_source.html#l00008">TMP_TextAlignmentDrawer.cs:8</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMPro.EditorUtilities.TMP_EditorUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___editor_utility_8cs_source.html#l00012">TMP_EditorUtility.cs:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

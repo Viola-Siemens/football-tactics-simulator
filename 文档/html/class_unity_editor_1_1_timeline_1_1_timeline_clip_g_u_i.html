@@ -1,0 +1,2352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.TimelineClipGUI类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.TimelineClipGUI类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.TimelineClipGUI 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_timeline_clip_g_u_i_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_timeline_clip_g_u_i_inherit__map" id="_unity_editor_8_timeline_8_timeline_clip_g_u_i_inherit__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html" title="TimelineItemGUI" alt="" coords="5,155,123,181"/><area shape="rect" id="node3" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html" title="ISelectable" alt="" coords="21,80,107,107"/><area shape="rect" id="node4" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html" title="ILayerable" alt="" coords="23,5,105,32"/><area shape="rect" id="node5" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html" title="IClipCurveEditorOwner" alt="" coords="147,155,298,181"/><area shape="rect" id="node6" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html" title="ISnappable" alt="" coords="322,155,409,181"/><area shape="rect" id="node7" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html" title="IAttractable" alt="" coords="433,155,521,181"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.TimelineClipGUI 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_timeline_clip_g_u_i_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_timeline_clip_g_u_i_coll__map" id="_unity_editor_8_timeline_8_timeline_clip_g_u_i_coll__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html" title="TimelineItemGUI" alt="" coords="951,103,1069,129"/><area shape="rect" id="node3" href="interface_unity_editor_1_1_timeline_1_1_i_selectable.html" title="ISelectable" alt="" coords="606,5,693,32"/><area shape="rect" id="node4" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html" title="ILayerable" alt="" coords="230,5,311,32"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_director_styles.html" title="UnityEditor.Timeline.Director\lStyles" alt="" coords="556,95,743,137"/><area shape="rect" id="node6" href="class_unity_engine_1_1_timeline_1_1_director_named_color.html" title="UnityEngine.Timeline.Director\lNamedColor" alt="" coords="174,342,367,383"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_editor_clip.html" title="UnityEditor.Timeline.EditorClip" alt="" coords="911,519,1109,545"/><area shape="rect" id="node8" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html" title="IClipCurveEditorOwner" alt="" coords="935,745,1085,772"/><area shape="rect" id="node9" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html" title="ISnappable" alt="" coords="967,796,1053,823"/><area shape="rect" id="node10" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html" title="IAttractable" alt="" coords="966,847,1054,873"/><area shape="rect" id="node11" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_data.html" title="UnityEditor.Timeline.Clip\lDrawData" alt="" coords="928,315,1092,357"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html" title="Use this class to customize clip types in the TimelineEditor. " alt="" coords="567,161,731,202"/><area shape="rect" id="node13" href="struct_unity_editor_1_1_timeline_1_1_clip_blends.html" title="UnityEditor.Timeline.Clip\lBlends" alt="" coords="567,265,731,306"/><area shape="rect" id="node14" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_options.html" title="The user&#45;defined options for drawing a clip. " alt="" coords="567,330,731,371"/><area shape="rect" id="node15" href="struct_unity_editor_1_1_timeline_1_1_icon_data.html" title="UnityEditor.Timeline.IconData" alt="" coords="553,417,746,444"/><area shape="rect" id="node16" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html" title="Represents a clip on the timeline. " alt="" coords="540,680,759,707"/><area shape="rect" id="node20" href="class_unity_engine_1_1_timeline_1_1_track_asset.html" title="A PlayableAsset representing a track inside a timeline. " alt="" coords="920,679,1100,721"/><area shape="rect" id="node17" href="interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html" title="ICurvesOwner" alt="" coords="220,637,321,664"/><area shape="rect" id="node23" href="struct_unity_engine_1_1_timeline_1_1_marker_list.html" title="UnityEngine.Timeline.MarkerList" alt="" coords="545,951,754,977"/><area shape="rect" id="node22" href="interface_unity_engine_1_1_timeline_1_1_i_property_preview.html" title="Implement this interface in a PlayableAsset to specify which properties will be modified when Timelin..." alt="" coords="590,900,709,927"/><area shape="rect" id="node24" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html" title="UnityEngine.Timeline.DiscreteTime" alt="" coords="537,579,761,605"/><area shape="rect" id="node26" href="struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html" title="UnityEngine.Timeline.Track\lAsset.TransientBuildData" alt="" coords="559,733,739,774"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae79a24575ea1e959af4daee283638e72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_blends.html">ClipBlends</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ae79a24575ea1e959af4daee283638e72">GetClipBlends</a> ()</td></tr>
+<tr class="separator:ae79a24575ea1e959af4daee283638e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0f2f798967715d98da1e0ec9d3db33"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a9e0f2f798967715d98da1e0ec9d3db33">Select</a> ()</td></tr>
+<tr class="separator:a9e0f2f798967715d98da1e0ec9d3db33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b1a8b018d61b9cb0806cfcd9d44b53"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a96b1a8b018d61b9cb0806cfcd9d44b53">IsSelected</a> ()</td></tr>
+<tr class="separator:a96b1a8b018d61b9cb0806cfcd9d44b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ea5f563aa66cd32d337b301c6d3c36"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a45ea5f563aa66cd32d337b301c6d3c36">Deselect</a> ()</td></tr>
+<tr class="separator:a45ea5f563aa66cd32d337b301c6d3c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed5542dfd22517837433c94a6fb24009"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aed5542dfd22517837433c94a6fb24009">TimelineClipGUI</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ae6dd97b28db5e436f2c8ece3c6fbbeda">clip</a>, <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3bcf82019555301cb2d6356578799749">parent</a>, <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html">IZOrderProvider</a> provider)</td></tr>
+<tr class="separator:aed5542dfd22517837433c94a6fb24009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ea0ae47297a07479ce0581ad14d2d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa9ea0ae47297a07479ce0581ad14d2d0">DrawGhostClip</a> (Rect targetRect)</td></tr>
+<tr class="separator:aa9ea0ae47297a07479ce0581ad14d2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6d086ae70c0e5610c382a9d884ac96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a5e6d086ae70c0e5610c382a9d884ac96">DrawInvalidClip</a> (Rect targetRect)</td></tr>
+<tr class="separator:a5e6d086ae70c0e5610c382a9d884ac96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa981e7c442e997b7c660044ccace7e00"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa981e7c442e997b7c660044ccace7e00">Draw</a> (Rect trackRect, bool trackRectChanged, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:aa981e7c442e997b7c660044ccace7e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86428cf65f61b323fcca3b5641afbf7"><td class="memItemLeft" align="right" valign="top">override Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#af86428cf65f61b323fcca3b5641afbf7">RectToTimeline</a> (Rect trackRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:af86428cf65f61b323fcca3b5641afbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909a411201375f90d27b33476be7bb5b"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_edge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a909a411201375f90d27b33476be7bb5b">SnappableEdgesFor</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a> attractable, <a class="el" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a> manipulateEdges)</td></tr>
+<tr class="separator:a909a411201375f90d27b33476be7bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb172d9c8364a3361df9eb5278c88af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#abfb172d9c8364a3361df9eb5278c88af">ShouldSnapTo</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">ISnappable</a> snappable)</td></tr>
+<tr class="separator:abfb172d9c8364a3361df9eb5278c88af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></td></tr>
+<tr class="memitem:ab5a02226f7343c20794ea9a7d487639c inherit pub_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#ab5a02226f7343c20794ea9a7d487639c">StartDrag</a> ()</td></tr>
+<tr class="separator:ab5a02226f7343c20794ea9a7d487639c inherit pub_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade42b94b8815df8bccf1764262d11ea4 inherit pub_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#ade42b94b8815df8bccf1764262d11ea4">StopDrag</a> ()</td></tr>
+<tr class="separator:ade42b94b8815df8bccf1764262d11ea4 inherit pub_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a1a6f43791eb8101edc8f03a1f651545c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a1a6f43791eb8101edc8f03a1f651545c">supportResize</a><code> [get]</code></td></tr>
+<tr class="separator:a1a6f43791eb8101edc8f03a1f651545c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade24074567da66d5b0f5d96f989f3cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_clip_curve_editor.html">ClipCurveEditor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ade24074567da66d5b0f5d96f989f3cf9">clipCurveEditor</a><code> [get, set]</code></td></tr>
+<tr class="separator:ade24074567da66d5b0f5d96f989f3cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6cd66366b5e9614dc78f04a7c65a4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#adf6cd66366b5e9614dc78f04a7c65a4d">previousClip</a><code> [get, set]</code></td></tr>
+<tr class="separator:adf6cd66366b5e9614dc78f04a7c65a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e4589075052aa66f1b4cbe3ce882b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a80e4589075052aa66f1b4cbe3ce882b5">nextClip</a><code> [get, set]</code></td></tr>
+<tr class="separator:a80e4589075052aa66f1b4cbe3ce882b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191a157912212ae7de4f5349cdfd1367"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a191a157912212ae7de4f5349cdfd1367">name</a><code> [get]</code></td></tr>
+<tr class="separator:a191a157912212ae7de4f5349cdfd1367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e92ebf371dc9d2015362f413f9732f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a52e92ebf371dc9d2015362f413f9732f">inlineCurvesSelected</a><code> [get, set]</code></td></tr>
+<tr class="separator:a52e92ebf371dc9d2015362f413f9732f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0283dc052cd875eb15f15ec410f8320f"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a0283dc052cd875eb15f15ec410f8320f">mixOutRect</a><code> [get]</code></td></tr>
+<tr class="separator:a0283dc052cd875eb15f15ec410f8320f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4812146383543a1cf9a26f90ac7843d5"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a4812146383543a1cf9a26f90ac7843d5">mixInRect</a><code> [get]</code></td></tr>
+<tr class="separator:a4812146383543a1cf9a26f90ac7843d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53393180abbd18542c79da2693b80c45"><td class="memItemLeft" align="right" valign="top">override double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a53393180abbd18542c79da2693b80c45">start</a><code> [get]</code></td></tr>
+<tr class="separator:a53393180abbd18542c79da2693b80c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb387b66e43c516f3bae0f09477216f7"><td class="memItemLeft" align="right" valign="top">override double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aeb387b66e43c516f3bae0f09477216f7">end</a><code> [get]</code></td></tr>
+<tr class="separator:aeb387b66e43c516f3bae0f09477216f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242747f2003bca8ab2fd9310f394c1b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a242747f2003bca8ab2fd9310f394c1b2">supportsLooping</a><code> [get]</code></td></tr>
+<tr class="separator:a242747f2003bca8ab2fd9310f394c1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba1c33798ae625e1be9658b82addd770"><td class="memItemLeft" align="right" valign="top">bool IClipCurveEditorOwner.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aba1c33798ae625e1be9658b82addd770">showLoops</a><code> [get]</code></td></tr>
+<tr class="separator:aba1c33798ae625e1be9658b82addd770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c21d6dde2d9455a59149c01094d6aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> IClipCurveEditorOwner.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a26c21d6dde2d9455a59149c01094d6aa">owner</a><code> [get]</code></td></tr>
+<tr class="separator:a26c21d6dde2d9455a59149c01094d6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf22eabed6030d591b816fbce0f32af9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#abf22eabed6030d591b816fbce0f32af9">supportsSubTimelines</a><code> [get]</code></td></tr>
+<tr class="separator:abf22eabed6030d591b816fbce0f32af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d00c7758ac02af6b9c1bf262487fb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a58d00c7758ac02af6b9c1bf262487fb9">minLoopIndex</a><code> [get]</code></td></tr>
+<tr class="separator:a58d00c7758ac02af6b9c1bf262487fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464e1f3c7feac5e8a10e2a71653124c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a464e1f3c7feac5e8a10e2a71653124c4">drawer</a><code> [get]</code></td></tr>
+<tr class="separator:a464e1f3c7feac5e8a10e2a71653124c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b1dac51d15d08c5eed6e18c032c3ae"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a16b1dac51d15d08c5eed6e18c032c3ae">clippedRect</a><code> [get, private set]</code></td></tr>
+<tr class="separator:a16b1dac51d15d08c5eed6e18c032c3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122264c2c32a903e328e296bc3aab132"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a122264c2c32a903e328e296bc3aab132">item</a><code> [get]</code></td></tr>
+<tr class="separator:a122264c2c32a903e328e296bc3aab132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce9a6e40d250dab1fa526eb2e70c235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html">IZOrderProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a1ce9a6e40d250dab1fa526eb2e70c235">zOrderProvider</a><code> [get]</code></td></tr>
+<tr class="separator:a1ce9a6e40d250dab1fa526eb2e70c235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f64fef53fd17744f0a70bfaf601648"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a83f64fef53fd17744f0a70bfaf601648">leftHandle</a><code> [get]</code></td></tr>
+<tr class="separator:a83f64fef53fd17744f0a70bfaf601648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3dbc9d29135aac7ec217f54146acb8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ad3dbc9d29135aac7ec217f54146acb8e">rightHandle</a><code> [get]</code></td></tr>
+<tr class="separator:ad3dbc9d29135aac7ec217f54146acb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6dd97b28db5e436f2c8ece3c6fbbeda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ae6dd97b28db5e436f2c8ece3c6fbbeda">clip</a><code> [get]</code></td></tr>
+<tr class="separator:ae6dd97b28db5e436f2c8ece3c6fbbeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></td></tr>
+<tr class="memitem:a2be47938d2d0507a6a62e081abbf1e2d inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">abstract <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a2be47938d2d0507a6a62e081abbf1e2d">item</a><code> [get]</code></td></tr>
+<tr class="separator:a2be47938d2d0507a6a62e081abbf1e2d inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f63aa5c66a7727ef0d8ef0188f98cc inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">abstract double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#ae6f63aa5c66a7727ef0d8ef0188f98cc">start</a><code> [get]</code></td></tr>
+<tr class="separator:ae6f63aa5c66a7727ef0d8ef0188f98cc inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb925038a7a31d95f983afb01118815 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">abstract double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a1cb925038a7a31d95f983afb01118815">end</a><code> [get]</code></td></tr>
+<tr class="separator:a1cb925038a7a31d95f983afb01118815 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7204db210720e02051a0c8bea1c0c8be inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html">LayerZOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a7204db210720e02051a0c8bea1c0c8be">zOrder</a><code> [get, set]</code></td></tr>
+<tr class="separator:a7204db210720e02051a0c8bea1c0c8be inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa816120dfec1746efbe6404c643b64cf inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#aa816120dfec1746efbe6404c643b64cf">visible</a><code> [get, set]</code></td></tr>
+<tr class="separator:aa816120dfec1746efbe6404c643b64cf inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afabb2a8c74d3b467e1d16ef31f84c5 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a4afabb2a8c74d3b467e1d16ef31f84c5">isInvalid</a><code> [get, set]</code></td></tr>
+<tr class="separator:a4afabb2a8c74d3b467e1d16ef31f84c5 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcf82019555301cb2d6356578799749 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3bcf82019555301cb2d6356578799749">parent</a><code> [get]</code></td></tr>
+<tr class="separator:a3bcf82019555301cb2d6356578799749 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a673d30e1636ba3306220babfdb7cff inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3a673d30e1636ba3306220babfdb7cff">rect</a><code> [get]</code></td></tr>
+<tr class="separator:a3a673d30e1636ba3306220babfdb7cff inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3257dd2e685ba3bb61b678977281e285 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3257dd2e685ba3bb61b678977281e285">treeViewRect</a><code> [get, protected set]</code></td></tr>
+<tr class="separator:a3257dd2e685ba3bb61b678977281e285 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_editor_1_1_timeline_1_1_i_layerable"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_editor_1_1_timeline_1_1_i_layerable')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html">UnityEditor.Timeline.ILayerable</a></td></tr>
+<tr class="memitem:a786ccb4c8bb72f94b4fca73abca32219 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_layerable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_layer_z_order.html">LayerZOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_layerable.html#a786ccb4c8bb72f94b4fca73abca32219">zOrder</a><code> [get]</code></td></tr>
+<tr class="separator:a786ccb4c8bb72f94b4fca73abca32219 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_layerable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">UnityEditor.Timeline.IClipCurveEditorOwner</a></td></tr>
+<tr class="memitem:a897cf7cbd25f6589f434a6346ffd346f inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_clip_curve_editor.html">ClipCurveEditor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html#a897cf7cbd25f6589f434a6346ffd346f">clipCurveEditor</a><code> [get]</code></td></tr>
+<tr class="separator:a897cf7cbd25f6589f434a6346ffd346f inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f1063d4789b81d799cc0ea0adf4663 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html#ab7f1063d4789b81d799cc0ea0adf4663">inlineCurvesSelected</a><code> [get, set]</code></td></tr>
+<tr class="separator:ab7f1063d4789b81d799cc0ea0adf4663 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9fe9c30a849aa1b4a7c147111bd7d9 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html#acd9fe9c30a849aa1b4a7c147111bd7d9">showLoops</a><code> [get]</code></td></tr>
+<tr class="separator:acd9fe9c30a849aa1b4a7c147111bd7d9 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565bb9a309f47944e7f757cb60f8f5fe inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html#a565bb9a309f47944e7f757cb60f8f5fe">owner</a><code> [get]</code></td></tr>
+<tr class="separator:a565bb9a309f47944e7f757cb60f8f5fe inherit properties_interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_unity_editor_1_1_timeline_1_1_i_attractable"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_unity_editor_1_1_timeline_1_1_i_attractable')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">UnityEditor.Timeline.IAttractable</a></td></tr>
+<tr class="memitem:aaea2a53c6e152be47ad08e7f504a1022 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_attractable"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html#aaea2a53c6e152be47ad08e7f504a1022">start</a><code> [get]</code></td></tr>
+<tr class="separator:aaea2a53c6e152be47ad08e7f504a1022 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_attractable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19d83917050854465646536f5cd0068 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_attractable"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html#ae19d83917050854465646536f5cd0068">end</a><code> [get]</code></td></tr>
+<tr class="separator:ae19d83917050854465646536f5cd0068 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_attractable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a9de332464230a724c23f64f4ff275aa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a9de332464230a724c23f64f4ff275aa8">CreateInlineCurveEditor</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a9de332464230a724c23f64f4ff275aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f2ccc653629c2ca7eff5dfd6b1bcbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a77f2ccc653629c2ca7eff5dfd6b1bcbe">UpdateDrawData</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Rect drawRect, string title, bool selected, bool previousClipSelected, float rectXOffset)</td></tr>
+<tr class="separator:a77f2ccc653629c2ca7eff5dfd6b1bcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72a1feb914645d8c68bdceb3395c154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#af72a1feb914645d8c68bdceb3395c154">UpdateClipIcons</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:af72a1feb914645d8c68bdceb3395c154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5527d0efc9cdb8a54ac5702ca0aa074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa5527d0efc9cdb8a54ac5702ca0aa074">DrawSimpleClip</a> (Rect targetRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_border.html">ClipBorder</a> border, Color overlay)</td></tr>
+<tr class="separator:aa5527d0efc9cdb8a54ac5702ca0aa074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab30772c1d48fedd364a3eb1e366be97c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ab30772c1d48fedd364a3eb1e366be97c">DrawInto</a> (Rect drawRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:ab30772c1d48fedd364a3eb1e366be97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961655a07ff49a85b3ab54ce142ee2be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a961655a07ff49a85b3ab54ce142ee2be">CalculateClipRectangle</a> (Rect trackRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a961655a07ff49a85b3ab54ce142ee2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4cde3bca8dfb29070ed3122e075493"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a6d4cde3bca8dfb29070ed3122e075493">AddToSpacePartitioner</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a6d4cde3bca8dfb29070ed3122e075493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884f6f84328deee1099363cbdf45ce17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a884f6f84328deee1099363cbdf45ce17">CalculateBlendRect</a> ()</td></tr>
+<tr class="separator:a884f6f84328deee1099363cbdf45ce17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f88f8f87d9cd0ef5d722eaa7303b15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a40f88f8f87d9cd0ef5d722eaa7303b15">DetectClipChanged</a> (bool trackRectChanged)</td></tr>
+<tr class="separator:a40f88f8f87d9cd0ef5d722eaa7303b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa3cbbd3258b51f49160520834946c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#adfa3cbbd3258b51f49160520834946c4">ResetClipChanged</a> ()</td></tr>
+<tr class="separator:adfa3cbbd3258b51f49160520834946c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8efcc325e614d2318e0f9f068821a90"><td class="memItemLeft" align="right" valign="top">GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ab8efcc325e614d2318e0f9f068821a90">GetExtrapolationIcon</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">TimelineClip.ClipExtrapolation</a> mode)</td></tr>
+<tr class="separator:ab8efcc325e614d2318e0f9f068821a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769aba6744af5d2fd89663e8698befe5"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a769aba6744af5d2fd89663e8698befe5">GetPreExtrapolationBounds</a> (Rect trackRect, Rect clipRect, GUIStyle icon)</td></tr>
+<tr class="separator:a769aba6744af5d2fd89663e8698befe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bc7cd7512a20adc44401104ef46050"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ad4bc7cd7512a20adc44401104ef46050">GetPostExtrapolationBounds</a> (Rect trackRect, Rect clipRect, GUIStyle icon)</td></tr>
+<tr class="separator:ad4bc7cd7512a20adc44401104ef46050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af104e51e30bfcf0a4b38229569209381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#af104e51e30bfcf0a4b38229569209381">DrawExtrapolation</a> (Rect trackRect, Rect clipRect)</td></tr>
+<tr class="separator:af104e51e30bfcf0a4b38229569209381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9062a8d0063c7672788b0d7a7bb63d64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a9062a8d0063c7672788b0d7a7bb63d64">CalculateLoopRects</a> (Rect trackRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a9062a8d0063c7672788b0d7a7bb63d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35c75e19a8f105c0a98c9070a7a9517"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#af35c75e19a8f105c0a98c9070a7a9517">ShowDrillIcon</a> (PlayableDirector resolver)</td></tr>
+<tr class="separator:af35c75e19a8f105c0a98c9070a7a9517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a511068e933bb4ad3a561db80ac9fdcc5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_options.html">ClipDrawOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a511068e933bb4ad3a561db80ac9fdcc5">UpdateClipDrawOptions</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html">ClipEditor</a> clipEditor, <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ae6dd97b28db5e436f2c8ece3c6fbbeda">clip</a>)</td></tr>
+<tr class="separator:a511068e933bb4ad3a561db80ac9fdcc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bc5987b33be4a1327590b789efe843"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ac7bc5987b33be4a1327590b789efe843">DrawClip</a> (<a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_data.html">ClipDrawData</a> drawData)</td></tr>
+<tr class="separator:ac7bc5987b33be4a1327590b789efe843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2888cf9aa799c61d677ec6d6a61bf336"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a2888cf9aa799c61d677ec6d6a61bf336">DrawExtrapolationIcon</a> (Rect <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3a673d30e1636ba3306220babfdb7cff">rect</a>, GUIStyle icon)</td></tr>
+<tr class="separator:a2888cf9aa799c61d677ec6d6a61bf336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a6b016b1fe3cb03ef1879786f6ded8"><td class="memItemLeft" align="right" valign="top">static Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#af2a6b016b1fe3cb03ef1879786f6ded8">ProjectRectOnTimeline</a> (Rect <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3a673d30e1636ba3306220babfdb7cff">rect</a>, Rect trackRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:af2a6b016b1fe3cb03ef1879786f6ded8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7362362e2909228d43f876fad4897f71"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a7362362e2909228d43f876fad4897f71">AddEdge</a> (List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_edge.html">Edge</a> &gt; edges, double time, bool showEdgeHint=true)</td></tr>
+<tr class="separator:a7362362e2909228d43f876fad4897f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9497c3b3626af00e12d56fa2649d089c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_editor_clip.html">EditorClip</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a9497c3b3626af00e12d56fa2649d089c">m_EditorItem</a></td></tr>
+<tr class="separator:a9497c3b3626af00e12d56fa2649d089c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe669853575bdf729ad86ee8262da016"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#abe669853575bdf729ad86ee8262da016">m_ClipCenterSection</a></td></tr>
+<tr class="separator:abe669853575bdf729ad86ee8262da016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478ed52fa1f1d109c421dc097d29ba90"><td class="memItemLeft" align="right" valign="top">readonly List&lt; Rect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a478ed52fa1f1d109c421dc097d29ba90">m_LoopRects</a> = new List&lt;Rect&gt;()</td></tr>
+<tr class="separator:a478ed52fa1f1d109c421dc097d29ba90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b955d33ea20b619572f7c14f2e3b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_data.html">ClipDrawData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a44b955d33ea20b619572f7c14f2e3b4d">m_ClipDrawData</a></td></tr>
+<tr class="separator:a44b955d33ea20b619572f7c14f2e3b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534b4d625ad94e08552b67a39bf232a9"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a534b4d625ad94e08552b67a39bf232a9">m_MixOutRect</a> = new Rect()</td></tr>
+<tr class="separator:a534b4d625ad94e08552b67a39bf232a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9605b35bff6d4345be5f5b1c8d3855e"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ae9605b35bff6d4345be5f5b1c8d3855e">m_MixInRect</a> = new Rect()</td></tr>
+<tr class="separator:ae9605b35bff6d4345be5f5b1c8d3855e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f5f2408ad7f2525184912f391282a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a19f5f2408ad7f2525184912f391282a2">m_MinLoopIndex</a> = 1</td></tr>
+<tr class="separator:a19f5f2408ad7f2525184912f391282a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab105851fd75990339a73e31fa93b8b5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ab105851fd75990339a73e31fa93b8b5c">m_LastDirtyIndex</a> = Int32.MinValue</td></tr>
+<tr class="separator:ab105851fd75990339a73e31fa93b8b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6bff05663df6c3b87d663888120234"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a8a6bff05663df6c3b87d663888120234">m_ClipViewDirty</a> = true</td></tr>
+<tr class="separator:a8a6bff05663df6c3b87d663888120234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18dd4b1686e0f38eaf8a4125761e5d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa18dd4b1686e0f38eaf8a4125761e5d1">m_ShowDrillIcon</a></td></tr>
+<tr class="separator:aa18dd4b1686e0f38eaf8a4125761e5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d35b93675b5a44905882f05ce763c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html">ClipEditor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ad0d35b93675b5a44905882f05ce763c5">m_ClipEditor</a></td></tr>
+<tr class="separator:ad0d35b93675b5a44905882f05ce763c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a8dc7dac6fb6d2e4e2bf62ec1bdd38ff9"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a8dc7dac6fb6d2e4e2bf62ec1bdd38ff9">k_MinMixWidth</a> = 2</td></tr>
+<tr class="separator:a8dc7dac6fb6d2e4e2bf62ec1bdd38ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d1004a23d9c09e449cbdb5ff5f84a1"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a42d1004a23d9c09e449cbdb5ff5f84a1">k_MaxHandleWidth</a> = 10f</td></tr>
+<tr class="separator:a42d1004a23d9c09e449cbdb5ff5f84a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c2d95d29d04082bd52676042c37097"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ad1c2d95d29d04082bd52676042c37097">k_MinHandleWidth</a> = 1f</td></tr>
+<tr class="separator:ad1c2d95d29d04082bd52676042c37097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68f2d19c4cd7c4323d3596b23e70e20f"><td class="memItemLeft" align="right" valign="top">static List&lt; PlayableDirector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a68f2d19c4cd7c4323d3596b23e70e20f">s_TempSubDirectors</a> = new List&lt;PlayableDirector&gt;()</td></tr>
+<tr class="separator:a68f2d19c4cd7c4323d3596b23e70e20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d803d060d55ce42c04aadff013dd1f"><td class="memItemLeft" align="right" valign="top">static readonly <a class="el" href="struct_unity_editor_1_1_timeline_1_1_icon_data.html">IconData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a86d803d060d55ce42c04aadff013dd1f">k_DiggableClipIcon</a> = new <a class="el" href="struct_unity_editor_1_1_timeline_1_1_icon_data.html">IconData</a>(<a class="el" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#aecdcede2e125cd897c292a2aeeaa548d">DirectorStyles.LoadIcon</a>(&quot;TimelineDigIn&quot;))</td></tr>
+<tr class="separator:a86d803d060d55ce42c04aadff013dd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></td></tr>
+<tr class="memitem:a8b1760cdb8a90325ce62af496a1813f9 inherit pro_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a8b1760cdb8a90325ce62af496a1813f9">TimelineItemGUI</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a3bcf82019555301cb2d6356578799749">parent</a>)</td></tr>
+<tr class="separator:a8b1760cdb8a90325ce62af496a1813f9 inherit pro_methods_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></td></tr>
+<tr class="memitem:ac22f5e2ee6536d557a9363f9527e7c41 inherit pro_attribs_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#ac22f5e2ee6536d557a9363f9527e7c41">m_Styles</a></td></tr>
+<tr class="separator:ac22f5e2ee6536d557a9363f9527e7c41 inherit pro_attribs_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00010">10</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aed5542dfd22517837433c94a6fb24009"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEditor.Timeline.TimelineClipGUI.TimelineClipGUI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html">IRowGUI</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html">IZOrderProvider</a>&#160;</td>
+          <td class="paramname"><em>provider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00177">177</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aed5542dfd22517837433c94a6fb24009_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aed5542dfd22517837433c94a6fb24009_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aed5542dfd22517837433c94a6fb24009_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aed5542dfd22517837433c94a6fb24009_cgraph">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html#a49e0c99b9528891646569e0214fe6fa5" title="UnityEditor.Timeline.IZOrder\lProvider.Next" alt="" coords="263,5,447,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#a2e8fade23bcb6e2be7aa64eac84d63c4" title="UnityEditor.Timeline.Editor\lClipFactory.GetEditorClip" alt="" coords="267,71,443,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a4b7f59487a7014735342fd15c71413f1" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetClipEditor" alt="" coords="244,136,467,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_item_to_item_gui.html#a932309b2cf6c980f452808f1ddc3b4d0" title="UnityEditor.Timeline.Item\lToItemGui.Add" alt="" coords="272,201,439,243"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a7362362e2909228d43f876fad4897f71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineClipGUI.AddEdge </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_edge.html">Edge</a> &gt;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>showEdgeHint</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00753">753</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d4cde3bca8dfb29070ed3122e075493"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.AddToSpacePartitioner </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00404">404</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a6d4cde3bca8dfb29070ed3122e075493_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a6d4cde3bca8dfb29070ed3122e075493_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a6d4cde3bca8dfb29070ed3122e075493_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a6d4cde3bca8dfb29070ed3122e075493_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a85d8effbff6e987e54683254d4e17680" title="UnityEditor.Timeline.Space\lPartitioner.AddBounds" alt="" coords="256,5,435,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a884f6f84328deee1099363cbdf45ce17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.CalculateBlendRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00410">410</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a961655a07ff49a85b3ab54ce142ee2be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.CalculateClipRectangle </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00384">384</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9062a8d0063c7672788b0d7a7bb63d64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.CalculateLoopRects </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00584">584</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9062a8d0063c7672788b0d7a7bb63d64_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9062a8d0063c7672788b0d7a7bb63d64_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9062a8d0063c7672788b0d7a7bb63d64_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9062a8d0063c7672788b0d7a7bb63d64_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a51309bd174926867676e751b270ab9be" title="UnityEditor.Timeline.Timeline\lHelpers.GetLoopTimes" alt="" coords="244,5,435,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a888747dbd3d9710f565ad944ae4428b7" title="UnityEditor.Timeline.Timeline\lHelpers.GetLoopDuration" alt="" coords="244,71,435,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9de332464230a724c23f64f4ff275aa8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.CreateInlineCurveEditor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00193">193</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9de332464230a724c23f64f4ff275aa8_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9de332464230a724c23f64f4ff275aa8_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9de332464230a724c23f64f4ff275aa8_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9de332464230a724c23f64f4ff275aa8_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a3dfa8c48e81f9218f365fc461f1b99ec" title="UnityEditor.Timeline.Window\lState.AddEndFrameDelegate" alt="" coords="257,5,448,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a8ca689611d5b0005e991525ac34dd19d" title="UnityEditor.Timeline.Curve\lDataSource.Create" alt="" coords="265,71,440,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a45ea5f563aa66cd32d337b301c6d3c36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEditor.Timeline.TimelineClipGUI.Deselect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#ab64614d2ba64c05cb96f52c857c5a58f">UnityEditor.Timeline.TimelineItemGUI</a> .</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00162">162</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a45ea5f563aa66cd32d337b301c6d3c36_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a45ea5f563aa66cd32d337b301c6d3c36_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a45ea5f563aa66cd32d337b301c6d3c36_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a45ea5f563aa66cd32d337b301c6d3c36_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d" title="UnityEditor.Timeline.Selection\lManager.Remove" alt="" coords="244,5,440,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#a2e8fade23bcb6e2be7aa64eac84d63c4" title="UnityEditor.Timeline.Editor\lClipFactory.GetEditorClip" alt="" coords="488,5,664,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a40f88f8f87d9cd0ef5d722eaa7303b15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.DetectClipChanged </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>trackRectChanged</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00445">445</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a40f88f8f87d9cd0ef5d722eaa7303b15_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a40f88f8f87d9cd0ef5d722eaa7303b15_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a40f88f8f87d9cd0ef5d722eaa7303b15_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a40f88f8f87d9cd0ef5d722eaa7303b15_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html#a8b44b6fe0385359b27192362c34a7b9f" title="Called when a clip is changed by the Editor. " alt="" coords="244,5,408,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa981e7c442e997b7c660044ccace7e00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEditor.Timeline.TimelineClipGUI.Draw </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>trackRectChanged</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a663cf1330ff55496059563f215d4727a">UnityEditor.Timeline.TimelineItemGUI</a>.</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00422">422</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7bc5987b33be4a1327590b789efe843"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineClipGUI.DrawClip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_data.html">ClipDrawData</a>&#160;</td>
+          <td class="paramname"><em>drawData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00301">301</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ac7bc5987b33be4a1327590b789efe843_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ac7bc5987b33be4a1327590b789efe843_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ac7bc5987b33be4a1327590b789efe843_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ac7bc5987b33be4a1327590b789efe843_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_drawer.html#abc4b33126a5dfd6e9778cfa53ceafe57" title="UnityEditor.Timeline.Clip\lDrawer.DrawDefaultClip" alt="" coords="278,5,442,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_clip_drawer.html#a1da0ddfad6414c6b80b278e5410acd26" title="UnityEditor.Timeline.Clip\lDrawer.DrawAnimationRecordBorder" alt="" coords="244,71,476,112"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_clip_drawer.html#af5be514be501db9b9f053f213f9e55b6" title="UnityEditor.Timeline.Clip\lDrawer.DrawRecordProhibited" alt="" coords="263,136,457,177"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_clip_border.html#abf713a535cca081c48a0b6571493ebc1" title="UnityEditor.Timeline.Clip\lBorder.Recording" alt="" coords="524,71,688,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af104e51e30bfcf0a4b38229569209381"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.DrawExtrapolation </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>clipRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00539">539</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2888cf9aa799c61d677ec6d6a61bf336"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineClipGUI.DrawExtrapolationIcon </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>icon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00534">534</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9ea0ae47297a07479ce0581ad14d2d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.DrawGhostClip </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>targetRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00316">316</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_border.html#aee6602e193eba1ced0e6e9e95a5139dd" title="UnityEditor.Timeline.Clip\lBorder.Selection" alt="" coords="244,5,408,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_icgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa9ea0ae47297a07479ce0581ad14d2d0_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_moving_items.html#a2a157b0323cbc64ac48eb21ad61340b4" title="UnityEditor.Timeline.Moving\lItems.DrawItemInternal" alt="" coords="244,5,427,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab30772c1d48fedd364a3eb1e366be97c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.DrawInto </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>drawRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00332">332</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ab30772c1d48fedd364a3eb1e366be97c_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ab30772c1d48fedd364a3eb1e366be97c_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ab30772c1d48fedd364a3eb1e366be97c_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_ab30772c1d48fedd364a3eb1e366be97c_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca" title="UnityEditor.Timeline.Selection\lManager.Contains" alt="" coords="244,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e6d086ae70c0e5610c382a9d884ac96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.DrawInvalidClip </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>targetRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00321">321</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a5e6d086ae70c0e5610c382a9d884ac96_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a5e6d086ae70c0e5610c382a9d884ac96_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a5e6d086ae70c0e5610c382a9d884ac96_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a5e6d086ae70c0e5610c382a9d884ac96_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_border.html#aee6602e193eba1ced0e6e9e95a5139dd" title="UnityEditor.Timeline.Clip\lBorder.Selection" alt="" coords="244,5,408,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5527d0efc9cdb8a54ac5702ca0aa074"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.DrawSimpleClip </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>targetRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_border.html">ClipBorder</a>&#160;</td>
+          <td class="paramname"><em>border</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>overlay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00326">326</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa5527d0efc9cdb8a54ac5702ca0aa074_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa5527d0efc9cdb8a54ac5702ca0aa074_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa5527d0efc9cdb8a54ac5702ca0aa074_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_aa5527d0efc9cdb8a54ac5702ca0aa074_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a4b7f59487a7014735342fd15c71413f1" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetClipEditor" alt="" coords="244,5,467,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_clip_drawer.html#a7274be82c2b1b386d9bc3d5db568db82" title="UnityEditor.Timeline.Clip\lDrawer.DrawSimpleClip" alt="" coords="273,71,437,112"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae79a24575ea1e959af4daee283638e72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_blends.html">ClipBlends</a> UnityEditor.Timeline.TimelineClipGUI.GetClipBlends </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00087">87</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8efcc325e614d2318e0f9f068821a90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIStyle UnityEditor.Timeline.TimelineClipGUI.GetExtrapolationIcon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a54ae9314c0572ffde0c52930cd7fa7a7">TimelineClip.ClipExtrapolation</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00474">474</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4bc7cd7512a20adc44401104ef46050"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.GetPostExtrapolationBounds </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>clipRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>icon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00512">512</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a769aba6744af5d2fd89663e8698befe5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.GetPreExtrapolationBounds </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>clipRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>icon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00490">490</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a96b1a8b018d61b9cb0806cfcd9d44b53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool UnityEditor.Timeline.TimelineClipGUI.IsSelected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#addab9624be4f66866bc7a987ddf8b732">UnityEditor.Timeline.TimelineItemGUI</a> .</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00157">157</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a96b1a8b018d61b9cb0806cfcd9d44b53_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a96b1a8b018d61b9cb0806cfcd9d44b53_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a96b1a8b018d61b9cb0806cfcd9d44b53_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a96b1a8b018d61b9cb0806cfcd9d44b53_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca" title="UnityEditor.Timeline.Selection\lManager.Contains" alt="" coords="244,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af2a6b016b1fe3cb03ef1879786f6ded8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Rect UnityEditor.Timeline.TimelineClipGUI.ProjectRectOnTimeline </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00568">568</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af86428cf65f61b323fcca3b5641afbf7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override Rect UnityEditor.Timeline.TimelineClipGUI.RectToTimeline </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#aa717593bee5a8ca1bd9d4ad5950088b6">UnityEditor.Timeline.TimelineItemGUI</a>.</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00634">634</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfa3cbbd3258b51f49160520834946c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.ResetClipChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00468">468</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e0f2f798967715d98da1e0ec9d3db33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEditor.Timeline.TimelineClipGUI.Select </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a4b36ea46153feea16a9618928eaad990">UnityEditor.Timeline.TimelineItemGUI</a> .</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00151">151</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9e0f2f798967715d98da1e0ec9d3db33_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9e0f2f798967715d98da1e0ec9d3db33_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9e0f2f798967715d98da1e0ec9d3db33_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9e0f2f798967715d98da1e0ec9d3db33_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b" title="UnityEditor.Timeline.Selection\lManager.Add" alt="" coords="244,5,440,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abfb172d9c8364a3361df9eb5278c88af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.ShouldSnapTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html">ISnappable</a>&#160;</td>
+          <td class="paramname"><em>snappable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html#a72213a9ef0105d20241d1f7d04aebbb0">UnityEditor.Timeline.IAttractable</a>.</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00723">723</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af35c75e19a8f105c0a98c9070a7a9517"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.ShowDrillIcon </td>
+          <td>(</td>
+          <td class="paramtype">PlayableDirector&#160;</td>
+          <td class="paramname"><em>resolver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00728">728</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_af35c75e19a8f105c0a98c9070a7a9517_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_af35c75e19a8f105c0a98c9070a7a9517_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_af35c75e19a8f105c0a98c9070a7a9517_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_af35c75e19a8f105c0a98c9070a7a9517_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html#ac419b723377d66feeaf06f9013f119a6" title="Gets the sub&#45;timelines for a specific clip. Implement this method if your clip supports playing neste..." alt="" coords="244,5,408,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a909a411201375f90d27b33476be7bb5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_edge.html">Edge</a>&gt; UnityEditor.Timeline.TimelineClipGUI.SnappableEdgesFor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_attractable.html">IAttractable</a>&#160;</td>
+          <td class="paramname"><em>attractable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#a37fdbb4c03841e24c39cc760798b55c0">ManipulateEdges</a>&#160;</td>
+          <td class="paramname"><em>manipulateEdges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_snappable.html#a3e4750f7a255074d10c4708aa932d7fb">UnityEditor.Timeline.ISnappable</a>.</p>
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00647">647</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a909a411201375f90d27b33476be7bb5b_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a909a411201375f90d27b33476be7bb5b_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a909a411201375f90d27b33476be7bb5b_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a909a411201375f90d27b33476be7bb5b_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#ac1a1d2639a552c5360180881e9f1e9ae" title="UnityEditor.Timeline.Timeline\lHelpers.GetClipAssetEndTime" alt="" coords="245,5,443,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a888747dbd3d9710f565ad944ae4428b7" title="UnityEditor.Timeline.Timeline\lHelpers.GetLoopDuration" alt="" coords="249,71,439,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85" title="UnityEditor.Timeline.Animation\lClipCurveCache.GetCurveInfo" alt="" coords="244,136,444,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a511068e933bb4ad3a561db80ac9fdcc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_options.html">ClipDrawOptions</a> UnityEditor.Timeline.TimelineClipGUI.UpdateClipDrawOptions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html">ClipEditor</a>&#160;</td>
+          <td class="paramname"><em>clipEditor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00287">287</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a511068e933bb4ad3a561db80ac9fdcc5_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a511068e933bb4ad3a561db80ac9fdcc5_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a511068e933bb4ad3a561db80ac9fdcc5_cgraph" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a511068e933bb4ad3a561db80ac9fdcc5_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html#a3381f162ac568a6c20c749bc74a7a06b" title="Implement this method to override the default options for drawing a clip. " alt="" coords="292,5,456,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a1965c36388ba999d52895befcac64496" title="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetDefaultClip\lEditor" alt="" coords="260,71,488,127"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af72a1feb914645d8c68bdceb3395c154"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.UpdateClipIcons </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00251">251</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a77f2ccc653629c2ca7eff5dfd6b1bcbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineClipGUI.UpdateDrawData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>drawRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>selected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>previousClipSelected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rectXOffset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00223">223</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a86d803d060d55ce42c04aadff013dd1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="struct_unity_editor_1_1_timeline_1_1_icon_data.html">IconData</a> UnityEditor.Timeline.TimelineClipGUI.k_DiggableClipIcon = new <a class="el" href="struct_unity_editor_1_1_timeline_1_1_icon_data.html">IconData</a>(<a class="el" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#aecdcede2e125cd897c292a2aeeaa548d">DirectorStyles.LoadIcon</a>(&quot;TimelineDigIn&quot;))</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a42d1004a23d9c09e449cbdb5ff5f84a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TimelineClipGUI.k_MaxHandleWidth = 10f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1c2d95d29d04082bd52676042c37097"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TimelineClipGUI.k_MinHandleWidth = 1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8dc7dac6fb6d2e4e2bf62ec1bdd38ff9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TimelineClipGUI.k_MinMixWidth = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe669853575bdf729ad86ee8262da016"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.m_ClipCenterSection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44b955d33ea20b619572f7c14f2e3b4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_clip_draw_data.html">ClipDrawData</a> UnityEditor.Timeline.TimelineClipGUI.m_ClipDrawData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0d35b93675b5a44905882f05ce763c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html">ClipEditor</a> UnityEditor.Timeline.TimelineClipGUI.m_ClipEditor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a6bff05663df6c3b87d663888120234"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.m_ClipViewDirty = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9497c3b3626af00e12d56fa2649d089c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_editor_clip.html">EditorClip</a> UnityEditor.Timeline.TimelineClipGUI.m_EditorItem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab105851fd75990339a73e31fa93b8b5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineClipGUI.m_LastDirtyIndex = Int32.MinValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a478ed52fa1f1d109c421dc097d29ba90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;Rect&gt; UnityEditor.Timeline.TimelineClipGUI.m_LoopRects = new List&lt;Rect&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19f5f2408ad7f2525184912f391282a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineClipGUI.m_MinLoopIndex = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9605b35bff6d4345be5f5b1c8d3855e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.m_MixInRect = new Rect()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a534b4d625ad94e08552b67a39bf232a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.m_MixOutRect = new Rect()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa18dd4b1686e0f38eaf8a4125761e5d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.m_ShowDrillIcon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68f2d19c4cd7c4323d3596b23e70e20f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;PlayableDirector&gt; UnityEditor.Timeline.TimelineClipGUI.s_TempSubDirectors = new List&lt;PlayableDirector&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="ae6dd97b28db5e436f2c8ece3c6fbbeda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> UnityEditor.Timeline.TimelineClipGUI.clip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00218">218</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade24074567da66d5b0f5d96f989f3cf9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_clip_curve_editor.html">ClipCurveEditor</a> UnityEditor.Timeline.TimelineClipGUI.clipCurveEditor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16b1dac51d15d08c5eed6e18c032c3ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.clippedRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00149">149</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a464e1f3c7feac5e8a10e2a71653124c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a> UnityEditor.Timeline.TimelineClipGUI.drawer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00145">145</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb387b66e43c516f3bae0f09477216f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override double UnityEditor.Timeline.TimelineClipGUI.end</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00113">113</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52e92ebf371dc9d2015362f413f9732f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.inlineCurvesSelected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00054">54</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a122264c2c32a903e328e296bc3aab132"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> UnityEditor.Timeline.TimelineClipGUI.item</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00168">168</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83f64fef53fd17744f0a70bfaf601648"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a> UnityEditor.Timeline.TimelineClipGUI.leftHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00174">174</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a58d00c7758ac02af6b9c1bf262487fb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineClipGUI.minLoopIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00140">140</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4812146383543a1cf9a26f90ac7843d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.mixInRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00078">78</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0283dc052cd875eb15f15ec410f8320f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineClipGUI.mixOutRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00066">66</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a191a157912212ae7de4f5349cdfd1367"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.Timeline.TimelineClipGUI.name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80e4589075052aa66f1b4cbe3ce882b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> UnityEditor.Timeline.TimelineClipGUI.nextClip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26c21d6dde2d9455a59149c01094d6aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> IClipCurveEditorOwner. UnityEditor.Timeline.TimelineClipGUI.owner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00129">129</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf6cd66366b5e9614dc78f04a7c65a4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> UnityEditor.Timeline.TimelineClipGUI.previousClip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3dbc9d29135aac7ec217f54146acb8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a> UnityEditor.Timeline.TimelineClipGUI.rightHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00175">175</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba1c33798ae625e1be9658b82addd770"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IClipCurveEditorOwner. UnityEditor.Timeline.TimelineClipGUI.showLoops</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00124">124</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53393180abbd18542c79da2693b80c45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override double UnityEditor.Timeline.TimelineClipGUI.start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00108">108</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a6f43791eb8101edc8f03a1f651545c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.supportResize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a242747f2003bca8ab2fd9310f394c1b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.supportsLooping</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00118">118</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf22eabed6030d591b816fbce0f32af9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineClipGUI.supportsSubTimelines</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00134">134</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ce9a6e40d250dab1fa526eb2e70c235"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html">IZOrderProvider</a> UnityEditor.Timeline.TimelineClipGUI.zOrderProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a> 第 <a class="el" href="_timeline_clip_g_u_i_8cs_source.html#l00172">172</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/treeview/ItemGui/<a class="el" href="_timeline_clip_g_u_i_8cs_source.html">TimelineClipGUI.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:51 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

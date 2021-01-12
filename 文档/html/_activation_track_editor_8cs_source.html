@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Activation/ActivationTrackEditor.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_2b1693035a6fb85b86f8b6336d96f773.html">Activation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ActivationTrackEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_activation_track_editor_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_jet_brains.html">JetBrains</a>.Annotations;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Playables;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [UsedImplicitly]</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [CustomTimelineEditor(typeof(<a class="code" href="class_unity_engine_1_1_timeline_1_1_activation_track.html">ActivationTrack</a>))]</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html">ActivationTrackEditor</a> : <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_editor.html">TrackEditor</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#a7d8d455a83e75855d7ac6fadd85c03b8">   12</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">string</span> ClipText = LocalizationDatabase.GetLocalizedString(<span class="stringliteral">&quot;Active&quot;</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#a649abef332a97fadf44b30f17f61ae76">   14</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">string</span> k_ErrorParentString = LocalizationDatabase.GetLocalizedString(<span class="stringliteral">&quot;The bound GameObject is a parent of the PlayableDirector.&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#a06fec53239d5a5e2a814950ad0d9a366">   15</a></span>&#160;        <span class="keyword">static</span> readonly <span class="keywordtype">string</span> k_ErrorString = LocalizationDatabase.GetLocalizedString(<span class="stringliteral">&quot;The bound GameObject contains the PlayableDirector.&quot;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#a146b411daea4f5a77ec55bbd1720e761">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <a class="code" href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html">TrackDrawOptions</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#a146b411daea4f5a77ec55bbd1720e761">GetTrackOptions</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="code" href="namespace_object.html">Object</a> binding)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            var options = base.GetTrackOptions(track, binding);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            options.<a class="code" href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html#ac72430d0ac4c2195151da46b683da314">errorText</a> = GetErrorText(track, binding);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span> options;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aa612c2456c068f9e60e150356bb8e91c">   24</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aa612c2456c068f9e60e150356bb8e91c">GetErrorText</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="code" href="namespace_object.html">Object</a> binding)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            var gameObject = binding as <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">GameObject</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            var currentDirector = <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">TimelineEditor</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">inspectedDirector</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (gameObject != null &amp;&amp; currentDirector != null)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                var director = gameObject.GetComponent&lt;PlayableDirector&gt;();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">if</span> (currentDirector == director)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <span class="keywordflow">return</span> k_ErrorString;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">if</span> (currentDirector.gameObject.transform.IsChildOf(gameObject.transform))</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">return</span> k_ErrorParentString;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> base.GetErrorText(track, binding, <a class="code" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a>.PrefabBound);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aac85a9ef4fb7d3531a3c3509c648b3e9">   45</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aac85a9ef4fb7d3531a3c3509c648b3e9">OnCreate</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> copiedFrom)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="comment">// Add a default clip to the newly created track</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (copiedFrom == null)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                var clip = track.CreateClip(0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2868e2d17cc2c3cb3ae3afad8f8712d8">displayName</a> = ClipText;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                clip.duration = <a class="code" href="namespace_system.html">System</a>.Math.Max(clip.duration, track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a631a8cf0de9785cd1e4b830b5bacc9dc">duration</a> * 0.5f);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html_a3b3feaeaadd4bc298b30c5b835a91501"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html#a3b3feaeaadd4bc298b30c5b835a91501">UnityEditor.Timeline.TimelineEditor.inspectedDirector</a></div><div class="ttdeci">static PlayableDirector inspectedDirector</div><div class="ttdoc">The PlayableDirector associated with the timeline currently being shown in the Timeline window...</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00017">TimelineEditor.cs:17</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_editor_html_a146b411daea4f5a77ec55bbd1720e761"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#a146b411daea4f5a77ec55bbd1720e761">UnityEditor.Timeline.ActivationTrackEditor.GetTrackOptions</a></div><div class="ttdeci">override TrackDrawOptions GetTrackOptions(TrackAsset track, Object binding)</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_editor_8cs_source.html#l00017">ActivationTrackEditor.cs:17</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_editor_html_aac85a9ef4fb7d3531a3c3509c648b3e9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aac85a9ef4fb7d3531a3c3509c648b3e9">UnityEditor.Timeline.ActivationTrackEditor.OnCreate</a></div><div class="ttdeci">override void OnCreate(TrackAsset track, TrackAsset copiedFrom)</div><div class="ttdoc">Callback for when a track is created. </div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_editor_8cs_source.html#l00045">ActivationTrackEditor.cs:45</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae">UnityEditor.Timeline.GameObject</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_track_draw_options_html_ac72430d0ac4c2195151da46b683da314"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html#ac72430d0ac4c2195151da46b683da314">UnityEditor.Timeline.TrackDrawOptions.errorText</a></div><div class="ttdeci">string errorText</div><div class="ttdoc">Text that indicates if the track should display an error. </div><div class="ttdef"><b>Definition:</b> <a href="_track_editor_8cs_source.html#l00021">TrackEditor.cs:21</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a2b63a1f2dc8b3a07e537aa60c12ba5f8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">UnityEngine.Timeline.TrackAsset.timelineAsset</a></div><div class="ttdeci">TimelineAsset timelineAsset</div><div class="ttdoc">The TimelineAsset that this track belongs to. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00163">TrackAsset.cs:163</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2868e2d17cc2c3cb3ae3afad8f8712d8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2868e2d17cc2c3cb3ae3afad8f8712d8">UnityEngine.Timeline.TimelineClip.displayName</a></div><div class="ttdeci">string displayName</div><div class="ttdoc">The name displayed on the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00225">TimelineClip.cs:225</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_editor.html">UnityEditor.Timeline.TrackEditor</a></div><div class="ttdoc">Use this class to customize track types in the TimelineEditor. </div><div class="ttdef"><b>Definition:</b> <a href="_track_editor_8cs_source.html#l00123">TrackEditor.cs:123</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html">UnityEditor.Timeline.ActivationTrackEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_editor_8cs_source.html#l00010">ActivationTrackEditor.cs:10</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html_ab1298abef70580c7ae84c896c0fa4a85"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">UnityEditor.Timeline.TrackBindingErrors</a></div><div class="ttdeci">TrackBindingErrors</div><div class="ttdoc">The errors displayed for the track binding. </div><div class="ttdef"><b>Definition:</b> <a href="_track_editor_8cs_source.html#l00082">TrackEditor.cs:82</a></div></div>
+<div class="ttc" id="namespace_jet_brains_html"><div class="ttname"><a href="namespace_jet_brains.html">JetBrains</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_activation_track_editor_html_aa612c2456c068f9e60e150356bb8e91c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aa612c2456c068f9e60e150356bb8e91c">UnityEditor.Timeline.ActivationTrackEditor.GetErrorText</a></div><div class="ttdeci">string GetErrorText(TrackAsset track, Object binding)</div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_editor_8cs_source.html#l00024">ActivationTrackEditor.cs:24</a></div></div>
+<div class="ttc" id="struct_unity_editor_1_1_timeline_1_1_track_draw_options_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html">UnityEditor.Timeline.TrackDrawOptions</a></div><div class="ttdoc">The user-defined options for drawing a track." </div><div class="ttdef"><b>Definition:</b> <a href="_track_editor_8cs_source.html#l00013">TrackEditor.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html">UnityEditor.Timeline.TimelineEditor</a></div><div class="ttdoc">Information currently being edited in the Timeline Editor Window. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_editor_8cs_source.html#l00012">TimelineEditor.cs:12</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_activation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_activation_track.html">UnityEngine.Timeline.ActivationTrack</a></div><div class="ttdoc">Track that can be used to control the active state of a GameObject. </div><div class="ttdef"><b>Definition:</b> <a href="_activation_track_8cs_source.html#l00013">ActivationTrack.cs:13</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html_a631a8cf0de9785cd1e4b830b5bacc9dc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a631a8cf0de9785cd1e4b830b5bacc9dc">UnityEngine.Timeline.TimelineAsset.duration</a></div><div class="ttdeci">override double duration</div><div class="ttdoc">The length, in seconds, of the timeline </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_8cs_source.html#l00078">TimelineAsset.cs:78</a></div></div>
+<div class="ttc" id="namespace_object_html"><div class="ttname"><a href="namespace_object.html">Object</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_FontAssetUtilities.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a7d267b27539021f3422d98d206ea06f.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_FontAssetUtilities.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___font_asset_utilities_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.TextCore.LowLevel;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a7f6270a7580ff645706ddaa4b164853c">   13</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> readonly <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a7f6270a7580ff645706ddaa4b164853c">s_Instance</a> = <span class="keyword">new</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a62d1248c0f7640bcb6fd1327b90a0867">TMP_FontAssetUtilities</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a62d1248c0f7640bcb6fd1327b90a0867">   18</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a62d1248c0f7640bcb6fd1327b90a0867">TMP_FontAssetUtilities</a>() { }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1f34ababfd8ed6e00fa3a83796442ade">instance</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1f34ababfd8ed6e00fa3a83796442ade">   25</a></span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a7f6270a7580ff645706ddaa4b164853c">s_Instance</a>; }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a78a085e028670cd853823ad07592e73f">   33</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> List&lt;int&gt; <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a78a085e028670cd853823ad07592e73f">k_SearchedFontAssets</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a603d82b9eb3d85f7f3ed3b2a5234a592">   50</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a603d82b9eb3d85f7f3ed3b2a5234a592">GetCharacterFromFontAsset</a>(uint unicode, <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> sourceFontAsset, <span class="keywordtype">bool</span> includeFallbacks, <a class="code" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">FontStyles</a> fontStyle, <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a> fontWeight, out <span class="keywordtype">bool</span> isAlternativeTypeface, out <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span> (includeFallbacks)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">if</span> (k_SearchedFontAssets == null)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    k_SearchedFontAssets = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    k_SearchedFontAssets.Clear();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a8e35285d12c9b64b46e01a16a3a839bd">GetCharacterFromFontAsset_Internal</a>(unicode, sourceFontAsset, includeFallbacks, fontStyle, fontWeight, out isAlternativeTypeface, out fontAsset);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a8e35285d12c9b64b46e01a16a3a839bd">   68</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a8e35285d12c9b64b46e01a16a3a839bd">GetCharacterFromFontAsset_Internal</a>(uint unicode, <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> sourceFontAsset, <span class="keywordtype">bool</span> includeFallbacks, <a class="code" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">FontStyles</a> fontStyle, <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a> fontWeight, out <span class="keywordtype">bool</span> isAlternativeTypeface, out <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            fontAsset = null;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            isAlternativeTypeface = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> characterData = null;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">            #region FONT WEIGHT AND FONT STYLE HANDLING</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">// Determine if a font weight or style is used. If so check if an alternative typeface is assigned for the given weight and / or style.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">bool</span> isItalic = (fontStyle &amp; <a class="code" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">FontStyles</a>.Italic) == <a class="code" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">FontStyles</a>.Italic;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            if (isItalic || fontWeight != <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Regular)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="comment">// Get reference to the font weight pairs of the given font asset.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <a class="code" href="struct_t_m_pro_1_1_t_m_p___font_weight_pair.html">TMP_FontWeightPair</a>[] fontWeights = sourceFontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#aff13034ac2e0a2114317a68bcaaa08f0">fontWeightTable</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordtype">int</span> fontWeightIndex = 4;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">switch</span> (fontWeight)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Thin:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        fontWeightIndex = 1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.ExtraLight:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        fontWeightIndex = 2;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Light:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        fontWeightIndex = 3;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Regular:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        fontWeightIndex = 4;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Medium:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        fontWeightIndex = 5;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.SemiBold:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        fontWeightIndex = 6;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Bold:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        fontWeightIndex = 7;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Heavy:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        fontWeightIndex = 8;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>.Black:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                        fontWeightIndex = 9;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                fontAsset = isItalic ? fontWeights[fontWeightIndex].<a class="code" href="struct_t_m_pro_1_1_t_m_p___font_weight_pair.html#aeaaebabf5710a63721b990b17ccd5f66">italicTypeface</a> : fontWeights[fontWeightIndex].<a class="code" href="struct_t_m_pro_1_1_t_m_p___font_weight_pair.html#a3fe9c6ec12986523cca02f4b6eded6a4">regularTypeface</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keywordflow">if</span> (fontAsset != null)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    <span class="keywordflow">if</span> (fontAsset.characterLookupTable.TryGetValue(unicode, out characterData))</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                        isAlternativeTypeface = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        <span class="keywordflow">return</span> characterData;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fontAsset.atlasPopulationMode == <a class="code" href="namespace_t_m_pro.html#a6c186121e2082f29ee88f4a8125a23cd">AtlasPopulationMode</a>.Dynamic)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                        <span class="keywordflow">if</span> (fontAsset.TryAddCharacterInternal(unicode, out characterData))</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                            isAlternativeTypeface = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                            <span class="keywordflow">return</span> characterData;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                        <span class="comment">// Check if the source font file contains the requested character.</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        <span class="comment">//if (TryGetCharacterFromFontFile(unicode, fontAsset, out characterData))</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                        <span class="comment">//{</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                        <span class="comment">//    isAlternativeTypeface = true;</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                        <span class="comment">//    return characterData;</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                        <span class="comment">//}</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                        <span class="comment">// If we find the requested character, we add it to the font asset character table</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                        <span class="comment">// and return its character data.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                        <span class="comment">// We also add this character to the list of characters we will need to add to the font atlas.</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                        <span class="comment">// We assume the font atlas has room otherwise this font asset should not be marked as dynamic.</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                        <span class="comment">// Alternatively, we could also add multiple pages of font atlas textures (feature consideration).</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <span class="comment">// At this point, we were not able to find the requested character in the alternative typeface</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    <span class="comment">// so we check the source font asset and its potential fallbacks.</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">            #endregion</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">// Search the source font asset for the requested character.</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">if</span> (sourceFontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#aa1ca0b68db11064bd7f1ebc7278509b1">characterLookupTable</a>.TryGetValue(unicode, out characterData))</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="comment">// We were able to locate the requested character in the given font asset.</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                fontAsset = sourceFontAsset;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="keywordflow">return</span> characterData;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sourceFontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a9344aef93974f7097591e0040ad7780b">atlasPopulationMode</a> == <a class="code" href="namespace_t_m_pro.html#a6c186121e2082f29ee88f4a8125a23cd">AtlasPopulationMode</a>.Dynamic)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keywordflow">if</span> (sourceFontAsset.TryAddCharacterInternal(unicode, out characterData))</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    fontAsset = sourceFontAsset;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    <span class="keywordflow">return</span> characterData;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="comment">//if (TryGetCharacterFromFontFile(unicode, sourceFontAsset, out characterData))</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="comment">//{</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="comment">//    fontAsset = sourceFontAsset;</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="comment">//    //fontAsset.AddCharacterToRasterList(unicode);</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="comment">//    return characterData;</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <span class="comment">//}</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="comment">// If we find the requested character, we add it to the font asset character table</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="comment">// and return its character data.</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="comment">// We also add this character to the list of characters we will need to add to the font atlas.</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="comment">// We assume the font atlas has room otherwise this font asset should not be marked as dynamic.</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="comment">// Alternatively, we could also add multiple pages of font atlas textures (feature consideration)</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="comment">// Search fallback font assets if we still don&#39;t have a valid character and include fallback is set to true.</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (characterData == null &amp;&amp; includeFallbacks &amp;&amp; sourceFontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a661dea6c739ddd010568738de57e275c">fallbackFontAssetTable</a> != null)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="comment">// Get reference to the list of fallback font assets.</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                List&lt;TMP_FontAsset&gt; fallbackFontAssets = sourceFontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a661dea6c739ddd010568738de57e275c">fallbackFontAssetTable</a>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <span class="keywordtype">int</span> fallbackCount = fallbackFontAssets.Count;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="keywordflow">if</span> (fallbackFontAssets != null &amp;&amp; fallbackCount &gt; 0)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fallbackCount &amp;&amp; characterData == null; i++)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                        <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> temp = fallbackFontAssets[i];</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                        <span class="keywordflow">if</span> (temp == null) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = temp.GetInstanceID();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        <span class="comment">// Skip over the fallback font asset in the event it is null or if already searched.</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        <span class="keywordflow">if</span> (k_SearchedFontAssets.Contains(<span class="keywordtype">id</span>))</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                        <span class="comment">// Add to list of font assets already searched.</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                        k_SearchedFontAssets.Add(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                        characterData = <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a8e35285d12c9b64b46e01a16a3a839bd">GetCharacterFromFontAsset_Internal</a>(unicode, temp, includeFallbacks, fontStyle, fontWeight, out isAlternativeTypeface, out fontAsset);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                        <span class="keywordflow">if</span> (characterData != null)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                        {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                            <span class="keywordflow">return</span> characterData;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a6181aaa5c7a202d894d4f0340dc80889">  243</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a6181aaa5c7a202d894d4f0340dc80889">GetCharacterFromFontAssets</a>(uint unicode, List&lt;TMP_FontAsset&gt; fontAssets, <span class="keywordtype">bool</span> includeFallbacks, <a class="code" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">FontStyles</a> fontStyle, <a class="code" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a> fontWeight, out <span class="keywordtype">bool</span> isAlternativeTypeface, out <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            isAlternativeTypeface = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="comment">// Make sure font asset list is valid</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">if</span> (fontAssets == null || fontAssets.Count == 0)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                fontAsset = null;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">if</span> (includeFallbacks)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">if</span> (k_SearchedFontAssets == null)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    k_SearchedFontAssets = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                    k_SearchedFontAssets.Clear();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordtype">int</span> fontAssetCount = fontAssets.Count;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fontAssetCount; i++)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                <span class="keywordflow">if</span> (fontAssets[i] == null) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> characterData = <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a8e35285d12c9b64b46e01a16a3a839bd">GetCharacterFromFontAsset_Internal</a>(unicode, fontAssets[i], includeFallbacks, fontStyle, fontWeight, out isAlternativeTypeface, out fontAsset);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <span class="keywordflow">if</span> (characterData != null)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                    <span class="keywordflow">return</span> characterData;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            fontAsset = null;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="comment">// =====================================================================</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">// FONT ENGINE &amp; FONT FILE MANAGEMENT - Fields, Properties and Functions</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="comment">// =====================================================================</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ac275299fc8b475f1e9a64cbf1962a749">  284</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ac275299fc8b475f1e9a64cbf1962a749">k_IsFontEngineInitialized</a>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1a2d073fd699cf3ad23daca3858ebd2f">  287</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1a2d073fd699cf3ad23daca3858ebd2f">TryGetCharacterFromFontFile</a>(uint unicode, <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset, out <a class="code" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> character)</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            character = null;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="comment">// Initialize Font Engine library if not already initialized</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keywordflow">if</span> (k_IsFontEngineInitialized == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                FontEngineError error = FontEngine.InitializeFontEngine();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">if</span> (error == 0)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    k_IsFontEngineInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="comment">// Load the font face for the given font asset.</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="comment">// TODO: Add manager to keep track of which font faces are currently loaded.</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            FontEngine.LoadFontFace(fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02d8bdefe8ea24739f9c0d4699ae2619">sourceFontFile</a>, fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a>.pointSize);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            Glyph glyph = null;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            uint glyphIndex = FontEngine.GetGlyphIndex(unicode);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="comment">// Check if glyph is already contained in the font asset as the same glyph might be referenced by multiple character.</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">if</span> (fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#ae479d9a3f8788cabcf689c2bebee35d2">glyphLookupTable</a>.TryGetValue(glyphIndex, out glyph))</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                character = fontAsset.AddCharacter_Internal(unicode, glyph);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            GlyphLoadFlags glyphLoadFlags = ((GlyphRasterModes)fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02dbb30284fafaab27013502060d1cbb">atlasRenderMode</a> &amp; GlyphRasterModes.RASTER_MODE_HINTED) == GlyphRasterModes.RASTER_MODE_HINTED ? GlyphLoadFlags.LOAD_RENDER : GlyphLoadFlags.LOAD_RENDER | GlyphLoadFlags.LOAD_NO_HINTING;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">if</span> (FontEngine.TryGetGlyphWithUnicodeValue(unicode, glyphLoadFlags, out glyph))</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="comment">// Add new character to font asset (if needed)</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                character = fontAsset.AddCharacter_Internal(unicode, glyph);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ab07d50199fc5f680f8679e4156f30a3d">  329</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ab07d50199fc5f680f8679e4156f30a3d">TryGetGlyphFromFontFile</a>(uint glyphIndex, <a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset, out Glyph glyph)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            glyph = null;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="comment">// Initialize Font Engine library if not already initialized</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">if</span> (k_IsFontEngineInitialized == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                FontEngineError error = FontEngine.InitializeFontEngine();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                <span class="keywordflow">if</span> (error == 0)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                    k_IsFontEngineInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <span class="comment">// Load the font face for the given font asset.</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="comment">// TODO: Add manager to keep track of which font faces are currently loaded.</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            FontEngine.LoadFontFace(fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02d8bdefe8ea24739f9c0d4699ae2619">sourceFontFile</a>, fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">faceInfo</a>.pointSize);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            GlyphLoadFlags glyphLoadFlags = ((GlyphRasterModes)fontAsset.<a class="code" href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02dbb30284fafaab27013502060d1cbb">atlasRenderMode</a> &amp; GlyphRasterModes.RASTER_MODE_HINTED) == GlyphRasterModes.RASTER_MODE_HINTED ? GlyphLoadFlags.LOAD_RENDER : GlyphLoadFlags.LOAD_RENDER | GlyphLoadFlags.LOAD_NO_HINTING;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keywordflow">if</span> (FontEngine.TryGetGlyphWithIndexValue(glyphIndex, glyphLoadFlags, out glyph))</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="comment">// Add new glyph to font asset (if needed)</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                <span class="comment">//fontAsset.AddGlyph_Internal(glyph);</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___font_weight_pair_html_a3fe9c6ec12986523cca02f4b6eded6a4"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___font_weight_pair.html#a3fe9c6ec12986523cca02f4b6eded6a4">TMPro.TMP_FontWeightPair.regularTypeface</a></div><div class="ttdeci">TMP_FontAsset regularTypeface</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_common_8cs_source.html#l00127">TMP_FontAssetCommon.cs:127</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_aff13034ac2e0a2114317a68bcaaa08f0"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#aff13034ac2e0a2114317a68bcaaa08f0">TMPro.TMP_FontAsset.fontWeightTable</a></div><div class="ttdeci">TMP_FontWeightPair[] fontWeightTable</div><div class="ttdoc">Array containing font assets to be used as alternative typefaces for the various potential font weigh...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00327">TMP_FontAsset.cs:327</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a9344aef93974f7097591e0040ad7780b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a9344aef93974f7097591e0040ad7780b">TMPro.TMP_FontAsset.atlasPopulationMode</a></div><div class="ttdeci">AtlasPopulationMode atlasPopulationMode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00062">TMP_FontAsset.cs:62</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a603d82b9eb3d85f7f3ed3b2a5234a592"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a603d82b9eb3d85f7f3ed3b2a5234a592">TMPro.TMP_FontAssetUtilities.GetCharacterFromFontAsset</a></div><div class="ttdeci">static TMP_Character GetCharacterFromFontAsset(uint unicode, TMP_FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface, out TMP_FontAsset fontAsset)</div><div class="ttdoc">Returns the text element (character) for the given unicode value taking into consideration the reques...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00050">TMP_FontAssetUtilities.cs:50</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_ac275299fc8b475f1e9a64cbf1962a749"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ac275299fc8b475f1e9a64cbf1962a749">TMPro.TMP_FontAssetUtilities.k_IsFontEngineInitialized</a></div><div class="ttdeci">static bool k_IsFontEngineInitialized</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00284">TMP_FontAssetUtilities.cs:284</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a02d8bdefe8ea24739f9c0d4699ae2619"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02d8bdefe8ea24739f9c0d4699ae2619">TMPro.TMP_FontAsset.sourceFontFile</a></div><div class="ttdeci">Font sourceFontFile</div><div class="ttdoc">Source font file when atlas population mode is set to dynamic. Null when the atlas population mode is...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00054">TMP_FontAsset.cs:54</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a1a2d073fd699cf3ad23daca3858ebd2f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1a2d073fd699cf3ad23daca3858ebd2f">TMPro.TMP_FontAssetUtilities.TryGetCharacterFromFontFile</a></div><div class="ttdeci">static bool TryGetCharacterFromFontFile(uint unicode, TMP_FontAsset fontAsset, out TMP_Character character)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00287">TMP_FontAssetUtilities.cs:287</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a78a085e028670cd853823ad07592e73f"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a78a085e028670cd853823ad07592e73f">TMPro.TMP_FontAssetUtilities.k_SearchedFontAssets</a></div><div class="ttdeci">static List&lt; int &gt; k_SearchedFontAssets</div><div class="ttdoc">List containing instance ID of font assets already searched. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00033">TMP_FontAssetUtilities.cs:33</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a42eafee651621d6645ea8c424faa2f1a"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a42eafee651621d6645ea8c424faa2f1a">TMPro.TMP_FontAsset.faceInfo</a></div><div class="ttdeci">FaceInfo faceInfo</div><div class="ttdoc">Information about the font face. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00085">TMP_FontAsset.cs:85</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a02dbb30284fafaab27013502060d1cbb"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a02dbb30284fafaab27013502060d1cbb">TMPro.TMP_FontAsset.atlasRenderMode</a></div><div class="ttdeci">GlyphRenderMode atlasRenderMode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00270">TMP_FontAsset.cs:270</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___character_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___character.html">TMPro.TMP_Character</a></div><div class="ttdoc">A basic element of text. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___character_8cs_source.html#l00010">TMP_Character.cs:10</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_ab07d50199fc5f680f8679e4156f30a3d"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ab07d50199fc5f680f8679e4156f30a3d">TMPro.TMP_FontAssetUtilities.TryGetGlyphFromFontFile</a></div><div class="ttdeci">static bool TryGetGlyphFromFontFile(uint glyphIndex, TMP_FontAsset fontAsset, out Glyph glyph)</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00329">TMP_FontAssetUtilities.cs:329</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___font_weight_pair_html"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___font_weight_pair.html">TMPro.TMP_FontWeightPair</a></div><div class="ttdoc">Contains the font assets for the regular and italic styles associated with a given font weight...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_common_8cs_source.html#l00125">TMP_FontAssetCommon.cs:125</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_a661dea6c739ddd010568738de57e275c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#a661dea6c739ddd010568738de57e275c">TMPro.TMP_FontAsset.fallbackFontAssetTable</a></div><div class="ttdeci">List&lt; TMP_FontAsset &gt; fallbackFontAssetTable</div><div class="ttdoc">List containing the Fallback font assets for this font. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00305">TMP_FontAsset.cs:305</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_a6c186121e2082f29ee88f4a8125a23cd"><div class="ttname"><a href="namespace_t_m_pro.html#a6c186121e2082f29ee88f4a8125a23cd">TMPro.AtlasPopulationMode</a></div><div class="ttdeci">AtlasPopulationMode</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00014">TMP_FontAsset.cs:14</a></div></div>
+<div class="ttc" id="struct_t_m_pro_1_1_t_m_p___font_weight_pair_html_aeaaebabf5710a63721b990b17ccd5f66"><div class="ttname"><a href="struct_t_m_pro_1_1_t_m_p___font_weight_pair.html#aeaaebabf5710a63721b990b17ccd5f66">TMPro.TMP_FontWeightPair.italicTypeface</a></div><div class="ttdeci">TMP_FontAsset italicTypeface</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_common_8cs_source.html#l00128">TMP_FontAssetCommon.cs:128</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a8e35285d12c9b64b46e01a16a3a839bd"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a8e35285d12c9b64b46e01a16a3a839bd">TMPro.TMP_FontAssetUtilities.GetCharacterFromFontAsset_Internal</a></div><div class="ttdeci">static TMP_Character GetCharacterFromFontAsset_Internal(uint unicode, TMP_FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface, out TMP_FontAsset fontAsset)</div><div class="ttdoc">Internal function returning the text element character for the given unicode value taking into consid...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00068">TMP_FontAssetUtilities.cs:68</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_aedf79b6e7e2ce2b9c9ac84e790596e7c"><div class="ttname"><a href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">TMPro.FontStyles</a></div><div class="ttdeci">FontStyles</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l00101">TMP_Text.cs:101</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_aa1ca0b68db11064bd7f1ebc7278509b1"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#aa1ca0b68db11064bd7f1ebc7278509b1">TMPro.TMP_FontAsset.characterLookupTable</a></div><div class="ttdeci">Dictionary&lt; uint, TMP_Character &gt; characterLookupTable</div><div class="ttdoc">Dictionary used to lookup characters contained in the font asset by their unicode values...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00135">TMP_FontAsset.cs:135</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html_ae08cbdb438aade8d0ee87c88b451d48e"><div class="ttname"><a href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">TMPro.FontWeight</a></div><div class="ttdeci">FontWeight</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___text_8cs_source.html#l00102">TMP_Text.cs:102</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a1f34ababfd8ed6e00fa3a83796442ade"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1f34ababfd8ed6e00fa3a83796442ade">TMPro.TMP_FontAssetUtilities.instance</a></div><div class="ttdeci">static TMP_FontAssetUtilities instance</div><div class="ttdoc">Get a singleton instance of the Font Asset Utilities class. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00025">TMP_FontAssetUtilities.cs:25</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMPro.TMP_FontAssetUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00011">TMP_FontAssetUtilities.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a7f6270a7580ff645706ddaa4b164853c"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a7f6270a7580ff645706ddaa4b164853c">TMPro.TMP_FontAssetUtilities.s_Instance</a></div><div class="ttdeci">static readonly TMP_FontAssetUtilities s_Instance</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00013">TMP_FontAssetUtilities.cs:13</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMPro.TMP_FontAsset</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00022">TMP_FontAsset.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_html_ae479d9a3f8788cabcf689c2bebee35d2"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset.html#ae479d9a3f8788cabcf689c2bebee35d2">TMPro.TMP_FontAsset.glyphLookupTable</a></div><div class="ttdeci">Dictionary&lt; uint, Glyph &gt; glyphLookupTable</div><div class="ttdoc">Dictionary used to lookup glyphs contained in the font asset by their index. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_8cs_source.html#l00108">TMP_FontAsset.cs:108</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a6181aaa5c7a202d894d4f0340dc80889"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a6181aaa5c7a202d894d4f0340dc80889">TMPro.TMP_FontAssetUtilities.GetCharacterFromFontAssets</a></div><div class="ttdeci">static TMP_Character GetCharacterFromFontAssets(uint unicode, List&lt; TMP_FontAsset &gt; fontAssets, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface, out TMP_FontAsset fontAsset)</div><div class="ttdoc">Returns the text element (character) for the given unicode value taking into consideration the reques...</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00243">TMP_FontAssetUtilities.cs:243</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_t_m_p___font_asset_utilities_html_a62d1248c0f7640bcb6fd1327b90a0867"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a62d1248c0f7640bcb6fd1327b90a0867">TMPro.TMP_FontAssetUtilities.TMP_FontAssetUtilities</a></div><div class="ttdeci">static TMP_FontAssetUtilities()</div><div class="ttdoc">Default constructor </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___font_asset_utilities_8cs_source.html#l00018">TMP_FontAssetUtilities.cs:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:33 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

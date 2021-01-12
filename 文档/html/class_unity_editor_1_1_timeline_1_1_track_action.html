@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.TrackAction类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_track_action-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.TrackAction类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.Timeline.TrackAction 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_action__inherit__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_track_action_inherit__map" alt="Inheritance graph"/></div>
+<map name="_unity_editor_8_timeline_8_track_action_inherit__map" id="_unity_editor_8_timeline_8_track_action_inherit__map">
+<area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_add_override_track_action.html" title="UnityEditor.Timeline.Add\lOverrideTrackAction" alt="" coords="438,5,603,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_convert_from_clip_track_action.html" title="UnityEditor.Timeline.Convert\lFromClipTrackAction" alt="" coords="428,71,613,112"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_convert_to_clip_mode_action.html" title="UnityEditor.Timeline.Convert\lToClipModeAction" alt="" coords="428,136,613,177"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_copy_tracks_to_clipboard.html" title="UnityEditor.Timeline.Copy\lTracksToClipboard" alt="" coords="435,201,607,243"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_delete_tracks.html" title="UnityEditor.Timeline.Delete\lTracks" alt="" coords="431,267,610,308"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_duplicate_tracks.html" title="UnityEditor.Timeline.Duplicate\lTracks" alt="" coords="423,332,619,373"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window.html" title="UnityEditor.Timeline.Edit\lTrackInAnimationWindow" alt="" coords="437,397,605,439"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_lock_selected_track.html" title="UnityEditor.Timeline.Lock\lSelectedTrack" alt="" coords="435,463,606,504"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_lock_track.html" title="UnityEditor.Timeline.Lock\lTrack" alt="" coords="435,528,606,569"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_mute_selected_track.html" title="UnityEditor.Timeline.Mute\lSelectedTrack" alt="" coords="435,593,606,635"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_mute_track.html" title="UnityEditor.Timeline.Mute\lTrack" alt="" coords="435,659,606,700"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_remove_invalid_markers_action.html" title="UnityEditor.Timeline.Remove\lInvalidMarkersAction" alt="" coords="427,724,615,765"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_show_hide_markers.html" title="UnityEditor.Timeline.Show\lHideMarkers" alt="" coords="433,789,608,831"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_track_offset_base_action.html" title="UnityEditor.Timeline.Track\lOffsetBaseAction" alt="" coords="433,855,608,896"/><area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html" title="MenuItemActionBase" alt="" coords="5,438,152,465"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_apply_auto_action.html" title="UnityEditor.Timeline.Apply\lAutoAction" alt="" coords="667,789,841,831"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_apply_scene_offset_action.html" title="UnityEditor.Timeline.Apply\lSceneOffsetAction" alt="" coords="667,855,841,896"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_apply_transform_offset_action.html" title="UnityEditor.Timeline.Apply\lTransformOffsetAction" alt="" coords="667,920,841,961"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+UnityEditor.Timeline.TrackAction 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_action__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_track_action_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_track_action_coll__map" id="_unity_editor_8_timeline_8_track_action_coll__map">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html" title="MenuItemActionBase" alt="" coords="19,200,166,227"/><area shape="rect" id="node3" title="Used to indicate path and priority of classes that are auto added to the menu " alt="" coords="5,81,180,123"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a455f6cca0d3d59f4d6e83af5357eb928"><td class="memItemLeft" align="right" valign="top">abstract bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a455f6cca0d3d59f4d6e83af5357eb928">Execute</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
+<tr class="separator:a455f6cca0d3d59f4d6e83af5357eb928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a52110acb0bd9f3d5dd33d6da75fa8555"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a52110acb0bd9f3d5dd33d6da75fa8555">Invoke&lt; T &gt;</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
+<tr class="separator:a52110acb0bd9f3d5dd33d6da75fa8555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba54617cd19961826684429c32e7e0e1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#aba54617cd19961826684429c32e7e0e1">GetMenuEntries</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Vector2?mousePos, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks, List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a> &gt; items)</td></tr>
+<tr class="separator:aba54617cd19961826684429c32e7e0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95af73057a5aec7baa1c83c337346dd7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a95af73057a5aec7baa1c83c337346dd7">HandleShortcut</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Event evt, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
+<tr class="separator:a95af73057a5aec7baa1c83c337346dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
+<tr class="memitem:a53f81217a653db7c509a0d2424dc5a2c inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; Type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a53f81217a653db7c509a0d2424dc5a2c">GetActionsOfType</a> (Type actionType)</td></tr>
+<tr class="separator:a53f81217a653db7c509a0d2424dc5a2c inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cffa97f8b29dfd2a88c87ed5cbe6581 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_shortcut_attribute.html">ShortcutAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a6cffa97f8b29dfd2a88c87ed5cbe6581">GetShortcutAttributeForAction</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">MenuItemActionBase</a> action)</td></tr>
+<tr class="separator:a6cffa97f8b29dfd2a88c87ed5cbe6581 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeba653e51c697fda0abcbb64e5d5da3 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#abeba653e51c697fda0abcbb64e5d5da3">BuildMenu</a> (GenericMenu menu, List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a> &gt; items)</td></tr>
+<tr class="separator:abeba653e51c697fda0abcbb64e5d5da3 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce2e013cbbe61f97568b49932d48231 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_active_in_mode_attribute.html">ActiveInModeAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#afce2e013cbbe61f97568b49932d48231">GetActiveInModeAttribute</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">MenuItemActionBase</a> action)</td></tr>
+<tr class="separator:afce2e013cbbe61f97568b49932d48231 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4d7d19acfbee1fb8a776cadcb2bb13 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a0e4d7d19acfbee1fb8a776cadcb2bb13">IsActionActiveInMode</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">MenuItemActionBase</a> action, TimelineModes mode)</td></tr>
+<tr class="separator:a0e4d7d19acfbee1fb8a776cadcb2bb13 inherit pub_static_methods_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a8f7da99dbb788ab1e7c15a5d694ed461"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a8f7da99dbb788ab1e7c15a5d694ed461">GetDisplayState</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
+<tr class="separator:a8f7da99dbb788ab1e7c15a5d694ed461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d40ef1f0ad7e20feb078917ff98680b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a2d40ef1f0ad7e20feb078917ff98680b">IsChecked</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
+<tr class="separator:a2d40ef1f0ad7e20feb078917ff98680b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac435949d2702d00cafa82121afc46dc9"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#ac435949d2702d00cafa82121afc46dc9">GetDisplayName</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
+<tr class="separator:ac435949d2702d00cafa82121afc46dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a962371147b4eaa7c826f70347fe6042c"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a962371147b4eaa7c826f70347fe6042c">actions</a><code> [get]</code></td></tr>
+<tr class="separator:a962371147b4eaa7c826f70347fe6042c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;属性 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
+<tr class="memitem:a86fbd21d8f9aef8e1d59cd8bdb9d206e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a86fbd21d8f9aef8e1d59cd8bdb9d206e">mousePosition</a><code> [get, set]</code></td></tr>
+<tr class="separator:a86fbd21d8f9aef8e1d59cd8bdb9d206e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa731be9997b4d4b13626b2e54c2dfc8 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#aaa731be9997b4d4b13626b2e54c2dfc8">priority</a><code> [get]</code></td></tr>
+<tr class="separator:aaa731be9997b4d4b13626b2e54c2dfc8 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9bccf57fef809f3baae43f538a93f5 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a0a9bccf57fef809f3baae43f538a93f5">category</a><code> [get]</code></td></tr>
+<tr class="separator:a0a9bccf57fef809f3baae43f538a93f5 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af962e7b66a6e6467aafbd1ba076eabe1 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#af962e7b66a6e6467aafbd1ba076eabe1">menuName</a><code> [get]</code></td></tr>
+<tr class="separator:af962e7b66a6e6467aafbd1ba076eabe1 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258003f546f58dd4a8290d2b9aa428ab inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a258003f546f58dd4a8290d2b9aa428ab">shortCut</a><code> [get]</code></td></tr>
+<tr class="separator:a258003f546f58dd4a8290d2b9aa428ab inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460dad0071328eebd1abaa5b240225a9 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a460dad0071328eebd1abaa5b240225a9">showInMenu</a><code> [get]</code></td></tr>
+<tr class="separator:a460dad0071328eebd1abaa5b240225a9 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c10d1adae4665f9c6df343880c8181 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">MenuEntryAttribute&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a90c10d1adae4665f9c6df343880c8181">menuInfo</a><code> [get]</code></td></tr>
+<tr class="separator:a90c10d1adae4665f9c6df343880c8181 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a880e32a1e6b527976997a4361aa9f964"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a880e32a1e6b527976997a4361aa9f964">s_ActionClasses</a></td></tr>
+<tr class="separator:a880e32a1e6b527976997a4361aa9f964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;静态 Protected 属性 继承自 <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
+<tr class="memitem:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a63de4780f5693888aa5b10be0df16ff6">s_ShowActionTriggeredByShortcut</a> = false</td></tr>
+<tr class="separator:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00011">11</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a455f6cca0d3d59f4d6e83af5357eb928"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract bool UnityEditor.Timeline.TrackAction.Execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td>
+          <td class="paramname"><em>tracks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_unity_editor_1_1_timeline_1_1_remove_invalid_markers_action.html#a9f7c38d98320a590c861d4d4d3a27d22">UnityEditor.Timeline.RemoveInvalidMarkersAction</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_duplicate_tracks.html#af6adde4d5812ba21dd7dcbac946b663f">UnityEditor.Timeline.DuplicateTracks</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_copy_tracks_to_clipboard.html#abbc9049614c7c08b81f60c4df399d1ac">UnityEditor.Timeline.CopyTracksToClipboard</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_delete_tracks.html#a5eaa5d853a23f9c994dcb1b48598fd6b">UnityEditor.Timeline.DeleteTracks</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_mute_track.html#a89119181f0f3b2804fb5b50edb81405e">UnityEditor.Timeline.MuteTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_mute_selected_track.html#a37563ab4d0967a3be9dde0cef9e58e8d">UnityEditor.Timeline.MuteSelectedTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_show_hide_markers.html#a8428ccc093766f2987085434f2ee89ae">UnityEditor.Timeline.ShowHideMarkers</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_lock_track.html#a0a9abe19f3a86ecd9f70b57a31f3a9dc">UnityEditor.Timeline.LockTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_lock_selected_track.html#a4261c3683bf5b379b4517c3851f5e967">UnityEditor.Timeline.LockSelectedTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window.html#ae08a7b6ef8a9ad3b1a9f6494c7b17ca4">UnityEditor.Timeline.EditTrackInAnimationWindow</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_offset_base_action.html#ad831c78b458a2e06ea5e55c261404df8">UnityEditor.Timeline.TrackOffsetBaseAction</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_convert_from_clip_track_action.html#a5a08b8c4ada136b09d37c34bcabb0346">UnityEditor.Timeline.ConvertFromClipTrackAction</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_convert_to_clip_mode_action.html#ad9e9b9d3904ecd203d5c574f66720df6">UnityEditor.Timeline.ConvertToClipModeAction</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_add_override_track_action.html#abcbd2d91c70983c88d1d6f1de4dc2025">UnityEditor.Timeline.AddOverrideTrackAction</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac435949d2702d00cafa82121afc46dc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string UnityEditor.Timeline.TrackAction.GetDisplayName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td>
+          <td class="paramname"><em>tracks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_mute_track.html#a6d8340d826902b0c06d00632aa7d7a10">UnityEditor.Timeline.MuteTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_mute_selected_track.html#a736541cc52372fb9f4db0f7aa0fc611b">UnityEditor.Timeline.MuteSelectedTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_lock_track.html#a90149a64bc76b1e6535fc99e5dfbc1a9">UnityEditor.Timeline.LockTrack</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_lock_selected_track.html#ae0a716b97ea025b879ed1e2c53f2da9d">UnityEditor.Timeline.LockSelectedTrack</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f7da99dbb788ab1e7c15a5d694ed461"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_unity_editor_1_1_timeline.html#a4cdf4501fc4cebf7e77641e22ed40b81">MenuActionDisplayState</a> UnityEditor.Timeline.TrackAction.GetDisplayState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td>
+          <td class="paramname"><em>tracks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_remove_invalid_markers_action.html#af7ec8a8976fe0cbca88e16b8f56f70fe">UnityEditor.Timeline.RemoveInvalidMarkersAction</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_mute_track.html#a5108e89baf6eb63ab523c78302b2d58a">UnityEditor.Timeline.MuteTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_mute_selected_track.html#a362bfc1d247ce220da365f1477bfb6c7">UnityEditor.Timeline.MuteSelectedTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_show_hide_markers.html#ab14812a08163103acc883af3cea76eef">UnityEditor.Timeline.ShowHideMarkers</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_lock_track.html#abe1344b008ac2dd2dbc97fff57b28650">UnityEditor.Timeline.LockTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_lock_selected_track.html#a13a20c869b567d4e33d42f43116e9f44">UnityEditor.Timeline.LockSelectedTrack</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_edit_track_in_animation_window.html#a2c4094adf21d3381b2b4b410beeb76f0">UnityEditor.Timeline.EditTrackInAnimationWindow</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_offset_base_action.html#a82ce2337b1520522dcdb9c67d92f26c4">UnityEditor.Timeline.TrackOffsetBaseAction</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_convert_from_clip_track_action.html#a2c9d838c214924202b29249763adc939">UnityEditor.Timeline.ConvertFromClipTrackAction</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_convert_to_clip_mode_action.html#aefeaff0f4793a9e6c3e302ac1d76c88b">UnityEditor.Timeline.ConvertToClipModeAction</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_add_override_track_action.html#af0e53a5f75bec07eb2705ecb576591b6">UnityEditor.Timeline.AddOverrideTrackAction</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba54617cd19961826684429c32e7e0e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TrackAction.GetMenuEntries </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2?&#160;</td>
+          <td class="paramname"><em>mousePos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td>
+          <td class="paramname"><em>tracks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a> &gt;&#160;</td>
+          <td class="paramname"><em>items</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95af73057a5aec7baa1c83c337346dd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TrackAction.HandleShortcut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Event&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td>
+          <td class="paramname"><em>tracks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00082">82</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_cgraph" id="class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_shortcut_attribute.html#a527ae86b27596f7171aab86f3adfa749" title="UnityEditor.Timeline.Shortcut\lAttribute.MatchesEvent" alt="" coords="228,5,419,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_icgraph" id="class_unity_editor_1_1_timeline_1_1_track_action_a95af73057a5aec7baa1c83c337346dd7_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483" title="UnityEditor.Timeline.Track\lShortcutManipulator.ExecuteCommand" alt="" coords="228,5,477,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a52110acb0bd9f3d5dd33d6da75fa8555"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TrackAction.Invoke&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td>
+          <td class="paramname"><em>tracks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>TrackAction</em></td><td>&#160;</td></tr>
+</table>
+</dl>
+</div>
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d40ef1f0ad7e20feb078917ff98680b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnityEditor.Timeline.TrackAction.IsChecked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td>
+          <td class="paramname"><em>tracks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_unity_editor_1_1_timeline_1_1_show_hide_markers.html#a04a2156c1bd10ed27f136d476a6e6e11">UnityEditor.Timeline.ShowHideMarkers</a> , 以及 <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_offset_base_action.html#a4d31bdc5f479b72d64da8e824bfcff68">UnityEditor.Timeline.TrackOffsetBaseAction</a> 重载.</p>
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a880e32a1e6b527976997a4361aa9f964"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a>&gt; UnityEditor.Timeline.TrackAction.s_ActionClasses</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a962371147b4eaa7c826f70347fe6042c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a>&gt; UnityEditor.Timeline.TrackAction.actions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a> 第 <a class="el" href="_track_actions_8cs_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/Actions/<a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:52 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

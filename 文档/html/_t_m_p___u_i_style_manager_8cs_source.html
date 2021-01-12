@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Editor/TMP_UIStyleManager.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_16bf487e1c9a090e218f9a2fd42641aa.html">com.unity.textmeshpro@2.0.1</a></li><li class="navelem"><a class="el" href="dir_ba3f538fc457ab129f6dda1c0bbf6c4c.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9c2d257d3cea5eeda46561472a308144.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TMP_UIStyleManager.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_m_p___u_i_style_manager_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a>.EditorUtilities</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMP_UIStyleManager</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a84356ea1186f80cb25a29a5346dd84a3">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a84356ea1186f80cb25a29a5346dd84a3">label</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ababbf42910a413f9e8f9ad0a27a937ee">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ababbf42910a413f9e8f9ad0a27a937ee">textAreaBoxWindow</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acaa3da4e16b2759bdeae5252c9cb1d1d">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acaa3da4e16b2759bdeae5252c9cb1d1d">boldFoldout</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac8390b16c2150a6c83c70b23f6edd393">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac8390b16c2150a6c83c70b23f6edd393">panelTitle</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a37f701701b5953aa4d3fd455f871f195">   15</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a37f701701b5953aa4d3fd455f871f195">sectionHeader</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#aee8001bb724d6158baf55f38ecebcaae">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#aee8001bb724d6158baf55f38ecebcaae">centeredLabel</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a2bc4058150d6af13721e441d0d1a4145">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a2bc4058150d6af13721e441d0d1a4145">rightLabel</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a125e43feb405ee6bc42c883940308030">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a125e43feb405ee6bc42c883940308030">wrappingTextArea</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a6d29e8ff15aa2c64dd4fce3bd2a76a80">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a6d29e8ff15aa2c64dd4fce3bd2a76a80">alignmentButtonLeft</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ad4fe472b8e1d723233cb86fdabb531ac">   21</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ad4fe472b8e1d723233cb86fdabb531ac">alignmentButtonMid</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab06648d57d308e5a527e62fba134b8fd">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIStyle <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab06648d57d308e5a527e62fba134b8fd">alignmentButtonRight</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">// Alignment Button Textures</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab52d53089e2172376d68bd0d103d1686">   25</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab52d53089e2172376d68bd0d103d1686">alignLeft</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac34a49939eedfb80b579234235922895">   26</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac34a49939eedfb80b579234235922895">alignCenter</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac53af09ca342a9eb5ce766a51f6f9fa8">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac53af09ca342a9eb5ce766a51f6f9fa8">alignRight</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af42d7640d196063208f36a0f55cc3342">   28</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af42d7640d196063208f36a0f55cc3342">alignJustified</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a8dbfa6e84e361822d986487dba9dfd14">   29</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a8dbfa6e84e361822d986487dba9dfd14">alignFlush</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a736b02334862959f268a1c31ac0692cb">   30</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a736b02334862959f268a1c31ac0692cb">alignGeoCenter</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#abe18c2192501e09d9690ad9f5fc7f990">   31</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#abe18c2192501e09d9690ad9f5fc7f990">alignTop</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acefbb7bfc5dbaedb7b0274ee9088e401">   32</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acefbb7bfc5dbaedb7b0274ee9088e401">alignMiddle</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a4fdd4df3f719f61472b2c628b04a5671">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a4fdd4df3f719f61472b2c628b04a5671">alignBottom</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#abc41448540fbaeb6c2cefdb93496027e">   34</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#abc41448540fbaeb6c2cefdb93496027e">alignBaseline</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acdf7b8dde6a20c6a72dfcae71f0f6f43">   35</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acdf7b8dde6a20c6a72dfcae71f0f6f43">alignMidline</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af831c0fd609bac0f16cee9b633471d63">   36</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af831c0fd609bac0f16cee9b633471d63">alignCapline</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af5e0fc7d223fc2086542c1241349cabd">   37</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af5e0fc7d223fc2086542c1241349cabd">sectionHeaderTexture</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a11df8c2ace02deb885e2752ddbc9247b">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIContent[] <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a11df8c2ace02deb885e2752ddbc9247b">alignContentA</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac965c23db1492f9e6d3b784663510d0c">   40</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GUIContent[] <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac965c23db1492f9e6d3b784663510d0c">alignContentB</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab5e7712b48b0f4b0561d7d11b1a6d208">   42</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab5e7712b48b0f4b0561d7d11b1a6d208">TMP_UIStyleManager</a>()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">// Find to location of the TextMesh Pro Asset Folder (as users may have moved it)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            var tmproAssetFolderPath = <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMP_EditorUtility</a>.<a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#a756c51f53f4742d86abb6c7b5816f22d">packageRelativePath</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (EditorGUIUtility.isProSkin)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                alignLeft = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignLeft.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                alignCenter = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignCenter.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                alignRight = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignRight.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                alignJustified = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignJustified.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                alignFlush = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignFlush.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                alignGeoCenter = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignCenterGeo.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                alignTop = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignTop.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                alignMiddle = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignMiddle.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                alignBottom = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignBottom.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                alignBaseline = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignBaseLine.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                alignMidline = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignMidLine.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                alignCapline = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignCapLine.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                sectionHeaderTexture = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/SectionHeader_Dark.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                alignLeft = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignLeft_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                alignCenter = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignCenter_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                alignRight = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignRight_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                alignJustified = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignJustified_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                alignFlush = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignFlush_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                alignGeoCenter = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignCenterGeo_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                alignTop = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignTop_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                alignMiddle = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignMiddle_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                alignBottom = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignBottom_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                alignBaseline = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignBaseLine_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                alignMidline = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignMidLine_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                alignCapline = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/btn_AlignCapLine_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                sectionHeaderTexture = AssetDatabase.LoadAssetAtPath(tmproAssetFolderPath + <span class="stringliteral">&quot;/Editor Resources/Textures/SectionHeader_Light.psd&quot;</span>, typeof(Texture2D)) as Texture2D;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            label = <span class="keyword">new</span> GUIStyle(EditorStyles.label) { richText = <span class="keyword">true</span>, wordWrap = <span class="keyword">true</span>, stretchWidth = <span class="keyword">true</span> };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            textAreaBoxWindow = <span class="keyword">new</span> GUIStyle(EditorStyles.textArea) { richText = <span class="keyword">true</span> };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            boldFoldout = <span class="keyword">new</span> GUIStyle(EditorStyles.foldout) { fontStyle = FontStyle.Bold };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            panelTitle = <span class="keyword">new</span> GUIStyle(EditorStyles.label) { fontStyle = FontStyle.Bold };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            sectionHeader = <span class="keyword">new</span> GUIStyle(EditorStyles.label) { fixedHeight = 22, richText = <span class="keyword">true</span>, border = <span class="keyword">new</span> RectOffset(9, 9, 0, 0), overflow = <span class="keyword">new</span> RectOffset(9, 0, 0, 0), padding = <span class="keyword">new</span> RectOffset(0, 0, 4, 0) };</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            sectionHeader.normal.background = sectionHeaderTexture;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            centeredLabel = <span class="keyword">new</span> GUIStyle(EditorStyles.label) { alignment = TextAnchor.MiddleCenter};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            rightLabel = <span class="keyword">new</span> GUIStyle(EditorStyles.label) { alignment = TextAnchor.MiddleRight, richText = <span class="keyword">true</span> };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            alignmentButtonLeft = <span class="keyword">new</span> GUIStyle(EditorStyles.miniButtonLeft);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            alignmentButtonLeft.padding.left = 4;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            alignmentButtonLeft.padding.right = 4;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            alignmentButtonLeft.padding.top = 2;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            alignmentButtonLeft.padding.bottom = 2;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            alignmentButtonMid = <span class="keyword">new</span> GUIStyle(EditorStyles.miniButtonMid);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            alignmentButtonMid.padding.left = 4;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            alignmentButtonMid.padding.right = 4;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            alignmentButtonLeft.padding.top = 2;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            alignmentButtonLeft.padding.bottom = 2;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            alignmentButtonRight = <span class="keyword">new</span> GUIStyle(EditorStyles.miniButtonRight);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            alignmentButtonRight.padding.left = 4;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            alignmentButtonRight.padding.right = 4;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            alignmentButtonLeft.padding.top = 2;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            alignmentButtonLeft.padding.bottom = 2;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            wrappingTextArea = <span class="keyword">new</span> GUIStyle(EditorStyles.textArea);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            wrappingTextArea.wordWrap = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            alignContentA = <span class="keyword">new</span> []</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            { </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keyword">new</span> GUIContent(alignLeft, <span class="stringliteral">&quot;Left&quot;</span>), </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keyword">new</span> GUIContent(alignCenter, <span class="stringliteral">&quot;Center&quot;</span>), </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keyword">new</span> GUIContent(alignRight, <span class="stringliteral">&quot;Right&quot;</span>), </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keyword">new</span> GUIContent(alignJustified, <span class="stringliteral">&quot;Justified&quot;</span>),</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keyword">new</span> GUIContent(alignFlush, <span class="stringliteral">&quot;Flush&quot;</span>),</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keyword">new</span> GUIContent(alignGeoCenter, <span class="stringliteral">&quot;Geometry Center&quot;</span>)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            };</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            alignContentB = <span class="keyword">new</span> []</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            { </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keyword">new</span> GUIContent(alignTop, <span class="stringliteral">&quot;Top&quot;</span>), </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keyword">new</span> GUIContent(alignMiddle, <span class="stringliteral">&quot;Middle&quot;</span>), </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keyword">new</span> GUIContent(alignBottom, <span class="stringliteral">&quot;Bottom&quot;</span>),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keyword">new</span> GUIContent(alignBaseline, <span class="stringliteral">&quot;Baseline&quot;</span>),</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keyword">new</span> GUIContent(alignMidline, <span class="stringliteral">&quot;Midline&quot;</span>),</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="keyword">new</span> GUIContent(alignCapline, <span class="stringliteral">&quot;Capline&quot;</span>)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            };</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_aee8001bb724d6158baf55f38ecebcaae"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#aee8001bb724d6158baf55f38ecebcaae">TMPro.EditorUtilities.TMP_UIStyleManager.centeredLabel</a></div><div class="ttdeci">static GUIStyle centeredLabel</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00016">TMP_UIStyleManager.cs:16</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ac965c23db1492f9e6d3b784663510d0c"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac965c23db1492f9e6d3b784663510d0c">TMPro.EditorUtilities.TMP_UIStyleManager.alignContentB</a></div><div class="ttdeci">static GUIContent[] alignContentB</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00040">TMP_UIStyleManager.cs:40</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_af42d7640d196063208f36a0f55cc3342"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af42d7640d196063208f36a0f55cc3342">TMPro.EditorUtilities.TMP_UIStyleManager.alignJustified</a></div><div class="ttdeci">static Texture2D alignJustified</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00028">TMP_UIStyleManager.cs:28</a></div></div>
+<div class="ttc" id="namespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ababbf42910a413f9e8f9ad0a27a937ee"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ababbf42910a413f9e8f9ad0a27a937ee">TMPro.EditorUtilities.TMP_UIStyleManager.textAreaBoxWindow</a></div><div class="ttdeci">static GUIStyle textAreaBoxWindow</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00012">TMP_UIStyleManager.cs:12</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ad4fe472b8e1d723233cb86fdabb531ac"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ad4fe472b8e1d723233cb86fdabb531ac">TMPro.EditorUtilities.TMP_UIStyleManager.alignmentButtonMid</a></div><div class="ttdeci">static GUIStyle alignmentButtonMid</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00021">TMP_UIStyleManager.cs:21</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ab06648d57d308e5a527e62fba134b8fd"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab06648d57d308e5a527e62fba134b8fd">TMPro.EditorUtilities.TMP_UIStyleManager.alignmentButtonRight</a></div><div class="ttdeci">static GUIStyle alignmentButtonRight</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00022">TMP_UIStyleManager.cs:22</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ac34a49939eedfb80b579234235922895"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac34a49939eedfb80b579234235922895">TMPro.EditorUtilities.TMP_UIStyleManager.alignCenter</a></div><div class="ttdeci">static Texture2D alignCenter</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00026">TMP_UIStyleManager.cs:26</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ac53af09ca342a9eb5ce766a51f6f9fa8"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac53af09ca342a9eb5ce766a51f6f9fa8">TMPro.EditorUtilities.TMP_UIStyleManager.alignRight</a></div><div class="ttdeci">static Texture2D alignRight</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00027">TMP_UIStyleManager.cs:27</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a2bc4058150d6af13721e441d0d1a4145"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a2bc4058150d6af13721e441d0d1a4145">TMPro.EditorUtilities.TMP_UIStyleManager.rightLabel</a></div><div class="ttdeci">static GUIStyle rightLabel</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00017">TMP_UIStyleManager.cs:17</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html">TMPro.EditorUtilities.TMP_UIStyleManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00009">TMP_UIStyleManager.cs:9</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a736b02334862959f268a1c31ac0692cb"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a736b02334862959f268a1c31ac0692cb">TMPro.EditorUtilities.TMP_UIStyleManager.alignGeoCenter</a></div><div class="ttdeci">static Texture2D alignGeoCenter</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00030">TMP_UIStyleManager.cs:30</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ab5e7712b48b0f4b0561d7d11b1a6d208"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab5e7712b48b0f4b0561d7d11b1a6d208">TMPro.EditorUtilities.TMP_UIStyleManager.TMP_UIStyleManager</a></div><div class="ttdeci">static TMP_UIStyleManager()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00042">TMP_UIStyleManager.cs:42</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_acefbb7bfc5dbaedb7b0274ee9088e401"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acefbb7bfc5dbaedb7b0274ee9088e401">TMPro.EditorUtilities.TMP_UIStyleManager.alignMiddle</a></div><div class="ttdeci">static Texture2D alignMiddle</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00032">TMP_UIStyleManager.cs:32</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ab52d53089e2172376d68bd0d103d1686"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ab52d53089e2172376d68bd0d103d1686">TMPro.EditorUtilities.TMP_UIStyleManager.alignLeft</a></div><div class="ttdeci">static Texture2D alignLeft</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00025">TMP_UIStyleManager.cs:25</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a11df8c2ace02deb885e2752ddbc9247b"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a11df8c2ace02deb885e2752ddbc9247b">TMPro.EditorUtilities.TMP_UIStyleManager.alignContentA</a></div><div class="ttdeci">static GUIContent[] alignContentA</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00039">TMP_UIStyleManager.cs:39</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a8dbfa6e84e361822d986487dba9dfd14"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a8dbfa6e84e361822d986487dba9dfd14">TMPro.EditorUtilities.TMP_UIStyleManager.alignFlush</a></div><div class="ttdeci">static Texture2D alignFlush</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00029">TMP_UIStyleManager.cs:29</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a84356ea1186f80cb25a29a5346dd84a3"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a84356ea1186f80cb25a29a5346dd84a3">TMPro.EditorUtilities.TMP_UIStyleManager.label</a></div><div class="ttdeci">static GUIStyle label</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00011">TMP_UIStyleManager.cs:11</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_af831c0fd609bac0f16cee9b633471d63"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af831c0fd609bac0f16cee9b633471d63">TMPro.EditorUtilities.TMP_UIStyleManager.alignCapline</a></div><div class="ttdeci">static Texture2D alignCapline</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00036">TMP_UIStyleManager.cs:36</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility_html_a756c51f53f4742d86abb6c7b5816f22d"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#a756c51f53f4742d86abb6c7b5816f22d">TMPro.EditorUtilities.TMP_EditorUtility.packageRelativePath</a></div><div class="ttdeci">static string packageRelativePath</div><div class="ttdoc">Returns the relative path of the package. </div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___editor_utility_8cs_source.html#l00018">TMP_EditorUtility.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_abe18c2192501e09d9690ad9f5fc7f990"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#abe18c2192501e09d9690ad9f5fc7f990">TMPro.EditorUtilities.TMP_UIStyleManager.alignTop</a></div><div class="ttdeci">static Texture2D alignTop</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00031">TMP_UIStyleManager.cs:31</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a6d29e8ff15aa2c64dd4fce3bd2a76a80"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a6d29e8ff15aa2c64dd4fce3bd2a76a80">TMPro.EditorUtilities.TMP_UIStyleManager.alignmentButtonLeft</a></div><div class="ttdeci">static GUIStyle alignmentButtonLeft</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00020">TMP_UIStyleManager.cs:20</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a125e43feb405ee6bc42c883940308030"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a125e43feb405ee6bc42c883940308030">TMPro.EditorUtilities.TMP_UIStyleManager.wrappingTextArea</a></div><div class="ttdeci">static GUIStyle wrappingTextArea</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00018">TMP_UIStyleManager.cs:18</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_ac8390b16c2150a6c83c70b23f6edd393"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#ac8390b16c2150a6c83c70b23f6edd393">TMPro.EditorUtilities.TMP_UIStyleManager.panelTitle</a></div><div class="ttdeci">static GUIStyle panelTitle</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00014">TMP_UIStyleManager.cs:14</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_af5e0fc7d223fc2086542c1241349cabd"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#af5e0fc7d223fc2086542c1241349cabd">TMPro.EditorUtilities.TMP_UIStyleManager.sectionHeaderTexture</a></div><div class="ttdeci">static Texture2D sectionHeaderTexture</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00037">TMP_UIStyleManager.cs:37</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_acdf7b8dde6a20c6a72dfcae71f0f6f43"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acdf7b8dde6a20c6a72dfcae71f0f6f43">TMPro.EditorUtilities.TMP_UIStyleManager.alignMidline</a></div><div class="ttdeci">static Texture2D alignMidline</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00035">TMP_UIStyleManager.cs:35</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a4fdd4df3f719f61472b2c628b04a5671"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a4fdd4df3f719f61472b2c628b04a5671">TMPro.EditorUtilities.TMP_UIStyleManager.alignBottom</a></div><div class="ttdeci">static Texture2D alignBottom</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00033">TMP_UIStyleManager.cs:33</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_a37f701701b5953aa4d3fd455f871f195"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#a37f701701b5953aa4d3fd455f871f195">TMPro.EditorUtilities.TMP_UIStyleManager.sectionHeader</a></div><div class="ttdeci">static GUIStyle sectionHeader</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00015">TMP_UIStyleManager.cs:15</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_abc41448540fbaeb6c2cefdb93496027e"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#abc41448540fbaeb6c2cefdb93496027e">TMPro.EditorUtilities.TMP_UIStyleManager.alignBaseline</a></div><div class="ttdeci">static Texture2D alignBaseline</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00034">TMP_UIStyleManager.cs:34</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager_html_acaa3da4e16b2759bdeae5252c9cb1d1d"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___u_i_style_manager.html#acaa3da4e16b2759bdeae5252c9cb1d1d">TMPro.EditorUtilities.TMP_UIStyleManager.boldFoldout</a></div><div class="ttdeci">static GUIStyle boldFoldout</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___u_i_style_manager_8cs_source.html#l00013">TMP_UIStyleManager.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html">TMPro.EditorUtilities.TMP_EditorUtility</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___editor_utility_8cs_source.html#l00012">TMP_EditorUtility.cs:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:32 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Shortcuts.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Shortcuts.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_shortcuts_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_jet_brains.html">JetBrains</a>.Annotations;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.ShortcutManagement;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts.html">    8</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts.html">Shortcuts</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html">   10</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html">Clip</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a46f68be96dfdd695c7be557922292102">   12</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> split = <span class="stringliteral">&quot;Timeline/Editing/Split&quot;</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a818c463163aacc66c7e5cb9638fd2bb4">   13</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> trimStart = <span class="stringliteral">&quot;Timeline/Editing/TrimStart&quot;</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#ac8db98ab78632beebfee72bb2c55745e">   14</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> trimEnd = <span class="stringliteral">&quot;Timeline/Editing/TrimEnd&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(split, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.S)]</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a454fc38a4fdd12371c4956a5afc92034">   17</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a454fc38a4fdd12371c4956a5afc92034">Split</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                SendEventToInvokeShortcut(split, args.context);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(trimStart, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.I)]</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a1d76833bb00493806a698f2380c082ad">   23</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a1d76833bb00493806a698f2380c082ad">TrimStart</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                SendEventToInvokeShortcut(trimStart, args.context);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(trimEnd, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.O)]</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#abf4e66c3b101afcfcc4c1e094b8ec5a3">   29</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#abf4e66c3b101afcfcc4c1e094b8ec5a3">TrimEnd</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                SendEventToInvokeShortcut(trimEnd, args.context);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html">   35</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html">Timeline</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a943b00787ec2ec9fc5aa14096ce420e3">   37</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> play = <span class="stringliteral">&quot;Timeline/Play&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a7f68c7736bcdc47f798de5507714b801">   38</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> previousFrame = <span class="stringliteral">&quot;Timeline/PrevFrame&quot;</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ae1e2367c195f173236074a3d74fcaf7f">   39</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> nextFrame = <span class="stringliteral">&quot;Timeline/NextFrame&quot;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6a7f4e382c3ce8ffb20f9bee2225eb68">   40</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> frameAll = <span class="stringliteral">&quot;Timeline/FrameAll&quot;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a3c2d280088c0ed6529f01eb2e185a718">   41</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> previousKey = <span class="stringliteral">&quot;Timeline/PrevKey&quot;</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a7b52e34af94ad2f57761e0630189c2f9">   42</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> nextKey = <span class="stringliteral">&quot;Timeline/NextKey&quot;</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a58fc6222576540fb86d8935e2d940b01">   43</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> goToStart = <span class="stringliteral">&quot;Timeline/GotoStart&quot;</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ada5a945b29d3ecb3d58b18178902b587">   44</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> goToEnd = <span class="stringliteral">&quot;Timeline/GotoEnd&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac134d46dd7067e3587af67da6814d48b">   45</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> zoomIn = <span class="stringliteral">&quot;Timeline/ZoomIn&quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aff84bc441c2faf9da55eb0c755204163">   46</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> zoomOut = <span class="stringliteral">&quot;Timeline/ZoomOut&quot;</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a35f4f6fe47281067d4a68e6f2482ea89">   47</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> collapseGroup = <span class="stringliteral">&quot;Timeline/CollapseGroup&quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a2bf9dbfb54c5d685333c5960bbe29ae4">   48</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> unCollapseGroup = <span class="stringliteral">&quot;Timeline/UnCollapseGroup&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a77c495dd33e92209c8c00b293228bfa6">   49</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> selectLeftItem = <span class="stringliteral">&quot;Timeline/SelectLeftItem&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a88499b67b9432bac0bd231c6f52fcc83">   50</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> selectRightItem = <span class="stringliteral">&quot;Timeline/SelectRightItem&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a845804f91d4798e8391d669a08435a82">   51</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> selectUpItem = <span class="stringliteral">&quot;Timeline/SelectUpItem&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a150093551afb9f0f07111bcfd42eadd4">   52</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> selectUpTrack = <span class="stringliteral">&quot;Timeline/SelectUpTrack&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a9ea61916165cfcae002a7ae26bf4bcf1">   53</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> selectDownItem = <span class="stringliteral">&quot;Timeline/SelectDownItem&quot;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ab9bc7f3bb70591f3c6a578c7d9efe43c">   54</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> selectDownTrack = <span class="stringliteral">&quot;Timeline/SelectDownTrack&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac5354a9f2c5c325f49f67d89e833b2a1">   55</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> multiSelectLeft = <span class="stringliteral">&quot;Timeline/SelectLeft&quot;</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a9aeea0fdce0561b3c48b2708b6676e0d">   56</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> multiSelectRight = <span class="stringliteral">&quot;Timeline/SelectRight&quot;</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ab929be5cb32e5248312c4b7dfefeccc2">   57</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> multiSelectUp = <span class="stringliteral">&quot;Timeline/SelectUp&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a28a8510dae77fda9de5e1d915b3be1c2">   58</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> multiSelectDown = <span class="stringliteral">&quot;Timeline/SelectDown&quot;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a104304078681c9754489585806ecd724">   59</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> toggleClipTrackArea = <span class="stringliteral">&quot;Timeline/ToggleClipTrackArea&quot;</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a9be425cd047e0abf4131b1efba685fcb">   60</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> matchContent = <span class="stringliteral">&quot;Timeline/MatchContent&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a88e041cd78c66972b399c17cc5c56af3">   61</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> toggleLock = <span class="stringliteral">&quot;Timeline/ToggleLock&quot;</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a59dd4c2d71b9a2704607223c69687026">   62</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> toggleMute = <span class="stringliteral">&quot;Timeline/ToggleMute&quot;</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a36d19dd71783b45a5c8f03972bcffba9">   64</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> moveLeft = <span class="stringliteral">&quot;Timeline/MoveLeft&quot;</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac3b46937e2a8878a5d56c2d902cf7edb">   65</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> moveRight = <span class="stringliteral">&quot;Timeline/MoveRight&quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ad6f24ecfc298b07d98143febe4cbf5cc">   66</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> moveUp = <span class="stringliteral">&quot;Timeline/MoveUp&quot;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a613be537de8d8ba1ed475152bbf64549">   67</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> moveDown = <span class="stringliteral">&quot;Timeline/MoveDown&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(play, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Space)]</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a9ca8a25f583f838224225970b4f2483e">   70</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a9ca8a25f583f838224225970b4f2483e">Play</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                SendEventToInvokeShortcut(play, args.context);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(previousFrame, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Comma)]</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a4bbaf6bf75137918182045a7aa75f251">   76</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a4bbaf6bf75137918182045a7aa75f251">PreviousFrame</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                SendEventToInvokeShortcut(previousFrame, args.context);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(nextFrame, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Period)]</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a75f32533697db8c91fe78eb7fbb30b60">   82</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a75f32533697db8c91fe78eb7fbb30b60">NextFrame</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                SendEventToInvokeShortcut(nextFrame, args.context);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(frameAll, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.A)]</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#acf50ba30f312d5b8cffcb3eecdbd4497">   88</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#acf50ba30f312d5b8cffcb3eecdbd4497">FrameAll</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                SendEventToInvokeShortcut(frameAll, args.context);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">            #if UNITY_EDITOR_OSX</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(previousKey, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Comma, ShortcutModifiers.Action | ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">            #else</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(previousKey, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Comma, ShortcutModifiers.Action)]</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a4d142a49e4d96d84b26fcba8e04ec2a6">   98</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a4d142a49e4d96d84b26fcba8e04ec2a6">PrevKey</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                SendEventToInvokeShortcut(previousKey, args.context);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">            #if UNITY_EDITOR_OSX</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(nextKey, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Period, ShortcutModifiers.Action | ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">            #else</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(nextKey, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Period, ShortcutModifiers.Action)]</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a1ed575b6d5e73e2860b50a1f6de6455e">  108</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a1ed575b6d5e73e2860b50a1f6de6455e">NextKey</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                SendEventToInvokeShortcut(nextKey, args.context);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(goToStart, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Comma, ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aeca29fd5e8e9941a28fcf8cd8c3a7649">  114</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aeca29fd5e8e9941a28fcf8cd8c3a7649">GoToStart</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                SendEventToInvokeShortcut(goToStart, args.context);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(goToEnd, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Period, ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#abfa7c4f3bc592b6c95902dcde123fac6">  120</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#abfa7c4f3bc592b6c95902dcde123fac6">GoToEnd</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                SendEventToInvokeShortcut(goToEnd, args.context);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(zoomIn, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Equals)]</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aa32fb60183cb59034ced13a6de9ef55c">  126</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aa32fb60183cb59034ced13a6de9ef55c">ZoomIn</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                SendEventToInvokeShortcut(zoomIn, args.context);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(zoomOut, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Minus)]</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a44ebff4eefbc3e92c7644ec691c11fbd">  132</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a44ebff4eefbc3e92c7644ec691c11fbd">ZoomOut</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                SendEventToInvokeShortcut(zoomOut, args.context);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            [UsedImplicitly]</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            [ShortcutManagement.Shortcut(moveLeft, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.LeftArrow)]</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a8d737ec7616d5e41b11400f57647510f">  139</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a8d737ec7616d5e41b11400f57647510f">SelectLeft</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">ClipAreaActive</a>())</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    SendEventToInvokeShortcut(selectLeftItem, args.context);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">TrackHeadActive</a>())</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    SendEventToInvokeShortcut(collapseGroup, args.context);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            [UsedImplicitly]</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            [ShortcutManagement.Shortcut(moveRight, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.RightArrow)]</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a72b33e32448bae01486a7582c1442924">  153</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a72b33e32448bae01486a7582c1442924">SelectRight</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">ClipAreaActive</a>())</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    SendEventToInvokeShortcut(selectRightItem, args.context);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">TrackHeadActive</a>())</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                    SendEventToInvokeShortcut(unCollapseGroup, args.context);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            [UsedImplicitly]</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            [ShortcutManagement.Shortcut(moveUp, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.UpArrow)]</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6f920ab91c4ed16790ecbeeaa3bc28dc">  167</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6f920ab91c4ed16790ecbeeaa3bc28dc">SelectUp</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">ClipAreaActive</a>())</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    SendEventToInvokeShortcut(selectUpItem, args.context);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">TrackHeadActive</a>())</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    SendEventToInvokeShortcut(selectUpTrack, args.context);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa7ad1a269bc3557914d09f595ee88833">FocusFirstVisibleItem</a>(GetState(args));</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            [UsedImplicitly]</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            [ShortcutManagement.Shortcut(moveDown, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.DownArrow)]</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac10bf5cad2074d8a0e1f84097c8df839">  185</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac10bf5cad2074d8a0e1f84097c8df839">SelectDown</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">ClipAreaActive</a>())</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    SendEventToInvokeShortcut(selectDownItem, args.context);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">TrackHeadActive</a>())</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    SendEventToInvokeShortcut(selectDownTrack, args.context);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    <a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">KeyboardNavigation</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa7ad1a269bc3557914d09f595ee88833">FocusFirstVisibleItem</a>(GetState(args));</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(multiSelectLeft, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.LeftArrow, ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a2ae173fea1a0b7ab8fbc25f1db1972b8">  202</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a2ae173fea1a0b7ab8fbc25f1db1972b8">MultiSelectLeft</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                SendEventToInvokeShortcut(multiSelectLeft, args.context);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(multiSelectRight, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.RightArrow, ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ad96b538678c6715131cd4d6b9bcd851f">  208</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ad96b538678c6715131cd4d6b9bcd851f">MultiSelectRight</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                SendEventToInvokeShortcut(multiSelectRight, args.context);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(multiSelectUp , typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.UpArrow, ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a2ad356834c2a04297cc947739f82b331">  214</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a2ad356834c2a04297cc947739f82b331">MultiSelectUp</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                SendEventToInvokeShortcut(multiSelectUp, args.context);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(multiSelectDown, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.DownArrow, ShortcutModifiers.Shift)]</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a5195f868d4cdb09575cfcf4cbbc9cd48">  220</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a5195f868d4cdb09575cfcf4cbbc9cd48">MultiSelectDown</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                SendEventToInvokeShortcut(multiSelectDown, args.context);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(toggleClipTrackArea, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.Tab)]</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aa2a85531f13eec03e27120db3940e6a3">  226</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aa2a85531f13eec03e27120db3940e6a3">ToggleClipTrackArea</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                SendEventToInvokeShortcut(toggleClipTrackArea, args.context);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(matchContent, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.C)]</div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#afd8af0b3f318e7d30d9771e8de7cfa1f">  232</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#afd8af0b3f318e7d30d9771e8de7cfa1f">Shortcut</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                SendEventToInvokeShortcut(matchContent, args.context);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(toggleLock, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.L)]</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a01caf817813dac07b3f60971e057f70a">  238</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a01caf817813dac07b3f60971e057f70a">Lock</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                SendEventToInvokeShortcut(toggleLock, args.context);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            [UsedImplicitly, ShortcutManagement.Shortcut(toggleMute, typeof(<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>), KeyCode.M)]</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a0a6a6e56bcddf0496a1f555491d89ecd">  244</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a0a6a6e56bcddf0496a1f555491d89ecd">Mute</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                SendEventToInvokeShortcut(toggleMute, args.context);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts.html#a1899f28e2bf83ec8d71dd05aa8184a1d">  250</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts.html#a1899f28e2bf83ec8d71dd05aa8184a1d">GetState</a>(ShortcutManagement.ShortcutArguments args)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordflow">return</span> ((<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>)args.context).state;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_shortcuts.html#aa31470a57bcfbc2689ee8da7580a8caa">  255</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_shortcuts.html#aa31470a57bcfbc2689ee8da7580a8caa">SendEventToInvokeShortcut</a>(<span class="keywordtype">string</span> timelineShortcutId, <span class="keywordtype">object</span> context)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            var e = <span class="keyword">new</span> Event</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                type = <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.ExecuteCommand,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                commandName = timelineShortcutId</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            };</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            (context as EditorWindow).SendEvent(e);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_aa32fb60183cb59034ced13a6de9ef55c"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aa32fb60183cb59034ced13a6de9ef55c">UnityEditor.Timeline.Shortcuts.Timeline.ZoomIn</a></div><div class="ttdeci">static void ZoomIn(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00126">Shortcuts.cs:126</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a8d737ec7616d5e41b11400f57647510f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a8d737ec7616d5e41b11400f57647510f">UnityEditor.Timeline.Shortcuts.Timeline.SelectLeft</a></div><div class="ttdeci">static void SelectLeft(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00139">Shortcuts.cs:139</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_abfa7c4f3bc592b6c95902dcde123fac6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#abfa7c4f3bc592b6c95902dcde123fac6">UnityEditor.Timeline.Shortcuts.Timeline.GoToEnd</a></div><div class="ttdeci">static void GoToEnd(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00120">Shortcuts.cs:120</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_ac10bf5cad2074d8a0e1f84097c8df839"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac10bf5cad2074d8a0e1f84097c8df839">UnityEditor.Timeline.Shortcuts.Timeline.SelectDown</a></div><div class="ttdeci">static void SelectDown(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00185">Shortcuts.cs:185</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html">UnityEditor.Timeline.KeyboardNavigation</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00009">TimelineKeyboardNavigation.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts.html">UnityEditor.Timeline.Shortcuts</a></div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00008">Shortcuts.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip_html_abf4e66c3b101afcfcc4c1e094b8ec5a3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#abf4e66c3b101afcfcc4c1e094b8ec5a3">UnityEditor.Timeline.Shortcuts.Clip.TrimEnd</a></div><div class="ttdeci">static void TrimEnd(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00029">Shortcuts.cs:29</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a9ca8a25f583f838224225970b4f2483e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a9ca8a25f583f838224225970b4f2483e">UnityEditor.Timeline.Shortcuts.Timeline.Play</a></div><div class="ttdeci">static void Play(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00070">Shortcuts.cs:70</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_html_a1899f28e2bf83ec8d71dd05aa8184a1d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts.html#a1899f28e2bf83ec8d71dd05aa8184a1d">UnityEditor.Timeline.Shortcuts.GetState</a></div><div class="ttdeci">static WindowState GetState(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00250">Shortcuts.cs:250</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html">UnityEditor.Timeline.Shortcuts.Clip</a></div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00010">Shortcuts.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_afd8af0b3f318e7d30d9771e8de7cfa1f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#afd8af0b3f318e7d30d9771e8de7cfa1f">UnityEditor.Timeline.Shortcuts.Timeline.Shortcut</a></div><div class="ttdeci">static void Shortcut(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00232">Shortcuts.cs:232</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_ad96b538678c6715131cd4d6b9bcd851f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ad96b538678c6715131cd4d6b9bcd851f">UnityEditor.Timeline.Shortcuts.Timeline.MultiSelectRight</a></div><div class="ttdeci">static void MultiSelectRight(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00208">Shortcuts.cs:208</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a2ae173fea1a0b7ab8fbc25f1db1972b8"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a2ae173fea1a0b7ab8fbc25f1db1972b8">UnityEditor.Timeline.Shortcuts.Timeline.MultiSelectLeft</a></div><div class="ttdeci">static void MultiSelectLeft(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00202">Shortcuts.cs:202</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a0a6a6e56bcddf0496a1f555491d89ecd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a0a6a6e56bcddf0496a1f555491d89ecd">UnityEditor.Timeline.Shortcuts.Timeline.Mute</a></div><div class="ttdeci">static void Mute(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00244">Shortcuts.cs:244</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a4d142a49e4d96d84b26fcba8e04ec2a6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a4d142a49e4d96d84b26fcba8e04ec2a6">UnityEditor.Timeline.Shortcuts.Timeline.PrevKey</a></div><div class="ttdeci">static void PrevKey(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00098">Shortcuts.cs:98</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a4bbaf6bf75137918182045a7aa75f251"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a4bbaf6bf75137918182045a7aa75f251">UnityEditor.Timeline.Shortcuts.Timeline.PreviousFrame</a></div><div class="ttdeci">static void PreviousFrame(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00076">Shortcuts.cs:76</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a2ad356834c2a04297cc947739f82b331"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a2ad356834c2a04297cc947739f82b331">UnityEditor.Timeline.Shortcuts.Timeline.MultiSelectUp</a></div><div class="ttdeci">static void MultiSelectUp(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00214">Shortcuts.cs:214</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a44ebff4eefbc3e92c7644ec691c11fbd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a44ebff4eefbc3e92c7644ec691c11fbd">UnityEditor.Timeline.Shortcuts.Timeline.ZoomOut</a></div><div class="ttdeci">static void ZoomOut(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00132">Shortcuts.cs:132</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_html_aa31470a57bcfbc2689ee8da7580a8caa"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts.html#aa31470a57bcfbc2689ee8da7580a8caa">UnityEditor.Timeline.Shortcuts.SendEventToInvokeShortcut</a></div><div class="ttdeci">static void SendEventToInvokeShortcut(string timelineShortcutId, object context)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00255">Shortcuts.cs:255</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a72b33e32448bae01486a7582c1442924"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a72b33e32448bae01486a7582c1442924">UnityEditor.Timeline.Shortcuts.Timeline.SelectRight</a></div><div class="ttdeci">static void SelectRight(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00153">Shortcuts.cs:153</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a75f32533697db8c91fe78eb7fbb30b60"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a75f32533697db8c91fe78eb7fbb30b60">UnityEditor.Timeline.Shortcuts.Timeline.NextFrame</a></div><div class="ttdeci">static void NextFrame(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00082">Shortcuts.cs:82</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_aa2a85531f13eec03e27120db3940e6a3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aa2a85531f13eec03e27120db3940e6a3">UnityEditor.Timeline.Shortcuts.Timeline.ToggleClipTrackArea</a></div><div class="ttdeci">static void ToggleClipTrackArea(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00226">Shortcuts.cs:226</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a5195f868d4cdb09575cfcf4cbbc9cd48"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a5195f868d4cdb09575cfcf4cbbc9cd48">UnityEditor.Timeline.Shortcuts.Timeline.MultiSelectDown</a></div><div class="ttdeci">static void MultiSelectDown(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00220">Shortcuts.cs:220</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a1ed575b6d5e73e2860b50a1f6de6455e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a1ed575b6d5e73e2860b50a1f6de6455e">UnityEditor.Timeline.Shortcuts.Timeline.NextKey</a></div><div class="ttdeci">static void NextKey(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00108">Shortcuts.cs:108</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_aa7ad1a269bc3557914d09f595ee88833"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa7ad1a269bc3557914d09f595ee88833">UnityEditor.Timeline.KeyboardNavigation.FocusFirstVisibleItem</a></div><div class="ttdeci">static bool FocusFirstVisibleItem(WindowState state, IEnumerable&lt; TrackAsset &gt; focusTracks=null)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00143">TimelineKeyboardNavigation.cs:143</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_aeca29fd5e8e9941a28fcf8cd8c3a7649"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#aeca29fd5e8e9941a28fcf8cd8c3a7649">UnityEditor.Timeline.Shortcuts.Timeline.GoToStart</a></div><div class="ttdeci">static void GoToStart(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00114">Shortcuts.cs:114</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip_html_a1d76833bb00493806a698f2380c082ad"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a1d76833bb00493806a698f2380c082ad">UnityEditor.Timeline.Shortcuts.Clip.TrimStart</a></div><div class="ttdeci">static void TrimStart(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00023">Shortcuts.cs:23</a></div></div>
+<div class="ttc" id="namespace_jet_brains_html"><div class="ttname"><a href="namespace_jet_brains.html">JetBrains</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_acdb614c68f67d6226c2b3611059edee1"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#acdb614c68f67d6226c2b3611059edee1">UnityEditor.Timeline.KeyboardNavigation.ClipAreaActive</a></div><div class="ttdeci">static bool ClipAreaActive()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00031">TimelineKeyboardNavigation.cs:31</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a6f920ab91c4ed16790ecbeeaa3bc28dc"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6f920ab91c4ed16790ecbeeaa3bc28dc">UnityEditor.Timeline.Shortcuts.Timeline.SelectUp</a></div><div class="ttdeci">static void SelectUp(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00167">Shortcuts.cs:167</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip_html_a454fc38a4fdd12371c4956a5afc92034"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html#a454fc38a4fdd12371c4956a5afc92034">UnityEditor.Timeline.Shortcuts.Clip.Split</a></div><div class="ttdeci">static void Split(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00017">Shortcuts.cs:17</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_a01caf817813dac07b3f60971e057f70a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a01caf817813dac07b3f60971e057f70a">UnityEditor.Timeline.Shortcuts.Timeline.Lock</a></div><div class="ttdeci">static void Lock(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00238">Shortcuts.cs:238</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html">UnityEditor.Timeline.Shortcuts.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00035">Shortcuts.cs:35</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">UnityEditor.Timeline.TimelineWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_8cs_source.html#l00013">TimelineWindow.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_keyboard_navigation_html_a99c188eeafd7f693af0b3050e1e61497"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497">UnityEditor.Timeline.KeyboardNavigation.TrackHeadActive</a></div><div class="ttdeci">static bool TrackHeadActive()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_keyboard_navigation_8cs_source.html#l00026">TimelineKeyboardNavigation.cs:26</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline_html_acf50ba30f312d5b8cffcb3eecdbd4497"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#acf50ba30f312d5b8cffcb3eecdbd4497">UnityEditor.Timeline.Shortcuts.Timeline.FrameAll</a></div><div class="ttdeci">static void FrameAll(ShortcutManagement.ShortcutArguments args)</div><div class="ttdef"><b>Definition:</b> <a href="_shortcuts_8cs_source.html#l00088">Shortcuts.cs:88</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

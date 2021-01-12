@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Manipulators/TimelineClipGroup.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6a547c3745f8ad2865def9ffaf3eba83.html">Manipulators</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineClipGroup.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_clip_group_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html">TimelineClipGroup</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a1b88c7cc76560195bf09f29908f0ff4a">   10</a></span>&#160;        readonly <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a1b88c7cc76560195bf09f29908f0ff4a">m_Clips</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a58ee7cb50a3d40dfb9d598b02e879583">   11</a></span>&#160;        readonly <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a58ee7cb50a3d40dfb9d598b02e879583">m_LeftMostClip</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a958191ee15cace4d1227760f6e414544">   12</a></span>&#160;        readonly <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a958191ee15cace4d1227760f6e414544">m_RightMostClip</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>[] clips</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a63980531a1177ca60e8752dc648ba63f">   15</a></span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Clips; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> start</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a05ebf0919d678525428941c177f7d0fc">   20</a></span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_LeftMostClip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a>; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            set</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                var offset = value - m_LeftMostClip.start;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">foreach</span> (var clip <span class="keywordflow">in</span> m_Clips)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    clip.start += offset;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">double</span> end</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a1aaef3519796286fa45c3376e7d71ac8">   32</a></span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_RightMostClip.end; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#af05c345c7af36cbbeb804e4b314b50ea">   36</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#af05c345c7af36cbbeb804e4b314b50ea">TimelineClipGroup</a>(IEnumerable&lt;TimelineClip&gt; clips)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="namespace_debug.html">Debug</a>.Assert(clips != null &amp;&amp; clips.Any());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            m_Clips = clips.ToArray();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            m_LeftMostClip = null;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            m_RightMostClip = null;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">foreach</span> (var clip <span class="keywordflow">in</span> m_Clips)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">if</span> (m_LeftMostClip == null || clip.start &lt; m_LeftMostClip.start)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    m_LeftMostClip = clip;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span> (m_RightMostClip == null || clip.end &gt; m_RightMostClip.end)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    m_RightMostClip = clip;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_group_html_a1b88c7cc76560195bf09f29908f0ff4a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a1b88c7cc76560195bf09f29908f0ff4a">UnityEditor.Timeline.TimelineClipGroup.m_Clips</a></div><div class="ttdeci">readonly TimelineClip[] m_Clips</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_group_8cs_source.html#l00010">TimelineClipGroup.cs:10</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_group_html_a58ee7cb50a3d40dfb9d598b02e879583"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a58ee7cb50a3d40dfb9d598b02e879583">UnityEditor.Timeline.TimelineClipGroup.m_LeftMostClip</a></div><div class="ttdeci">readonly TimelineClip m_LeftMostClip</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_group_8cs_source.html#l00011">TimelineClipGroup.cs:11</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_ac847d1affde0438d85a8fdc5af4f644f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">UnityEngine.Timeline.TimelineClip.start</a></div><div class="ttdeci">double start</div><div class="ttdoc">The start time, in seconds, of the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00173">TimelineClip.cs:173</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_group_html_af05c345c7af36cbbeb804e4b314b50ea"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#af05c345c7af36cbbeb804e4b314b50ea">UnityEditor.Timeline.TimelineClipGroup.TimelineClipGroup</a></div><div class="ttdeci">TimelineClipGroup(IEnumerable&lt; TimelineClip &gt; clips)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_group_8cs_source.html#l00036">TimelineClipGroup.cs:36</a></div></div>
+<div class="ttc" id="namespace_debug_html"><div class="ttname"><a href="namespace_debug.html">Debug</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_group_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html">UnityEditor.Timeline.TimelineClipGroup</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_group_8cs_source.html#l00008">TimelineClipGroup.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_clip_group_html_a958191ee15cace4d1227760f6e414544"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_clip_group.html#a958191ee15cace4d1227760f6e414544">UnityEditor.Timeline.TimelineClipGroup.m_RightMostClip</a></div><div class="ttdeci">readonly TimelineClip m_RightMostClip</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_group_8cs_source.html#l00012">TimelineClipGroup.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: MovingCamera类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_moving_camera-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">MovingCamera类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>视角行为类（需手动操控）  
+ <a href="class_moving_camera.html#details">更多...</a></p>
+<div class="dynheader">
+类 MovingCamera 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_moving_camera__inherit__graph.png" border="0" usemap="#_moving_camera_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+MovingCamera 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_moving_camera__coll__graph.png" border="0" usemap="#_moving_camera_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a81430bc03d5031571cb9a02ce71c7462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#a81430bc03d5031571cb9a02ce71c7462">Awake</a> ()</td></tr>
+<tr class="memdesc:a81430bc03d5031571cb9a02ce71c7462"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒时调用 插件被唤醒时，重设摄像机角度为当前角度。  <a href="#a81430bc03d5031571cb9a02ce71c7462">更多...</a><br /></td></tr>
+<tr class="separator:a81430bc03d5031571cb9a02ce71c7462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51a59dbe0e019d3203e57802781a69b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#ac51a59dbe0e019d3203e57802781a69b">RotateCamera</a> (float cameraRotation)</td></tr>
+<tr class="memdesc:ac51a59dbe0e019d3203e57802781a69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">调整视角  <a href="#ac51a59dbe0e019d3203e57802781a69b">更多...</a><br /></td></tr>
+<tr class="separator:ac51a59dbe0e019d3203e57802781a69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de0267ad53f5a1301d2f0de4b612010"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#a8de0267ad53f5a1301d2f0de4b612010">RotateParent</a> (float cameraRotation)</td></tr>
+<tr class="memdesc:a8de0267ad53f5a1301d2f0de4b612010"><td class="mdescLeft">&#160;</td><td class="mdescRight">调整父对象角度  <a href="#a8de0267ad53f5a1301d2f0de4b612010">更多...</a><br /></td></tr>
+<tr class="separator:a8de0267ad53f5a1301d2f0de4b612010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b2af4872d2f79e166c048f5a5c038d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#ae5b2af4872d2f79e166c048f5a5c038d">Update</a> ()</td></tr>
+<tr class="memdesc:ae5b2af4872d2f79e166c048f5a5c038d"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧调用 程序运行时的每一帧动态检测有无输入信号，并根据输入信号调整摄像机位置与视角。 用户输入上下左右移动键可以移动摄像机，而移动鼠标时只有在按下鼠标右键时才能调整摄像机视角。  <a href="#ae5b2af4872d2f79e166c048f5a5c038d">更多...</a><br /></td></tr>
+<tr class="separator:ae5b2af4872d2f79e166c048f5a5c038d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a04e767ff8d44e97d4ccf159b8da0c758"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#a04e767ff8d44e97d4ccf159b8da0c758">camAng</a></td></tr>
+<tr class="memdesc:a04e767ff8d44e97d4ccf159b8da0c758"><td class="mdescLeft">&#160;</td><td class="mdescRight">摄像机角度  <a href="#a04e767ff8d44e97d4ccf159b8da0c758">更多...</a><br /></td></tr>
+<tr class="separator:a04e767ff8d44e97d4ccf159b8da0c758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a26441df25de8ad107f51e05534f7bec0"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#a26441df25de8ad107f51e05534f7bec0">MouseTurn</a> = 12.0f</td></tr>
+<tr class="memdesc:a26441df25de8ad107f51e05534f7bec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">视角调整速度  <a href="#a26441df25de8ad107f51e05534f7bec0">更多...</a><br /></td></tr>
+<tr class="separator:a26441df25de8ad107f51e05534f7bec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e5512347a50cd42a2fe2eca4714c31"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#ae4e5512347a50cd42a2fe2eca4714c31">momentum</a> = 0.5f</td></tr>
+<tr class="memdesc:ae4e5512347a50cd42a2fe2eca4714c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动动量  <a href="#ae4e5512347a50cd42a2fe2eca4714c31">更多...</a><br /></td></tr>
+<tr class="separator:ae4e5512347a50cd42a2fe2eca4714c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f34baba40835986e78a3d724c34789f"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moving_camera.html#a9f34baba40835986e78a3d724c34789f">MoveSpeed</a> = 2.5f</td></tr>
+<tr class="memdesc:a9f34baba40835986e78a3d724c34789f"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动速度  <a href="#a9f34baba40835986e78a3d724c34789f">更多...</a><br /></td></tr>
+<tr class="separator:a9f34baba40835986e78a3d724c34789f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>视角行为类（需手动操控） </p>
+<p>包含了摄像机移动、视角调整、视角切换等函数。 </p>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00014">14</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a81430bc03d5031571cb9a02ce71c7462"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MovingCamera.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>唤醒时调用 插件被唤醒时，重设摄像机角度为当前角度。 </p>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac51a59dbe0e019d3203e57802781a69b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MovingCamera.RotateCamera </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cameraRotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>调整视角 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraRotation</td><td>俯仰调整幅度（角度制），俯仰角不超过80° </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00033">33</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_moving_camera_ac51a59dbe0e019d3203e57802781a69b_icgraph.png" border="0" usemap="#class_moving_camera_ac51a59dbe0e019d3203e57802781a69b_icgraph" alt=""/></div>
+<map name="class_moving_camera_ac51a59dbe0e019d3203e57802781a69b_icgraph" id="class_moving_camera_ac51a59dbe0e019d3203e57802781a69b_icgraph">
+<area shape="rect" id="node2" href="class_moving_camera.html#ae5b2af4872d2f79e166c048f5a5c038d" title="每帧调用 程序运行时的每一帧动态检测有无输入信号，并根据输入信号调整摄像机位置与视角。 用户输入上下左�..." alt="" coords="248,5,400,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8de0267ad53f5a1301d2f0de4b612010"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MovingCamera.RotateParent </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cameraRotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>调整父对象角度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraRotation</td><td>俯仰调整幅度（角度制），俯仰角不超过80° </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00045">45</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_moving_camera_a8de0267ad53f5a1301d2f0de4b612010_icgraph.png" border="0" usemap="#class_moving_camera_a8de0267ad53f5a1301d2f0de4b612010_icgraph" alt=""/></div>
+<map name="class_moving_camera_a8de0267ad53f5a1301d2f0de4b612010_icgraph" id="class_moving_camera_a8de0267ad53f5a1301d2f0de4b612010_icgraph">
+<area shape="rect" id="node2" href="class_moving_camera.html#ae5b2af4872d2f79e166c048f5a5c038d" title="每帧调用 程序运行时的每一帧动态检测有无输入信号，并根据输入信号调整摄像机位置与视角。 用户输入上下左�..." alt="" coords="240,5,392,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5b2af4872d2f79e166c048f5a5c038d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MovingCamera.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每帧调用 程序运行时的每一帧动态检测有无输入信号，并根据输入信号调整摄像机位置与视角。 用户输入上下左右移动键可以移动摄像机，而移动鼠标时只有在按下鼠标右键时才能调整摄像机视角。 </p>
+<p>&lt; 移动距离</p>
+<p>根据有无父对象采取不同的视角调整策略</p>
+<p>从父对象上移除</p>
+<p>退出程序</p>
+<p>试探选定的父对象并附着</p>
+<p>附着在足球上 </p>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00058">58</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_moving_camera_ae5b2af4872d2f79e166c048f5a5c038d_cgraph.png" border="0" usemap="#class_moving_camera_ae5b2af4872d2f79e166c048f5a5c038d_cgraph" alt=""/></div>
+<map name="class_moving_camera_ae5b2af4872d2f79e166c048f5a5c038d_cgraph" id="class_moving_camera_ae5b2af4872d2f79e166c048f5a5c038d_cgraph">
+<area shape="rect" id="node2" href="class_moving_camera.html#a8de0267ad53f5a1301d2f0de4b612010" title="调整父对象角度 " alt="" coords="209,5,396,32"/><area shape="rect" id="node3" href="class_moving_camera.html#ac51a59dbe0e019d3203e57802781a69b" title="调整视角 " alt="" coords="205,56,400,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a04e767ff8d44e97d4ccf159b8da0c758"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MovingCamera.camAng</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>摄像机角度 </p>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4e5512347a50cd42a2fe2eca4714c31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float MovingCamera.momentum = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动动量 </p>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26441df25de8ad107f51e05534f7bec0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float MovingCamera.MouseTurn = 12.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>视角调整速度 </p>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f34baba40835986e78a3d724c34789f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float MovingCamera.MoveSpeed = 2.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动速度 </p>
+
+<p>在文件 <a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a> 第 <a class="el" href="_moving_camera_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Assets/<a class="el" href="_moving_camera_8cs_source.html">MovingCamera.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:38 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

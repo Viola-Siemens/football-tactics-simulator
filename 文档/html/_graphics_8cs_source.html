@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Utilities/Graphics.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_0724e84c20f94a0e0cb26eb6bc9f3803.html">Utilities</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Graphics.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphics_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html">    5</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html">Graphics</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#ad08173a38d8f113c0a30344e23d26982">    7</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#ad08173a38d8f113c0a30344e23d26982">ShadowLabel</a>(Rect rect, <span class="keywordtype">string</span> text, GUIStyle style, Color textColor, Color shadowColor)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            ShadowLabel(rect, GUIContent.Temp(text), style, textColor, shadowColor);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        }</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#acbe556e04331dcfe92b750b6feca9636">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#acbe556e04331dcfe92b750b6feca9636">ShadowLabel</a>(Rect rect, GUIContent content, GUIStyle style, Color textColor, Color shadowColor)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            var shadowRect = rect;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            shadowRect.xMin += 2.0f;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            shadowRect.yMin += 2.0f;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            style.normal.textColor = Color.black;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            GUI.Label(shadowRect, content, style);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            style.normal.textColor = textColor;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            GUI.Label(rect, content, style);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#adc9912ff4f2fc8a3579be2f0f6f7e538">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#adc9912ff4f2fc8a3579be2f0f6f7e538">DrawLine</a>(Vector3 p1, Vector3 p2, Color color)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            var c = Handles.color;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            Handles.color = color;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            Handles.DrawLine(p1, p2);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            Handles.color = c;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a534b89e2cf2fdc01bab28f83f47354f9">   32</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a534b89e2cf2fdc01bab28f83f47354f9">DrawPolygonAA</a>(Color color, Vector3[] vertices)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            var prevColor = Handles.color;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            Handles.color = color;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            Handles.DrawAAConvexPolygon(vertices);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            Handles.color = prevColor;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a92d547769cc2fe5963124b9faea59099">   40</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a92d547769cc2fe5963124b9faea59099">DrawDottedLine</a>(Vector3 p1, Vector3 p2, <span class="keywordtype">float</span> segmentsLength, Color col)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            HandleUtility.ApplyWireMaterial();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            GL.Begin(GL.LINES);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            GL.Color(col);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            var length = Vector3.Distance(p1, p2); <span class="comment">// ignore z component</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var count = Mathf.CeilToInt(length / segmentsLength);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; count; i += 2)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                GL.Vertex((Vector3.Lerp(p1, p2, i * segmentsLength / length)));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                GL.Vertex((Vector3.Lerp(p1, p2, (i + 1) * segmentsLength / length)));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            GL.End();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a20c8ea67f61b490bad5bc981a67bf9e3">   58</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a20c8ea67f61b490bad5bc981a67bf9e3">DrawLineAtTime</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <span class="keywordtype">double</span> time, Color color, <span class="keywordtype">bool</span> dotted = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            var t = state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#aaf2cb4fe0dedfd91a65ec94d1c3001b3">TimeToPixel</a>(time);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            var p0 = <span class="keyword">new</span> Vector3(t, state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af8aa305abfadd5a637a0b8572431c31e">timeAreaRect</a>.yMax);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            var p1 = <span class="keyword">new</span> Vector3(t, state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#af8aa305abfadd5a637a0b8572431c31e">timeAreaRect</a>.yMax + state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a4d0472ec0f98e5dd3b60f6f6d78b270f">windowHeight</a> - <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html">WindowConstants</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#af7567d0242f7fef84023587d6b7c4ac0">sliderWidth</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span> (dotted)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                DrawDottedLine(p0, p1, 4.0f, color);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                DrawLine(p0, p1, color);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a22488f60dd88d337f74c0f99a51f758e">   71</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a22488f60dd88d337f74c0f99a51f758e">DrawTextureRepeated</a>(Rect area, Texture texture)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span> (texture == null || Event.current.type != <a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">EventType</a>.Repaint)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            GUI.BeginClip(area);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">int</span> w = Mathf.CeilToInt(area.width / texture.width);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">int</span> h = Mathf.CeilToInt(area.height / texture.height);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; w; x++)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; h; y++)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    GUI.DrawTexture(<span class="keyword">new</span> Rect(x * texture.width, y * texture.height, texture.width, texture.height), texture);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            GUI.EndClip();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a4c556415e84cf1b4006caa01632c1c6a">   90</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a4c556415e84cf1b4006caa01632c1c6a">DrawShadow</a>(Rect clientRect)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            var rect = clientRect;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            rect.height = <a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html">WindowConstants</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a2c18b14f0409c53158f9b7b97ba70686">shadowUnderTimelineHeight</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            GUI.Box(rect, GUIContent.none, <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#ae898db066a18ddfc3360e00fcbe4523d">bottomShadow</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a06e195e807585f3c10a9cfa8ebb054f6">   97</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_graphics.html#a06e195e807585f3c10a9cfa8ebb054f6">DrawBackgroundRect</a>(<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Rect rect, <span class="keywordtype">bool</span> subSequenceMode = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            Color c = subSequenceMode ? <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">customSkin</a>.colorSubSequenceBackground : <a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">customSkin</a>.colorSequenceBackground;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            EditorGUI.DrawRect(rect, c);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">if</span> (state.<a class="code" href="class_unity_editor_1_1_timeline_1_1_window_state.html#abdb8d4bcf66232399e9fe17e7b3e5ff7">IsEditingAPrefabAsset</a>())</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                c = SceneView.kSceneViewPrefabBackground.Color;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                c.a = 0.5f;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                EditorGUI.DrawRect(rect, c);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_ad08173a38d8f113c0a30344e23d26982"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#ad08173a38d8f113c0a30344e23d26982">UnityEditor.Timeline.Graphics.ShadowLabel</a></div><div class="ttdeci">static void ShadowLabel(Rect rect, string text, GUIStyle style, Color textColor, Color shadowColor)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00007">Graphics.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_a92d547769cc2fe5963124b9faea59099"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#a92d547769cc2fe5963124b9faea59099">UnityEditor.Timeline.Graphics.DrawDottedLine</a></div><div class="ttdeci">static void DrawDottedLine(Vector3 p1, Vector3 p2, float segmentsLength, Color col)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00040">Graphics.cs:40</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_af8aa305abfadd5a637a0b8572431c31e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#af8aa305abfadd5a637a0b8572431c31e">UnityEditor.Timeline.WindowState.timeAreaRect</a></div><div class="ttdeci">Rect timeAreaRect</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00597">WindowState.cs:597</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html_a2c18b14f0409c53158f9b7b97ba70686"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a2c18b14f0409c53158f9b7b97ba70686">UnityEditor.Timeline.WindowConstants.shadowUnderTimelineHeight</a></div><div class="ttdeci">const float shadowUnderTimelineHeight</div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00027">WindowConstants.cs:27</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html">UnityEditor.Timeline.WindowConstants</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00003">WindowConstants.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a04488ba3eee7c6d9dda98d4998bd7b93"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a04488ba3eee7c6d9dda98d4998bd7b93">UnityEditor.Timeline.DirectorStyles.customSkin</a></div><div class="ttdeci">DirectorNamedColor customSkin</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00148">DirectorStyles.cs:148</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html">UnityEditor.Timeline.WindowState</a></div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00016">WindowState.cs:16</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_acbe556e04331dcfe92b750b6feca9636"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#acbe556e04331dcfe92b750b6feca9636">UnityEditor.Timeline.Graphics.ShadowLabel</a></div><div class="ttdeci">static void ShadowLabel(Rect rect, GUIContent content, GUIStyle style, Color textColor, Color shadowColor)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00012">Graphics.cs:12</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_a06e195e807585f3c10a9cfa8ebb054f6"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#a06e195e807585f3c10a9cfa8ebb054f6">UnityEditor.Timeline.Graphics.DrawBackgroundRect</a></div><div class="ttdeci">static void DrawBackgroundRect(WindowState state, Rect rect, bool subSequenceMode=false)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00097">Graphics.cs:97</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_constants_html_af7567d0242f7fef84023587d6b7c4ac0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_constants.html#af7567d0242f7fef84023587d6b7c4ac0">UnityEditor.Timeline.WindowConstants.sliderWidth</a></div><div class="ttdeci">const float sliderWidth</div><div class="ttdef"><b>Definition:</b> <a href="_window_constants_8cs_source.html#l00026">WindowConstants.cs:26</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html">UnityEditor.Timeline.DirectorStyles</a></div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00008">DirectorStyles.cs:8</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_abdb8d4bcf66232399e9fe17e7b3e5ff7"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#abdb8d4bcf66232399e9fe17e7b3e5ff7">UnityEditor.Timeline.WindowState.IsEditingAPrefabAsset</a></div><div class="ttdeci">bool IsEditingAPrefabAsset()</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00771">WindowState.cs:771</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_a20c8ea67f61b490bad5bc981a67bf9e3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#a20c8ea67f61b490bad5bc981a67bf9e3">UnityEditor.Timeline.Graphics.DrawLineAtTime</a></div><div class="ttdeci">static void DrawLineAtTime(WindowState state, double time, Color color, bool dotted=false)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00058">Graphics.cs:58</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_adc9912ff4f2fc8a3579be2f0f6f7e538"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#adc9912ff4f2fc8a3579be2f0f6f7e538">UnityEditor.Timeline.Graphics.DrawLine</a></div><div class="ttdeci">static void DrawLine(Vector3 p1, Vector3 p2, Color color)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00024">Graphics.cs:24</a></div></div>
+<div class="ttc" id="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing_html_a20a9018e59a99fffa4467f9a04f463e2"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_unit_testing.html#a20a9018e59a99fffa4467f9a04f463e2">Packages.Rider.Editor.UnitTesting.EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="_test_event_8cs_source.html#l00007">TestEvent.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_a15e95e53dca9e97cb48ed6e7b8f98cbe"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#a15e95e53dca9e97cb48ed6e7b8f98cbe">UnityEditor.Timeline.DirectorStyles.Instance</a></div><div class="ttdeci">static DirectorStyles Instance</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00124">DirectorStyles.cs:124</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_a534b89e2cf2fdc01bab28f83f47354f9"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#a534b89e2cf2fdc01bab28f83f47354f9">UnityEditor.Timeline.Graphics.DrawPolygonAA</a></div><div class="ttdeci">static void DrawPolygonAA(Color color, Vector3[] vertices)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00032">Graphics.cs:32</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html">UnityEditor.Timeline.Graphics</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00005">Graphics.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_aaf2cb4fe0dedfd91a65ec94d1c3001b3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#aaf2cb4fe0dedfd91a65ec94d1c3001b3">UnityEditor.Timeline.WindowState.TimeToPixel</a></div><div class="ttdeci">float TimeToPixel(double time)</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00804">WindowState.cs:804</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_a4c556415e84cf1b4006caa01632c1c6a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#a4c556415e84cf1b4006caa01632c1c6a">UnityEditor.Timeline.Graphics.DrawShadow</a></div><div class="ttdeci">static void DrawShadow(Rect clientRect)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00090">Graphics.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_graphics_html_a22488f60dd88d337f74c0f99a51f758e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_graphics.html#a22488f60dd88d337f74c0f99a51f758e">UnityEditor.Timeline.Graphics.DrawTextureRepeated</a></div><div class="ttdeci">static void DrawTextureRepeated(Rect area, Texture texture)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cs_source.html#l00071">Graphics.cs:71</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_director_styles_html_ae898db066a18ddfc3360e00fcbe4523d"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_director_styles.html#ae898db066a18ddfc3360e00fcbe4523d">UnityEditor.Timeline.DirectorStyles.bottomShadow</a></div><div class="ttdeci">GUIStyle bottomShadow</div><div class="ttdef"><b>Definition:</b> <a href="_director_styles_8cs_source.html#l00090">DirectorStyles.cs:90</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_window_state_html_a4d0472ec0f98e5dd3b60f6f6d78b270f"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_window_state.html#a4d0472ec0f98e5dd3b60f6f6d78b270f">UnityEditor.Timeline.WindowState.windowHeight</a></div><div class="ttdeci">float windowHeight</div><div class="ttdef"><b>Definition:</b> <a href="_window_state_8cs_source.html#l00611">WindowState.cs:611</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

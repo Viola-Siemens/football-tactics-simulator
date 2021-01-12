@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Window/ViewModel/TimelineWindowViewPrefs.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_08b42967959711a942dabf507b118564.html">Window</a></li><li class="navelem"><a class="el" href="dir_b1b9d06f0d12ecf2d351a9a9664f1375.html">ViewModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TimelineWindowViewPrefs.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timeline_window_view_prefs_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="_timeline_window_view_prefs_8cs.html#a324f8dae84ead9019a250b472ca1b436">    3</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_object.html">UnityObject</a> = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="_timeline_window_view_prefs_8cs.html#a56650403a5ba05a97280c5777859019a">    4</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_view_models_map.html">ViewModelsMap</a> = <a class="code" href="namespace_system.html">System</a>.Collections.Generic.Dictionary&lt;<a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>, <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs</a>&lt;<a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a>&gt;&gt;;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="_timeline_window_view_prefs_8cs.html#addfb4c9540b4d38238f552baa86b207b">    5</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_view_models_list.html">ViewModelsList</a> = <a class="code" href="namespace_system.html">System</a>.Collections.Generic.List&lt;<a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs</a>&lt;<a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_timeline.html">Timeline</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a>&gt;&gt;;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">    9</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">TimelineWindowViewPrefs</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#aaf32bd794e6b4c63ab05f7af6f94a386">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> FilePath = <span class="stringliteral">&quot;Library/Timeline&quot;</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#aeb8ac61565d5340f29cf24cdd031899e">   13</a></span>&#160;        <span class="keyword">static</span> readonly <a class="code" href="namespace_view_models_map.html">ViewModelsMap</a> k_ViewModelsMap = <span class="keyword">new</span> <a class="code" href="_timeline_window_view_prefs_8cs.html#a56650403a5ba05a97280c5777859019a">ViewModelsMap</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#ac968fce939563915327791af7e94b281">   14</a></span>&#160;        <span class="keyword">static</span> readonly <a class="code" href="namespace_view_models_list.html">ViewModelsList</a> k_UnassociatedViewModels = <span class="keyword">new</span> <a class="code" href="_timeline_window_view_prefs_8cs.html#addfb4c9540b4d38238f552baa86b207b">ViewModelsList</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> viewModelCount</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#ac02107e22cd5bcc77b20e6562e8db29d">   17</a></span>&#160;        {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> k_ViewModelsMap.Count + k_UnassociatedViewModels.Count; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6c44ff2d38ee50fe4dc6ca92796f0a5a">   21</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6c44ff2d38ee50fe4dc6ca92796f0a5a">GetOrCreateViewModel</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> asset)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (asset == null)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">return</span> CreateUnassociatedViewModel();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs&lt;TimelineAssetViewModel&gt;</a> vm;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (k_ViewModelsMap.TryGetValue(asset, out vm))</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">return</span> vm.<a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html#a3100de50b1a01e30e808afba4de79fbb">viewModel</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span> CreateViewModel(asset).viewModel;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a98c774adcc08b17b4be03b50969767c5">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a98c774adcc08b17b4be03b50969767c5">CreateUnassociatedViewModel</a>()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            var vm = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs&lt;TimelineAssetViewModel&gt;</a>(null, FilePath);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            k_UnassociatedViewModels.Add(vm);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> vm.<a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html#a3100de50b1a01e30e808afba4de79fbb">viewModel</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a709cf8ccb9ddd1b81d3e3f3d5c6b96fa">   40</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs&lt;TimelineAssetViewModel&gt;</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a709cf8ccb9ddd1b81d3e3f3d5c6b96fa">CreateViewModel</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> asset)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            var vm = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs&lt;TimelineAssetViewModel&gt;</a>(asset, FilePath);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            k_ViewModelsMap.Add(asset, vm);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> vm;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a736971913d438b0f2b16c7e11f886d12">   47</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a736971913d438b0f2b16c7e11f886d12">SaveViewModel</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> asset)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span> (asset == null)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs&lt;TimelineAssetViewModel&gt;</a> vm;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (!k_ViewModelsMap.TryGetValue(asset, out vm))</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                vm = CreateViewModel(asset);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            vm.<a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html#ac3016cfb3d3555ed48d32a1086f2c899">Save</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#aa735e93abbae1f9e72de6fcfcb8c81e5">   59</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#aa735e93abbae1f9e72de6fcfcb8c81e5">SaveAll</a>()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">foreach</span> (var kvp <span class="keywordflow">in</span> k_ViewModelsMap)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                kvp.Value.Save();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#abb9ae8b8f936fffa0490e16641b215a0">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#abb9ae8b8f936fffa0490e16641b215a0">UnloadViewModel</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> asset)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">ScriptableObjectViewPrefs&lt;TimelineAssetViewModel&gt;</a> vm;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (k_ViewModelsMap.TryGetValue(asset, out vm))</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                vm.<a class="code" href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html#a11ed580477e0f4f28553678e445fba9a">Dispose</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                k_ViewModelsMap.Remove(asset);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6fe9483e36416f40449981d5ec9a8cfd">   75</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6fe9483e36416f40449981d5ec9a8cfd">UnloadAllViewModels</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">foreach</span> (var kvp <span class="keywordflow">in</span> k_ViewModelsMap)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                kvp.Value.Dispose();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">foreach</span> (var vm <span class="keywordflow">in</span> k_UnassociatedViewModels)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                vm.Dispose();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            k_ViewModelsMap.Clear();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            k_UnassociatedViewModels.Clear();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a36c1caa4c417178e0b83b10e80e0ec0e">   87</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a36c1caa4c417178e0b83b10e80e0ec0e">GetTrackViewModelData</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">if</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a> == null)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            var prefs = GetOrCreateViewModel(track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">timelineAsset</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a> trackData;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">if</span> (prefs.tracksViewModelData.TryGetValue(track, out trackData))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">return</span> trackData;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            trackData = <span class="keyword">new</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            prefs.tracksViewModelData[track] = trackData;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> trackData;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a4ff5a44331e72135bcd18b1107078c16">  108</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a4ff5a44331e72135bcd18b1107078c16">IsTrackCollapsed</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> GetTrackViewModelData(track).collapsed;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a1eb5e6790d5abebb239719819696c7c3">  116</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a1eb5e6790d5abebb239719819696c7c3">SetTrackCollapsed</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <span class="keywordtype">bool</span> collapsed)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            GetTrackViewModelData(track).collapsed = collapsed;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a19deb8a3ed2a234b9b5f56cb8cb63650">  124</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a19deb8a3ed2a234b9b5f56cb8cb63650">IsShowMarkers</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">return</span> GetTrackViewModelData(track).showMarkers;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a12cfe45d3fddf9f0019895e1b1263d95">  132</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a12cfe45d3fddf9f0019895e1b1263d95">SetTrackShowMarkers</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <span class="keywordtype">bool</span> collapsed)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            GetTrackViewModelData(track).showMarkers = collapsed;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a3e12de50d084f327cc664890af1f3716">  140</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a3e12de50d084f327cc664890af1f3716">GetShowInlineCurves</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> GetTrackViewModelData(track).showInlineCurves;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#af98ca36e625c6fb62f8a7f2ae48cf0b0">  148</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#af98ca36e625c6fb62f8a7f2ae48cf0b0">SetShowInlineCurves</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, <span class="keywordtype">bool</span> inlineOn)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (track == null)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            GetTrackViewModelData(track).showInlineCurves = inlineOn;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a08aa34ccf96773cb4698f8ac935c8bba">  156</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a08aa34ccf96773cb4698f8ac935c8bba">GetInlineCurveHeight</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (asset == null)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a017bdcfee3cba849dd2f26c7df24616b">DefaultinlineAnimationCurveHeight</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">return</span> GetTrackViewModelData(asset).inlineAnimationCurveHeight;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#ad8afb858a6221b2fa09e3d6412c30144">  164</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#ad8afb858a6221b2fa09e3d6412c30144">SetInlineCurveHeight</a>(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset, <span class="keywordtype">float</span> height)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">if</span> (asset != null)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                GetTrackViewModelData(asset).inlineAnimationCurveHeight = height;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
+<div class="ttc" id="_timeline_window_view_prefs_8cs_html_a56650403a5ba05a97280c5777859019a"><div class="ttname"><a href="_timeline_window_view_prefs_8cs.html#a56650403a5ba05a97280c5777859019a">ViewModelsMap</a></div><div class="ttdeci">System.Collections.Generic.Dictionary&lt; UnityEngine.Timeline.TimelineAsset, UnityEditor.Timeline.ScriptableObjectViewPrefs&lt; UnityEditor.Timeline.TimelineAssetViewModel &gt;&gt; ViewModelsMap</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00004">TimelineWindowViewPrefs.cs:4</a></div></div>
+<div class="ttc" id="_timeline_window_view_prefs_8cs_html_addfb4c9540b4d38238f552baa86b207b"><div class="ttname"><a href="_timeline_window_view_prefs_8cs.html#addfb4c9540b4d38238f552baa86b207b">ViewModelsList</a></div><div class="ttdeci">System.Collections.Generic.List&lt; UnityEditor.Timeline.ScriptableObjectViewPrefs&lt; UnityEditor.Timeline.TimelineAssetViewModel &gt;&gt; ViewModelsList</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00005">TimelineWindowViewPrefs.cs:5</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a1eb5e6790d5abebb239719819696c7c3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a1eb5e6790d5abebb239719819696c7c3">UnityEditor.Timeline.TimelineWindowViewPrefs.SetTrackCollapsed</a></div><div class="ttdeci">static void SetTrackCollapsed(TrackAsset track, bool collapsed)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00116">TimelineWindowViewPrefs.cs:116</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs_html_a11ed580477e0f4f28553678e445fba9a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html#a11ed580477e0f4f28553678e445fba9a">UnityEditor.Timeline.ScriptableObjectViewPrefs.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdef"><b>Definition:</b> <a href="_scriptable_object_view_prefs_8cs_source.html#l00084">ScriptableObjectViewPrefs.cs:84</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_aa735e93abbae1f9e72de6fcfcb8c81e5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#aa735e93abbae1f9e72de6fcfcb8c81e5">UnityEditor.Timeline.TimelineWindowViewPrefs.SaveAll</a></div><div class="ttdeci">static void SaveAll()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00059">TimelineWindowViewPrefs.cs:59</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a4ff5a44331e72135bcd18b1107078c16"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a4ff5a44331e72135bcd18b1107078c16">UnityEditor.Timeline.TimelineWindowViewPrefs.IsTrackCollapsed</a></div><div class="ttdeci">static bool IsTrackCollapsed(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00108">TimelineWindowViewPrefs.cs:108</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_abb9ae8b8f936fffa0490e16641b215a0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#abb9ae8b8f936fffa0490e16641b215a0">UnityEditor.Timeline.TimelineWindowViewPrefs.UnloadViewModel</a></div><div class="ttdeci">static void UnloadViewModel(TimelineAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00065">TimelineWindowViewPrefs.cs:65</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html">UnityEditor.Timeline.ScriptableObjectViewPrefs</a></div><div class="ttdef"><b>Definition:</b> <a href="_scriptable_object_view_prefs_8cs_source.html#l00009">ScriptableObjectViewPrefs.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a08aa34ccf96773cb4698f8ac935c8bba"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a08aa34ccf96773cb4698f8ac935c8bba">UnityEditor.Timeline.TimelineWindowViewPrefs.GetInlineCurveHeight</a></div><div class="ttdeci">static float GetInlineCurveHeight(TrackAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00156">TimelineWindowViewPrefs.cs:156</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a6c44ff2d38ee50fe4dc6ca92796f0a5a"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6c44ff2d38ee50fe4dc6ca92796f0a5a">UnityEditor.Timeline.TimelineWindowViewPrefs.GetOrCreateViewModel</a></div><div class="ttdeci">static TimelineAssetViewModel GetOrCreateViewModel(TimelineAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00021">TimelineWindowViewPrefs.cs:21</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a12cfe45d3fddf9f0019895e1b1263d95"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a12cfe45d3fddf9f0019895e1b1263d95">UnityEditor.Timeline.TimelineWindowViewPrefs.SetTrackShowMarkers</a></div><div class="ttdeci">static void SetTrackShowMarkers(TrackAsset track, bool collapsed)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00132">TimelineWindowViewPrefs.cs:132</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a736971913d438b0f2b16c7e11f886d12"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a736971913d438b0f2b16c7e11f886d12">UnityEditor.Timeline.TimelineWindowViewPrefs.SaveViewModel</a></div><div class="ttdeci">static void SaveViewModel(TimelineAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00047">TimelineWindowViewPrefs.cs:47</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html">UnityEditor.Timeline.TimelineWindowViewPrefs</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00009">TimelineWindowViewPrefs.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_ad8afb858a6221b2fa09e3d6412c30144"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#ad8afb858a6221b2fa09e3d6412c30144">UnityEditor.Timeline.TimelineWindowViewPrefs.SetInlineCurveHeight</a></div><div class="ttdeci">static void SetInlineCurveHeight(TrackAsset asset, float height)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00164">TimelineWindowViewPrefs.cs:164</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html_a2b63a1f2dc8b3a07e537aa60c12ba5f8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2b63a1f2dc8b3a07e537aa60c12ba5f8">UnityEngine.Timeline.TrackAsset.timelineAsset</a></div><div class="ttdeci">TimelineAsset timelineAsset</div><div class="ttdoc">The TimelineAsset that this track belongs to. </div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00163">TrackAsset.cs:163</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs_html_ac3016cfb3d3555ed48d32a1086f2c899"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html#ac3016cfb3d3555ed48d32a1086f2c899">UnityEditor.Timeline.ScriptableObjectViewPrefs.Save</a></div><div class="ttdeci">void Save()</div><div class="ttdef"><b>Definition:</b> <a href="_scriptable_object_view_prefs_8cs_source.html#l00058">ScriptableObjectViewPrefs.cs:58</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:6</a></div></div>
+<div class="ttc" id="namespace_view_models_list_html"><div class="ttname"><a href="namespace_view_models_list.html">ViewModelsList</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_clips_actions_8cs_source.html#l00010">ClipsActions.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a709cf8ccb9ddd1b81d3e3f3d5c6b96fa"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a709cf8ccb9ddd1b81d3e3f3d5c6b96fa">UnityEditor.Timeline.TimelineWindowViewPrefs.CreateViewModel</a></div><div class="ttdeci">static ScriptableObjectViewPrefs&lt; TimelineAssetViewModel &gt; CreateViewModel(TimelineAsset asset)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00040">TimelineWindowViewPrefs.cs:40</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_af98ca36e625c6fb62f8a7f2ae48cf0b0"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#af98ca36e625c6fb62f8a7f2ae48cf0b0">UnityEditor.Timeline.TimelineWindowViewPrefs.SetShowInlineCurves</a></div><div class="ttdeci">static void SetShowInlineCurves(TrackAsset track, bool inlineOn)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00148">TimelineWindowViewPrefs.cs:148</a></div></div>
+<div class="ttc" id="namespace_view_models_map_html"><div class="ttname"><a href="namespace_view_models_map.html">ViewModelsMap</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a6fe9483e36416f40449981d5ec9a8cfd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a6fe9483e36416f40449981d5ec9a8cfd">UnityEditor.Timeline.TimelineWindowViewPrefs.UnloadAllViewModels</a></div><div class="ttdeci">static void UnloadAllViewModels()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00075">TimelineWindowViewPrefs.cs:75</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">UnityEditor.Timeline.TimelineAssetViewModel</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00057">TimelineAssetViewModel.cs:57</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a98c774adcc08b17b4be03b50969767c5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a98c774adcc08b17b4be03b50969767c5">UnityEditor.Timeline.TimelineWindowViewPrefs.CreateUnassociatedViewModel</a></div><div class="ttdeci">static TimelineAssetViewModel CreateUnassociatedViewModel()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00033">TimelineWindowViewPrefs.cs:33</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a19deb8a3ed2a234b9b5f56cb8cb63650"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a19deb8a3ed2a234b9b5f56cb8cb63650">UnityEditor.Timeline.TimelineWindowViewPrefs.IsShowMarkers</a></div><div class="ttdeci">static bool IsShowMarkers(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00124">TimelineWindowViewPrefs.cs:124</a></div></div>
+<div class="ttc" id="namespace_unity_object_html"><div class="ttname"><a href="namespace_unity_object.html">UnityObject</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a36c1caa4c417178e0b83b10e80e0ec0e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a36c1caa4c417178e0b83b10e80e0ec0e">UnityEditor.Timeline.TimelineWindowViewPrefs.GetTrackViewModelData</a></div><div class="ttdeci">static TrackViewModelData GetTrackViewModelData(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00087">TimelineWindowViewPrefs.cs:87</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_view_model_data_html_a017bdcfee3cba849dd2f26c7df24616b"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html#a017bdcfee3cba849dd2f26c7df24616b">UnityEditor.Timeline.TrackViewModelData.DefaultinlineAnimationCurveHeight</a></div><div class="ttdeci">static readonly float DefaultinlineAnimationCurveHeight</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00013">TimelineAssetViewModel.cs:13</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_track_view_model_data_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">UnityEditor.Timeline.TrackViewModelData</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_asset_view_model_8cs_source.html#l00011">TimelineAssetViewModel.cs:11</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs_html_a3e12de50d084f327cc664890af1f3716"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_window_view_prefs.html#a3e12de50d084f327cc664890af1f3716">UnityEditor.Timeline.TimelineWindowViewPrefs.GetShowInlineCurves</a></div><div class="ttdeci">static bool GetShowInlineCurves(TrackAsset track)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_window_view_prefs_8cs_source.html#l00140">TimelineWindowViewPrefs.cs:140</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs_html_a3100de50b1a01e30e808afba4de79fbb"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_scriptable_object_view_prefs.html#a3100de50b1a01e30e808afba4de79fbb">UnityEditor.Timeline.ScriptableObjectViewPrefs.viewModel</a></div><div class="ttdeci">TViewModel viewModel</div><div class="ttdef"><b>Definition:</b> <a href="_scriptable_object_view_prefs_8cs_source.html#l00044">ScriptableObjectViewPrefs.cs:44</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:35 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

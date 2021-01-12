@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_test_tools.html">TestTools</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner.html">TestRunner</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html">Api</a></li><li class="navelem"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html">ITestResultAdaptor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor接口 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor__inherit__graph.png" border="0" usemap="#_unity_editor_8_test_tools_8_test_runner_8_api_8_i_test_result_adaptor_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a584359e9543023c9545f15ea3949b70f"><td class="memItemLeft" align="right" valign="top">TNode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a584359e9543023c9545f15ea3949b70f">ToXml</a> ()</td></tr>
+<tr class="separator:a584359e9543023c9545f15ea3949b70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a2695e66bb8c746ae3830abff597ecf50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a2695e66bb8c746ae3830abff597ecf50">Test</a><code> [get]</code></td></tr>
+<tr class="separator:a2695e66bb8c746ae3830abff597ecf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3c843635b13ae191fdc3ba92caa5af"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#aaa3c843635b13ae191fdc3ba92caa5af">Name</a><code> [get]</code></td></tr>
+<tr class="separator:aaa3c843635b13ae191fdc3ba92caa5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0f79e9950113b27631d234cc6284b7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#aaf0f79e9950113b27631d234cc6284b7">FullName</a><code> [get]</code></td></tr>
+<tr class="memdesc:aaf0f79e9950113b27631d234cc6284b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the full name of the test result <a href="#aaf0f79e9950113b27631d234cc6284b7">更多...</a><br /></td></tr>
+<tr class="separator:aaf0f79e9950113b27631d234cc6284b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac71c593606918424d6af2b23fa8010"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a7ac71c593606918424d6af2b23fa8010">ResultState</a><code> [get]</code></td></tr>
+<tr class="separator:a7ac71c593606918424d6af2b23fa8010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b35ebed07952b4e2d1a40cc9799a2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#aaa9e778c850f68edefcbb4af5b1cd187">TestStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a69b35ebed07952b4e2d1a40cc9799a2c">TestStatus</a><code> [get]</code></td></tr>
+<tr class="separator:a69b35ebed07952b4e2d1a40cc9799a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4f4ff044ffb023d991b1755dd7b234"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#aae4f4ff044ffb023d991b1755dd7b234">Duration</a><code> [get]</code></td></tr>
+<tr class="memdesc:aae4f4ff044ffb023d991b1755dd7b234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the elapsed time for running the test in seconds <a href="#aae4f4ff044ffb023d991b1755dd7b234">更多...</a><br /></td></tr>
+<tr class="separator:aae4f4ff044ffb023d991b1755dd7b234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f33d797beb3802cbd2045ec9875291"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#af8f33d797beb3802cbd2045ec9875291">StartTime</a><code> [get]</code></td></tr>
+<tr class="memdesc:af8f33d797beb3802cbd2045ec9875291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the time the test started running. <a href="#af8f33d797beb3802cbd2045ec9875291">更多...</a><br /></td></tr>
+<tr class="separator:af8f33d797beb3802cbd2045ec9875291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ebfa5f6116645c65e89a1c85361f2c"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a20ebfa5f6116645c65e89a1c85361f2c">EndTime</a><code> [get]</code></td></tr>
+<tr class="memdesc:a20ebfa5f6116645c65e89a1c85361f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the time the test finished running. <a href="#a20ebfa5f6116645c65e89a1c85361f2c">更多...</a><br /></td></tr>
+<tr class="separator:a20ebfa5f6116645c65e89a1c85361f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a427fd49508b7d98654befb404f02c7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a0a427fd49508b7d98654befb404f02c7">Message</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0a427fd49508b7d98654befb404f02c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the message associated with a test failure or with not running the test  <a href="#a0a427fd49508b7d98654befb404f02c7">更多...</a><br /></td></tr>
+<tr class="separator:a0a427fd49508b7d98654befb404f02c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6068fcc940b0c1c4b92935bc740fec9e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a6068fcc940b0c1c4b92935bc740fec9e">StackTrace</a><code> [get]</code></td></tr>
+<tr class="memdesc:a6068fcc940b0c1c4b92935bc740fec9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets any stacktrace associated with an error or failure. Not available in the Compact Framework 1.0.  <a href="#a6068fcc940b0c1c4b92935bc740fec9e">更多...</a><br /></td></tr>
+<tr class="separator:a6068fcc940b0c1c4b92935bc740fec9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951d6bf3b87cca131879feeec76cd258"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a951d6bf3b87cca131879feeec76cd258">AssertCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a951d6bf3b87cca131879feeec76cd258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of asserts executed when running the test and all its children.  <a href="#a951d6bf3b87cca131879feeec76cd258">更多...</a><br /></td></tr>
+<tr class="separator:a951d6bf3b87cca131879feeec76cd258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64ead81310a676dd4f441460d5fa647"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#ad64ead81310a676dd4f441460d5fa647">FailCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad64ead81310a676dd4f441460d5fa647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of test cases that failed when running the test and all its children.  <a href="#ad64ead81310a676dd4f441460d5fa647">更多...</a><br /></td></tr>
+<tr class="separator:ad64ead81310a676dd4f441460d5fa647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a238957018bb6654e430d5cc7e1a1d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a6a238957018bb6654e430d5cc7e1a1d1">PassCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a6a238957018bb6654e430d5cc7e1a1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of test cases that passed when running the test and all its children.  <a href="#a6a238957018bb6654e430d5cc7e1a1d1">更多...</a><br /></td></tr>
+<tr class="separator:a6a238957018bb6654e430d5cc7e1a1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a338ed2218b13fb03f67f48c7cca8eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a4a338ed2218b13fb03f67f48c7cca8eb">SkipCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4a338ed2218b13fb03f67f48c7cca8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of test cases that were skipped when running the test and all its children.  <a href="#a4a338ed2218b13fb03f67f48c7cca8eb">更多...</a><br /></td></tr>
+<tr class="separator:a4a338ed2218b13fb03f67f48c7cca8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73caf92986892da4ab858c2eb4285513"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a73caf92986892da4ab858c2eb4285513">InconclusiveCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a73caf92986892da4ab858c2eb4285513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of test cases that were inconclusive when running the test and all its children.  <a href="#a73caf92986892da4ab858c2eb4285513">更多...</a><br /></td></tr>
+<tr class="separator:a73caf92986892da4ab858c2eb4285513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71694e9055dd632bd2b780f2d5a3175e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a71694e9055dd632bd2b780f2d5a3175e">HasChildren</a><code> [get]</code></td></tr>
+<tr class="memdesc:a71694e9055dd632bd2b780f2d5a3175e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether this result has any child results. Accessing HasChildren should not force creation of the Children collection in classes implementing this interface.  <a href="#a71694e9055dd632bd2b780f2d5a3175e">更多...</a><br /></td></tr>
+<tr class="separator:a71694e9055dd632bd2b780f2d5a3175e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca720cd0da0200076c869696bcba4c2"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html">ITestResultAdaptor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#abca720cd0da0200076c869696bcba4c2">Children</a><code> [get]</code></td></tr>
+<tr class="memdesc:abca720cd0da0200076c869696bcba4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the the collection of child results. <a href="#abca720cd0da0200076c869696bcba4c2">更多...</a><br /></td></tr>
+<tr class="separator:abca720cd0da0200076c869696bcba4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb48ff1208889c40a6cda6a94c5fe17"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html#a5cb48ff1208889c40a6cda6a94c5fe17">Output</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5cb48ff1208889c40a6cda6a94c5fe17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets any text output written to this result. <a href="#a5cb48ff1208889c40a6cda6a94c5fe17">更多...</a><br /></td></tr>
+<tr class="separator:a5cb48ff1208889c40a6cda6a94c5fe17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00007">7</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a584359e9543023c9545f15ea3949b70f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TNode UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.ToXml </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a951d6bf3b87cca131879feeec76cd258"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.AssertCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the number of asserts executed when running the test and all its children. </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abca720cd0da0200076c869696bcba4c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;<a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_result_adaptor.html">ITestResultAdaptor</a>&gt; UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.Children</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the the collection of child results.</p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00079">79</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aae4f4ff044ffb023d991b1755dd7b234"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.Duration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the elapsed time for running the test in seconds</p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20ebfa5f6116645c65e89a1c85361f2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.EndTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets or sets the time the test finished running.</p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad64ead81310a676dd4f441460d5fa647"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.FailCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the number of test cases that failed when running the test and all its children. </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00051">51</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf0f79e9950113b27631d234cc6284b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.FullName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the full name of the test result</p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71694e9055dd632bd2b780f2d5a3175e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.HasChildren</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether this result has any child results. Accessing HasChildren should not force creation of the Children collection in classes implementing this interface. </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00076">76</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a73caf92986892da4ab858c2eb4285513"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.InconclusiveCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the number of test cases that were inconclusive when running the test and all its children. </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00069">69</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a427fd49508b7d98654befb404f02c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.Message</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the message associated with a test failure or with not running the test </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa3c843635b13ae191fdc3ba92caa5af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.Name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5cb48ff1208889c40a6cda6a94c5fe17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.Output</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets any text output written to this result.</p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00082">82</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a238957018bb6654e430d5cc7e1a1d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.PassCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the number of test cases that passed when running the test and all its children. </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00057">57</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ac71c593606918424d6af2b23fa8010"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.ResultState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a338ed2218b13fb03f67f48c7cca8eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.SkipCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the number of test cases that were skipped when running the test and all its children. </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00063">63</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6068fcc940b0c1c4b92935bc740fec9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.StackTrace</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets any stacktrace associated with an error or failure. Not available in the Compact Framework 1.0. </p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8f33d797beb3802cbd2045ec9875291"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.StartTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets or sets the time the test started running.</p>
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2695e66bb8c746ae3830abff597ecf50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_test_adaptor.html">ITestAdaptor</a> UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.Test</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69b35ebed07952b4e2d1a40cc9799a2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#aaa9e778c850f68edefcbb4af5b1cd187">TestStatus</a> UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor.TestStatus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a> 第 <a class="el" href="_i_test_result_adaptor_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.test-framework@1.1.14/UnityEditor.TestRunner/Api/<a class="el" href="_i_test_result_adaptor_8cs_source.html">ITestResultAdaptor.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:46 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

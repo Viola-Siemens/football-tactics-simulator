@@ -1,0 +1,1305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: UnityEditor.Timeline.SelectionManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></li><li class="navelem"><a class="el" href="namespace_unity_editor_1_1_timeline.html">Timeline</a></li><li class="navelem"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html">SelectionManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_unity_editor_1_1_timeline_1_1_selection_manager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">UnityEditor.Timeline.SelectionManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+UnityEditor.Timeline.SelectionManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager__coll__graph.png" border="0" usemap="#_unity_editor_8_timeline_8_selection_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_unity_editor_8_timeline_8_selection_manager_coll__map" id="_unity_editor_8_timeline_8_selection_manager_coll__map">
+<area shape="rect" id="node2" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html" title="UnityEditor.Timeline.IClip\lCurveEditorOwner" alt="" coords="20,5,187,47"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a93260030367f7b08754a60de8df41abb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a93260030367f7b08754a60de8df41abb">AddObject</a> (<a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> obj)</td></tr>
+<tr class="separator:a93260030367f7b08754a60de8df41abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ae8dcaf9f44d7be4fc61cc05f5110b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b">Add</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> obj)</td></tr>
+<tr class="separator:ac0ae8dcaf9f44d7be4fc61cc05f5110b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6b05ade05384dfda6ce590be577372"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a6d6b05ade05384dfda6ce590be577372">Add</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> item)</td></tr>
+<tr class="separator:a6d6b05ade05384dfda6ce590be577372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742d0284db5584f212408cbaa4e5033b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a742d0284db5584f212408cbaa4e5033b">Add</a> (<a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker)</td></tr>
+<tr class="separator:a742d0284db5584f212408cbaa4e5033b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2c5882809a3e280b357937e13845f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a0f2c5882809a3e280b357937e13845f1">Add</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> item)</td></tr>
+<tr class="separator:a0f2c5882809a3e280b357937e13845f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a2bb9ea56f328e837b5326d11e8148"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a49a2bb9ea56f328e837b5326d11e8148">SelectOnly</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</td></tr>
+<tr class="separator:a49a2bb9ea56f328e837b5326d11e8148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21564c20d9f8161e3bb42098e471511c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a21564c20d9f8161e3bb42098e471511c">SelectOnly</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</td></tr>
+<tr class="separator:a21564c20d9f8161e3bb42098e471511c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ffe35aef1747bcab1d71146448c450"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#aa4ffe35aef1747bcab1d71146448c450">SelectOnly</a> (<a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> item)</td></tr>
+<tr class="separator:aa4ffe35aef1747bcab1d71146448c450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab2f106b296dc1b6a0f6984d4ba1b26"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7ab2f106b296dc1b6a0f6984d4ba1b26">SelectOnly</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> item)</td></tr>
+<tr class="separator:a7ab2f106b296dc1b6a0f6984d4ba1b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe029a7828402d0ed67be8058febd15"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#acbe029a7828402d0ed67be8058febd15">SelectInlineCurveEditor</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a> selection)</td></tr>
+<tr class="separator:acbe029a7828402d0ed67be8058febd15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed22e96ac29ae8d25dc6a7397c8bbb6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7ed22e96ac29ae8d25dc6a7397c8bbb6">GetCurrentInlineEditorCurve</a> ()</td></tr>
+<tr class="separator:a7ed22e96ac29ae8d25dc6a7397c8bbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f170d62df3f6ea00457cad78d1fc80"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#aa8f170d62df3f6ea00457cad78d1fc80">IsCurveEditorFocused</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a> selection)</td></tr>
+<tr class="separator:aa8f170d62df3f6ea00457cad78d1fc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57d9cab613d1e53d50db9a43db506ca"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ab57d9cab613d1e53d50db9a43db506ca">Contains</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> item)</td></tr>
+<tr class="separator:ab57d9cab613d1e53d50db9a43db506ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d72f758c35b8cf2adce2e4ea4b37858"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a4d72f758c35b8cf2adce2e4ea4b37858">Contains</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> item)</td></tr>
+<tr class="separator:a4d72f758c35b8cf2adce2e4ea4b37858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924a69d96f7c4d275bd8d853bb14ac25"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a924a69d96f7c4d275bd8d853bb14ac25">Contains</a> (<a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> obj)</td></tr>
+<tr class="separator:a924a69d96f7c4d275bd8d853bb14ac25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb411576771320033a722f10a4d50035"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abb411576771320033a722f10a4d50035">Contains</a> (<a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker)</td></tr>
+<tr class="separator:abb411576771320033a722f10a4d50035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a705cbdc211274f106929c73bd68e47"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a9a705cbdc211274f106929c73bd68e47">Contains</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> item)</td></tr>
+<tr class="separator:a9a705cbdc211274f106929c73bd68e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587eb1360aef383023f0eb0c7fe0d3a9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a587eb1360aef383023f0eb0c7fe0d3a9">Clear</a> ()</td></tr>
+<tr class="separator:a587eb1360aef383023f0eb0c7fe0d3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4a226b8f959da75b5e843fec9c65b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#aca4a226b8f959da75b5e843fec9c65b3">UnSelectTracks</a> ()</td></tr>
+<tr class="separator:aca4a226b8f959da75b5e843fec9c65b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64339f961d920c86357e95ee50bd937d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d">Remove</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> item)</td></tr>
+<tr class="separator:a64339f961d920c86357e95ee50bd937d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac284f37b72edf6611540ef1c36e7d08c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac284f37b72edf6611540ef1c36e7d08c">Remove</a> (<a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker)</td></tr>
+<tr class="separator:ac284f37b72edf6611540ef1c36e7d08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207289a961bdb74389487b8233e22178"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a207289a961bdb74389487b8233e22178">Remove</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> item)</td></tr>
+<tr class="separator:a207289a961bdb74389487b8233e22178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa068bcf5a98ff6e14f08fbe8d28129c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#aa068bcf5a98ff6e14f08fbe8d28129c6">Remove</a> (<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> item)</td></tr>
+<tr class="separator:aa068bcf5a98ff6e14f08fbe8d28129c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ae0d8cfbca3ef6705e5b46072bbcdb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ad4ae0d8cfbca3ef6705e5b46072bbcdb">RemoveTimelineSelection</a> ()</td></tr>
+<tr class="separator:ad4ae0d8cfbca3ef6705e5b46072bbcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1299fa4b252cbe37b2703d0afc3804f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac1299fa4b252cbe37b2703d0afc3804f">RemoveAllClips</a> ()</td></tr>
+<tr class="separator:ac1299fa4b252cbe37b2703d0afc3804f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e54ba2047967874d2b9d9046c86603"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a36e54ba2047967874d2b9d9046c86603">Count</a> ()</td></tr>
+<tr class="separator:a36e54ba2047967874d2b9d9046c86603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3460020a973e3a6c241f84d75cf0ecc"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac3460020a973e3a6c241f84d75cf0ecc">SelectedClipGUI</a> ()</td></tr>
+<tr class="separator:ac3460020a973e3a6c241f84d75cf0ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba16cd0f29030674819bbb430e24efc"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7ba16cd0f29030674819bbb430e24efc">SelectedClips</a> ()</td></tr>
+<tr class="separator:a7ba16cd0f29030674819bbb430e24efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e501bc39110ef71216b27cd4895c6c"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac9e501bc39110ef71216b27cd4895c6c">SelectedMarkers</a> ()</td></tr>
+<tr class="separator:ac9e501bc39110ef71216b27cd4895c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7cb4a9d2f8441e66550d00de5ae731"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3f7cb4a9d2f8441e66550d00de5ae731">SelectedTracks</a> ()</td></tr>
+<tr class="separator:a3f7cb4a9d2f8441e66550d00de5ae731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc664cc50f5087f165496359ebbc435e"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#adc664cc50f5087f165496359ebbc435e">SelectedItemOfType&lt; T &gt;</a> ()</td></tr>
+<tr class="separator:adc664cc50f5087f165496359ebbc435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d710467590a93afb99d7a53d3987b1"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html">TimelineTrackBaseGUI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a82d710467590a93afb99d7a53d3987b1">SelectedTrackGUI</a> ()</td></tr>
+<tr class="separator:a82d710467590a93afb99d7a53d3987b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce25cf985bb918f83215c038a29abce"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce">SelectedItems</a> ()</td></tr>
+<tr class="separator:abce25cf985bb918f83215c038a29abce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a7a0ca6709f33a8ef877c56f4371bcae1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7a0ca6709f33a8ef877c56f4371bcae1">Remove</a> (<a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> item)</td></tr>
+<tr class="separator:a7a0ca6709f33a8ef877c56f4371bcae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3d92b32cddd3d88d762299aa359d9b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3a3d92b32cddd3d88d762299aa359d9b">IsTimelineType</a> (<a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> o)</td></tr>
+<tr class="separator:a3a3d92b32cddd3d88d762299aa359d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:acee2a751d8b305d84d507913aa88f258"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_selection_manager.html#acee2a751d8b305d84d507913aa88f258">currentInlineEditorCurve</a></td></tr>
+<tr class="separator:acee2a751d8b305d84d507913aa88f258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00008">8</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac0ae8dcaf9f44d7be4fc61cc05f5110b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00024">24</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_ac0ae8dcaf9f44d7be4fc61cc05f5110b_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_ac0ae8dcaf9f44d7be4fc61cc05f5110b_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_ac0ae8dcaf9f44d7be4fc61cc05f5110b_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_ac0ae8dcaf9f44d7be4fc61cc05f5110b_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_sequencer_context_menu.html#a5f2333a039d8e189c8cf99e36825a75d" title="UnityEditor.Timeline.Sequencer\lContextMenu.AddMarkersCallback" alt="" coords="264,5,487,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_sequencer_context_menu.html#a11e6e61355e8a7ef437d84d8ea4e7ce1" title="UnityEditor.Timeline.Sequencer\lContextMenu.AddSingleMarkerCallback" alt="" coords="249,71,501,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_paste_action.html#a4c1bc722be5590f34577512a80894973" title="UnityEditor.Timeline.Paste\lAction.PasteItems" alt="" coords="287,136,463,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_paste_action.html#a543f4b3f8820654d8bfebc93e97e2ddf" title="UnityEditor.Timeline.Paste\lAction.PasteTracks" alt="" coords="287,201,463,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_select_all_action.html#a1c29a973f1e860ed3a80aafdc7a6daac" title="UnityEditor.Timeline.Select\lAllAction.Execute" alt="" coords="286,267,465,308"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_duplicate_tracks.html#af6adde4d5812ba21dd7dcbac946b663f" title="UnityEditor.Timeline.Duplicate\lTracks.Execute" alt="" coords="277,332,473,373"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aaded91156beefb815e1ae9cfb0da9acb" title="UnityEditor.Timeline.Move\lItemHandler.Cancel" alt="" coords="289,397,461,439"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aea8371f25c13e03f6a14329a012e7813" title="UnityEditor.Timeline.Item\lSelection.RangeSelectItems" alt="" coords="282,463,469,504"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a6823212fccab2ebd50d1e87c1464bfc1" title="UnityEditor.Timeline.Trim\lClip.MouseDown" alt="" coords="292,528,459,569"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#aa2daa56b5302162ff81659057e9a03a5" title="UnityEditor.Timeline.Timeline\lHelpers.FinalizeInsertItemsUsing\lCurrentEditMode" alt="" coords="269,594,481,650"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html#ae62855c1bd8fb7e6b68c73ab5232db15" title="UnityEditor.Timeline.Playhead\lContextMenu.SelectMenuCallback" alt="" coords="264,675,487,716"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a9e0f2f798967715d98da1e0ec9d3db33" title="UnityEditor.Timeline.Timeline\lClipGUI.Select" alt="" coords="280,740,471,781"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a11fea001ba44a20283e31729c46732b8" title="UnityEditor.Timeline.Timeline\lMarkerGUI.Select" alt="" coords="280,805,471,847"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_dragging.html#afc34f8ecac13a7e9bcaa03abccd6a05e" title="UnityEditor.TimelineDragging.\lCanStartDrag" alt="" coords="279,871,472,912"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a44602f9f2b76e50f220dba033a078840" title="UnityEditor.Timeline.Timeline\lGroupGUI.DrawTrackButtons" alt="" coords="280,936,471,977"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a60b2907709dab37cdf1ac44431a6ff9e" title="UnityEditor.Timeline.Timeline\lTrackGUI.DrawTrackDropDownMenu" alt="" coords="259,1001,491,1043"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a30570ed27868bc269970392f2e4d44bd" title="UnityEditor.Timeline.Timeline\lTreeView.ItemDoubleClickedCallback" alt="" coords="257,1067,494,1108"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a1d0c323d9d7698a6d3e1189c607887ff" title="UnityEditor.Timeline.Timeline\lTreeView.SelectionChangedCallback" alt="" coords="258,1132,493,1173"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectLeftItem" alt="" coords="277,1197,474,1239"/><area shape="rect" id="node23" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectRightItem" alt="" coords="277,1263,474,1304"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectUpTrack" alt="" coords="277,1360,474,1401"/><area shape="rect" id="node29" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectDownTrack" alt="" coords="277,1491,474,1532"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_select_left_clip.html#ad5a3ca2a499c750c66e233e120adc02e" title="UnityEditor.Timeline.Select\lLeftClip.Execute" alt="" coords="563,1099,741,1140"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_multiselect_left_clip.html#a8cf3e30a79f0a37ed0544e23c7f7de27" title="UnityEditor.Timeline.Multiselect\lLeftClip.Execute" alt="" coords="549,1164,755,1205"/><area shape="rect" id="node24" href="class_unity_editor_1_1_timeline_1_1_select_right_clip.html#aca9a4a2b14c5adacbbdbc1ec3771003e" title="UnityEditor.Timeline.Select\lRightClip.Execute" alt="" coords="563,1229,741,1271"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_multiselect_right_clip.html#aee312ad538ae499e74c11afc02e3d8e7" title="UnityEditor.Timeline.Multiselect\lRightClip.Execute" alt="" coords="549,1295,755,1336"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_select_up_track.html#a724ac87a5f5ef6cc409e20a47df4c47d" title="UnityEditor.Timeline.Select\lUpTrack.Execute" alt="" coords="563,1360,741,1401"/><area shape="rect" id="node28" href="class_unity_editor_1_1_timeline_1_1_multiselect_up_track.html#a1aa3d68aca2d6691e9efb54daeca40d3" title="UnityEditor.Timeline.Multiselect\lUpTrack.Execute" alt="" coords="549,1425,755,1467"/><area shape="rect" id="node30" href="class_unity_editor_1_1_timeline_1_1_select_down_track.html#a6905e4bbf4d1fb1056170a10f5733f7b" title="UnityEditor.Timeline.Select\lDownTrack.Execute" alt="" coords="563,1491,741,1532"/><area shape="rect" id="node31" href="class_unity_editor_1_1_timeline_1_1_multiselect_down_track.html#a0e2a9623ddf17be4393d17a9b5d54223" title="UnityEditor.Timeline.Multiselect\lDownTrack.Execute" alt="" coords="549,1556,755,1597"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d6b05ade05384dfda6ce590be577372"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00044">44</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a6d6b05ade05384dfda6ce590be577372_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a6d6b05ade05384dfda6ce590be577372_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a6d6b05ade05384dfda6ce590be577372_cgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a6d6b05ade05384dfda6ce590be577372_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#a2e8fade23bcb6e2be7aa64eac84d63c4" title="UnityEditor.Timeline.Editor\lClipFactory.GetEditorClip" alt="" coords="249,5,425,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a742d0284db5584f212408cbaa4e5033b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a>&#160;</td>
+          <td class="paramname"><em>marker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f2c5882809a3e280b357937e13845f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00069">69</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93260030367f7b08754a60de8df41abb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.AddObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a587eb1360aef383023f0eb0c7fe0d3a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00196">196</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a587eb1360aef383023f0eb0c7fe0d3a9_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a587eb1360aef383023f0eb0c7fe0d3a9_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a587eb1360aef383023f0eb0c7fe0d3a9_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a587eb1360aef383023f0eb0c7fe0d3a9_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_edit_sub_timeline.html#addeebd08802b009f725dce3180f54066" title="UnityEditor.Timeline.Edit\lSubTimeline.ExecuteInternal" alt="" coords="282,5,469,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_sequencer_context_menu.html#a5f2333a039d8e189c8cf99e36825a75d" title="UnityEditor.Timeline.Sequencer\lContextMenu.AddMarkersCallback" alt="" coords="264,71,487,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_sequencer_context_menu.html#a11e6e61355e8a7ef437d84d8ea4e7ce1" title="UnityEditor.Timeline.Sequencer\lContextMenu.AddSingleMarkerCallback" alt="" coords="249,136,501,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_select_all_action.html#a1c29a973f1e860ed3a80aafdc7a6daac" title="UnityEditor.Timeline.Select\lAllAction.Execute" alt="" coords="286,201,465,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_rectangle_select.html#a4a74c5e4cc4d85f045989de9bd64cd09" title="UnityEditor.Timeline.Rectangle\lSelect.OnFinish" alt="" coords="275,267,475,308"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_clear_selection.html#ab5032714fa1e7a8a9a601db3f39ff5a7" title="UnityEditor.Timeline.Clear\lSelection.MouseDown" alt="" coords="289,332,461,373"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#ab1740c69f7eb3963c7d93cd7b8107424" title="UnityEditor.Timeline.Item\lSelection.HandleSingleSelection" alt="" coords="270,397,481,439"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#aecb8a0d92c548adb53b2ccc269fac49b" title="UnityEditor.Timeline.Select\lAndMoveItem.MouseUp" alt="" coords="286,463,465,504"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a6823212fccab2ebd50d1e87c1464bfc1" title="UnityEditor.Timeline.Trim\lClip.MouseDown" alt="" coords="292,528,459,569"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#aa2daa56b5302162ff81659057e9a03a5" title="UnityEditor.Timeline.Timeline\lHelpers.FinalizeInsertItemsUsing\lCurrentEditMode" alt="" coords="269,594,481,650"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a7adaf18ccfcb5f3e76d51d2f95dec1ff" title="UnityEditor.Timeline.Timeline\lHelpers.RangeSelect\&lt; T \&gt;" alt="" coords="280,675,471,716"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html#ae62855c1bd8fb7e6b68c73ab5232db15" title="UnityEditor.Timeline.Playhead\lContextMenu.SelectMenuCallback" alt="" coords="264,740,487,781"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_dragging.html#afc34f8ecac13a7e9bcaa03abccd6a05e" title="UnityEditor.TimelineDragging.\lCanStartDrag" alt="" coords="279,805,472,847"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a44602f9f2b76e50f220dba033a078840" title="UnityEditor.Timeline.Timeline\lGroupGUI.DrawTrackButtons" alt="" coords="280,871,471,912"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a60b2907709dab37cdf1ac44431a6ff9e" title="UnityEditor.Timeline.Timeline\lTrackGUI.DrawTrackDropDownMenu" alt="" coords="259,936,491,977"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a1d0c323d9d7698a6d3e1189c607887ff" title="UnityEditor.Timeline.Timeline\lTreeView.SelectionChangedCallback" alt="" coords="258,1001,493,1043"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a04b273f754178b24e89f6ff24ec8c85a" title="UnityEditor.Timeline.Select\lAndMoveItem.HandleSingleSelection" alt="" coords="549,365,784,407"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_context_menu_manipulator.html#a3af32a2571754ce38b232d7aeffb35ab" title="UnityEditor.Timeline.Context\lMenuManipulator.MouseDown" alt="" coords="569,431,765,472"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab57d9cab613d1e53d50db9a43db506ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SelectionManager.Contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00158">158</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_ab57d9cab613d1e53d50db9a43db506ca_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_ab57d9cab613d1e53d50db9a43db506ca_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_ab57d9cab613d1e53d50db9a43db506ca_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_ab57d9cab613d1e53d50db9a43db506ca_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a6823212fccab2ebd50d1e87c1464bfc1" title="UnityEditor.Timeline.Trim\lClip.MouseDown" alt="" coords="282,5,449,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a96b1a8b018d61b9cb0806cfcd9d44b53" title="UnityEditor.Timeline.Timeline\lClipGUI.IsSelected" alt="" coords="270,71,461,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ab30772c1d48fedd364a3eb1e366be97c" title="UnityEditor.Timeline.Timeline\lClipGUI.DrawInto" alt="" coords="270,136,461,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a2c449fa6227f238f87230f44c3fffe74" title="UnityEditor.Timeline.Timeline\lMarkerGUI.IsSelected" alt="" coords="270,201,461,243"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#af1a7dbb45ab73a42770f5c17c27a1776" title="UnityEditor.Timeline.Timeline\lMarkerGUI.Draw" alt="" coords="270,267,461,308"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a44602f9f2b76e50f220dba033a078840" title="UnityEditor.Timeline.Timeline\lGroupGUI.DrawTrackButtons" alt="" coords="270,332,461,373"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a235284ba10703efa5cf4d959153ec2a9" title="UnityEditor.Timeline.Timeline\lGroupGUI.Draw" alt="" coords="270,397,461,439"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a69b091828644eb81d3eb9c8d11be63d1" title="UnityEditor.Timeline.Timeline\lTrackGUI.DrawBackground" alt="" coords="270,463,461,504"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a2e04e37a37c485933bdfeb4c855722ec" title="UnityEditor.Timeline.Timeline\lTrackGUI.DrawHeaderBackground" alt="" coords="256,528,475,569"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a3db3e86a350547fc26860ffebf0b0231" title="UnityEditor.Timeline.Timeline\lTrackGUI.DrawTrackBinding" alt="" coords="270,593,461,635"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a60b2907709dab37cdf1ac44431a6ff9e" title="UnityEditor.Timeline.Timeline\lTrackGUI.DrawTrackDropDownMenu" alt="" coords="249,659,481,700"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectLeftItem" alt="" coords="267,724,464,765"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectRightItem" alt="" coords="267,789,464,831"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectUpTrack" alt="" coords="267,887,464,928"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectDownTrack" alt="" coords="267,1017,464,1059"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#aa0132c4586d05ffdd1de517ec54ed8bb" title="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.CanCycleMarkers" alt="" coords="529,201,761,243"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a82eb0e69f57810c7235d43c242d53b72" title="UnityEditor.Timeline.Select\lAndMoveItem.HandleMarkerCycle" alt="" coords="809,201,1027,243"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#ad67b7bf104ce44ad188f33667bf69177" title="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.Draw" alt="" coords="550,267,741,308"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_select_left_clip.html#ad5a3ca2a499c750c66e233e120adc02e" title="UnityEditor.Timeline.Select\lLeftClip.Execute" alt="" coords="556,625,735,667"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_multiselect_left_clip.html#a8cf3e30a79f0a37ed0544e23c7f7de27" title="UnityEditor.Timeline.Multiselect\lLeftClip.Execute" alt="" coords="543,691,748,732"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_select_right_clip.html#aca9a4a2b14c5adacbbdbc1ec3771003e" title="UnityEditor.Timeline.Select\lRightClip.Execute" alt="" coords="556,756,735,797"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_multiselect_right_clip.html#aee312ad538ae499e74c11afc02e3d8e7" title="UnityEditor.Timeline.Multiselect\lRightClip.Execute" alt="" coords="543,821,748,863"/><area shape="rect" id="node23" href="class_unity_editor_1_1_timeline_1_1_select_up_track.html#a724ac87a5f5ef6cc409e20a47df4c47d" title="UnityEditor.Timeline.Select\lUpTrack.Execute" alt="" coords="556,887,735,928"/><area shape="rect" id="node24" href="class_unity_editor_1_1_timeline_1_1_multiselect_up_track.html#a1aa3d68aca2d6691e9efb54daeca40d3" title="UnityEditor.Timeline.Multiselect\lUpTrack.Execute" alt="" coords="543,952,748,993"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_select_down_track.html#a6905e4bbf4d1fb1056170a10f5733f7b" title="UnityEditor.Timeline.Select\lDownTrack.Execute" alt="" coords="556,1017,735,1059"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_multiselect_down_track.html#a0e2a9623ddf17be4393d17a9b5d54223" title="UnityEditor.Timeline.Multiselect\lDownTrack.Execute" alt="" coords="543,1083,748,1124"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d72f758c35b8cf2adce2e4ea4b37858"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SelectionManager.Contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00166">166</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a4d72f758c35b8cf2adce2e4ea4b37858_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a4d72f758c35b8cf2adce2e4ea4b37858_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a4d72f758c35b8cf2adce2e4ea4b37858_cgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a4d72f758c35b8cf2adce2e4ea4b37858_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#a2e8fade23bcb6e2be7aa64eac84d63c4" title="UnityEditor.Timeline.Editor\lClipFactory.GetEditorClip" alt="" coords="249,5,425,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a924a69d96f7c4d275bd8d853bb14ac25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SelectionManager.Contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00173">173</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb411576771320033a722f10a4d50035"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SelectionManager.Contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a>&#160;</td>
+          <td class="paramname"><em>marker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00178">178</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a705cbdc211274f106929c73bd68e47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SelectionManager.Contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00184">184</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a36e54ba2047967874d2b9d9046c86603"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int UnityEditor.Timeline.SelectionManager.Count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00259">259</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a36e54ba2047967874d2b9d9046c86603_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a36e54ba2047967874d2b9d9046c86603_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a36e54ba2047967874d2b9d9046c86603_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a36e54ba2047967874d2b9d9046c86603_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_copy_action.html#a386a5c5aa5bb3b9bbdfdbbf9a87a372d" title="UnityEditor.Timeline.Copy\lAction.GetDisplayState" alt="" coords="279,5,451,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html#a129bc2cda89a2bd8ca9a597c94fee63f" title="UnityEditor.Timeline.Frame\lSelectedAction.Execute" alt="" coords="276,71,455,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#aecb8a0d92c548adb53b2ccc269fac49b" title="UnityEditor.Timeline.Select\lAndMoveItem.MouseUp" alt="" coords="276,136,455,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#aa0132c4586d05ffdd1de517ec54ed8bb" title="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.CanCycleMarkers" alt="" coords="249,201,481,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a82eb0e69f57810c7235d43c242d53b72" title="UnityEditor.Timeline.Select\lAndMoveItem.HandleMarkerCycle" alt="" coords="529,201,747,243"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ed22e96ac29ae8d25dc6a7397c8bbb6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a> UnityEditor.Timeline.SelectionManager.GetCurrentInlineEditorCurve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00148">148</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a7ed22e96ac29ae8d25dc6a7397c8bbb6_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a7ed22e96ac29ae8d25dc6a7397c8bbb6_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a7ed22e96ac29ae8d25dc6a7397c8bbb6_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a7ed22e96ac29ae8d25dc6a7397c8bbb6_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_delete_action.html#a18fd59d476822d70ddf7295ed159caab" title="UnityEditor.Timeline.Delete\lAction.Execute" alt="" coords="317,5,495,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_match_content.html#a737ef5189f1e28a6ee2149dff690bd5d" title="UnityEditor.Timeline.Match\lContent.GetDisplayState" alt="" coords="317,71,495,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_match_content.html#a75e4efac464b11d6eecd595f8150afe4" title="UnityEditor.Timeline.Match\lContent.Execute" alt="" coords="317,136,495,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_frame_all_action.html#a9ef0a2710f2a1d3141f217b4fe28d8ff" title="UnityEditor.Timeline.Frame\lAllAction.Execute" alt="" coords="317,201,495,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html#a129bc2cda89a2bd8ca9a597c94fee63f" title="UnityEditor.Timeline.Frame\lSelectedAction.Execute" alt="" coords="317,267,495,308"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a6039d0296bdcef54ef9eb35bdd277b6c" title="UnityEditor.Timeline.Inline\lCurvesShortcutManipulator.Execute\lCommand" alt="" coords="291,333,521,389"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_inline_curves_shortcut_manipulator.html#a43bada0377ad58e1b5443c47a2f47395" title="UnityEditor.Timeline.Inline\lCurvesShortcutManipulator.KeyDown" alt="" coords="288,413,524,455"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8f170d62df3f6ea00457cad78d1fc80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SelectionManager.IsCurveEditorFocused </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a>&#160;</td>
+          <td class="paramname"><em>selection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00153">153</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_aa8f170d62df3f6ea00457cad78d1fc80_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_aa8f170d62df3f6ea00457cad78d1fc80_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_aa8f170d62df3f6ea00457cad78d1fc80_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_aa8f170d62df3f6ea00457cad78d1fc80_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_window_state.html#a2fcf53cb212d80e02e30d883bc259b75" title="UnityEditor.Timeline.Window\lState.IsEditingASubItem" alt="" coords="256,71,444,112"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_frame_all_action.html#a9ef0a2710f2a1d3141f217b4fe28d8ff" title="UnityEditor.Timeline.Frame\lAllAction.Execute" alt="" coords="516,5,695,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html#a129bc2cda89a2bd8ca9a597c94fee63f" title="UnityEditor.Timeline.Frame\lSelectedAction.Execute" alt="" coords="516,71,695,112"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_item_action_shortcut_manipulator.html#abaf577d380179cb9e3104eb48362aca0" title="UnityEditor.Timeline.Item\lActionShortcutManipulator.Execute\lCommand" alt="" coords="492,137,719,193"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a3d92b32cddd3d88d762299aa359d9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.SelectionManager.IsTimelineType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00304">304</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64339f961d920c86357e95ee50bd937d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00208">208</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_cgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#a2e8fade23bcb6e2be7aa64eac84d63c4" title="UnityEditor.Timeline.Editor\lClipFactory.GetEditorClip" alt="" coords="249,5,425,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a64339f961d920c86357e95ee50bd937d_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_lock_track.html#a16cddfecc512647aaceba47530dd7634" title="UnityEditor.Timeline.Lock\lTrack.SetLockState" alt="" coords="284,5,455,47"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_delete_tracks.html#a41cc9843ac095f66bf5acfcf0becdde0" title="UnityEditor.Timeline.Delete\lTracks.Do" alt="" coords="280,71,459,112"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aea8371f25c13e03f6a14329a012e7813" title="UnityEditor.Timeline.Item\lSelection.RangeSelectItems" alt="" coords="276,136,463,177"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab8cdb3fb34e831a569a08fbb34b5c4f5" title="UnityEditor.Timeline.Window\lState.UnSelectMarkerOnHeaderTrack" alt="" coords="249,201,489,243"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a45ea5f563aa66cd32d337b301c6d3c36" title="UnityEditor.Timeline.Timeline\lClipGUI.Deselect" alt="" coords="274,267,465,308"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a4794002d73a4ce35c5ec38d95eded252" title="UnityEditor.Timeline.Timeline\lMarkerGUI.Deselect" alt="" coords="274,332,465,373"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a30570ed27868bc269970392f2e4d44bd" title="UnityEditor.Timeline.Timeline\lTreeView.ItemDoubleClickedCallback" alt="" coords="251,397,488,439"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_marker_modifier.html#aaa241f58a8474d806b23461a8769a83b" title="UnityEditor.Timeline.Marker\lModifier.DeleteMarker" alt="" coords="278,463,461,504"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectLeftItem" alt="" coords="271,528,468,569"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectRightItem" alt="" coords="271,593,468,635"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectUpTrack" alt="" coords="271,724,468,765"/><area shape="rect" id="node23" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectDownTrack" alt="" coords="271,821,468,863"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#a44234bc8db4f94573c8da585b609ebed" title="UnityEditor.Timeline.Timeline\lWindow.ValidateSelection" alt="" coords="274,887,465,928"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a5cc50e70dd9bca99feed69998f802b7d" title="UnityEditor.Timeline.Timeline\lTrackBaseGUI.DrawLockButton" alt="" coords="539,5,745,47"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#acc755444644d6c6854e8a0e968d24391" title="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.CycleMarkers" alt="" coords="537,332,747,373"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#aecb8a0d92c548adb53b2ccc269fac49b" title="UnityEditor.Timeline.Select\lAndMoveItem.MouseUp" alt="" coords="795,332,973,373"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_marker_item.html#ae331b0fa6eaf2ebc760cff69f703e4e2" title="UnityEditor.Timeline.Marker\lItem.Delete" alt="" coords="551,397,733,439"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_select_left_clip.html#ad5a3ca2a499c750c66e233e120adc02e" title="UnityEditor.Timeline.Select\lLeftClip.Execute" alt="" coords="553,463,731,504"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_multiselect_left_clip.html#a8cf3e30a79f0a37ed0544e23c7f7de27" title="UnityEditor.Timeline.Multiselect\lLeftClip.Execute" alt="" coords="539,528,745,569"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_select_right_clip.html#aca9a4a2b14c5adacbbdbc1ec3771003e" title="UnityEditor.Timeline.Select\lRightClip.Execute" alt="" coords="553,593,731,635"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_multiselect_right_clip.html#aee312ad538ae499e74c11afc02e3d8e7" title="UnityEditor.Timeline.Multiselect\lRightClip.Execute" alt="" coords="539,659,745,700"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_select_up_track.html#a724ac87a5f5ef6cc409e20a47df4c47d" title="UnityEditor.Timeline.Select\lUpTrack.Execute" alt="" coords="553,724,731,765"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_multiselect_up_track.html#a1aa3d68aca2d6691e9efb54daeca40d3" title="UnityEditor.Timeline.Multiselect\lUpTrack.Execute" alt="" coords="539,789,745,831"/><area shape="rect" id="node24" href="class_unity_editor_1_1_timeline_1_1_select_down_track.html#a6905e4bbf4d1fb1056170a10f5733f7b" title="UnityEditor.Timeline.Select\lDownTrack.Execute" alt="" coords="553,855,731,896"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_multiselect_down_track.html#a0e2a9623ddf17be4393d17a9b5d54223" title="UnityEditor.Timeline.Multiselect\lDownTrack.Execute" alt="" coords="539,920,745,961"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac284f37b72edf6611540ef1c36e7d08c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a>&#160;</td>
+          <td class="paramname"><em>marker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00213">213</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a0ca6709f33a8ef877c56f4371bcae1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_t_m_pro___font_asset_creator_window_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00222">222</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a207289a961bdb74389487b8233e22178"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00227">227</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa068bcf5a98ff6e14f08fbe8d28129c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.Remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00232">232</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1299fa4b252cbe37b2703d0afc3804f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.RemoveAllClips </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00254">254</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4ae0d8cfbca3ef6705e5b46072bbcdb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.RemoveTimelineSelection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00249">249</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_ad4ae0d8cfbca3ef6705e5b46072bbcdb_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_ad4ae0d8cfbca3ef6705e5b46072bbcdb_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_ad4ae0d8cfbca3ef6705e5b46072bbcdb_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_ad4ae0d8cfbca3ef6705e5b46072bbcdb_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_paste_action.html#a4c1bc722be5590f34577512a80894973" title="UnityEditor.Timeline.Paste\lAction.PasteItems" alt="" coords="287,5,463,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_paste_action.html#a543f4b3f8820654d8bfebc93e97e2ddf" title="UnityEditor.Timeline.Paste\lAction.PasteTracks" alt="" coords="287,71,463,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_duplicate_tracks.html#af6adde4d5812ba21dd7dcbac946b663f" title="UnityEditor.Timeline.Duplicate\lTracks.Execute" alt="" coords="277,136,473,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_move_item_handler.html#aaded91156beefb815e1ae9cfb0da9acb" title="UnityEditor.Timeline.Move\lItemHandler.Cancel" alt="" coords="289,201,461,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#afb2f81115046a8e30b26a860173156ee" title="UnityEditor.Timeline.Timeline\lWindow.OnDisable" alt="" coords="280,267,471,308"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3460020a973e3a6c241f84d75cf0ecc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a>&gt; UnityEditor.Timeline.SelectionManager.SelectedClipGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00264">264</a> 行定义.</p>
+
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_cgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_cgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_cgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_cgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_item_to_item_gui.html#abc05dbed21566341545f7f8d548c56bf" title="UnityEditor.Timeline.Item\lToItemGui.GetGuiForClip" alt="" coords="249,5,416,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_ac3460020a973e3a6c241f84d75cf0ecc_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html#a129bc2cda89a2bd8ca9a597c94fee63f" title="UnityEditor.Timeline.Frame\lSelectedAction.Execute" alt="" coords="285,5,463,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#a7d002fce7eb48a255c5de26e2d6bbec4" title="UnityEditor.Timeline.Inline\lCurveEditor.DrawCurveEditorsFor\lClipsOnTrack" alt="" coords="267,71,481,127"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#a1e57dfb5c5de875a0735186acf9d7580" title="UnityEditor.Timeline.Inline\lCurveEditor.ShouldShowClipCurves" alt="" coords="261,152,487,193"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483" title="UnityEditor.Timeline.Track\lShortcutManipulator.ExecuteCommand" alt="" coords="249,217,499,259"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ba16cd0f29030674819bbb430e24efc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&gt; UnityEditor.Timeline.SelectionManager.SelectedClips </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00274">274</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a7ba16cd0f29030674819bbb430e24efc_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a7ba16cd0f29030674819bbb430e24efc_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a7ba16cd0f29030674819bbb430e24efc_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a7ba16cd0f29030674819bbb430e24efc_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_copy_action.html#a958cb19c1eedb0920938771aa539f21f" title="UnityEditor.Timeline.Copy\lAction.Execute" alt="" coords="277,5,449,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_match_content.html#a737ef5189f1e28a6ee2149dff690bd5d" title="UnityEditor.Timeline.Match\lContent.GetDisplayState" alt="" coords="273,71,452,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_match_content.html#a75e4efac464b11d6eecd595f8150afe4" title="UnityEditor.Timeline.Match\lContent.Execute" alt="" coords="273,136,452,177"/><area shape="rect" id="node5" href="class_unity_engine_1_1_timeline_1_1_audio_clip_properties_drawer.html#a939a265378824d1383b4a750e0779a6e" title="UnityEngine.Timeline.Audio\lClipPropertiesDrawer.OnGUI" alt="" coords="269,201,456,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_item_action_shortcut_manipulator.html#abaf577d380179cb9e3104eb48362aca0" title="UnityEditor.Timeline.Item\lActionShortcutManipulator.Execute\lCommand" alt="" coords="249,267,476,323"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_context_menu_manipulator.html#a6849fe489abf6859475f7170988174d5" title="UnityEditor.Timeline.Context\lMenuManipulator.ContextClick" alt="" coords="263,348,462,389"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adc664cc50f5087f165496359ebbc435e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;T&gt; UnityEditor.Timeline.SelectionManager.SelectedItemOfType&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00289">289</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="abce25cf985bb918f83215c038a29abce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&gt; UnityEditor.Timeline.SelectionManager.SelectedItems </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00309">309</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_abce25cf985bb918f83215c038a29abce_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_abce25cf985bb918f83215c038a29abce_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_abce25cf985bb918f83215c038a29abce_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_abce25cf985bb918f83215c038a29abce_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_delete_action.html#a72c643d396d56722ac2c493064849a56" title="UnityEditor.Timeline.Delete\lAction.CanDelete" alt="" coords="281,5,460,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_delete_action.html#a18fd59d476822d70ddf7295ed159caab" title="UnityEditor.Timeline.Delete\lAction.Execute" alt="" coords="281,71,460,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_time_field_drawer.html#ad9d60864cd18d7974b0fc45e6bc49e08" title="UnityEditor.Timeline.Time\lFieldDrawer.TimeFieldWithEditMode" alt="" coords="255,136,487,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler.html#a488ae2c955ee1a3532960c0ba2598b13" title="UnityEditor.Timeline.Edit\lModeInputHandler.ProcessInputAction" alt="" coords="249,201,492,243"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_item_selection.html#aea8371f25c13e03f6a14329a012e7813" title="UnityEditor.Timeline.Item\lSelection.RangeSelectItems" alt="" coords="277,267,464,308"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a584bdd0d566071b66460cdbf2c518833" title="UnityEditor.Timeline.Select\lAndMoveItem.MouseDrag" alt="" coords="281,332,460,373"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a30570ed27868bc269970392f2e4d44bd" title="UnityEditor.Timeline.Timeline\lTreeView.ItemDoubleClickedCallback" alt="" coords="252,397,489,439"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a1c0da3c94d0aaf73b5cf0a57fe9a3477" title="UnityEditor.Timeline.Keyboard\lNavigation.GetVisibleSelectedItems" alt="" coords="257,463,485,504"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectLeftItem" alt="" coords="272,528,469,569"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectRightItem" alt="" coords="272,593,469,635"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae2e24cf8e9a8174a365c5f30e8686c28" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectUpItem" alt="" coords="272,691,469,732"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aeaa51c167c6ba238bd6b0e28681fa67e" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectDownItem" alt="" coords="272,772,469,813"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_toggle_clip_track_area.html#a5958848662cfb27f682b1464e930538c" title="UnityEditor.Timeline.Toggle\lClipTrackArea.Execute" alt="" coords="553,397,733,439"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_select_left_clip.html#ad5a3ca2a499c750c66e233e120adc02e" title="UnityEditor.Timeline.Select\lLeftClip.Execute" alt="" coords="553,463,732,504"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_multiselect_left_clip.html#a8cf3e30a79f0a37ed0544e23c7f7de27" title="UnityEditor.Timeline.Multiselect\lLeftClip.Execute" alt="" coords="540,528,745,569"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_select_right_clip.html#aca9a4a2b14c5adacbbdbc1ec3771003e" title="UnityEditor.Timeline.Select\lRightClip.Execute" alt="" coords="553,593,732,635"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_multiselect_right_clip.html#aee312ad538ae499e74c11afc02e3d8e7" title="UnityEditor.Timeline.Multiselect\lRightClip.Execute" alt="" coords="540,659,745,700"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_select_up_clip.html#ade315349961b31264fa8e77b5a05d132" title="UnityEditor.Timeline.Select\lUpClip.Execute" alt="" coords="553,724,732,765"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_select_down_clip.html#a85a5d65f3af175f3c976e7976260773c" title="UnityEditor.Timeline.Select\lDownClip.Execute" alt="" coords="553,789,732,831"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9e501bc39110ef71216b27cd4895c6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a>&gt; UnityEditor.Timeline.SelectionManager.SelectedMarkers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00279">279</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_ac9e501bc39110ef71216b27cd4895c6c_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_ac9e501bc39110ef71216b27cd4895c6c_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_ac9e501bc39110ef71216b27cd4895c6c_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_ac9e501bc39110ef71216b27cd4895c6c_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_copy_action.html#a958cb19c1eedb0920938771aa539f21f" title="UnityEditor.Timeline.Copy\lAction.Execute" alt="" coords="283,5,455,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_frame_selected_action.html#a129bc2cda89a2bd8ca9a597c94fee63f" title="UnityEditor.Timeline.Frame\lSelectedAction.Execute" alt="" coords="280,71,459,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_window_state.html#ab8cdb3fb34e831a569a08fbb34b5c4f5" title="UnityEditor.Timeline.Window\lState.UnSelectMarkerOnHeaderTrack" alt="" coords="249,136,489,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#aa0132c4586d05ffdd1de517ec54ed8bb" title="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.CanCycleMarkers" alt="" coords="253,201,485,243"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_item_action_shortcut_manipulator.html#abaf577d380179cb9e3104eb48362aca0" title="UnityEditor.Timeline.Item\lActionShortcutManipulator.Execute\lCommand" alt="" coords="256,267,483,323"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_context_menu_manipulator.html#a6849fe489abf6859475f7170988174d5" title="UnityEditor.Timeline.Context\lMenuManipulator.ContextClick" alt="" coords="270,348,469,389"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_select_and_move_item.html#a82eb0e69f57810c7235d43c242d53b72" title="UnityEditor.Timeline.Select\lAndMoveItem.HandleMarkerCycle" alt="" coords="537,201,755,243"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a82d710467590a93afb99d7a53d3987b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html">TimelineTrackBaseGUI</a>&gt; UnityEditor.Timeline.SelectionManager.SelectedTrackGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00298">298</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a82d710467590a93afb99d7a53d3987b1_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a82d710467590a93afb99d7a53d3987b1_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a82d710467590a93afb99d7a53d3987b1_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a82d710467590a93afb99d7a53d3987b1_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#aacd6b5e235d2c5e8537e76e3ccfb8817" title="UnityEditor.Timeline.Inline\lCurveEditor.ShouldShowTrackCurves" alt="" coords="249,5,484,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_dragging.html#a700b56cf3ab296134e03ecb65fe52548" title="UnityEditor.TimelineDragging.\lStartDrag" alt="" coords="270,71,463,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a89e4fc410530a98ab3df9747fd14a5de" title="UnityEditor.Timeline.Timeline\lTreeView.BeginRowGUI" alt="" coords="271,136,462,177"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa50fb86f86161b0554c1069295c1020d" title="UnityEditor.Timeline.Keyboard\lNavigation.FrameTrackHeader" alt="" coords="268,201,465,243"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f7cb4a9d2f8441e66550d00de5ae731"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&gt; UnityEditor.Timeline.SelectionManager.SelectedTracks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00284">284</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a3f7cb4a9d2f8441e66550d00de5ae731_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a3f7cb4a9d2f8441e66550d00de5ae731_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a3f7cb4a9d2f8441e66550d00de5ae731_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a3f7cb4a9d2f8441e66550d00de5ae731_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_copy_action.html#a958cb19c1eedb0920938771aa539f21f" title="UnityEditor.Timeline.Copy\lAction.Execute" alt="" coords="288,5,460,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_paste_action.html#af7d601ac07a44f0f46da4116a09cb537" title="UnityEditor.Timeline.Paste\lAction.CanPasteItems" alt="" coords="286,71,462,112"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_paste_action.html#acc674255fcf28e84cc3e585645d61e38" title="UnityEditor.Timeline.Paste\lAction.FindSuitableParentForSingle\lTrackPasteWithoutMouse" alt="" coords="260,137,488,193"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_delete_action.html#a72c643d396d56722ac2c493064849a56" title="UnityEditor.Timeline.Delete\lAction.CanDelete" alt="" coords="285,217,463,259"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_delete_action.html#a18fd59d476822d70ddf7295ed159caab" title="UnityEditor.Timeline.Delete\lAction.Execute" alt="" coords="285,283,463,324"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_toggle_clip_track_area.html#a5958848662cfb27f682b1464e930538c" title="UnityEditor.Timeline.Toggle\lClipTrackArea.Execute" alt="" coords="561,341,741,383"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483" title="UnityEditor.Timeline.Track\lShortcutManipulator.ExecuteCommand" alt="" coords="249,400,499,441"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a44602f9f2b76e50f220dba033a078840" title="UnityEditor.Timeline.Timeline\lGroupGUI.DrawTrackButtons" alt="" coords="279,465,469,507"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a60b2907709dab37cdf1ac44431a6ff9e" title="UnityEditor.Timeline.Timeline\lTrackGUI.DrawTrackDropDownMenu" alt="" coords="258,531,490,572"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a12ccfb4c11bdef8657fee9d5f27c7049" title="UnityEditor.Timeline.Timeline\lTreeView.ContextClickItemCallback" alt="" coords="260,596,488,637"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a99c188eeafd7f693af0b3050e1e61497" title="UnityEditor.Timeline.Keyboard\lNavigation.TrackHeadActive" alt="" coords="275,661,473,703"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa8458190017b0c60b6d70f8a999296d9" title="UnityEditor.Timeline.Keyboard\lNavigation.CollapseGroup" alt="" coords="275,796,473,837"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a4fa536a37eaf2544d51b14311eafb048" title="UnityEditor.Timeline.Keyboard\lNavigation.UnCollapseGroup" alt="" coords="275,864,473,905"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectUpTrack" alt="" coords="275,929,473,971"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectDownTrack" alt="" coords="275,727,473,768"/><area shape="rect" id="node27" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html#aba5b3d2a35fa457dfab693f348e27c42" title="UnityEditor.Timeline.Timeline\lWindow.AddButtonGUI" alt="" coords="279,995,469,1036"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_select_down_track.html#a6905e4bbf4d1fb1056170a10f5733f7b" title="UnityEditor.Timeline.Select\lDownTrack.Execute" alt="" coords="561,668,740,709"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a8d737ec7616d5e41b11400f57647510f" title="UnityEditor.Timeline.Shortcuts.\lTimeline.SelectLeft" alt="" coords="549,603,752,644"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a72b33e32448bae01486a7582c1442924" title="UnityEditor.Timeline.Shortcuts.\lTimeline.SelectRight" alt="" coords="549,407,752,448"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6f920ab91c4ed16790ecbeeaa3bc28dc" title="UnityEditor.Timeline.Shortcuts.\lTimeline.SelectUp" alt="" coords="549,472,752,513"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac10bf5cad2074d8a0e1f84097c8df839" title="UnityEditor.Timeline.Shortcuts.\lTimeline.SelectDown" alt="" coords="549,537,752,579"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_collapse_group.html#aba41bd0738b6ba18da61a83f89c85dc7" title="UnityEditor.Timeline.Collapse\lGroup.Execute" alt="" coords="555,799,747,840"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_un_collapse_group.html#a9a6ad4e1995f39a464b6440a1d680069" title="UnityEditor.Timeline.UnCollapse\lGroup.Execute" alt="" coords="547,864,755,905"/><area shape="rect" id="node23" href="class_unity_editor_1_1_timeline_1_1_select_up_track.html#a724ac87a5f5ef6cc409e20a47df4c47d" title="UnityEditor.Timeline.Select\lUpTrack.Execute" alt="" coords="561,995,740,1036"/><area shape="rect" id="node24" href="class_unity_editor_1_1_timeline_1_1_multiselect_up_track.html#a1aa3d68aca2d6691e9efb54daeca40d3" title="UnityEditor.Timeline.Multiselect\lUpTrack.Execute" alt="" coords="548,929,753,971"/><area shape="rect" id="node26" href="class_unity_editor_1_1_timeline_1_1_multiselect_down_track.html#a0e2a9623ddf17be4393d17a9b5d54223" title="UnityEditor.Timeline.Multiselect\lDownTrack.Execute" alt="" coords="548,733,753,775"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acbe029a7828402d0ed67be8058febd15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.SelectInlineCurveEditor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a>&#160;</td>
+          <td class="paramname"><em>selection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00121">121</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49a2bb9ea56f328e837b5326d11e8148"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.SelectOnly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00086">86</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_a49a2bb9ea56f328e837b5326d11e8148_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_a49a2bb9ea56f328e837b5326d11e8148_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_a49a2bb9ea56f328e837b5326d11e8148_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_a49a2bb9ea56f328e837b5326d11e8148_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_toggle_clip_track_area.html#a5958848662cfb27f682b1464e930538c" title="UnityEditor.Timeline.Toggle\lClipTrackArea.Execute" alt="" coords="522,5,702,47"/><area shape="rect" id="node3" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa7ad1a269bc3557914d09f595ee88833" title="UnityEditor.Timeline.Keyboard\lNavigation.FocusFirstVisibleItem" alt="" coords="249,136,460,177"/><area shape="rect" id="node7" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aa8458190017b0c60b6d70f8a999296d9" title="UnityEditor.Timeline.Keyboard\lNavigation.CollapseGroup" alt="" coords="256,364,453,405"/><area shape="rect" id="node9" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae661d1fe6de708cb7fde5816613f77f4" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectLeftItem" alt="" coords="256,463,453,504"/><area shape="rect" id="node12" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a645472aa417bb1c7fae29140cec88ab9" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectRightItem" alt="" coords="256,528,453,569"/><area shape="rect" id="node15" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a4fa536a37eaf2544d51b14311eafb048" title="UnityEditor.Timeline.Keyboard\lNavigation.UnCollapseGroup" alt="" coords="256,627,453,668"/><area shape="rect" id="node17" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#a43455019dc0eed4ea9c914b3238a264e" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectUpTrack" alt="" coords="256,724,453,765"/><area shape="rect" id="node20" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae2e24cf8e9a8174a365c5f30e8686c28" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectUpItem" alt="" coords="256,805,453,847"/><area shape="rect" id="node22" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#ae448728d849eca9bc36d419ee69c5281" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectDownTrack" alt="" coords="256,267,453,308"/><area shape="rect" id="node24" href="class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html#aeaa51c167c6ba238bd6b0e28681fa67e" title="UnityEditor.Timeline.Keyboard\lNavigation.SelectDownItem" alt="" coords="256,903,453,944"/><area shape="rect" id="node4" href="class_unity_editor_1_1_timeline_1_1_select_down_track.html#a6905e4bbf4d1fb1056170a10f5733f7b" title="UnityEditor.Timeline.Select\lDownTrack.Execute" alt="" coords="523,201,701,243"/><area shape="rect" id="node5" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#a6f920ab91c4ed16790ecbeeaa3bc28dc" title="UnityEditor.Timeline.Shortcuts.\lTimeline.SelectUp" alt="" coords="511,136,713,177"/><area shape="rect" id="node6" href="class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html#ac10bf5cad2074d8a0e1f84097c8df839" title="UnityEditor.Timeline.Shortcuts.\lTimeline.SelectDown" alt="" coords="511,71,713,112"/><area shape="rect" id="node8" href="class_unity_editor_1_1_timeline_1_1_collapse_group.html#aba41bd0738b6ba18da61a83f89c85dc7" title="UnityEditor.Timeline.Collapse\lGroup.Execute" alt="" coords="516,332,708,373"/><area shape="rect" id="node10" href="class_unity_editor_1_1_timeline_1_1_select_left_clip.html#ad5a3ca2a499c750c66e233e120adc02e" title="UnityEditor.Timeline.Select\lLeftClip.Execute" alt="" coords="523,463,701,504"/><area shape="rect" id="node11" href="class_unity_editor_1_1_timeline_1_1_multiselect_left_clip.html#a8cf3e30a79f0a37ed0544e23c7f7de27" title="UnityEditor.Timeline.Multiselect\lLeftClip.Execute" alt="" coords="509,397,715,439"/><area shape="rect" id="node13" href="class_unity_editor_1_1_timeline_1_1_select_right_clip.html#aca9a4a2b14c5adacbbdbc1ec3771003e" title="UnityEditor.Timeline.Select\lRightClip.Execute" alt="" coords="523,593,701,635"/><area shape="rect" id="node14" href="class_unity_editor_1_1_timeline_1_1_multiselect_right_clip.html#aee312ad538ae499e74c11afc02e3d8e7" title="UnityEditor.Timeline.Multiselect\lRightClip.Execute" alt="" coords="509,528,715,569"/><area shape="rect" id="node16" href="class_unity_editor_1_1_timeline_1_1_un_collapse_group.html#a9a6ad4e1995f39a464b6440a1d680069" title="UnityEditor.Timeline.UnCollapse\lGroup.Execute" alt="" coords="508,659,716,700"/><area shape="rect" id="node18" href="class_unity_editor_1_1_timeline_1_1_select_up_track.html#a724ac87a5f5ef6cc409e20a47df4c47d" title="UnityEditor.Timeline.Select\lUpTrack.Execute" alt="" coords="523,789,701,831"/><area shape="rect" id="node19" href="class_unity_editor_1_1_timeline_1_1_multiselect_up_track.html#a1aa3d68aca2d6691e9efb54daeca40d3" title="UnityEditor.Timeline.Multiselect\lUpTrack.Execute" alt="" coords="509,724,715,765"/><area shape="rect" id="node21" href="class_unity_editor_1_1_timeline_1_1_select_up_clip.html#ade315349961b31264fa8e77b5a05d132" title="UnityEditor.Timeline.Select\lUpClip.Execute" alt="" coords="523,855,701,896"/><area shape="rect" id="node23" href="class_unity_editor_1_1_timeline_1_1_multiselect_down_track.html#a0e2a9623ddf17be4393d17a9b5d54223" title="UnityEditor.Timeline.Multiselect\lDownTrack.Execute" alt="" coords="509,267,715,308"/><area shape="rect" id="node25" href="class_unity_editor_1_1_timeline_1_1_select_down_clip.html#a85a5d65f3af175f3c976e7976260773c" title="UnityEditor.Timeline.Select\lDownClip.Execute" alt="" coords="523,920,701,961"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a21564c20d9f8161e3bb42098e471511c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.SelectOnly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>clip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00092">92</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4ffe35aef1747bcab1d71146448c450"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.SelectOnly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ab2f106b296dc1b6a0f6984d4ba1b26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.SelectOnly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00104">104</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca4a226b8f959da75b5e843fec9c65b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.SelectionManager.UnSelectTracks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00202">202</a> 行定义.</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_selection_manager_aca4a226b8f959da75b5e843fec9c65b3_icgraph.png" border="0" usemap="#class_unity_editor_1_1_timeline_1_1_selection_manager_aca4a226b8f959da75b5e843fec9c65b3_icgraph" alt=""/></div>
+<map name="class_unity_editor_1_1_timeline_1_1_selection_manager_aca4a226b8f959da75b5e843fec9c65b3_icgraph" id="class_unity_editor_1_1_timeline_1_1_selection_manager_aca4a226b8f959da75b5e843fec9c65b3_icgraph">
+<area shape="rect" id="node2" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a1d0c323d9d7698a6d3e1189c607887ff" title="UnityEditor.Timeline.Timeline\lTreeView.SelectionChangedCallback" alt="" coords="249,5,484,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acee2a751d8b305d84d507913aa88f258"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_clip_curve_editor_owner.html">IClipCurveEditorOwner</a> UnityEditor.Timeline.SelectionManager.currentInlineEditorCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在文件 <a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a> 第 <a class="el" href="_timeline_selection_8cs_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Library/PackageCache/com.unity.timeline@1.2.14/Editor/<a class="el" href="_timeline_selection_8cs_source.html">TimelineSelection.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:50 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

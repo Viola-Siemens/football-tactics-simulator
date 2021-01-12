@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Assets/MainJudge.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7ab79e34423b4813ae06b29f761e99f3.html">Assets</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MainJudge.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_main_judge_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.UI;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_main_judge.html">   31</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_main_judge.html">MainJudge</a> : MonoBehaviour {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_main_judge.html#aa2514639e33681209a3d39fa42d32021">   32</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_team.html">Team</a> <a class="code" href="class_main_judge.html#aa2514639e33681209a3d39fa42d32021">blueTeam</a>;       </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_main_judge.html#ae8142ff12c578a36464e1fa4c263ce97">   33</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_team.html">Team</a> <a class="code" href="class_main_judge.html#ae8142ff12c578a36464e1fa4c263ce97">redTeam</a>;        </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_main_judge.html#acf6d4ee28eb16f3af0d44e78ec060a3b">   34</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_ball.html">Ball</a> <a class="code" href="class_main_judge.html#acf6d4ee28eb16f3af0d44e78ec060a3b">ball</a>;           </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_main_judge.html#aa7dbac4b3787e7217fe435edac4a6329">   35</a></span>&#160;    <span class="keyword">public</span> Text <a class="code" href="class_main_judge.html#aa7dbac4b3787e7217fe435edac4a6329">redScoreText</a>;   </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_main_judge.html#a636f19fb1fb0548f0e251a49312668fc">   36</a></span>&#160;    <span class="keyword">public</span> Text <a class="code" href="class_main_judge.html#a636f19fb1fb0548f0e251a49312668fc">blueScoreText</a>;  </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_main_judge.html#a0a8d05c454841c592d2d9ecc79265e41">   37</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_timer.html">Timer</a> <a class="code" href="class_main_judge.html#a0a8d05c454841c592d2d9ecc79265e41">judgeTimer</a>;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_main_judge.html#acdd058b3e3e0d2cb98352d252178af4e">   39</a></span>&#160;    <span class="keyword">public</span> Button <a class="code" href="class_main_judge.html#acdd058b3e3e0d2cb98352d252178af4e">blueGoalButton</a>;   </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_main_judge.html#a021586c7d7d7f5a77fd4b51d3ba2b1bf">   40</a></span>&#160;    <span class="keyword">public</span> Button <a class="code" href="class_main_judge.html#a021586c7d7d7f5a77fd4b51d3ba2b1bf">redGoalButton</a>;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_main_judge.html#ac40cf0ed2db7815de95b748b0dfd0904">   42</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_main_judge.html#ac40cf0ed2db7815de95b748b0dfd0904">redScore</a> = 0;           </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_main_judge.html#a3f8df03803e065bd5c9f6806b8fa3906">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_main_judge.html#a3f8df03803e065bd5c9f6806b8fa3906">blueScore</a> = 0;          </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_main_judge.html#a72630d0aff948da2c698c96d8e87c5de">   49</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a72630d0aff948da2c698c96d8e87c5de">BlueThrowIn</a>() {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">float</span> BallXPosi = ball.transform.position.x;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (BallXPosi &gt; redTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            BallXPosi = redTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (BallXPosi &lt; blueTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            BallXPosi = blueTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            BallXPosi * 0.99f * Vector3.right + 6.0f * Vector3.up +</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="class_border.html">Border</a>.<a class="code" href="class_border.html#a1879bb1aeb68e15edfe0b97d2c9fc7c9">BorderZ</a> * Mathf.Sign(ball.transform.position.z) * Vector3.forward,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in blueTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_main_judge.html#a95931ce72d2ac3280164c32dab8099c0">   95</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a95931ce72d2ac3280164c32dab8099c0">RedThrowIn</a>() {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">float</span> BallXPosi = ball.transform.position.x;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (BallXPosi &gt; redTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            BallXPosi = redTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> (BallXPosi &lt; blueTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            BallXPosi = blueTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            BallXPosi * 0.99f * Vector3.right + 6.0f * Vector3.up +</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <a class="code" href="class_border.html">Border</a>.<a class="code" href="class_border.html#a1879bb1aeb68e15edfe0b97d2c9fc7c9">BorderZ</a> * Mathf.Sign(ball.transform.position.z) * Vector3.forward,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in redTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_main_judge.html#a4191fb2f87ae7de3af579d92842936c6">  141</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a4191fb2f87ae7de3af579d92842936c6">BlueFreeKick</a>() {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            ball.transform.position,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in blueTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="class_main_judge.html#a93b2f85be11c418ac266d4dc4613b1ab">  176</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a93b2f85be11c418ac266d4dc4613b1ab">RedFreeKick</a>() {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            ball.transform.position,</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        );</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in redTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="class_main_judge.html#a85e5810d94fa45ed11fd1b439e117920">  211</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a85e5810d94fa45ed11fd1b439e117920">BlueGoalKick</a>() {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            blueTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a> * 0.88f * Vector3.right + 6.0f * Vector3.up + Random.Range(-100.0f, 100.0f) * Vector3.forward,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        );</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = blueTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>[blueTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>.Length - 1].<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="class_main_judge.html#a51fb4e016794c3b5c9a5105e91d5d855">  232</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a51fb4e016794c3b5c9a5105e91d5d855">RedGoalKick</a>() {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            redTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a> * 0.88f * Vector3.right + 6.0f * Vector3.up + Random.Range(-100.0f, 100.0f) * Vector3.forward,</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = redTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>[redTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>.Length - 1].<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="class_main_judge.html#a2bbfbb7e7eaed388d61220292fee1642">  253</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a2bbfbb7e7eaed388d61220292fee1642">BlueCornerKick</a>() {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            redTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a> * 0.995f * Vector3.right + 6.0f * Vector3.up +</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <a class="code" href="class_border.html">Border</a>.<a class="code" href="class_border.html#a1879bb1aeb68e15edfe0b97d2c9fc7c9">BorderZ</a> * Mathf.Sign(ball.transform.position.z) * Vector3.forward,</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        );</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in blueTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="class_main_judge.html#ac272e78742915788adb97d2db4f3a50d">  289</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#ac272e78742915788adb97d2db4f3a50d">RedCornerKick</a>() {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            blueTeam.<a class="code" href="class_team.html#adadadffd26ac1351598c4c6d455bd502">GoalX</a> * 0.995f * Vector3.right + 6.0f * Vector3.up +</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <a class="code" href="class_border.html">Border</a>.<a class="code" href="class_border.html#a1879bb1aeb68e15edfe0b97d2c9fc7c9">BorderZ</a> * Mathf.Sign(ball.transform.position.z) * Vector3.forward,</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        );</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in redTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="class_main_judge.html#a8d22dfb145c59b9740f61e0b4d098b6d">  325</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a8d22dfb145c59b9740f61e0b4d098b6d">BluePenaltyKick</a>() {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            blueTeam.<a class="code" href="class_team.html#affc8c576d10117f503a535f77a4cde1f">AdvanceDirect</a>.x * <a class="code" href="class_border.html">Border</a>.<a class="code" href="class_border.html#ad09fb47e107afebb913e66da7572a028">PenaltyX</a> * Vector3.right + 6.0f * Vector3.up,</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        );</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in blueTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="class_main_judge.html#a82e400c0eb2f966c96eacef5ed2011b0">  360</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a82e400c0eb2f966c96eacef5ed2011b0">RedPenaltyKick</a>() {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <a class="code" href="class_player.html">Player</a> hander = null;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordtype">float</span> handerBallDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            redTeam.<a class="code" href="class_team.html#affc8c576d10117f503a535f77a4cde1f">AdvanceDirect</a>.x * <a class="code" href="class_border.html">Border</a>.<a class="code" href="class_border.html#ad09fb47e107afebb913e66da7572a028">PenaltyX</a> * Vector3.right + 6.0f * Vector3.up,</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        );</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="class_team.html">Team</a>.<a class="code" href="class_team_1_1_member.html">Member</a> member in redTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>) {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordtype">float</span> curBallDist = (member.player.transform.position - ball.transform.position).magnitude;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <span class="keywordflow">if</span> (handerBallDist &gt; curBallDist) {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                hander = member.player;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                handerBallDist = curBallDist;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = hander;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno"><a class="line" href="class_main_judge.html#af0e2a9c622b9991bba966a6d468fd06b">  395</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#af0e2a9c622b9991bba966a6d468fd06b">Pause</a>() {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="class_main_judge.html#af0184904131d885785118506cce10452">  409</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#af0184904131d885785118506cce10452">End</a>() {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <a class="code" href="class_main_judge.html#af0e2a9c622b9991bba966a6d468fd06b">Pause</a>();</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        judgeTimer.<a class="code" href="class_timer.html#afbc48a54721f552f5625e914a76e96d3">End</a>();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    }</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="class_main_judge.html#a4459f3bc52fc183f0bc48e77ba742495">  420</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a4459f3bc52fc183f0bc48e77ba742495">PlaceBall</a>() {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        ball.transform.SetPositionAndRotation(</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            transform.position.x * Vector3.right + 6.0f * Vector3.up + transform.position.z * Vector3.forward,</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            Quaternion.identity</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        );</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00431"></a><span class="lineno"><a class="line" href="class_main_judge.html#ad866307def711a9562b072945640625b">  431</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#ad866307def711a9562b072945640625b">Go</a>() {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        ball.<a class="code" href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">GoalReset</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        ball.<a class="code" href="class_ball.html#a94a8fb7b593a419523a48d198214e323">hasGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordtype">float</span> maxTeamGetBallTime = Mathf.Max(redTeam.<a class="code" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">getBallTime</a>, blueTeam.<a class="code" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">getBallTime</a>);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        <span class="keywordflow">if</span>(redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> != null) {</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            redTeam.<a class="code" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">getBallTime</a> = (maxTeamGetBallTime + Time.time) / 2.0f;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a>.<a class="code" href="class_player.html#a4e6ae0c3477f80ed0dc3ebbbf11945ec">getBallTime</a> = Time.time;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">if</span> (blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> != null) {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            blueTeam.<a class="code" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">getBallTime</a> = (maxTeamGetBallTime + Time.time) / 2.0f;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a>.<a class="code" href="class_player.html#a4e6ae0c3477f80ed0dc3ebbbf11945ec">getBallTime</a> = Time.time;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        }</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    }</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
+<div class="line"><a name="l00455"></a><span class="lineno"><a class="line" href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d">  455</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d">resetPlayers</a>() {</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        blueTeam.<a class="code" href="class_team.html#acde2e842fb6befd221af0f35fc10f4b5">heart</a>.x = -500.0f;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        blueTeam.<a class="code" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">getBallTime</a> = Time.time;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        redTeam.<a class="code" href="class_team.html#acde2e842fb6befd221af0f35fc10f4b5">heart</a>.x = 500.0f;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        redTeam.<a class="code" href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">getBallTime</a> = Time.time;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        ball.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.velocity = Vector3.zero;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.angularVelocity = Vector3.zero;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        ball.<a class="code" href="class_ball.html#a5f57adca854d97c66f9029d64974480d">isGo</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        ball.<a class="code" href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">rig</a>.isKinematic = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        ball.<a class="code" href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">GoalReset</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+<div class="line"><a name="l00477"></a><span class="lineno"><a class="line" href="class_main_judge.html#a7c62ed59d2554d6350737a69b4eb162b">  477</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a7c62ed59d2554d6350737a69b4eb162b">BlueGoal</a>() {</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        blueScore += 1;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        blueScoreText.text = blueScore.ToString();</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        <a class="code" href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d">resetPlayers</a>();</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        blueGoalButton.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = redTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>[0].<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    }</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;</div>
+<div class="line"><a name="l00493"></a><span class="lineno"><a class="line" href="class_main_judge.html#a5bf747c0424d733381346bbfcd92af06">  493</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_main_judge.html#a5bf747c0424d733381346bbfcd92af06">RedGoal</a>() {</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        redScore += 1;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        redScoreText.text = redScore.ToString();</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <a class="code" href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d">resetPlayers</a>();</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        redGoalButton.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        redTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = null;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        blueTeam.<a class="code" href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">BallHander</a> = blueTeam.<a class="code" href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">members</a>[0].<a class="code" href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">player</a>;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;}</div>
+<div class="ttc" id="class_main_judge_html_a85e5810d94fa45ed11fd1b439e117920"><div class="ttname"><a href="class_main_judge.html#a85e5810d94fa45ed11fd1b439e117920">MainJudge.BlueGoalKick</a></div><div class="ttdeci">void BlueGoalKick()</div><div class="ttdoc">蓝队球门球 若红方球员将球碰出蓝方底线外，或红队间接任意球、界外球直接发入蓝方门线以内，应判罚由蓝队球...</div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00211">MainJudge.cs:211</a></div></div>
+<div class="ttc" id="class_main_judge_html_a2bbfbb7e7eaed388d61220292fee1642"><div class="ttname"><a href="class_main_judge.html#a2bbfbb7e7eaed388d61220292fee1642">MainJudge.BlueCornerKick</a></div><div class="ttdeci">void BlueCornerKick()</div><div class="ttdoc">蓝队角球 若红方球员将球碰出红方底线外，或红队间接任意球、界外球直接发入红方门线以内，应判罚蓝队角球开...</div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00253">MainJudge.cs:253</a></div></div>
+<div class="ttc" id="class_team_html_acde2e842fb6befd221af0f35fc10f4b5"><div class="ttname"><a href="class_team.html#acde2e842fb6befd221af0f35fc10f4b5">Team.heart</a></div><div class="ttdeci">Vector3 heart</div><div class="ttdoc">重心（后防线的中点） </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00135">Team.cs:135</a></div></div>
+<div class="ttc" id="class_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">计时器类 </div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cs_source.html#l00016">Timer.cs:16</a></div></div>
+<div class="ttc" id="class_team_html"><div class="ttname"><a href="class_team.html">Team</a></div><div class="ttdoc">球队类 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00122">Team.cs:122</a></div></div>
+<div class="ttc" id="class_main_judge_html_aa2514639e33681209a3d39fa42d32021"><div class="ttname"><a href="class_main_judge.html#aa2514639e33681209a3d39fa42d32021">MainJudge.blueTeam</a></div><div class="ttdeci">Team blueTeam</div><div class="ttdoc">蓝队引用 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00032">MainJudge.cs:32</a></div></div>
+<div class="ttc" id="class_main_judge_html_ac40cf0ed2db7815de95b748b0dfd0904"><div class="ttname"><a href="class_main_judge.html#ac40cf0ed2db7815de95b748b0dfd0904">MainJudge.redScore</a></div><div class="ttdeci">int redScore</div><div class="ttdoc">红队得分 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00042">MainJudge.cs:42</a></div></div>
+<div class="ttc" id="class_main_judge_html_acf6d4ee28eb16f3af0d44e78ec060a3b"><div class="ttname"><a href="class_main_judge.html#acf6d4ee28eb16f3af0d44e78ec060a3b">MainJudge.ball</a></div><div class="ttdeci">Ball ball</div><div class="ttdoc">球引用 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00034">MainJudge.cs:34</a></div></div>
+<div class="ttc" id="class_main_judge_html_a636f19fb1fb0548f0e251a49312668fc"><div class="ttname"><a href="class_main_judge.html#a636f19fb1fb0548f0e251a49312668fc">MainJudge.blueScoreText</a></div><div class="ttdeci">Text blueScoreText</div><div class="ttdoc">蓝队得分板 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00036">MainJudge.cs:36</a></div></div>
+<div class="ttc" id="class_ball_html"><div class="ttname"><a href="class_ball.html">Ball</a></div><div class="ttdoc">足球信息与控制类 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00014">Ball.cs:14</a></div></div>
+<div class="ttc" id="class_main_judge_html_a5bf747c0424d733381346bbfcd92af06"><div class="ttname"><a href="class_main_judge.html#a5bf747c0424d733381346bbfcd92af06">MainJudge.RedGoal</a></div><div class="ttdeci">void RedGoal()</div><div class="ttdoc">红队进球有效 足球进入蓝队门线以内后，裁判可判定红队进球有效。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00493">MainJudge.cs:493</a></div></div>
+<div class="ttc" id="class_main_judge_html"><div class="ttname"><a href="class_main_judge.html">MainJudge</a></div><div class="ttdoc">主裁判行为类（需手动操控） </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00031">MainJudge.cs:31</a></div></div>
+<div class="ttc" id="class_ball_html_a94a8fb7b593a419523a48d198214e323"><div class="ttname"><a href="class_ball.html#a94a8fb7b593a419523a48d198214e323">Ball.hasGo</a></div><div class="ttdeci">bool hasGo</div><div class="ttdoc">已经发球 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00031">Ball.cs:31</a></div></div>
+<div class="ttc" id="class_team_html_aeb51074e9fe15ef9a19f3b9379209d30"><div class="ttname"><a href="class_team.html#aeb51074e9fe15ef9a19f3b9379209d30">Team.BallHander</a></div><div class="ttdeci">Player BallHander</div><div class="ttdoc">球权持有者 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00140">Team.cs:140</a></div></div>
+<div class="ttc" id="class_main_judge_html_a72630d0aff948da2c698c96d8e87c5de"><div class="ttname"><a href="class_main_judge.html#a72630d0aff948da2c698c96d8e87c5de">MainJudge.BlueThrowIn</a></div><div class="ttdeci">void BlueThrowIn()</div><div class="ttdoc">蓝队界外球 若红方球员将球碰出边线以外，应判罚由蓝队球员在出界位置手抛球掷入界内。 ...</div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00049">MainJudge.cs:49</a></div></div>
+<div class="ttc" id="class_main_judge_html_aa7dbac4b3787e7217fe435edac4a6329"><div class="ttname"><a href="class_main_judge.html#aa7dbac4b3787e7217fe435edac4a6329">MainJudge.redScoreText</a></div><div class="ttdeci">Text redScoreText</div><div class="ttdoc">红队得分板 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00035">MainJudge.cs:35</a></div></div>
+<div class="ttc" id="class_main_judge_html_a95931ce72d2ac3280164c32dab8099c0"><div class="ttname"><a href="class_main_judge.html#a95931ce72d2ac3280164c32dab8099c0">MainJudge.RedThrowIn</a></div><div class="ttdeci">void RedThrowIn()</div><div class="ttdoc">红队界外球 若蓝方球员将球碰出边线以外，应判罚由红队球员在出界位置手抛球掷入界内。 ...</div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00095">MainJudge.cs:95</a></div></div>
+<div class="ttc" id="class_border_html_ad09fb47e107afebb913e66da7572a028"><div class="ttname"><a href="class_border.html#ad09fb47e107afebb913e66da7572a028">Border.PenaltyX</a></div><div class="ttdeci">static readonly float PenaltyX</div><div class="ttdoc">点球点X坐标的绝对值 </div><div class="ttdef"><b>Definition:</b> <a href="_border_8cs_source.html#l00014">Border.cs:14</a></div></div>
+<div class="ttc" id="class_border_html_a1879bb1aeb68e15edfe0b97d2c9fc7c9"><div class="ttname"><a href="class_border.html#a1879bb1aeb68e15edfe0b97d2c9fc7c9">Border.BorderZ</a></div><div class="ttdeci">static readonly float BorderZ</div><div class="ttdoc">边线Z坐标的绝对值 </div><div class="ttdef"><b>Definition:</b> <a href="_border_8cs_source.html#l00013">Border.cs:13</a></div></div>
+<div class="ttc" id="class_main_judge_html_ac272e78742915788adb97d2db4f3a50d"><div class="ttname"><a href="class_main_judge.html#ac272e78742915788adb97d2db4f3a50d">MainJudge.RedCornerKick</a></div><div class="ttdeci">void RedCornerKick()</div><div class="ttdoc">红队角球 若蓝方球员将球碰出蓝方底线外，或蓝队间接任意球、界外球直接发入蓝方门线以内，应判罚红队角球开...</div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00289">MainJudge.cs:289</a></div></div>
+<div class="ttc" id="class_team_html_a9e0dd06d3957ce20d1688922b570ad81"><div class="ttname"><a href="class_team.html#a9e0dd06d3957ce20d1688922b570ad81">Team.getBallTime</a></div><div class="ttdeci">float getBallTime</div><div class="ttdoc">最近一次取得球权的时间 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00141">Team.cs:141</a></div></div>
+<div class="ttc" id="class_team_1_1_member_html_ab926adfc14482d5f8f1246360cdd9c7b"><div class="ttname"><a href="class_team_1_1_member.html#ab926adfc14482d5f8f1246360cdd9c7b">Team.Member.player</a></div><div class="ttdeci">Player player</div><div class="ttdoc">球员 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00147">Team.cs:147</a></div></div>
+<div class="ttc" id="class_main_judge_html_a021586c7d7d7f5a77fd4b51d3ba2b1bf"><div class="ttname"><a href="class_main_judge.html#a021586c7d7d7f5a77fd4b51d3ba2b1bf">MainJudge.redGoalButton</a></div><div class="ttdeci">Button redGoalButton</div><div class="ttdoc">红队进球按钮 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00040">MainJudge.cs:40</a></div></div>
+<div class="ttc" id="class_main_judge_html_a82e400c0eb2f966c96eacef5ed2011b0"><div class="ttname"><a href="class_main_judge.html#a82e400c0eb2f966c96eacef5ed2011b0">MainJudge.RedPenaltyKick</a></div><div class="ttdeci">void RedPenaltyKick()</div><div class="ttdoc">红队点球 在正常比赛时间内，蓝方球员在本方禁区内犯规，应判罚红队点球。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00360">MainJudge.cs:360</a></div></div>
+<div class="ttc" id="class_main_judge_html_ae8142ff12c578a36464e1fa4c263ce97"><div class="ttname"><a href="class_main_judge.html#ae8142ff12c578a36464e1fa4c263ce97">MainJudge.redTeam</a></div><div class="ttdeci">Team redTeam</div><div class="ttdoc">红队引用 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00033">MainJudge.cs:33</a></div></div>
+<div class="ttc" id="class_team_1_1_member_html"><div class="ttname"><a href="class_team_1_1_member.html">Team.Member</a></div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00146">Team.cs:146</a></div></div>
+<div class="ttc" id="class_main_judge_html_a3f8df03803e065bd5c9f6806b8fa3906"><div class="ttname"><a href="class_main_judge.html#a3f8df03803e065bd5c9f6806b8fa3906">MainJudge.blueScore</a></div><div class="ttdeci">int blueScore</div><div class="ttdoc">蓝队得分 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00043">MainJudge.cs:43</a></div></div>
+<div class="ttc" id="class_main_judge_html_a4459f3bc52fc183f0bc48e77ba742495"><div class="ttname"><a href="class_main_judge.html#a4459f3bc52fc183f0bc48e77ba742495">MainJudge.PlaceBall</a></div><div class="ttdeci">void PlaceBall()</div><div class="ttdoc">放置球 暂停比赛时，裁判可以根据判罚将足球放置在身边并指定球队开球。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00420">MainJudge.cs:420</a></div></div>
+<div class="ttc" id="class_team_html_affc8c576d10117f503a535f77a4cde1f"><div class="ttname"><a href="class_team.html#affc8c576d10117f503a535f77a4cde1f">Team.AdvanceDirect</a></div><div class="ttdeci">Vector3 AdvanceDirect</div><div class="ttdoc">推进方向 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00126">Team.cs:126</a></div></div>
+<div class="ttc" id="class_team_html_adadadffd26ac1351598c4c6d455bd502"><div class="ttname"><a href="class_team.html#adadadffd26ac1351598c4c6d455bd502">Team.GoalX</a></div><div class="ttdeci">float GoalX</div><div class="ttdoc">球门X坐标 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00129">Team.cs:129</a></div></div>
+<div class="ttc" id="class_ball_html_a5f57adca854d97c66f9029d64974480d"><div class="ttname"><a href="class_ball.html#a5f57adca854d97c66f9029d64974480d">Ball.isGo</a></div><div class="ttdeci">bool isGo</div><div class="ttdoc">发球指令 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00030">Ball.cs:30</a></div></div>
+<div class="ttc" id="class_ball_html_a9bd849d2cb2974671bea8ccab6a6d5b8"><div class="ttname"><a href="class_ball.html#a9bd849d2cb2974671bea8ccab6a6d5b8">Ball.rig</a></div><div class="ttdeci">Rigidbody rig</div><div class="ttdoc">足球刚体引用 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00016">Ball.cs:16</a></div></div>
+<div class="ttc" id="class_main_judge_html_a93b2f85be11c418ac266d4dc4613b1ab"><div class="ttname"><a href="class_main_judge.html#a93b2f85be11c418ac266d4dc4613b1ab">MainJudge.RedFreeKick</a></div><div class="ttdeci">void RedFreeKick()</div><div class="ttdoc">红队任意球 在正常比赛时间内，蓝队球员在本方禁区外犯规，应判罚红队任意球开球。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00176">MainJudge.cs:176</a></div></div>
+<div class="ttc" id="class_main_judge_html_a0a8d05c454841c592d2d9ecc79265e41"><div class="ttname"><a href="class_main_judge.html#a0a8d05c454841c592d2d9ecc79265e41">MainJudge.judgeTimer</a></div><div class="ttdeci">Timer judgeTimer</div><div class="ttdoc">计时器 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00037">MainJudge.cs:37</a></div></div>
+<div class="ttc" id="class_main_judge_html_a7c62ed59d2554d6350737a69b4eb162b"><div class="ttname"><a href="class_main_judge.html#a7c62ed59d2554d6350737a69b4eb162b">MainJudge.BlueGoal</a></div><div class="ttdeci">void BlueGoal()</div><div class="ttdoc">蓝队进球有效 足球进入红队门线以内后，裁判可判定蓝队进球有效。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00477">MainJudge.cs:477</a></div></div>
+<div class="ttc" id="class_main_judge_html_a8d22dfb145c59b9740f61e0b4d098b6d"><div class="ttname"><a href="class_main_judge.html#a8d22dfb145c59b9740f61e0b4d098b6d">MainJudge.BluePenaltyKick</a></div><div class="ttdeci">void BluePenaltyKick()</div><div class="ttdoc">蓝队点球 在正常比赛时间内，红方球员在本方禁区内犯规，应判罚蓝队点球。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00325">MainJudge.cs:325</a></div></div>
+<div class="ttc" id="class_player_html_a4e6ae0c3477f80ed0dc3ebbbf11945ec"><div class="ttname"><a href="class_player.html#a4e6ae0c3477f80ed0dc3ebbbf11945ec">Player.getBallTime</a></div><div class="ttdeci">float getBallTime</div><div class="ttdoc">球员最近拿到球的时间 </div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00193">Player.cs:193</a></div></div>
+<div class="ttc" id="class_border_html"><div class="ttname"><a href="class_border.html">Border</a></div><div class="ttdoc">边界静态类 </div><div class="ttdef"><b>Definition:</b> <a href="_border_8cs_source.html#l00012">Border.cs:12</a></div></div>
+<div class="ttc" id="class_team_html_a69e50114cfc87e29fad0065ad41ed146"><div class="ttname"><a href="class_team.html#a69e50114cfc87e29fad0065ad41ed146">Team.members</a></div><div class="ttdeci">Member[] members</div><div class="ttdoc">所有队员 </div><div class="ttdef"><b>Definition:</b> <a href="_team_8cs_source.html#l00151">Team.cs:151</a></div></div>
+<div class="ttc" id="class_main_judge_html_af0184904131d885785118506cce10452"><div class="ttname"><a href="class_main_judge.html#af0184904131d885785118506cce10452">MainJudge.End</a></div><div class="ttdeci">void End()</div><div class="ttdoc">比赛结束 在常规时间和补时结束后，主裁判可以终止比赛，比赛的记录数据随之存储。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00409">MainJudge.cs:409</a></div></div>
+<div class="ttc" id="class_timer_html_afbc48a54721f552f5625e914a76e96d3"><div class="ttname"><a href="class_timer.html#afbc48a54721f552f5625e914a76e96d3">Timer.End</a></div><div class="ttdeci">void End()</div><div class="ttdoc">记录落盘 比赛结束时，将记录存盘。 </div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cs_source.html#l00084">Timer.cs:84</a></div></div>
+<div class="ttc" id="class_main_judge_html_a781f2055cfe196f262fc73211a61220d"><div class="ttname"><a href="class_main_judge.html#a781f2055cfe196f262fc73211a61220d">MainJudge.resetPlayers</a></div><div class="ttdeci">void resetPlayers()</div><div class="ttdoc">进球有效后球员归位 裁判判定进球有效后，球员回到自己的半场并准备开球。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00455">MainJudge.cs:455</a></div></div>
+<div class="ttc" id="class_main_judge_html_acdd058b3e3e0d2cb98352d252178af4e"><div class="ttname"><a href="class_main_judge.html#acdd058b3e3e0d2cb98352d252178af4e">MainJudge.blueGoalButton</a></div><div class="ttdeci">Button blueGoalButton</div><div class="ttdoc">蓝队进球按钮 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00039">MainJudge.cs:39</a></div></div>
+<div class="ttc" id="class_main_judge_html_a51fb4e016794c3b5c9a5105e91d5d855"><div class="ttname"><a href="class_main_judge.html#a51fb4e016794c3b5c9a5105e91d5d855">MainJudge.RedGoalKick</a></div><div class="ttdeci">void RedGoalKick()</div><div class="ttdoc">红队球门球 若蓝方球员将球碰出红方底线外，或蓝队间接任意球、界外球直接发入红方门线以内，应判罚由红队球...</div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00232">MainJudge.cs:232</a></div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">球员类（含预测模型） </div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00143">Player.cs:143</a></div></div>
+<div class="ttc" id="class_ball_html_a0e6bbdd093263e193f2d0b30d9e7b1d6"><div class="ttname"><a href="class_ball.html#a0e6bbdd093263e193f2d0b30d9e7b1d6">Ball.GoalReset</a></div><div class="ttdeci">bool GoalReset</div><div class="ttdoc">中圈开球 </div><div class="ttdef"><b>Definition:</b> <a href="_ball_8cs_source.html#l00032">Ball.cs:32</a></div></div>
+<div class="ttc" id="class_main_judge_html_a4191fb2f87ae7de3af579d92842936c6"><div class="ttname"><a href="class_main_judge.html#a4191fb2f87ae7de3af579d92842936c6">MainJudge.BlueFreeKick</a></div><div class="ttdeci">void BlueFreeKick()</div><div class="ttdoc">蓝队任意球 在正常比赛时间内，红队球员在本方禁区外犯规，应判罚蓝队任意球开球。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00141">MainJudge.cs:141</a></div></div>
+<div class="ttc" id="class_main_judge_html_af0e2a9c622b9991bba966a6d468fd06b"><div class="ttname"><a href="class_main_judge.html#af0e2a9c622b9991bba966a6d468fd06b">MainJudge.Pause</a></div><div class="ttdeci">void Pause()</div><div class="ttdoc">比赛暂停 主裁判可在任意比赛时间内暂时终止比赛，由任意一方开球继续比赛。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00395">MainJudge.cs:395</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_main_judge_html_ad866307def711a9562b072945640625b"><div class="ttname"><a href="class_main_judge.html#ad866307def711a9562b072945640625b">MainJudge.Go</a></div><div class="ttdeci">void Go()</div><div class="ttdoc">开球 判罚任意球、点球、球门球、角球、界外球等后，由裁判发出开球信号开球。 </div><div class="ttdef"><b>Definition:</b> <a href="_main_judge_8cs_source.html#l00431">MainJudge.cs:431</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

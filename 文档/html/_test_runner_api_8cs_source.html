@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.test-framework@1.1.14/UnityEditor.TestRunner/Api/TestRunnerApi.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_f5068e10fe4d08e1b67d6386819b0c8e.html">com.unity.test-framework@1.1.14</a></li><li class="navelem"><a class="el" href="dir_48747dc8cf5879bab87b9f4ea1110bb9.html">UnityEditor.TestRunner</a></li><li class="navelem"><a class="el" href="dir_17b531b086a1e9fd22210e462311bd52.html">Api</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TestRunnerApi.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_test_runner_api_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Threading;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools.html">TestTools</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner.html">TestRunner</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_command_line_test.html">CommandLineTest</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools.html">TestTools</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner.html">TestRunner</a>.<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_test_run.html">TestRun</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_test_runner.html">TestRunner</a>.<a class="code" href="namespace_unity_engine_1_1_test_runner_1_1_test_launchers.html">TestLaunchers</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_test_tools.html">TestTools</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_test_tools.html">TestTools</a>.<a class="code" href="namespace_unity_engine_1_1_test_tools_1_1_n_unit_extensions.html">NUnitExtensions</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.TestTools.<a class="code" href="namespace_test_runner.html">TestRunner</a>.Api</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html">TestRunnerApi</a> : ScriptableObject, ITestRunnerApi</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">internal</span> ICallbacksHolder callbacksHolder;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> ICallbacksHolder m_CallbacksHolder</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a678eb3b53c92e3b75619f42b0fd257c9">   18</a></span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">if</span> (callbacksHolder == null)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                    <span class="keywordflow">return</span> CallbacksHolder.instance;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">return</span> callbacksHolder;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">internal</span> Func&lt;ExecutionSettings,string&gt; ScheduleJob = (executionSettings) =&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            var runner = <span class="keyword">new</span> TestJobRunner();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> runner.RunJob(<span class="keyword">new</span> TestJobData(executionSettings));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#ac272fa6ddb7d2d0b391278244503ac64">   36</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#ac272fa6ddb7d2d0b391278244503ac64">Execute</a>(<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html">ExecutionSettings</a> executionSettings)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span> (executionSettings == null)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(nameof(executionSettings));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> ((executionSettings.<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">filters</a> == null || executionSettings.<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">filters</a>.Length == 0) &amp;&amp; executionSettings.filter != null)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="comment">// Map filter (singular) to filters (plural), for backwards compatibility.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                executionSettings.<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">filters</a> = <span class="keyword">new</span> [] {executionSettings.filter};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span> (executionSettings.targetPlatform == null &amp;&amp; executionSettings.<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">filters</a> != null &amp;&amp;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                executionSettings.<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">filters</a>.Length &gt; 0)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                executionSettings.targetPlatform = executionSettings.<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">filters</a>[0].<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter.html#aa14833da55f8d2ff50282c97fdaeb762">targetPlatform</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> ScheduleJob(executionSettings);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a732aa79353e215da01add3102cbfea32">   58</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> RegisterCallbacks&lt;T&gt;(T testCallbacks, <span class="keywordtype">int</span> priority = 0) where T : <a class="code" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks.html">ICallbacks</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span> (testCallbacks == null)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(nameof(testCallbacks));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            m_CallbacksHolder.Add(testCallbacks, priority);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a63ac7eee1dc79b88e869ee4077ed4170">   68</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> UnregisterCallbacks&lt;T&gt;(T testCallbacks) where T : <a class="code" href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks.html">ICallbacks</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span> (testCallbacks == null)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(nameof(testCallbacks));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            m_CallbacksHolder.Remove(testCallbacks);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> RetrieveTestList(<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html">ExecutionSettings</a> executionSettings, Action&lt;ITestAdaptor&gt; callback)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">if</span> (executionSettings == null)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(nameof(executionSettings));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            var firstFilter = executionSettings.<a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">filters</a>?.FirstOrDefault() ?? executionSettings.filter;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            RetrieveTestList(firstFilter.testMode, callback);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a20c7b5c5cb25ed2afe750e3f3952ffa4">   89</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a20c7b5c5cb25ed2afe750e3f3952ffa4">RetrieveTestList</a>(<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a> testMode, Action&lt;ITestAdaptor&gt; callback)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (callback == null)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(nameof(callback));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            var platform = ParseTestMode(testMode);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            var testAssemblyProvider = <span class="keyword">new</span> EditorLoadedTestAssemblyProvider(<span class="keyword">new</span> EditorCompilationInterfaceProxy(), <span class="keyword">new</span> EditorAssembliesProxy());</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            var testAdaptorFactory = <span class="keyword">new</span> TestAdaptorFactory();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            var testListCache = <span class="keyword">new</span> TestListCache(testAdaptorFactory, <span class="keyword">new</span> RemoteTestResultDataFactory(), TestListCacheData.instance);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            var testListProvider = <span class="keyword">new</span> TestListProvider(testAssemblyProvider, <span class="keyword">new</span> UnityTestAssemblyBuilder());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            var cachedTestListProvider = <span class="keyword">new</span> CachingTestListProvider(testListProvider, testListCache, testAdaptorFactory);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            var job = <span class="keyword">new</span> TestListJob(cachedTestListProvider, platform, (testRoot) =&gt;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                callback(testRoot);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            });</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            job.Start();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsRunActive()</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">return</span> RunData.instance.isRunning;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a902b0afa83f36631512a595938d860bf">  115</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="namespace_unity_engine_1_1_test_tools.html#a5a0403d5399516208d8232fac155f61f">TestPlatform</a> <a class="code" href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a902b0afa83f36631512a595938d860bf">ParseTestMode</a>(<a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a> testMode)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> (((testMode &amp; <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a>.EditMode) == <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a>.EditMode) ? <a class="code" href="namespace_unity_engine_1_1_test_tools.html#a5a0403d5399516208d8232fac155f61f">TestPlatform</a>.EditMode : 0) | (((testMode &amp; <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a>.PlayMode) == <a class="code" href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">TestMode</a>.PlayMode) ? <a class="code" href="namespace_unity_engine_1_1_test_tools.html#a5a0403d5399516208d8232fac155f61f">TestPlatform</a>.PlayMode : 0);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_runner_1_1_test_launchers_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner_1_1_test_launchers.html">UnityEngine.TestRunner.TestLaunchers</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_remote_test_result_data_factory_8cs_source.html#l00004">IRemoteTestResultDataFactory.cs:4</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_html"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html">UnityEditor.TestTools.TestRunner.Api.ExecutionSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="_api_2_execution_settings_8cs_source.html#l00010">ExecutionSettings.cs:10</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_html"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html">UnityEditor.TestTools.TestRunner.Api.TestRunnerApi</a></div><div class="ttdef"><b>Definition:</b> <a href="_test_runner_api_8cs_source.html#l00013">TestRunnerApi.cs:13</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_html"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools.html">UnityEditor.TestTools</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings_html_ae2c4c8caa5e71443b0d68fd8862c9dc0"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html#ae2c4c8caa5e71443b0d68fd8862c9dc0">UnityEditor.TestTools.TestRunner.Api.ExecutionSettings.filters</a></div><div class="ttdeci">Filter[] filters</div><div class="ttdef"><b>Definition:</b> <a href="_api_2_execution_settings_8cs_source.html#l00026">ExecutionSettings.cs:26</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_html_ac272fa6ddb7d2d0b391278244503ac64"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#ac272fa6ddb7d2d0b391278244503ac64">UnityEditor.TestTools.TestRunner.Api.TestRunnerApi.Execute</a></div><div class="ttdeci">string Execute(ExecutionSettings executionSettings)</div><div class="ttdef"><b>Definition:</b> <a href="_test_runner_api_8cs_source.html#l00036">TestRunnerApi.cs:36</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_html_af169988e2317e7edb0f1b09d920412e9"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">UnityEditor.TestTools.TestRunner.Api.TestMode</a></div><div class="ttdeci">TestMode</div><div class="ttdef"><b>Definition:</b> <a href="_test_mode_8cs_source.html#l00006">TestMode.cs:6</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_runner_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner.html">UnityEngine.TestRunner</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_test_run_html"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_test_run.html">UnityEditor.TestTools.TestRunner.TestRun</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_html_a902b0afa83f36631512a595938d860bf"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a902b0afa83f36631512a595938d860bf">UnityEditor.TestTools.TestRunner.Api.TestRunnerApi.ParseTestMode</a></div><div class="ttdeci">static TestPlatform ParseTestMode(TestMode testMode)</div><div class="ttdef"><b>Definition:</b> <a href="_test_runner_api_8cs_source.html#l00115">TestRunnerApi.cs:115</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api_html_a20c7b5c5cb25ed2afe750e3f3952ffa4"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_test_runner_api.html#a20c7b5c5cb25ed2afe750e3f3952ffa4">UnityEditor.TestTools.TestRunner.Api.TestRunnerApi.RetrieveTestList</a></div><div class="ttdeci">void RetrieveTestList(TestMode testMode, Action&lt; ITestAdaptor &gt; callback)</div><div class="ttdef"><b>Definition:</b> <a href="_test_runner_api_8cs_source.html#l00089">TestRunnerApi.cs:89</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_tools_1_1_n_unit_extensions_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_tools_1_1_n_unit_extensions.html">UnityEngine.TestTools.NUnitExtensions</a></div><div class="ttdef"><b>Definition:</b> <a href="_action_delegator_8cs_source.html#l00007">ActionDelegator.cs:7</a></div></div>
+<div class="ttc" id="namespace_test_runner_html"><div class="ttname"><a href="namespace_test_runner.html">TestRunner</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_command_line_test_html"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_command_line_test.html">UnityEditor.TestTools.TestRunner.CommandLineTest</a></div><div class="ttdef"><b>Definition:</b> <a href="_executer_8cs_source.html#l00007">Executer.cs:7</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_tools_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_tools.html">UnityEngine.TestTools</a></div><div class="ttdef"><b>Definition:</b> <a href="_enter_play_mode_8cs_source.html#l00005">EnterPlayMode.cs:5</a></div></div>
+<div class="ttc" id="namespace_unity_editor_1_1_test_tools_1_1_test_runner_html"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner.html">UnityEditor.TestTools.TestRunner</a></div></div>
+<div class="ttc" id="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks_html"><div class="ttname"><a href="interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_i_callbacks.html">UnityEditor.TestTools.TestRunner.Api.ICallbacks</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_callbacks_8cs_source.html#l00003">ICallbacks.cs:3</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_test_tools_html_a5a0403d5399516208d8232fac155f61f"><div class="ttname"><a href="namespace_unity_engine_1_1_test_tools.html#a5a0403d5399516208d8232fac155f61f">UnityEngine.TestTools.TestPlatform</a></div><div class="ttdeci">TestPlatform</div><div class="ttdef"><b>Definition:</b> <a href="_test_platform_8cs_source.html#l00007">TestPlatform.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_html_aa14833da55f8d2ff50282c97fdaeb762"><div class="ttname"><a href="class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter.html#aa14833da55f8d2ff50282c97fdaeb762">UnityEditor.TestTools.TestRunner.Api.Filter.targetPlatform</a></div><div class="ttdeci">BuildTarget targetPlatform</div><div class="ttdef"><b>Definition:</b> <a href="_filter_8cs_source.html#l00027">Filter.cs:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:31 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>

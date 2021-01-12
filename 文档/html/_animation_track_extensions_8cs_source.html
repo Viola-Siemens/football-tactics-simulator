@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9"/>
+<title>足球战术模拟器: Library/PackageCache/com.unity.timeline@1.2.14/Editor/Extensions/AnimationTrackExtensions.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">足球战术模拟器
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">基于统计的球员行为分类模型</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.9 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c16ea74acec23ad861baad2f8a744d7e.html">Library</a></li><li class="navelem"><a class="el" href="dir_47062d5b4a87a8772cdfbe277c5ed2a2.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5655a277702f0019ab7d89a22d78caeb.html">com.unity.timeline@1.2.14</a></li><li class="navelem"><a class="el" href="dir_23bc69f4b25d10172d580c90b2e1dde4.html">Editor</a></li><li class="navelem"><a class="el" href="dir_e228bd21ba3d3532944c01ce692ae82b.html">Extensions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AnimationTrackExtensions.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_track_extensions_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Timeline</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html">    7</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html">AnimationTrackExtensions</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#aa98e795b58086253ef7f12b03c569844">    9</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#aa98e795b58086253ef7f12b03c569844">ConvertToClipMode</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> track)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keywordflow">if</span> (!track.CanConvertToClipMode())</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(track, <span class="stringliteral">&quot;Convert To Clip&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (!track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a>.empty)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                var animClip = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(animClip, <span class="stringliteral">&quot;Convert To Clip&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(track, <span class="stringliteral">&quot;Convert To Clip&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                var start = <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">Instance</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85">GetCurveInfo</a>(animClip).<a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a94960a3321dea1ebb3f277e62cf6a6dd">keyTimes</a>.FirstOrDefault();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                animClip.ShiftBySeconds(-start);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a> = null;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                var clip = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aefc9321cfccc75e488a4ea6cc7a8a9ae">CreateClip</a>(animClip);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a> = start;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                clip.preExtrapolationMode = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a6206942c4435256d269089f0268114dc">infiniteClipPreExtrapolation</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aca2e36aa15f071d4e96640c7cfc1f9ff">postExtrapolationMode</a> = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a43c4611c32dd6e5e012644ae4fbba3f0">infiniteClipPostExtrapolation</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac0e7fe2586994c2fcd88155fd96c2832">recordable</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">if</span> (Mathf.Abs(animClip.length) &lt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>.kMinDuration)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    clip.duration = 1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                var animationAsset = clip.asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">if</span> (animationAsset)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    animationAsset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a4266085f501cf4ec14f26d125e4eca0c">position</a> = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">infiniteClipOffsetPosition</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    animationAsset.eulerAngles = track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac05e7162bee5bc6f939065f8b71d9bd3">infiniteClipOffsetEulerAngles</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="comment">// going to / from infinite mode should reset this. infinite mode</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    animationAsset.removeStartOffset = track.infiniteClipRemoveOffset;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    animationAsset.applyFootIK = track.infiniteClipApplyFootIK;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    animationAsset.loop = track.infiniteClipLoop;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">infiniteClipOffsetPosition</a> = Vector3.zero;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac05e7162bee5bc6f939065f8b71d9bd3">infiniteClipOffsetEulerAngles</a> = Vector3.zero;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                track.CalculateExtrapolationTimes();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a> = null;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            EditorUtility.SetDirty(track);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#abe5a50bb6eea3fc9708c111fe1afe0e3">   59</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#abe5a50bb6eea3fc9708c111fe1afe0e3">ConvertFromClipMode</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> track, <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> timeline)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (!track.CanConvertFromClipMode())</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(track, <span class="stringliteral">&quot;Convert From Clip&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            var clip = track.clips[0];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            var delta = (float)clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            track.infiniteClipTimeOffset = 0.0f;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a6206942c4435256d269089f0268114dc">infiniteClipPreExtrapolation</a> = clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7fa523b5cfd49bce31cadf33695cc644">preExtrapolationMode</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a43c4611c32dd6e5e012644ae4fbba3f0">infiniteClipPostExtrapolation</a> = clip.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aca2e36aa15f071d4e96640c7cfc1f9ff">postExtrapolationMode</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            var animAsset = clip.asset as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            if (animAsset)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">infiniteClipOffsetPosition</a> = animAsset.position;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac05e7162bee5bc6f939065f8b71d9bd3">infiniteClipOffsetEulerAngles</a> = animAsset.eulerAngles;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                track.infiniteClipRemoveOffset = animAsset.removeStartOffset;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                track.infiniteClipApplyFootIK = animAsset.applyFootIK;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                track.infiniteClipLoop = animAsset.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a79ded58282db04b07669d9bbf87b9580">loop</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">// clone it, it may not be in the same asset</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            var animClip = clip.animationClip;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordtype">float</span> scale = (float)clip.timeScale;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            if (!Mathf.Approximately(scale, 1.0f))</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">if</span> (!Mathf.Approximately(scale, 0.0f))</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    scale = 1.0f / scale;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                animClip.ScaleTime(scale);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">PushUndo</a>(animClip, <span class="stringliteral">&quot;Convert From Clip&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            animClip.ShiftBySeconds(delta);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="comment">// manually delete the clip</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            var asset = clip.asset;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            clip.asset = null;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">// Remove the clip, remove old assets</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html">ClipModifier</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html#a8f8a8921635e6c2019a16004b0952941">Delete</a>(timeline, clip);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">TimelineUndo</a>.<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">PushDestroyUndo</a>(null, track, asset, <span class="stringliteral">&quot;Convert From Clip&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a> = animClip;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            EditorUtility.SetDirty(track);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#aa2bfe71ec29cd849abf71795cc6d7d96">  109</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#aa2bfe71ec29cd849abf71795cc6d7d96">CanConvertToClipMode</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> track)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (track == null || track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">inClipMode</a>)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> (track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a> != null &amp;&amp; !track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">infiniteClip</a>.empty);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">// Requirements to go from clip mode</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">//  - one clip, recordable, and animation clip belongs to the same asset as the track</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#a2534d02282e7aaa6e8fac0074681fa58">  118</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#a2534d02282e7aaa6e8fac0074681fa58">CanConvertFromClipMode</a>(<span class="keyword">this</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html">AnimationTrack</a> track)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">if</span> ((track == null) ||</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                (!track.<a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">inClipMode</a>) ||</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                (track.clips.Length != 1) ||</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                (track.clips[0].<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">start</a> &lt; 0) ||</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                (!track.clips[0].<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac0e7fe2586994c2fcd88155fd96c2832">recordable</a>))</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            var asset = track.clips[0].<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">asset</a> as <a class="code" href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">AnimationPlayableAsset</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">if</span> (asset == null)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">TimelineHelpers</a>.<a class="code" href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a10c9a548adf3d88ea3a38e69e718cfc3">HaveSameContainerAsset</a>(track, asset.clip);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html_a10c9a548adf3d88ea3a38e69e718cfc3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a10c9a548adf3d88ea3a38e69e718cfc3">UnityEditor.Timeline.TimelineHelpers.HaveSameContainerAsset</a></div><div class="ttdeci">static bool HaveSameContainerAsset(Object assetA, Object assetB)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00365">TimelineHelpers.cs:365</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html">UnityEngine.Timeline.AnimationPlayableAsset</a></div><div class="ttdoc">A Playable Asset that represents a single AnimationClip clip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00011">AnimationPlayableAsset.cs:11</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a2c0e553887357327987faff3f3b06dac"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a2c0e553887357327987faff3f3b06dac">UnityEngine.Timeline.TimelineClip.asset</a></div><div class="ttdeci">Object asset</div><div class="ttdoc">The PlayableAsset attached to the clip. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00275">TimelineClip.cs:275</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a195c45502177dc1679aba3ba09bf7f41"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a195c45502177dc1679aba3ba09bf7f41">UnityEngine.Timeline.TimelineUndo.PushDestroyUndo</a></div><div class="ttdeci">static void PushDestroyUndo(TimelineAsset timeline, Object thingToDirty, Object objectToDestroy, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00014">TimelineUndo.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html">UnityEngine.Timeline.AnimationTrack</a></div><div class="ttdoc">A Timeline track used for playing back animations on an Animator. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00124">AnimationTrack.cs:124</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aa1135c27853312d233b0b711e4b849c3"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aa1135c27853312d233b0b711e4b849c3">UnityEngine.Timeline.AnimationTrack.inClipMode</a></div><div class="ttdeci">bool inClipMode</div><div class="ttdoc">Specifies whether the Animation Track has clips, or is in infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00300">AnimationTrack.cs:300</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_track_extensions_html_a2534d02282e7aaa6e8fac0074681fa58"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#a2534d02282e7aaa6e8fac0074681fa58">UnityEditor.Timeline.AnimationTrackExtensions.CanConvertFromClipMode</a></div><div class="ttdeci">static bool CanConvertFromClipMode(this AnimationTrack track)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_extensions_8cs_source.html#l00118">AnimationTrackExtensions.cs:118</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">UnityEngine.Timeline.TimelineClip</a></div><div class="ttdoc">Represents a clip on the timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_clip_upgrade_8cs_source.html#l00003">ClipUpgrade.cs:3</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_track_extensions_html_aa2bfe71ec29cd849abf71795cc6d7d96"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#aa2bfe71ec29cd849abf71795cc6d7d96">UnityEditor.Timeline.AnimationTrackExtensions.CanConvertToClipMode</a></div><div class="ttdeci">static bool CanConvertToClipMode(this AnimationTrack track)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_extensions_8cs_source.html#l00109">AnimationTrackExtensions.cs:109</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clip_modifier_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html">UnityEditor.Timeline.ClipModifier</a></div><div class="ttdef"><b>Definition:</b> <a href="_clip_modifier_8cs_source.html#l00009">ClipModifier.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_clip_modifier_html_a8f8a8921635e6c2019a16004b0952941"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_clip_modifier.html#a8f8a8921635e6c2019a16004b0952941">UnityEditor.Timeline.ClipModifier.Delete</a></div><div class="ttdeci">static bool Delete(TimelineAsset timeline, TimelineClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_clip_modifier_8cs_source.html#l00011">ClipModifier.cs:11</a></div></div>
+<div class="ttc" id="namespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a6206942c4435256d269089f0268114dc"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a6206942c4435256d269089f0268114dc">UnityEngine.Timeline.AnimationTrack.infiniteClipPreExtrapolation</a></div><div class="ttdeci">TimelineClip.ClipExtrapolation infiniteClipPreExtrapolation</div><div class="ttdoc">The saved state of pre-extrapolation for clips converted to infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00347">AnimationTrack.cs:347</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_track_extensions_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html">UnityEditor.Timeline.AnimationTrackExtensions</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_extensions_8cs_source.html#l00007">AnimationTrackExtensions.cs:7</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_a19f259b1ca5d2bed08eddcfcd356be85"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a19f259b1ca5d2bed08eddcfcd356be85">UnityEditor.Timeline.AnimationClipCurveCache.GetCurveInfo</a></div><div class="ttdeci">AnimationClipCurveInfo GetCurveInfo(AnimationClip clip)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00324">AnimationClipCurveCache.cs:324</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info_html_a94960a3321dea1ebb3f277e62cf6a6dd"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a94960a3321dea1ebb3f277e62cf6a6dd">UnityEditor.Timeline.AnimationClipCurveInfo.keyTimes</a></div><div class="ttdeci">float[] keyTimes</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00087">AnimationClipCurveCache.cs:87</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html">UnityEngine.Timeline.TimelineUndo</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00012">TimelineUndo.cs:12</a></div></div>
+<div class="ttc" id="namespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:9</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_track_extensions_html_abe5a50bb6eea3fc9708c111fe1afe0e3"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#abe5a50bb6eea3fc9708c111fe1afe0e3">UnityEditor.Timeline.AnimationTrackExtensions.ConvertFromClipMode</a></div><div class="ttdeci">static void ConvertFromClipMode(this AnimationTrack track, TimelineAsset timeline)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_extensions_8cs_source.html#l00059">AnimationTrackExtensions.cs:59</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_undo_html_a2c45dda5e68a6de6f481aee4888b352c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c">UnityEngine.Timeline.TimelineUndo.PushUndo</a></div><div class="ttdeci">static void PushUndo(Object thingToDirty, string operation)</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_undo_8cs_source.html#l00034">TimelineUndo.cs:34</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_a79ded58282db04b07669d9bbf87b9580"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a79ded58282db04b07669d9bbf87b9580">UnityEngine.Timeline.AnimationPlayableAsset.loop</a></div><div class="ttdeci">LoopMode loop</div><div class="ttdoc">Whether the source AnimationClip loops during playback </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00151">AnimationPlayableAsset.cs:151</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_timeline_helpers_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_timeline_helpers.html">UnityEditor.Timeline.TimelineHelpers</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_helpers_8cs_source.html#l00014">TimelineHelpers.cs:14</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_ac847d1affde0438d85a8fdc5af4f644f"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac847d1affde0438d85a8fdc5af4f644f">UnityEngine.Timeline.TimelineClip.start</a></div><div class="ttdeci">double start</div><div class="ttdoc">The start time, in seconds, of the clip </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00173">TimelineClip.cs:173</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html_a79d05c439c5628c4f5ffa5a49d793e4e"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">UnityEditor.Timeline.AnimationClipCurveCache.Instance</a></div><div class="ttdeci">static AnimationClipCurveCache Instance</div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00277">AnimationClipCurveCache.cs:277</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a509c42d901a0823adde4c587fc18978c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a509c42d901a0823adde4c587fc18978c">UnityEngine.Timeline.AnimationTrack.infiniteClip</a></div><div class="ttdeci">AnimationClip infiniteClip</div><div class="ttdoc">An AnimationClip storing the data for an infinite track. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00249">AnimationTrack.cs:249</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_ac0e7fe2586994c2fcd88155fd96c2832"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac0e7fe2586994c2fcd88155fd96c2832">UnityEngine.Timeline.TimelineClip.recordable</a></div><div class="ttdeci">bool recordable</div><div class="ttdoc">Returns whether this clip is recordable in editor </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00470">TimelineClip.cs:470</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_playable_asset_html_a4266085f501cf4ec14f26d125e4eca0c"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a4266085f501cf4ec14f26d125e4eca0c">UnityEngine.Timeline.AnimationPlayableAsset.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdoc">The translational offset of the clip </div><div class="ttdef"><b>Definition:</b> <a href="_animation_playable_asset_8cs_source.html#l00056">AnimationPlayableAsset.cs:56</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_track_extensions_html_aa98e795b58086253ef7f12b03c569844"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_track_extensions.html#aa98e795b58086253ef7f12b03c569844">UnityEditor.Timeline.AnimationTrackExtensions.ConvertToClipMode</a></div><div class="ttdeci">static void ConvertToClipMode(this AnimationTrack track)</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_extensions_8cs_source.html#l00009">AnimationTrackExtensions.cs:9</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_aefc9321cfccc75e488a4ea6cc7a8a9ae"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#aefc9321cfccc75e488a4ea6cc7a8a9ae">UnityEngine.Timeline.AnimationTrack.CreateClip</a></div><div class="ttdeci">TimelineClip CreateClip(AnimationClip clip)</div><div class="ttdoc">Creates a TimelineClip on this track that uses an AnimationClip. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00383">AnimationTrack.cs:383</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_a43c4611c32dd6e5e012644ae4fbba3f0"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#a43c4611c32dd6e5e012644ae4fbba3f0">UnityEngine.Timeline.AnimationTrack.infiniteClipPostExtrapolation</a></div><div class="ttdeci">TimelineClip.ClipExtrapolation infiniteClipPostExtrapolation</div><div class="ttdoc">The saved state of post-extrapolation for clips when converted to infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00356">AnimationTrack.cs:356</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_a7fa523b5cfd49bce31cadf33695cc644"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7fa523b5cfd49bce31cadf33695cc644">UnityEngine.Timeline.TimelineClip.preExtrapolationMode</a></div><div class="ttdeci">ClipExtrapolation preExtrapolationMode</div><div class="ttdoc">Returns whether the clip is being extrapolated before the start time. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00637">TimelineClip.cs:637</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_clip_html_aca2e36aa15f071d4e96640c7cfc1f9ff"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html#aca2e36aa15f071d4e96640c7cfc1f9ff">UnityEngine.Timeline.TimelineClip.postExtrapolationMode</a></div><div class="ttdeci">ClipExtrapolation postExtrapolationMode</div><div class="ttdoc">Returns whether the clip is being extrapolated past the end time. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_clip_8cs_source.html#l00628">TimelineClip.cs:628</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ae709cd4c19441b453964cf3a58ac44a3"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ae709cd4c19441b453964cf3a58ac44a3">UnityEngine.Timeline.AnimationTrack.infiniteClipOffsetPosition</a></div><div class="ttdeci">Vector3 infiniteClipOffsetPosition</div><div class="ttdoc">The translation offset of a track in infinite mode. </div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00308">AnimationTrack.cs:308</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_animation_track_html_ac05e7162bee5bc6f939065f8b71d9bd3"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_animation_track.html#ac05e7162bee5bc6f939065f8b71d9bd3">UnityEngine.Timeline.AnimationTrack.infiniteClipOffsetEulerAngles</a></div><div class="ttdeci">Vector3 infiniteClipOffsetEulerAngles</div><div class="ttdoc">The euler angle representation of the rotation offset of the track when in infinite mode...</div><div class="ttdef"><b>Definition:</b> <a href="_animation_track_8cs_source.html#l00326">AnimationTrack.cs:326</a></div></div>
+<div class="ttc" id="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">UnityEditor.Timeline.AnimationClipCurveCache</a></div><div class="ttdef"><b>Definition:</b> <a href="_animation_clip_curve_cache_8cs_source.html#l00269">AnimationClipCurveCache.cs:269</a></div></div>
+<div class="ttc" id="class_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline. </div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 十二月 24日 星期四 20:05:34 , 为 足球战术模拟器使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9
+</small></address>
+</body>
+</html>
